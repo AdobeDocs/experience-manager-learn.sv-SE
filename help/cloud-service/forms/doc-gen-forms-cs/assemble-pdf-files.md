@@ -1,26 +1,26 @@
 ---
-title: Sammanställa PDF-filer
+title: Sammanställ PDF-filer
 description: Använd åtgärden invokeDDX för att hantera PDF-filer.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-9958
 thumbnail: 332439.jpg
 duration: 50
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
 
 ---
 
-# Hantera PDF-filer med hjälp av DX-slutpunkten invoke
+# Hantera PDF-filer med DX-slutpunkten invoke
 
 
-Nästa steg är att göra ett HTTP-POST-anrop till slutpunkten med de nödvändiga parametrarna. Mallen och datafilerna tillhandahålls som resursfiler. Egenskaperna för den genererade PDF-filen anges via alternativets parameter i begäran. Egenskapen embedFonts används för att bädda in anpassade teckensnitt i den genererade PDF-filen. Följ [den här dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html) för att distribuera anpassade teckensnitt till din Forms-molninstans. Egenskaperna anges i resursfilen options.json. Eftersom slutpunkten har tokenbaserad autentisering skickas åtkomsttoken i begärandehuvudet.
+Nästa steg är att göra ett HTTP POST-anrop till slutpunkten med de nödvändiga parametrarna. Mallen och datafilerna tillhandahålls som resursfiler. Egenskaperna för den genererade PDF-filen anges via alternativets parameter i begäran. Egenskapen embedFonts används för att bädda in anpassade teckensnitt i den genererade PDF-filen. Följ [den här dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html) för att distribuera anpassade teckensnitt till din Forms-molninstans. Egenskaperna anges i resursfilen options.json. Eftersom slutpunkten har tokenbaserad autentisering skickas åtkomsttoken i begärandehuvudet.
 
 Följande kod användes för att skapa PDF-filen genom att sammanfoga data med mallen
 

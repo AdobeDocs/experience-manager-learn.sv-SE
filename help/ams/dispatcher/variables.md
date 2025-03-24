@@ -1,7 +1,7 @@
 ---
-title: Använda och förstå variabler i din AEM Dispatcher-konfiguration
+title: Använda och förstå variabler i AEM Dispatcher Configuration
 description: Lär dig hur du använder variabler i dina konfigurationsfiler för Apache och Dispatcher-moduler för att ta dem till nästa nivå.
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration, Development
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 299b32c3-7922-4eee-aa3a-56039a654f70
 duration: 260
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 0%

@@ -1,7 +1,7 @@
 ---
 title: Konfigurera en lokal utvecklingsmiljö för Edge Delivery Services
 description: Konfigurera en lokal utvecklingsmiljö för Edge Delivery Services.
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-14483
 thumbnail: 3425717.jpeg
 duration: 169
 exl-id: 0f3e50f0-88d8-46be-be8b-0f547c3633a6
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Konfigurera en lokal utvecklingsmiljö för utveckling av Edge Delivery Services
    $ cd my-project
    ```
 
-1. Kör AEM CLI för att starta den lokala AEM.
+1. Kör AEM CLI för att starta den lokala AEM-instansen.
 
    ```
    $ pwd

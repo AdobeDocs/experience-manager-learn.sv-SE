@@ -4,9 +4,9 @@ user-guide-description: Den här självstudiekursen visar hur du använder Dynam
 breadcrumb-title: Självstudiekurser om Dynamic Media Classic
 solution: Experience Manager, Experience Manager Assets
 sub-product: Experience Manager Assets
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 index: y
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 41%

@@ -1,7 +1,7 @@
 ---
-title: Bygg en React-app som AEM frågor med GraphQL API - Komma igång med AEM Headless - GraphQL
+title: Bygg en React-app som frågar AEM med GraphQL API - Komma igång med AEM Headless - GraphQL
 description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Bygg en React-app som hämtar innehåll/data från AEM GraphQL API, och se även hur AEM Headless JS SDK används.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 jira: KT-6716
 thumbnail: KT-6716.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
 duration: 410
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 0%
@@ -23,11 +23,11 @@ ht-degree: 0%
 
 I det här kapitlet tittar du närmare på hur AEM GraphQL API:er kan styra upplevelsen i ett externt program.
 
-En enkel React-app används för att fråga efter och visa **Team** - och **Person** -innehåll som exponeras av AEM GraphQL API:er. Användningen av React är i stort sett oviktig, och den uppladdande externa applikationen kan skrivas i vilket ramverk som helst för vilken plattform som helst.
+En enkel React-app används för att fråga efter och visa **Team**- och **Person**-innehåll som exponeras av AEM GraphQL API:er. Användningen av React är i stort sett oviktig, och den uppladdande externa applikationen kan skrivas i vilket ramverk som helst för vilken plattform som helst.
 
 ## Förutsättningar
 
-Stegen som beskrivs i de tidigare delarna av den här flerdelade självstudiekursen har slutförts, eller så har [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip) installerats på AEM as a Cloud Service Author- och Publish-tjänsterna.
+Stegen som beskrivs i de tidigare delarna av den här flerdelade självstudiekursen har slutförts, eller så har [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip) installerats på dina AEM as a Cloud Service Author- och Publish-tjänster.
 
 _Skärmbilder i IDE i det här kapitlet kommer från [Visual Studio-kod](https://code.visualstudio.com/)_
 
@@ -41,13 +41,13 @@ Följande programvara måste vara installerad:
 Lär dig mer om:
 
 - Hämta och starta exempelappen React
-- Fråga AEM GraphQL slutpunkter med hjälp av [AEM Headless JS SDK](https://github.com/adobe/aem-headless-client-js)
+- Fråga AEM GraphQL slutpunkter med [AEM Headless JS SDK](https://github.com/adobe/aem-headless-client-js)
 - Fråga AEM efter en lista över team och deras refererade medlemmar
-- AEM för information om en gruppmedlem
+- Fråga AEM efter information om en teammedlem
 
 ## Hämta exempelappen React
 
-I det här kapitlet implementeras en utbäddad exempelapp, React, med den kod som krävs för att interagera med AEM GraphQL API, och visa team- och persondata som hämtats från dem.
+I det här kapitlet implementeras en utbäddad exempelapp React med den kod som krävs för att interagera med AEM GraphQL API, och visa team- och persondata som hämtats från dem.
 
 Källkoden för exempelappen React finns på Github.com på <https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial>
 
@@ -69,9 +69,9 @@ Så här skaffar du React-appen:
 
    ![Reagera app i VSCode](./assets/graphql-and-external-app/react-app-in-vscode.png)
 
-1. Uppdatera `.env.development` för att ansluta till tjänsten AEM as a Cloud Service Publish.
+1. Uppdatera `.env.development` för att ansluta till AEM as a Cloud Service Publish-tjänsten.
 
-   - Ange att värdet för `REACT_APP_HOST_URI` ska vara din AEM as a Cloud Service Publish URL (t.ex. `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`) och `REACT_APP_AUTH_METHOD` har värdet `none`
+   - Ange värdet för `REACT_APP_HOST_URI` som din AEM as a Cloud Service Publish URL (t.ex. `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`) och `REACT_APP_AUTH_METHOD` har värdet `none`
 
    >[!NOTE]
    >
@@ -110,8 +110,8 @@ Så här skaffar du React-appen:
 
 Exempelappen React består av tre huvuddelar:
 
-1. Mappen `src/api` innehåller filer som används för att skapa GraphQL-frågor som ska AEM.
-   - `src/api/aemHeadlessClient.js` initierar och exporterar den AEM huvudlösa klienten som används för att kommunicera med AEM
+1. Mappen `src/api` innehåller filer som används för att skapa GraphQL-frågor till AEM.
+   - `src/api/aemHeadlessClient.js` initierar och exporterar AEM Headless Client som används för att kommunicera med AEM
    - `src/api/usePersistedQueries.js` implementerar [anpassade React-kopplingar](https://react.dev/learn/reusing-logic-with-custom-hooks#custom-hooks-sharing-logic-between-components) som returnerar data från AEM GraphQL till vykomponenterna `Teams.js` och `Person.js`.
 
 1. Filen `src/components/Teams.js` visar en lista med team och deras medlemmar med hjälp av en listfråga.
@@ -144,11 +144,11 @@ const aemHeadlessClient = new AEMHeadless({
 export default aemHeadlessClient;
 ```
 
-## Implementera för att köra AEM GraphQL beständiga frågor
+## Implementera för att köra beständiga AEM GraphQL-frågor
 
-Om du vill implementera den generiska `fetchPersistedQuery(..)`-funktionen för att köra de beständiga AEM GraphQL-frågorna öppnar du `usePersistedQueries.js`-filen. Funktionen `fetchPersistedQuery(..)` använder `aemHeadlessClient`-objektets `runPersistedQuery()`-funktion för att köra frågan asynkront, löftesbaserat beteende.
+Om du vill implementera den generiska funktionen `fetchPersistedQuery(..)` för att köra AEM GraphQL beständiga frågor öppnar du filen `usePersistedQueries.js`. Funktionen `fetchPersistedQuery(..)` använder `aemHeadlessClient`-objektets `runPersistedQuery()`-funktion för att köra frågan asynkront, löftesbaserat beteende.
 
-Senare anropar den anpassade funktionen `useEffect` funktionen för att hämta specifika data från AEM.
+Senare anropar den anpassade funktionen React `useEffect` den för att hämta specifika data från AEM.
 
 1. I `src/api/usePersistedQueries.js` **update** `fetchPersistedQuery(..)`, rad 35, med koden nedan.
 
@@ -203,7 +203,7 @@ När det är klart fylls programmets huvudvy i med teamdata från AEM.
 
 1. Hitta funktionen `useAllTeams()`
 
-1. Om du vill skapa en `useEffect`-krok som anropar den beständiga frågan `my-project/all-teams` via `fetchPersistedQuery(..)` lägger du till följande kod. Haken returnerar bara relevanta data från det AEM GraphQL-svaret på `data?.teamList?.items`, vilket gör att komponenterna i vyn React kan vara agnostiska för de överordnade JSON-strukturerna.
+1. Om du vill skapa en `useEffect`-krok som anropar den beständiga frågan `my-project/all-teams` via `fetchPersistedQuery(..)` lägger du till följande kod. Haken returnerar bara relevanta data från AEM GraphQL-svaret på `data?.teamList?.items`, vilket gör att komponenterna i vyn React kan vara agnostiska för de överordnade JSON-strukturerna.
 
    ```javascript
    /**
@@ -238,7 +238,7 @@ När det är klart fylls programmets huvudvy i med teamdata från AEM.
 
 1. Öppna `src/components/Teams.js`
 
-1. Hämta listan med team från AEM som använder `useAllTeams()`-kroken i komponenten `Teams` React.
+1. Hämta listan med team från AEM med kroken `useAllTeams()` i komponenten `Teams` React.
 
    ```javascript
    import { useAllTeams } from "../api/usePersistedQueries";
@@ -352,7 +352,7 @@ När du är klar återges en personvy när du väljer en persons namn i Teams-vy
 
 1. Hitta funktionen `usePersonByName(fullName)`
 
-1. Om du vill skapa en `useEffect`-krok som anropar den beständiga frågan `my-project/all-teams` via `fetchPersistedQuery(..)` lägger du till följande kod. Haken returnerar bara relevanta data från det AEM GraphQL-svaret på `data?.teamList?.items`, vilket gör att komponenterna i vyn React kan vara agnostiska för de överordnade JSON-strukturerna.
+1. Om du vill skapa en `useEffect`-krok som anropar den beständiga frågan `my-project/all-teams` via `fetchPersistedQuery(..)` lägger du till följande kod. Haken returnerar bara relevanta data från AEM GraphQL-svaret på `data?.teamList?.items`, vilket gör att komponenterna i vyn React kan vara agnostiska för de överordnade JSON-strukturerna.
 
    ```javascript
    /**

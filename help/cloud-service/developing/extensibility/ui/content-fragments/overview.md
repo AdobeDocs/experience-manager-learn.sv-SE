@@ -1,8 +1,8 @@
 ---
-title: AEM Content Fragments extensions
+title: AEM Content Fragments-tillägg
 description: Lär dig hur du skapar och distribuerar AEM as a Cloud Service Content Fragment-tillägg
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,16 +12,16 @@ thumbnail: KT-11603.png
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 9164423b-a609-4bc5-9777-112d229ae748
 duration: 126
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 0%
 
 ---
 
-# AEM Content Fragments extensibility
+# Utbyggbarhet för AEM Content Fragments
 
-Gränssnittet AEM innehållsfragment är ett kraftfullt, utbyggbart gränssnitt för att hantera, skapa, hantera och redigera innehållsfragment. Det finns flera tilläggspunkter som du kan använda för att anpassa användargränssnittet efter dina behov. Olika tilläggspunkter är tillgängliga, baserat på vilket gränssnitt du utökar.
+AEM Content Fragments UI är ett kraftfullt, utbyggbart gränssnitt för att hantera, skapa, hantera och redigera innehållsfragment. Det finns flera tilläggspunkter som du kan använda för att anpassa användargränssnittet efter dina behov. Olika tilläggspunkter är tillgängliga, baserat på vilket gränssnitt du utökar.
 
 ## Tilläggspunkter för konsoltillägg för innehållsfragment
 
@@ -29,7 +29,7 @@ Content Fragment Console i AEM (Adobe Experience Manager) är ett användargrän
 
 ![Konsolen för innehållsfragment](./assets/overview/cfc.png)
 
-[AEM Console för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) är ett utökningsbart gränssnitt för att visa och hantera innehållsfragment. [AEM Content Fragment Console-tillägg skapas](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) med App Builder-mallen `@adobe/aem-cf-admin-ui-ext-tpl`.
+[AEM Content Fragments Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) är ett utbyggbart gränssnitt för att visa och hantera innehållsfragment. [AEM Content Fragment Console-tillägg skapas](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) med App Builder-mallen `@adobe/aem-cf-admin-ui-ext-tpl`.
 
 Följande utökningspunkter för Content Fragments Console är tillgängliga:
 
@@ -102,7 +102,7 @@ Innehållsfragmentsredigeraren i AEM (Adobe Experience Manager) är en användar
 
 ![Redigera innehållsfragment](./assets/overview/cfe.png)
 
-AEM Content Fragments Editor är ett utbyggbart gränssnitt för redigering av innehållsfragment. [AEM tillägg för innehållsfragmentredigeraren skapas](https://developer.adobe.com/uix/docs/services/aem-cf-editor/code-generation/) med App Builder-mallen `@adobe/aem-cf-editor-ui-ext-tpl`.
+AEM Content Fragments Editor är ett utbyggbart gränssnitt för redigering av innehållsfragment. [AEM Content Fragment Editor-tillägg skapas](https://developer.adobe.com/uix/docs/services/aem-cf-editor/code-generation/) med App Builder-mallen `@adobe/aem-cf-editor-ui-ext-tpl`.
 
 Följande tilläggspunkter för Content Fragments Editor är tillgängliga:
 
@@ -192,7 +192,7 @@ Följande tilläggspunkter för Content Fragments Editor är tillgängliga:
 
 ## Exempel på tillägg
 
-Välkommen till en samling AEM exempel på utökningskod för användargränssnitt! Resursen är utformad för att ge dig praktiska demonstrationer och insikter om hur du utökar Adobe Experience Manager (AEM) användargränssnitt. Oavsett om du är utvecklare och vill förbättra funktionaliteten hos AEM kan dessa kodexempel vara en värdefull referens.
+Välkommen till en samling av kodexempel för AEM UI-utökningsmöjligheter! Resursen är utformad för att ge dig praktiska demonstrationer och insikter om hur du utökar användargränssnittet i Adobe Experience Manager (AEM). Vare sig du är utvecklare och vill förbättra funktionaliteten i AEM är dessa kodexempel en värdefull referens.
 
 <div class="columns is-multiline">
   <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Bulk property update">
@@ -219,14 +219,14 @@ Välkommen till en samling AEM exempel på utökningskod för användargränssni
         <div class="card" style="height: 100%">
             <div class="card-image">
                 <figure class="image is-16by9">
-                    <a href="./examples/console-image-generation-and-image-upload.md" title="OpenAI-baserad bildgenerering och överföring till AEM" tabindex="-1">
-                        <img class="is-bordered-r-small" src="./examples/assets/digital-image-generation/card.png" alt="OpenAI-baserad bildgenerering och överföring till AEM">
+                    <a href="./examples/console-image-generation-and-image-upload.md" title="OpenAI-baserad bildgenerering och överföring till AEM-tillägg" tabindex="-1">
+                        <img class="is-bordered-r-small" src="./examples/assets/digital-image-generation/card.png" alt="OpenAI-baserad bildgenerering och överföring till AEM-tillägg">
                     </a>
                 </figure>
             </div>
             <div class="card-content is-padded-small">
                 <div class="content">
-                    <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/console-image-generation-and-image-upload.md" title="OpenAI-baserad bildgenerering och överföring till AEM">Generering av OpenAPI-bilder</a></p>
+                    <p class="headline is-size-6 has-text-weight-bold"><a href="./examples/console-image-generation-and-image-upload.md" title="OpenAI-baserad bildgenerering och överföring till AEM-tillägg">Generering av OpenAPI-bilder</a></p>
                     <p class="is-size-6">Utforska ett exempel på ett åtgärdsfälttillägg som genererar en bild med OpenAI, överför den till AEM och uppdaterar bildegenskapen för det valda innehållsfragmentet.</p>
                     <a href="./examples/console-image-generation-and-image-upload.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                         <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Visa exemplet </span>

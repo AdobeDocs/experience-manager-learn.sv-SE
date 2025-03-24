@@ -5,12 +5,13 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16276
-source-git-commit: 86d282b426402c9ad6be84e9db92598d0dc54f85
+exl-id: 52205a93-d03c-430c-a707-b351ab333939
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 # Definiera formatet i profilen för komponenten
 
-* Logga in på din lokala molnförberedda AEM och navigera till Verktyg | Allmänt | Mallar | projektnamnet.
+* Logga in på din lokala molnförberedda AEM-instans och gå till Verktyg | Allmänt | Mallar | projektnamnet.
 
 * Markera och öppna mallen **Tom med kärnkomponenter** i redigeringsläge.
 * Klicka på principikonen för knappkomponenten för att öppna principredigeraren.

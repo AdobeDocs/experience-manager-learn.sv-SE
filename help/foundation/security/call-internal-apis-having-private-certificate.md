@@ -2,7 +2,7 @@
 title: Anropa interna API:er med privata certifikat
 description: Lär dig hur du anropar interna API:er med privata eller självsignerade certifikat.
 feature: Security
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
 role: Admin, Architect, Developer
 level: Experienced
@@ -12,7 +12,7 @@ doc-type: Article
 last-substantial-update: 2023-08-25T00:00:00Z
 exl-id: c88aa724-9680-450a-9fe8-96e14c0c6643
 duration: 332
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -33,7 +33,7 @@ PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderExce
 
 Det här problemet inträffar vanligtvis när **API:ts SSL-certifikat inte har utfärdats av en erkänd certifikatutfärdare (CA)** och Java™-programmet inte kan validera SSL-/TLS-certifikatet.
 
-Låt oss lära oss hur du kan anropa API:er som har privata eller självsignerade certifikat med hjälp av [Apache HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) och **AEM global TrustStore**.
+Låt oss lära oss hur du kan anropa API:er som har privata eller självsignerade certifikat med [Apache HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) och **AEM global TrustStore**.
 
 
 ## Prototypisk API-anropskod med HttpClient
@@ -66,14 +66,14 @@ Om du vill anropa en API-slutpunkt som har _privat eller självsignerat certifik
 
 Följ stegen nedan:
 
-1. Logga in på **AEM författare** som **administratör**.
-1. Navigera till **AEM Författare > Verktyg > Säkerhet > Lita på butik** och öppna **Global Trust Store**. Om du försöker komma åt den första gången anger du ett lösenord för Global Trust Store.
+1. Logga in på **AEM Author** som **administratör**.
+1. Navigera till **AEM Author > Tools > Security > Trust Store** och öppna **Global Trust Store**. Om du försöker komma åt den första gången anger du ett lösenord för Global Trust Store.
 
    ![Global Trust Store](assets/internal-api-call/global-trust-store.png)
 
 1. Om du vill importera ett privat certifikat klickar du på knappen **Välj certifikatfil** och väljer önskad certifikatfil med tillägget `.cer`. Importera den genom att klicka på knappen **Skicka**.
 
-1. Uppdatera Java™-kod enligt nedan. Observera att om du vill använda `@Reference` för att få AEM `KeyStoreService` måste anropskoden vara en OSGi-komponent/tjänst, eller en Sling-modell (och `@OsgiService` används där).
+1. Uppdatera Java™-kod enligt nedan. Observera att om du vill använda `@Reference` för att hämta AEM `KeyStoreService` måste anropskoden vara en OSGi-komponent/tjänst, eller en Sling-modell (och `@OsgiService` används där).
 
    ```java
    ...
@@ -137,12 +137,12 @@ Följ stegen nedan:
    * Hämta den globala AEM TrustStore med `KeyStoreService` och `ResourceResolver`, det gör metoden `getAEMTrustStore(...)`.
    * Skapa ett objekt av `SSLContextBuilder`, se Java™ [API-information](https://javadoc.io/static/org.apache.httpcomponents/httpcore/4.4.8/index.html?org/apache/http/ssl/SSLContextBuilder.html).
    * Läs in den globala AEM TrustStore till `SSLContextBuilder` med metoden `loadTrustMaterial(KeyStore truststore,TrustStrategy trustStrategy)`.
-   * Skicka `null` för metoden `TrustStrategy` i ovanstående säkerställer att endast AEM betrodda certifikat lyckas under API-körningen.
+   * Skicka `null` för metoden `TrustStrategy` i ovanstående säkerställer att endast AEM tillförlitliga certifikat lyckas under API-körningen.
 
 
 >[!CAUTION]
 >
->API-anrop med giltiga CA-utfärdade certifikat misslyckas när de körs med den angivna metoden. Endast API-anrop med AEM betrodda certifikat kan lyckas när den här metoden används.
+>API-anrop med giltiga CA-utfärdade certifikat misslyckas när de körs med den angivna metoden. Endast API-anrop med AEM tillförlitliga certifikat kan lyckas när den här metoden används.
 >
 >Använd [standardmetoden](#prototypical-api-invocation-code-using-httpclient) för att köra API-anrop av giltiga CA-utfärdade certifikat, vilket innebär att endast API:er som är kopplade till privata certifikat ska köras med den tidigare nämnda metoden.
 
@@ -157,4 +157,4 @@ Den här metoden är dock inte anpassad efter bästa säkerhetspraxis och AEM er
 
 Exempelprojektet Node.js som har nedgraderats i videon kan hämtas från [här](assets/internal-api-call/REST-APIs.zip).
 
-Den AEM serletkoden är tillgänglig i WKND Sites Projects `tutorial/web-api-invocation`-gren, [se](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
+AEM-serverns kod är tillgänglig i WKND Sites Projects `tutorial/web-api-invocation`-gren, [se](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).

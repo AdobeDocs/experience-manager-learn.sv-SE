@@ -3,7 +3,7 @@ title: Installera AEM Forms i Linux
 description: Lär dig hur du installerar 32-bitars bibliotek så att AEM Forms kan användas vid Linux-installation.
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-7593
 exl-id: b9809561-e9bd-4c67-bc18-5cab3e4aa138
 last-substantial-update: 2019-06-09T00:00:00Z
 duration: 204
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 0%

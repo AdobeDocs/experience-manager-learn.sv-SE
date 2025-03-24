@@ -1,7 +1,7 @@
 ---
 title: VPN (Virtual Private Network)
 description: Lär dig hur du ansluter AEM as a Cloud Service till ditt VPN för att skapa säkra kommunikationskanaler mellan AEM och interna tjänster.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -11,7 +11,7 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1467'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Lär dig hur du ansluter AEM as a Cloud Service till ditt VPN för att skapa sä
 
 ## Vad är Virtual Private Network?
 
-Med VPN (Virtual Private Network) kan en AEM as a Cloud Service-kund ansluta **de AEM miljöerna** i ett Cloud Manager-program till en befintlig, [stödd](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) VPN. VPN ger säkra och kontrollerade anslutningar mellan AEM as a Cloud Service och tjänster i kundens nätverk.
+Med VPN (Virtual Private Network) kan en AEM as a Cloud Service-kund ansluta **AEM-miljöerna** i ett Cloud Manager-program till en befintlig, [stödd](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) VPN. VPN ger säkra och kontrollerade anslutningar mellan AEM as a Cloud Service och tjänster i kundens nätverk.
 
 Ett Cloud Manager-program kan bara ha en __enskild__ nätverksinfrastrukturtyp. Kontrollera att Virtuellt privat nätverk är den [lämpligaste typen av nätverksinfrastruktur](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) för din AEM as a Cloud Service innan du kör följande kommandon.
 
@@ -240,7 +240,7 @@ När VPN har skapats kan du nu konfigurera det med Cloud Manager API:er enligt b
    }
    ```
 
-   `nonProxyHosts` deklarerar en uppsättning värdar för vilka port 80 eller 443 ska dirigeras via de delade standardadressintervallen i stället för den dedikerade IP-adressen. `nonProxyHosts` kan vara användbart eftersom trafik som trycks ned via delade IP-adresser optimeras automatiskt av Adobe.
+   `nonProxyHosts` deklarerar en uppsättning värdar för vilka port 80 eller 443 ska dirigeras via de delade standardadressintervallen i stället för den dedikerade IP-adressen. `nonProxyHosts` kan vara användbart eftersom trafik som läses in via delade IP-adresser optimeras automatiskt av Adobe.
 
    För varje `portForwards`-mappning definierar det avancerade nätverket följande vidarebefordringsregel:
 
@@ -248,7 +248,7 @@ När VPN har skapats kan du nu konfigurera det med Cloud Manager API:er enligt b
    |---------------------------------|----------|----------------|------------------|----------|
    | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-   Om AEM __endast__ kräver HTTP/HTTPS-anslutningar till den externa tjänsten lämnar du `portForwards`-arrayen tom, eftersom dessa regler bara krävs för icke-HTTP/HTTPS-begäranden.
+   Om AEM-distributionen __endast__ kräver HTTP/HTTPS-anslutningar till den externa tjänsten lämnar du `portForwards`-arrayen tom, eftersom dessa regler bara krävs för icke-HTTP/HTTPS-begäranden.
 
 
 2. Verifiera VPN-routningsreglerna för varje miljö med Cloud Manager API:ns [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) -åtgärd.
@@ -265,11 +265,11 @@ När VPN har skapats kan du nu konfigurera det med Cloud Manager API:er enligt b
 
 3. Proxykonfigurationer för virtuella privata nätverk kan uppdateras med Cloud Manager API:ts [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) -åtgärd. Kom ihåg att `enableEnvironmentAdvancedNetworkingConfiguration` är en `PUT`-åtgärd, så alla regler måste anges med varje anrop av den här åtgärden.
 
-4. Nu kan du använda den virtuella privata nätverkets utgångskonfiguration i din anpassade AEM kod och konfiguration.
+4. Nu kan du använda den virtuella privata nätverkets utgångskonfiguration i din anpassade AEM-kod och konfiguration.
 
 ## Ansluta till externa tjänster via det virtuella privata nätverket
 
-När det virtuella privata nätverket är aktiverat kan AEM kod och konfiguration använda dem för att ringa till externa tjänster via VPN. Det finns två varianter av externa anrop som AEM behandlar på olika sätt:
+När det virtuella privata nätverket är aktiverat kan AEM-kod och konfiguration använda dem för att ringa till externa tjänster via VPN. Det finns två varianter av externa anrop som AEM hanterar på olika sätt:
 
 1. HTTP/HTTPS-anrop till externa tjänster
    + Innehåller HTTP/HTTPS-anrop till tjänster som körs på andra portar än standardportarna 80 eller 443.
@@ -280,7 +280,7 @@ HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standa
 
 ### HTTP/HTTPS
 
-När du skapar HTTP-/HTTPS-anslutningar från AEM proxiceras HTTP-/HTTPS-anslutningar automatiskt ut ur AEM när VPN används. Ingen ytterligare kod eller konfiguration krävs för att stödja HTTP/HTTPS-anslutningar.
+När du skapar HTTP/HTTPS-anslutningar från AEM proxideras HTTP/HTTPS-anslutningar automatiskt från AEM när VPN används. Ingen ytterligare kod eller konfiguration krävs för att stödja HTTP/HTTPS-anslutningar.
 
 >[!TIP]
 >
@@ -304,14 +304,14 @@ När du skapar HTTP-/HTTPS-anslutningar från AEM proxiceras HTTP-/HTTPS-anslutn
 
 ### Kodexempel för icke-HTTP/HTTPS-anslutningar
 
-När anslutningar som inte är HTTP/HTTPS skapas (t.ex. SQL, SMTP och så vidare) från AEM måste anslutningen upprättas via ett särskilt värdnamn som AEM anger.
+När anslutningar som inte är HTTP/HTTPS skapas (t.ex. SQL, SMTP och så vidare) från AEM måste anslutningen upprättas via ett särskilt värdnamn som tillhandahålls av AEM.
 
 | Variabelnamn | Använd | Java™-kod | OSGi-konfiguration |
 | - |  - | - | - |
 | `AEM_PROXY_HOST` | Proxyvärd för icke-HTTP/HTTPS-anslutningar | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
-Anslutningar till externa tjänster anropas sedan via `AEM_PROXY_HOST` och den mappade porten (`portForwards.portOrig`), som AEM sedan dirigeras till det mappade externa värdnamnet (`portForwards.name`) och porten (`portForwards.portDest`).
+Anslutningar till externa tjänster anropas sedan via `AEM_PROXY_HOST` och den mappade porten (`portForwards.portOrig`), som AEM sedan dirigerar till det mappade externa värdnamnet (`portForwards.name`) och porten (`portForwards.portDest`).
 
 | Proxyvärd | Proxyport |  | Extern värd | Extern port |
 |---------------------------------|----------|----------------|------------------|----------|

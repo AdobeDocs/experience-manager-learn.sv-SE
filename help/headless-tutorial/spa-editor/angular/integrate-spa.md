@@ -1,8 +1,8 @@
 ---
 title: Integrera en SPA | Komma igång med AEM SPA Editor och Angular
-description: Förstå hur källkoden för ett enkelsidigt program (SPA) skrivet i Angular kan integreras med ett Adobe Experience Manager-projekt (AEM). Lär dig använda moderna front end-verktyg, som Angularnas CLI-verktyg, för att snabbt utveckla SPA mot AEM JSON-modell-API.
+description: Förstå hur källkoden för ett SPA-program (Single Page Application) skrivet i Angular kan integreras med ett Adobe Experience Manager-projekt (AEM). Lär dig använda moderna front end-verktyg, som Angular CLI-verktyg, för att snabbt utveckla SPA mot AEM JSON-modellens API.
 feature: SPA Editor
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5310
 thumbnail: 5310-spa-angular.jpg
 topic: SPA
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: e9386885-86de-4e43-933c-2f0a2c04a2f2
 duration: 536
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2045'
 ht-degree: 0%
@@ -20,17 +20,17 @@ ht-degree: 0%
 
 # Integrera en SPA {#integrate-spa}
 
-Förstå hur källkoden för ett enkelsidigt program (SPA) skrivet i Angular kan integreras med ett Adobe Experience Manager-projekt (AEM). Lär dig använda moderna front end-verktyg, som en webpack-dev-server, för att snabbt utveckla SPA mot AEM JSON-modell-API:t.
+Förstå hur källkoden för ett SPA-program (Single Page Application) skrivet i Angular kan integreras med ett Adobe Experience Manager-projekt (AEM). Lär dig använda moderna front-end-verktyg, som en webpack-dev-server, för att snabbt utveckla SPA mot AEM JSON-modellens API.
 
 ## Syfte
 
-1. Förstå hur SPA projekt integreras med AEM med bibliotek på klientsidan.
+1. Förstå hur SPA-projektet integreras med AEM med klientbibliotek.
 2. Lär dig hur du använder en lokal utvecklingsserver för dedikerad frontendutveckling.
 3. Utforska användningen av en **proxy**- och statisk **mock**-fil för utveckling mot AEM JSON-modell-API
 
 ## Vad du ska bygga
 
-I det här kapitlet läggs en enkel `Header`-komponent till i SPA. Under processen att skapa den här statiska `Header`-komponenten används flera metoder för AEM SPA.
+I det här kapitlet läggs en enkel `Header`-komponent till i SPA-filen. Under processen att skapa den här statiska `Header`-komponenten används flera metoder för utveckling av AEM SPA.
 
 ![Ny rubrik i AEM](./assets/integrate-spa/final-header-component.png)
 
@@ -50,7 +50,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
    $ git checkout Angular/integrate-spa-start
    ```
 
-2. Distribuera kodbasen till en lokal AEM med Maven:
+2. Distribuera kodbasen till en lokal AEM-instans med Maven:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -66,23 +66,23 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Integreringsmetod {#integration-approach}
 
-Två moduler skapades som en del av AEM: `ui.apps` och `ui.frontend`.
+Två moduler skapades som en del av AEM-projektet: `ui.apps` och `ui.frontend`.
 
-Modulen `ui.frontend` är ett [webpack](https://webpack.js.org/)-projekt som innehåller all SPA källkod. Huvuddelen av SPA utveckling och testning görs i webbpaketsprojektet. När ett produktionsbygge utlöses byggs SPA och kompileras med webpack. De kompilerade artefakterna (CSS och Javascript) kopieras till modulen `ui.apps` som sedan distribueras till AEM.
+Modulen `ui.frontend` är ett [webpack](https://webpack.js.org/)-projekt som innehåller all SPA-källkod. Huvuddelen av utvecklingen och testningen av SPA görs i webbpaketsprojektet. När en produktionsbygge utlöses byggs och kompileras SPA med webbpack. De kompilerade artefakterna (CSS och Javascript) kopieras till modulen `ui.apps` som sedan distribueras till AEM.
 
 ![ui.frontHigh-level architecture](assets/integrate-spa/ui-frontend-architecture.png)
 
-*En högnivåbild av SPA.*
+*En högnivåbild av SPA-integreringen.*
 
 Ytterligare information om Front-end-bygget finns [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
 
-## Integreringen av Inspect SPA {#inspect-spa-integration}
+## Inspektera SPA-integreringen {#inspect-spa-integration}
 
-Kontrollera sedan modulen `ui.frontend` för att förstå SPA som har genererats automatiskt av [AEM Project-arkitypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
+Granska sedan modulen `ui.frontend` för att förstå SPA-filen som har genererats automatiskt av [AEM Project-arkivtypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
 
-1. I den utvecklingsmiljö du väljer öppnar du AEM för WKND-SPA. I den här självstudien används [Visual Studio-kod-IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
+1. Öppna AEM Project för WKND SPA i den utvecklingsmiljö du valt. I den här självstudien används [Visual Studio-kod-IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
 
-   ![VSCode - AEM WKND SPA Project](./assets/integrate-spa/vscode-ide-openproject.png)
+   ![VSCode - AEM WKND SPA-projekt](./assets/integrate-spa/vscode-ide-openproject.png)
 
 2. Expandera och inspektera mappen `ui.frontend`. Öppna filen `ui.frontend/package.json`
 
@@ -99,7 +99,7 @@ Kontrollera sedan modulen `ui.frontend` för att förstå SPA som har genererats
    "@angular/router": "~9.1.10",
    ```
 
-   Modulen `ui.frontend` är ett [Angular](https://angular.io)-program som skapats med CLI-verktyget [Angular](https://angular.io/cli) som innehåller routning.
+   Modulen `ui.frontend` är ett [Angular-program](https://angular.io) som genereras med [Angular CLI-verktyget](https://angular.io/cli) som innehåller routning.
 
 4. Det finns även tre beroenden som har prefixats med `@adobe`:
 
@@ -109,7 +109,7 @@ Kontrollera sedan modulen `ui.frontend` för att förstå SPA som har genererats
    "@adobe/cq-spa-page-model-manager": "^1.1.3",
    ```
 
-   Ovanstående moduler utgör [AEM JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html) SPA Editor och tillhandahåller funktioner som gör det möjligt att mappa SPA komponenter till AEM.
+   Ovanstående moduler utgör [AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html) och tillhandahåller funktioner som gör det möjligt att mappa SPA-komponenter till AEM-komponenter.
 
 5. I filen `package.json` definieras flera `scripts`:
 
@@ -123,19 +123,19 @@ Kontrollera sedan modulen `ui.frontend` för att förstå SPA som har genererats
    }
    ```
 
-   Dessa skript baseras på vanliga [CLI-kommandon för Angular](https://angular.io/cli/build) men har ändrats något för att fungera med det större AEM.
+   Dessa skript baseras på [Angular CLI-kommandon](https://angular.io/cli/build) men har ändrats något för att fungera med det större AEM-projektet.
 
-   `start` - kör Angularna lokalt med en lokal webbserver. Den har uppdaterats för att proxyvisa innehållet i den lokala AEM instansen.
+   `start` - kör Angular-programmet lokalt med en lokal webbserver. Den har uppdaterats för att proxyvisa innehållet i den lokala AEM-instansen.
 
-   `build` - kompilerar Angularna för produktionsdistribution. Tillägget av `&& clientlib` ansvarar för att kopiera den kompilerade SPA till modulen `ui.apps` som ett klientbibliotek under ett bygge. NPM-modulen [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) används för att underlätta detta.
+   `build` - kompilerar Angular-appen för produktionsdistribution. Tillägget av `&& clientlib` ansvarar för att kopiera den kompilerade SPA-filen till modulen `ui.apps` som ett klientbibliotek under ett bygge. NPM-modulen [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator) används för att underlätta detta.
 
    Mer information om tillgängliga skript finns [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html).
 
-6. Inspect filen `ui.frontend/clientlib.config.js`. Den här konfigurationsfilen används av [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) för att avgöra hur klientbiblioteket ska genereras.
+6. Granska filen `ui.frontend/clientlib.config.js`. Den här konfigurationsfilen används av [aem-clientlib-generator](https://github.com/wcm-io-frontend/aem-clientlib-generator#clientlibconfigjs) för att avgöra hur klientbiblioteket ska genereras.
 
-7. Inspect filen `ui.frontend/pom.xml`. Den här filen omvandlar mappen `ui.frontend` till en [Maven-modul](https://maven.apache.org/guides/mini/guide-multiple-modules.html). Filen `pom.xml` har uppdaterats för att använda plugin-programmet [front-maven](https://github.com/eirslett/frontend-maven-plugin) till **test** och **build** SPA under en Maven-konstruktion.
+7. Granska filen `ui.frontend/pom.xml`. Den här filen omvandlar mappen `ui.frontend` till en [Maven-modul](https://maven.apache.org/guides/mini/guide-multiple-modules.html). Filen `pom.xml` har uppdaterats för att använda SPA-filen [front-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) till **test** och **build** under en Maven-konstruktion.
 
-8. Inspect filen `app.component.ts` på `ui.frontend/src/app/app.component.ts`:
+8. Granska filen `app.component.ts` vid `ui.frontend/src/app/app.component.ts`:
 
    ```js
    import { Constants } from '@adobe/cq-angular-editable-components';
@@ -162,11 +162,11 @@ Kontrollera sedan modulen `ui.frontend` för att förstå SPA som har genererats
    }
    ```
 
-   `app.component.js` är SPA ingångspunkt. `ModelManager` tillhandahålls av AEM JS SDK för SPA. Den ansvarar för att anropa och injicera `pageModel` (JSON-innehållet) i programmet.
+   `app.component.js` är ingångspunkten för SPA. `ModelManager` tillhandahålls av AEM SPA Editor JS SDK. Den ansvarar för att anropa och injicera `pageModel` (JSON-innehållet) i programmet.
 
 ## Lägga till en rubrikkomponent {#header-component}
 
-Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en lokal AEM för att se integreringen.
+Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en lokal AEM-instans för att se integreringen.
 
 1. Öppna ett nytt terminalfönster och navigera till mappen `ui.frontend`:
 
@@ -174,7 +174,7 @@ Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en loka
    $ cd aem-guides-wknd-spa/ui.frontend
    ```
 
-2. Installera [Angular CLI](https://angular.io/cli#installing-angular-cli) globalt Detta används för att generera komponenterna i Angularna samt för att skapa och betjäna programmet för Angular via kommandot **ng**.
+2. Installera [Angular CLI](https://angular.io/cli#installing-angular-cli) globalt Detta används för att generera Angular-komponenter samt för att skapa och betjäna Angular-programmet via kommandot **ng**.
 
    ```shell
    $ npm install -g @angular/cli
@@ -182,7 +182,7 @@ Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en loka
 
    >[!CAUTION]
    >
-   > Den version av **@angular/cli** som används av det här projektet är **9.1.7**. Vi rekommenderar att Angularnas CLI-versioner är synkroniserade.
+   > Den version av **@angular/cli** som används av det här projektet är **9.1.7**. Vi rekommenderar att du håller Angular CLI-versionerna synkroniserade.
 
 3. Skapa en ny `Header`-komponent genom att köra Angular CLI `ng generate component`-kommandot inifrån mappen `ui.frontend`.
 
@@ -196,7 +196,7 @@ Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en loka
    UPDATE src/app/app.module.ts (1809 bytes)
    ```
 
-   Detta skapar ett skelett för den nya huvudkomponenten för Angular på `ui.frontend/src/app/components/header`.
+   Detta skapar ett skelett för den nya Angular Header-komponenten på `ui.frontend/src/app/components/header`.
 
 4. Öppna projektet `aem-guides-wknd-spa` i den utvecklingsmiljö du vill använda. Navigera till mappen `ui.frontend/src/app/components/header`.
 
@@ -213,7 +213,7 @@ Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en loka
    </header>
    ```
 
-   Observera att detta visar statiskt innehåll, så den här Angularna behöver inte justeras till standardgenererade `header.component.ts`.
+   Observera att detta visar statiskt innehåll, så den här Angular-komponenten behöver inte justeras till standardgenererade `header.component.ts`.
 
 6. Öppna filen **app.component.html** på `ui.frontend/src/app/app.component.html`. Lägg till `app-header`:
 
@@ -236,7 +236,7 @@ Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en loka
    ES5 bundle generation complete.
    ```
 
-8. Navigera till mappen `ui.apps`. Under `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-angular` bör du se att de kompilerade SPA har kopierats från mappen `ui.frontend/build`.
+8. Navigera till mappen `ui.apps`. Under `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/clientlibs/clientlib-angular` bör du se att de kompilerade SPA-filerna har kopierats från mappen `ui.frontend/build`.
 
    ![Klientbibliotek genererat i ui.apps](assets/integrate-spa/compiled-spa-uiapps.png)
 
@@ -264,9 +264,9 @@ Lägg sedan till en ny komponent i SPA och distribuera ändringarna till en loka
 
 ## Webpack Dev Server - Proxy för JSON API {#proxy-json}
 
-Som vi har sett i tidigare övningar tar det några minuter att skapa och synkronisera klientbiblioteket till en lokal instans av AEM. Detta är godtagbart för sluttestning, men är inte idealiskt för större delen av SPA.
+Så som vi sett i tidigare övningar tar det några minuter att skapa och synkronisera klientbiblioteket till en lokal instans av AEM. Detta är godtagbart för sluttestning, men är inte idealiskt för större delen av SPA-utvecklingen.
 
-En [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kan användas för att snabbt utveckla SPA. SPA drivs av en JSON-modell som genereras av AEM. I den här övningen är JSON-innehållet från en instans av AEM **proxied** till den utvecklingsserver som konfigurerats av [Angular-projektet](https://angular.io/guide/build).
+Du kan använda en [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) för att snabbt utveckla SPA. SPA drivs av en JSON-modell som genererats av AEM. I den här övningen är JSON-innehållet från en instans av AEM **proxied** till den utvecklingsserver som konfigurerats av [Angular-projektet](https://angular.io/guide/build).
 
 1. Gå tillbaka till IDE och öppna filen **proxy.conf.json** på `ui.frontend/proxy.conf.json`.
 
@@ -284,9 +284,9 @@ En [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kan an
    ]
    ```
 
-   [Angular-appen](https://angular.io/guide/build#proxying-to-a-backend-server) är en enkel mekanism för proxy-API-begäranden. Mönstren som anges i `context` proxideras via `localhost:4502`, den lokala AEM snabbstarten.
+   Med [Angular-appen](https://angular.io/guide/build#proxying-to-a-backend-server) får du en enkel mekanism för att hantera proxy-API-begäranden. Mönstren som anges i `context` proxideras via `localhost:4502`, den lokala AEM-snabbstarten.
 
-2. Öppna filen **index.html** vid `ui.frontend/src/index.html`. Det här är HTML-rotfilen som används av dev-servern.
+2. Öppna filen **index.html** vid `ui.frontend/src/index.html`. Detta är HTML-rotfilen som används av dev-servern.
 
    Observera att det finns en post för `base href="/"`. [bastaggen](https://angular.io/guide/deployment#the-base-tag) är viktig för att programmet ska kunna matcha relativa URL-adresser.
 
@@ -345,13 +345,13 @@ En [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kan an
 
 ## Webpack Dev Server - Mock JSON API {#mock-json}
 
-Ett annat sätt att snabbt utveckla är att använda en statisk JSON-fil som fungerar som JSON-modell. Genom att&quot;maska&quot; JSON tar vi bort beroendet av en lokal AEM. Den gör det också möjligt för en frontendutvecklare att uppdatera JSON-modellen för att testa funktionalitet och driva ändringar i JSON API som senare skulle implementeras av en backend-utvecklare.
+Ett annat sätt att snabbt utveckla är att använda en statisk JSON-fil som fungerar som JSON-modell. Genom att&quot;maska&quot; JSON tar vi bort beroendet av en lokal AEM-instans. Den gör det också möjligt för en frontendutvecklare att uppdatera JSON-modellen för att testa funktionalitet och driva ändringar i JSON API som senare skulle implementeras av en backend-utvecklare.
 
-Den första konfigurationen av JSON-modellinstansen **kräver en lokal AEM**.
+Den första konfigurationen av modell-JSON kräver **en lokal AEM-instans**.
 
 1. Gå till [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json) i webbläsaren.
 
-   Detta är den JSON som exporteras av AEM som driver programmet. Kopiera JSON-utdata.
+   Detta är den JSON som exporteras av AEM och som driver programmet. Kopiera JSON-utdata.
 
 2. Gå tillbaka till IDE, navigera till `ui.frontend/src` och lägg till nya mappar med namnen **mocks** och **json** så att de matchar följande mappstruktur:
 
@@ -402,9 +402,9 @@ Den första konfigurationen av JSON-modellinstansen **kräver en lokal AEM**.
        },
    ```
 
-   ![JSON Dev Assets-uppdateringsmapp för Angular](assets/integrate-spa/dev-assets-update-folder.png)
+   ![Angular JSON Dev Assets - uppdateringsmapp](assets/integrate-spa/dev-assets-update-folder.png)
 
-   Genom att skapa en dedikerad **dev**-konfiguration försäkrar du dig om att mappen **mocks** bara används under utvecklingen och aldrig distribueras till AEM i ett produktionsbygge.
+   Genom att skapa en dedikerad **dev**-konfiguration försäkrar du dig om att mappen **mocks** bara används under utvecklingen och aldrig distribueras till AEM i en produktionsversion.
 
 6. I filen **angular.json** uppdaterar du **browserTarget** -konfigurationen till den nya **dev** -konfigurationen:
 
@@ -445,19 +445,19 @@ Den första konfigurationen av JSON-modellinstansen **kräver en lokal AEM**.
    > ng serve --open --proxy-config ./proxy.mock.conf.json
    ```
 
-   Navigera till [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html) och se samma SPA, men innehållet hämtas nu från JSON-filen **mock** .
+   Navigera till [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html) och se samma SPA men innehållet hämtas nu från JSON-filen **mock** .
 
 9. Gör en liten ändring i filen **en.model.json** som skapades tidigare. Det uppdaterade innehållet bör omedelbart återspeglas i **webbpaketets dev-server**.
 
    ![JSON-uppdatering för modellmodell](./assets/integrate-spa/webpack-mock-model.gif)
 
-   Att kunna manipulera JSON-modellen och se effekterna på en live-SPA kan hjälpa en utvecklare att förstå JSON-modellens API. Det gör det även möjligt att utveckla både fram- och bakände parallellt.
+   Att kunna manipulera JSON-modellen och se effekterna på en aktiv SPA kan hjälpa en utvecklare att förstå JSON-modellens API. Det gör det även möjligt att utveckla både fram- och bakände parallellt.
 
 ## Lägg till format med Sass
 
 Därefter läggs en del uppdaterade format till i projektet. Det här projektet lägger till [Sass](https://sass-lang.com/)-stöd för några användbara funktioner som variabler.
 
-1. Öppna ett terminalfönster och stoppa **webpack-dev-servern** om den startas. I mappen `ui.frontend` anger du följande kommando för att uppdatera Angularna så att **.scss** -filer bearbetas.
+1. Öppna ett terminalfönster och stoppa **webpack-dev-servern** om den startas. I mappen `ui.frontend` anger du följande kommando för att uppdatera Angular-appen så att **.scss** -filer bearbetas.
 
    ```shell
    $ cd ui.frontend
@@ -628,9 +628,9 @@ Lägg sedan till några varumärkesspecifika format i komponenten **Header** med
 
    Du bör nu se de uppdaterade formaten som lagts till i komponenten **Header**.
 
-## Distribuera SPA uppdateringar till AEM
+## Distribuera SPA-uppdateringar till AEM
 
-Ändringarna som gjorts i **Header** är för närvarande bara synliga via **webbpaketets dev-server**. Distribuera den uppdaterade SPA för att AEM se ändringarna.
+Ändringarna som gjorts i **Header** är för närvarande bara synliga via **webbpaketets dev-server**. Distribuera den uppdaterade SPA-filen till AEM för att se ändringarna.
 
 1. Stoppa **webbpaketets dev-server**.
 2. Navigera till roten för projektet `/aem-guides-wknd-spa` och distribuera projektet till AEM med Maven:
@@ -644,14 +644,14 @@ Lägg sedan till några varumärkesspecifika format i komponenten **Header** med
 
    ![Uppdaterat sidhuvud i AEM](assets/integrate-spa/final-header-component.png)
 
-   Nu när den uppdaterade SPA är i AEM kan redigeringen fortsätta.
+   Nu när den uppdaterade produktresumén finns i AEM kan man fortsätta med utvecklingen.
 
 ## Grattis! {#congratulations}
 
-Grattis, du har uppdaterat SPA och utforskat integreringen med AEM! Du kan nu använda två olika metoder för att utveckla SPA mot AEM JSON-modell-API:t med hjälp av en **webpack-dev-server**.
+Grattis! Du har uppdaterat SPA-avtalet och utforskat integreringen med AEM! Du kan nu använda två olika metoder för att utveckla SPA mot AEM JSON-modell-API:t med en **webbpack-dev-server**.
 
 Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/integrate-spa-solution) eller checka ut koden lokalt genom att växla till grenen `Angular/integrate-spa-solution`.
 
 ### Nästa steg {#next-steps}
 
-[Mappa SPA komponenter till AEM komponenter](map-components.md) - Lär dig hur du mappar komponentkomponenter till Adobe Experience Manager-komponenter (AEM) med AEM JS SDK för SPA Editor. Med komponentmappning kan författare göra dynamiska uppdateringar av SPA komponenter i AEM SPA Editor, på samma sätt som med traditionell AEM.
+[Mappa SPA-komponenter till AEM-komponenter](map-components.md) - Lär dig hur du mappar Angular-komponenter till Adobe Experience Manager-komponenter (AEM) med AEM SPA Editor JS SDK. Med hjälp av komponentmappning kan författare göra dynamiska uppdateringar av SPA-komponenter i AEM SPA Editor, på samma sätt som i traditionell AEM-redigering.

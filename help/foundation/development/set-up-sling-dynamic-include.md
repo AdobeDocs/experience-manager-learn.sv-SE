@@ -1,7 +1,7 @@
 ---
-title: Ställ in dynamisk SSLING-inkludering för AEM
+title: Konfigurera Sling Dynamic Include för AEM
 description: En videogenomgång av hur du installerar och använder Apache Sling Dynamic Include med AEM Dispatcher som körs på Apache HTTP Web Server.
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: APIs
 doc-type: Technical Video
@@ -10,7 +10,7 @@ role: Developer
 level: Experienced
 exl-id: 6c504710-be8f-4b44-bd8a-aaf480ae6d8a
 duration: 863
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 0%
@@ -30,7 +30,7 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
 1. Hämta och installera [[!DNL Sling Dynamic Include] paketet](https://sling.apache.org/downloads.cgi).
 1. Konfigurera [!DNL Sling Dynamic Include] via [!DNL OSGi Configuration Factory] på **http://&lt;host>:&lt;port>/system/console/configMgr/org.apache.sling.dynamicinclude.Configuration**.
 
-   Eller, om du vill lägga till en AEM kodbas, skapar du lämplig **sling:OsgiConfig** -nod på:
+   Eller, om du vill lägga till i en AEM-kodbas, skapar du lämplig **sling:OsgiConfig** -nod på:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>

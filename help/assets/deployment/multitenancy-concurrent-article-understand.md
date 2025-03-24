@@ -2,14 +2,14 @@
 title: Understanding Multitenancy and Concurrent Development
 description: Läs om fördelarna, utmaningarna och teknikerna med att hantera en multi-tenant-implementering med Adobe Experience Manager Assets.
 feature: Connected Assets
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 doc-type: Article
 exl-id: c9ee29d4-a8a5-4e61-bc99-498674887da5
 duration: 437
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 0%
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 ## Introduktion {#introduction}
 
-När flera team distribuerar sin kod till samma AEM miljöer finns det rutiner som de bör följa för att säkerställa att teamen kan arbeta så självständigt som möjligt, utan att behöva ta hjälp av andra team. De kan aldrig elimineras helt, men de här teknikerna minimerar beroendet mellan olika team. För att en samverkande utvecklingsmodell ska bli framgångsrik är det mycket viktigt med bra kommunikation mellan utvecklingsteamen.
+När flera team distribuerar sin kod till samma AEM-miljöer finns det rutiner som de bör följa för att säkerställa att teamen kan arbeta så självständigt som möjligt, utan att behöva ta hjälp av andra team. De kan aldrig elimineras helt, men de här teknikerna minimerar beroendet mellan olika team. För att en samverkande utvecklingsmodell ska bli framgångsrik är det mycket viktigt med bra kommunikation mellan utvecklingsteamen.
 
-När flera utvecklingsteam arbetar i samma AEM är det dessutom troligt att det finns en viss grad av multi-tenancy på gång. Mycket har skrivits om de praktiska övervägandena att försöka stödja flera hyresgäster i en AEM miljö, särskilt när det gäller de utmaningar som man ställs inför när det gäller styrning, drift och utveckling. I den här rapporten behandlas några tekniska problem med att implementera AEM i en multi-tenant-miljö, men många av dessa rekommendationer gäller alla organisationer med flera utvecklingsteam.
+När flera utvecklingsteam arbetar i samma AEM-miljö är det dessutom troligt att det finns en viss grad av multi-tenancy på gång. Mycket har skrivits om de praktiska övervägandena att försöka stödja flera hyresgäster i en AEM-miljö, särskilt när det gäller de problem som man ställs inför när det gäller styrning, drift och utveckling. I den här rapporten behandlas några tekniska problem med att implementera AEM i en multi-tenant-miljö, men många av dessa rekommendationer gäller alla organisationer med flera utvecklingsteam.
 
-Det är viktigt att komma ihåg att AEM kan stödja flera webbplatser och till och med flera varumärken som används i en och samma miljö, men inte erbjuder äkta multi-tenancy. Vissa systemkonfigurationer och systemresurser delas alltid över alla platser som är distribuerade i en miljö. Det här dokumentet ger vägledning för att minimera effekterna av dessa delade resurser och ger förslag för att effektivisera kommunikation och samarbete inom dessa områden.
+Det är viktigt att komma ihåg att även om AEM har stöd för flera webbplatser och till och med flera varumärken som används i en och samma miljö, så har det inte äkta multi-tenancy. Vissa systemkonfigurationer och systemresurser delas alltid över alla platser som är distribuerade i en miljö. Det här dokumentet ger vägledning för att minimera effekterna av dessa delade resurser och ger förslag för att effektivisera kommunikation och samarbete inom dessa områden.
 
 ## Fördelar och utmaningar {#benefits-and-challenges}
 
@@ -110,13 +110,13 @@ Eftersom det är en global systemsökväg som inte är specifik för en webbplat
 
 ### Övertäckningar {#overlays}
 
-Övertäckningar används ofta för att utöka eller ersätta AEM, men om du använder en övertäckning påverkas hela AEM (dvs. alla funktionsändringar görs tillgängliga för alla innehavare). Detta skulle vara ytterligare komplicerat om hyresgästerna hade olika krav för övertäckningen. I idealfallet bör företagsgrupperna samarbeta för att komma överens om hur AEM administrativa konsoler ska fungera och se ut.
+Övertäckningar används ofta för att utöka eller ersätta AEM-funktioner, men om du använder en övertäckning påverkas hela AEM-programmet (det vill säga alla funktionsändringar görs tillgängliga för alla innehavare). Detta skulle vara ytterligare komplicerat om hyresgästerna hade olika krav för övertäckningen. I idealfallet bör företagsgrupper samarbeta för att komma överens om hur AEM administrativa konsoler ska fungera och se ut.
 
 Om konsensus inte kan nås mellan de olika affärsenheterna är en möjlig lösning att helt enkelt inte använda övertäckningar. Skapa i stället en egen kopia av funktionen och visa den via olika sökvägar för varje klientorganisation. På så sätt kan varje klientorganisation ha en helt annan användarupplevelse, men det här tillvägagångssättet ökar också kostnaden för implementering och efterföljande uppgraderingar.
 
 ### Arbetsflödeskörare {#workflow-launchers}
 
-AEM använder arbetsflödeskörning för att automatiskt starta arbetsflödeskörning när angivna ändringar görs i databasen. AEM innehåller flera startfunktioner, t.ex. för att skapa återgivningar och extrahera metadata för nya och uppdaterade resurser. Även om det är möjligt att lämna dessa startprogram som de är i en flerinnehavarmiljö, och om de har olika krav för startprogram och/eller arbetsflödesmodeller, är det troligt att enskilda startprogram behöver skapas och underhållas för varje innehavare. Dessa startprogram måste konfigureras så att de kan köras på klientorganisationens uppdateringar samtidigt som innehåll från andra hyresgäster lämnas orört. Det är enkelt att uppnå detta genom att använda startprogram på angivna databassökvägar som är klientspecifika.
+AEM använder arbetsflödeskörning för att automatiskt starta arbetsflödeskörning när angivna ändringar görs i databasen. AEM har flera startfunktioner, t.ex. för att skapa återgivningar och extrahera metadata för nya och uppdaterade resurser. Även om det är möjligt att lämna dessa startprogram som de är i en flerinnehavarmiljö, och om de har olika krav för startprogram och/eller arbetsflödesmodeller, är det troligt att enskilda startprogram behöver skapas och underhållas för varje innehavare. Dessa startprogram måste konfigureras så att de kan köras på klientorganisationens uppdateringar samtidigt som innehåll från andra hyresgäster lämnas orört. Det är enkelt att uppnå detta genom att använda startprogram på angivna databassökvägar som är klientspecifika.
 
 ### Vanity-URL:er {#vanity-urls}
 
@@ -134,11 +134,11 @@ En bra arkitektur och öppna kommunikationskanaler kan förhindra att defekter i
 
 ### Delade resurser {#shared-resources}
 
-AEM körs i en enda JVM. Alla distribuerade AEM-program delar resurser med varandra utöver de resurser som redan används i den normala AEM. I själva JVM-rymden finns ingen logisk separation av trådar, och de begränsade resurser som är tillgängliga för AEM, som minne, processor och disk-I/O, delas också. Eventuella resurser som förbrukas av hyresgäster kommer ofrånkomligen att påverka andra systeminnehavare.
+AEM körs i en enda JVM. Alla distribuerade AEM-program delar resurser med varandra utöver de resurser som redan använts i den normala körningen av AEM. I själva JVM-rymden finns ingen logisk separation av trådar, och de begränsade resurser som är tillgängliga för AEM, som minne, CPU och disk-I/O, delas också. Eventuella resurser som förbrukas av hyresgäster kommer ofrånkomligen att påverka andra systeminnehavare.
 
 ### Prestanda {#performance}
 
-Om du inte följer AEM bästa praxis är det möjligt att utveckla program som förbrukar resurser utöver vad som anses vara normalt. Exempel på detta är att utlösa många omfattande arbetsflödesåtgärder (till exempel DAM Update Asset), använda MSM push-on-modify-åtgärder över många noder eller använda dyra JCR-frågor för att återge innehåll i realtid. Dessa kommer oundvikligen att påverka prestanda för andra klientapplikationer.
+Om man inte följer AEM bästa praxis är det möjligt att utveckla program som förbrukar resurser utöver vad som anses normalt. Exempel på detta är att utlösa många omfattande arbetsflödesåtgärder (till exempel DAM Update Asset), använda MSM push-on-modify-åtgärder över många noder eller använda dyra JCR-frågor för att återge innehåll i realtid. Dessa kommer oundvikligen att påverka prestanda för andra klientapplikationer.
 
 ### Loggning {#logging}
 

@@ -1,7 +1,7 @@
 ---
 title: Egen komponent
 description: Täcker det kompletta skapandet av en anpassad bytekomponent som visar redigerat innehåll. Innehåller utveckling av en Sling-modell för inkapsling av affärslogik för att fylla i den inkapslade komponenten och motsvarande HTML för återgivning av komponenten.
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, APIs
 topic: Content Management, Development
 role: Developer
@@ -12,7 +12,7 @@ thumbnail: 30181.jpg
 doc-type: Tutorial
 exl-id: f54f3dc9-6ec6-4e55-9043-7a006840c905
 duration: 1039
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '3869'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Ta en titt på den baslinjekod som självstudiekursen bygger på:
    $ git checkout tutorial/custom-component-start
    ```
 
-1. Distribuera kodbasen till en lokal AEM med dina Maven-kunskaper:
+1. Distribuera kodbasen till en lokal AEM-instans med dina Maven-kunskaper:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -60,7 +60,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Syfte
 
-1. Förstå hur du skapar en anpassad AEM
+1. Förstå hur man bygger en anpassad AEM-komponent
 1. Lär dig kapsla in affärslogik med Sling Models
 1. Förstå hur du använder en segmenteringsmodell i ett HTML-skript
 
@@ -80,9 +80,9 @@ Implementeringen av komponenten Byline innehåller en dialogruta som samlar in i
 
 ## Skapa Byline-komponent {#create-byline-component}
 
-Skapa först nodstrukturen för Byline-komponenten och definiera en dialogruta. Detta representerar komponenten i AEM och definierar implicit komponentens resurstyp genom sin placering i JCR-läsaren.
+Skapa först nodstrukturen för Byline-komponenten och definiera en dialogruta. Detta representerar komponenterna i AEM och definierar implicit komponentens resurstyp genom sin placering i JCR.
 
-Dialogrutan visar gränssnittet som innehållsförfattare kan använda. För den här implementeringen används den AEM WCM Core-komponentens **Image** -komponent för att hantera redigering och återgivning av Bylines bild, så den måste anges som den här komponentens `sling:resourceSuperType`.
+Dialogrutan visar gränssnittet som innehållsförfattare kan använda. För den här implementeringen används AEM WCM Core Components **Image** -komponent för att hantera redigering och återgivning av Bylines bild, så den måste anges som den här komponentens `sling:resourceSuperType`.
 
 ### Skapa komponentdefinition {#create-component-definition}
 
@@ -284,11 +284,11 @@ På samma sätt som när du skapar en dialogruta skapar du en principdialogruta 
 
 1. Synkronisera ändringarna i `ui.apps` med din IDE eller med dina Maven-kunskaper.
 
-   ![Exportera till AEM serverns originalkomponent](assets/custom-component/export-byline-component-aem.png)
+   ![Exportera till AEM-serverns originalkomponent](assets/custom-component/export-byline-component-aem.png)
 
 ## Lägga till komponenten på en sida {#add-the-component-to-a-page}
 
-Om du vill hålla saker enkla och fokusera på AEM komponentutveckling kan vi lägga till den inbyggda komponenten i det aktuella läget på en artikelsida för att kontrollera att noddefinitionen `cq:Component` är korrekt. Verifiera också att AEM känner igen den nya komponentdefinitionen och att komponentens dialogruta fungerar för redigering.
+Om du vill hålla saker enkla och fokusera på komponentutveckling för AEM lägger du till komponenten Byline i det aktuella läget på en artikelsida för att kontrollera att noddefinitionen `cq:Component` är korrekt. Verifiera också att AEM känner igen den nya komponentdefinitionen och att komponentens dialogruta fungerar för redigering.
 
 ### Lägga till en bild i AEM Assets
 
@@ -326,9 +326,9 @@ Lägg sedan till komponenten Byline på en sida i AEM. Eftersom komponenten Byli
 
    ![fyll i egenskaperna för den inbyggda komponenten](assets/custom-component/add-properties.png)
 
-   AEM konfigurerar och redigerar komponenter via dialogrutorna. I nuläget ingår dialogrutorna för datainsamling i utvecklingen av komponenten Byline, men logiken för att återge det redigerade innehållet har ännu inte lagts till. Därför visas bara platshållaren.
+   AEM författare konfigurerar och redigerar komponenter via dialogrutorna. I nuläget ingår dialogrutorna för datainsamling i utvecklingen av komponenten Byline, men logiken för att återge det redigerade innehållet har ännu inte lagts till. Därför visas bara platshållaren.
 
-1. När du har sparat dialogrutan går du till [CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd/us/en/magazine/guide-la-skateparks/jcr%3Acontent/root/container/container/byline) och granskar hur komponentens innehåll lagras på innehållsnoden för instickskomponenten under AEM.
+1. När du har sparat dialogrutan går du till [CRXDE Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd/us/en/magazine/guide-la-skateparks/jcr%3Acontent/root/container/container/byline) och granskar hur komponentens innehåll lagras på innehållsnoden för instickskomponenten under AEM-sidan.
 
    Hitta innehållsnoden för komponenten Byline under sidan LA Skate Parks, dvs. `/content/wknd/us/en/magazine/guide-la-skateparks/jcr:content/root/container/container/byline`.
 
@@ -342,11 +342,11 @@ Lägg sedan till komponenten Byline på en sida i AEM. Eftersom komponenten Byli
 
 Sedan skapar vi en Sling-modell som fungerar som datamodell och lagrar affärslogiken för Byline-komponenten.
 
-Sling Models är anteckningsdrivna Java™ POJOs (Plain Old Java™ Objects) som gör det enklare att mappa data från JCR till Java™-variabler och som ger ökad effektivitet vid utveckling i AEM.
+Sling Models är anteckningsdrivna Java™ POJOs (Plain Old Java™ Objects) som underlättar datamappningen från JCR till Java™-variabler och som ger ökad effektivitet vid utveckling i AEM-sammanhang.
 
 ### Granska Maven Dependencies {#maven-dependency}
 
-Byline Sling Model bygger på flera Java™-API:er från AEM. Dessa API:er är tillgängliga via `dependencies` som anges i POM-filen för modulen `core`. Det projekt som används för den här självstudiekursen har skapats för AEM as a Cloud Service. Den är dock unik eftersom den är bakåtkompatibel med AEM 6.5/6.4. Därför ingår både beroenden för Cloud Service och AEM 6.x.
+Byline Sling Model bygger på flera Java™-API:er från AEM. Dessa API:er är tillgängliga via `dependencies` som anges i POM-filen för modulen `core`. Det projekt som används för den här självstudiekursen har skapats för AEM as a Cloud Service. Men den är unik eftersom den är bakåtkompatibel med AEM 6.5/6.4. Därför ingår både beroenden för Cloud Service och AEM 6.x.
 
 1. Öppna filen `pom.xml` under `<src>/aem-guides-wknd/core/pom.xml`.
 1. Hitta beroendet för `aem-sdk-api` - **endast AEM as a Cloud Service**
@@ -358,9 +358,9 @@ Byline Sling Model bygger på flera Java™-API:er från AEM. Dessa API:er är t
    </dependency>
    ```
 
-   [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en) innehåller alla publika Java™-API:er som exponeras av AEM. `aem-sdk-api` används som standard när det här projektet skapas. Versionen finns kvar i den överordnade reaktorversionen från projektets rot vid `aem-guides-wknd/pom.xml`.
+   [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en) innehåller alla offentliga Java™-API:er som exponeras av AEM. `aem-sdk-api` används som standard när det här projektet skapas. Versionen finns kvar i den överordnade reaktorversionen från projektets rot vid `aem-guides-wknd/pom.xml`.
 
-1. Hitta beroendet för `uber-jar` - **AEM endast 6.5/6.4**
+1. Hitta beroendet för `uber-jar` - **endast AEM 6.5/6.4**
 
    ```xml
    ...
@@ -372,9 +372,9 @@ Byline Sling Model bygger på flera Java™-API:er från AEM. Dessa API:er är t
    ...
    ```
 
-   `uber-jar` inkluderas bara när profilen `classic` anropas, dvs. `mvn clean install -PautoInstallSinglePackage -Pclassic`. Detta är unikt för det här projektet. I ett verkligt projekt som genereras från den AEM projektarkitypen är `uber-jar` standardvärdet om den AEM versionen är 6.5 eller 6.4.
+   `uber-jar` inkluderas bara när profilen `classic` anropas, dvs. `mvn clean install -PautoInstallSinglePackage -Pclassic`. Detta är unikt för det här projektet. I ett verkligt projekt som genererats från AEM Project Archetype är `uber-jar` standardvärdet om den version av AEM som anges är 6.5 eller 6.4.
 
-   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) innehåller alla publika Java™-API:er som exponeras av AEM 6.x. Versionen bibehålls i den överordnade reaktorversionen från projektets rot `aem-guides-wknd/pom.xml` .
+   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) innehåller alla Java™-API:er som exponeras av AEM 6.x. Versionen bibehålls i den överordnade reaktorversionen från projektets rot `aem-guides-wknd/pom.xml` .
 
 1. Hitta beroendet för `core.wcm.components.core`:
 
@@ -386,7 +386,7 @@ Byline Sling Model bygger på flera Java™-API:er från AEM. Dessa API:er är t
        </dependency>
    ```
 
-   Detta är de fullständiga Java™-API:erna som exponeras av AEM Core Components. AEM kärnkomponenter är ett projekt som underhålls utanför AEM och därför har en separat releasecykel. Därför är det ett beroende som måste inkluderas separat och **ingår inte** i `uber-jar` eller `aem-sdk-api`.
+   Detta är de fullständiga Java™-API:erna som finns i AEM Core Components. AEM Core Components är ett projekt som underhålls utanför AEM och därför har en separat releasecykel. Därför är det ett beroende som måste inkluderas separat och **ingår inte** i `uber-jar` eller `aem-sdk-api`.
 
    Precis som för uber-jar bevaras versionen för det här beroendet i den överordnade reaktorns PDF-fil från `aem-guides-wknd/pom.xml`.
 
@@ -845,7 +845,7 @@ Vi använder metoden **second**. Det första tillvägagångssättet är förmodl
 
 ## Byline HTML {#byline-htl}
 
-I modulen `ui.apps` öppnar du `/apps/wknd/components/byline/byline.html` som skapades i den tidigare konfigurationen av AEM.
+Öppna `/apps/wknd/components/byline/byline.html` som skapades i den tidigare installationen av AEM-komponenten i modulen `ui.apps`.
 
 ```html
 <div data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html">
@@ -923,7 +923,7 @@ Uttryck läggs till via operatorn `@` i HTL-uttrycket.
 
 ### Villkorlig visning av platshållaren {#conditionally-displaying-the-placeholder}
 
-De flesta HTML-skript för AEM Components använder **platshållarparadigm** för att ge en visuell referens till författare **som anger att en komponent är felaktigt skapad och inte visas på AEM Publish**. Konventionen som styr det här beslutet är att implementera en metod på komponentens bakomliggande Sling Model, i det här fallet: `Byline.isEmpty()`.
+De flesta HTML-skript för AEM Components använder **platshållarparadigm** för att ge en visuell referens till författare **som anger att en komponent är felaktigt skapad och inte visas i AEM Publish**. Konventionen som styr det här beslutet är att implementera en metod på komponentens bakomliggande Sling Model, i det här fallet: `Byline.isEmpty()`.
 
 Metoden `isEmpty()` anropas i Byline Sling Model och resultatet (eller snarare negativt, via operatorn `!`) sparas i en HTML-variabel med namnet `hasContent`:
 
@@ -938,7 +938,7 @@ Metoden `isEmpty()` anropas i Byline Sling Model och resultatet (eller snarare n
    </div>
    ```
 
-   Observera att `data-sly-test` används, att HTL `test`-blocket är nyckel, att det båda anger en HTML-variabel och att det HTML-element som det är på återges/inte. Den baseras på resultatet av utvärderingen av HTML-uttrycket. Om värdet är &quot;true&quot; återges elementet HTML, annars återges det inte.
+   Observera att `data-sly-test` används, att HTL `test`-blocket är nyckel, att det båda anger en HTML-variabel och återger/inte det HTML-element det är på. Den baseras på resultatet av utvärderingen av HTML-uttrycket. Om värdet är &quot;true&quot; återges HTML-elementet, annars återges det inte.
 
    Den här HTML-variabeln `hasContent` kan nu återanvändas för att villkorligt visa/dölja platshållaren.
 
@@ -984,7 +984,7 @@ För detta ska vi ta med den aktuella bylineresursen, men tvinga resurstypen fö
    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
    ```
 
-3. Distribuera kodbasen till en lokal AEM. Eftersom ändringar gjordes i `core` och `ui.apps` måste båda modulerna distribueras.
+3. Distribuera kodbasen till en lokal AEM-instans. Eftersom ändringar gjordes i `core` och `ui.apps` måste båda modulerna distribueras.
 
    ```shell
    $ cd aem-guides-wknd/ui.apps
@@ -996,7 +996,7 @@ För detta ska vi ta med den aktuella bylineresursen, men tvinga resurstypen fö
    $ mvn clean install -PautoInstallBundle
    ```
 
-   Anropa profilen `classic` om du vill distribuera till AEM 6.5/6.4:
+   Om du vill distribuera till AEM 6.5/6.4 anropar du profilen `classic`:
 
    ```shell
    $ cd ../core
@@ -1005,11 +1005,11 @@ För detta ska vi ta med den aktuella bylineresursen, men tvinga resurstypen fö
 
    >[!CAUTION]
    >
-   > Du kan också skapa hela projektet från roten med hjälp av Maven-profilen `autoInstallSinglePackage`, men detta kan skriva över innehållsändringarna på sidan. Detta beror på att `ui.content/src/main/content/META-INF/vault/filter.xml` har ändrats för att självstudiekursens startkod ska skriva över det befintliga AEM. I ett verkligt scenario är detta inte något problem.
+   > Du kan också skapa hela projektet från roten med hjälp av Maven-profilen `autoInstallSinglePackage`, men detta kan skriva över innehållsändringarna på sidan. Detta beror på att `ui.content/src/main/content/META-INF/vault/filter.xml` har ändrats för att självstudiekursens startkod ska skriva över det befintliga AEM-innehållet. I ett verkligt scenario är detta inte något problem.
 
 ### Granska den oformaterade Byline-komponenten {#reviewing-the-unstyled-byline-component}
 
-1. När du har distribuerat uppdateringen navigerar du till sidan [Ultimate Guide till LA Skateparks](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html) eller där du lade till Byline-komponenten tidigare i kapitlet.
+1. När du har distribuerat uppdateringen navigerar du till sidan [Ultimate Guide till LA Skateparks](http://localhost:4502/editor.html/content/wknd/us/en/magazine/guide-la-skateparks.html) eller till den plats där du lade till Byline-komponenten tidigare i kapitlet.
 
 1. **bild**, **namn** och **funktioner** visas nu och har en ogiltig formatering, men det finns en fungerande Byline-komponent.
 
@@ -1017,7 +1017,7 @@ För detta ska vi ta med den aktuella bylineresursen, men tvinga resurstypen fö
 
 ### Granska registreringen av försäljningsmodellen {#reviewing-the-sling-model-registration}
 
-Statusvyn ](http://localhost:4502/system/console/status-slingmodels) för [AEM Web Console-modulen Sling Models visar alla registrerade Sling Models i AEM. Byline Sling Model kan valideras som installerad och identifieras genom att läsa den här listan.
+Statusvyn [AEM Web Console’s Sling Models](http://localhost:4502/system/console/status-slingmodels) visar alla registrerade Sling Models i AEM. Byline Sling Model kan valideras som installerad och identifieras genom att läsa den här listan.
 
 Om **BylineImpl** inte visas i den här listan är det troligtvis ett problem med Sling-modellens anteckningar eller så har modellen inte lagts till i rätt paket (`com.adobe.aem.guides.wknd.core.models`) i huvudprojektet.
 
@@ -1096,9 +1096,9 @@ Grattis! Du har skapat en egen komponent från grunden med Adobe Experience Mana
 
 ### Nästa steg {#next-steps}
 
-Fortsätt att lära dig mer om AEM komponentutveckling genom att utforska hur du skriver JUnit-tester för Byline Java™-koden för att säkerställa att allt utvecklas på rätt sätt och att implementerad affärslogik är korrekt och fullständig.
+Lär dig mer om AEM Component Development genom att utforska hur du skriver JUnit-tester för Byline Java™-koden för att säkerställa att allt utvecklas på rätt sätt och att implementerad affärslogik är korrekt och fullständig.
 
-* [Skriva enhetstester eller AEM](unit-testing.md)
+* [Skriva enhetstester eller AEM-komponenter](unit-testing.md)
 
 Visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd) eller granska och distribuera koden lokalt på Git-grenen `tutorial/custom-component-solution`.
 

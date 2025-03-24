@@ -6,9 +6,9 @@ user-guide-description: En samling resurser om AEM Forms för nybörjare och erf
 solution: Experience Manager, Experience Manager Forms
 breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 index: y
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2101'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 + [Ökning](overview.md)
 + [Bästa tillvägagångssätt att följa](adaptive-forms/best-practices-adaptive-forms.md)
-+ [Konfigurera OKTA-autentisering med AEM författare](adaptive-forms/single-sign-on-with-okta.md)
++ [Ställa in OKTA-autentisering med AEM Author](adaptive-forms/single-sign-on-with-okta.md)
 + Skapar ditt första adaptiva formulär {#creating-your-first-adaptive-form}
    + [1 - Introduktion och installation](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [2 - Skapa adaptiv formulärmall](creating-your-first-adaptive-form/create-adaptive-form-template.md)
@@ -39,7 +39,7 @@ ht-degree: 1%
    + [Skicka till extern slutpunkt](handling-form-submissions/submitting-adaptive-forms-to-external-server-article-use.md)
    + [Skickar e-post](handling-form-submissions/sending-email-on-adaptive-form-submission.md)
    + [Betalningstid för begärandearbetsflöde](handling-form-submissions/paid-time-off-request-workflow.md)
-   + [Konfigurera adaptiv form för att aktivera AEM arbetsflöde - video](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
+   + [Konfigurera anpassat formulär som ska utlösa AEM Workflow - video](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
    + [Anpassa meddelande om tilldelning av uppgift](handling-form-submissions/customize-assign-task-notification.md)
 + Användbara integreringar {#some-useful-integrations}
    + [Autentisering med två faktorer](some-useful-integrations/two-factor-authentication.md)
@@ -102,7 +102,7 @@ ht-degree: 1%
    + [Använda formulärdatamodellens anropstjänst i regelredigeraren](adaptive-forms/service-data-model-technical-video-use.md)
    + [Posta binära data till AEM DAM med formulärdatamodell](adaptive-forms/form-data-model-to-post-binary-data-tutorial-use.md)
    + [Skapa återanvändbara arbetsflödesmodeller](adaptive-forms/re-usable-aem-forms-workflow-models-article.md)
-   + [Anpassat steg AEM arbetsflöde](adaptive-forms/custom-process-step-aem-workflow.md)
+   + [Anpassat processsteg AEM-arbetsflöde](adaptive-forms/custom-process-step-aem-workflow.md)
    + [Förifyll HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Formulärdatamodell med Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Lägga till objekt dynamiskt i urvalskomponenten](adaptive-forms/choice-group-items-adding-dynamically-article.md)
@@ -175,8 +175,8 @@ ht-degree: 1%
    + [Skapa och konfigurera anpassningsbara formulär](aem-forms-and-adobe-sign/create-and-configure-adaptive-form.md)
    + [Konfigurera anpassat formulär för en signerare](aem-forms-and-adobe-sign/configure-adaptive-form-for-single-signer.md)
    + [Konfigurera anpassat formulär för två signerare](aem-forms-and-adobe-sign/configure-adaptive-form-for-two-signers.md)
-   + [Konfigurera tjänsten Automated forms conversion](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
-   + [Konvertera PDF-formulär till anpassat format](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
+   + [Konfigurera automatisk formulärkonverteringstjänst](aem-forms-and-adobe-sign/configure-automated-forms-conversion-service.md)
+   + [Konvertera PDF-formulär till adaptiv form](aem-forms-and-adobe-sign/convert-pdf-form-into-adaptive-form.md)
    + [Konfigurera konverterad adaptiv form](aem-forms-and-adobe-sign/configure-converted-adaptive-form.md)
    + [Använda XDP-mallar med Acrobat Sign](aem-forms-and-adobe-sign/using-xdp-templates-with-adobe-sign.md)
    + [Använda hjälpmetoder i Acrobat Sign](aem-forms-and-adobe-sign/send-documents-signing-using-sign-api.md)
@@ -201,14 +201,14 @@ ht-degree: 1%
    + [1-Introduktion](custom-workflow-component/introduction.md)
    + [2-Skriv java-kod](custom-workflow-component/custom-process-step-aem-workflow.md)
    + [Komponent för 3-Skapa arbetsflöde](custom-workflow-component/custom-workflow-component.md)
-+ Variabler i AEM {#variables-aem-workflow}
++ Variabler i AEM Workflow{#variables-aem-workflow}
    + [Introduktion - Variabler i arbetsflöde](variables-aem-workflow/introduction.md)
    + [XML-variabler](variables-aem-workflow/part1.md)
    + [JSON-variabler](variables-aem-workflow/part2.md)
    + [Dokumentvariabler](variables-aem-workflow/part3.md)
    + [ArrayList-variabel](variables-aem-workflow/part4.md)
    + [Formulärdatamodellvariabel](variables-aem-workflow/form-data-model.md)
-   + [Regelredigeraren i AEM](variables-aem-workflow/part5.md)
+   + [Regelredigeraren i AEM Workflow](variables-aem-workflow/part5.md)
    + [Logga arbetsflödesvariabler](variables-aem-workflow/part6.md)
 + Granska formulärdata {#review-form-data}
    + [1 - Introduktion](review-form-data/introduction.md)
@@ -222,14 +222,14 @@ ht-degree: 1%
    + [Klientbibliotek](storing-retrieving-form-data/part4.md)
    + [Adaptiv formulärmall](storing-retrieving-form-data/part5.md)
    + [Distribuera exempelresurser](storing-retrieving-form-data/part6.md)
-+ Startar AEM arbetsflöde vid inskickning av PDF-formulär {#offline-mobile-form-submission}
++ Utlöser AEM-arbetsflöde vid inskickning av PDF-formulär{#offline-mobile-form-submission}
    + [Del - 1](offline-mobile-form-submission/introduction.md)
    + [Del - 2](offline-mobile-form-submission/custom-profile.md)
    + [Del - 3](offline-mobile-form-submission/handle-form-submission.md)
    + [Del - 4](offline-mobile-form-submission/author-servlet.md)
    + [Del - 5](offline-mobile-form-submission/review-workflow.md)
    + [Del - 6](offline-mobile-form-submission/deploy-assets.md)
-+ Utlös AEM arbetsflöde vid överföring av mobilformulär {#trigger-aem-workflow-on-mobile-form-submission}
++ Utlös AEM-arbetsflöde vid inskickning av mobilformulär{#trigger-aem-workflow-on-mobile-form-submission}
    + [Del - 1](trigger-aem-workflow-on-mobile-form-submission/introduction.md)
    + [Del - 2](trigger-aem-workflow-on-mobile-form-submission/handle-form-submission.md)
    + [Del - 3](trigger-aem-workflow-on-mobile-form-submission/author-servlet.md)
@@ -281,7 +281,7 @@ ht-degree: 1%
 + Dokumenttjänster {#document-services}
    + [PDF forms](document-services/pdf-forms-and-documents.md)
    + [Bädda in PDF i anpassad form](document-services/embed-pdf-inline.md)
-   + [PDF carousel-komponent](document-services/display-pdf-in-carousel.md)
+   + [PDF i Carousel-komponent](document-services/display-pdf-in-carousel.md)
    + [Använda Assembler Service i AEM Forms](document-services/using-assembler-service-in-aem-forms.md)
    + [XDP-textning med Assembler Service](document-services/xdp-stitching-using-assembler-service.md)
    + [Använda bevakad mapp i AEM Forms](document-services/watched-folders-document-services-article-use.md)
@@ -292,12 +292,12 @@ ht-degree: 1%
    + [Använda xdp-fragment i utdatatjänsten](document-services/using-fragments-in-output-service.md)
    + [ECMA-skript för att generera PDF med fragment](document-services/using-fragments-in-output-service-watched-folder.md)
    + [Generera flera PDF-filer från en datafil](document-services/generate-multi-record-pdf.md)
-   + [Generera PDF vid inskickning av mobilformulär](document-services/generate-pdf-from-mobile-form-submission-article.md)
+   + [Generera PDF för inskickning av mobilformulär](document-services/generate-pdf-from-mobile-form-submission-article.md)
    + [Generera PDF på baskomponentbaserad formulärinlämning](document-services/generate-pdf-from-core-component-form-submission.md)
    + [Generera interaktiv PDF från mobilformulär](document-services/render-interactive-form-using-api.md)
    + [Generera interaktiv DoR från adaptiv form](document-services/generate-interactive-dor.md)
-   + [Konfigurera autentiseringsuppgifter för Reader-tillägg](document-services/configuring-reader-extension-osgi.md)
-   + [Använd användningsbehörighet för PDF på XDP-återgivning](document-services/rendering-and-reader-extending-xdp-templates-article.md)
+   + [Konfigurera autentiseringsuppgifter för Reader Extensions](document-services/configuring-reader-extension-osgi.md)
+   + [Tillämpa användningsrättigheter på PDF på XDP-återgivning](document-services/rendering-and-reader-extending-xdp-templates-article.md)
    + [Använd användningsbehörighet för överförda PDF](document-services/apply-reader-extension-rights-to-pdf.md)
    + [Certifiera dokument](document-services/certifying-documents-aem-forms-tutorial.md)
    + [Sammanställ formulärbilagor](document-services/assemble-form-attachments.md)
@@ -311,7 +311,7 @@ ht-degree: 1%
    + [Databindning](forms-designer/binding-to-mysql-db.md)
    + [Använda klottra signaturer](forms-designer/scribble-signature-form.md)
    + [Använda digital signatur](forms-designer/adding-dig-signature-field.md)
-   + [Reader, utökad form](forms-designer/reader-extending-j2ee.md)
+   + [Reader Extend form](forms-designer/reader-extending-j2ee.md)
 + AEM Forms Workbench{#forms-workbench}
    + [Introduktion till Workbench](aem-forms-workbench/workbench-introduction.md)
    + [Skapa formulärprocess](aem-forms-workbench/workbench-creating-a-process.md)

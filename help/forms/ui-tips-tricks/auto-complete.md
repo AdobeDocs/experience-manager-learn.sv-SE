@@ -3,7 +3,7 @@ title: Komplettera automatiskt i AEM Forms
 description: Gör det möjligt för användare att snabbt hitta och välja från en ifylld lista med värden när de skriver, med hjälp av sökning och filtrering.
 feature: Adaptive Forms
 type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11374
 last-substantial-update: 2022-11-01T00:00:00Z
 exl-id: e9a696f9-ba63-462d-93a8-e9a7a1e94e72
 duration: 47
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Automatisk komplettering
 
-Implementera funktioner för automatisk ifyllnad i AEM formulär med hjälp av Jquery funktion för automatisk ifyllnad.
+Implementera funktioner för automatisk komplettering i AEM-formulär med hjälp av Jquery funktion för automatisk komplettering.
 I exemplet som ingår i den här artikeln används en rad olika datakällor (statisk array, dynamisk array ifylld från ett REST API-svar) för att fylla i förslagen när användaren börjar skriva i textfältet.
 
 Den kod som används för att utföra funktionen för automatisk komplettering är associerad med händelsen initialize för fältet.
@@ -83,4 +83,4 @@ Exempelformuläret [kan hämtas](assets/auto-complete-form.zip) härifrån. Se t
 
 >[!NOTE]
 >
-> För att automatisk komplettering ska fungera måste formuläret använda följande klientbibliotek: **cq.jquery.ui**. Det här klientbiblioteket levereras med AEM.
+> För att automatisk komplettering ska fungera måste formuläret använda följande klientbibliotek: **cq.jquery.ui**. Detta klientbibliotek levereras med AEM.

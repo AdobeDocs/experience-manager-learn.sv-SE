@@ -5,13 +5,13 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-13520
 exl-id: c23275d7-daf7-4a42-83b6-4d04b297c470
 duration: 115
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 0%
@@ -24,9 +24,9 @@ AEM Forms tillhandahåller ett antal inskickningsalternativ som uppfyller de fle
 
 Så här skriver du en anpassad skicka-tjänst:
 
-## Skapa AEM
+## Skapa AEM Project
 
-Om du redan har ett AEM Forms as a Cloud Service-projekt kan du [gå till att skriva en anpassad skicka-tjänst](#Write-the-custom-submit-service)
+Om du redan har ett AEM Forms as a Cloud Service-projekt kan du [hoppa till att skriva en anpassad skicka-tjänst](#Write-the-custom-submit-service)
 
 * Skapa en mapp som kallas molnhanterare på din c-enhet.
 * Navigera till den nya mappen
@@ -35,7 +35,7 @@ Om du redan har ett AEM Forms as a Cloud Service-projekt kan du [gå till att sk
 
 ## Skriv den anpassade skicka-tjänsten{#Write-the-custom-submit-service}
 
-Starta IntelliJ och öppna AEM. Skapa en ny java-klass med namnet **HandleRegistrationFormSubmission** som visas på skärmbilden nedan
+Starta IntelliJ och öppna AEM-projekt. Skapa en ny java-klass med namnet **HandleRegistrationFormSubmission** som visas på skärmbilden nedan
 ![custom-submit-service](./assets/custom-submit-service.png)
 
 Följande kod skrevs för att implementera tjänsten
@@ -107,7 +107,7 @@ Värdet för elementet **submitService** måste matcha **serviceName = &quot;Cor
 ## Distribuera koden till din lokala AEM Forms-instans
 
 Innan du skickar ändringarna till molnhanterardatabasen bör du distribuera koden till den lokala molnförberedda författarinstansen för att testa koden. Kontrollera att författarinstansen körs.
-Om du vill distribuera koden till den molnförberedda författarinstansen går du till rotmappen för ditt AEM projekt och kör följande kommando
+Om du vill distribuera koden till din molnförberedda författarinstans går du till rotmappen för ditt AEM-projekt och kör följande kommando
 
 ```
 mvn clean install -PautoInstallSinglePackage
@@ -118,7 +118,7 @@ Detta distribuerar koden som ett enda paket till författarinstansen
 ## Skicka koden till molnhanteraren och distribuera koden
 
 När du har verifierat koden på din lokala instans skickar du koden till din molninstans.
-Skicka ändringarna till din lokala Git-databas och sedan till molnhanterardatabasen. Du kan referera till artiklarna [Git-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html), [AEM projekt i molnhanterardatabasen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html) och [distribuering till utvecklingsmiljön](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html).
+Skicka ändringarna till din lokala Git-databas och sedan till molnhanterardatabasen. Du kan läsa artiklarna [Git-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html), [push AEM project into cloud manager database](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html) och [deploying to the development environment](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html) .
 
 När piplexin har körts korrekt bör du kunna koppla formulärskickaåtgärden till den anpassade överföringshanteraren, som visas på skärmbilden nedan
 ![submit-action](./assets/configure-submit-action.png)

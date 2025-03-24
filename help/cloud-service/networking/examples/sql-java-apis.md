@@ -1,7 +1,7 @@
 ---
 title: SQL-anslutningar med Java™ API:er
 description: Lär dig hur du ansluter till SQL-databaser från AEM as a Cloud Service med Java™ SQL API:er och utgångsportar.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9356
 thumbnail: KT-9356.jpeg
 exl-id: ec9d37cb-70b6-4414-a92b-3b84b3f458ab
 duration: 124
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # SQL-anslutningar med Java™ API:er
 
-Anslutningar till SQL-databaser (och andra icke-HTTP/HTTPS-tjänster) måste vara AEM.
+Anslutningar till SQL-databaser (och andra icke-HTTP/HTTPS-tjänster) måste vara proxierade från AEM.
 
 Undantaget till den här regeln är när [den dedikerade IP-adressen](../dedicated-egress-ip-address.md) används och tjänsten är på Adobe eller Azure.
 
@@ -151,7 +151,7 @@ public class MySqlExternalServiceImpl implements ExternalService {
 
 ## MySQL-drivrutinsberoenden
 
-AEM as a Cloud Service kräver ofta att du tillhandahåller Java™-databasdrivrutiner som stöder anslutningarna. Det bästa sättet att tillhandahålla drivrutinerna är oftast att bädda in OSGi-paketartefakter som innehåller de här drivrutinerna i det AEM projektet via paketet `all`.
+AEM as a Cloud Service kräver ofta att du tillhandahåller Java™-databasdrivrutiner som stöder anslutningarna. Det bästa sättet att tillhandahålla drivrutinerna är oftast att bädda in OSGi-paketartefakter som innehåller dessa drivrutiner i AEM-projektet via paketet `all`.
 
 ### Reaktorprom.xml
 

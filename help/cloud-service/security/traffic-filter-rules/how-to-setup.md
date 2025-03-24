@@ -1,7 +1,7 @@
 ---
-title: Konfigurera trafikfilterregler inklusive WAF-regler
+title: Så här ställer du in trafikfilterregler inklusive WAF-regler
 description: Lär dig hur du konfigurerar för att skapa, driftsätta, testa och analysera resultaten av trafikfilterregler, inklusive WAF-regler.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
 role: Admin, Architect
@@ -12,14 +12,14 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: b67bf642-3341-48d0-8ea9-5f262febf414
 duration: 292
-source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 0%
 
 ---
 
-# Konfigurera trafikfilterregler inklusive WAF-regler
+# Så här ställer du in trafikfilterregler inklusive WAF-regler
 
 Lär dig **hur du konfigurerar** trafikfilterregler, inklusive WAF-regler. Läs om hur du skapar, distribuerar, testar och analyserar resultat.
 
@@ -29,16 +29,16 @@ Lär dig **hur du konfigurerar** trafikfilterregler, inklusive WAF-regler. Läs 
 
 Installationsprocessen omfattar följande:
 
-- _skapar regler_ med en lämplig AEM projektstruktur och konfigurationsfil.
-- _distribuerar regler_ med konfigurationsflödet Adobe Cloud Manager.
+- _skapar regler_ med lämplig projektstruktur och konfigurationsfil för AEM.
+- _distribuerar regler_ med Adobe Cloud Manager konfigurationsflöde.
 - _testar regler_ med olika verktyg för att generera trafik.
 - _analyserar resultaten_ med hjälp av AEMCS CDN-loggar och instrumentpanelsverktyg.
 
-### Skapa regler i ditt AEM projekt
+### Skapa regler i ditt AEM-projekt
 
 Så här skapar du regler:
 
-1. Skapa en mapp `config` på den översta nivån i AEM.
+1. Skapa en mapp `config` på den översta nivån i ditt AEM-projekt.
 
 1. Skapa en ny fil med namnet `cdn.yaml` i mappen `config`.
 
@@ -59,7 +59,7 @@ data:
 
 Se ett exempel på filen `cdn.yaml` i AEM Guides WKND Sites Project:
 
-![WKND AEM projektregelfil och -mapp](./assets/wknd-rules-file-and-folder.png){width="800" zoomable="yes"}
+![WKND AEM projektregelfil och mapp](./assets/wknd-rules-file-and-folder.png){width="800" zoomable="yes"}
 
 ### Distribuera regler via Cloud Manager {#deploy-rules-through-cloud-manager}
 
@@ -136,4 +136,4 @@ I den här självstudiekursen använder vi ELK-stacken. Följ instruktionerna f�
 
 ## Nästa steg
 
-Lär dig hur du deklarerar trafikfilterregler inklusive WAF-regler i kapitlet [Exempel och resultatanalys](./examples-and-analysis.md) med hjälp av AEM WKND Sites Project.
+Lär dig hur du deklarerar trafikfilterregler inklusive WAF-regler i kapitlet [Exempel och resultatanalys](./examples-and-analysis.md) med AEM WKND Sites Project.

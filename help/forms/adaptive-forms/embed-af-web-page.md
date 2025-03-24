@@ -1,9 +1,9 @@
 ---
-title: Bädda in adaptiva Forms/HTML 5-formulär på webbsidor
-description: Konfigurationssteg som behövs för att bädda in adaptiva Forms- eller HTML 5-formulär på en icke-AEM webbsida.
+title: Bädda in adaptiva Forms/HTML5-formulär på webbsidor
+description: Konfigurationssteg som behövs för att bädda in adaptiva Forms- eller HTML5-formulär på en icke-AEM-webbsida.
 feature: Adaptive Forms
 type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-8390
 exl-id: 068e38df-9c71-4f55-b6d6-e1486c29d0a9
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 398
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%

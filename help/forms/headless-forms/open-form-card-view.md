@@ -2,14 +2,14 @@
 title: Klicka på kortet för att visa formuläret
 description: Granska formulär från kortvyn
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-13372
 topic: Development
 role: User
 level: Intermediate
 exl-id: c8684cd9-b9c5-4b5b-b990-27c5700cea9f
 duration: 28
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%

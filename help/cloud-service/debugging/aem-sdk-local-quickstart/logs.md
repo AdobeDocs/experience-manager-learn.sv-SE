@@ -1,8 +1,8 @@
 ---
 title: Felsöka AEM SDK med hjälp av loggar
-description: Loggar fungerar som en frontlinje för felsökning AEM program, men är beroende av korrekt inloggning i det distribuerade AEM.
+description: Loggar fungerar som en frontlinje för felsökning av AEM-program, men är beroende av korrekt inloggning i det distribuerade AEM-programmet.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5252
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: 91aa4a10-47fe-4313-acd2-ca753e5484d9
 duration: 411
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # Felsöka AEM SDK med hjälp av loggar
 
-Via loggarna för AEM SDK kan du få information om hur du felsöker AEM program, antingen AEM SDK Local quickstart Jar eller Dispatcher Tools.
+Via loggarna för AEM SDK kan du antingen använda AEM SDK lokala snabbstart Jar eller Dispatcher Tools för att få viktiga insikter i felsökningen av AEM-program.
 
-## AEM loggar
+## AEM Logs
 
 >[!VIDEO](https://video.tv.adobe.com/v/34334?quality=12&learn=on)
 
-Loggar fungerar som en frontlinje för felsökning AEM program, men är beroende av korrekt inloggning i det distribuerade AEM. Adobe rekommenderar att konfigurationerna för lokal utveckling och AEM as a Cloud Service Dev-loggning är så lika som möjligt, eftersom det normaliserar loggsynligheten i AEM SDK:s lokala snabbstartsmiljö och AEM as a Cloud Service Dev-miljöer, vilket minskar behovet av konfigurationssvängningar och omdistribution.
+Loggar fungerar som en frontlinje för felsökning av AEM-program, men är beroende av korrekt inloggning i det distribuerade AEM-programmet. Adobe rekommenderar att konfigurationerna för lokal utveckling och AEM as a Cloud Service Dev-loggning är så lika som möjligt, eftersom det normaliserar loggsynligheten i AEM SDK lokala snabbstartsmiljö och AEM as a Cloud Service Dev-miljöer, vilket minskar behovet av konfigurationssvängningar och ominstallation.
 
 [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) konfigurerar loggning på DEBUG-nivå för ditt AEM-programs Java-paket för lokal utveckling via Sling Logger OSGi-konfigurationen som finns på
 
@@ -33,7 +33,7 @@ Loggar fungerar som en frontlinje för felsökning AEM program, men är beroende
 
 som loggar till `error.log`.
 
-Om standardloggningen inte är tillräcklig för lokal utveckling kan ad hoc-loggning konfigureras via AEM SDK:s lokala snabbstartswebbkonsol, på ([/system/console/slinglog](http://localhost:4502/system/console/slinglog)), men det rekommenderas inte att ad hoc-ändringar sparas i Git om inte samma loggkonfigurationer behövs även i AEM as a Cloud Service Dev-miljöer. Tänk på att ändringar via loggsupportkonsolen sparas direkt i AEM SDK:s lokala snabbstartdatabas.
+Om standardloggningen inte är tillräcklig för lokal utveckling kan ad hoc-loggning konfigureras via AEM SDK lokala snabbstartswebbkonsol, på ([/system/console/slinglog](http://localhost:4502/system/console/slinglog)), men det rekommenderas inte att ad hoc-ändringar sparas i Git om inte samma loggkonfigurationer behövs även i AEM as a Cloud Service Dev-miljöer. Tänk på att ändringar via loggsupportkonsolen sparas direkt i AEM SDK databas.
 
 Java-loggsatser kan visas i filen `error.log`:
 

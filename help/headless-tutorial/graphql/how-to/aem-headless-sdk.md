@@ -1,7 +1,7 @@
 ---
 title: Använda AEM Headless SDK
-description: Lär dig hur du skapar GraphQL-frågor med AEM Headless SDK.
-version: Cloud Service
+description: Lär dig hur du ställer GraphQL-frågor med AEM Headless SDK.
+version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-10269
 thumbnail: KT-10269.jpeg
 exl-id: 922a464a-2286-4132-9af8-f5a1fb5ce268
 duration: 200
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%
@@ -25,17 +25,17 @@ AEM Headless SDK finns för olika plattformar:
 
 + [AEM Headless SDK för webbläsare på klientsidan (JavaScript)](https://github.com/adobe/aem-headless-client-js)
 + [AEM Headless SDK för server-side/Node.js (JavaScript)](https://github.com/adobe/aem-headless-client-nodejs)
-+ [AEM Headless SDK för Java™](https://github.com/adobe/aem-headless-client-java)
++ [AEM Headless SDK for Java™](https://github.com/adobe/aem-headless-client-java)
 
 ## Beständiga GraphQL-frågor
 
-Genom att fråga AEM använda GraphQL med beständiga frågor (till skillnad från [klientdefinierade GraphQL-frågor](#graphl-queries)) kan utvecklare behålla en fråga (men inte dess resultat) i AEM, och sedan begära att frågan körs efter namn. Beständiga frågor liknar begreppet lagrade procedurer i SQL-databaser.
+Genom att fråga AEM med GraphQL med hjälp av beständiga frågor (till skillnad från [klientdefinierade GraphQL-frågor](#graphl-queries)) kan utvecklare behålla en fråga (men inte dess resultat) i AEM, och sedan begära att frågan körs med namn. Beständiga frågor liknar begreppet lagrade procedurer i SQL-databaser.
 
 Beständiga frågor är bättre än klientdefinierade GraphQL-frågor eftersom beständiga frågor körs med HTTP GET, som kan cachelagras på CDN- och AEM Dispatcher-nivåer. Beständiga frågor är också aktiva, definiera ett API och frigör behovet av att utvecklaren förstår detaljerna för varje modell för innehållsfragment.
 
 ### Exempel på koder{#persisted-graphql-queries-code-examples}
 
-Nedan följer kodexempel på hur du kör en GraphQL-beständig fråga mot AEM.
+Här följer några kodexempel på hur du kör en GraphQL-beständig fråga mot AEM.
 
 +++ Exempel på JavaScript
 
@@ -45,9 +45,9 @@ Installera [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless
 $ npm i @adobe/aem-headless-client-js
 ```
 
-I det här kodexemplet visas hur du ställer AEM med [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) npm-modulen med syntaxen `async/await`. AEM Headless SDK för JavaScript har även stöd för [Promise-syntax](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client).
+I det här kodexemplet visas hur du frågar AEM med hjälp av [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) npm-modulen med syntaxen `async/await`. AEM Headless SDK för JavaScript har även stöd för [Promise-syntax](https://github.com/adobe/aem-headless-client-js#use-aemheadless-client).
 
-Den här koden antar att en beständig fråga med namnet `wknd/adventureNames` har skapats AEM författaren och publicerats till AEM Publish.
+Koden förutsätter att en beständig fråga med namnet `wknd/adventureNames` har skapats på AEM Author och publicerats på AEM Publish.
 
 ```javascript
 import AEMHeadless from '@adobe/aem-headless-client-js';
@@ -88,7 +88,7 @@ let { data, errors } = executePersistedQuery('wknd-shared/adventures-by-slug', {
 
 +++
 
-+++ Reagera useEffect(..) exempel
++++ Reagera useEffect(..), exempel
 
 Installera [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless-client-js) genom att köra kommandot `npm install` från roten för React-projektet.
 
@@ -96,14 +96,14 @@ Installera [@adobe/aem-headless-client-js](https://github.com/adobe/aem-headless
 $ npm i @adobe/aem-headless-client-js
 ```
 
-I det här kodexemplet visas hur du använder [React useEffect(..) krok](https://reactjs.org/docs/hooks-effect.html) för att köra ett asynkront anrop till AEM GraphQL.
+I det här kodexemplet visas hur du använder kroken [React useEffect(..)](https://reactjs.org/docs/hooks-effect.html) för att köra ett asynkront anrop till AEM GraphQL.
 
 Att använda `useEffect` för att göra det asynkrona GraphQL-anropet i React är användbart eftersom:
 
-1. Den tillhandahåller synkron wrapper för det asynkrona anropet till AEM.
+1. Den tillhandahåller synkron wrapper för asynkront anrop till AEM.
 1. Det minskar behovet av AEM.
 
-Koden förutsätter att en beständig fråga med namnet `wknd-shared/adventure-by-slug` har skapats på AEM författare och publicerats till AEM Publish med GraphiQL.
+Koden förutsätter att en beständig fråga med namnet `wknd-shared/adventure-by-slug` har skapats på AEM Author och publicerats på AEM Publish med GraphiQL.
 
 ```javascript
 import AEMHeadless from '@adobe/aem-headless-client-js';
@@ -202,11 +202,11 @@ Nya `useEffect`-kopplingar kan skapas för varje beständig fråga som React-app
 
 ## GraphQL-frågor
 
-AEM stöder klientdefinierade GraphQL-frågor, men det är AEM bästa sättet att använda [beständiga GraphQL-frågor](#persisted-graphql-queries).
+AEM stöder klientdefinierade GraphQL-frågor, men det är AEM bästa praxis att använda [beständiga GraphQL-frågor](#persisted-graphql-queries).
 
 ## Webpack 5+
 
-Den AEM Headless JS SDK har beroenden av `util` som inte ingår i Webpack 5+ som standard. Om du använder Webpack 5+ får du följande fel:
+AEM Headless JS SDK är beroende av `util` som inte ingår i WebPack 5+ som standard. Om du använder Webpack 5+ får du följande fel:
 
 ```
 Compiled with problems:

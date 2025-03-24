@@ -1,7 +1,7 @@
 ---
 title: Assets Essentials My Workspace
 description: Lär dig arbeta effektivare med Mina Workspace användarkonfigurerbara widgetar.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Assets Essentials
 topic: Content Management
 role: Admin, User
@@ -12,7 +12,7 @@ thumbnail: 3413809.jpeg
 doc-type: Feature Video
 exl-id: da9363f3-43a9-4396-b8e8-15267fd7a689
 duration: 143
-source-git-commit: 54509339ee8e538daf432b329ddebb55e98bb6d9
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '28'
 ht-degree: 0%

@@ -2,14 +2,14 @@
 title: Dispatcher förstärkta cachning
 description: Lär dig hur Dispatcher-modulen fungerar, dess cache.
 topic: Administration, Performance
-version: 6.5
+version: Experience Manager 6.5
 role: Admin
 level: Beginner
 thumbnail: xx.jpg
 doc-type: Article
 exl-id: 66ce0977-1b0d-4a63-a738-8a2021cf0bd5
 duration: 407
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1708'
 ht-degree: 0%
@@ -37,7 +37,7 @@ När varje begäran går igenom Dispatcher följer förfrågningarna de konfigur
 
 >[!NOTE]
 >
->Vi håller avsiktligt den publicerade arbetsbelastningen åtskild från författarens arbetsbelastning, eftersom när Apache söker efter en fil i DocumentRoot så vet det inte vilken AEM den kommer från. Så även om du har inaktiverat cache i författargruppen, och om författarens DocumentRoot är samma som utgivaren, kommer den att leverera filer från cachen när den finns. Det innebär att du kan leverera författarfiler från publicerade cacheminnen och skapa en riktigt fantastisk mixningsupplevelse för besökarna.
+>Vi håller avsiktligt den publicerade arbetsbelastningen åtskild från författarens arbetsbelastning, eftersom när Apache söker efter en fil i DocumentRoot så vet det inte vilken AEM-instans den kommer från. Så även om du har inaktiverat cache i författargruppen, och om författarens DocumentRoot är samma som utgivaren, kommer den att leverera filer från cachen när den finns. Det innebär att du kan leverera författarfiler från publicerade cacheminnen och skapa en riktigt fantastisk mixningsupplevelse för besökarna.
 >
 >Att ha separata DocumentRoot-kataloger för olika publicerat innehåll är också en dålig idé. Du måste skapa flera omcachelagrade objekt som inte skiljer sig åt mellan platser som clientlibs, och du måste också konfigurera en agent för att tömma replikeringen för varje DocumentRoot som du konfigurerar. Öka mängden spolning över huvudet när varje sida aktiveras. Använd namnutrymmet för filer och deras fullständiga cachelagrade sökvägar för att undvika flera DocumentRoot-filer för publicerade webbplatser.
 
@@ -132,11 +132,11 @@ Cachereglerna innehåller programsatsen filen `/etc/httpd/conf.dispatcher.d/cach
 ```
 
 I ett författarscenario ändras innehållet hela tiden och i rätt syfte. Du vill bara cachelagra objekt som inte ändras så ofta.
-Vi har regler för att cachelagra `/libs` eftersom de är en del av AEM och kommer att ändras tills du har installerat Service Pack, Cumulative Fix Pack, Upgrade eller Hotfix. Att cachelagra dessa element är därför en smula vettigt och har stora fördelar med författarupplevelsen för de slutanvändare som använder webbplatsen.
+Vi har regler för att cachelagra `/libs` eftersom de ingår i den grundläggande AEM-installationen och kommer att ändras tills du har installerat Service Pack, Cumulative Fix Pack, Upgrade eller Hotfix. Att cachelagra dessa element är därför en smula vettigt och har stora fördelar med författarupplevelsen för de slutanvändare som använder webbplatsen.
 
 >[!NOTE]
 >
->Kom ihåg att de här reglerna även cachelagrar <b>`/apps`</b>, det är här den anpassade programkoden finns. Om du utvecklar din kod för den här instansen blir den väldigt förvirrande när du sparar filen och du ser inte om den återspeglar den i användargränssnittet eftersom den sparar en cachelagrad kopia. Avsikten här är att om du distribuerar koden till AEM blir det också ovanligt och en del av driftsättningsstegen bör vara att rensa författarcachen. Även här är fördelen stor, vilket gör att den tillgängliga koden kan köras snabbare för slutanvändarna.
+>Kom ihåg att de här reglerna även cachelagrar <b>`/apps`</b>, det är här den anpassade programkoden finns. Om du utvecklar din kod för den här instansen blir den väldigt förvirrande när du sparar filen och du ser inte om den återspeglar den i användargränssnittet eftersom den sparar en cachelagrad kopia. Avsikten här är att om du distribuerar koden till AEM så är det också ovanligt, och en del av driftsättningsstegen bör vara att rensa författarcachen. Även här är fördelen stor, vilket gör att den tillgängliga koden kan köras snabbare för slutanvändarna.
 
 ## ServeOnStale (AKA-server vid föråldrad/SOS)
 
@@ -157,7 +157,7 @@ Den här inställningen kan ställas in i vilken grupp som helst, men det är ba
 
 >[!NOTE]
 >
->Ett av de normala beteendena för modulen Dispatcher är att om en begäran har en frågeparameter i URI:n (visas vanligtvis som `/content/page.html?myquery=value`), kommer den att hoppa över cachelagring av filen och gå direkt till AEM. Den här begäran behandlas som en dynamisk sida och bör inte cachas. Detta kan orsaka skadliga effekter på cacheeffektiviteten.
+>Ett av de normala beteendena för Dispatcher-modulen är att om en begäran har en frågeparameter i URI:n (visas vanligtvis som `/content/page.html?myquery=value`), kommer den att hoppa över cachelagring av filen och gå direkt till AEM-instansen. Den här begäran behandlas som en dynamisk sida och bör inte cachas. Detta kan orsaka skadliga effekter på cacheeffektiviteten.
 
 Se den här [artikeln](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner) som visar hur viktiga frågeparametrar kan påverka webbplatsens prestanda.
 
@@ -278,7 +278,7 @@ Här är ett exempel på en servergrupp med de rubriker som ska cachelagras angi
 ```
 
 
-I det här exemplet har de konfigurerat AEM för att hantera rubriker som CDN söker efter för att veta när det ska ogiltigförklaras dess cache. Betydelsen är nu att AEM kan avgöra vilka filer som blir ogiltiga baserat på rubriker.
+I det exempel de har konfigurerat AEM för att hantera rubriker letar CDN efter för att veta när cachen ska ogiltigförklaras. AEM kan nu avgöra vilka filer som blir ogiltiga baserat på sidhuvuden.
 
 >[!NOTE]
 >
@@ -286,7 +286,7 @@ I det här exemplet har de konfigurerat AEM för att hantera rubriker som CDN s�
 
 ## Förvräng giltighetsperiod automatiskt
 
-På AEM system som har mycket aktivitet från författare som gör många sidaktiveringar kan du ha ett tävlingsvillkor där upprepade ogiltigförklaringar förekommer. Omfattande upprepad rensningsbegäran är inte nödvändig och du kan skapa en viss tolerans för att inte upprepa en tömning förrän respitperioden har rensats.
+På AEM-system som har mycket aktivitet från författare som gör många sidaktiveringar kan du ha ett konkurrensvillkor där upprepade ogiltigförklaringar förekommer. Omfattande upprepad rensningsbegäran är inte nödvändig och du kan skapa en viss tolerans för att inte upprepa en tömning förrän respitperioden har rensats.
 
 ### Exempel på hur detta fungerar:
 
@@ -316,7 +316,7 @@ Här är ett exempel på funktionen som konfigureras i servergruppens konfigurat
 
 >[!NOTE]
 >
->Kom ihåg att AEM fortfarande måste konfigureras för att skicka TTL-rubriker för Dispatcher för att de ska respekteras. Om du växlar den här funktionen kan Dispatcher bara veta när de filer som AEM har skickade cachekontrollrubriker ska tas bort. Om AEM inte börjar skicka TTL-rubriker gör Dispatcher ingenting särskilt här.
+>Kom ihåg att AEM fortfarande måste konfigureras för att skicka TTL-rubriker för Dispatcher för att de ska respekteras. Om du växlar den här funktionen kan Dispatcher bara veta när de filer som AEM har skickat cachekontrollrubriker för ska tas bort. Om AEM inte börjar skicka TTL-rubriker kommer Dispatcher inte att göra något särskilt här.
 
 ## Regler för cachefilter
 

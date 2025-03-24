@@ -3,14 +3,14 @@ title: Distribuera exempelresurserna på servern
 description: Testa funktionen Spara som utkast för interaktiv kommunikation
 feature: Interactive Communication
 doc-type: article
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 jira: KT-10208
 exl-id: 9053ee29-436a-439a-b592-c3fef9852ea4
 duration: 28
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Distribuera exempelresurserna på servern
 
-Följ instruktionerna nedan för att få den här funktionen att fungera på din AEM
+Följ instruktionerna nedan för att få den här funktionen att fungera på din AEM Server
 
 * [Skapa databasschemat](assets/icdrafts.sql)
 * [Importera klientbiblioteket](assets/icdrafts.zip)
@@ -41,6 +41,6 @@ Följ instruktionerna nedan för att få den här funktionen att fungera på din
 * [Visa sparade utkast](http://localhost:4502/content/dam/formsanddocuments/saveddrafts/jcr:content?wcmmode=disabled)
 
 >[!NOTE]
->XML-filerna lagras i rotmappen i AEM serverinstallation. Du kan anpassa lösningen efter dina behov med hjälp av projektet >Förmörka.
+>XML-filerna lagras i rotmappen för AEM-serverinstallationen. Du kan anpassa lösningen efter dina behov med hjälp av projektet >Förmörka.
 
 Det överlappande projektet med exempelimplementering kan [hämtas härifrån](assets/icdrafts-eclipse-project.zip)

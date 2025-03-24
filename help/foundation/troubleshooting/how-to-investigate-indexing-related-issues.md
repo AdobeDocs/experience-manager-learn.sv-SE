@@ -1,25 +1,25 @@
 ---
-title: Hur du undersöker indexeringsrelaterade problem i AEM
+title: Hur man undersöker indexeringsrelaterade problem i AEM
 description: Steg för att undersöka problem med indexering
 type: Troubleshooting
 role: Admin
 level: Intermediate
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Administration
 index: y
 doc-type: Technical Video
 exl-id: 042a216d-980d-4912-a77b-e2ee04a27cfb
 duration: 120
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%
 
 ---
 
-# Hur du undersöker indexeringsrelaterade problem i AEM
+# Hur man undersöker indexeringsrelaterade problem i AEM
 
-*Den här videon går igenom stegen för att undersöka hur du indexerar relaterade problem i AEM.*
+*Den här videon går igenom stegen för att undersöka indexering av relaterade problem i AEM.*
 
 >[!VIDEO](https://video.tv.adobe.com/v/335465?quality=12&learn=on)

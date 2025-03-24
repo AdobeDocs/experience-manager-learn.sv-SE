@@ -1,7 +1,7 @@
 ---
 title: Skapa sidversioner för AEM webbplatssidor
 description: I följande video visas hur du skapar en sidversion, förhandsvisar, återställer en sidversion och jämför den aktuella sidversionen med en sparad sidversion.
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-4630
 thumbnail: 32151.jpg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: cc659581-031d-4f2a-90c1-cf721e481689
 duration: 288
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%

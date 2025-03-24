@@ -1,7 +1,7 @@
 ---
 title: Utveckla ett block med CSS
 description: Utveckla ett block med CSS för Edge Delivery Services, som kan redigeras med den universella redigeraren.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 14cda9d4-752b-4425-a469-8b6f283ce1db
-source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%

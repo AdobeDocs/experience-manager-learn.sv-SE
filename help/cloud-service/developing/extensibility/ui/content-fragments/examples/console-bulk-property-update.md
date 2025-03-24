@@ -1,8 +1,8 @@
 ---
-title: Exempel på egenskapsuppdatering AEM tillägg för Content Fragment Console
-description: Ett exempel AEM tillägget Content Fragments Console som i stor utsträckning uppdaterar en egenskap för Content Fragments.
+title: 'Exempel på egenskapsuppdatering i grupp: AEM Content Fragment Console-tillägg'
+description: Ett exempel på AEM Content Fragments Console-tillägg som innebär att en egenskap för Content Fragments uppdateras satsvis.
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
 duration: 1362
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
-Det här exemplet AEM tillägget Content Fragment Console är ett [åtgärdsfältstillägg](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) som uppdaterar en Content Fragment-egenskap till ett gemensamt värde.
+Det här exemplet på AEM Content Fragment Console-tillägg är ett [åtgärdsfältstillägg](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) som uppdaterar en Content Fragment-egenskap till ett gemensamt värde.
 
 Det funktionella flödet för exempeltillägget är följande:
 
@@ -31,9 +31,9 @@ Det funktionella flödet för exempeltillägget är följande:
 
 1. Välj Innehållsfragment och klicka på tilläggets knapp i [åtgärdsfältet](#extension-registration) för att öppna [modal](#modal).
 2. [modal](#modal) visar ett anpassat indataformulär som skapats med [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/).
-3. När du skickar formuläret skickas listan med markerade innehållsfragment och AEM värd till den [anpassade Adobe I/O Runtime-åtgärden](#adobe-io-runtime-action).
-4. [Adobe I/O Runtime-åtgärden](#adobe-io-runtime-action) verifierar indata och gör HTTP PUT-begäranden om AEM av att uppdatera de markerade innehållsfragmenten.
-5. En serie HTTP-PUT för varje innehållsfragment som ska uppdatera den angivna egenskapen.
+3. När du skickar formuläret skickas listan med markerade innehållsfragment och AEM-värden till den [anpassade Adobe I/O Runtime-åtgärden](#adobe-io-runtime-action).
+4. [Adobe I/O Runtime-åtgärden](#adobe-io-runtime-action) verifierar indata och gör HTTP PUT-begäranden till AEM om att uppdatera de markerade innehållsfragmenten.
+5. En serie HTTP-PUT:er för varje innehållsfragment som ska uppdatera den angivna egenskapen.
 6. AEM as a Cloud Service består av egenskapsuppdateringarna för innehållsfragmentet och returnerar svar om huruvida åtgärden Adobe I/O Runtime lyckades eller inte.
 7. modal fick svaret från Adobe I/O Runtime-åtgärden och visar en lista över lyckade bulkuppdateringar.
 
@@ -89,7 +89,7 @@ Det finns två logiska uppsättningar vägar:
 
 ### Tillägg - registrering
 
-`ExtensionRegistration.js`, mappad till `index.html`-vägen, är startpunkten för AEM och definierar:
+`ExtensionRegistration.js`, mappad till `index.html`-vägen, är startpunkten för AEM-tillägget och definierar:
 
 1. Platsen för tilläggsknappen visas i AEM-redigeringsgränssnittet (`actionBar` eller `headerMenu`)
 1. Tilläggsknappens definition i funktionen `getButtons()`
@@ -169,9 +169,9 @@ I den här exempelappen finns en modal React-komponent (`BulkPropertyUpdateModal
 1. Svaret på uppdateringsåtgärden för bulkegenskapen, en lista över de innehållsfragment som uppdaterades och de som inte kunde uppdateras
 
 Viktigt är att all interaktion med AEM från tillägget delegeras till en [AppBuilder Adobe I/O Runtime-åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), som är en separat serverlös process som körs i [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
-Adobe I/O Runtime-åtgärder för att kommunicera med AEM används för att undvika anslutningsproblem med korsorigo Resource Sharing (CORS).
+Adobe I/O Runtime-åtgärder används för att kommunicera med AEM för att undvika anslutningsproblem mellan olika ursprung (CORS).
 
-När formuläret för uppdatering av massegenskap skickas, anropar en anpassad `onSubmitHandler()` Adobe I/O Runtime-åtgärden och skickar den aktuella AEM (domän) och användarens AEM åtkomsttoken, som i sin tur anropar [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) för att uppdatera innehållsfragmenten.
+När formuläret för uppdatering av gruppegenskap skickas, anropar en anpassad `onSubmitHandler()` Adobe I/O Runtime-åtgärden och skickar den aktuella AEM-värden (domän) och användarens AEM-åtkomsttoken, som i sin tur anropar [ AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) för att uppdatera innehållsfragmenten.
 
 När svaret från Adobe I/O Runtime-åtgärden tas emot uppdateras modal-åtgärden så att resultatet av bulkegenskapsuppdateringen visas.
 
@@ -433,12 +433,12 @@ export default function BulkPropertyUpdateModal() {
 
 ### Adobe I/O Runtime action
 
-Ett AEM tillägg som App Builder kan definiera eller använda 0 eller många Adobe I/O Runtime-åtgärder.
-Åtgärder i Adobe-miljön bör vara ansvarsfulla arbeten som kräver interaktion med AEM eller andra webbtjänster från Adobe.
+En App Builder-app med AEM-tillägg kan definiera eller använda 0 eller många Adobe I/O Runtime-åtgärder.
+Adobe Runtime åtgärder bör vara ansvarsfulla och kräver interaktion med AEM eller andra Adobe webbtjänster.
 
 I det här exempelprogrammet ansvarar Adobe I/O Runtime-åtgärden, som använder standardnamnet `generic`, för:
 
-1. Skapa en serie HTTP-begäranden till API:t för AEM innehållsfragment för att uppdatera innehållsfragmenten.
+1. Skapa en serie HTTP-begäranden till AEM Content Fragment API för att uppdatera innehållsfragmenten.
 1. Samla in svaren från dessa HTTP-begäranden och sortera dem till lyckade och misslyckade
 1. Returnerar listan över lyckade och misslyckade visningslägen för modala (`BulkPropertyUpdateModal.js`)
 

@@ -4,13 +4,13 @@ description: Bygg en AEM Forms Portal med komponenter
 solution: Experience Manager
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Core Components
 jira: KT-10373
 exl-id: ab01573a-e95f-4041-8ccf-16046d723aba
 duration: 78
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '332'
 ht-degree: 0%
@@ -31,7 +31,7 @@ AEM Forms tillhandahåller följande portalkomponenter direkt:
 
 Starta IntelliJ och öppna det BankingApplication-projekt som skapades i det [tidigare steget.](./getting-started.md) Expandera ui.apps->src->main->content->jcr_root->apps.bankingapplication->komponenter
 
-Om du vill använda en huvudkomponent (inklusive färdiga portalkomponenter) på en Adobe Experience Manager (AEM) webbplats måste du skapa en proxykomponent och aktivera den för din webbplats.
+Om du vill använda en huvudkomponent (inklusive färdiga portalkomponenter) på en Adobe Experience Manager-webbplats (AEM) måste du skapa en proxykomponent och aktivera den för din webbplats.
 Den nyligen skapade proxykomponenten måste peka i utkanten av formulärkomponenten, så att de ärver allt från dem. Detta görs genom att ändra resourceSuperType i content.xml för proxykomponenten. I content.xml anger vi också titeln och komponentgruppen.
 >[!NOTE]
 >
@@ -83,7 +83,7 @@ Ersätt innehållet i `.content.xml` med följande XML:
           componentGroup="BankingApplication - Content"/>
 ```
 
-När ditt projekt är distribuerat bör du kunna använda de här komponenterna på din AEM sida för att skapa en Forms-portal.
+När ditt projekt är distribuerat bör du kunna använda dessa komponenter på din AEM-sida för att skapa en Forms-portal.
 
 ## Nästa steg
 

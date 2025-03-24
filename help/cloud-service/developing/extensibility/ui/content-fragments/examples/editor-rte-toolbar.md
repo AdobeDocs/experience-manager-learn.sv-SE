@@ -1,8 +1,8 @@
 ---
 title: Lägg till anpassad knapp i verktygsfältet RTF (Rich Text Editor)
-description: Lär dig hur du lägger till en anpassad knapp i verktygsfältet RTF (Rich Text Editor) i AEM Content Fragment Editor
+description: Lär dig hur du lägger till en anpassad knapp i verktygsfältet för textredigeraren i AEM Content Fragment Editor
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 6fd93d3b-6d56-43c5-86e6-2e2685deecc9
 duration: 345
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Lägg till anpassad knapp i verktygsfältet RTF (Rich Text Editor)
 
-Lär dig hur du lägger till en anpassad knapp i verktygsfältet RTE (Rich Text Editor) i AEM Content Fragment Editor.
+Lär dig hur du lägger till en anpassad knapp i verktygsfältet för textredigering i AEM Content Fragment Editor.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420768?quality=12&learn=on)
 
@@ -29,7 +29,7 @@ Du kan lägga till anpassade knappar i verktygsfältet **RTE** i Content Fragmen
 
 Med metoden `getCustomButtons()` för tilläggspunkten `rte` kan en eller flera anpassade knappar läggas till i verktygsfältet **RTE**. Det går också att lägga till eller ta bort standardknappar för textredigering som _Kopiera, Klistra in, Fet och Kursiv_ med metoderna `getCoreButtons()` respektive `removeButtons)`.
 
-I det här exemplet visas hur du infogar en markerad anteckning eller ett markerat tips med en anpassad _Lägg till tips_-verktygsfältsknapp. Det markerade antecknings- eller tipsinnehållet har en speciell formatering som används via elementen HTML och de associerade CSS-klasserna. Platshållarinnehållet och HTML-koden infogas med callback-metoden `onClick()` för `getCustomButtons()`.
+I det här exemplet visas hur du infogar en markerad anteckning eller ett markerat tips med en anpassad _Lägg till tips_-verktygsfältsknapp. Det markerade antecknings- eller tipsinnehållet har en särskild formatering som används via HTML-element och de associerade CSS-klasserna. Platshållarinnehållet och HTML-koden infogas med callback-metoden `onClick()` för `getCustomButtons()`.
 
 ## Tilläggspunkt
 
@@ -47,12 +47,12 @@ I koden visas hur du lägger till den anpassade knappen med en ikon och registre
 
 ### Tillägg - registrering
 
-`ExtensionRegistration.js`, mappad till index.html-vägen, är startpunkten för AEM och definierar:
+`ExtensionRegistration.js`, mappad till metoden index.html, är startpunkten för AEM-tillägget och definierar:
 
 + RTE-verktygsfältsknappens definition i funktionen `getCustomButtons()` med `id, tooltip and icon`-attribut.
 + Klickhanteraren för knappen i funktionen `onClick()`.
-+ Klickhanterarfunktionen tar emot objektet `state` som ett argument för att hämta RTE-innehållet i HTML eller textformat. I det här exemplet används det dock inte.
-+ click-hanterarfunktionen returnerar en instruktionsarray. Den här arrayen har ett objekt med attributen `type` och `value`. För att infoga innehållet, HTML-kodfragmentet `value` attribut, använder attributet `type` `insertContent`. Om det finns ett användningsfall för att ersätta innehållet ska du använda instruktionstypen `replaceContent`.
++ Klickhanterarfunktionen tar emot objektet `state` som ett argument för att hämta RTE-innehållet i HTML- eller textformat. I det här exemplet används det dock inte.
++ click-hanterarfunktionen returnerar en instruktionsarray. Den här arrayen har ett objekt med attributen `type` och `value`. För att infoga innehållet, attributen `value`, HTML-kodfragment, använder attributet `type` `insertContent`. Om det finns ett användningsfall för att ersätta innehållet ska du använda instruktionstypen `replaceContent`.
 
 Värdet `insertContent` är en HTML-sträng, `<div class=\"cmp-contentfragment__element-tip\"><div>TIP</div><div>Add your tip text here...</div></div>`. CSS-klasserna `cmp-contentfragment__element-tip` som används för att visa värdet definieras inte i widgeten, utan implementeras i webbupplevelsen när det här fältet för innehållsfragment visas.
 

@@ -1,14 +1,14 @@
 ---
-title: Advanced Concepts of AEM Headless - GraphQL
+title: Avancerade begrepp för AEM Headless - GraphQL
 description: En komplett självstudiekurs som illustrerar avancerade koncept för API:er i Adobe Experience Manager (AEM) GraphQL.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: daae6145-5267-4958-9abe-f6b7f469f803
 duration: 441
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 0%
@@ -19,17 +19,17 @@ ht-degree: 0%
 
 {{aem-headless-trials-promo}}
 
-Den här kompletta självstudiekursen fortsätter med den [grundläggande självstudiekursen](../multi-step/overview.md) som täckte grunderna i Adobe Experience Manager (AEM) Headless och GraphQL. Den avancerade självstudiekursen visar ingående aspekter av att arbeta med modeller för innehållsfragment, innehållsfragment och de AEM GraphQL beständiga frågorna, inklusive användning av GraphQL beständiga frågor i ett klientprogram.
+Den här kompletta självstudiekursen fortsätter med den [grundläggande självstudiekursen](../multi-step/overview.md) som täckte grunderna i Adobe Experience Manager (AEM) Headless och GraphQL. Den avancerade självstudiekursen visar ingående aspekter av att arbeta med modeller för innehållsfragment, innehållsfragment och beständiga frågor för AEM GraphQL, inklusive hur du använder beständiga frågor från GraphQL i ett klientprogram.
 
 ## Förutsättningar
 
 Slutför [snabbinstallationen för AEM as a Cloud Service](../quick-setup/cloud-service.md) för att konfigurera din AEM as a Cloud Service-miljö.
 
-Vi rekommenderar att du slutför de tidigare [grundläggande självstudiekurserna](../multi-step/overview.md) och [videoserierna](../video-series/modeling-basics.md) innan du fortsätter med den här avancerade självstudiekursen. Även om du kan slutföra självstudiekursen i en lokal AEM omfattar den här självstudiekursen bara arbetsflödet för AEM as a Cloud Service.
+Vi rekommenderar att du slutför de tidigare [grundläggande självstudiekurserna](../multi-step/overview.md) och [videoserierna](../video-series/modeling-basics.md) innan du fortsätter med den här avancerade självstudiekursen. Även om du kan slutföra självstudiekursen i en lokal AEM-miljö, omfattar den här självstudiekursen bara arbetsflödet för AEM as a Cloud Service.
 
 >[!CAUTION]
 >
->Om du inte har tillgång till AEM as a Cloud Service-miljön kan du slutföra [AEM Headless-snabbinstallationen med den lokala SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html). Det är dock viktigt att notera att vissa användargränssnittssidor, som navigering för innehållsfragment, är olika.
+>Om du inte har tillgång till AEM as a Cloud Service-miljön kan du slutföra snabbinstallationen av [AEM Headless med det lokala SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html). Det är dock viktigt att notera att vissa användargränssnittssidor, som navigering för innehållsfragment, är olika.
 
 
 
@@ -43,7 +43,7 @@ Den här självstudiekursen handlar om följande ämnen:
 * Behåll GraphQL-frågor med parametrar i AEM och lär dig hur du använder cachekontrollparametrar med beständiga frågor.
 * Integrera begäran om beständiga frågor i exempelappen WKND GraphQL React med AEM Headless JavaScript SDK.
 
-## Avancerade koncept AEM Headless-översikt
+## Avancerade koncept för AEM Headless - översikt
 
 I följande video visas en översikt på hög nivå över de koncept som beskrivs i den här självstudiekursen. Självstudiekursen innehåller definition av modeller för innehållsfragment med mer avancerade datatyper, kapsling av innehållsfragment och beständiga GraphQL-frågor i AEM.
 
@@ -51,17 +51,17 @@ I följande video visas en översikt på hög nivå över de koncept som beskriv
 
 >[!CAUTION]
 >
->I den här videon (kl. 2:25) omnämns hur du installerar frågeredigeraren GraphiQL via Package Manager för att utforska GraphQL-frågor. I senare versioner av AEM som Cloud Service finns dock en inbyggd **GraphiQL Explorer**, vilket innebär att paketinstallation inte krävs. Mer information finns i [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html).
+>I den här videon (kl. 2:25) omnämns hur du installerar frågeredigeraren GraphiQL via Package Manager för att utforska GraphQL-frågor. I nyare versioner av AEM som Cloud Service finns dock en inbyggd **GraphiQL Explorer**, vilket innebär att paketinstallation inte krävs. Mer information finns i [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html).
 
 
 ## Projektinställningar
 
-WKND-webbplatsprojektet har alla nödvändiga konfigurationer, så du kan starta självstudiekursen direkt när du har slutfört [snabbinstallationen](../quick-setup/cloud-service.md). I det här avsnittet beskrivs bara några viktiga steg som du kan använda när du skapar ett eget AEM Headless-projekt.
+WKND-webbplatsprojektet har alla nödvändiga konfigurationer, så du kan starta självstudiekursen direkt när du har slutfört [snabbinstallationen](../quick-setup/cloud-service.md). I det här avsnittet beskrivs endast några viktiga steg som du kan använda när du skapar ett eget AEM Headless-projekt.
 
 
 ### Granska befintlig konfiguration
 
-Det första steget till att starta ett nytt projekt i AEM är att skapa dess konfiguration, som en arbetsyta och att skapa GraphQL API-slutpunkter. Om du vill granska eller skapa en konfiguration går du till **Verktyg** > **Allmänt** > **Konfigurationsläsaren**.
+Det första steget till att starta ett nytt projekt i AEM är att skapa konfigurationen, som en arbetsyta och skapa GraphQL API-slutpunkter. Om du vill granska eller skapa en konfiguration går du till **Verktyg** > **Allmänt** > **Konfigurationsläsaren**.
 
 ![Navigera till Configuration Browser](assets/overview/create-configuration.png)
 
@@ -87,7 +87,7 @@ Observera att `WKND Shared Endpoint` redan har skapats. Om du vill skapa en slut
 
 En väldefinierad innehållsstruktur är avgörande för att AEM headless-implementering ska lyckas. Det är användbart för skalbarhet, användbarhet och behörighetshantering av ditt innehåll.
 
-En språkrotmapp är en mapp med en ISO-språkkod som namn, till exempel EN eller FR. Det AEM översättningshanteringssystemet använder dessa mappar för att definiera det primära språket för ditt innehåll och dina språk för översättning av innehåll.
+En språkrotmapp är en mapp med en ISO-språkkod som namn, till exempel EN eller FR. I AEM översättningshanteringssystem används dessa mappar för att definiera det primära språket för ditt innehåll och dina språk för översättning av innehåll.
 
 Gå till **Navigering** > **Assets** > **Filer**.
 
@@ -107,7 +107,7 @@ Om du vill tilldela språkets rotmapp till konfigurationen markerar du mappen oc
 
 ![Välj egenskaper](assets/overview/properties.png)
 
-Gå sedan till fliken **Cloud Service** och välj mappikonen i fältet **Cloud-konfiguration** .
+Gå sedan till fliken **Cloud-tjänster** och välj mappikonen i fältet **Cloud-konfiguration**.
 
 ![Molnkonfiguration](assets/overview/cloud-conf.png)
 
@@ -115,7 +115,7 @@ I den modal som visas väljer du den tidigare skapade konfigurationen för att t
 
 ### God praxis
 
-Nedan följer de bästa sätten att skapa egna projekt i AEM:
+Här följer några tips om hur du skapar egna projekt i AEM:
 
 * Mapphierarkin bör utformas med lokalisering och översättning i åtanke. Språkmappar ska med andra ord kapslas i konfigurationsmappar, vilket gör det enkelt att översätta innehåll i dessa konfigurationsmappar.
 * Mapphierarkin bör hållas platt och okomplicerad. Undvik att flytta eller byta namn på mappar och fragment senare, särskilt efter publicering för direktanvändning, eftersom sökvägar ändras som kan påverka fragmentreferenser och GraphQL-frågor.

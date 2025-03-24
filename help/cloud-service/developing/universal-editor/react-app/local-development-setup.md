@@ -1,7 +1,7 @@
 ---
 title: Lokal utvecklingskonfiguration
 description: Lär dig hur du konfigurerar en lokal utvecklingsmiljö för Universal Editor så att du kan redigera innehållet i ett exempel på en React-app.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developer Tools, Headless
 topic: Development, Content Management
 role: Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 47bef697-5253-493a-b9f9-b26c27d2db56
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
@@ -27,13 +27,13 @@ Lär dig hur du konfigurerar en lokal utvecklingsmiljö för att redigera inneh�
 
 Du måste följa den här självstudiekursen på följande sätt:
 
-- Grundläggande färdigheter i HTML och JavaScript.
+- HTML och JavaScript grundläggande färdigheter.
 - Följande verktyg måste installeras lokalt:
    - [Node.js](https://nodejs.org/en/download/)
    - [Git](https://git-scm.com/downloads)
    - En IDE- eller kodredigerare, till exempel [Visual Studio Code](https://code.visualstudio.com/)
 - Hämta och installera följande:
-   - [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk): Den innehåller den QuickStart Jar som används för att köra AEM Author och Publish lokalt i utvecklingssyfte.
+   - [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk): Den innehåller den QuickStart Jar som används för att köra AEM Author och publicera lokalt för utvecklingsändamål.
    - [Universal Editor-tjänsten](https://experienceleague.adobe.com/en/docs/experience-cloud/software-distribution/home): En lokal kopia av Universal Editor-tjänsten har en delmängd av funktioner och kan hämtas från Software Distribution Portal.
    - [local-ssl-proxy](https://www.npmjs.com/package/local-ssl-proxy#local-ssl-proxy): En enkel lokal SSL HTTP-proxy som använder ett självsignerat certifikat för lokal utveckling. AEM Universal Editor kräver HTTPS-URL:en för React-appen för att läsa in den i redigeraren.
 
@@ -43,10 +43,10 @@ Följ stegen nedan för att konfigurera den lokala utvecklingsmiljön:
 
 ### AEM SDK
 
-Installera följande paket i det lokala AEM SDK om du vill ange innehåll för appen WKND Teams React.
+Installera följande paket i den lokala AEM SDK om du vill ange innehåll för appen WKND Teams React.
 
 - [WKND-team - Innehållspaket](./assets/basic-tutorial-solution.content.zip): Innehåller modeller för innehållsfragment, innehållsfragment och beständiga GraphQL-frågor.
-- [WKND-team - konfigurationspaket](./assets/basic-tutorial-solution.ui.config.zip): Innehåller CORS-konfigurationer (Cross-Origin Resource Sharing) och hanterare för tokenautentisering. CORS underlättar för icke-AEM webbegenskaper att göra webbläsarbaserade klientanrop till AEM GraphQL API:er, och Token Authentication Handler används för att autentisera varje begäran till AEM.
+- [WKND-team - konfigurationspaket](./assets/basic-tutorial-solution.ui.config.zip): Innehåller CORS-konfigurationer (Cross-Origin Resource Sharing) och hanterare för tokenautentisering. CORS underlättar för andra webbegenskaper än AEM att göra webbläsarbaserade klientanrop till AEM GraphQL API:er och Token Authentication Handler används för att autentisera varje begäran till AEM.
 
   ![WKND-team - paket](./assets/wknd-teams-packages.png)
 
@@ -74,7 +74,7 @@ Följ stegen nedan för att konfigurera appen WKND Teams React:
    $ npm start
    ```
 
-1. Öppna appen WKND Teams React i webbläsaren på [http://localhost:3000](http://localhost:3000). Här visas en lista med teammedlemmar och deras information. Innehållet för React-appen tillhandahålls av den lokala AEM SDK med hjälp av GraphQL-API:er (`/graphql/execute.json/my-project/all-teams`), som du kan verifiera med hjälp av webbläsarens nätverksflik.
+1. Öppna appen WKND Teams React i webbläsaren på [http://localhost:3000](http://localhost:3000). Här visas en lista med teammedlemmar och deras information. Innehållet för React-appen tillhandahålls av den lokala AEM SDK med GraphQL-API:er (`/graphql/execute.json/my-project/all-teams`), som du kan verifiera via webbläsarens nätverksflik.
 
    ![WKND Teams - React app](./assets/wknd-teams-react-app.png)
 
@@ -121,7 +121,7 @@ Universal Editor Service listening on port 8000 as HTTP Server
 
 AEM Universal Editor kräver att React-appen serveras via HTTPS. Låt oss skapa en lokal SSL HTTP-proxy som använder ett självsignerat certifikat för lokal utveckling.
 
-Följ stegen nedan för att konfigurera den lokala SSL HTTP-proxyn och använda AEM SDK och den universella redigerartjänsten via HTTPS:
+Följ stegen nedan för att konfigurera den lokala SSL HTTP-proxyn och använda AEM SDK och Universal Editor via HTTPS:
 
 1. Installera paketet `local-ssl-proxy` globalt.
 
@@ -131,7 +131,7 @@ Följ stegen nedan för att konfigurera den lokala SSL HTTP-proxyn och använda 
 
 1. Starta två instanser av den lokala SSL HTTP-proxyn för följande tjänster:
 
-   - AEM SDK lokal SSL HTTP-proxy på port `8443`.
+   - AEM SDK lokala SSL HTTP-proxy på port `8443`.
    - Universell redigeringstjänst lokal SSL HTTP-proxy på port `8001`.
 
    ```bash
@@ -156,7 +156,7 @@ Följ stegen nedan för att aktivera HTTPS för appen WKND Teams React:
    }
    ```
 
-1. Uppdatera `REACT_APP_HOST_URI` i filen `.env.development` så att HTTPS-protokollet och den lokala SSL HTTP-proxyporten för AEM SDK används.
+1. Uppdatera `REACT_APP_HOST_URI` i filen `.env.development` så att HTTPS-protokollet och den lokala SSL HTTP-proxyporten i AEM SDK används.
 
    ```bash
    REACT_APP_HOST_URI=https://localhost:8443

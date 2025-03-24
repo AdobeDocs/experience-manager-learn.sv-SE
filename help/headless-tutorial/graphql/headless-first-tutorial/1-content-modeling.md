@@ -1,7 +1,7 @@
 ---
-title: Innehållsmodellering - AEM Headless first tutorial
+title: Innehållsmodellering - AEM Headless, första självstudiekurs
 description: Lär dig hur du använder innehållsfragment, skapar fragmentmodeller och använder GraphQL-slutpunkter i AEM.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: 6e5e3cb4-9a47-42af-86af-da33fd80cb47
 duration: 175
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 0%
@@ -25,15 +25,15 @@ Välkommen till självstudiekurskapitlet om innehållsfragment och GraphQL-slutp
 
 Content Fragments erbjuder ett strukturerat sätt att hantera innehåll över flera kanaler, vilket ger flexibilitet och återanvändbarhet. Genom att aktivera innehållsfragment i AEM kan du skapa modulärt innehåll, vilket ger enhetlighet och anpassningsbarhet.
 
-För det första vägleder vi dig genom att aktivera innehållsfragment i AEM, som omfattar nödvändiga konfigurationer och inställningar för smidig integrering.
+Först vägleder vi dig genom att aktivera innehållsfragment i AEM, som omfattar nödvändiga konfigurationer och inställningar för smidig integrering.
 
 Sedan ska vi ta upp hur du skapar fragmentmodeller, som definierar struktur och attribut. Lär dig hur du utformar modeller som är anpassade efter dina innehållskrav och hanterar dem effektivt.
 
 Sedan visar vi hur man skapar innehållsfragment från modellerna och ger stegvis vägledning om redigering och publicering.
 
-Dessutom ska vi utforska hur vi definierar AEM GraphQL slutpunkter. GraphQL hämtar effektivt data från AEM, och vi skapar och konfigurerar slutpunkter för att exponera önskade data. Beständiga frågor optimerar prestanda och cachning.
+Dessutom ska vi titta närmare på hur man definierar slutpunkterna för AEM GraphQL. GraphQL hämtar effektivt data från AEM, och vi skapar och konfigurerar slutpunkter för att exponera önskade data. Beständiga frågor optimerar prestanda och cachning.
 
-Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och praktiska tips. Slutligen har du de kunskaper du behöver för att aktivera innehållsfragment, skapa fragmentmodeller, generera fragment och definiera AEM GraphQL slutpunkter och beständiga frågor. Kom så börjar vi!
+Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och praktiska tips. Slutligen har du de kunskaper du behöver för att aktivera innehållsfragment, skapa fragmentmodeller, generera fragment och definiera slutpunkter och beständiga frågor för AEM GraphQL. Kom så börjar vi!
 
 ## Kontextmedveten konfiguration
 
@@ -132,7 +132,7 @@ Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och pra
 
    Du bör hämta en lista som innehåller det enskilda fragmentet som skapades [ovan](#create-content).
 
-   För den här övningen skapar du en fullständig fråga som AEM headless-appen använder. Skapa en fråga som returnerar ett enskilt teaser per sökväg. Ange följande fråga i frågeredigeraren:
+   För den här övningen skapar du en fullständig fråga som AEM Headless-appen använder. Skapa en fråga som returnerar ett enskilt teaser per sökväg. Ange följande fråga i frågeredigeraren:
 
    ```graphql
    query TeaserByPath($path: String!) {
@@ -195,4 +195,4 @@ Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och pra
 
 Grattis! Du har konfigurerat AEM as a Cloud Service så att innehållsfragment och GraphQL slutpunkter kan skapas. Du har också skapat en innehållsfragmentmodell och ett innehållsfragment, och definierat en GraphQL-slutpunkt och en beständig fråga. Du är nu redo att gå vidare till nästa självstudiekurs där du får lära dig hur du skapar ett AEM Headless React-program som använder de innehållsfragment och GraphQL-slutpunkter som du har skapat i det här kapitlet.
 
-[Nästa kapitel: AEM Headless APIs and React](./2-aem-headless-apis-and-react.md)
+[Nästa kapitel: AEM Headless API:er och React](./2-aem-headless-apis-and-react.md)

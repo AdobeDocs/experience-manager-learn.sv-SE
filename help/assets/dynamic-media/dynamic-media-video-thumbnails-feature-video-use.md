@@ -1,22 +1,22 @@
 ---
-title: Använda anpassade videominiatyrbilder med AEM Dynamic Media
+title: Använda anpassade videominiatyrer med AEM Dynamic Media
 description: Med AEM Assets anpassade videominiatyrbilder kan författare välja en lämplig miniatyrbild från en uppsättning genererade miniatyrbilder. Det är enkelt att anpassa antalet miniatyrbilder som genereras för en video.
 feature: Video Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: da3190bb-f350-420f-bf24-a6dede296efa
 duration: 376
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
-# Använda anpassade videominiatyrbilder med AEM Dynamic Media{#using-custom-video-thumbnail-with-aem-dynamic-media}
+# Använda anpassade videominiatyrer med AEM Dynamic Media{#using-custom-video-thumbnail-with-aem-dynamic-media}
 
 Med AEM Assets anpassade videominiatyrbilder kan författare välja en lämplig miniatyrbild från en uppsättning genererade miniatyrbilder. Det är enkelt att anpassa antalet miniatyrbilder som genereras för en video.
 
@@ -28,4 +28,4 @@ Med AEM Assets anpassade videominiatyrbilder kan författare välja en lämplig 
 
 >[!NOTE]
 >
->Du bör köra din [AEM-instans i Dynamic Media](https://experienceleague.adobe.com/docs/)-läge
+>Du bör köra din [AEM-instans i läget Dynamic Media](https://experienceleague.adobe.com/docs/)

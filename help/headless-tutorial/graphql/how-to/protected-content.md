@@ -1,7 +1,7 @@
 ---
 title: Skyddat innehåll i AEM Headless
-description: Lär dig hur du skyddar innehåll i AEM Headless.
-version: Cloud Service
+description: Lär dig skydda innehåll i AEM Headless.
+version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
 role: Developer, Architect
@@ -10,7 +10,7 @@ jira: KT-15233
 last-substantial-update: 2024-05-01T00:00:00Z
 exl-id: c4b093d4-39b8-4f0b-b759-ecfbb6e9e54f
 duration: 254
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Skydda innehåll i AEM Headless
 
-Att säkerställa dataintegriteten och datasäkerheten när du levererar AEM Headless-innehåll från AEM Publish är avgörande när du levererar känsligt innehåll. På så sätt kan du gå igenom hur du skyddar innehåll som hanteras AEM Headless GraphQL API-slutpunkter.
+Att säkerställa dataintegriteten och datasäkerheten när du levererar AEM Headless-innehåll från AEM Publish är avgörande när du levererar känsligt innehåll. Så här går du igenom hur du skyddar innehåll som hanteras av AEM Headless API-slutpunkter för GraphQL.
 
 Vägledningen i den här självstudiekursen där det finns strikta krav på att innehåll endast ska vara tillgängligt för specifika användare eller användargrupper. Det är av största vikt att skilja mellan personaliserat marknadsföringsinnehåll och privat innehåll, som PII-innehåll eller personuppgifter, för att undvika förvirring och oavsiktliga resultat. Den här självstudiekursen handlar om att skydda privat innehåll.
 
@@ -36,11 +36,11 @@ Detta handledningar täcker inte:
 
 Först måste vi definiera en [användargrupp](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions) som innehåller de användare som ska ha tillgång till det skyddade innehållet.
 
-![AEM Användargrupp för Headless-skyddat innehåll](./assets/protected-content/user-groups.png){align="center"}
+![AEM Headless-användargrupp för skyddat innehåll](./assets/protected-content/user-groups.png){align="center"}
 
 Användargrupper tilldelar åtkomst till AEM Headless-innehåll, inklusive Content Fragments eller andra refererade resurser.
 
-1. Logga in på AEM författare som **användaradministratör**.
+1. Logga in på AEM Author som **användaradministratör**.
 1. Navigera till **Verktyg** > **Dokumentskydd** > **Grupper**.
 1. Välj **Skapa** i det övre högra hörnet.
 1. På fliken **Detaljer** anger du **Grupp-ID** och **Gruppnamn**.
@@ -56,47 +56,47 @@ Om du vill ge AEM Headless GraphQL API-begäranden åtkomst till skyddat innehå
 
 1. **AEM as a Cloud Service [tekniska konton](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials):**
    - Skapa ett tekniskt konto i AEM as a Cloud Service Developer Console.
-   - Logga in på AEM författare en gång med det tekniska kontot.
-   - Lägg till det tekniska kontot i användargruppen via **Verktyg > Dokumentskydd > Grupper > AEM Headless API-användare > Medlemmar**.
-   - **Aktivera** både den tekniska kontoanvändaren och användargruppen på AEM Publish.
+   - Logga in på AEM Author en gång med det tekniska kontot.
+   - Lägg till det tekniska kontot i användargruppen via **Verktyg > Säkerhet > Grupper > AEM Headless API-användare > Medlemmar**.
+   - **Aktivera** både den tekniska kontoanvändaren och användargruppen i AEM Publish.
    - Den här metoden kräver att den headless-klienten inte exponerar tjänstens autentiseringsuppgifter för användaren, eftersom de är autentiseringsuppgifter för en viss användare och inte ska delas.
 
-   ![AEM Hantering av teknisk kontogrupp](./assets/protected-content/group-membership.png){align="center"}
+   ![Grupphantering för AEM tekniska konto](./assets/protected-content/group-membership.png){align="center"}
 
 2. **Namngivna användare:**
-   - Autentisera namngivna användare och lägg direkt till dem i användargruppen på AEM Publish.
-   - Den här metoden kräver att den headless-klienten autentiserar inloggningsuppgifter med AEM Publish, hämtar en AEM inloggnings- eller åtkomsttoken och använder denna token för efterföljande AEM. Detaljerna för hur detta ska uppnås beskrivs inte i det här handtaget och är beroende av implementeringen.
+   - Autentisera namngivna användare och lägg direkt till dem i användargruppen i AEM Publish.
+   - Den här metoden kräver att den headless-klienten autentiserar inloggningsuppgifter med AEM Publish, hämtar en inloggnings- eller åtkomsttoken från AEM och använder denna token för efterföljande förfrågningar till AEM. Detaljerna för hur detta ska uppnås beskrivs inte i det här handtaget och är beroende av implementeringen.
 
 ## Skydda innehållsfragment
 
-Skydda innehållsfragment är nödvändigt för att skydda ditt AEM Headless-innehåll och uppnås genom att innehållet kopplas till en Closed User Group (CUG). När en användare skickar en begäran till det AEM Headless-API:t för GraphQL filtreras det returnerade innehållet baserat på användarens CUG.
+Skydda innehållsfragment är nödvändigt för att skydda ditt AEM Headless-innehåll och uppnås genom att koppla innehållet till en Closed User Group (CUG). När en användare skickar en begäran till AEM Headless GraphQL API filtreras det returnerade innehållet baserat på användarens CUG.
 
 ![AEM Headless CUG](./assets/protected-content/cugs.png){align="center"}
 
 Följ de här stegen för att uppnå detta genom [Stängda användargrupper (CUG)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/advanced/closed-user-groups).
 
-1. Logga in på AEM författare som **DAM-användare**.
+1. Logga in på AEM Author som **DAM-användare**.
 2. Navigera till **Assets > Filer** och markera den **mapp** som innehåller de innehållsfragment som ska skyddas. CUG-filer används hierarkiskt och påverkar undermappar om de inte åsidosätts av en annan CUG-fil.
    - Se till att användare som tillhör andra kanaler som använder innehållet i mapparna inkluderas i den här användargruppen. Du kan också inkludera användargrupperna som är associerade med dessa kanaler i listan över CUG-grupper. Annars kommer innehållet inte att vara tillgängligt för dessa kanaler.
 3. Markera mappen och välj **Egenskaper** i verktygsfältet.
 4. Välj fliken **Behörigheter**.
 5. Skriv in **gruppnamnet** och välj knappen **Lägg till** för att lägga till den nya CUG-filen.
 6. **Spara** om du vill använda CUG-filen.
-7. **Markera** resursmappen och välj **Publish** för att skicka mappen med de använda användargränssnitten till AEM Publish, där den utvärderas som en behörighet.
+7. **Markera** resursmappen och välj **Publicera** för att skicka mappen med de använda användargränssnitten till AEM Publish, där den utvärderas som en behörighet.
 
 Utför samma steg för alla mappar som innehåller innehållsfragment som behöver skyddas och använd rätt CUG för varje mapp.
 
-När en HTTP-begäran görs till den AEM Headless GraphQL API-slutpunkten inkluderas nu endast de innehållsfragment som är tillgängliga för den begärande användarens angivna CUG i resultatet. Om användaren saknar åtkomst till något innehållsfragment kommer resultatet att vara tomt, men ändå returnera en 200 HTTP-statuskod.
+När en HTTP-begäran görs till AEM Headless GraphQL API-slutpunkten inkluderas nu endast de innehållsfragment som är tillgängliga för den begärande användarens angivna CUG. Om användaren saknar åtkomst till något innehållsfragment kommer resultatet att vara tomt, men ändå returnera en 200 HTTP-statuskod.
 
 ### Skydda refererat innehåll
 
-Innehållsfragment refererar ofta till annat AEM, t.ex. bilder. Om du vill skydda det refererade innehållet använder du CUG:er på resursmapparna där de refererade resurserna lagras. Observera att refererade resurser vanligtvis efterfrågas med andra metoder än de i GraphQL API:er AEM Headless. Följaktligen kan sättet som åtkomsttoken skickas på på för begäranden till dessa refererade resurser variera.
+Innehållsfragment refererar ofta till annat AEM-innehåll, t.ex. bilder. Om du vill skydda det refererade innehållet använder du CUG:er på resursmapparna där de refererade resurserna lagras. Observera att refererade resurser vanligtvis efterfrågas med andra metoder än de i AEM Headless GraphQL API:er. Följaktligen kan sättet som åtkomsttoken skickas på på för begäranden till dessa refererade resurser variera.
 
 Beroende på innehållsarkitekturen kan det vara nödvändigt att använda användargränssnitten på flera mappar för att säkerställa att allt innehåll som refereras är skyddat.
 
 ## Förhindra cachelagring av skyddat innehåll
 
-AEM as a Cloud Service [cachelagrar HTTP-svar som standard](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/publish) för prestandaförbättringar. Detta kan dock orsaka problem med att skicka skyddat innehåll. Om du vill förhindra cachelagring av sådant innehåll [tar du bort cacherubriker för specifika slutpunkter](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/publish#how-to-customize-cache-rules-1) i Apache-konfigurationen för den AEM Publish-instansen.
+AEM as a Cloud Service [cachelagrar HTTP-svar som standard](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/publish) för prestandaförbättringar. Detta kan dock orsaka problem med att skicka skyddat innehåll. Om du vill förhindra cachelagring av sådant innehåll [tar du bort cacherubriker för specifika slutpunkter](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/publish#how-to-customize-cache-rules-1) i Apache-konfigurationen för AEM Publish-instansen.
 
 Lägg till följande regel i ditt Dispatcher-projekts Apache-konfigurationsfil för att ta bort cacherubriker för specifika slutpunkter:
 
@@ -120,4 +120,4 @@ Observera att detta medför en prestandaförsämring eftersom innehållet inte c
 
 ## Skydda AEM Headless GraphQL API-slutpunkter
 
-Den här guiden skyddar inte själva [AEM Headless GraphQL API-slutpunkterna](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/graphql-endpoint), utan fokuserar på att skydda det innehåll som hanteras av dem. Alla användare, även anonyma användare, har åtkomst till slutpunkterna som innehåller skyddat innehåll. Endast det innehåll som är tillgängligt för användarens stängda användargrupper returneras. Om inget innehåll är tillgängligt kommer det AEM Headless API-svaret fortfarande att ha en 200 HTTP-svarskod, men resultatet kommer att vara tomt. Normalt räcker det att skydda innehållet eftersom själva slutpunkterna inte exponerar känsliga data. Om du behöver skydda slutpunkterna lägger du till åtkomstkontrollistor i dem på AEM Publish via [Repoinit-skript (Sling Repository Initialization)](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios).
+Den här guiden skyddar inte själva [AEM Headless GraphQL API-slutpunkterna](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/graphql-endpoint), utan fokuserar på att skydda det innehåll som hanteras av dem. Alla användare, även anonyma användare, har åtkomst till slutpunkterna som innehåller skyddat innehåll. Endast det innehåll som är tillgängligt för användarens stängda användargrupper returneras. Om inget innehåll är tillgängligt kommer AEM Headless API-svaret fortfarande att ha en 200 HTTP-svarskod, men resultatet kommer att vara tomt. Normalt räcker det att skydda innehållet eftersom själva slutpunkterna inte exponerar känsliga data. Om du behöver skydda slutpunkterna lägger du till åtkomstkontrollistor i dem i AEM Publish via [Repoinit-skript (Sling Repository Initialization)](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios).

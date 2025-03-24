@@ -1,7 +1,7 @@
 ---
-title: Uppdatera AEM i full hög för att använda frontendpipeline
-description: Lär dig hur du uppdaterar AEM i full hög för att aktivera det för frontendpipeline, så att endast slutartefakter byggs och distribueras.
-version: Cloud Service
+title: Uppdatera AEM-projekt i full stack för att använda pipeline i frontend-läget
+description: Lär dig hur du uppdaterar AEM-projekt i full stack så att det kan användas i den främre pipeline, så att endast slutartefakter byggs och distribueras.
+version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
@@ -13,14 +13,14 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: c4a961fb-e440-4f78-b40d-e8049078b3c0
 duration: 307
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 0%
 
 ---
 
-# Uppdatera AEM i full hög för att använda frontendpipeline {#update-project-enable-frontend-pipeline}
+# Uppdatera AEM-projekt i full stack för att använda pipeline i frontend-läget {#update-project-enable-frontend-pipeline}
 
 I det här kapitlet gör vi konfigurationsändringar i __WKND Sites-projektet__ för att använda front end-pipeline för att distribuera JavaScript och CSS, i stället för att kräva en fullständig pipeline-körning i stacken. Detta försvårar utvecklingsfasen och driftsättningslivscykeln för front-end- och back-end-artefakter, vilket ger en snabbare, iterativ utvecklingsprocess som helhet.
 
@@ -28,7 +28,7 @@ I det här kapitlet gör vi konfigurationsändringar i __WKND Sites-projektet__ 
 
 * Uppdatera ett projekt i full hög för att använda frontendpipeline
 
-## Översikt över konfigurationsändringar i AEM
+## Översikt över konfigurationsändringar i AEM-projekt i fullhög
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
@@ -37,7 +37,7 @@ I det här kapitlet gör vi konfigurationsändringar i __WKND Sites-projektet__ 
 Det här är en självstudiekurs i flera delar och det antas att du har granskat modulen [&#39;ui.front&#39; ](./review-uifrontend-module.md).
 
 
-## Ändringar i AEM
+## Förändringar i AEM-projekt i full hög
 
 Det finns tre projektrelaterade konfigurationsändringar och en formatändring som ska distribueras för en testkörning, vilket innebär totalt fyra specifika ändringar i WKND-projektet för att aktivera det för det främre pipelinekontraktet.
 
@@ -185,12 +185,12 @@ Det finns tre projektrelaterade konfigurationsändringar och en formatändring s
        ...
    ```
 
-Slutligen kan du överföra dessa ändringar till Adobe i programmets Git-databas.
+Slutligen kan du överföra dessa ändringar till Adobe Git-databasen.
 
 
 >[!AVAILABILITY]
 >
-> De här ändringarna är tillgängliga på GitHub i [__front-end-pipeline__](https://github.com/adobe/aem-guides-wknd/tree/feature/frontend-pipeline)-grenen i __AEM WKND Sites-projektet__.
+> De här ändringarna är tillgängliga på GitHub i [__frontendpipeline__](https://github.com/adobe/aem-guides-wknd/tree/feature/frontend-pipeline)-grenen i __AEM WKND Sites-projektet__.
 
 
 ## Varning - _Aktivera frontslutspipeline_-knapp

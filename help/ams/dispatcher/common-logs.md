@@ -1,7 +1,7 @@
 ---
-title: AEM Dispatcher gemensamma loggar
+title: AEM Dispatcher Common Logs
 description: Ta en titt på vanliga loggposter från Dispatcher och lär dig vad de innebär och hur du åtgärdar dem.
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration, Performance
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7fe1b4a5-6813-4ece-b3da-40af575ea0ed
 duration: 229
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 0%
@@ -109,9 +109,9 @@ Fri Jul 20 22:31:15 2018 W pid 3648 Unable to connect socket to 10.43.3.40:4502:
 Fri Jul 20 22:31:15 2018 W pid 3648 Unable to connect to any backend in farm authorfarm
 ```
 
-Detta inträffar när du har konfigurerat fel IP-adress i återgivningsavsnittet i servergruppen. Det eller så slutade AEM svara eller lyssna och Dispatcher kunde inte nå den.
+Detta inträffar när du har konfigurerat fel IP-adress i återgivningsavsnittet i servergruppen. Det eller så slutade AEM-instansen att svara eller lyssna och Dispatcher kan inte nå den.
 
-Kontrollera brandväggsreglerna och att AEM körs och är felfri.
+Kontrollera brandväggsreglerna och att AEM-instansen körs och är felfri.
 
 Exempelloggposter för gateway-timeout:
 
@@ -120,7 +120,7 @@ Fri Jul 20 22:32:42 2018 I pid 3648 "GET /favicon.ico" 502 - 54034ms authorfarm/
 Fri Jul 20 22:35:45 2018 I pid 3648 "GET /favicon.ico" 503 - 54234ms authorfarm/-
 ```
 
-Det innebär att AEM hade en öppen socket som den kunde nå och nådde en tidsgräns med svaret. Det innebär att AEM var för långsam eller ohälsosam och att Dispatcher uppnådde de konfigurerade timeoutinställningarna i renderingssektionen i servergruppen. Öka timeoutinställningen eller få AEM felfri.
+Detta innebär att AEM-instansen hade en öppen socket som den kunde nå och nådde tidsgränsen med svaret. Detta innebär att din AEM-instans var för långsam eller ohälsosam och att Dispatcher uppnådde de konfigurerade timeoutinställningarna i renderingssektionen i servergruppen. Öka timeoutinställningen eller få AEM-instansen felfri.
 
 ## Cachenivåer
 
@@ -167,9 +167,9 @@ Thu Sep 27 17:35:11 2018 D pid 18936 Vanity URL file (/tmp/vanity_urls) not foun
 Thu Sep 27 17:35:11 2018 W pid 18936 Unable to fetch vanity URLs from 10.43.0.42:4503/libs/granite/dispatcher/content/vanityUrls.html: remote server returned: HTTP/1.1 404 Not Found
 ```
 
-Det här felet inträffar när du har konfigurerat din Dispatcher att använda det dynamiska autofiltret för att tillåta URL:er för innehållshantering, men inte slutfört installationen genom att installera paketet på den AEM renderaren.
+Det här felet inträffar när du har konfigurerat din Dispatcher att använda det dynamiska autofiltret för att tillåta URL:er för innehållshantering, men inte slutfört installationen genom att installera paketet på AEM-renderaren.
 
-Du åtgärdar detta genom att installera funktionspaketet för huvud-URL på AEM och tillåta att det kan vara klart av den anonyma användaren. Information [här](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html)
+Du åtgärdar detta genom att installera funktionsmakropaketet för vanity-URL på AEM-instansen och tillåta att det är klart av den anonyma användaren. Information [här](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html)
 
 En fungerande URL-adress ser ut så här:
 
@@ -201,6 +201,6 @@ Exempel på loggpost:
 Tue Nov 26 16:41:34 2019 I pid 9208 (tid 140112092391168) "GET /content/we-retail/us/en.html" - + 24034ms publishfarm/0
 ```
 
-Sidan hämtades via http-metoden för GET för innehållet `/content/we-retail/us/en.html` och tog 24034 millisekunder. Den del vi ville uppmärksamma finns i den sista `publishfarm/0`. Du kommer att se att det riktade och matchade `publishfarm`. Begäran hämtades från rendering 0. Betyder att den här sidan måste begäras från AEM cachelagras. Nu ska vi begära den här sidan igen och se vad som händer med loggen.
+Sidan hämtades via GET http-metod för innehållet `/content/we-retail/us/en.html` och tog 24034 millisekunder. Den del vi ville uppmärksamma finns i den sista `publishfarm/0`. Du kommer att se att det riktade och matchade `publishfarm`. Begäran hämtades från rendering 0. Det innebär att den här sidan måste hämtas från AEM och sedan cachas. Nu ska vi begära den här sidan igen och se vad som händer med loggen.
 
 [Nästa -> Skrivskyddade filer](./immutable-files.md)

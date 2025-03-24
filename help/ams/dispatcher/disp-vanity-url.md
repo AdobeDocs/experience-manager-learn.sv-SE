@@ -1,7 +1,7 @@
 ---
 title: AEM Dispatcher vanity URLs feature
-description: Lär dig hur AEM hanterar vanity-URL:er och andra tekniker med hjälp av omskrivningsregler för att mappa innehåll närmare leveransgränsen.
-version: 6.5
+description: Förstå hur AEM hanterar egna URL:er och andra tekniker med hjälp av omskrivningsregler för att mappa innehåll närmare leveransgränsen.
+version: Experience Manager 6.5
 topic: Administration, Performance
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 53baef9c-aa4e-4f18-ab30-ef9f4f5513ee
 duration: 244
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 0%
@@ -33,7 +33,7 @@ När du har innehåll som finns i en mappstruktur som är vettig finns det inte 
 
 Ett exempel: `/aboutus` pekade på `/content/we-retail/us/en/about-us.html`
 
-AEM författare har ett alternativ för att ange egenskaper för målarens URL för ett visst innehåll i AEM och publicera det.
+AEM-författare kan ange egenskaper för målarens URL för ett visst innehåll i AEM och publicera det.
 
 För att den här funktionen ska fungera måste du justera Dispatcher-filtren så att de klarar av fåfängligheten. Det här är orimligt om du justerar Dispatcher konfigurationsfiler i den takt som författare måste ställa in dessa poster för hjälpsidan.
 
@@ -50,7 +50,7 @@ Författare kan också markera kryssrutan _Omdirigera Vanity URL_ när du lägge
 
 #### Pekgränssnitt:
 
-![Nedrullningsbar dialogruta för AEM skapa användargränssnitt på webbplatsredigerarskärmen](assets/disp-vanity-url/aem-page-properties-drop-down.png "aem-page-properties-drop-down")
+![Nedrullningsbar meny för AEM redigeringsgränssnitt på webbplatsredigerarskärmen](assets/disp-vanity-url/aem-page-properties-drop-down.png "aem-page-properties-drop-down")
 
 Dialogrutan ![aem page properties](assets/disp-vanity-url/aem-page-properties.png "aem-page-properties")
 
@@ -70,12 +70,12 @@ Dialogrutan ![aem page properties](assets/disp-vanity-url/aem-page-properties.pn
 
 Alla poster i vanity är sling map-post för en intern omdirigering.
 
-Kartorna visas genom att gå till AEM Felix-konsolen ( `/system/console/jcrresolver` )
+Kartorna visas på AEM-instanserna Felix-konsolen ( `/system/console/jcrresolver` )
 
 Här är en skärmbild av ett kartinlägg som skapats av ett värde för vanity:
 ![skärmbild av konsolen för en post av typen vanity i resursmatchningsreglerna](assets/disp-vanity-url/vanity-resource-resolver-entry.png "vanity-resource-resolver-entry")
 
-I exemplet ovan, när vi ber den AEM instansen att besöka `/aboutus`, tolkas den som `/content/we-retail/us/en/about-us.html`
+I exemplet ovan, när vi ber AEM-instansen att besöka `/aboutus`, tolkas det som `/content/we-retail/us/en/about-us.html`
 
 ## Dispatcher-filter för att tillåta automatiskt
 
@@ -85,7 +85,7 @@ Det är viktigt att se till att utgivare bara tillåter innehåll från `/conten
 
 Här är rub, vanity-URL:er som finns i basmappen för `/`, så hur kan vi låta dem nå utgivare samtidigt som de förblir säkra?
 
-Enkel Dispatcher har en autofilterfunktion och du måste installera ett AEM och sedan konfigurera Dispatcher så att det pekar på den paketsidan.
+Enkel Dispatcher har en autofilterfunktion och du måste installera ett AEM-paket och sedan konfigurera Dispatcher så att det pekar på den paketsidan.
 
 [https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/granite/vanityurls-components](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?package=/content/software-distribution/en/details.html/content/dam/aem/public/adobe/packages/granite/vanityurls-components)
 
@@ -118,7 +118,7 @@ Den här metoden tvingar Dispatcher att uppdatera `/file`, förutsatt att det an
 
 Den lagrar sin cache för svaret i argumentet `/file` så i det här exemplet `/tmp/vanity_urls`
 
-Så om du besöker den AEM instansen på URI:n ser du vad den hämtar:
+Om du besöker AEM-instansen på URI:n ser du vad den hämtar:
 
 ![skärmbild av innehållet som återges från /libs/granite/dispatcher/content/vanityUrls.html](assets/disp-vanity-url/vanity-url-component.png "vanity-url-component")
 
@@ -126,7 +126,7 @@ Det är bokstavligen en lista, superenkel
 
 ## Skriv om regler som vanlighetsregler
 
-Varför skulle vi använda omskrivningsregler istället för standardmekanismen som är inbyggd i AEM som beskrivs ovan?
+Varför skulle vi använda omskrivningsregler i stället för standardmekanismen som är inbyggd i AEM enligt beskrivningen ovan?
 
 Förklara enkelt namnutrymmesproblem, prestanda och logik på högre nivå som kan hanteras bättre.
 
@@ -140,7 +140,7 @@ Den här regeln söker efter huvudrollen `/aboutus` och hämtar den fullständig
 
 Den slutar också att bearbeta alla andra regler L-flaggan (sista), vilket innebär att den inte behöver gå igenom en stor lista med regler som JCR Resolving måste göra.
 
-Förutom att du inte behöver göra någon proxy för begäran, och vänta på att den AEM utgivaren ska svara på dessa två element i den här metoden, gör den mycket bättre.
+Förutom att du inte behöver göra någon proxy av begäran och vänta på att AEM utgivare ska svara på dessa två element i den här metoden gör det mycket mer prestandaförbättrande.
 
 Sedan är ikonen på tårtan här NC-flaggan (ingen skiftlägeskänslig), vilket innebär att om en kund skriver URI:n med `/AboutUs` i stället för `/aboutus` fungerar den fortfarande.
 
@@ -178,12 +178,12 @@ Om du använder `mod_rewrite` för att kontrollera poster för immunitet har det
 
 Använd båda metoderna, men här följer råd och kriterier som ska användas när:
 
-- Om huvudrollen är tillfällig och har låg planerad trafik ska du använda den AEM inbyggda funktionen
+- Om vanligheten är tillfällig och har låg trafik ska du använda den inbyggda AEM-funktionen
 - Om ovanligheten är en stapelslutpunkt som inte ändras ofta och ofta används, ska du använda en `mod_rewrite`-regel.
-- Om huvudnamnutrymmet (till exempel: `/aboutus`) måste återanvändas för många varumärken i samma AEM ska du använda omskrivningsregler.
+- Om huvudnamnutrymmet (till exempel: `/aboutus`) måste återanvändas för många varumärken i samma AEM-instans använder du omskrivningsregler.
 
 >[!NOTE]
 >
->Om du vill använda AEM-funktionen och undvika namnutrymme kan du göra en namnkonvention. Använder mål-URL:er som är kapslade som `/brand1/aboutus`, `brand2/aboutus`, `brand3/aboutus`.
+>Om du vill använda AEM-funktionen för vanlighet och undvika namnutrymme kan du göra en namnkonvention. Använder mål-URL:er som är kapslade som `/brand1/aboutus`, `brand2/aboutus`, `brand3/aboutus`.
 
 [Nästa -> Vanlig loggning](./common-logs.md)

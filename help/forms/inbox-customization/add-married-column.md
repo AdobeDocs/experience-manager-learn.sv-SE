@@ -3,14 +3,14 @@ title: Lägg till anpassade kolumner
 description: Lägg till anpassade kolumner för att visa ytterligare data i arbetsflödet
 feature: Adaptive Forms
 doc-type: article
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-5830
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 0b141b37-6041-4f87-bd50-dade8c0fee7d
 duration: 75
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Lägg till anpassade kolumner
 
-Om du vill visa arbetsflödesdata i en inkorg måste vi definiera och fylla i variabler i arbetsflödet. Värdet för variabeln måste anges innan en uppgift tilldelas en användare. Vi har tagit fram ett exempelarbetsflöde som är klart att distribueras på AEM.
+Om du vill visa arbetsflödesdata i en inkorg måste vi definiera och fylla i variabler i arbetsflödet. Värdet för variabeln måste anges innan en uppgift tilldelas en användare. Vi har tagit fram ett exempelarbetsflöde som är klart att distribueras på din AEM-server.
 
 * [Logga in på AEM](http://localhost:4502/crx/de/index.jsp)
 * [Importera granskningsarbetsflödet](assets/review-workflow.zip)
@@ -79,7 +79,7 @@ return isMarried(inboxItem);
 
 ## Testa på servern
 
-* [Logga in AEM webbkonsolen](http://localhost:4502/system/console/bundles)
+* [Logga in på AEM webbkonsol](http://localhost:4502/system/console/bundles)
 * [Distribuera och starta anpassningspaketet för inkorgen](assets/inboxcustomization.inboxcustomization.core-1.0-SNAPSHOT.jar)
 * [Öppna din inkorg](http://localhost:4502/aem/inbox)
 * Öppna administrationskontrollen genom att klicka på ikonen _Listvy_ bredvid knappen _Skapa_

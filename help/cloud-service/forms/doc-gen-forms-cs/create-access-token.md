@@ -1,17 +1,17 @@
 ---
 title: Exchange JWT för åtkomsttoken
-description: Utbyt JSON Web Token (JWT) med Adobe IMS API:er för en AEM åtkomsttoken.
+description: Utbyt JSON Web Token (JWT) med Adobe IMS API:er för en AEM-åtkomsttoken.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-8185
 thumbnail: KT-8185.jpg
 exl-id: ab7b8a06-3009-477d-9e98-590912e8e176
 duration: 33
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 # Exchange JWT för åtkomsttoken
 
 
-Den JWT-fil som skapades i det föregående steget byts ut mot Adobe IMS API:er för en Access-token, som sedan kan användas för åtkomst till AEM as a Cloud Service. Om du vill begära en åtkomsttoken skickar du en POST med JWT, client_id, client_secrets till IMS-autentiseringstjänsten.
+Den JWT-fil som skapades i det föregående steget byts ut mot Adobe IMS API:er för en Access-token, som sedan kan användas för åtkomst till AEM as a Cloud Service. Om du vill begära en åtkomsttoken skickar du en POST-begäran som innehåller JWT, client_id, client_secrets till IMS-autentiseringstjänsten.
 
 Följande kod användes för att generera utbyte-JWT för åtkomsttoken
 

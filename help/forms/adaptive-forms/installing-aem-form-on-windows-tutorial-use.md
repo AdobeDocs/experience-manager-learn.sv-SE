@@ -3,14 +3,14 @@ title: Förenklade steg för installation av AEM Forms i Windows
 description: Snabba och enkla steg för att installera AEM Forms i Windows
 feature: Adaptive Forms
 type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Admin
 level: Beginner
 exl-id: 80288765-0b51-44a9-95d3-3bdb2da38615
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 113
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Dubbelklicka aldrig på AEM Quick Start jar om du tänker använda AEM Forms.
+>Dubbelklicka aldrig på AEM snabbstartsburk om du tänker använda AEM Forms.
 >
 >Kontrollera också att det inte finns några blanksteg i sökvägen till installationsmappen för AEM Forms.
 >
@@ -41,7 +41,7 @@ Vi rekommenderar att du följer den [officiella dokumentationen](https://helpx.a
 * Kontrollera att rätt JDK är installerat
    * AEM 6.2 du behöver: Oracle SE 8 JDK 1.8.x (64 bitar)
    * AEM 6.3 och AEM 6.4 du behöver: Oracle SE 8 JDK 1.8.x (64 bitar)
-   * AEM 6.5 behöver du JDK 8 eller JDK 11
+   * AEM 6.5 behöver JDK 8 eller JDK 11
    * [Officiella JDK-krav](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/introduction/technical-requirements.html?lang=en) visas här
 * Kontrollera att JAVA_HOME är inställt på att peka på den JDK som du har installerat.
    * Följ stegen nedan för att skapa variabeln JAVA_HOME i Windows:
@@ -54,7 +54,7 @@ Vi rekommenderar att du följer den [officiella dokumentationen](https://helpx.a
 * Kopiera filen license.properties till den här AEMForms-mappen
 * Skapa en gruppfil med namnet&quot;StartAemForms.bat&quot; med följande innehåll:
    * `java -d64 -Xmx2048M -jar AEM_6.5_Quickstart.jar -gui`
-      * Här AEM_6.5_Quickstart.jar är namnet på min AEM snabbrubb.
+      * Här är AEM_6.5_Quickstart.jar namnet på min AEM quickstart jar.
    * Du kan byta namn på behållaren till vilket namn som helst, men se till att namnet återspeglas i gruppfilen. Spara gruppfilen i mappen AEMForms.
 
 * Öppna en ny kommandotolk och navigera till _c:\aemforms_.

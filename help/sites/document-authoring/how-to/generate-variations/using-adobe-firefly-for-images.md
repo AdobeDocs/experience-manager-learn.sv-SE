@@ -1,7 +1,7 @@
 ---
 title: Generera variationer - använd Adobe Firefly för att skapa bilder i Edge Delivery Services
-description: Upptäck hur du kan använda Adobe Firefly för att skapa bilder som används i innehållsvariationerna för att nå rätt målgrupp i dokumentproduktionen för Edge Delivery Services.
-version: Cloud Service
+description: Upptäck hur du använder Adobe Firefly för att skapa bilder som används i olika innehållsvarianter för att nå rätt målgrupp i Edge Delivery Services dokumentframställning.
+version: Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: Admin, Developer, Leader, User
@@ -11,7 +11,7 @@ duration: 101
 last-substantial-update: 2024-05-08T00:00:00Z
 jira: KT-15432
 exl-id: e6085ece-f265-4a16-98f7-2f8218dab730
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%
@@ -22,6 +22,6 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Upptäck hur du kan använda Adobe Firefly för att skapa bilder som används i innehållsvariationerna för att nå rätt målgrupp i dokumentproduktionen för Edge Delivery Services.
+Upptäck hur du använder Adobe Firefly för att skapa bilder som används i olika innehållsvarianter för att nå rätt målgrupp i Edge Delivery Services dokumentframställning.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428794/?learn=on)

@@ -1,11 +1,11 @@
 ---
 title: AEM Assets videor och självstudiekurser
-description: Titta på våra videor för att få AEM och hjälp.
+description: Titta på våra videor för att få support och hjälp om AEM Asset.
 sub-product: Experience Manager Assets
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 doc-type: Catalog
 exl-id: 1d0b0183-25ee-4cb4-82a5-3506e7c1c908
-source-git-commit: d0e1513b4e6ea536b40f3dbb69a0f512f7521164
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '177'
 ht-degree: 1%
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 {{edge-delivery-services}}
 
-Adobe Experience Manager (AEM) Assets är ett verktyg för hantering av digitala resurser på AEM Platform, som gör det möjligt att skapa, hantera och dela digitala resurser (bilder, videor, dokument och ljudklipp) i en webbaserad databas. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Assets.
+Adobe Experience Manager (AEM) Assets är ett verktyg för hantering av digitala resurser på AEM Platform som gör att användare kan skapa, hantera och dela digitala resurser (bilder, videor, dokument och ljudklipp) i en webbaserad databas. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Assets.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_assets_overview"
@@ -48,7 +48,7 @@ Lär dig vad AEM Assets är och hur ni kan använda det för att uppnå era aff�
    </a>
    <div>
       <a href="./creative-workflows/aem-desktop-app.md">
-      <strong> Använda AEM datorprogram </strong>
+      <strong> Använda AEM-datorprogrammet </strong>
       </a>
    </div>
    <p>
@@ -61,7 +61,7 @@ Lär dig vad AEM Assets är och hur ni kan använda det för att uppnå era aff�
    </a>
    <div>
       <a href="../assets-essentials/overview.md">
-      <strong>Komma igång med Assets Essentials </strong>
+      <strong>Komma igång med Assets Essentials</strong>
       </a>
    </div>
    <p>
@@ -70,15 +70,15 @@ Lär dig vad AEM Assets är och hur ni kan använda det för att uppnå era aff�
 </td>
 <td>
    <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-   <img alt="Dynamic Media - översikt" src="./assets/overview/dynamic-media.png" />
+   <img alt="Dynamisk mediaöversikt" src="./assets/overview/dynamic-media.png" />
    </a>
    <div>
       <a href="./dynamic-media/dynamic-media-overview-feature-video-use.md">
-      <strong> Dynamic Media - översikt </strong>
+      <strong> Dynamisk mediaöversikt </strong>
       </a>
    </div>
    <p>
-      <em>Hantera och få åtkomst till medieinnehåll med Dynamic Media</em>
+      <em>Hantera och få åtkomst till medieinnehåll med dynamiska media</em>
    <p>
 </td>
 </table>

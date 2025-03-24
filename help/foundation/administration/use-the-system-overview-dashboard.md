@@ -1,7 +1,7 @@
 ---
 title: Använda kontrollpanelen för systemöversikt i AEM
-description: I tidigare versioner av AEM behövde administratörer undersöka flera olika platser för att få en fullständig bild av AEM. Syftet med systemöversikten är att lösa detta genom att tillhandahålla en översikt över konfiguration, maskinvara och hälsa för den AEM instansen från en enda kontrollpanel.
-version: 6.4, 6.5
+description: I tidigare versioner av AEM behövde administratörer undersöka olika platser för att få en fullständig bild av AEM-instansen. Systemöversikten syftar till att lösa detta genom att tillhandahålla en översikt över AEM-instansens konfiguration, maskinvara och hälsa från en enda kontrollpanel.
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Operations
 doc-type: Technical Video
 topic: Administration
@@ -9,7 +9,7 @@ role: Admin
 level: Beginner
 exl-id: af8f499c-4955-44b5-8f21-085263ca31a3
 duration: 357
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 0%
@@ -18,11 +18,11 @@ ht-degree: 0%
 
 # Använda kontrollpanelen för systemöversikt
 
-Adobe Experience Manager (AEM) [!UICONTROL System Overview] ger en översikt över konfiguration, maskinvara och hälsotillstånd för den AEM instansen från en enda instrumentpanel.
+Adobe Experience Manager (AEM) [!UICONTROL System Overview] ger en översikt över konfiguration, maskinvara och hälsa för AEM-instansen från en enda instrumentpanel.
 
 >[!VIDEO](https://video.tv.adobe.com/v/21340?quality=12&learn=on)
 
-1. Du kommer åt systemöversikten från: **AEM Start** > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL System Overview]**
+1. Systemöversikt kan nås från: **AEM Start** > **[!UICONTROL Tools]** > **[!UICONTROL Operations]** > **[!UICONTROL System Overview]**
 
    Direkt **`<server-host>/libs/granite/operations/content/systemoverview.html`**
 

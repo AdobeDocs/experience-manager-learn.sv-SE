@@ -1,7 +1,7 @@
 ---
 title: Exempel och resultatanalys av trafikfilterregler inklusive WAF-regler
 description: Lär dig olika trafikfilterregler, inklusive WAF regelexempel. Hur man analyserar resultaten med hjälp av AEM as a Cloud Service (AEMCS) CDN-loggar.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
 role: Admin, Architect
@@ -12,7 +12,7 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 49becbcb-7965-4378-bb8e-b662fda716b7
 duration: 532
-source-git-commit: 67091c068634e6c309afaf78942849db626128f6
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1472'
 ht-degree: 0%

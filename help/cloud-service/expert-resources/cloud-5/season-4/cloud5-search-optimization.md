@@ -1,7 +1,7 @@
 ---
 title: Cloud 5 - Sökoptimering i Edge Delivery Services
 description: Få 100 poäng i dina fyr med hjälp av optimering av frågor och sökningar när du arbetar med ett stort antal arkiv.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer, Leader, User
@@ -13,7 +13,7 @@ duration: 308
 last-substantial-update: 2024-12-16T00:00:00Z
 jira: KT-16665
 exl-id: e69c5c99-ce3a-4a8c-a59b-0bf67fdbd7ce
-source-git-commit: 9509d0f6afcc883c60def2f506e4b83f64148810
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '74'
 ht-degree: 0%

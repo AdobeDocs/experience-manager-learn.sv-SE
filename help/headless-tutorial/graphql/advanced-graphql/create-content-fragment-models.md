@@ -1,14 +1,14 @@
 ---
-title: Skapa modeller för innehållsfragment - Avancerade koncept för AEM Headless - GraphQL
-description: I det här kapitlet i Avancerade koncept för Adobe Experience Manager (AEM) Headless får du lära dig hur du redigerar en innehållsfragmentmodell genom att lägga till platshållare för flikar, datum och tid, JSON-objekt, fragmentreferenser och innehållsreferenser.
-version: Cloud Service
+title: Skapa modeller för innehållsfragment - Avancerade begrepp för AEM Headless - GraphQL
+description: I det här kapitlet i Avancerade koncept för Adobe Experience Manager (AEM) Headless får du lära dig hur du redigerar en innehållsfragmentmodell genom att lägga till platshållare, datum och tid, JSON-objekt, fragmentreferenser och innehållsreferenser.
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 2122ab13-f9df-4f36-9c7e-8980033c3b10
 duration: 757
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1991'
 ht-degree: 0%
@@ -236,5 +236,5 @@ Grattis! Du har nu lagt till flikar, använt datatyperna date-and-time och JSON-
 
 Nästa kapitel i den här serien omfattar [redigering av innehållsfragment](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md) från modellerna som du skapade i det här kapitlet. Lär dig hur du använder de datatyper som introduceras i det här kapitlet och skapa mappprofiler för att begränsa vad Content Fragment-modeller kan skapa i en resursmapp.
 
-Det är valfritt för den här självstudiekursen, men se till att publicera allt innehåll i verkliga produktionssituationer. Om du vill läsa mer om redigerings- och Publish-miljöer i AEM går du till
+Det är valfritt för den här självstudiekursen, men se till att publicera allt innehåll i verkliga produktionssituationer. En recension av redigerings- och publiceringsmiljöer i AEM finns i
 [AEM Headless och GraphQL ](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md).

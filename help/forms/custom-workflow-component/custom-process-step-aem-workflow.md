@@ -2,14 +2,14 @@
 title: Implementera anpassade processsteg med dialog
 description: Skriva adaptiva formulärbilagor till filsystemet med anpassade processsteg
 feature: Workflow
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 149d2c8c-bf44-4318-bba8-bec7e25da01b
 duration: 135
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Följande steg krävs för att skriva java-klassen och distribuera klassen som e
 
 ## Create Maven Project
 
-Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Archetype. De detaljerade stegen visas i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat ditt maven-projekt till förmörkning är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
+Det första steget är att skapa ett maven-projekt med rätt Adobe Maven Archetype. De detaljerade stegen visas i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat ditt maven-projekt till förmörkning är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
 
 
 ### Skapa klass som implementerar WorkflowProcess
@@ -118,9 +118,9 @@ public class WriteFormAttachmentsToFileSystem implements WorkflowProcess {
 ```
 
 
-* attachmentsPath - Det här är samma plats som du angav i det adaptiva formuläret när du konfigurerade skicka-åtgärden för det adaptiva formuläret för att starta AEM. Detta är ett namn på mappen som du vill att de bifogade filerna ska sparas i AEM i förhållande till arbetsflödets nyttolast.
+* attachmentsPath - Det här är samma plats som du angav i det adaptiva formuläret när du konfigurerade skicka-åtgärden för det adaptiva formuläret för att anropa AEM Workflow. Detta är ett namn på den mapp som du vill att de bifogade filerna ska sparas i AEM i förhållande till arbetsflödets nyttolast.
 
-* saveToLocation - Det här är platsen där du vill att de bifogade filerna ska sparas i AEM filsystem.
+* saveToLocation - Det är den plats där du vill att de bifogade filerna ska sparas i filsystemet på AEM-servern.
 
 Dessa två värden skickas som processargument med hjälp av dialogrutan för arbetsflödeskomponenten
 

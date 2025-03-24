@@ -1,7 +1,7 @@
 ---
-title: Adobe I/O Runtime Action and AEM Events
-description: Lär dig hur du tar emot AEM händelser med Adobe I/O Runtime-åtgärd och granskar händelseinformation som nyttolast, huvuden och metadata.
-version: Cloud Service
+title: Adobe I/O Runtime Action och AEM Events
+description: Lär dig hur du tar emot AEM Events med Adobe I/O Runtime-åtgärd och granskar händelseinformation som nyttolast, rubriker och metadata.
+version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
 role: Architect, Developer
@@ -12,22 +12,22 @@ last-substantial-update: 2024-01-29T00:00:00Z
 jira: KT-14878
 thumbnail: KT-14878.jpeg
 exl-id: b1c127a8-24e7-4521-b535-60589a1391bf
-source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%
 
 ---
 
-# Adobe I/O Runtime Action and AEM Events
+# Adobe I/O Runtime Action och AEM Events
 
-Lär dig hur du tar emot AEM händelser med åtgärden [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) och granskar händelseinformation som nyttolast, huvuden och metadata.
+Lär dig hur du tar emot AEM-händelser med åtgärden [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) och granskar händelseinformation som nyttolast, huvuden och metadata.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427053?quality=12&learn=on)
 
 Adobe I/O Runtime är en serverlös plattform som tillåter exekvering av kod som svar på Adobe I/O Events. Detta hjälper dig att bygga händelsestyrda program utan att behöva bekymra dig om infrastrukturen.
 
-I det här exemplet skapar du en [åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) från Adobe I/O Runtime som tar emot AEM händelser och loggar händelseinformationen.
+I det här exemplet skapar du en [åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) från Adobe I/O Runtime som tar emot AEM Events och loggar händelseinformationen.
 https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/
 
 Stegen på hög nivå är:
@@ -80,7 +80,7 @@ Om du vill lägga till Adobe I/O Runtime Action i projektet måste du initiera p
 
 - Öppna projektet i din favoritutvecklingsmiljö, till exempel VSCode.
 
-- Den valda _utökningsmallen_ (`@adobe/generator-app-excshell`) innehåller en allmän körningsåtgärd, koden finns i filen `src/dx-excshell-1/actions/generic/index.js`. Låt oss uppdatera den så att den blir enkel, logga händelseinformationen och returnera ett svar om att åtgärden lyckades. I nästa exempel förbättras dock bearbetningen av mottagna AEM händelser.
+- Den valda _utökningsmallen_ (`@adobe/generator-app-excshell`) innehåller en allmän körningsåtgärd, koden finns i filen `src/dx-excshell-1/actions/generic/index.js`. Låt oss uppdatera den så att den blir enkel, logga händelseinformationen och returnera ett svar om att åtgärden lyckades. I nästa exempel förbättras dock bearbetningen av mottagna AEM Events.
 
   ```javascript
   const fetch = require("node-fetch");
@@ -133,7 +133,7 @@ Om du vill lägga till Adobe I/O Runtime Action i projektet måste du initiera p
 
 ## Konfigurera projekt i Adobe Developer Console
 
-Om du vill ta emot AEM händelser och köra Adobe I/O Runtime-åtgärden som skapades i det föregående steget konfigurerar du projektet i Adobe Developer Console.
+Om du vill ta emot AEM Events och köra Adobe I/O Runtime Action som skapades i föregående steg konfigurerar du projektet i Adobe Developer Console.
 
 - I Adobe Developer Console går du till det [projekt](https://developer.adobe.com/console/projects) som skapades i föregående steg och klickar för att öppna det. Välj arbetsytan `Stage`, det är här åtgärden distribuerades.
 
@@ -152,9 +152,9 @@ Om du vill ta emot AEM händelser och köra Adobe I/O Runtime-åtgärden som ska
   ![Information om händelseregistrering](../assets/examples/runtime-action/debug-tracing-challenge-probe.png)
 
 
-## Utlös AEM
+## Utlös AEM-event
 
-Så här utlöser du AEM händelser från din AEM as a Cloud Service-miljö som har registrerats i ovanstående Adobe Developer Console-projekt:
+Så här utlöser du AEM-händelser från din AEM as a Cloud Service-miljö som har registrerats i ovanstående Adobe Developer Console-projekt:
 
 - Få åtkomst till och logga in i AEM as a Cloud Service redigeringsmiljö via [Cloud Manager](https://my.cloudmanager.adobe.com/).
 
@@ -162,13 +162,13 @@ Så här utlöser du AEM händelser från din AEM as a Cloud Service-miljö som 
 
 ## Granska händelseinformation
 
-När du har slutfört ovanstående steg bör du se de AEM händelser som levereras till den allmänna åtgärden.
+När du är klar med ovanstående steg bör du se hur AEM Events levereras till den allmänna åtgärden.
 
 Du kan granska händelseinformationen på fliken **Felsökningsspårning** i informationen om händelseregistrering.
 
-![AEM händelseinformation](../assets/examples/runtime-action/aem-event-details.png)
+![Information om AEM-händelse](../assets/examples/runtime-action/aem-event-details.png)
 
 
 ## Nästa steg
 
-I nästa exempel ska vi förbättra den här åtgärden för att bearbeta AEM händelser, ringa AEM författartjänsten för att få innehållsinformation, lagra information i Adobe I/O Runtime-lagring och visa dem via Single Page Application (SPA).
+I nästa exempel ska vi förbättra den här åtgärden för att bearbeta AEM Events, ringa AEM författartjänst för att få innehållsinformation, lagra information i Adobe I/O Runtime-lagring och visa dem via Single Page Application (SPA).

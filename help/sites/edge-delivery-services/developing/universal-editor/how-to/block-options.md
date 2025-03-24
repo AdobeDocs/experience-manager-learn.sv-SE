@@ -1,7 +1,7 @@
 ---
 title: Blockalternativ
 description: Lär dig hur du skapar ett block med flera visningsalternativ.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-17296
 duration: 700
 exl-id: f41dff22-bd47-4ea0-98cc-f5ca30b22c4b
-source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1961'
 ht-degree: 0%

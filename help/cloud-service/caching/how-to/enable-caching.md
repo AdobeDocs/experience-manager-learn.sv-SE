@@ -1,7 +1,7 @@
 ---
 title: Aktivera CDN-cachning
 description: Lär dig hur du aktiverar cachelagring av HTTP-svar i AEM as a Cloud Service CDN.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
 role: Admin, Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 544c3230-6eb6-4f06-a63c-f56d65c0ff4b
 duration: 174
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '637'
 ht-degree: 0%
@@ -23,15 +23,15 @@ ht-degree: 0%
 
 Lär dig hur du aktiverar cachelagring av HTTP-svar i AEM as a Cloud Service CDN. Cachelagringen av svar styrs av `Cache-Control`, `Surrogate-Control` eller `Expires` cachehuvuden för HTTP-svar.
 
-Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher värdkonfigurationer med `mod_headers`, men kan också anges i anpassad Java™-kod som körs i AEM Publish.
+Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher värdkonfigurationer med `mod_headers`, men kan även ställas in i anpassad Java™-kod som körs i AEM Publish.
 
 ## Standardbeteende för cachelagring
 
-När det INTE finns några anpassade konfigurationer används standardvärdena. På skärmbilden nedan kan du se standardbeteendet för cachning för AEM Publish och författare när ett [AEM ](https://github.com/adobe/aem-project-archetype) -baserat `mynewsite` -AEM distribueras.
+När det INTE finns några anpassade konfigurationer används standardvärdena. På följande skärmbild kan du se standardbeteendet för cachelagring för AEM Publish och Author när ett [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) -baserat `mynewsite` AEM-projekt distribueras.
 
 ![Standardbeteende för cachelagring](../assets/how-to/aem-publish-default-cache-headers.png){width="800" zoomable="yes"}
 
-Granska [AEM Publish - standardcachetid](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/publish.html#cdn-cache-life) och [AEM författare - standardcachetid](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/author.html?#default-cache-life) för mer information.
+Granska [AEM Publish - standardcachetid](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/publish.html#cdn-cache-life) och [AEM Author - standardcachetid](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/author.html?#default-cache-life) för mer information.
 
 Sammanfattningsvis cachelagrar AEM as a Cloud Service de flesta innehållstyperna (HTML, JSON, JS, CSS och Assets) i AEM Publish och några innehållstyper (JS, CSS) i AEM Author.
 
@@ -40,7 +40,7 @@ Sammanfattningsvis cachelagrar AEM as a Cloud Service de flesta innehållstypern
 Om du vill ändra standardbeteendet för cachning kan du uppdatera cacherubrikerna på två sätt.
 
 1. **Dispatcher-värdkonfiguration:** Endast tillgänglig för AEM Publish.
-1. **Anpassad Java™-kod:** Tillgänglig för både AEM Publish och författare.
+1. **Anpassad Java™-kod:** Tillgänglig för både AEM Publish och Author.
 
 Låt oss titta närmare på de här alternativen.
 
@@ -83,9 +83,9 @@ Granska informationen om [stolthet och omvalidering](https://developer.fastly.co
 
 #### Exempel
 
-Följ de här stegen om du vill öka livslängden för webbläsaren och CDN-cachen för innehållstypen **HTML** till _10 minuter_ utan att behandlas med inaktivt läge:
+Följ de här stegen för att öka livslängden för webbläsaren och CDN-cachen för **HTML-innehållstypen** till _10 minuter_ utan att behandlas med inaktivt läge:
 
-1. Leta reda på önskad värdfil från katalogen `dispatcher/src/conf.d/available_vhosts` i ditt AEM projekt.
+1. Leta reda på önskad värdfil från katalogen `dispatcher/src/conf.d/available_vhosts` i ditt AEM-projekt.
 1. Uppdatera Vhost-filen (t.ex. `wknd.vhost`) enligt följande:
 
    ```
@@ -101,13 +101,13 @@ Följ de här stegen om du vill öka livslängden för webbläsaren och CDN-cach
    Värdfilerna i katalogen `dispatcher/src/conf.d/enabled_vhosts` är **symlinks** till filerna i katalogen `dispatcher/src/conf.d/available_vhosts`, så se till att du skapar symboler om sådana inte finns.
 1. Distribuera värdändringarna till önskad AEM as a Cloud Service-miljö med [Cloud Manager - konfigurationspipeline för webbnivå](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines) eller [RDE-kommandon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration).
 
-Om du vill ha olika värden för webbläsarens och CDN-cacheperioden kan du använda rubriken `Surrogate-Control` i ovanstående exempel. Du kan också använda rubriken `Expires` om du vill att cachen ska förfalla vid ett visst datum och en viss tid. Med attributen `stale-while-revalidate` och `stale-if-error` kan du dessutom styra hanteringen av svarsinnehållet i inaktivt läge. Det AEM WKND-projektet har en [referens till inaktuell tillståndsbehandling](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L150-L155) CDN-cachekonfiguration.
+Om du vill ha olika värden för webbläsarens och CDN-cacheperioden kan du använda rubriken `Surrogate-Control` i ovanstående exempel. Du kan också använda rubriken `Expires` om du vill att cachen ska förfalla vid ett visst datum och en viss tid. Med attributen `stale-while-revalidate` och `stale-if-error` kan du dessutom styra hanteringen av svarsinnehållet i inaktivt läge. AEM WKND-projektet har en [referens till inaktuell tillståndsbehandling](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L150-L155) CDN-cachekonfiguration.
 
 På samma sätt kan du även uppdatera cacherubrikerna för andra innehållstyper (JSON, JS, CSS och Assets).
 
 ### Anpassad Java™-kod
 
-Det här alternativet är tillgängligt för både AEM Publish och författare. Du bör dock inte aktivera cachelagring i AEM Author och behålla standardbeteendet för cachelagring.
+Det här alternativet är tillgängligt för både AEM Publish och Author. Du bör dock inte aktivera cachelagring i AEM Author och behålla standardbeteendet för cachelagring.
 
 Om du vill uppdatera cacherubrikerna använder du objektet `HttpServletResponse` i anpassad Java™-kod (Sling-servlet, Sling-serverletsfilter). Den allmänna syntaxen är följande:
 

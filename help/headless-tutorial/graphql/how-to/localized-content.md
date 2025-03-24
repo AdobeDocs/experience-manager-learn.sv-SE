@@ -1,7 +1,7 @@
 ---
 title: Använda lokaliserat innehåll med AEM Headless
 description: Lär dig hur du använder GraphQL för att fråga AEM efter lokaliserat innehåll.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-10254
 thumbnail: KT-10254.jpeg
 exl-id: 5e3d115b-f3a1-4edc-86ab-3e0713a36d54
 duration: 130
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '472'
 ht-degree: 0%
@@ -19,19 +19,19 @@ ht-degree: 0%
 
 # Lokaliserat innehåll med AEM Headless
 
-AEM tillhandahåller ett [Översättningsintegreringsramverk](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) för headless-innehåll, vilket gör att innehållsfragment och stödresurser enkelt kan översättas för användning i olika språkområden. Det här är samma ramverk som används för att översätta annat AEM innehåll, som Sidor, Upplevelsefragment, Assets och Forms. När [headless-innehåll har översatts](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html) och publicerats är det klart för användning av headless-program.
+AEM tillhandahåller ett [Översättningsintegreringsramverk](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) för headless-innehåll, vilket gör att innehållsfragment och stödresurser enkelt kan översättas för användning i olika språkområden. Det är samma ramverk som används för att översätta annat AEM-innehåll, till exempel Sidor, Upplevelsefragment, Assets och Forms. När [headless-innehåll har översatts](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html) och publicerats är det klart för användning av headless-program.
 
 ## Assets mappstruktur{#assets-folder-structure}
 
 Kontrollera att de lokaliserade innehållsfragmenten i AEM följer den [rekommenderade lokaliseringsstrukturen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html#recommended-structure).
 
-![Lokaliserade AEM resursmappar](./assets/localized-content/asset-folders.jpg)
+![Lokaliserade AEM-resursmappar](./assets/localized-content/asset-folders.jpg)
 
 Språkmapparna måste vara på samma nivå och mappnamnet, i stället för titeln, måste vara en giltig [ISO 639-1-kod](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) som representerar språkinställningen för innehållet i mappen.
 
 Språkinställningskoden är också det värde som används för att filtrera de innehållsfragment som returneras av GraphQL-frågan.
 
-| Språkkod | AEM | Språkinställning för innehåll |
+| Språkkod | AEM-sökväg | Språkinställning för innehåll |
 |--------------------------------|----------|----------|
 | de | /content/dam/../**de**/... | Tyskt innehåll |
 | en | /content/dam/../**en**/... | Engelskt innehåll |
@@ -39,7 +39,7 @@ Språkinställningskoden är också det värde som används för att filtrera de
 
 ## GraphQL beständig fråga
 
-AEM tillhandahåller ett `_locale` GraphQL-filter som automatiskt filtrerar innehåll efter språkkod. Till exempel kan frågor om alla engelska äventyr i [WKND-platsprojektet](https://github.com/adobe/aem-guides-wknd) utföras med en ny beständig fråga `wknd-shared/adventures-by-locale` som definieras som:
+AEM har ett `_locale` GraphQL-filter som automatiskt filtrerar innehåll efter språkkod. Till exempel kan frågor om alla engelska äventyr i [WKND-platsprojektet](https://github.com/adobe/aem-guides-wknd) utföras med en ny beständig fråga `wknd-shared/adventures-by-locale` som definieras som:
 
 ```graphql
 query($locale: String!) {
@@ -52,7 +52,7 @@ query($locale: String!) {
 }
 ```
 
-Variabeln `$locale` som används i filtret `_locale` kräver språkkoden (till exempel `en`, `en_us` eller `de`) enligt [AEM lokaliseringskonventionen för resursmappen](#assets-folder-structure).
+Variabeln `$locale` som används i filtret `_locale` kräver språkkoden (till exempel `en`, `en_us` eller `de`) enligt [AEM lokaliseringskonvention för resursmapp](#assets-folder-structure).
 
 ## Reaktionsexempel
 
@@ -113,7 +113,7 @@ Komponenten Adventures frågar AEM efter alla äventyr efter språkområde och v
 
 Den här metoden kan utökas till andra frågor i programmet, så att alla frågor bara innehåller innehåll som anges av användarens språkområdesval.
 
-Frågan mot AEM utförs i den anpassade React-kroken [getAdventuresByLocale, som beskrivs mer ingående i den fråga AEM GraphQL-dokumentationen ](./aem-headless-sdk.md) som ställs.
+Frågan mot AEM utförs i den anpassade React-kroken [getAdventuresByLocale, som beskrivs mer ingående i AEM GraphQL-dokumentationen ](./aem-headless-sdk.md).
 
 ```javascript
 // src/Adventures.js

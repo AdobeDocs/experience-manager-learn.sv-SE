@@ -1,7 +1,7 @@
 ---
 title: Dedikerad IP-adress för utgångar
-description: Lär dig hur du konfigurerar och använder en dedikerad IP-adress för utgående anslutningar från AEM som kan komma från en dedikerad IP-adress.
-version: Cloud Service
+description: Lär dig hur du konfigurerar och använder dedikerad IP-adress för utgångar, som gör att utgående anslutningar från AEM kan komma från en dedikerad IP-adress.
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -11,7 +11,7 @@ thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 891
-source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1360'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Dedikerad IP-adress för utgångar
 
-Lär dig hur du konfigurerar och använder en dedikerad IP-adress för utgående anslutningar från AEM som kan komma från en dedikerad IP-adress.
+Lär dig hur du konfigurerar och använder dedikerad IP-adress för utgångar, som gör att utgående anslutningar från AEM kan komma från en dedikerad IP-adress.
 
 ## Vad är en dedikerad IP-adress för egress?
 
@@ -174,7 +174,7 @@ När den dedikerade IP-adressen för utgångar har skapats kan du nu konfigurera
 
    Den dedikerade IP-adresskonfigurationens HTTP-signatur skiljer sig bara från [flexibel utgångsport](./flexible-port-egress.md#enable-dedicated-egress-ip-address-per-environment) på så sätt att den även stöder den valfria `nonProxyHosts`-konfigurationen.
 
-   `nonProxyHosts` deklarerar en uppsättning värdar för vilka port 80 eller 443 ska dirigeras via de delade standardadressintervallen i stället för den dedikerade IP-adressen. `nonProxyHosts` kan vara användbart eftersom trafik som trycks ned via delade IP-adresser optimeras automatiskt av Adobe.
+   `nonProxyHosts` deklarerar en uppsättning värdar för vilka port 80 eller 443 ska dirigeras via de delade standardadressintervallen i stället för den dedikerade IP-adressen. `nonProxyHosts` kan vara användbart eftersom trafik som läses in via delade IP-adresser optimeras automatiskt av Adobe.
 
    För varje `portForwards`-mappning definierar det avancerade nätverket följande vidarebefordringsregel:
 
@@ -206,11 +206,11 @@ När den dedikerade IP-adressen för utgångar har skapats kan du nu konfigurera
 
    Observera att den dedikerade IP-adressen för utgångar delas av alla AEM as a Cloud Service-miljöer i programmet.
 
-1. Nu kan du använda den dedikerade IP-adressen för utgångar i din anpassade AEM och konfiguration. När du använder dedikerad IP-adress för utgångar är de externa tjänster som AEM as a Cloud Service ansluter till ofta konfigurerade så att endast trafik från den här dedikerade IP-adressen tillåts.
+1. Nu kan du använda den dedikerade IP-adressen för utgångar i din anpassade AEM-kod och konfiguration. När du använder dedikerad IP-adress för utgångar är de externa tjänster som AEM as a Cloud Service ansluter till ofta konfigurerade så att endast trafik från den här dedikerade IP-adressen tillåts.
 
 ## Ansluta till externa tjänster via dedikerad IP-adress
 
-När den dedikerade IP-adressen för utgångar är aktiverad kan AEM kod och konfiguration använda den dedikerade IP-adressen för utgångar för att ringa till externa tjänster. Det finns två varianter av externa anrop som AEM behandlar på olika sätt:
+När den dedikerade IP-adressen för utgångar är aktiverad kan AEM-koden och konfigurationen använda den dedikerade IP-adressen för utgångar för att ringa till externa tjänster. Det finns två varianter av externa anrop som AEM hanterar på olika sätt:
 
 1. HTTP/HTTPS-anrop till externa tjänster
    + Innehåller HTTP/HTTPS-anrop till tjänster som körs på andra portar än standardportarna 80 eller 443.
@@ -226,7 +226,7 @@ HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standa
 
 ### HTTP/HTTPS
 
-När du skapar HTTP/HTTPS-anslutningar från AEM, när du använder en dedikerad IP-adress för utgående IP-adresser, proxiceras HTTP/HTTPS-anslutningar automatiskt ut från AEM med den dedikerade IP-adressen för utgående IP-adressen. Ingen ytterligare kod eller konfiguration krävs för att stödja HTTP/HTTPS-anslutningar.
+När du skapar HTTP/HTTPS-anslutningar från AEM proxideras automatiskt HTTP/HTTPS-anslutningar från AEM med den dedikerade IP-adressen för utgångar när du använder en dedikerad IP-adress. Ingen ytterligare kod eller konfiguration krävs för att stödja HTTP/HTTPS-anslutningar.
 
 #### Exempel på koder
 
@@ -246,14 +246,14 @@ När du skapar HTTP/HTTPS-anslutningar från AEM, när du använder en dedikerad
 
 ### Icke-HTTP/HTTPS-anslutningar till externa tjänster
 
-När anslutningar som inte är HTTP/HTTPS skapas (t.ex. SQL, SMTP och så vidare) från AEM måste anslutningen upprättas via ett särskilt värdnamn som AEM anger.
+När anslutningar som inte är HTTP/HTTPS skapas (t.ex. SQL, SMTP och så vidare) från AEM måste anslutningen upprättas via ett särskilt värdnamn som tillhandahålls av AEM.
 
 | Variabelnamn | Använd | Java™-kod | OSGi-konfiguration |
 | - |  - | - | - |
 | `AEM_PROXY_HOST` | Proxyvärd för icke-HTTP/HTTPS-anslutningar | `System.getenv("AEM_PROXY_HOST")` | `$[env:AEM_PROXY_HOST]` |
 
 
-Anslutningar till externa tjänster anropas sedan via `AEM_PROXY_HOST` och den mappade porten (`portForwards.portOrig`), som AEM sedan dirigeras till det mappade externa värdnamnet (`portForwards.name`) och porten (`portForwards.portDest`).
+Anslutningar till externa tjänster anropas sedan via `AEM_PROXY_HOST` och den mappade porten (`portForwards.portOrig`), som AEM sedan dirigerar till det mappade externa värdnamnet (`portForwards.name`) och porten (`portForwards.portDest`).
 
 | Proxyvärd | Proxyport |  | Extern värd | Extern port |
 |---------------------------------|----------|----------------|------------------|----------|

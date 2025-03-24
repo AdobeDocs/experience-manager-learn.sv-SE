@@ -1,14 +1,14 @@
 ---
 title: Parametrisera segmenteringsmodeller från HTML
 description: Lär dig hur du skickar parametrar från HTML till en Sling-modell i AEM.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Sling Model
 role: Developer
 jira: KT-15923
 level: Intermediate, Experienced
 exl-id: 5d852617-720a-4a00-aecd-26d0ab77d9b3
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '264'
 ht-degree: 0%
@@ -126,4 +126,4 @@ Med parametrarna `"Hello"` och `"World"` genererar HTL-skriptet följande utdata
 </p>
 ```
 
-Detta visar hur parametriserade Sling-modeller i AEM kan påverkas baserat på indataparametrar som tillhandahålls via HTML.
+Detta visar hur parametriserade modeller i AEM kan påverkas baserat på indataparametrar som tillhandahålls via HTML.

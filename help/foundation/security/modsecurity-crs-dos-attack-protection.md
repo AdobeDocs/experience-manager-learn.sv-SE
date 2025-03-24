@@ -1,8 +1,8 @@
 ---
-title: Använd ModSecurity för att skydda din AEM från DoS Attack
-description: Lär dig hur du aktiverar ModSecurity för att skydda din webbplats från DoS-attacker (Denial of Service) med hjälp av CRS (OWASP ModSecurity Core Rule Set).
+title: Använd ModSecurity för att skydda din AEM webbplats från DoS-attack
+description: Lär dig hur du aktiverar ModSecurity för att skydda din webbplats från DoS-attacker (Denial of Service) med hjälp av OWASP ModSecurity Core Rule Set (CRS).
 feature: Security
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
 role: Admin, Architect
 level: Experienced
@@ -12,16 +12,16 @@ doc-type: Article
 last-substantial-update: 2023-08-18T00:00:00Z
 exl-id: 9f689bd9-c846-4c3f-ae88-20454112cf9a
 duration: 783
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
-source-wordcount: '1172'
+source-wordcount: '1171'
 ht-degree: 0%
 
 ---
 
-# Använd ModSecurity för att skydda din AEM från DoS-attacker
+# Använd ModSecurity för att skydda din AEM webbplats från DoS-attacker
 
-Lär dig hur du aktiverar ModSecurity för att skydda din webbplats från DoS-attacker (Denial of Service) med **OWASP ModSecurity Core Rule Set)** på Adobe Experience Manager (AEM) Publish Dispatcher.
+Lär dig hur du aktiverar ModSecurity för att skydda din webbplats från DoS-attacker (Denial of Service) med **OWASP ModSecurity Core Rule Set (CRS)** på Adobe Experience Manager (AEM) Publish Dispatcher.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3422976?quality=12&learn=on)
@@ -32,7 +32,7 @@ Grunden [Open Web Application Security Project® (OWASP)](https://owasp.org/) in
 
 ModSecurity är en plattformsoberoende lösning med öppen källkod som skyddar mot en rad attacker mot webbprogram. Det möjliggör även HTTP-trafikövervakning, loggning och realtidsanalys.
 
-OWSAP® innehåller även [OWASP® ModSecurity Core Rule Set (CRS)](https://github.com/coreruleset/coreruleset). CRS är en uppsättning allmänna **attackidentifieringsregler** som används med ModSecurity. CRS syftar alltså till att skydda webbapplikationer från en mängd olika attacker, bland annat OWASP Top Ten, med ett minimum av falska varningar.
+OWSAP® innehåller även [OWASP® ModSecurity Core Rule Set (CRS)](https://github.com/coreruleset/coreruleset). CRS är en uppsättning allmänna **attackidentifieringsregler** som används med ModSecurity. CRS avser således att skydda webbapplikationer mot en mängd olika attacker, bland annat OWASP Top Ten, med ett minimum av falska varningar.
 
 I den här självstudien visas hur du aktiverar och konfigurerar CRS-regeln **DOS-PROTECTION** för att skydda din webbplats från en potentiell DoS-attack.
 
@@ -55,9 +55,9 @@ I den här självstudien visas hur du aktiverar och konfigurerar CRS-regeln **DO
    $ tar -xvzf coreruleset-3.3.5.tar.gz
    ```
 
-1. Skapa `modsec/crs`-mapparna i `dispatcher/src/conf.d/` i AEM projektkod. I den lokala kopian av [AEM WKND Sites-projektet](https://github.com/adobe/aem-guides-wknd).
+1. Skapa mapparna `modsec/crs` i `dispatcher/src/conf.d/` i AEM-projektkoden. I den lokala kopian av [AEM WKND Sites-projektet](https://github.com/adobe/aem-guides-wknd).
 
-   ![CRS-mapp i AEM projektkod - ModSecurity](assets/modsecurity-crs/crs-folder-in-aem-dispatcher-module.png){width="200" zoomable="yes"}
+   ![CRS-mapp i AEM-projektkod - ModSecurity](assets/modsecurity-crs/crs-folder-in-aem-dispatcher-module.png){width="200" zoomable="yes"}
 
 1. Kopiera mappen `coreruleset-X.Y.Z/rules` från det hämtade CRS-versionspaketet till mappen `dispatcher/src/conf.d/modsec/crs`.
 1. Kopiera filen `coreruleset-X.Y.Z/crs-setup.conf.example` från det hämtade CRS-versionspaketet till mappen `dispatcher/src/conf.d/modsec/crs` och byt namn på den till `crs-setup.conf`.
@@ -73,7 +73,7 @@ I den här självstudien visas hur du aktiverar och konfigurerar CRS-regeln **DO
 
    Mer information finns i CRS-reglerna och konfigurationsfilen med det nya namnet i WKND-projektkoden.
 
-   ![Inaktiverade CRS-regler i AEM projektkod - ModSecurity ](assets/modsecurity-crs/disabled-crs-rules.png){width="200" zoomable="yes"}
+   ![Inaktiverade CRS-regler i AEM-projektkod - ModSecurity ](assets/modsecurity-crs/disabled-crs-rules.png){width="200" zoomable="yes"}
 
 ## Aktivera och konfigurera DoS-skyddsregel (Denial of Service)
 
@@ -111,9 +111,9 @@ I den här exempelregelkonfigurationen är **DOS_COUNTER_THRESHOLD** 25, **DOS_B
 Så här initierar du CRS, tar bort vanliga falska positiva och lägger till lokala undantag för din webbplats:
 
 1. Ta bort `.disabled` från filen **REQUEST-901-INITIALIZATION** om du vill initiera CRS. Byt namn på filen `REQUEST-901-INITIALIZATION.conf.disabled` till `REQUEST-901-INITIALIZATION.conf`.
-1. Om du vill ta bort vanliga falska positiva objekt som lokal IP-ping (127.0.0.1) tar du bort `.disabled` från filen **REQUEST-905-COMMON-EXCEPTIONS**.
-1. Om du vill lägga till lokala undantag som AEM eller platsspecifika sökvägar byter du namn på `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example` till `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf`
-   1. Lägg till AEM plattformsspecifika sökvägsundantag i den fil som du har bytt namn på.
+1. Om du vill ta bort vanliga false-positiva åtgärder som lokal IP (127.0.0.1) tar du bort `.disabled` från filen **REQUEST-905-COMMON-EXCEPTIONS** .
+1. Om du vill lägga till lokala undantag som AEM-plattformen eller platsspecifika sökvägar byter du namn på `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf.example` till `REQUEST-900-EXCLUSION-RULES-BEFORE-CRS.conf`
+   1. Lägg till plattformsspecifika sökvägsundantag för AEM i filen som du nyligen har bytt namn på.
 
    ```
    ########################################################
@@ -152,7 +152,7 @@ Så här initierar du CRS, tar bort vanliga falska positiva och lägger till lok
 
 >[!TIP]
 >
->När du konfigurerar på AEM 6.5 ska du se till att ersätta ovanstående banor med respektive AMS- eller lokala banor som kontrollerar AEM hälsa (kallas hjärtslagsbanor).
+>När du konfigurerar för AEM 6.5 ska du se till att ersätta ovanstående banor med respektive AMS- eller lokala banor som verifierar hälsan hos AEM (kallas hjärtslagsbanor).
 
 ## Lägg till konfiguration av ModSecurity Apache
 
@@ -208,7 +208,7 @@ Så här aktiverar du ModSecurity (även `mod_security` Apache-modulen):
    SecDataDir /tmp
    ```
 
-1. Välj önskad `.vhost` från ditt AEM Dispatcher-modul `dispatcher/src/conf.d/available_vhosts`, till exempel `wknd.vhost`, och lägg till nedanstående post utanför `<VirtualHost>` -blocket.
+1. Välj önskad `.vhost` från Dispatcher-modulen för ditt AEM-projekt `dispatcher/src/conf.d/available_vhosts`, till exempel `wknd.vhost`, och lägg till nedanstående post utanför `<VirtualHost>` -blocket.
 
    ```
    # Enable the ModSecurity and OWASP CRS
@@ -224,11 +224,11 @@ Så här aktiverar du ModSecurity (även `mod_security` Apache-modulen):
    </VirtualHost>
    ```
 
-Alla de ovanstående konfigurationerna för _ModSecurity CRS_ och _DOS-PROTECTION_ finns tillgängliga på WKND Sites Project [AEM självstudiekurs/enable-modsecurity-crs-dos-protection](https://github.com/adobe/aem-guides-wknd/tree/tutorial/enable-modsecurity-crs-dos-protection) som du kan granska.
+Alla de ovanstående konfigurationerna _ModSecurity CRS_ och _DOS-PROTECTION_ finns tillgängliga på AEM WKND Sites Project [s självstudiekurs/enable-modsecurity-crs-dos-protection](https://github.com/adobe/aem-guides-wknd/tree/tutorial/enable-modsecurity-crs-dos-protection) som du kan granska.
 
 ### Validera Dispatcher-konfiguration
 
-När du arbetar med AEM as a Cloud Service, innan du distribuerar dina _Dispatcher-konfigurationer_ -ändringar, rekommenderas du att validera dem lokalt med hjälp av `validate` -skriptet för [AEM SDK:s Dispatcher-verktyg](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) .
+När du arbetar med AEM as a Cloud Service bör du validera ändringarna lokalt med `validate`-skriptet för [AEM SDK Dispatcher-verktygen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) innan du distribuerar _Dispatcher-konfigurationen_ .
 
 ```
 # Go inside Dispatcher SDK 'bin' directory
@@ -260,9 +260,9 @@ Så här simulerar du en DoS-attack med JMeter:
 
    ![Öppna exemplet WKND DoS Attack JMX Test Script - ModSecurity](assets/modsecurity-crs/open-wknd-dos-attack-jmx-test-script.png)
 
-1. Uppdatera fältvärdet **Servernamn eller IP** i _Startsida_ och _Adventure Page_ HTTP Request-samplern som matchar URL:en för testmiljön AEM. Granska annan information om JMeter-exempelskriptet.
+1. Uppdatera fältvärdet **Servernamn eller IP** på _startsidan_ och _Adventure Page_ HTTP Request-samplern som matchar URL:en för testmiljön i AEM. Granska annan information om JMeter-exempelskriptet.
 
-   ![AEM Servernamn HTTP Request JMetere - ModSecurity](assets/modsecurity-crs/aem-server-name-http-request.png)
+   ![AEM Server Name HTTP Request JMetere - ModSecurity](assets/modsecurity-crs/aem-server-name-http-request.png)
 
 1. Kör skriptet genom att trycka på knappen **Start** på verktygsmenyn. Skriptet skickar 50 HTTP-begäranden (5 användare och 10 loopar) mot WKND-platsens _hemsida_ och _Adventure-sida_. Det innebär att totalt 100 begäranden till icke-statiska filer kvalificerar DoS-attacken per anpassad konfiguration av **DOS-PROTECTION**-CRS-regel.
 

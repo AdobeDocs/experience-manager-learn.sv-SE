@@ -1,7 +1,7 @@
 ---
-title: Anpassa Adobe-klientdatalagret med AEM
-description: Lär dig hur du anpassar datalagret för klienten i Adobe med innehåll från anpassade AEM. Lär dig hur du använder API:er från AEM Core Components för att utöka och anpassa datalagret.
-version: Cloud Service
+title: Anpassa Adobe Client Data Layer med AEM Components
+description: Lär dig hur du anpassar Adobe Client Data Layer med innehåll från anpassade AEM-komponenter. Lär dig hur du använder API:er från AEM Core Components för att utöka och anpassa datalagret.
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer, Core Components
 role: Developer
@@ -12,22 +12,22 @@ last-substantial-update: 2022-09-20T00:00:00Z
 doc-type: Tutorial
 exl-id: 80e4cf2e-dff6-41e8-b09b-187cf2e18e00
 duration: 452
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1813'
 ht-degree: 0%
 
 ---
 
-# Anpassa Adobe-klientdatalagret med AEM {#customize-data-layer}
+# Anpassa Adobe Client Data Layer med AEM Components {#customize-data-layer}
 
-Lär dig hur du anpassar datalagret för klienten i Adobe med innehåll från anpassade AEM. Lär dig hur du använder API:er från [AEM Core Components för att utöka](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html) och anpassa datalagret.
+Lär dig hur du anpassar Adobe Client Data Layer med innehåll från anpassade AEM-komponenter. Lär dig hur du använder API:er från [AEM Core Components för att utöka](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html) och anpassa datalagret.
 
 ## Vad du ska bygga
 
 ![Byline Data Layer](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
-I den här självstudiekursen ska vi utforska olika alternativ för att utöka datalagret för Adobe-klienten genom att uppdatera WKND-komponenten [Byline](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html). Komponenten _Byline_ är en **anpassad komponent** och lektioner som du lär dig i den här självstudiekursen kan användas i andra anpassade komponenter.
+I den här självstudiekursen ska vi utforska olika alternativ för att utöka Adobe Client Data Layer genom att uppdatera WKND-komponenten [Byline](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html). Komponenten _Byline_ är en **anpassad komponent** och lektioner som du lär dig i den här självstudiekursen kan användas i andra anpassade komponenter.
 
 ### Mål {#objective}
 
@@ -63,7 +63,7 @@ Den här självstudien utökar Byline-komponenten på WKND-referensplatsen. Klon
 
    >[!NOTE]
    >
-   > För AEM 6.5 och senaste Service Pack lägger du till profilen `classic` i kommandot Maven:
+   > För AEM 6.5 och den senaste Service Pack-versionen lägger du till profilen `classic` i kommandot Maven:
    >
    > `mvn clean install -PautoInstallSinglePackage -Pclassic`
 
@@ -78,7 +78,7 @@ Den här självstudien utökar Byline-komponenten på WKND-referensplatsen. Klon
    window.adobeDataLayer.getState();
    ```
 
-   Om du vill se det aktuella läget för datalagret på en AEM plats kontrollerar du svaret. Du bör se information om sidan och enskilda komponenter.
+   Om du vill se det aktuella läget för datalagret på en AEM-plats kontrollerar du svaret. Du bör se information om sidan och enskilda komponenter.
 
    ![Adobe datalagersvar](assets/data-layer-state-response.png)
 
@@ -119,7 +119,7 @@ Om du vill mata in data om komponenten i datalagret uppdaterar vi först kompone
    import com.adobe.cq.wcm.core.components.util.ComponentUtils;
    ```
 
-   `fasterxml.jackson` API:er används för att serialisera data som ska visas som JSON. `ComponentUtils` AEM kärnkomponenter används för att kontrollera om datalagret är aktiverat.
+   `fasterxml.jackson` API:er används för att serialisera data som ska visas som JSON. `ComponentUtils` av AEM Core Components används för att kontrollera om datalagret är aktiverat.
 
 1. Lägg till den oimplementerade metoden `getData()` i `BylineImple.java`:
 
@@ -175,7 +175,7 @@ Om du vill mata in data om komponenten i datalagret uppdaterar vi först kompone
 
 Uppdatera sedan `Byline` [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=en). HTML (HTML Template Language) är den mall som används för att återge komponentens HTML.
 
-Ett särskilt dataattribut `data-cmp-data-layer` för varje AEM används för att visa dess datalager. JavaScript som tillhandahålls av AEM Core Components letar efter det här dataattributet. Värdet för det här dataattributet fylls i med JSON-strängen som returneras av Byline Sling-modellens `getData()`-metod och matas in i Adobe-klientdatalagret.
+Ett särskilt dataattribut `data-cmp-data-layer` på varje AEM-komponent används för att visa dess datalager. JavaScript som tillhandahålls av AEM Core Components letar efter det här dataattributet. Värdet för det här dataattributet fylls i med JSON-strängen som returneras av Byline Sling-modellens `getData()`-metod och injiceras i Adobe-klientdatalagret.
 
 1. Öppna projektet `aem-guides-wknd` i IDE. Navigera till modulen `ui.apps`.
 1. Öppna filen `byline.html` vid `ui.apps/src/main/content/jcr_root/apps/wknd/components/byline/byline.html`.
@@ -260,7 +260,7 @@ Klickbara element är vanligtvis en CTA-knapp eller en navigeringslänk. Tyvärr
 
 1. Gå tillbaka till webbläsaren och öppna sidan igen med komponenten Byline tillagd: [http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html](http://localhost:4502/content/wknd/us/en/magazine/guide-la-skateparks.html).
 
-   För att testa vår aktivitet lägger vi till JavaScript manuellt med hjälp av utvecklarkonsolen. Se [Använda Adobe-klientdatalagret med AEM kärnkomponenter](data-layer-overview.md) för en video om hur du gör detta.
+   För att testa vår aktivitet lägger vi till JavaScript manuellt med hjälp av utvecklarkonsolen. Se [Använda Adobe-klientdatalagret med AEM Core Components](data-layer-overview.md) för en video om hur du gör detta.
 
 1. Öppna webbläsarens utvecklarverktyg och ange följande metod i **konsolen**:
 
@@ -321,7 +321,7 @@ Det finns en verktygsklass, `DataLayerBuilder`, som kan utföra de flesta grova 
    }
    ```
 
-   `ComponentData` är ett objekt som tillhandahålls av AEM kärnkomponenter. Det resulterar i en JSON-sträng, precis som i det föregående exemplet, men utför även en hel del extraarbete.
+   `ComponentData` är ett objekt från AEM Core Components. Det resulterar i en JSON-sträng, precis som i det föregående exemplet, men utför även en hel del extraarbete.
 
 1. Öppna filen `BylineImpl.java` vid `core/src/main/java/com/adobe/aem/guides/wknd/core/models/impl/BylineImpl.java`.
 
@@ -428,10 +428,10 @@ Det finns en verktygsklass, `DataLayerBuilder`, som kan utföra de flesta grova 
 
 ## Grattis! {#congratulations}
 
-Du har utforskat några sätt att utöka och anpassa datalagret för klienten i Adobe med AEM komponenter!
+Du har utforskat några sätt att utöka och anpassa Adobe Client Data Layer med AEM-komponenter!
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Adobe-datalagerdokumentation](https://github.com/adobe/adobe-client-data-layer/wiki)
+* [Adobe Client Data Layer Documentation](https://github.com/adobe/adobe-client-data-layer/wiki)
 * [Datalagerintegrering med kärnkomponenterna](https://github.com/adobe/aem-core-wcm-components/blob/main/DATA_LAYER_INTEGRATION.md)
-* [Använda Adobe-klientdatalagret och dokumentationen för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Använda Adobe Client Data Layer och Core Components Documentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)

@@ -1,7 +1,7 @@
 ---
 title: Responsiva brytpunkter
-description: Lär dig hur du konfigurerar nya responsiva brytpunkter för AEM responsiv sidredigerare.
-version: Cloud Service
+description: Lär dig hur du konfigurerar nya responsiva brytpunkter för AEM responsiva sidredigerare.
+version: Experience Manager as a Cloud Service
 feature: Page Editor
 topic: Mobile, Development
 role: Developer
@@ -12,7 +12,7 @@ jira: KT-11664
 thumbnail: kt-11664.jpeg
 exl-id: 8b48c28f-ba7f-4255-be96-a7ce18ca208b
 duration: 52
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 # Responsiva brytpunkter
 
-Lär dig hur du konfigurerar nya responsiva brytpunkter för AEM responsiv sidredigerare.
+Lär dig hur du konfigurerar nya responsiva brytpunkter för AEM responsiva sidredigerare.
 
 ## Skapa CSS-brytpunkter
 
-Skapa först brytpunkter för media i CSS för AEM responsiva stödraster som den responsiva AEM följer.
+Skapa först brytpunkter i AEM responsiva stödraster-CSS som den responsiva AEM-webbplatsen följer.
 
-Skapa brytpunkter som ska användas tillsammans med mobilemulatorn i filen `/ui.apps/src/main/content/jcr_root/apps/[app name]/clientlibs/clientlib-grid/less/grid.less`. Notera `max-width` för varje brytpunkt, eftersom detta mappar CSS-brytpunkterna till de AEM responsiva sidredigeringsbrytpunkterna.
+Skapa brytpunkter som ska användas tillsammans med mobilemulatorn i filen `/ui.apps/src/main/content/jcr_root/apps/[app name]/clientlibs/clientlib-grid/less/grid.less`. Notera `max-width` för varje brytpunkt, eftersom detta mappar CSS-brytpunkterna till brytpunkterna i AEM responsive Page Editor.
 
 ![Skapa nya responsiva brytpunkter](./assets/responsive-breakpoints/create-new-breakpoints.jpg)
 
@@ -39,7 +39,7 @@ Skapa brytpunkter som ska användas tillsammans med mobilemulatorn i filen `/ui.
 
 ## Skapa emulatorer
 
-AEM måste definieras så att författare kan välja den responsiva vyn som ska redigeras i sidredigeraren.
+AEM-emulatorer måste definieras så att författare kan välja den responsiva vyn som ska redigeras i sidredigeraren.
 
 Skapa emulatornoder under `/ui.apps/src/main/content/jcr_root/apps/<app name>/emulators`
 
@@ -49,7 +49,7 @@ Exempel: `/ui.apps/src/main/content/jcr_root/apps/wknd-examples/emulators/phone-
 
 ## Skapa enhetsgrupp
 
-Gruppera emulatorerna för att [göra dem tillgängliga AEM sidredigeraren](#update-the-templates-device-group).
+Gruppera emulatorerna för att [göra dem tillgängliga i AEM Page Editor](#update-the-templates-device-group).
 
 Skapa nodstrukturen `/apps/settings/mobile/groups/<name of device group>` under `/ui.apps/src/main/content/jcr_root`.
 

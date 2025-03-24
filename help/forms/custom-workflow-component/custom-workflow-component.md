@@ -2,14 +2,14 @@
 title: Skapa en arbetsflödeskomponent för att spara formulärbilagor i filsystemet
 description: Skriva adaptiva formulärbilagor i filsystemet med en anpassad arbetsflödeskomponent
 feature: Workflow
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2021-11-28T00:00:00Z
 exl-id: acc701ec-b57d-4c20-8f97-a5a69bb180cd
 duration: 70
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '360'
 ht-degree: 0%

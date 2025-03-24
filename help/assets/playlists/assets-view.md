@@ -1,7 +1,7 @@
 ---
 title: Videouppspelningslistor för vyn AEM Assets Assets
-description: Lär dig navigera i AEM Assets as a Cloud Service i Assets-vyn med detta urval av videouppspelningslistor som syftar till att förbättra din produktkunskap.
-version: Cloud Service
+description: Upptäck hur du navigerar i AEM Assets as a Cloud Service i Assets-vyn med detta urval av videouppspelningslistor som syftar till att förbättra din produktkunskap.
+version: Experience Manager as a Cloud Service
 topic: Content Management
 role: User
 level: Beginner
@@ -9,7 +9,7 @@ last-substantial-update: 2024-11-20T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 76af4062-4d8d-4908-bd3d-ce5a8af2111a
-source-git-commit: cce071c22a14669344318ad00d57a4fccc956a33
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 ![AEM Assets Assets-vy](./assets/assets-view.png){align="center"}
 
-Utforska dessa spellistor och lär dig bemästra AEM Assets as a Cloud Service Assets-vyn - med konfiguration, optimering, användning och smidig integrering med kreativa arbetsflöden. Få de insikter ni behöver för att lyckas med AEM Assets as a Cloud Service.
+Utforska dessa spellistor och lär dig bemästra vyn i AEM Assets as a Cloud Service Assets - med konfigurering, optimering, användning och smidig integrering med kreativa arbetsflöden. Få de insikter ni behöver för att lyckas med AEM Assets as a Cloud Service.
 
 ## Konfigurera Assets-vyn
 
-Kom igång med viktiga konfigurationer och konfigurationer som gör AEM Assets as a Cloud Service smidigt för team och projekt.
+Kom igång med viktiga konfigurationer och konfigurationer så att AEM Assets as a Cloud Service fungerar smidigt för team och projekt.
 
 <!-- CARDS
 
@@ -49,7 +49,7 @@ Kom igång med viktiga konfigurationer och konfigurationer som gör AEM Assets a
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" title="Konfigurera administrativ åtkomst till Experience Manager">Konfigurera administrativ åtkomst till Experience Manager</a>
                     </p>
-                    <p class="is-size-6">Se hur användare autentiserar med Adobe IMS för AEM as a Cloud Service och hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomsten till AEM samt funktioner.</p>
+                    <p class="is-size-6">Se hur användare autentiserar med Adobe IMS för AEM as a Cloud Service och hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomsten till AEM och dess funktioner.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Bevakning</span>
@@ -108,8 +108,8 @@ Navigera i Assets vygränssnitt som proffsen - lär dig verktyg och tekniker fö
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" title="Generera bild Assets med Adobe Firefly" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_16fdb25830809ba4c0fe9fda9afa150b64b0f83f5.jpeg?width=400&format=pjpg&optimize=medium" alt="Generera bild Assets med Adobe Firefly"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" title="Generera bild-Assets med Adobe Firefly" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_16fdb25830809ba4c0fe9fda9afa150b64b0f83f5.jpeg?width=400&format=pjpg&optimize=medium" alt="Generera bild-Assets med Adobe Firefly"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -117,7 +117,7 @@ Navigera i Assets vygränssnitt som proffsen - lär dig verktyg och tekniker fö
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" target="_blank" rel="referrer" title="Generera bild Assets med Adobe Firefly">Generera bild-Assets med Adobe Firefly</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-generate-image-assets-with-adobe-firefly" target="_blank" rel="referrer" title="Generera bild-Assets med Adobe Firefly">Generera bild-Assets med Adobe Firefly</a>
                     </p>
                     <p class="is-size-6">Läs om hur AEM Assets kan öka innehållets hastighet med Adobe Firefly och Gen AI.</p>
                 </div>
@@ -172,8 +172,8 @@ Få smidigt samarbete genom att integrera AEM Assets as a Cloud Service med dina
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" title="Hantera kreativa arbetsflöden med Workfront och Assets Essentials" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1781139425d77174a992697a33d097a8bd5b54d5b.jpeg?width=400&format=pjpg&optimize=medium" alt="Hantera kreativa arbetsflöden med Workfront och Assets Essentials"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" title="Hantera Creative arbetsflöden med Workfront och Assets Essentials" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1781139425d77174a992697a33d097a8bd5b54d5b.jpeg?width=400&format=pjpg&optimize=medium" alt="Hantera Creative arbetsflöden med Workfront och Assets Essentials"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -181,7 +181,7 @@ Få smidigt samarbete genom att integrera AEM Assets as a Cloud Service med dina
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="Hantera kreativa arbetsflöden med Workfront och Assets Essentials">Hantera kreativa arbetsflöden med Workfront och AEM Assets</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-manage-creative-workflows-with-workfront-and-assets-essentials" target="_blank" rel="referrer" title="Hantera Creative arbetsflöden med Workfront och Assets Essentials">Hantera Creative-arbetsflöden med Workfront och AEM Assets</a>
                     </p>
                     <p class="is-size-6">Läs om hur Adobe Workfront och AEM Assets hjälper er att hantera det kreativa arbetsflödet.</p>
                 </div>

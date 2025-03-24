@@ -1,7 +1,7 @@
 ---
 title: Simple SvelteKit-app
 description: En enkel SvelteKit-app som visar WKND-äventyr som har modellerats med Content Fragments.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
@@ -14,7 +14,7 @@ recommendations: noCatalog, noDisplay
 hidefromtoc: true
 exl-id: 2e5bd50e-c0d7-4292-8097-e0a17f41a91a
 duration: 22
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '113'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 # Filtrera appen SvelteKit
 
-Utforska möjligheten AEM Headless GraphQL API:er att lista data med en [SvelteKit](https://kit.svelte.dev/) -app. Den här SvelteKit-appen skapar en lista med WKND-äventyr som kan väljas för att visa information om äventyret.
+Utforska AEM Headless-API:er för GraphQL om du vill visa data med en [SvelteKit](https://kit.svelte.dev/) -app. Den här SvelteKit-appen skapar en lista med WKND-äventyr som kan väljas för att visa information om äventyret.
 
 Den här koden visar hur du använder Adobe [AEM Headless Client för JavaScript](https://github.com/adobe/aem-headless-client-js/blob/main/api-reference.md) för att anropa beständiga GraphQL-frågor från SvelteKit. Den här appen använder den `wknd-shared/adventures-all` beständiga frågan för att samla in alla äventyr och härleda en lista över tillgängliga aktivitetstyper. Äventyrsinformation begärs via den `wknd-shared/adventures-by-slug` beständiga frågan.
 

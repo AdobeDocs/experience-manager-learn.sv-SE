@@ -1,7 +1,7 @@
 ---
 title: Databasmodernisering
 description: Lär dig mer om databasmodernisering, ändringsbart och oföränderligt innehåll, paketstruktur och CLI-verktyget för databasmodernisering.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Migration, Upgrade
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-8630
 thumbnail: 336958.jpeg
 exl-id: e9bd9035-1f2d-4a34-a581-9c1ec2c7bc04
 duration: 1305
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Som en del av omfaktoriseringen av din kodbas använder du verktyget [Databasmod
 
 ## Viktiga aktiviteter
 
-* Använd [Adobe I/O-verktyget Databasmoderering](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationrepository-modernizer) för att strukturera om ett projekt så att det matchar den förväntade strukturen i ett AEM as a Cloud Service-projekt.
+* Använd [Adobe I/O Repository Modernizer](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationrepository-modernizer) för att strukturera om ett projekt så att det matchar den förväntade strukturen i ett AEM as a Cloud Service-projekt.
 * Justera och åtgärda eventuella byggfel manuellt i den uppdaterade kodbasen.
 * Konfigurera en [lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) och distribuera den uppdaterade kodbasen. Iterera tills projektet är i ett stabilt tillstånd.
 * Distribuera den uppdaterade kodbasen till en AEM as a Cloud Service-utvecklingsmiljö och fortsätt att validera.

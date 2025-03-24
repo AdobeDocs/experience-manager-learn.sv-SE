@@ -1,7 +1,7 @@
 ---
 title: Arbeta med stora resultatuppsättningar i AEM Headless
 description: Lär dig hur du arbetar med stora resultatuppsättningar med AEM Headless.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
 role: Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-13102
 thumbnail: 3418381.jpeg
 exl-id: 304b4d80-27bd-4336-b2ff-4b613a30f712
 duration: 308
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Stora resultatuppsättningar i AEM Headless
 
-AEM GraphQL-frågor utan rubriker kan returnera stora resultat. I den här artikeln beskrivs hur du arbetar med stora resultat i AEM Headless för att få bästa prestanda för ditt program.
+AEM Headless GraphQL-frågor kan returnera stora resultat. I den här artikeln beskrivs hur du arbetar med stora resultat i AEM Headless för att få bästa prestanda för ditt program.
 
 AEM Headless har stöd för en [offset/limit](#list-query) - och [markörbaserad sidnumrering](#paginated-query) -frågor till mindre delmängder av en större resultatmängd. Flera förfrågningar kan göras för att samla in så många resultat som behövs.
 

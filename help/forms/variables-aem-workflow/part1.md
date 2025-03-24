@@ -1,21 +1,21 @@
 ---
-title: Variabler i AEM [del1]
-description: Använda variabler av typen XML, JSON, ArrayList, Document i ett AEM arbetsflöde
+title: Variabler i AEM Workflow[del1]
+description: Använda variabler av typen XML, JSON, ArrayList, Document i ett AEM-arbetsflöde
 feature: Adaptive Forms, Workflow
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: f9782684-3a74-4080-9680-589d3f901617
 duration: 561
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 0%
 
 ---
 
-# XML-variabler i AEM
+# XML-variabler i AEM Workflow
 
 Variabler av typen XML används vanligtvis när du har ett XSD-baserat adaptivt formulär och vill extrahera värden från det adaptiva formuläret i arbetsflödet.
 
@@ -55,7 +55,7 @@ De adaptiva formulärdata lagras under dataelementet som visas ovan. **_I XPath-
 
 Följ de här stegen för att få resurserna att fungera i ditt system:
 
-* [Hämta och importera resurser till AEM med hjälp av pakethanteraren](assets/xmlandstringvariable.zip)
+* [Hämta och importera mediefiler till AEM med pakethanteraren](assets/xmlandstringvariable.zip)
 * [Utforska arbetsflödesmodellen](http://localhost:4502/editor.html/conf/global/settings/workflow/models/vacationrequest.html) för att förstå variablerna som används i arbetsflödet
 * [Konfigurera e-posttjänsten](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
 * [Öppna det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/applicationfortimeoff/jcr:content?wcmmode=disabled)

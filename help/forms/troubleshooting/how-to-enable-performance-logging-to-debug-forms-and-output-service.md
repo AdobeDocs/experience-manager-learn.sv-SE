@@ -4,13 +4,13 @@ description: Steg för att aktivera loggning av prestanda för att felsöka prob
 type: Troubleshooting
 role: Admin
 level: Intermediate
-version: 6.5
+version: Experience Manager 6.5
 feature: Output Service,Forms Service
 topic: Administration
 index: y
 exl-id: 6ccb3053-c28e-4c23-8fc0-e188b3873c36
 duration: 122
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%

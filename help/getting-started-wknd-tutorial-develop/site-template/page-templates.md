@@ -1,7 +1,7 @@
 ---
 title: Sidmallar
 description: Lär dig skapa och ändra sidmallar. Förstå förhållandet mellan en sidmall och en sida. Lär dig hur du konfigurerar profiler för en sidmall för att få en mer detaljerad styrning och enhetlig varumärkeshantering för innehåll.  En välstrukturerad artikel i Magazine skapas utifrån en dummy från Adobe XD.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components, Editable Templates, Page Editor
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 261ec68f-36f4-474f-a6e4-7a2f9cea691b
 recommendations: noDisplay, noCatalog
 duration: 1561
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '628'
 ht-degree: 0%

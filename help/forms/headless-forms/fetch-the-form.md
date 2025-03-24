@@ -2,14 +2,14 @@
 title: Hämta JSON för det adaptiva formuläret som ska bäddas in
 description: Använd API:t för att hämta json för det adaptiva formuläret
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-13285
 topic: Development
 role: User
 level: Intermediate
 exl-id: ee534724-54ea-48e1-8c92-de1c56a928d4
 duration: 50
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Hämta formulärets JSON
 
-Logga in på din AEM Forms-författarinstans och skapa en ny adaptiv med mallen **Blank with Core Components** . Publish formuläret till din publiceringsinstans.
+Logga in på din AEM Forms-författarinstans och skapa en ny adaptiv med mallen **Blank with Core Components** . Publicera formuläret i din publiceringsinstans.
 
 För att bädda in formuläret hämtar vi först jsonen för det adaptiva formuläret genom att ringa ett get-anrop till vår publiceringsserver.
 

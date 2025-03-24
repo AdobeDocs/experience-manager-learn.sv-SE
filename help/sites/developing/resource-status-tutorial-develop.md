@@ -1,10 +1,10 @@
 ---
 title: Utveckla resursstatus i AEM Sites
-description: Adobe Experience Manager resursstatus-API:er är ett anslutningsbart ramverk för att visa statusmeddelanden i AEM olika redigeringswebbgränssnitt.
+description: Adobe Experience Manager resursstatus-API:er är ett anslutningsbart ramverk för visning av statusmeddelanden i AEM olika webbaserade redigeringsgränssnitt.
 doc-type: Tutorial
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 duration: 88
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 # Utveckla resursstatus {#developing-resource-statuses-in-aem-sites}
 
-Adobe Experience Manager resursstatus-API:er är ett anslutningsbart ramverk för att visa statusmeddelanden i AEM olika redigeringswebbgränssnitt.
+Adobe Experience Manager resursstatus-API:er är ett anslutningsbart ramverk för visning av statusmeddelanden i AEM olika webbaserade redigeringsgränssnitt.
 
 ## Ökning {#overview}
 
 Resursstatus för redigeringsramverket innehåller API:er på serversidan och klientsidan för att visa och interagera med redigeringsstatus på ett standardiserat och enhetligt sätt.
 
-Statusfälten för redigeraren är inbyggda i redigerarna Sida, Upplevelsefragment och Mall i AEM.
+Statusfälten för redigeraren är inbyggda i AEM redigerare för sidfragment, upplevelsefragment och mallar.
 
 Exempel på användningsexempel för anpassade resursstatusprovidrar är:
 
@@ -28,7 +28,7 @@ Exempel på användningsexempel för anpassade resursstatusprovidrar är:
 * Meddela författare om att en sida har aktiverats under de senaste 15 minuterna
 * Meddela författare om att en sida har redigerats inom de senaste fem minuterna och av vem
 
-![AEM resursstatusöversikt för redigeraren](assets/sample-editor-resource-status-screenshot.png)
+![Resursstatusöversikt för AEM Editor](assets/sample-editor-resource-status-screenshot.png)
 
 ## Ramverk för resursstatusprovider {#resource-status-provider-framework}
 

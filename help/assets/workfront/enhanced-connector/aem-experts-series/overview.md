@@ -1,7 +1,7 @@
 ---
 title: Integrera Workfront och AEM Assets med den förbättrade kontakten
 description: Läs om grunderna i Adobe Workfront och Experience Manager Assets förbättrade anslutningsintegrering.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
 role: Admin, User
@@ -13,7 +13,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
 duration: 49
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '280'
 ht-degree: 0%
@@ -22,16 +22,16 @@ ht-degree: 0%
 
 # Integrera Workfront och AEM Assets med den förbättrade kontakten
 
-![AEM expertsserie](./assets/banner.png)
+![AEM Experts Series](./assets/banner.png)
 
-Delta i Adobe Workfront- och Experience Manager Assets-experterna i den här videoserien, där de demonstrerar och diskuterar allt de behöver för att integrera Workfront och AEM Assets med hjälp av den förbättrade kontakten.
+Delta i Adobe Workfront- och Experience Manager Assets-experterna i denna videoserie, där de demonstrerar och diskuterar allt de behöver för att integrera Workfront och AEM Assets med den förbättrade kontakten.
 
-Denna fyra expertserie följer en grupp från Adobe experter - från produktchefer till konsulter och Adobe-partners - som diskuterar:
+Denna fyra expertserie följer en grupp från Adobe experter - från produktchefer till konsulter och Adobe partners - som diskuterar:
 
 1. [Utföra de första konfigurationerna i Workfront och AEM](./setup.md)
-2. [Konfigurera metadatasynkronisering mellan Workfront anpassade formulär och AEM](./custom-forms.md)
-3. [Använda AEM taggar, projektlänkade mappar, Adobe Asset Link och metadatamatcheman för att maximera värdet](./aem-tags-project-linked-folders-and-folder-metadata.md)
-4. [Använda avancerat AEM för att effektivisera affärsprocesserna i hela AEM och Workfront samt andra avancerade inställningar](./advanced-settings-and-workflows.md)
+2. [Konfigurera synkronisering av metadata mellan Workfront anpassade formulär och AEM](./custom-forms.md)
+3. [Använda AEM Taggar, projektlänkade mappar, Adobe Asset Link och metadatamappsscheman för att maximera värdet](./aem-tags-project-linked-folders-and-folder-metadata.md)
+4. [Använda avancerat AEM-arbetsflöde för att effektivisera affärsprocesserna i AEM och Workfront samt andra avancerade inställningar](./advanced-settings-and-workflows.md)
 
 <table>
   <td>
@@ -66,16 +66,16 @@ Denna fyra expertserie följer en grupp från Adobe experter - från produktchef
     <!-- AEM Tags, project linked folders, and folder metadata -->
     <td>
       <a href="./aem-tags-project-linked-folders-and-folder-metadata.md">
-        <img alt="AEM, projektlänkade mappar och mappmetadata" 
+        <img alt="AEM-taggar, projektlänkade mappar och mappmetadata" 
              src="./assets/aem-tags.png">
       </a>
       <div>
-         <a href="./aem-tags-project-linked-folders-and-folder-metadata.md"><strong>AEM taggar, länkade projektmappar och mappmetadata</strong></a>
+         <a href="./aem-tags-project-linked-folders-and-folder-metadata.md"><strong>AEM-taggar, projektlänkade mappar och mappmetadata</strong></a>
          <br/><em>Del 3/4</em> 
       </div>
       <p>
         <br/>
-            Lär dig att driva AEM taxonomi från Workfront, använda projektlänkade mappar och data för att AEM metadata för resursmappar.
+            Lär dig hur du kör AEM taxonomi från Workfront, använder projektlänkade mappar och data till AEM metadata för resursmappar.
       </p>
    </td>   
    <!-- Advanced workflows -->
@@ -90,7 +90,7 @@ Denna fyra expertserie följer en grupp från Adobe experter - från produktchef
       </div>
       <p>
         <br/>
-            Lär dig mer om avancerade inställningar för Workfront för AEM förbättrade anslutningsprogram, hantera datasynkronisering med avancerade arbetsflöden.
+            Lär dig mer om avancerade inställningar för den förbättrade kopplingen Workfront for AEM, hantera datasynkronisering med avancerade arbetsflöden.
       </p>
    </td>
   </tr>  

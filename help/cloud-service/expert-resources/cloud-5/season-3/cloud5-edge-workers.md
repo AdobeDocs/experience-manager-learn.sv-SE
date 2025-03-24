@@ -1,16 +1,16 @@
 ---
 title: Cloud 5 - Edge-arbetare
-description: Upptäck vikten av gränsarbetare i AEM Sites och Edge Delivery Services och hur ni kan integrera dem med era back end-system.
+description: Upptäck vikten av kvalificerade medarbetare i AEM Sites och Edge Delivery Services och hur ni kan integrera dem med era back end-system.
 feature: Edge Delivery Services
 topic: Development
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 role: Admin, Developer
 level: Intermediate
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: 7b39d955-9f8a-45cc-bc36-be6d454f5578
 duration: 282
-source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '66'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Cloud 5 - Edge-arbetare
 
-Upptäck vikten av gränsarbetare i AEM Sites och Edge Delivery Services och hur ni kan integrera dem med era back end-system.
+Upptäck vikten av kvalificerade medarbetare i AEM Sites och Edge Delivery Services och hur ni kan integrera dem med era back end-system.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427589?learn=on)
 

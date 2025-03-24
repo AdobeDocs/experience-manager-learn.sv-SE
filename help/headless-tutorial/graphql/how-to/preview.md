@@ -1,7 +1,7 @@
 ---
 title: Förhandsgranska innehållsfragment
-description: Lär dig hur du använder förhandsgranskning av innehållsfragment för alla författare för att snabbt se hur innehållsändringar påverkar AEM Headless-upplevelser.
-version: Cloud Service
+description: Lär dig hur du använder förhandsgranskning av innehållsfragment till alla författare för att snabbt se hur innehållsändringar påverkar dina AEM Headless-upplevelser.
+version: Experience Manager as a Cloud Service
 feature: Content Fragments
 topic: Headless, Content Management, Development
 role: Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-10841
 thumbnail: 3416906.jpeg
 exl-id: 247d40a3-ff67-4c1f-86bf-3794d7ce3e32
 duration: 463
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -21,14 +21,14 @@ ht-degree: 0%
 
 # Förhandsgranska innehållsfragment
 
-AEM Headless-program har stöd för integrerad förhandsgranskning. Förhandsgranskningen länkar AEM författarens Content Fragment-redigerare till din anpassade app (adresserbar via HTTP), vilket ger en djup länk till den app som återger det innehållsområde som förhandsgranskas.
+AEM Headless-programmen har stöd för integrerad förhandsgranskning. Förhandsgranskningen länkar AEM Authors Content Fragment-redigerare till din anpassade app (adresserbar via HTTP), vilket ger en djup länk till den app som återger det innehållsområde som förhandsgranskas.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416906?quality=12&learn=on)
 
 Om du vill använda förhandsgranskning av innehållsfragment måste flera villkor vara uppfyllda:
 
 1. Appen måste distribueras till en URL som författarna kan komma åt
-1. Appen måste vara konfigurerad för att ansluta till AEM Author-tjänsten (i stället för den AEM Publish-tjänsten)
+1. Appen måste vara konfigurerad för att ansluta till AEM Author-tjänsten (i stället för AEM Publish-tjänsten)
 1. Appen måste utformas med URL:er eller vägar som kan använda sökvägen [för innehållsfragment eller ID](#url-expressions) för att välja vilka innehållsfragment som ska visas för förhandsgranskning i appupplevelsen.
 
 ## Förhandsgranska URL:er
@@ -41,7 +41,7 @@ URL:er för förhandsgranskning, som använder [URL-uttryck](#url-expressions), 
 1. Navigera till __Verktyg > Allmänt > Modeller för innehållsfragment__
 1. Markera __modellen för innehållsfragment__ och välj __Egenskaper__ i det övre åtgärdsfältet.
 1. Ange förhandsgransknings-URL för innehållsfragmentmodellen med [URL-uttryck](#url-expressions)
-   + Förhandsgransknings-URL:en måste peka på en distribution av programmet som ansluter till AEM författartjänst.
+   + Förhandsgransknings-URL:en måste peka på en distribution av programmet som ansluter till AEM Author-tjänsten.
 
 ### URL-uttryck
 

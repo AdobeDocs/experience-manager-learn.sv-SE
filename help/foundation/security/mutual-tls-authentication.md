@@ -1,8 +1,8 @@
 ---
 title: mTLS-autentisering (Mutual Transport Layer Security) från AEM
-description: Lär dig hur du gör HTTPS-anrop från AEM till webb-API:er som kräver mTLS-autentisering.
+description: Lär dig hur du gör HTTPS-anrop från AEM till webb-API:er som kräver mTLS-autentisering (Mutual Transport Layer Security).
 feature: Security
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
 role: Admin, Architect, Developer
 level: Experienced
@@ -12,7 +12,7 @@ doc-type: Article
 last-substantial-update: 2023-10-10T00:00:00Z
 exl-id: 7238f091-4101-40b5-81d9-87b4d57ccdb2
 duration: 495
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # mTLS-autentisering (Mutual Transport Layer Security) från AEM
 
-Lär dig hur du gör HTTPS-anrop från AEM till webb-API:er som kräver mTLS-autentisering.
+Lär dig hur du gör HTTPS-anrop från AEM till webb-API:er som kräver mTLS-autentisering (Mutual Transport Layer Security).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
 
@@ -42,9 +42,9 @@ Låt oss lära oss hur du kan anropa API:er som kräver mTLS-autentisering med [
 
 På en hög nivå krävs följande steg för att anropa ett mTLS-skyddat API från AEM.
 
-### Generering av AEM
+### Skapa AEM-certifikat
 
-Begär AEM certifikat genom att samarbeta med din organisations säkerhetsteam. Säkerhetsteamet tillhandahåller eller frågar om certifikatrelaterade detaljer som nyckel, CSR (Certificate Signing Request) och använder CSR för att utfärda certifikatet.
+Begär AEM-certifikatet genom att samarbeta med din organisations säkerhetsteam. Säkerhetsteamet tillhandahåller eller frågar om certifikatrelaterade detaljer som nyckel, CSR (Certificate Signing Request) och använder CSR för att utfärda certifikatet.
 
 Generera certifikatrelaterade detaljer som nyckel, CSR (Certificate Signing Request) för demonstrationssyften. I exemplet nedan används en självsignerad certifikatutfärdare för att utfärda certifikatet.
 
@@ -55,7 +55,7 @@ Generera certifikatrelaterade detaljer som nyckel, CSR (Certificate Signing Requ
   openssl req -new -x509 -days 9999 -keyout internal-ca-key.pem -out internal-ca-cert.pem
   ```
 
-- Generera AEM.
+- Skapa AEM-certifikatet.
 
   ```shell
   # Generate Key
@@ -71,7 +71,7 @@ Generera certifikatrelaterade detaljer som nyckel, CSR (Certificate Signing Requ
   openssl verify -CAfile internal-ca-cert.pem client-cert.pem
   ```
 
-- Konvertera den AEM privata nyckeln till DER-format, AEM KeyStore kräver den privata nyckeln i DER-format.
+- Konvertera AEM privata nyckel till DER-format, AEM KeyStore kräver den privata nyckeln i DER-format.
 
   ```shell
   openssl pkcs8 -topk8 -inform PEM -outform DER -in client-key.pem -out client-key.der -nocrypt
@@ -84,17 +84,17 @@ Generera certifikatrelaterade detaljer som nyckel, CSR (Certificate Signing Requ
 
 ### Certifikatutbyte
 
-Om du använder en självsignerad certifikatutfärdare för AEM, som ovan, skickar du certifikatet eller det interna certifikatutfärdarcertifikatet till API-providern.
+Om du använder en självsignerad certifikatutfärdare för AEM-certifikatet, som ovan, skickar du certifikatet eller det interna certifikatutfärdarcertifikatet till API-providern.
 
 Om API-providern använder ett självsignerat certifikatutfärdarcertifikat tar du dessutom emot certifikatet eller det interna certifikatutfärdarcertifikatet från API-providern.
 
 ### Certifikatimport
 
-Så här importerar du AEM certifikat:
+Så här importerar du AEM-certifikat:
 
-1. Logga in på **AEM författare** som **administratör**.
+1. Logga in på **AEM Author** som **administratör**.
 
-1. Navigera till **AEM Författare > Verktyg > Dokumentskydd > Användare > Skapa eller välj en befintlig användare**.
+1. Navigera till **AEM Author > Tools > Security > Users > Create or Select an existing user**.
 
    ![Skapa eller välj en befintlig användare](assets/mutual-tls-authentication/create-or-select-user.png)
 
@@ -110,17 +110,17 @@ Så här importerar du AEM certifikat:
 
    1. Ange alias
 
-   1. Importera den AEM privata nyckeln i DER-format som genereras ovan.
+   1. Importera den privata AEM-nyckeln i DER-format som genereras ovan.
 
    1. Importera filerna för certifikatkedjan som genererats ovan.
 
    1. Klicka på Skicka
 
-      ![Importera AEM privat nyckel](assets/mutual-tls-authentication/import-aem-private-key.png)
+      ![Importera privat AEM-nyckel](assets/mutual-tls-authentication/import-aem-private-key.png)
 
 1. Kontrollera att certifikatet har importerats.
 
-   ![AEM Privat nyckel och certifikat har importerats](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
+   ![Privat nyckel och certifikat för AEM har importerats](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
 
 Om API-providern använder ett självsignerat CA-certifikat importerar du det mottagna certifikatet till AEM TrustStore, följer du stegen från [här](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html#httpclient-and-load-aem-truststore-material).
 
@@ -229,4 +229,4 @@ Den här metoden är dock inte anpassad efter bästa säkerhetspraxis och AEM er
 
 Exempelprojektet Node.js som har nedgraderats i videon kan hämtas från [här](assets/internal-api-call/REST-APIs.zip).
 
-Den AEM serletkoden är tillgänglig i WKND Sites Projects `tutorial/web-api-invocation`-gren, [se](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).
+AEM-serverns kod är tillgänglig i WKND Sites Projects `tutorial/web-api-invocation`-gren, [se](https://github.com/adobe/aem-guides-wknd/tree/tutorial/web-api-invocation/core/src/main/java/com/adobe/aem/guides/wknd/core/servlets).

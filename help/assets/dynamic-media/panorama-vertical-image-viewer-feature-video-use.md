@@ -1,15 +1,15 @@
 ---
 title: Använda Panorama och Vertical Image Viewer med AEM Assets Dynamic Media
-description: Förbättringarna i Dynamic Media Viewer i AEM 6.4 innefattar även panoramabildsvisare, panoramabildsvisare för virtuell verklighet och Vertical Image Viewer. Panoramavisningsprogrammet är ett enkelt sätt att leverera en engagerande, engagerande upplevelse av rummet, egendomen, platsen eller landskapet utan att behöva ta fram något skräddarsytt.
+description: Förbättringarna i Dynamic Media Viewer i AEM 6.4 innefattar även Panoramic Image Viewer, Panoramic Virtual Reality Image Viewer och Vertical Image Viewer. Panoramavisningsprogrammet är ett enkelt sätt att leverera en engagerande, engagerande upplevelse av rummet, egendomen, platsen eller landskapet utan att behöva ta fram något skräddarsytt.
 feature: Video Profiles, Video Profiles, 360 VR Video
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 6b2f7533-8ce0-4134-b1ae-b3c5d15a05e6
 duration: 535
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '518'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # Använda Panorama och Vertical Image Viewer med AEM Assets Dynamic Media{#using-panorama-and-vertical-image-viewer-with-aem-assets-dynamic-media}
 
-Förbättringarna i Dynamic Media Viewer i AEM 6.4 innefattar även panoramabildsvisare, panoramabildsvisare för virtuell verklighet och Vertical Image Viewer. Panoramavisningsprogrammet är ett enkelt sätt att leverera en engagerande, engagerande upplevelse av rummet, egendomen, platsen eller landskapet utan att behöva ta fram något skräddarsytt.
+Förbättringarna i Dynamic Media Viewer i AEM 6.4 innefattar även Panoramic Image Viewer, Panoramic Virtual Reality Image Viewer och Vertical Image Viewer. Panoramavisningsprogrammet är ett enkelt sätt att leverera en engagerande, engagerande upplevelse av rummet, egendomen, platsen eller landskapet utan att behöva ta fram något skräddarsytt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/24156?quality=12&learn=on)
 
 >[!NOTE]
 >
->I videon antas att AEM körs i Dynamic Media S7-läge. [Instruktioner om hur du konfigurerar AEM med Dynamic Media finns här.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>I videon antas att din AEM-instans körs i läget Dynamic Media S7. [Instruktioner för hur du konfigurerar AEM med Dynamic Media finns här.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## VR-visningsprogram för panoramor och panoramor
 
@@ -48,8 +48,8 @@ Med vågräta färgrutor, beroende på konsumentens skärmstorlek, kan det händ
    <td>Lodrät bildvisare</td>
   </tr>
   <tr>
-   <td>Dynamic Media körningsläge</td>
-   <td>Endast Dynamic Media Scene7 Mode</td>
+   <td>Körningsläge för dynamiska media</td>
+   <td>Endast Dynamic Media Scene7-läge</td>
    <td>DMS7 och Dynamic Media</td>
   </tr>
   <tr>
@@ -65,9 +65,9 @@ Med vågräta färgrutor, beroende på konsumentens skärmstorlek, kan det händ
  </tbody>
 </table>
 
-[Konfigurera Dynamic Media i Scene7-läge](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[Konfigurera dynamiska media i Scene7-läge](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
 
-[Konfigurera Dynamic Media i hybrid-läge](https://helpx.adobe.com/se/experience-manager/6-5/assets/using/config-dynamic.html)
+[Konfigurera dynamiska media i hybridläge](https://helpx.adobe.com/se/experience-manager/6-5/assets/using/config-dynamic.html)
 
 >[!NOTE]
 >

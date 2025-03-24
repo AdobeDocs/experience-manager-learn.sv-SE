@@ -1,7 +1,7 @@
 ---
 title: Komma igång med AEM Sites - Grunderna i komponenter
 description: Förstå den underliggande tekniken i en Adobe Experience Manager (AEM) Sites Component genom ett enkelt HelloWorld-exempel. Ämnen som rör HTML, Sling Models, Client-side libraries och författardialogrutor har utforskats.
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, Developer Tools
 topic: Content Management, Development
 role: Developer
@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: 7fd021ef-d221-4113-bda1-4908f3a8629f
 recommendations: noDisplay, noCatalog
 duration: 1715
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1192'
 ht-degree: 0%
@@ -28,7 +28,7 @@ I det här kapitlet ska vi utforska den underliggande tekniken i en Adobe Experi
 
 Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](./overview.md#local-dev-environment).
 
-Den IDE som används i videoklippen är [Visual Studio Code](https://code.visualstudio.com/) och plugin-programmet [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) .
+Den IDE som används i videoklippen är [Visual Studio Code](https://code.visualstudio.com/) och [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) plugin.
 
 ## Syfte {#objective}
 
@@ -38,7 +38,7 @@ Den IDE som används i videoklippen är [Visual Studio Code](https://code.visual
 
 ## Vad du ska bygga {#what-build}
 
-I det här kapitlet utför du flera ändringar av en enkel `HelloWorld`-komponent. När du uppdaterar komponenten `HelloWorld` får du lära dig mer om de viktigaste områdena AEM komponentutveckling.
+I det här kapitlet utför du flera ändringar av en enkel `HelloWorld`-komponent. När du uppdaterar komponenten `HelloWorld` får du lära dig mer om de viktigaste områdena för komponentutveckling i AEM.
 
 ## Startprojekt för kapitel {#starter-project}
 
@@ -100,7 +100,7 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
 
 ## HTML (HTML Template Language) och dialogrutor {#htl-dialogs}
 
-HTML-mallspråk eller **[HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)** är ett lättviktsmallspråk på serversidan som används av AEM komponenter för att återge innehåll.
+HTML mallspråk eller **[HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)** är ett lättviktsmallspråk på serversidan som används av AEM-komponenter för att återge innehåll.
 
 **Dialogrutor** definierar de konfigurationer som är tillgängliga för en komponent.
 
@@ -112,7 +112,7 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
 
 1. Växla till IDE och öppna projektet i modulen `ui.apps`.
 1. Öppna filen `helloworld.html` och uppdatera HTML Markup.
-1. Använd IDE-verktygen som [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) för att synkronisera filändringen med den lokala AEM.
+1. Använd IDE-verktyg som [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) för att synkronisera filändringen med den lokala AEM-instansen.
 1. Återgå till webbläsaren och observera att komponentåtergivningen har ändrats.
 1. Öppna filen `.content.xml` som definierar dialogrutan för komponenten `HelloWorld` på:
 
@@ -172,7 +172,7 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
 
 ## Sling Models {#sling-models}
 
-Sling Models är annoteringsdrivna Java™ &quot;POJOs&quot; (Plain Old Java™ Objects) som gör det enklare att mappa data från JCR till Java™-variabler. De erbjuder också flera andra institutioner när de utvecklas i samband med AEM.
+Sling Models är annoteringsdrivna Java™ &quot;POJOs&quot; (Plain Old Java™ Objects) som gör det enklare att mappa data från JCR till Java™-variabler. De erbjuder även flera andra förekomster när de utvecklas inom ramen för AEM.
 
 Sedan gör vi några uppdateringar av `HelloWorldModel`-delningsmodellen för att tillämpa viss affärslogik på de värden som lagras i JCR innan vi skickar dem till sidan.
 
@@ -283,7 +283,7 @@ Sedan gör vi några uppdateringar av `HelloWorldModel`-delningsmodellen för at
 
 ## Bibliotek på klientsidan {#client-side-libraries}
 
-Klientbibliotek, `clientlibs` för kort, innehåller en mekanism för att organisera och hantera CSS- och JavaScript-filer som krävs för en AEM Sites-implementering. Klientbibliotek är standardsättet att inkludera CSS och JavaScript på en sida i AEM.
+Klientbibliotek, `clientlibs` för kort, innehåller en mekanism för att organisera och hantera CSS- och JavaScript-filer som krävs för en AEM Sites-implementering. Bibliotek på klientsidan är standardsättet att inkludera CSS och JavaScript på en sida i AEM.
 
 Modulen [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) är ett frikopplat [webpack](https://webpack.js.org/) -projekt som är integrerat i byggprocessen. Detta gör att du kan använda populära front-end-bibliotek som Sass, LESS och TypeScript. Modulen `ui.frontend` har utforskats mer ingående i kapitlet [Bibliotek på klientsidan](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
 
@@ -295,7 +295,7 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
 
 1. Öppna ett terminalfönster och navigera till katalogen `ui.frontend`
 
-1. Om du befinner dig i katalogen `ui.frontend` kör du kommandot `npm install npm-run-all --save-dev` för att installera nodmodulen [npm-run-all](https://www.npmjs.com/package/npm-run-all) . Det här steget är **obligatoriskt i Archetype 39-genererat AEM**-projekt. I kommande Archetype-version är detta inte nödvändigt.
+1. Om du befinner dig i katalogen `ui.frontend` kör du kommandot `npm install npm-run-all --save-dev` för att installera nodmodulen [npm-run-all](https://www.npmjs.com/package/npm-run-all) . Det här steget är **obligatoriskt för Arketype 39-genererat AEM-projekt**, i kommande Arketype-version är detta inte nödvändigt.
 
 1. Kör sedan kommandot `npm run watch`:
 

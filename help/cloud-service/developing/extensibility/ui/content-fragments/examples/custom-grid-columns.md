@@ -2,7 +2,7 @@
 title: Anpassade stödrasterkolumner i konsolen för innehållsfragment
 description: Lär dig hur du kan lägga till en anpassad stödrasterkolumn i konsolen för innehållsfragment.
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
 exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
 duration: 198
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -43,9 +43,9 @@ I det här exemplet används biblioteket [Luxon](https://moment.github.io/luxon/
 
 ### Tillägg - registrering
 
-`ExtensionRegistration.js`, mappad till index.html-vägen, är startpunkten för AEM och definierar:
+`ExtensionRegistration.js`, mappad till metoden index.html, är startpunkten för AEM-tillägget och definierar:
 
-+ Platsen för tillägget injicerar sig själv (`contentFragmentGrid`) i AEM.
++ Platsen för tillägget injicerar sig själv (`contentFragmentGrid`) i AEM-redigeringsgränssnittet
 + Definitionen av den anpassade kolumnen i funktionen `getColumns()`
 + Värdena för varje anpassad kolumn, efter rad
 
@@ -204,13 +204,13 @@ Exempel på JSON för innehållsfragment som är tillgängligt som ett element i
 }
 ```
 
-Om andra data krävs för att fylla i den anpassade kolumnen kan HTTP-begäranden göras till AEM författare för att hämta data.
+Om andra data krävs för att fylla i den anpassade kolumnen kan HTTP-begäranden göras till AEM Author för att hämta data.
 
 >[!IMPORTANT]
 >
 > Kontrollera att AEM Author-instansen är konfigurerad att tillåta [korsdomänsförfrågningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) från de ursprung som AppBuilder-appen körs på. Tillåtna ursprung är `https://localhost:9080`, AppBuilder-scenens ursprung och AppBuilder-produktionens ursprung.
 >
-> Tillägget kan också anropa en anpassad [AppBuilder-åtgärd](../../runtime-action.md) som gör begäran till AEM författare för tilläggets räkning.
+> Tillägget kan också anropa en anpassad [AppBuilder-åtgärd](../../runtime-action.md) som gör begäran till AEM Author för tilläggets räkning.
 
 
 ```javascript

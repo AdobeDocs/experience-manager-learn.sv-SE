@@ -1,14 +1,14 @@
 ---
-title: Beständiga GraphQL-frågor - Avancerade AEM utan rubrik - GraphQL
-description: I det här kapitlet om avancerade begrepp i Adobe Experience Manager (AEM) Headless kan du lära dig hur du skapar och uppdaterar beständiga GraphQL-frågor med parametrar. Lär dig hur du skickar parametrar för cachekontroll i beständiga frågor.
-version: Cloud Service
+title: Beständiga GraphQL-frågor - Avancerade begrepp för AEM Headless - GraphQL
+description: I det här kapitlet om avancerade koncept för Adobe Experience Manager (AEM) Headless får du lära dig hur du skapar och uppdaterar beständiga GraphQL-frågor med parametrar. Lär dig hur du skickar parametrar för cachekontroll i beständiga frågor.
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 6a8e90ae-0765-4066-9df4-a3e4d2cda285
 duration: 183
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 0%
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 # Beständiga GraphQL-frågor
 
-Beständiga frågor är frågor som lagras på Adobe Experience Manager-servern (AEM). Klienter kan skicka en HTTP GET-begäran med frågenamnet för att köra den. Fördelen med detta är tillgänglighet. GraphQL-frågor på klientsidan kan också köras med HTTP-POST-begäranden som inte kan cachas, men beständiga frågor kan cachas med HTTP-cacher eller CDN, vilket förbättrar prestandan. Med beständiga frågor kan du förenkla dina förfrågningar och förbättra säkerheten eftersom dina frågor är inkapslade på servern och AEM har full kontroll över dem. Det är **bästa sättet och rekommenderas** att använda beständiga frågor när du arbetar med AEM GraphQL API.
+Beständiga frågor är frågor som lagras på Adobe Experience Manager-servern (AEM). Klienter kan skicka en HTTP GET-begäran med frågenamnet för att köra den. Fördelen med detta är tillgänglighet. GraphQL-frågor på klientsidan kan också köras med HTTP POST-begäranden, som inte kan cachas, men beständiga frågor kan cachas med HTTP-cacher eller CDN, vilket förbättrar prestandan. Med beständiga frågor kan du förenkla dina förfrågningar och förbättra säkerheten eftersom dina frågor är inkapslade på servern och AEM-administratören har full kontroll över dem. Det är **bästa sättet och rekommenderas** att använda beständiga frågor när du arbetar med AEM GraphQL API.
 
-I det föregående kapitlet har du utforskat några avancerade GraphQL-frågor för att samla in data för WKND-appen. I det här kapitlet kvarstår frågorna som ska AEM och du får lära dig hur du använder cachekontroll på beständiga frågor.
+I det föregående kapitlet har du utforskat några avancerade GraphQL-frågor för att samla in data för WKND-appen. I det här kapitlet kvarstår frågorna för AEM och du får lära dig hur du använder cachekontroll för beständiga frågor.
 
 ## Förutsättningar {#prerequisites}
 
@@ -34,7 +34,7 @@ Läs om hur du gör följande i det här kapitlet:
 
 ## Granska konfigurationsinställningen för _GraphQL-beständiga frågor_
 
-Låt oss kontrollera att _GraphQL Persisted Queries_ har aktiverats för WKND Site-projektet i din AEM.
+Låt oss kontrollera att _GraphQL Persisted Queries_ har aktiverats för WKND Site-projektet i din AEM-instans.
 
 1. Navigera till **Verktyg** > **Allmänt** > **Konfigurationsläsaren**.
 
@@ -207,13 +207,13 @@ Genom att köra `getAllAdventureDetailsBySlug`-frågan från kommandoradstermina
 
 >[!TIP]
 >
->    Om du kör frågan ovan mot AEM författarmiljö måste du skicka inloggningsuppgifterna. Mer information finns i [Åtkomsttoken för lokal utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html) och i [Anropa AEM-API:t](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api).
+>    Om du kör frågan ovan mot AEM Author-miljön måste du skicka inloggningsuppgifterna. Mer information finns i [Åtkomsttoken för lokal utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html) och i [Anropa API:t för AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api).
 
 Granska även [Så här kör du en beständig fråga](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#execute-persisted-query), [Använda frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#query-variables) och [Kodar fråge-URL:en för användning av ett program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#encoding-query-url) för att lära dig beständig frågekörning av klientprogram.
 
 ## Uppdatera parametrar för cachekontroll i beständiga frågor {#cache-control-all-adventures}
 
-Med AEM GraphQL API kan du uppdatera standardparametrarna för cachekontroll till dina frågor för att förbättra prestanda. Standardvärdena för cachekontroll är:
+Med AEM GraphQL API kan du uppdatera standardparametrarna för cachekontroll till dina frågor för att förbättra prestandan. Standardvärdena för cachekontroll är:
 
 * 60 sekunder är standardvärde (maxage=60) för klientens TTL (t.ex. en webbläsare)
 

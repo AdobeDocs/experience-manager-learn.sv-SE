@@ -2,7 +2,7 @@
 title: Konfigurera Rapid Development Environment
 description: Lär dig hur du konfigurerar Rapid Development Environment för AEM as a Cloud Service.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ thumbnail: KT-11861.png
 last-substantial-update: 2024-06-04T00:00:00Z
 exl-id: ab9ee81a-176e-4807-ba39-1ea5bebddeb2
 duration: 485
-source-git-commit: f714adaa9bb637c0c7b17837c1d4b9f2be737c5c
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '668'
 ht-degree: 0%
@@ -27,7 +27,7 @@ I den här videon visas:
 - Lägga till en RDE i programmet med Cloud Manager
 - Inloggningsflöde för RDE med Adobe IMS, som liknar andra AEM as a Cloud Service-miljöer
 - Inställning av [Adobe I/O Runtime Extensible CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) kallas även `aio CLI`
-- Konfigurera AEM RDE- och Cloud Manager `aio CLI`-plugin-program med icke-interaktivt läge. Information om interaktivt läge finns i [installationsanvisningarna](#setup-the-aem-rde-plugin)
+- Konfigurera AEM RDE- och Cloud Manager `aio CLI`-plugin-programmet med icke-interaktivt läge. Information om interaktivt läge finns i [installationsanvisningarna](#setup-the-aem-rde-plugin)
 
 >[!VIDEO](https://video.tv.adobe.com/v/3415490?quality=12&learn=on)
 
@@ -60,7 +60,7 @@ AIO CLI måste ha plugin-program installerade och konfigurerade med Organization
 
 Installera och konfigurera AEM RDE-plugin-program med kommandot `plugins:install` för `aio cli`.
 
-1. Installera AIO CLI:s AEM RDE-plugin med kommandot `plugins:install` för `aio cli`.
+1. Installera aio CLI-programmets AEM RDE-plugin med `plugins:install`-kommandot för `aio cli`.
 
    ```shell
    $ aio plugins:install @adobe/aio-cli-plugin-aem-rde    
@@ -69,7 +69,7 @@ Installera och konfigurera AEM RDE-plugin-program med kommandot `plugins:install
 
    Med AEM RDE plugin kan utvecklare distribuera kod och innehåll från den lokala datorn.
 
-2. Logga in på Adobe I/O Runtime Extensible CLI genom att köra följande kommando för att få åtkomsttoken. Se till att du loggar in på samma Adobe-organisation som din Cloud Manager.
+2. Logga in på Adobe I/O Runtime Extensible CLI genom att köra följande kommando för att få åtkomsttoken. Se till att du loggar in på samma Adobe Org som din Cloud Manager.
 
    ```shell
    $ aio login
@@ -154,13 +154,13 @@ AIO CLI-pluginerna måste konfigureras för att interagera med din RDE.
 
 ## Verifiera RDE-åtkomst
 
-Kontrollera installationen och konfigurationen av AEM RDE-plugin-programmet genom att köra följande kommando.
+Kontrollera installationen och konfigurationen av plugin-programmet för AEM RDE genom att köra följande kommando.
 
 ```shell
 $ aio aem:rde:status
 ```
 
-Statusinformationen för RDE visas som miljöstatus, listan med _ditt AEM projekt_ och konfigurationer för författaren och publiceringstjänsten.
+Statusinformationen för RDE visas som miljöstatus, listan över _ditt AEM-projekt_ som innehåller paket och konfigurationer för författaren och publiceringstjänsten.
 
 ## Nästa steg
 

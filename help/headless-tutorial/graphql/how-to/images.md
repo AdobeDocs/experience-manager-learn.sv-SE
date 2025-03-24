@@ -1,7 +1,7 @@
 ---
 title: Använda optimerade bilder med AEM Headless
 description: Lär dig hur du begär optimerade bild-URL:er med AEM Headless.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
 role: Developer
@@ -11,7 +11,7 @@ thumbnail: KT-10253.jpeg
 last-substantial-update: 2023-04-19T00:00:00Z
 exl-id: 6dbeec28-b84c-4c3e-9922-a7264b9e928c
 duration: 300
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 0%
@@ -20,18 +20,18 @@ ht-degree: 0%
 
 # Optimerade bilder med AEM Headless {#images-with-aem-headless}
 
-Bilder är en viktig aspekt av [att utveckla engagerande AEM headless-upplevelser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless hanterar bildresurser och optimerad leverans.
+Bilder är en viktig aspekt när det gäller att [utveckla engagerande AEM headless-upplevelser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless har stöd för hantering av bildresurser och optimerad leverans.
 
-Content Fragments used in AEM Headless content modeling, ofta reference image assets intended for display in the headless experience. AEM GraphQL-frågor kan skrivas för att ge URL:er till bilder baserat på varifrån bilden refereras.
+Content Fragments used in AEM Headless content modeling, ofta reference image assets intended for display in the headless experience. AEM GraphQL-frågor kan skrivas för att ange URL:er till bilder baserat på varifrån bilden refereras.
 
 Typen `ImageRef` har fyra URL-alternativ för innehållsreferenser:
 
-+ `_path` är den refererade sökvägen i AEM och innehåller inte AEM (värdnamn)
++ `_path` är den refererade sökvägen i AEM och innehåller inte något AEM-ursprung (värdnamn)
 + `_dynamicUrl` är URL:en till för webboptimerad leverans av bildresurser.
-   + `_dynamicUrl` innehåller inte något AEM ursprung, så domänen (AEM författare eller AEM Publish-tjänst) måste anges av klientprogrammet.
-+ `_authorUrl` är den fullständiga URL:en till bildresursen AEM författaren
-   + [AEM Författare](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) kan användas för att skapa en förhandsgranskning av det headless-programmet.
-+ `_publishUrl` är den fullständiga URL:en till bildresursen på AEM Publish
+   + `_dynamicUrl` innehåller inte något AEM-ursprung, så domänen (AEM Author eller AEM Publish Service) måste anges av klientprogrammet.
++ `_authorUrl` är den fullständiga URL:en till bildresursen på AEM Author
+   + [AEM Author](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) kan användas för att skapa en förhandsgranskning av det headless-programmet.
++ `_publishUrl` är den fullständiga URL:en till bildresursen i AEM Publish
    + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) är vanligtvis där produktionsdistributionen av det headless-programmet visar bilder från.
 
 `_dynamicUrl` är den rekommenderade URL-adressen som ska användas för leverans av bildresurser och bör ersätta användningen av `_path`, `_authorUrl` och `_publishUrl` när det är möjligt.
@@ -106,7 +106,7 @@ Variabeln `$path` som används i filtret `_path` kräver den fullständiga sökv
 | `flip` | Vänd bilden. | ✘ | `HORIZONTAL`, `VERTICAL`, `HORIZONTAL_AND_VERTICAL` |
 | `quality` | Bildkvaliteten i procent av den ursprungliga kvaliteten. | ✘ | 1-100 |
 | `width` | Utdatabildens bredd i pixlar. När `size` anges ignoreras `width`. | ✘ | Positivt heltal |
-| `preferWebP` | Om `true` och AEM visar en WebP om webbläsaren stöder det, oavsett `format`. | ✘ | `true`, `false` |
+| `preferWebP` | Om `true` och AEM skickar en WebP om webbläsaren stöder det, oavsett `format`. | ✘ | `true`, `false` |
 
 
 ## GraphQL svar
@@ -142,7 +142,7 @@ let dynamicUrl = AEM_HOST + data.adventureByPath.item.primaryImage._dynamicUrl;
 <img src={dynamicUrl} alt={data.adventureByPath.item.title}/>
 ```
 
-Kom ihåg att `_dynamicUrl` inte innehåller den AEM domänen, så du måste ange den önskade källan för den bild-URL som ska matchas.
+Kom ihåg att `_dynamicUrl` inte innehåller AEM-domänen, så du måste ange det önskade ursprung som image-URL:en ska matcha.
 
 ## Responsiva URL:er
 
@@ -196,9 +196,9 @@ Låt oss skapa ett enkelt React-program som visar webboptimerade bilder efter [r
 
 ### Exempelkod
 
-Den här enkla React-appen använder [AEM Headless SDK](./aem-headless-sdk.md) för att fråga AEM Headless-API:er efter ett Adventure-innehåll och visar den webboptimerade bilden med [img-elementet med srcset](#img-element-with-srcset) och [picture-elementet](#picture-element). `srcset` och `sources` använder en anpassad `setParams`-funktion för att lägga till den webboptimerade frågeparametern för leverans till `_dynamicUrl` för bilden, så ändra den bildåtergivning som levereras baserat på webbklientens behov.
+Den här enkla React-appen använder [AEM Headless SDK](./aem-headless-sdk.md) för att fråga AEM Headless-API:er efter ett Adventure-innehåll och visar den webboptimerade bilden med hjälp av [img-elementet med srcset](#img-element-with-srcset) och [picture-elementet](#picture-element). `srcset` och `sources` använder en anpassad `setParams`-funktion för att lägga till den webboptimerade frågeparametern för leverans till `_dynamicUrl` för bilden, så ändra den bildåtergivning som levereras baserat på webbklientens behov.
 
-Fråga mot AEM utförs i den anpassade React-kroken [useAdventureByPath som använder den AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries).
+Fråga mot AEM utförs i den anpassade React-kroken [useAdventureByPath som använder AEM Headless SDK](./aem-headless-sdk.md#graphql-persisted-queries).
 
 ```javascript
 // src/App.js

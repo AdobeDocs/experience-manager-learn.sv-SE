@@ -1,8 +1,8 @@
 ---
 title: Använda Adobe Stock-resurser med AEM Assets
-description: AEM ger användarna möjlighet att söka, förhandsgranska, spara och licensiera Adobe Stock-resurser direkt från AEM. Organisationer kan nu integrera sin Adobe Stock Enterprise-plan med AEM Assets för att se till att licensierat material nu är allmänt tillgängligt för kreativa projekt och marknadsföringsprojekt, med de kraftfulla filhanteringsfunktionerna i AEM.
+description: AEM ger användarna möjlighet att söka, förhandsgranska, spara och licensiera Adobe Stock-mediefiler direkt från AEM. Organisationer kan nu integrera sin Adobe Stock Enterprise-plan med AEM Assets för att se till att licensierat material nu finns tillgängligt i stor omfattning för kreativa projekt och marknadsföringsprojekt, med de kraftfulla filhanteringsfunktionerna i AEM.
 feature: Adobe Stock
-version: 6.5
+version: Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
@@ -10,7 +10,7 @@ last-substantial-update: 2022-06-26T00:00:00Z
 doc-type: Feature Video
 exl-id: a3c3a01e-97a6-494f-b7a9-22057e91f4eb
 duration: 1079
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '861'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # Använda Adobe Stock med AEM Assets{#using-adobe-stock-assets-with-aem-assets}
 
-I AEM 6.4.2 kan användarna söka efter, förhandsgranska, spara och licensiera Adobe Stock-mediefiler direkt från AEM. Organisationer kan nu integrera sin Adobe Stock Enterprise-plan med AEM Assets för att se till att licensierat material nu är allmänt tillgängligt för kreativa projekt och marknadsföringsprojekt, med de kraftfulla filhanteringsfunktionerna i AEM.
+Med AEM 6.4.2 kan man söka, förhandsgranska, spara och licensiera Adobe Stock-material direkt från AEM. Organisationer kan nu integrera sin Adobe Stock Enterprise-plan med AEM Assets för att se till att licensierat material nu finns tillgängligt i stor omfattning för kreativa projekt och marknadsföringsprojekt, med de kraftfulla filhanteringsfunktionerna i AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/24678?quality=12&learn=on)
 
 >[!NOTE]
 >
->Integreringen kräver en [Enterprise Adobe Stock-plan](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) och AEM 6.4 med minst Service Pack 2 distribuerat. Mer information om AEM 6.4 Service Pack finns i [versionsinformationen](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html).
+>Integreringen kräver en [Enterprise Adobe Stock-plan](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) och AEM 6.4 med minst Service Pack 2 distribuerat. Information om Service Pack för AEM 6.4 finns i följande [versionsinformation](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html).
 
 Tack vare integreringen med Adobe Stock och AEM Assets kan skribenter och marknadsförare enkelt licensiera och använda mediefiler för kreativa ändamål eller marknadsföringsändamål. Du kan söka efter Stock-resurser antingen med Omni Search, genom att lägga till platsfiltret som Adobe Stock eller genom att navigera i huvudnavigeringen för AEM Assets och klicka på ikonen Sök i Adobe Stock Coral-användargränssnittet.
 
@@ -65,7 +65,7 @@ Tack vare integreringen med Adobe Stock och AEM Assets kan skribenter och markna
 
 ## Konfigurera Adobe Stock med AEM Assets{#set-up-adobe-stock-with-aem-assets}
 
-I AEM 6.4.2 kan användarna söka efter, förhandsgranska, spara och licensiera Adobe Stock-mediefiler direkt från AEM. I den här videon får du snabbt veta hur du ställer in Adobe Stocks med AEM Assets via Adobe I/O Console.
+Med AEM 6.4.2 kan man söka, förhandsgranska, spara och licensiera Adobe Stock-material direkt från AEM. Den här videon handlar om hur du snabbt får reda på hur du konfigurerar Adobe Stocks med AEM Assets via Adobe I/O Console.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25043?quality=12&learn=on)
 
@@ -75,7 +75,7 @@ I AEM 6.4.2 kan användarna söka efter, förhandsgranska, spara och licensiera 
 
 >[!NOTE]
 >
->Integreringen kräver en [Enterprise Adobe Stock-plan](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) och AEM 6.4 med minst [Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=.%2Fjcr%3aContent%2Fmetadata%2FDc%3Aversion&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3AEM%2F6-4&amp;3_group.propertyvalues.property=.%2Fjcr%3aContent%2Fmetadata%2FDc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderBy=%40jcr%3Acontent%2Fmetadata%2Fdc%3Atitle&amp;order.sort=asc &amp;layout=list&amp;p.offset=0&amp;p.limit=24) distribuerad. Mer information om AEM 6.4 Service Pack finns i [versionsinformationen](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html). Du behöver även administratörsbehörighet för [Adobe I/O Console](https://console.adobe.io/), [Adobe Admin Console](https://adminconsole.adobe.com/) och Adobe Experience Manager för att kunna konfigurera integreringen.
+>Integreringen kräver en [Enterprise Adobe Stock-plan](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html) och AEM 6.4 med minst [Service Pack 2](https://experience.adobe.com/#/downloads/content/software-distribution/en/aem.html?fulltext=AEM*+6*+4*+Service*+Pack*&amp;2_group.propertyvalues.property=.%2Fjcr%3aContent%2Fmetadata%2FDc%3Aversion&amp;2_group.propertyvalues.operation=equals&amp;2_group.propertyvalues.0_values=target-version%3AEM%2F6-4&amp;3_group.propertyvalues.property=.%2Fjcr%3aContent%2Fmetadata%2FDc%3AsoftwareType&amp;3_group.propertyvalues.operation=equals&amp;3_group.propertyvalues.0_values=software-type%3Aservice-and-cumulative-fix&amp;orderBy=%40jcr%3Acontent%2Fmetadata%2Fdc%3Atitle&amp;order.sort=asc &amp;layout=list&amp;p.offset=0&amp;p.limit=24) distribuerad. Information om Service Pack för AEM 6.4 finns i följande [versionsinformation](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html). Du behöver även administratörsbehörighet för [Adobe I/O Console](https://console.adobe.io/), [Adobe Admin Console](https://adminconsole.adobe.com/) och Adobe Experience Manager för att kunna konfigurera integreringen.
 
 ### Installation {#installations}
 
@@ -94,9 +94,9 @@ I AEM 6.4.2 kan användarna söka efter, förhandsgranska, spara och licensiera 
 
 ![Tekniskt konto för Adobe IMS](assets/screen_shot_2018-10-22at12219pm.png)
 
-#### Konfigurera Adobe Stock-Cloud Service {#set-up-adobe-stock-cloud-services}
+#### Konfigurera Adobe Stock Cloud Services {#set-up-adobe-stock-cloud-services}
 
-1. Skapa en ny molntjänstkonfiguration för Adobe Stock under **Verktyg > Cloud Service.**
+1. Skapa en ny molntjänstkonfiguration för Adobe Stock under **Verktyg > CLoud-tjänster.**
 2. Välj den *Adobe IMS-konfiguration* som skapades i avsnittet ovan för din *Adobe Stock Cloud*-konfiguration
 
 3. Se till att du väljer **MILJÖ** som PROD.
@@ -104,12 +104,12 @@ I AEM 6.4.2 kan användarna söka efter, förhandsgranska, spara och licensiera 
 5. Välj språkinställning och slutför inställningarna.
 6. Du kan också lägga till användare/grupper i din Adobe Stock Cloud-tjänst för att aktivera åtkomst för specifika användare eller grupper.
 
-![Adobe Assets Stock-konfiguration](assets/screen_shot_2018-10-22at12425pm.png)
+![Konfiguration av Adobe Assets Stock](assets/screen_shot_2018-10-22at12425pm.png)
 
 ### Ytterligare resurser
 
 * [Enterprise Stock-plan](https://landing.adobe.com/en/na/products/creative-cloud/ctir-4625-stock-for-enterprise/index.html)
-* [AEM 6.4 Service Pack 2 Versionsinformation](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
+* [Versionsinformation om AEM 6.4 Service Pack 2](https://experienceleague.adobe.com/docs/experience-manager-65/release-notes/release-notes.html)
 * [Integrera AEM och Adobe Stock](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/aem-assets-adobe-stock.html)
-* [Integrerings-API:t för Adobe I/O-konsolen](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
+* [Integrerings-API:t för Adobe I/O Console](https://www.adobe.io/apis/cloudplatform/console/authentication/gettingstarted.html)
 * [Adobe Stock API Docs](https://www.adobe.io/apis/creativecloud/stock/docs.html)

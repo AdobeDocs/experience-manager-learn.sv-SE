@@ -1,7 +1,7 @@
 ---
-title: Bästa tillvägagångssätt för indexering av AEM
-description: Lär dig mer om att indexera bästa praxis inom AEM.
-version: 6.4, 6.5, Cloud Service
+title: Bästa praxis för indexering i AEM
+description: Läs om hur du indexerar metodtips i AEM.
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 sub-product: Experience Manager, Experience Manager Sites
 feature: Search
 doc-type: Article
@@ -13,33 +13,33 @@ last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
-source-git-commit: 54a7f93637545a4467c4c587bbc3d1d0de5c64a1
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 0%
 
 ---
 
-# Bästa tillvägagångssätt för indexering av AEM
+# Bästa praxis för indexering i AEM
 
-Lär dig mer om hur du indexerar metodtips i Adobe Experience Manager (AEM). Apache [Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/query/query.html) driver innehållssökningen i AEM och följande är viktiga punkter:
+Läs om hur du indexerar metodtips i Adobe Experience Manager (AEM). Apache [Jackrabbit Oak](https://jackrabbit.apache.org/oak/docs/query/query.html) driver innehållssökningen i AEM och följande är viktiga punkter:
 
-- AEM innehåller olika index som stöder sök- och frågefunktioner, till exempel `damAssetLucene`, `cqPageLucene` med flera.
+- AEM tillhandahåller olika index som stöder sök- och frågefunktioner, till exempel `damAssetLucene`, `cqPageLucene` med flera.
 - Alla indexdefinitioner lagras i databasen under noden `/oak:index`.
 - AEM as a Cloud Service stöder endast Oak Lucene-index.
-- Indexkonfigurationen ska hanteras i AEM projektkodbas och distribueras med Cloud Manager CI/CD-pipelines.
+- Indexkonfigurationen bör hanteras i AEM projektkodbas och distribueras med Cloud Manager CI/CD-pipelines.
 - Om det finns flera tillgängliga index för en given fråga används **index med den lägsta uppskattade kostnaden**.
 - Om det inte finns något index tillgängligt för en given fråga, gås innehållsträdet igenom för att hitta det matchande innehållet. Standardgränsen via `org.apache.jackrabbit.oak.query.QueryEngineSettingsService` är dock att bara gå igenom 10 000 noder.
 - Resultatet av en fråga **filtreras senast** för att säkerställa att den aktuella användaren har läsåtkomst. Det innebär att frågeresultaten kan vara mindre än antalet indexerade noder.
 - Omindexeringen av databasen efter ändringar av indexdefinitionen kräver tid och beror på databasens storlek.
 
-Om du vill ha en effektiv och korrekt sökfunktion som inte påverkar prestandan för den AEM instansen är det viktigt att du förstår de bästa metoderna för indexering.
+Om du vill ha en effektiv och korrekt sökfunktion som inte påverkar AEM-instansens prestanda är det viktigt att du förstår hur du indexerar de bästa metoderna.
 
 ## Index för anpassad kontra OTB
 
 Ibland måste du skapa anpassade index som passar dina sökbehov. Följ dock riktlinjerna nedan innan du skapar anpassade index:
 
-- Förstå sökkraven och kontrollera om OTB-indexen stöder sökkraven. Använd **frågeprestandaverktyget**, som finns på [lokal SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) och AEMCS via Developer Console eller `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`.
+- Förstå sökkraven och kontrollera om OTB-indexen stöder sökkraven. Använd **frågeprestandaverktyget** som finns på [lokal SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) och AEMCS via Developer Console eller `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`.
 
 - Definiera en optimal fråga genom att använda flödesdiagrammet [optimera frågor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) och [JCR-frågechebladet](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf) för referens.
 
@@ -53,9 +53,9 @@ Ibland måste du skapa anpassade index som passar dina sökbehov. Följ dock rik
 
 - I **AEM 6.X** fungerar inte namngivningen __, men du behöver bara uppdatera OTB-indexet med nödvändiga egenskaper i noden `indexRules`.
 
-- Kopiera alltid den senaste OTB-indexdefinitionen från den AEM instansen med CRX DE Package Manager (/crx/packmgr/), byt namn på den och lägg till anpassningar i XML-filen.
+- Kopiera alltid den senaste OTB-indexdefinitionen från AEM-instansen med CRX DE Package Manager (/crx/packmgr/), byt namn på den och lägg till anpassningar i XML-filen.
 
-- Lagra indexdefinitionen i AEM projekt på `ui.apps/src/main/content/jcr_root/_oak_index` och distribuera den med Cloud Manager CI/CD-pipelines. Mer information finns i [Distribuera anpassade indexdefinitioner](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing).
+- Lagra indexdefinitionen i AEM-projektet på `ui.apps/src/main/content/jcr_root/_oak_index` och distribuera den med Cloud Manager CI/CD-pipelines. Mer information finns i [Distribuera anpassade indexdefinitioner](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing).
 
 ### Helt anpassat index
 
@@ -69,7 +69,7 @@ Det sista alternativet måste vara att skapa ett helt anpassat index och endast 
 
 - Undvik också att lägga till flera nodtyper, till exempel `cq:Page` och `cq:Tag`, under indexeringsregelnoden (`indexRules`). Skapa i stället separata index för varje nodtyp.
 
-- Som vi nämnt ovan ska du lagra indexdefinitionen i AEM på `ui.apps/src/main/content/jcr_root/_oak_index` och distribuera den med Cloud Manager CI/CD-pipelines. Mer information finns i [Distribuera anpassade indexdefinitioner](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing).
+- Som vi nämnt ovan ska du lagra indexdefinitionen i AEM-projektet på `ui.apps/src/main/content/jcr_root/_oak_index` och distribuera den med Cloud Manager CI/CD-pipelines. Mer information finns i [Distribuera anpassade indexdefinitioner](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing).
 
 - Riktlinjerna för indexdefinitioner är:
    - Nodtypen (`jcr:primaryType`) ska vara `oak:QueryIndexDefinition`
@@ -185,7 +185,7 @@ Ibland behöver användare inte kunna söka i innehållet i en fil eller resurs,
 
 Så här inaktiverar du Apache Tika efter MIME-typ:
 
-- Lägg till noden `tika` av typen `nt:unstructured` under anpassad indexdefinition eller OOBT-indexdefinition. I följande exempel är MIME-typen PDF inaktiverad för OTB `damAssetLucene`-index.
+- Lägg till noden `tika` av typen `nt:unstructured` under anpassad indexdefinition eller OOBT-indexdefinition. I följande exempel är MIME-typen för PDF inaktiverad för OTB `damAssetLucene`-index.
 
 ```xml
 /oak:index/damAssetLucene
@@ -211,7 +211,7 @@ Så här inaktiverar du Apache Tika efter MIME-typ:
 
 - Om du vill uppdatera det lagrade indexet anger du egenskapen `refresh` till `true` under indexdefinitionsnoden. Mer information finns i [Egenskaper för indexdefinition](https://jackrabbit.apache.org/oak/docs/query/lucene.html#index-definition:~:text=Defaults%20to%2010000-,refresh,-Optional%20boolean%20property).
 
-I följande bild visas indexvärdet för OTB `damAssetLucene` med noden `tika` och filen `config.xml` som inaktiverar MIME-typerna och PDF.
+Följande bild visar indexet OTB `damAssetLucene` med noden `tika` och filen `config.xml` som inaktiverar PDF och andra MIME-typer.
 
 ![OTB damAssetLucene-index med kodnoden ](./assets/understand-indexing-best-practices/ootb-index-with-tika-node.png)
 
@@ -253,7 +253,7 @@ Verktyget [Indexdefinitionsanalys](https://oakutils.appspot.com/analyze/index) h
 
 ### Verktyg för frågeprestanda
 
-OTB _frågeprestandaverktyget_ som finns på [lokal SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) och AEMCS via Developer Console eller `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` hjälper **att analysera frågeprestanda** och [JCR Query Cheat Sheet](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en) för att definiera den optimala frågan.
+OTB _frågeprestandaverktyget_ som finns på [lokal SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) och AEMCS via Developer Console eller `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` hjälper **att analysera frågeprestanda** och [JCR-frågecheblad](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en) för att definiera den optimala frågan.
 
 ### Felsökningsverktyg och tips
 

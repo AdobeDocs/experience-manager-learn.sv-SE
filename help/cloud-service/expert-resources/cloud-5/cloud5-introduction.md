@@ -1,7 +1,7 @@
 ---
 title: Introduktion till Cloud 5
 description: Introduktion till AEM Engineering Cloud 5-serien.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developer Tools
 role: Admin, Developer
 level: Intermediate
@@ -10,7 +10,7 @@ thumbnail: 340667.jpeg
 last-substantial-update: 2022-10-01T00:00:00Z
 exl-id: 5dc40184-15d3-483a-885e-1b241e6514ba
 duration: 292
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '71'
 ht-degree: 0%

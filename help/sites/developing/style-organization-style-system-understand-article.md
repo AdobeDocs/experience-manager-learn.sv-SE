@@ -2,14 +2,14 @@
 title: De bästa sätten att lära sig formatsystem med AEM Sites
 description: En detaljerad artikel som förklarar de bästa sätten att implementera Style System med Adobe Experience Manager Sites.
 feature: Style System
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate, Experienced
 doc-type: Article
 exl-id: c51da742-5ce7-499a-83da-227a25fb78c9
 duration: 328
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Granska innehållet i [Om hur du kodar för formatsystemet](style-system-technical-video-understand.md) så får du en förståelse för de BEM-liknande konventioner som används av AEM.
+>Granska innehållet i [Om hur du kodar för formatsystemet](style-system-technical-video-understand.md) så får du en förståelse för de BEM-liknande konventioner som används av AEM Style System.
 
 Det finns två huvudvarianter eller format som implementeras för AEM Style System:
 
@@ -33,7 +33,7 @@ Det finns två huvudvarianter eller format som implementeras för AEM Style Syst
 
 ## Bästa praxis för att organisera {#style-organization-best-practices}
 
-När du definierar de formatnamn som är tillgängliga för AEM författare är det bäst att:
+När du definierar de formatnamn som är tillgängliga för författare av AEM är det bäst att:
 
 * Namnge format med hjälp av ett språk som författarna förstår
 * Minimera antalet formatalternativ
@@ -41,17 +41,17 @@ När du definierar de formatnamn som är tillgängliga för AEM författare är 
 * Visa endast formatkombinationer som har en effekt
    * Om ineffektiva kombinationer exponeras, se till att de åtminstone inte har någon skadlig effekt
 
-I takt med att antalet möjliga formatkombinationer som är tillgängliga för AEM ökar, finns det fler permutationer som måste vara QAd och valideras mot varumärkesstandarder. För många alternativ kan också förvirra författare eftersom det kan bli oklart vilket alternativ eller vilken kombination som krävs för att skapa önskad effekt.
+I takt med att antalet möjliga stilkombinationer som är tillgängliga för AEM-författare ökar, finns det fler möjligheter som måste vara QAd och valideras mot varumärkesstandarder. För många alternativ kan också förvirra författare eftersom det kan bli oklart vilket alternativ eller vilken kombination som krävs för att skapa önskad effekt.
 
 ### Formatnamn jämfört med CSS-klasser {#style-names-vs-css-classes}
 
-Formatnamn, eller de alternativ som visas för AEM författare, och de implementerande CSS-klassnamnen är inte kopplade till AEM.
+Formatnamn, eller de alternativ som visas för AEM-författare, och de implementerande CSS-klassnamnen är inte kopplade till varandra i AEM.
 
-Detta gör att formatalternativen kan märkas i en ordlista som är klar och som kan tolkas av de AEM författarna, men gör att CSS-utvecklare kan namnge CSS-klasserna på ett framtidssäkert, semantiskt sätt. Till exempel:
+Detta gör att formatalternativen kan märkas i en ordlista som är klar och som kan tolkas av AEM-författare, men gör att CSS-utvecklare kan namnge CSS-klasserna på ett framtidssäkert, semantiskt sätt. Till exempel:
 
-En komponent måste ha alternativen för att färgläggas med varumärkets **primära** - och **sekundära** -färger, men AEM författare kan färgerna som **gröna** och **gula** i stället för det primära och sekundära designspråket.
+En komponent måste ha alternativen för att färgläggas med varumärkets **primära** - och **sekundära** -färger, men AEM-författarna kan färgerna som **gröna** och **gula** i stället för som det primära och sekundära designspråket.
 
-AEM Style System kan visa dessa färgvisningsformat med hjälp av de författarvänliga etiketterna **Green** och **Yellow**, och CSS-utvecklarna kan använda semantiska namn på `.cmp-component--primary-color` och `.cmp-component--secondary-color` för att definiera den faktiska formatimplementeringen i CSS.
+AEM Style System kan visa dessa färgvisningsformat med hjälp av de redigeringsvänliga etiketterna **Green** och **Yellow**, samtidigt som CSS-utvecklare kan använda semantiska namn på `.cmp-component--primary-color` och `.cmp-component--secondary-color` för att definiera den faktiska formatimplementeringen i CSS.
 
 Formatnamnet för **grönt** mappas till `.cmp-component--primary-color` och **gult** till `.cmp-component--secondary-color`.
 
@@ -93,7 +93,7 @@ Det går till och med att tilldela ett namngivet format som standardformat, till
 
 >[!NOTE]
 >
->Observera att standardlayoutstilen INTE har något visningsformatnamn, men författaren kan välja ett visningsalternativ i det AEM formatsystemmarkeringsverktyget.
+>Observera att standardlayoutformatet INTE har något visningsformatnamn, men författaren kan välja ett visningsalternativ i markeringsverktyget för AEM Style System.
 >
 >Detta bryter mot bästa praxis:
 >
@@ -158,7 +158,7 @@ För att uppnå detta konfigureras en **layoutstil** av **Promo** och **visnings
 
 Layoutstilen **Kampanj högerjusterad** är en variation av den Promo-stil som används för att vända platsen för bilden och texten (bild till höger, text till vänster).
 
-Den högra justeringen, i sin helhet, är ett visningsformat som du kan ange i AEM Style System som ett visningsformat som du väljer i samband med kampanjlayoutformatet. Detta bryter mot bästa praxis:
+Den högra justeringen, i sin helhet, är en visningsstil som du kan ange i AEM Style System som en visningsstil som du väljer i samband med kampanjlayoutstilen. Detta bryter mot bästa praxis:
 
 **Visa endast formatkombinationer som har en effekt**
 
@@ -273,7 +273,7 @@ CSS för att färglägga texten i layoutstilen **Hero** med den primära (gröna
 ## Ytterligare resurser {#additional-resources}
 
 * [Systemdokumentation för format](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html)
-* [Skapar AEM klientbibliotek](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [Skapar AEM-klientbibliotek](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [BEM-dokumentationswebbplats (Block Element Modifier)](https://getbem.com/)
 * [LESS Documentation website](https://lesscss.org/)
 * [jQuery-webbplats](https://jquery.com/)

@@ -1,7 +1,7 @@
 ---
 title: Vad är "The Dispatcher"?
 description: Förstå vad en Dispatcher faktiskt är.
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 96c8dd09-e0a7-4abc-b04b-a805aaa67502
 duration: 73
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 [Innehållsförteckning](./overview.md)
 
-Börja med den grundläggande beskrivningen av vad som innebär en AEM Dispatcher.
+Börja med en beskrivning av vad som innebär en AEM Dispatcher.
 
 ## Apache Web Server
 
@@ -35,24 +35,24 @@ Grundläggande förklaring av vad en Apache-server gör:
 
 
 
-## AEM specifik modulfil (`mod_dispatcher.so`)
+## AEM-specifik modulfil (`mod_dispatcher.so`)
 
 Lägg sedan till ett plugin-program till webbservern Apache som kallas Dispatcher-modulen
 
-Grundläggande förklaring av vad Dispatcher-modulen Adobe AEM gör:
+Grundläggande förklaring av vad Adobe AEM Dispatcher gör:
 
 - Utökar standardfilhanteraren
-- Filtrerar bort felaktiga begäranden/Skyddar AEM mjuka nudd/slutpunkter
+- Filtrerar bort felaktiga begäranden/Skyddar AEM mjuka Num-/slutpunkter
 - Läs in saldon om det finns mer än en renderare
 - Tillåter en cachekatalog i realtid/stöder tömning av mellanlagringsfiler
 - Det är ytterdörren till alla AMS-installationer och levererar webbplatser och material till klientens webbläsare
-- Den cachelagrar begäranden om återanvändning i mycket snabbare takt än en AEM kan göra på egen hand
+- Den cachelagrar begäranden om återanvändning i mycket snabbare takt än en AEM-server kan göra själv
 - Mycket mer...
 
 ## Arbetsflöde för webbtrafik
 
 Genom att förstå vilka delar som installeras tillsammans för att skapa en grundläggande Dispatcher-server får du en förståelse för det grundläggande arbetsflödet för webbtrafik för en Adobe Manager Services-konfiguration.
-Detta bör hjälpa er att förstå vilken roll det spelar i systemkedjan som levererar innehåll till besökare av ert AEM innehåll.
+Detta bör hjälpa er att förstå vilken roll det spelar i kedjan av system som levererar innehåll till besökare av ditt AEM-innehåll.
 
 <b>Serverar redan cachelagrat innehåll</b>
 

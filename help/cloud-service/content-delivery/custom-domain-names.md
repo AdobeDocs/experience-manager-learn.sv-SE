@@ -1,7 +1,7 @@
 ---
 title: Alternativ för anpassade domännamn
 description: Lär dig hur du hanterar och implementerar anpassade domännamn för din värdbaserade AEM as a Cloud Service-webbplats.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Custom Domain Names
 topic: Architecture, Migration
 role: Admin, Architect, Developer
@@ -12,9 +12,9 @@ last-substantial-update: 2024-08-09T00:00:00Z
 jira: KT-15946
 thumbnail: KT-15946.jpeg
 exl-id: e11ff38c-e823-4631-a5b0-976c2d11353e
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
@@ -31,11 +31,11 @@ Innan du börjar implementera anpassade domännamn måste du förstå följande 
 
 ### Vad är ett domännamn?
 
-Ett domännamn är det användarvänliga namnet på en webbplats, t.ex. adobe.com, som pekar på en viss plats (t.ex. 170.2.14.16) på Internet.
+Ett domännamn är det användarvänliga namnet på en webbplats, t.ex. adobe.com, som pekar på en viss plats (IP-adress som 170.2.14.16) på Internet.
 
 ### Standarddomännamn i AEM as a Cloud Service
 
-Som standard har AEM as a Cloud Service etablerats med ett standarddomännamn som slutar på `*.adobeaemcloud.com`. Det SSL-certifikat med jokertecken som utfärdas mot `*.adobeaemcloud.com` används automatiskt i alla miljöer och det här jokertecknet är Adobe-ansvar.
+Som standard har AEM as a Cloud Service etablerats med ett standarddomännamn som slutar på `*.adobeaemcloud.com`. Det SSL-certifikat med jokertecken som utfärdas mot `*.adobeaemcloud.com` används automatiskt i alla miljöer och det här jokertecknet är Adobe ansvar.
 
 Standarddomännamnen har formatet `https://<SERVICE-TYPE>-p<PROGRAM-ID>-e<ENVIRONMENT-ID>.adobeaemcloud.com`.
 
@@ -45,9 +45,9 @@ Standarddomännamnen har formatet `https://<SERVICE-TYPE>-p<PROGRAM-ID>-e<ENVIRO
 
 Sammanfattningsvis har du **11** (RDE har ingen förhandsvisningsmiljö) unika URL:er i kombination med standarddomännamnet när alla AEM as a Cloud Service-miljöer har etablerats.
 
-### CDN hanterad av Adobe jämfört med kundhanterad CDN
+### CDN som hanteras av Adobe jämfört med kundhanterad CDN
 
-För att minska latensen och förbättra webbplatsens prestanda är AEM as a Cloud Service integrerat med ett CDN-nätverk (Content Delivery Network) som hanteras av Adobe. CDN som hanteras av Adobe aktiveras automatiskt för alla miljöer. Mer information finns i [AEM as a Cloud Service-cachning](../caching/overview.md).
+För att minska latensen och förbättra prestanda på webbplatsen är AEM as a Cloud Service integrerat med ett CDN-nätverk (Adobe-managed Content Delivery Network). CDN som hanteras av Adobe aktiveras automatiskt för alla miljöer. Mer information finns i [AEM as a Cloud Service-cachning](../caching/overview.md).
 
 Men kunder kan också använda sitt eget CDN, som kallas **kundhanterad CDN**. Det är inte nödvändigt, men få kunder använder det av andra skäl. I det här fallet ansvarar kunden för att hantera CDN-konfigurationer och -inställningar.
 
@@ -59,15 +59,15 @@ När du lägger till anpassade domännamn måste du ange ett giltigt SSL-certifi
 
 Normalt använder kunderna ett anpassat domännamn för Prod-miljöer (AEM as a Cloud Service webbplats) och ibland för lägre miljöer som **stage** eller **dev**.
 
-| AEM | Stöder anpassad domän? |
+| AEM servicetyp | Stöder anpassad domän? |
 |---------------------|:-----------------------:|
 | Författare | ✘ |
 | Förhandsgranska | ✔ |
-| Publish | ✔ |
+| Publicera | ✔ |
 
 ## Implementera domännamn
 
-Om du vill implementera domännamn med hjälp av ett CDN som hanteras av Adobe eller en kundhanterad CDN guidar följande flödesschema dig genom processen:
+Om du vill implementera domännamn med hjälp av Adobe-hanterat CDN eller kundhanterat CDN guidar följande flödesschema dig genom processen:
 
 ![Flödesschema för hantering av domännamn](./assets/domain-name-management-flowchart.png){width="800" zoomable="yes"}
 
@@ -75,12 +75,12 @@ I följande tabell visas även var du ska hantera de specifika konfigurationerna
 
 | Anpassat domännamn med | Lägg till SSL-certifikat i | Lägg till domännamn i | Konfigurera DNS-poster på | Behöver du CDN-regel för HTTP-huvudvalidering? |
 |---------------------|:-----------------------:|-----------------------:|-----------------------:|-----------------------:|
-| CDN som hanteras av Adobe | Adobe Cloud Manager | Adobe Cloud Manager | DNS-värdtjänst | ✘ |
+| Adobe-hanterad CDN | Adobe Cloud Manager | Adobe Cloud Manager | DNS-värdtjänst | ✘ |
 | Kundhanterad CDN | CDN-leverantör | CDN-leverantör | DNS-värdtjänst | ✔ |
 
 ### Stegvisa självstudiekurser
 
 Nu när du har förstått processen för domännamnshantering kan du implementera anpassade domännamn för din AEM as a Cloud Service webbplats genom att följa självstudiekurserna nedan:
 
-**[Anpassade domännamn med Adobe-hanterat CDN](./custom-domain-name-with-adobe-managed-cdn.md)**: I den här självstudiekursen lär du dig hur du lägger till ett eget domännamn på en **AEM as a Cloud Service-webbplats med Adobe-hanterat CDN**.
+**[Anpassade domännamn med Adobe-hanterat CDN](./custom-domain-name-with-adobe-managed-cdn.md)**: I den här självstudiekursen lär du dig hur du lägger till ett anpassat domännamn på en **AEM as a Cloud Service-webbplats med Adobe-hanterat CDN**.
 **[Anpassade domännamn med kundhanterat CDN](./custom-domain-names-with-customer-managed-cdn.md)**: I den här självstudiekursen får du lära dig hur du lägger till ett anpassat domännamn på en **AEM as a Cloud Service-webbplats med kundhanterat CDN**.

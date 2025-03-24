@@ -1,7 +1,7 @@
 ---
 title: Webbplatskartor
 description: Lär dig hur du kan förbättra din SEO genom att skapa webbplatskartor för AEM Sites.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Core Components
 topic: Content Management
 role: Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 937
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Lär dig hur du kan förbättra din SEO genom att skapa webbplatskartor för AEM
 
 ### Absoluta URL för webbplatskarta{#absolute-sitemap-urls}
 
-AEM webbplatskartan stöder absoluta URL:er genom att använda [Sling-mappning](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). Detta görs genom att skapa mappningsnoder på de AEM tjänsterna som genererar platskartor (vanligtvis den AEM Publish-tjänsten).
+AEM webbplatskarta stöder absoluta URL:er genom att använda [delningskarta](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html). Detta görs genom att skapa mappningsnoder på AEM-tjänster som genererar platskartor (vanligtvis AEM Publish-tjänsten).
 
 Ett exempel på en noddefinition för Sling-mappning för `https://wknd.com` kan definieras under `/etc/map/https` enligt följande:
 
@@ -50,7 +50,7 @@ Skärmbilden nedan visar en liknande konfiguration, men för `http://wknd.local`
 
 ### OSGi-konfiguration för schemaläggare för platskarta
 
-Definierar fabrikskonfigurationen [OSGi](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) för frekvensen (med [cron expressions](https://cron.help/)) återskapas/genereras och cachas i AEM.
+Definierar fabrikskonfigurationen [OSGi](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) för frekvensen (med [cron expressions](https://cron.help/)) återskapas/genereras och cachelagras i AEM.
 
 `ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
 
@@ -77,7 +77,7 @@ Tillåt HTTP-begäranden för platskarteläge och platskartefiler.
 
 ### Omskrivningsregel för Apache-webbserver
 
-Kontrollera att `.xml` platskarta HTTP-begäranden dirigeras till rätt underliggande AEM. Om URL-förkortning inte används, eller om delningskartor används för att uppnå URL-förkortning, behövs inte den här konfigurationen.
+Kontrollera att `.xml` platskarta HTTP-begäranden dirigeras till rätt underliggande AEM-sida. Om URL-förkortning inte används, eller om delningskartor används för att uppnå URL-förkortning, behövs inte den här konfigurationen.
 
 `dispatcher/src/conf.d/rewrites/rewrite.rules`
 
@@ -89,7 +89,7 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 
 ## Resurser
 
-+ [AEM Dokumentation för webbplatskartan](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=en)
++ [AEM SiteMap-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=en)
 + [Dokumentation för Apache Sling Sitemap](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
 + [Sitemap.org för webbplatskartan](https://www.sitemaps.org/protocol.html)
 + [Sitemap.org Dokumentation för indexfil för platskarta](https://www.sitemaps.org/protocol.html#index)

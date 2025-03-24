@@ -2,14 +2,14 @@
 title: Använda AEM Forms med Chatbot
 description: Tolka chattBot-data
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-15344
 topic: Development
 role: User
 level: Intermediate
 exl-id: 3c304b0a-33f8-49ed-a576-883df4759076
 duration: 22
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Tolka chattBot-data
 
-En [ChatBot-webkrok](https://www.chatbot.com/help/webhooks/what-are-webhooks/) användes för att skicka ChatBot-data till en AEM.
+En [ChatBot-webkrok](https://www.chatbot.com/help/webhooks/what-are-webhooks/) användes för att skicka ChatBot-data till en AEM-server.
 Data som hämtas i ChatBot är i JSON-format med användardata i attributobjektet enligt nedan
 ![chatbot-data](assets/chat-bot-data.png)
 

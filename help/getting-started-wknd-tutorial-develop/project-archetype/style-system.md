@@ -1,7 +1,7 @@
 ---
 title: Utveckla med Style System
 description: Lär dig hur du implementerar enskilda format och återanvänder kärnkomponenter med Experience Manager Style System. I den här självstudien beskrivs hur du utvecklar för Style System för att utöka grundkomponenterna med varumärkesspecifik CSS och avancerade principkonfigurationer för mallredigeraren.
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, Style System
 topic: Content Management, Development
 role: Developer
@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: 5b490132-cddc-4024-92f1-e5c549afd6f1
 recommendations: noDisplay, noCatalog
 duration: 358
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1555'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Lär dig hur du implementerar enskilda format och återanvänder kärnkomponente
 
 Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment).
 
-Vi rekommenderar även att du går igenom självstudiekursen [Klientbibliotek och Front-end-arbetsflöde](client-side-libraries.md) för att förstå grunderna i klientbibliotek och de olika frontverktygen som är inbyggda i AEM.
+Vi rekommenderar även att du går igenom självstudiekursen [Klientbibliotek och Front-end-arbetsflöde](client-side-libraries.md) för att förstå grunderna i klientbibliotek och de olika frontverktygen som är inbyggda i AEM-projektet.
 
 ### Startprojekt
 
@@ -45,7 +45,7 @@ Ta en titt på den baslinjekod som självstudiekursen bygger på:
    $ git checkout tutorial/style-system-start
    ```
 
-1. Distribuera kodbasen till en lokal AEM med dina Maven-kunskaper:
+1. Distribuera kodbasen till en lokal AEM-instans med dina Maven-kunskaper:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -63,7 +63,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Syfte
 
-1. Lär dig hur du använder Style System för att tillämpa varumärkesspecifik CSS på AEM kärnkomponenter.
+1. Lär dig hur du använder Style System för att tillämpa varumärkesspecifik CSS på AEM Core Components.
 1. Lär dig mer om BEM-notation och hur det kan användas för att skapa mer detaljerade omfång för format.
 1. Använd avancerade principkonfigurationer med redigerbara mallar.
 
@@ -130,7 +130,7 @@ Som författare kan vi använda understrykningsformatet på vissa rubrikkomponen
    >
    > För närvarande sker ingen synlig ändring eftersom formatet `underline` inte har implementerats. I nästa övning implementeras den här stilen.
 
-1. Klicka på ikonen **Sidinformation** > **Visa som publicerad** för att inspektera sidan utanför AEM redigerare.
+1. Klicka på ikonen **Sidinformation** > **Visa som publicerad** för att kontrollera sidan utanför AEM redigerare.
 1. Använd webbläsarens utvecklingsverktyg för att verifiera att CSS-klassen `cmp-title--underline` används på den yttre diven för markeringen runt Title-komponenten.
 
    ![Div med understruken klass tillämpad](assets/style-system/div-underline-class-applied.png)
@@ -146,7 +146,7 @@ Som författare kan vi använda understrykningsformatet på vissa rubrikkomponen
 
 ### Implementera understrykning - ui.front
 
-Implementera sedan understrykningsformatet med modulen **ui.front** i AEM. Webbpaketets utvecklingsserver som paketeras med modulen **ui.front** för att förhandsgranska formaten *innan* distribueras till en lokal instans av AEM används.
+Implementera sedan understrykningsformatet med modulen **ui.front** i AEM-projektet. Webbpaketets utvecklingsserver som paketeras med modulen **ui.front** för att förhandsgranska formaten *innan* distribueras till en lokal instans av AEM används.
 
 1. Starta processen `watch` inifrån modulen **ui.front**:
 
@@ -155,7 +155,7 @@ Implementera sedan understrykningsformatet med modulen **ui.front** i AEM. Webbp
    $ npm run watch
    ```
 
-   Detta startar en process som övervakar ändringar i modulen `ui.frontend` och synkroniserar ändringarna till AEM.
+   Detta startar en process som övervakar ändringar i modulen `ui.frontend` och synkroniserar ändringarna med AEM-instansen.
 
 
 1. Returnera din IDE och öppna filen `_title.scss` från: `ui.frontend/src/main/webpack/components/_title.scss`.
@@ -187,7 +187,7 @@ Implementera sedan understrykningsformatet med modulen **ui.front** i AEM. Webbp
    >
    >Alla kärnkomponenter följer **[BEM-notationen](https://github.com/adobe/aem-core-wcm-components/wiki/css-coding-conventions)**. Det är bäst att ha den yttre CSS-klassen som mål när du skapar ett standardformat för en komponent. Ett annat bra tillvägagångssätt är att ange klassnamn som anges av BEM-notationen för kärnkomponenten i stället för HTML-element som mål.
 
-1. Återgå till webbläsaren och AEM. Du ser att understrykningsformatet har lagts till:
+1. Gå tillbaka till webbläsaren och AEM. Du ser att understrykningsformatet har lagts till:
 
    ![Understrykningsformat visas på webbpaketets dev-server](assets/style-system/underline-implemented-webpack.png)
 
@@ -252,7 +252,7 @@ Lägg sedan till en profil för textkomponenterna.
 
 ### Implementera formatet Offertblock - ui.front
 
-Nu implementerar vi formatet Offertblock med modulen **ui.front** i AEM.
+Nu implementerar vi formatet Offertblock med modulen **ui.front** i AEM-projektet.
 
 1. Om den inte redan körs startar du `watch`-processen inifrån modulen **ui.front**:
 
@@ -300,7 +300,7 @@ Nu implementerar vi formatet Offertblock med modulen **ui.front** i AEM.
 
    >[!CAUTION]
    >
-   > I det här fallet används formaten som mål för element i Raw-HTML. Det beror på att komponenten Text har en RTF-redigerare för innehållsförfattare. Du bör skapa format direkt mot RTE-innehåll med försiktighet och det är ännu viktigare att formaten är täta.
+   > I det här fallet används formaten som mål för raw-HTML-element. Det beror på att komponenten Text har en RTF-redigerare för innehållsförfattare. Du bör skapa format direkt mot RTE-innehåll med försiktighet och det är ännu viktigare att formaten är täta.
 
 1. Återgå till webbläsaren en gång till och se att blockformatet Offert har lagts till:
 
@@ -334,17 +334,17 @@ main.container {
 }
 ```
 
-I stället för att använda elementet `main` HTML som mål kan Style System användas för att skapa ett **fast breddformat** som en del av behållarprincipen. Style System kan ge användare möjlighet att växla mellan behållare med **fast bredd** och **flytande bredd**.
+I stället för att använda HTML-elementet `main` som mål kan Style System användas för att skapa ett **fast breddformat** som en del av behållarprincipen. Style System kan ge användare möjlighet att växla mellan behållare med **fast bredd** och **flytande bredd**.
 
 1. **Bonusutmaning** - använd lektioner från tidigare övningar och använd Style System för att implementera formaten **Fast bredd** och **Fluid width** för behållarkomponenten.
 
 ## Grattis! {#congratulations}
 
-Artikelsidan är nästan formaterad och du har fått en praktisk upplevelse med AEM Style System.
+Artikelsidan är nästan formaterad och du har fått en praktisk upplevelse av AEM Style System.
 
 ### Nästa steg {#next-steps}
 
-Lär dig stegen från början till slut för att skapa en [anpassad AEM](custom-component.md) som visar innehåll som har skapats i en dialogruta och utforskar utveckling av en Sling-modell för att kapsla in affärslogik som fyller i komponentens HTML.
+Lär dig stegen från början till slut för att skapa en [anpassad AEM-komponent](custom-component.md) som visar innehåll som har skapats i en dialogruta och utforskar utveckling av en Sling-modell för att kapsla in affärslogik som fyller i komponentens HTML-kod.
 
 Visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd) eller granska och distribuera koden lokalt på Git-grenen `tutorial/style-system-solution`.
 

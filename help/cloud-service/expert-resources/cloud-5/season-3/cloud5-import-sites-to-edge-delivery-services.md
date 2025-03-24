@@ -1,7 +1,7 @@
 ---
 title: Importera webbplatser till AEM Sites med Edge Delivery Services
 description: Lär dig mer om importverktyget, vilket gör det enkelt att importera webbplatser till AEM Sites med Edge Delivery Services.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Admin, Developer, Leader, User
@@ -13,7 +13,7 @@ hidefromtoc: true
 recommendations: noDisplay, noCatalog
 jira: KT-15844
 exl-id: 82b607e9-8f2e-4e81-b3ee-a50a660be9a0
-source-git-commit: 5976e220ac54e901be5f064dbf541d901fccfec5
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 0%

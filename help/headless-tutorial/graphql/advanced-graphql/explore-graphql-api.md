@@ -1,14 +1,14 @@
 ---
 title: Utforska AEM GraphQL API - Advanced Concepts of AEM Headless - GraphQL
 description: Skicka GraphQL-frågor med GraphiQL IDE. Lär dig mer om avancerade frågor med filter, variabler och direktiv. Fråga efter fragment- och innehållsreferenser, inklusive referenser från textfält med flera rader.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: bd7916be-8caa-4321-add0-4c9031306d60
 duration: 438
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1307'
 ht-degree: 0%
@@ -38,11 +38,11 @@ I det här kapitlet får du lära dig att:
 ## Använda GraphiQL Explorer
 
 
-Med verktyget [GraphiQL Explorer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) kan utvecklare skapa och testa frågor mot innehåll i den aktuella AEM. Med GraphiQL-verktyget kan användare även **spara**-frågor som ska användas av klientprogram i en produktionsinställning.
+Med verktyget [GraphiQL Explorer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) kan utvecklare skapa och testa frågor mot innehåll i den aktuella AEM-miljön. Med GraphiQL-verktyget kan användare även **spara**-frågor som ska användas av klientprogram i en produktionsinställning.
 
-Utforska sedan kraften i att AEM GraphQL API med hjälp av den inbyggda GraphiQL Explorer.
+Utforska sedan kraften i AEM GraphQL API med den inbyggda GraphiQL Explorer.
 
-1. Gå till **Verktyg** > **Allmänt** > **GraphQL Query Editor** från AEM startskärmen.
+1. På startskärmen i AEM går du till **Verktyg** > **Allmänt** > **GraphQL Query Editor**.
 
    ![Navigera till GraphiQL IDE](assets/explore-graphql-api/navigate-graphql-query-editor.png)
 
@@ -151,7 +151,7 @@ Tryck på knappen **Spela upp** på den översta menyn för att köra frågan. D
 
 ## Filter för innehåll i en fragmentreferens
 
-Med AEM GraphQL API kan du fråga efter kapslade innehållsfragment. I det föregående kapitlet lade du till tre nya fragmentreferenser till ett Adventure Content Fragment: `location`, `instructorTeam` och `administrator`. Nu ska vi filtrera alla annonser för alla administratörer som har ett visst namn.
+Med AEM GraphQL API kan du söka efter kapslade innehållsfragment. I det föregående kapitlet lade du till tre nya fragmentreferenser till ett Adventure Content Fragment: `location`, `instructorTeam` och `administrator`. Nu ska vi filtrera alla annonser för alla administratörer som har ett visst namn.
 
 >[!CAUTION]
 >

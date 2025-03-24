@@ -1,7 +1,7 @@
 ---
 title: Avancerade nätverk
 description: Läs om AEM as a Cloud Service avancerade nätverksalternativ.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Integrations, Security
 role: Architect, Developer
@@ -11,7 +11,7 @@ thumbnail: KT-9354.png
 last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
 duration: 85
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 0%
@@ -29,7 +29,7 @@ AEM as a Cloud Service har avancerade nätverksfunktioner som möjliggör exakt 
 
 AEM avancerade nätverk består av tre alternativ för hantering av anslutning med externa tjänster. Ett Cloud Manager-program, och dess AEM as a Cloud Service-miljöer, kan bara använda en enda typ av avancerad nätverkskonfiguration åt gången, så se till att du väljer den lämpligaste typen.
 
-|                                   | HTTP/HTTPS på standardportar | HTTP/HTTPS på portar som inte är standard | Icke-HTTP/HTTPS-anslutningar | Dedikerad IP-adress för utgångar | Listan&quot;Inga proxyvärdar&quot; | Anslut till VPN-skyddade tjänster | Begränsa trafik AEM Publish per IP |
+|                                   | HTTP/HTTPS på standardportar | HTTP/HTTPS på portar som inte är standard | Icke-HTTP/HTTPS-anslutningar | Dedikerad IP-adress för utgångar | Listan&quot;Inga proxyvärdar&quot; | Anslut till VPN-skyddade tjänster | Begränsa AEM Publish-trafik med IP |
 |-----------------------------------|:----------------------------:|:--------------------------------:|:--------------------------:|:-------------------:|:-------------------------------------:|:-------------------------------------:|:----:|
 | __Inga avancerade nätverk__ | ✔ | ✘ | ✘ | ✘ | ✘ | ✘ | ✘ |
 | [__Flexibel portutgång__](./flexible-port-egress.md) | ✔ | ✔ | ✔ | ✘ | ✘ | ✘ | ✘ |

@@ -2,14 +2,14 @@
 title: Välj ett formulär i en lista över tillgängliga formulär
 description: Använd listforms-API för att fylla i listrutan
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-13346
 topic: Development
 role: User
 level: Intermediate
 exl-id: 49b6a172-8c96-4fc6-8d31-c2109f65faac
 duration: 88
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '266'
 ht-degree: 0%
@@ -129,7 +129,7 @@ Följande två API-anrop användes när användargränssnittet skapades
 * [ListForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/List-Forms/operation/listForms). Anropet om att hämta formulären görs bara en gång när komponenten återges. Resultatet av API-anropet lagras i afForms-variabeln.
 I ovanstående kod itererar vi igenom afForms med hjälp av mappningsfunktionen och för varje objekt i afForms-arrayen skapas en MenuItem-komponent som läggs till i Select-komponenten.
 
-* Hämta formulär - Ett get-anrop görs till [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition), där ID:t är ID:t för det valda adaptiva formuläret av användaren i listrutan. Resultatet av det här GET-anropet lagras i selectedForm.
+* Hämta formulär - Ett get-anrop görs till [getForm](https://opensource.adobe.com/aem-forms-af-runtime/api/#tag/Get-Form-Definition), där ID:t är ID:t för det valda adaptiva formuläret av användaren i listrutan. Resultatet av detta GET-anrop lagras i selectedForm.
 
 ```
 const resp = await fetch(`/adobe/forms/af/${formID}`);

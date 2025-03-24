@@ -1,7 +1,7 @@
 ---
 title: Introduktion till tema i Resursdelningskommentarer
 description: Material för både funktionell och teknisk förståelse av Assets Share Commons
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 feature: Asset Distribution
 role: Developer
@@ -10,7 +10,7 @@ last-substantial-update: 2022-06-22T00:00:00Z
 doc-type: Tutorial
 exl-id: b7d0b6b1-145a-4987-a9dc-7263efa4d9fb
 duration: 734
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
@@ -81,4 +81,4 @@ Hämta [temat för anpassat klientbibliotek](assets/asc-theme-demo.zip)
 ## Ytterligare resurser{#additional-resources}
 
 * [Kommentarer för resursdelning, versionshämtningar](https://github.com/Adobe-Marketing-Cloud/asset-share-commons/releases)
-* [ACS AEM Commons 3.11.0+ versionsnedladdningar](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)
+* [ACS AEM Commons 3.11.0+ nedladdningar](https://github.com/Adobe-Consulting-Services/acs-aem-commons/releases)

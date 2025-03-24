@@ -2,7 +2,7 @@
 title: Mappscheman för metadata
 description: Med metadatamappscheman kan användare hantera och granska metadata som är kopplade till själva resursmapparna, i stället för direkt på resurser.
 feature: Metadata
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-4983
 thumbnail: 34071.jpg
 topic: Content Management
@@ -12,7 +12,7 @@ last-substantial-update: 2021-09-19T00:00:00Z
 doc-type: Feature Video
 exl-id: 81e11e51-205d-4233-a10d-551d5041075c
 duration: 319
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%

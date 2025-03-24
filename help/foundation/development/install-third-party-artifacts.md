@@ -1,7 +1,7 @@
 ---
 title: Installera artefakter från tredje part - inte tillgängligt i den offentliga Maven-databasen
-description: Lär dig hur du installerar artefakter från tredje part som *inte är tillgängliga i den offentliga Maven-databasen* när du skapar och distribuerar ett AEM projekt.
-version: 6.5, Cloud Service
+description: Lär dig hur du installerar artefakter från tredje part som *inte är tillgängliga i den offentliga Maven-databasen* när du skapar och distribuerar ett AEM-projekt.
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: OSGI
 topic: Development
 role: Architect, Developer
@@ -11,17 +11,17 @@ duration: 0
 last-substantial-update: 2024-09-13T00:00:00Z
 jira: KT-16207
 thumbnail: KT-16207.jpeg
-source-git-commit: 33415305f6aa183373eaef4bb4978a59325c8a32
+exl-id: 0cec14b3-4be5-4666-a36c-968ea2fc634f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1569'
 ht-degree: 0%
 
 ---
 
-
 # Installera artefakter från tredje part - inte tillgängligt i den offentliga Maven-databasen
 
-Lär dig hur du installerar artefakter från tredje part som *inte är tillgängliga i den offentliga Maven-databasen* när du skapar och distribuerar ett AEM.
+Lär dig hur du installerar artefakter från tredje part som *inte är tillgängliga i den offentliga Maven-databasen* när du skapar och distribuerar ett AEM-projekt.
 
 **Tredjepartsartefakter** kan vara:
 
@@ -31,11 +31,11 @@ Lär dig hur du installerar artefakter från tredje part som *inte är tillgäng
 
 ## Standardscenario
 
-Vanligtvis installerar du paketet från tredje part, som *är tillgängligt* i den offentliga Maven-databasen, som ett beroende i ditt AEM `pom.xml` -fil.
+Vanligtvis installerar du paketet från tredje part, som *är tillgängligt* i den offentliga Maven-databasen, som ett beroende i AEM-projektets `pom.xml`-fil.
 
 Till exempel:
 
-- [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) **bundle** har lagts till som ett beroende i [WKND-projektets](https://github.com/adobe/aem-guides-wknd/blob/main/pom.xml#L747-L753) `pom.xml`-fil. Här används scopet `provided` som AEM WCM Core Components-paket från AEM. Om paketet inte tillhandahålls av AEM-miljön använder du omfånget `compile` och det är standardomfånget.
+- [AEM WCM Core Components](https://github.com/adobe/aem-core-wcm-components) **bundle** har lagts till som ett beroende i [WKND-projektets](https://github.com/adobe/aem-guides-wknd/blob/main/pom.xml#L747-L753) `pom.xml` fil. Här används scopet `provided` som AEM WCM Core Components-paket från AEM-miljön. Om paketet inte tillhandahålls av AEM-miljön använder du omfånget `compile` och det är standardomfånget.
 
 - [WKND Shared](https://github.com/adobe/aem-guides-wknd-shared) **package** har lagts till som ett beroende i [WKND-projektets](https://github.com/adobe/aem-guides-wknd/blob/main/pom.xml#L767-L773) `pom.xml`-fil.
 
@@ -43,7 +43,7 @@ Till exempel:
 
 ## Sällsynt scenario
 
-När du skapar och distribuerar ett AEM kan du ibland behöva installera ett tredjepartspaket eller -burk eller paket **som inte är tillgängligt** i [Maven Central Repository](https://mvnrepository.com/) eller [Adobe Public Repository](https://repo.adobe.com/index.html) .
+När du skapar och distribuerar ett AEM-projekt kan du ibland behöva installera ett tredjepartspaket eller -burk eller -paket **som inte är tillgängligt** i [Maven Central Repository](https://mvnrepository.com/) eller [Adobe Public Repository](https://repo.adobe.com/index.html) .
 
 Orsaken kan vara:
 
@@ -57,7 +57,7 @@ Orsaken kan vara:
 
 Om du vill följa den här självstudiekursen behöver du:
 
-- Installationen av [den lokala AEM ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview) eller [Rapid Development Environment(RDE)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview).
+- Installationen av den [lokala AEM-utvecklingsmiljön](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview) eller [Rapid Development Environment(RDE)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview).
 
 - [AEM WKND-projektet](https://github.com/adobe/aem-guides-wknd) _som lägger till paketet eller behållaren eller paketet från tredje part_ och verifierar ändringarna.
 
@@ -65,7 +65,7 @@ Om du vill följa den här självstudiekursen behöver du:
 
 - Konfigurera den lokala utvecklingsmiljön AEM 6.X eller AEM as a Cloud Service (AEMCS) eller RDE-miljön.
 
-- Klona och distribuera AEM WKND-projektet.
+- Klona och driftsätt AEM WKND-projektet.
 
   ```
   $ git clone git@github.com:adobe/aem-guides-wknd.git
@@ -75,9 +75,9 @@ Om du vill följa den här självstudiekursen behöver du:
 
   Kontrollera att WKND-webbplatssidorna återges korrekt.
 
-## Installera ett tredjepartspaket i ett AEM projekt{#install-third-party-bundle}
+## Installera ett tredjepartspaket i ett AEM-projekt{#install-third-party-bundle}
 
-Låt oss installera och använda en demo OSGi [my-example-bundle](./assets/install-third-party-articafcts/my-example-bundle.zip) som _inte är tillgänglig i den offentliga Maven-databasen_ till AEM WKND-projektet.
+Låt oss installera och använda en demo-OSGi [my-example-bundle](./assets/install-third-party-articafcts/my-example-bundle.zip) som _inte är tillgänglig i den offentliga Maven-databasen_ till AEM WKND-projektet.
 
 **my-example-bundle** exporterar `HelloWorldService` OSGi-tjänsten, dess `sayHello()`-metod returnerar `Hello Earth!`-meddelande.
 
@@ -99,7 +99,7 @@ Det första steget är att lägga till `my-example-bundle` i AEM WKND-projektets
 
 Vi använder OSGi-tjänsten `HelloWorldService` från `my-example-bundle` i AEM WKND-projektet.
 
-- Skapa `SayHello.java` Sling-servleten @ `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet` i AEM WKND-projektets `core`-modul.
+- Skapa `SayHello.java` Sling-serverleten @ `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet` i AEM WKND-projektets `core`-modul.
 
   ```java
   package com.adobe.aem.guides.wknd.core.servlet;
@@ -138,7 +138,7 @@ Vi använder OSGi-tjänsten `HelloWorldService` från `my-example-bundle` i AEM 
   }
   ```
 
-- Lägg till `my-example-bundle` som ett beroende i rotfilen för AEM WKND-projektet `pom.xml`.
+- Lägg till `my-example-bundle` som ett beroende i AEM WKND-projektets rotfil `pom.xml`.
 
   ```xml
   ...
@@ -170,7 +170,7 @@ Vi använder OSGi-tjänsten `HelloWorldService` från `my-example-bundle` i AEM 
   ...
   ```
 
-- Skapa och distribuera AEM WKND-projekt med följande kommando:
+- Bygg och distribuera AEM WKND-projektet med följande kommando:
 
   ```
   $ mvn clean install -PautoInstallPackage
@@ -178,7 +178,7 @@ Vi använder OSGi-tjänsten `HelloWorldService` från `my-example-bundle` i AEM 
 
 - Verifiera att `SayHello`-servern fungerar som förväntat genom att gå till URL:en `http://localhost:4502/bin/sayhello` i webbläsaren.
 
-- Genomför ändringarna ovan i AEM WKND-projektdatabas. Kontrollera sedan ändringarna i RDE- eller AEM-miljön genom att köra Cloud Manager pipeline.
+- Genomför ändringarna ovan i AEM WKND-projektdatabasen. Kontrollera sedan ändringarna i RDE- eller AEM-miljön genom att köra Cloud Manager pipeline.
 
   ![Verifiera sayHello-serverleten - pakettjänst](./assets/install-third-party-articafcts/verify-sayhello-servlet-bundle-service.png)
 
@@ -186,17 +186,17 @@ The [tutorial/install-3third-party-bundle](https://github.com/adobe/aem-guides-w
 
 ### Viktiga lärdomar{#key-learnings-bundle}
 
-OSGi-paketen som inte är tillgängliga i den offentliga Maven-databasen kan installeras i ett AEM projekt genom att följa dessa steg:
+De OSGi-paket som inte finns i den offentliga Maven-databasen kan installeras i ett AEM-projekt genom att följa dessa steg:
 
-- Kopiera OSGi-paketet till `jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install` för modulen `all`. Det här steget är nödvändigt för att paketera och distribuera paketet till AEM.
+- Kopiera OSGi-paketet till `jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install` för modulen `all`. Det här steget är nödvändigt för att paketera och distribuera paketet till AEM-instansen.
 
 - Uppdatera rotmodulens och kärnmodulens `pom.xml`-filer för att lägga till OSGi-paketet som ett beroende med `system` scope och `systemPath` som pekar på paketfilen. Detta steg är nödvändigt för att kompilera projektet.
 
-## Installera en tredjepartsbehållare i ett AEM
+## Installera en tredjepartsburk i ett AEM-projekt
 
 I det här exemplet är `my-example-jar` inte ett OSGi-paket, utan en Java jar-fil.
 
-Låt oss installera och använda en demo [my-example-jar](./assets/install-third-party-articafcts/my-example-jar.zip) som _inte är tillgänglig i den offentliga Maven-databasen_ i AEM WKND-projektet.
+Låt oss installera och använda en demo [my-example-jar](./assets/install-third-party-articafcts/my-example-jar.zip) som _inte är tillgänglig i den offentliga Maven-databasen_ för AEM WKND-projektet.
 
 **my-example-jar** är en Java jar-fil som innehåller en `MyHelloWorldService`-klass med en `sayHello()` -metod som returnerar `Hello World!`-meddelande.
 
@@ -218,7 +218,7 @@ Det första steget är att lägga till `my-example-jar` i AEM WKND-projektets `a
 
 Vi använder `MyHelloWorldService` från `my-example-jar` i AEM WKND-projektet.
 
-- Skapa `SayHello.java` Sling-servleten @ `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet` i AEM WKND-projektets `core`-modul.
+- Skapa `SayHello.java` Sling-serverleten @ `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet` i AEM WKND-projektets `core`-modul.
 
   ```java
   package com.adobe.aem.guides.wknd.core.servlet;
@@ -258,7 +258,7 @@ Vi använder `MyHelloWorldService` från `my-example-jar` i AEM WKND-projektet.
   }    
   ```
 
-- Lägg till `my-example-jar` som ett beroende i rotfilen för AEM WKND-projektet `pom.xml`.
+- Lägg till `my-example-jar` som ett beroende i AEM WKND-projektets rotfil `pom.xml`.
 
   ```xml
   ...
@@ -278,7 +278,7 @@ Vi använder `MyHelloWorldService` från `my-example-jar` i AEM WKND-projektet.
    - `systemPath` är sökvägen till filen `my-example-jar` i AEM WKND-projektets `all`-modul.
    - `${maven.multiModuleProjectDirectory}` är en Maven-egenskap som pekar på rotkatalogen för flermodulsprojektet.
 
-- Gör två ändringar i `core/pom.xml`-filen för WKND-projektets `core`-modul i AEM:
+- Gör två ändringar i `core/pom.xml`-filen för modulen `core` i AEM WKND-projektet:
 
    - Lägg till `my-example-jar` som ett beroende.
 
@@ -319,7 +319,7 @@ Vi använder `MyHelloWorldService` från `my-example-jar` i AEM WKND-projektet.
      ...
      ```
 
-- Skapa och distribuera AEM WKND-projekt med följande kommando:
+- Bygg och distribuera AEM WKND-projektet med följande kommando:
 
   ```
   $ mvn clean install -PautoInstallPackage
@@ -327,7 +327,7 @@ Vi använder `MyHelloWorldService` från `my-example-jar` i AEM WKND-projektet.
 
 - Verifiera att `SayHello`-servern fungerar som förväntat genom att gå till URL:en `http://localhost:4502/bin/sayhello` i webbläsaren.
 
-- Genomför ändringarna ovan i AEM WKND-projektdatabas. Kontrollera sedan ändringarna i RDE- eller AEM-miljön genom att köra Cloud Manager pipeline.
+- Genomför ändringarna ovan i AEM WKND-projektdatabasen. Kontrollera sedan ändringarna i RDE- eller AEM-miljön genom att köra Cloud Manager pipeline.
 
   ![Verifiera sayHello-servleten - JAR-tjänsten](./assets/install-third-party-articafcts/verify-sayhello-servlet-jar-service.png)
 
@@ -337,7 +337,7 @@ I scenarier där Java jar-filen _är tillgänglig i den offentliga Maven-databas
 
 ### Viktiga lärdomar{#key-learnings-jar}
 
-Java-burkarna som inte är OSGi-paket och som är tillgängliga eller inte är tillgängliga i den offentliga Maven-databasen kan installeras i ett AEM projekt enligt följande:
+Java-burkarna som inte är OSGi-paket och som är tillgängliga eller inte är tillgängliga i den offentliga Maven-databasen kan installeras i ett AEM-projekt enligt följande:
 
 - Uppdatera konfigurationen `bnd-maven-plugin` i kärnmodulens `pom.xml`-fil så att den inkluderar Java jar som en intern resurs i OSGi-paketet som byggs.
 
@@ -347,35 +347,35 @@ Följande steg krävs bara om Java jar inte är tillgängligt i den offentliga M
 
 - Uppdatera rot- och kärnmodulens `pom.xml`-filer för att lägga till Java-behållaren som ett beroende med `system` scope och `systemPath` som pekar på jar-filen.
 
-## Installera ett tredjepartspaket i ett AEM
+## Installera ett tredjepartspaket i ett AEM-projekt
 
-Låt oss installera versionen [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) _SNAPSHOT_ som skapats lokalt från huvudgrenen.
+Låt oss installera [ACS AEM Commons](https://adobe-consulting-services.github.io/acs-aem-commons/) _SNAPSHOT_ som skapats lokalt från huvudgrenen.
 
-Detta görs enbart för att visa hur man installerar ett AEM som inte finns i den offentliga Maven-databasen.
+Det görs endast för att visa hur man installerar ett AEM-paket som inte finns i den offentliga Maven-databasen.
 
-Paketet ACS AEM Commons finns i den offentliga Maven-databasen. Se [Lägg till ACS AEM Commons i ditt AEM Maven-projekt](https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html) för att lägga till det i ditt AEM.
+ACS AEM Commons-paketet finns i den offentliga Maven-databasen. Se [Lägg till ACS AEM Commons i ditt AEM Maven-projekt](https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html) för att lägga till det i ditt AEM-projekt.
 
 ### Lägg till paketet i modulen `all`
 
 Det första steget är att lägga till paketet i AEM WKND-projektets `all`-modul.
 
-- Kommentera eller ta bort beroendet för ACS AEM Commons från POM-filen. Identifiera beroendet genom att referera till [Lägg till ACS AEM Commons i AEM Maven-projekt](https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html) .
+- Kommentera eller ta bort beroendet för ACS AEM Commons från POM-filen. Identifiera beroendet genom att referera till [Lägg till ACS AEM Commons i ditt AEM Maven-projekt](https://adobe-consulting-services.github.io/acs-aem-commons/pages/maven.html) .
 
 - Klona `master`-grenen i [ACS AEM Commons-databasen](https://github.com/Adobe-Consulting-Services/acs-aem-commons) till din lokala dator.
 
-- Bygg ACS AEM Commons SNAPSHOT-versionen med följande kommando:
+- Bygg ACS AEM Commons SNAPSHOT-version med följande kommando:
 
   ```
   $mvn clean install
   ```
 
-- Det lokalt skapade paketet finns @ `all/target`, det finns två ZIP-filer, det ena som slutar med `-cloud` är avsett för AEM as a Cloud Service och det andra är för AEM 6.X.
+- Det lokalt skapade paketet finns @ `all/target`, det finns två ZIP-filer, det ena som slutar med `-cloud` är avsett för AEM as a Cloud Service och det andra för AEM 6.X.
 
 - Skapa katalogstrukturen `all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install` i AEM WKND-projektets `all`-modul. Katalogen `/all/src/main/content` finns. Du behöver bara skapa katalogerna `jcr_root/apps/wknd-vendor-packages/container/install`.
 
 - Kopiera den lokalt skapade paketfilen (.zip) till katalogen `/all/src/main/content/jcr_root/apps/mysite-vendor-packages/container/install`.
 
-- Skapa och distribuera AEM WKND-projekt med följande kommando:
+- Bygg och distribuera AEM WKND-projektet med följande kommando:
 
   ```
   $ mvn clean install -PautoInstallPackage
@@ -391,15 +391,15 @@ Det första steget är att lägga till paketet i AEM WKND-projektets `all`-modul
 
      ![ACS AEM Commons SNAPSHOT-versionspaket](./assets/install-third-party-articafcts/acs-aem-commons-snapshot-bundle.png)
 
-- Genomför ändringarna ovan i AEM WKND-projektdatabas. Kontrollera sedan ändringarna i RDE- eller AEM-miljön genom att köra Cloud Manager pipeline.
+- Genomför ändringarna ovan i AEM WKND-projektdatabasen. Kontrollera sedan ändringarna i RDE- eller AEM-miljön genom att köra Cloud Manager pipeline.
 
 ### Viktiga lärdomar{#key-learnings-package}
 
-De AEM paketen som inte är tillgängliga i den offentliga Maven-databasen kan installeras i ett AEM projekt enligt följande:
+AEM-paketen som inte är tillgängliga i den offentliga Maven-databasen kan installeras i ett AEM-projekt enligt följande:
 
-- Kopiera paketet till `jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install`-katalogen för modulen `all`. Det här steget är nödvändigt för att paketera och distribuera paketet till AEM.
+- Kopiera paketet till `jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install`-katalogen för modulen `all`. Det här steget är nödvändigt för att paketera och distribuera paketet till AEM-instansen.
 
 
 ## Sammanfattning
 
-I den här självstudiekursen lärde du dig att installera tredjepartsartefakter (bundle, Java jar och package) som inte är tillgängliga i den offentliga Maven-databasen när du skapar och distribuerar ett AEM.
+I den här självstudiekursen lärde du dig att installera tredjepartsartefakter (bundle, Java jar och package) som inte finns i den offentliga Maven-databasen när du bygger och driftsätter ett AEM-projekt.

@@ -2,14 +2,14 @@
 title: Github.com av webbkrok
 description: Lär dig hur du verifierar en webkrok från Github.com i en App Builder-åtgärd.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Intermediate
 jira: KT-15714
 last-substantial-update: 2023-06-06T00:00:00Z
 exl-id: 5492dc7b-f034-4a7f-924d-79e083349e26
-source-git-commit: 8f64864658e521446a91bb4c6475361d22385dc1
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Github.com av webbkrok
 
-Med hjälp av Webhooks kan du skapa eller konfigurera integreringar som prenumererar på vissa händelser på GitHub.com. När en av dessa händelser utlöses skickar GitHub en HTTP-POST-nyttolast till webboks konfigurerade URL. Av säkerhetsskäl är det dock viktigt att verifiera att inkommande webkrok-begäran faktiskt kommer från GitHub och inte från en skadlig aktör. Den här självstudiekursen vägleder dig genom stegen för att verifiera en GitHub.com webbkrok-förfrågan i en åtgärd från Adobe App Builder med hjälp av en delad hemlighet.
+Med hjälp av Webhooks kan du skapa eller konfigurera integreringar som prenumererar på vissa händelser på GitHub.com. När en av dessa händelser utlöses skickar GitHub en HTTP POST-nyttolast till webchens konfigurerade URL. Av säkerhetsskäl är det dock viktigt att verifiera att inkommande webkrok-begäran faktiskt kommer från GitHub och inte från en skadlig aktör. Den här självstudiekursen vägleder dig genom stegen för att verifiera en GitHub.com webkrok-förfrågan i en Adobe App Builder-åtgärd med hjälp av en delad hemlighet.
 
 ## Konfigurera Github-hemlighet i AppBuilder
 
@@ -39,7 +39,7 @@ Med hjälp av Webhooks kan du skapa eller konfigurera integreringar som prenumer
 
    - Ställ in konfigurationen `web` för AppBuilder-åtgärden på `raw` för att ta emot texten för Raw-begäran från GitHub.com.
    - Lägg till nyckeln `GITHUB_SECRET` under `inputs` i åtgärdskonfigurationen för AppBuilder och mappa den till fältet `.env` som innehåller hemligheten. Värdet för den här nyckeln är fältnamnet `.env` som har prefixet `$`.
-   - Ange `require-adobe-auth`-anteckningen i AppBuilder-åtgärdskonfigurationen till `false` så att åtgärden kan anropas utan att autentisering från Adobe krävs.
+   - Ange `require-adobe-auth`-anteckningen i AppBuilder-åtgärdskonfigurationen till `false` för att tillåta att åtgärden anropas utan att Adobe-autentisering krävs.
 
    Den resulterande `ext.config.yaml`-filen ska se ut ungefär så här:
 

@@ -1,7 +1,7 @@
 ---
 title: Videofilmer om dokumentredigering
-description: Lär dig konfigurera och konfigurera dokumentredigering i AEM.
-version: Cloud Service
+description: Lär dig hur du konfigurerar och konfigurerar dokumentredigering i AEM.
+version: Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: User
@@ -11,7 +11,7 @@ doc-type: Catalog
 duration: 40
 last-substantial-update: 2023-12-01T00:00:00Z
 exl-id: 172a477f-d277-43c1-8e47-68870b02203c
-source-git-commit: 6a22f523c5cf997a59a5b8579c168b641c009b20
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Videofilmer om dokumentredigering
 
-Lär dig hur du konfigurerar dokumentredigering så att AEM kan redigera och publicera dokument med Microsoft Word eller Google Docs.
+Lär dig hur man konfigurerar dokumentredigering så att AEM författare kan redigera och publicera dokument med Microsoft Word eller Google Docs.
 
 Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html) om du vill ha fullständig information om hur du konfigurerar dokumentredigering.
 
@@ -580,11 +580,11 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
       <div class="card">
         <div class="card-image">
           <figure class="image is-16by9">
-            <a href="./how-to/using-dynamic-media.md" title="Dynamic Media"
+            <a href="./how-to/using-dynamic-media.md" title="Dynamiska medier"
               tabindex="-1">
               <img class="is-bordered-r-small"
                 src="https://video.tv.adobe.com/v/3429593/?format=jpeg"
-                alt="Dynamic Media">
+                alt="Dynamiska medier">
             </a>
           </figure>
         </div>
@@ -593,7 +593,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <p style="float: right;font-style: italic; color: #363636"
               class="is-size-6">2 minuter</p>
             <p class="headline is-size-6 has-text-weight-bold">
-              <a href="./how-to/using-dynamic-media.md" title="Dynamic Media">Dynamic Media</a>
+              <a href="./how-to/using-dynamic-media.md" title="Dynamiska medier">Dynamiska media</a>
             </p>
             <p class="is-size-6">Upptäck hur du använder Dynamic Media för optimerad bildleverans.</p>
             <a href="./how-to/using-dynamic-media.md" class="spectrum-Button
@@ -627,7 +627,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/migration-using-importer.md" title="Platsmigrering med importverktyget">Platsmigrering med importeraren</a>
             </p>
-            <p class="is-size-6">Lär dig hur du migrerar platser till Edge Delivery Services med AEM importverktyg.</p>
+            <p class="is-size-6">Lär dig hur du migrerar platser till Edge Delivery Services med verktyget AEM Importer.</p>
             <a href="./how-to/migration-using-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -659,7 +659,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/customizing-importer.md" title="Anpassa importeraren">Anpassa importeraren</a>
             </p>
-            <p class="is-size-6">Lär dig hur du anpassar verktyget AEM importeraren för platsmigrering.</p>
+            <p class="is-size-6">Lär dig hur du anpassar verktyget AEM Importer för att migrera webbplatser.</p>
             <a href="./how-to/customizing-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -691,7 +691,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/bulk-importing-using-importer.md" title="Massimport med hjälp av importverktyget">Massimport med importverktyget</a>
             </p>
-            <p class="is-size-6">Lär dig hur du kan massimportera webbsidor med AEM importverktyg när du migrerar webbplatser.</p>
+            <p class="is-size-6">Se hur du kan massimportera webbsidor med verktyget AEM Importer när du migrerar webbplatser.</p>
             <a href="./how-to/bulk-importing-using-importer.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">
@@ -760,7 +760,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <p class="headline is-size-6 has-text-weight-bold">
               <a href="./how-to/generate-variations/configure-sidekick.md" title="Generera variationer - Konfigurera Sidekick">Generera variationer - Konfigurera Sidekick</a>
             </p>
-            <p class="is-size-6">Lär dig hur du konfigurerar sidindelad redigering för att generera variationer vid framtagning av dokument för Edge Delivery Services.</p>
+            <p class="is-size-6">Lär dig hur du konfigurerar sidindelad redigering för att generera variationer i Edge Delivery Services dokumentredigering.</p>
             <a href="./how-to/generate-variations/configure-sidekick.md" class="spectrum-Button
               spectrum-Button--outline spectrum-Button--primary
               spectrum-Button--sizeM">

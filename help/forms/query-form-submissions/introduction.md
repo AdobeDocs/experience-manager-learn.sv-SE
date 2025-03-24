@@ -3,7 +3,7 @@ title: Frågar efter formulärinlämning
 description: Multidelad självstudiekurs som visar hur du går igenom stegen för att fråga efter formuläröverföringar som lagras i Azure Portal
 feature: Adaptive Forms
 doc-type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
@@ -11,7 +11,7 @@ jira: KT-14884
 last-substantial-update: 2024-03-03T00:00:00Z
 exl-id: 08c97626-73a9-43d2-955c-b97fbb5f2e9a
 duration: 185
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Om du vill följa den här självstudiekursen rekommenderar vi att du har tillg�
 
 
 
-Om du är utvecklare och vill förstå koden och annan information om implementeringen av det här användningsfallet importerar du det här [AEM-projektet i VSCode eller IntelliJ.](assets/azuredemoproject.zip)
+Om du är utvecklare och vill veta mer om koden och andra detaljer för implementeringen av det här användningsfallet importerar du det här [AEM-projektet i VSCode eller IntelliJ.](assets/azuredemoproject.zip)
 
 Om du bara vill att det här exemplet ska fungera i ditt lokala system följer du de steg som anges i [del 5 av den här självstudiekursen](./part5.md)
 

@@ -1,15 +1,15 @@
 ---
 title: Distribuera resurserna lokalt
-description: Distribuera självstudieresurserna till den lokala AEM instansen
+description: Distribuera självstudieresurserna till din lokala AEM-instans
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2023-01-04T00:00:00Z
 exl-id: d23b51ba-1efb-4505-b5b3-44a02177e467
 duration: 27
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Driftsätt i ditt system
 
-Följ stegen nedan för att få det här användningsexemplet att fungera på din lokala AEM.
+Följ stegen nedan för att få det här användningsexemplet att fungera på din lokala AEM-instans.
 
 * [Distribuera DevelopingWithServiceUser-paketet](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) som finns i zip-filen.
 

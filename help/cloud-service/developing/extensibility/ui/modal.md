@@ -1,8 +1,8 @@
 ---
 title: AEM UI-tillägg modal
-description: Lär dig hur du skapar ett AEM gränssnittstillägg modal.
+description: Lär dig hur du skapar ett modalt AEM UI-tillägg.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: e7376eaf-f7d7-48fe-9387-a0e4089806c2
 duration: 127
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ![AEM UI-tillägg modal](./assets/modal/modal.png){align="center"}
 
-AEM är ett sätt att koppla anpassade användargränssnitt till AEM användargränssnittstillägg.
+AEM UI-tillägg är ett sätt att koppla anpassade användargränssnitt till AEM UI-tillägg.
 
 Modaler är React-program som baseras på [React Spectrum](https://react-spectrum.adobe.com/react-spectrum/) och kan skapa valfritt anpassat användargränssnitt som krävs av tillägget, inklusive, men inte begränsat till:
 
@@ -185,7 +185,7 @@ export default function MyModal() {
 
 ## Stäng spärren
 
-![AEM spärrknapp för spärrning av gränssnittstillägg](./assets/modal/close.png){align="center"}
+![Modal stängningsknapp för AEM UI-tillägg](./assets/modal/close.png){align="center"}
 
 Modalerna måste ha sin egen nära kontroll. Detta görs genom att anropa `guestConnection.host.modal.close()`.
 

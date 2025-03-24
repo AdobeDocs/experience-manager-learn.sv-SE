@@ -1,8 +1,8 @@
 ---
-title: Extrahera dokument från dokumentlistan i ett AEM arbetsflöde
+title: Extrahera dokument från en lista med dokument i ett AEM-arbetsflöde
 description: Anpassad arbetsflödeskomponent som extraherar ett specifikt dokument från en lista med dokument
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -10,7 +10,7 @@ kt: kt-13918
 last-substantial-update: 2023-09-12T00:00:00Z
 exl-id: b0baac71-3074-49d5-9686-c9955b096abb
 duration: 56
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '278'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Extrahera dokument från en lista med dokument
 
-Ett vanligt användningssätt är att skicka formulärdata och den bifogade blanketten till ett externt system med hjälp av steget Starta formulärdatamodell i ett AEM arbetsflöde. Om du till exempel skapar ett ärende i ServiceNow vill du skicka in ärendeinformation med ett stöddokument. De bilagor som läggs till i det adaptiva formuläret lagras i en variabel av typen arraylist med dokument och för att extrahera ett specifikt dokument från den här arraylistan måste du skriva egen kod.
+Ett vanligt användningssätt är att skicka formulärdata och den bifogade blanketten till ett externt system med steget Anropa formulärdatamodell i ett AEM-arbetsflöde. Om du till exempel skapar ett ärende i ServiceNow vill du skicka in ärendeinformation med ett stöddokument. De bilagor som läggs till i det adaptiva formuläret lagras i en variabel av typen arraylist med dokument och för att extrahera ett specifikt dokument från den här arraylistan måste du skriva egen kod.
 
 I den här artikeln får du hjälp med att använda den anpassade arbetsflödeskomponenten för att extrahera och lagra dokumentet i en dokumentvariabel.
 
@@ -35,7 +35,7 @@ Ett arbetsflöde måste skapas för att kunna hantera formuläröverföringen. A
 
 ## Konfigurera anpassat formulär
 
-* Konfigurera skicka-åtgärden för det adaptiva formuläret för att aktivera det AEM arbetsflödet
+* Konfigurera skicka-åtgärden för det adaptiva formuläret för att utlösa AEM-arbetsflödet
   ![submit-action](assets/store-attachments.png)
 
 ## Testa lösningen

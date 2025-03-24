@@ -4,14 +4,14 @@ description: Skapa och konfigurera Azure-lagringskonto för Batch API.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-9666
 exl-id: 8d010107-8cea-41f0-9ff4-7746744a250c
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 duration: 227
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 1%

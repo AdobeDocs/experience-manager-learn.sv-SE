@@ -2,14 +2,14 @@
 title: Använda Multi Site Manager med AEM Sites
 description: Översikt över Live Copy och Konfigurationshanteraren för utkast är gränssnitt aktiverade för Touch-gränssnitt för arbete med Multi Site Manager.
 feature: Multi Site Manager
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Localization
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 00746678-da23-4d0a-b775-e1de4ed87c56
 duration: 507
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # Använda Multi Site Manager {#using-multi-site-manager-with-aem-sites}
 
-Översikt över Live Copy och Konfigurationshanteraren för utkast är AEM gränssnitt för författare som används med [Multi Site Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html) i Adobe Experience Manager Sites.
+Översikt över Live Copy och Konfigurationshanteraren för utkast är AEM Author-gränssnitt som används med [Multi Site Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm-and-translation.html) i Adobe Experience Manager Sites.
 
 ## Live Copy - översikt {#live-copy-overview}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17054?quality=12&learn=on)
 
-*Live Copy Overview är ett Touch-gränssnitt som används för att hantera live-kopior och deras respektive utkast. Den här funktionen, som introducerades i AEM 6.3, ersätter det klassiska gränssnittets kontrollcenter för utkast.*
+*Live Copy Overview är ett Touch-gränssnitt som används för att hantera live-kopior och deras respektive utkast. Den här funktionen, som introducerades i AEM 6.3, ersätter Classic UI Blueprint Control Center.*
 
 ## Konfigurationshanteraren för utkast - Touch UI {#blueprint-config-mgr}
 

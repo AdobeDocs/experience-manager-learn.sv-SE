@@ -1,7 +1,7 @@
 ---
 title: Android App - AEM Headless-exempel
-description: Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här Android-programmet visas hur du frågar efter innehåll med hjälp av GraphQL API:er för AEM.
-version: Cloud Service
+description: Exempelprogram är ett bra sätt att utforska de headless-funktionerna i Adobe Experience Manager (AEM). I det här Android-programmet visas hur du frågar efter innehåll med GraphQL API:er för AEM.
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 2
 jira: KT-10588
 thumbnail: KT-10588.jpg
@@ -10,10 +10,10 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 last-substantial-update: 2023-05-10T00:00:00Z
-badgeVersions: label="AEM as a Cloud Service" before-title="false"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: 7873e263-b05a-4170-87a9-59e8b7c65faa
 duration: 160
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '614'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # Android App
 
-Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). I det här Android-programmet visas hur du frågar efter innehåll med hjälp av GraphQL API:er för AEM. [AEM Headless Client för Java](https://github.com/adobe/aem-headless-client-java) används för att köra GraphQL-frågor och mappa data till Java-objekt för att styra programmet.
+Exempelprogram är ett bra sätt att utforska de headless-funktionerna i Adobe Experience Manager (AEM). I det här Android-programmet visas hur du frågar efter innehåll med GraphQL API:er för AEM. [AEM Headless Client för Java](https://github.com/adobe/aem-headless-client-java) används för att köra GraphQL-frågor och mappa data till Java-objekt för att styra programmet.
 
 ![Android Java-appen med AEM Headless](./assets/android-java-app/android-app.png)
 
@@ -38,11 +38,11 @@ Följande verktyg bör installeras lokalt:
 
 ## AEM
 
-Android fungerar med följande AEM driftsättningsalternativ. Alla distributioner kräver att [WKND-platsen v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) är installerad.
+Android fungerar med följande distributionsalternativ för AEM. Alla distributioner kräver att [WKND-platsen v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) är installerad.
 
 + [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
 
-Android-programmet är utformat för att ansluta till en __AEM Publish__ -miljö, men det kan hämta innehåll från AEM författare om autentisering anges i Android-programmets konfiguration.
+Android-programmet är utformat för att ansluta till en __AEM Publish__ -miljö, men det kan hämta innehåll från AEM Author om autentisering anges i Android-programmets konfiguration.
 
 ## Så här använder du
 
@@ -53,7 +53,7 @@ Android-programmet är utformat för att ansluta till en __AEM Publish__ -miljö
    ```
 
 1. Öppna [Android Studio](https://developer.android.com/studio) och öppna mappen `android-app`
-1. Ändra filen `config.properties` vid `app/src/main/assets/config.properties` och uppdatera `contentApi.endpoint` så att den matchar AEM:
+1. Ändra filen `config.properties` vid `app/src/main/assets/config.properties` och uppdatera `contentApi.endpoint` så att den matchar AEM-målmiljön:
 
    ```plain
    contentApi.endpoint=https://publish-p123-e456.adobeaemcloud.com
@@ -61,7 +61,7 @@ Android-programmet är utformat för att ansluta till en __AEM Publish__ -miljö
 
    __Grundläggande autentisering__
 
-   `contentApi.user` och `contentApi.password` autentiserar en lokal AEM med åtkomst till WKND GraphQL-innehåll.
+   `contentApi.user` och `contentApi.password` autentiserar en lokal AEM-användare med åtkomst till WKND GraphQL-innehåll.
 
    ```plain
    contentApi.endpoint=https://author-p123-e456.adobeaemcloud.com
@@ -73,9 +73,9 @@ Android-programmet är utformat för att ansluta till en __AEM Publish__ -miljö
 1. Bygg och distribuera appen med Android-emulatorn.
 
 
-### Ansluta till AEM
+### Ansluta till AEM-miljöer
 
-Om du ansluter till en AEM författarmiljö krävs [behörighet](https://github.com/adobe/aem-headless-client-java#using-authorization). [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java) ger möjlighet att använda [tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). Så här använder du tokenbaserad klientbyggare för uppdatering av autentisering i `AdventureLoader.java` och `AdventuresLoader.java`:
+Om du ansluter till en AEM-redigeringsmiljö krävs [behörighet](https://github.com/adobe/aem-headless-client-java#using-authorization). [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java) ger möjlighet att använda [tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). Så här använder du tokenbaserad klientbyggare för uppdatering av autentisering i `AdventureLoader.java` och `AdventuresLoader.java`:
 
 ```java
 /* Comment out basicAuth
@@ -94,7 +94,7 @@ Nedan följer en kort sammanfattning av de filer och den kod som är viktiga fö
 
 ### Beständiga frågor
 
-Efter AEM Headless-metodtips använder iOS-programmet AEM GraphQL beständiga frågor för att fråga efter äventyrsdata. Programmet använder två beständiga frågor:
+I enlighet med bästa praxis för AEM Headless använder iOS-programmet AEM GraphQL-beständiga frågor för att fråga efter äventyrsdata. Programmet använder två beständiga frågor:
 
 + `wknd/adventures-all` beständig fråga, som returnerar alla äventyr i AEM med en förkortad uppsättning egenskaper. Den här beständiga frågan styr den inledande vyns äventyrslista.
 
@@ -175,9 +175,9 @@ query($slug: String!) {
 
 ### Kör GraphQL beständig fråga
 
-AEM beständiga frågor körs via HTTP-GET och därför används klienten [AEM Headless för Java](https://github.com/adobe/aem-headless-client-java) för att köra beständiga GraphQL-frågor mot AEM och läsa in äventyret i appen.
+AEM beständiga frågor körs över HTTP GET och därför används klienten [AEM Headless för Java](https://github.com/adobe/aem-headless-client-java) för att köra beständiga GraphQL-frågor mot AEM och läsa in äventyret i appen.
 
-Varje beständig fråga har en motsvarande inläsarklass, som asynkront anropar den AEM HTTP-GETENS slutpunkt och returnerar äventyrsdata med den anpassade definierade [datamodellen](#data-models).
+Varje beständig fråga har en motsvarande inläsarklass, som asynkront anropar AEM HTTP GET-slutpunkten och returnerar äventyrsdata med den anpassade definierade [datamodellen](#data-models).
 
 + `loader/AdventuresLoader.java`
 
@@ -229,5 +229,5 @@ Android-programmet använder två vyer för att presentera äventyrsdata i mobil
 
 ## Ytterligare resurser
 
-+ [Komma igång med AEM Headless - GraphQL Tutorial](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
-+ [AEM Headless Client for Java](https://github.com/adobe/aem-headless-client-java)
++ [Komma igång med AEM Headless - självstudiekurs för GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
++ [AEM Headless Client för Java](https://github.com/adobe/aem-headless-client-java)

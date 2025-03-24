@@ -4,14 +4,14 @@ description: Steg för att aktivera resurshämtningsrapporten
 type: Troubleshooting
 role: Admin
 level: Beginner
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Adobe Asset Link
 topic: Administration
 index: y
 doc-type: Technical Video
 exl-id: d50f626b-ced8-4320-91c2-738687bec295
 duration: 96
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '30'
 ht-degree: 0%

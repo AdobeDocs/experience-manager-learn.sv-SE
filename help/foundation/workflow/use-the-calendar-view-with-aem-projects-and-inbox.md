@@ -1,14 +1,14 @@
 ---
-title: Använda kalendervyn med AEM projekt och inkorgen
-description: AEM Kalendervy spårar projekt och uppgifter i en kalendervy för enklare projekthantering och schemaläggning. I kalendervyn får användaren en övergripande översikt över projekt och aktiviteter som pågår, är planerade och förfaller inom kort.
-version: 6.4, 6.5
+title: Använda kalendervyn med AEM-projekt och inkorgen
+description: AEM kalendervy håller reda på projekt och uppgifter i en kalendervy för enklare projektledning och schemaläggning. I kalendervyn får användaren en övergripande översikt över projekt och aktiviteter som pågår, är planerade och förfaller inom kort.
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Workflow, Projects
 doc-type: Feature Video
 topic: Collaboration
 role: User
 level: Beginner
 duration: 478
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '185'
 ht-degree: 0%
@@ -16,9 +16,9 @@ ht-degree: 0%
 ---
 
 
-# Använda kalendervyn med AEM projekt och inkorgen
+# Använda kalendervyn med AEM-projekt och inkorgen
 
-AEM Kalendervy spårar projekt och uppgifter i en kalendervy för enklare projekthantering och schemaläggning. I kalendervyn får användaren en övergripande översikt över projekt och aktiviteter som pågår, är planerade och förfaller inom kort.
+AEM kalendervy håller reda på projekt och uppgifter i en kalendervy för enklare projektledning och schemaläggning. I kalendervyn får användaren en övergripande översikt över projekt och aktiviteter som pågår, är planerade och förfaller inom kort.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16804?quality=12&learn=on)
 

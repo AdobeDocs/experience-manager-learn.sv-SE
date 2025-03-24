@@ -1,14 +1,14 @@
 ---
-title: Skapa innehållsfragment - Avancerade koncept för AEM Headless - GraphQL
-description: I det här kapitlet om avancerade begrepp i Adobe Experience Manager (AEM) Headless kan du lära dig att arbeta med flikar, datum och tid, JSON-objekt och fragmentreferenser i Content Fragments. Konfigurera mappprofiler för att begränsa vad Content Fragment Models kan inkluderas.
-version: Cloud Service
+title: Skapa innehållsfragment - Avancerade begrepp för AEM Headless - GraphQL
+description: I det här kapitlet i Avancerade koncept för Adobe Experience Manager (AEM) Headless kan du lära dig att arbeta med flikar, datum och tid, JSON-objekt och fragmentreferenser i Content Fragments. Konfigurera mappprofiler för att begränsa vad Content Fragment Models kan inkluderas.
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, GraphQL API
 topic: Headless, Content Management
 role: Developer
 level: Intermediate
 exl-id: 998d3678-7aef-4872-bd62-0e6ea3ff7999
 duration: 609
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2931'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Läs om hur du gör följande i det här kapitlet:
 
 ## Installera exempelinnehåll {#sample-content}
 
-Installera ett AEM som innehåller flera mappar och exempelbilder som används för att snabba upp självstudiekursen.
+Installera ett AEM-paket som innehåller flera mappar och exempelbilder som används för att snabba upp självstudiekursen.
 
 1. Hämta [Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip](/help/headless-tutorial/graphql/advanced-graphql/assets/tutorial-files/Advanced-GraphQL-Tutorial-Starter-Package-1.1.zip)
 1. I AEM går du till **Verktyg** > **Distribution** > **Paket** för att komma åt **Pakethanteraren**.
@@ -66,7 +66,7 @@ Skapa en mapp för instruktörsinnehållsfragment som är baserade på personinn
 
 ### Ange gränser med mappprinciper
 
-I AEM kan du definiera behörigheter och profiler för mapparna för innehållsfragment. Genom att använda behörigheter kan du bara ge vissa användare (författare) eller grupper av författare åtkomst till vissa mappar. Genom att använda mappprofiler kan du begränsa vad författare av innehållsfragmentmodeller kan använda i de mapparna. I det här exemplet ska vi begränsa en mapp till modellerna för person- och kontaktinformation. Så här konfigurerar du en mappprincip:
+I AEM kan du definiera behörigheter och profiler för innehållets fragmentmappar. Genom att använda behörigheter kan du bara ge vissa användare (författare) eller grupper av författare åtkomst till vissa mappar. Genom att använda mappprofiler kan du begränsa vad författare av innehållsfragmentmodeller kan använda i de mapparna. I det här exemplet ska vi begränsa en mapp till modellerna för person- och kontaktinformation. Så här konfigurerar du en mappprincip:
 
 1. Markera mappen **Instruktörer** som du har skapat och välj sedan **Egenskaper** i det övre navigeringsfältet.
 
@@ -114,7 +114,7 @@ Låt oss skapa fyra personer som kan läggas till i ett team med Adventure Instr
 
 ### Skapa en fragmentreferens från redigeraren för innehållsfragment {#fragment-reference-from-editor}
 
-AEM gör att du kan skapa en fragmentreferens direkt från redigeraren för innehållsfragment. Låt oss skapa en referens till Jakobs kontaktinformation.
+Med AEM kan du skapa en fragmentreferens direkt från redigeraren för innehållsfragment. Låt oss skapa en referens till Jakobs kontaktinformation.
 
 1. Välj **Nytt innehållsfragment** under fältet **Kontaktinformation**.
 

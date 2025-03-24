@@ -1,8 +1,8 @@
 ---
-title: Testa en Asset compute-arbetare
-description: I Asset compute-projektet definieras ett mönster för att enkelt skapa och köra tester av Asset compute.
+title: Testa en Asset Compute-arbetare
+description: Asset Compute-projektet definierar ett mönster för att enkelt skapa och köra tester av Asset Compute-arbetare.
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6284
 thumbnail: KT-6284.jpg
@@ -11,22 +11,22 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 04992caf-b715-4701-94a8-6257e9bd300c
 duration: 142
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 0%
 
 ---
 
-# Testa en Asset compute-arbetare
+# Testa en Asset Compute-arbetare
 
-Asset compute-projektet definierar ett mönster för att enkelt skapa och köra [test av Asset compute-arbetare](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html).
+Asset Compute-projektet definierar ett mönster för att enkelt skapa och köra [test av Asset Compute-arbetare](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html).
 
 ## Anatomi i ett arbetartest
 
-Asset compute arbetares tester delas upp i testsviter och inom varje testsvit finns ett eller flera testfall där ett villkor ska testas.
+Asset Compute arbetares tester delas upp i testsviter och inom varje testsvit finns ett eller flera testfall där ett villkor ska testas.
 
-Teststrukturen i ett Asset compute-projekt är följande:
+Teststrukturen i ett Asset Compute-projekt är följande:
 
 ```
 /actions/<worker-name>/index.js
@@ -78,7 +78,7 @@ Det här testfallet kontrollerar parametriserade indata (`params.json`) för ind
    }
    ```
 
-   Detta är samma nyckel/värden som skickas till Asset compute-profildefinitionen för [utvecklingsverktyget](../develop/development-tool.md), minus `worker`.
+   Det här är samma nyckel/värden som skickas till Asset Compute-profildefinitionen för [utvecklingsverktyget](../develop/development-tool.md), minus `worker`.
 
 1. Lägg till den förväntade [återgivningsfilen](./assets/test/success-parameterized/rendition.png) i det här testfallet och ge den namnet `rendition.png`. Den här filen representerar förväntade utdata för arbetaren för den angivna inmatningen `file.jpg`.
 1. Kör testerna av projektroten från kommandoraden genom att köra `aio app test`

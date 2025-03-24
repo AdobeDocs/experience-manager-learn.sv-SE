@@ -1,7 +1,7 @@
 ---
 title: Konfigurera ditt BPA- och CAM-projekt
 description: Läs om hur Best Practices Analyzer och Cloud Acceleration Manager kan ge en anpassad guide för migrering till AEM as a Cloud Service.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Migration, Upgrade
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-8627
 thumbnail: 336957.jpeg
 exl-id: f8289dd4-b293-4b8f-b14d-daec091728c0
 duration: 680
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 2%
@@ -27,7 +27,7 @@ Läs om hur Best Practices Analyzer (BPA) och Cloud Acceleration Manager (CAM) g
 
 ![Högnivådiagram för BPA och CAM](assets/bpa-cam-diagram.png)
 
-BPA-paketet ska installeras på en klon av produktionsmiljön AEM 6.x. BPA kommer att generera en rapport som sedan kan överföras till CAM, som ger vägledning om de viktigaste aktiviteter som behöver utföras för att kunna flyttas till AEM as a Cloud Service.
+BPA-paketet ska installeras på en klon av AEM 6.x-produktionsmiljön. BPA kommer att generera en rapport som sedan kan överföras till CAM, som ger vägledning om de viktigaste aktiviteter som behöver utföras för att kunna flyttas till AEM as a Cloud Service.
 
 ## Viktiga aktiviteter
 

@@ -1,7 +1,7 @@
 ---
 title: Rensa CDN-cachen
 description: Lär dig hur du rensar eller tar bort det cachelagrade HTTP-svaret från AEM as a Cloud Service CDN.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
 role: Admin, Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-08-13T00:00:00Z
 jira: KT-15963
 thumbnail: KT-15963.jpeg
 exl-id: 5d81f6ee-a7df-470f-84b9-12374c878a1b
-source-git-commit: 0639217a3bab7799eec3bbcc40c1a69ed1b12682
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 0%
@@ -43,9 +43,9 @@ Låt oss lära oss hur du ställer in rensnings-API-token för att rensa CDN-cac
 
 ### Konfigurera CDN-regeln
 
-Token för rensnings-API skapas genom att CDN-regeln konfigureras i AEM projektkod.
+Token för rensnings-API skapas genom att CDN-regeln konfigureras i AEM-projektkoden.
 
-1. Öppna filen `cdn.yaml` från huvudmappen `config` i AEM. Exempel: filen cdn.yaml](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml) för [WKND-projektet.
+1. Öppna filen `cdn.yaml` från huvudmappen `config` i ditt AEM-projekt. Exempel: filen cdn.yaml](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml) för [WKND-projektet.
 
 1. Lägg till följande CDN-regel i filen `cdn.yaml`:
 
@@ -71,7 +71,7 @@ data:
 
 I ovanstående regel läggs både `purgeKey1` och `purgeKey2` till från början så att hemligheter kan roteras utan avbrott. Du kan dock börja med endast `purgeKey1` och lägga till `purgeKey2` senare när du roterar hemligheterna.
 
-1. Spara, implementera och skicka ändringarna till databasen i det övre Adobe.
+1. Spara, implementera och skicka ändringarna till Adobe överordnade databas.
 
 ### Skapa Cloud Manager-miljövariabel
 
@@ -112,7 +112,7 @@ Distribuera slutligen den konfigurerade CDN-regeln till AEM as a Cloud Service-m
 
 ## Använd rensnings-API-token
 
-Om du vill rensa CDN-cachen anropar du den AEM tjänstspecifika domän-URL:en med rensnings-API-token. Syntaxen för att rensa cachen är följande:
+Om du vill rensa CDN-cachen anropar du AEM tjänstspecifika domän-URL:en med Token för rensnings-API. Syntaxen för att rensa cachen är följande:
 
 ```
 PURGE <URL> HTTP/1.1
@@ -125,7 +125,7 @@ Surrogate-Key: <SURROGATE_KEY>
 Var:
 
 - **PURGE`<URL>`**: Metoden `PURGE` följs av URL-sökvägen för resursen som du vill rensa.
-- **Värd:`<AEM_SERVICE_SPECIFIC_DOMAIN>`**: Den anger domänen för AEM.
+- **Värd:`<AEM_SERVICE_SPECIFIC_DOMAIN>`**: Den anger domänen för AEM-tjänsten.
 - **X-AEM-Rensa-nyckel:`<PURGE_API_TOKEN>`**: En anpassad rubrik som innehåller Token-värdet för Rensa API.
 - **X-AEM-Rensa:`<PURGE_TYPE>`**: En anpassad rubrik som anger typen av rensningsåtgärd. Värdet kan vara `hard`, `soft` eller `all`. I följande tabell beskrivs varje tömningstyp:
 

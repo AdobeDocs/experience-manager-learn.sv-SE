@@ -1,7 +1,7 @@
 ---
 title: Implementeringshandbok för enkel sökning
 description: Den enkla sökimplementeringen är material från 2017 Summit lab AEM Search Demystified. Den här sidan innehåller material från det här labbet. En guidad visning av labbet finns i Lab-arbetsboken i avsnittet Presentation på den här sidan.
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Search
 topic: Development
 role: Developer
@@ -11,7 +11,7 @@ exl-id: aa268c5f-d29e-4868-a58b-444379cb83be
 last-substantial-update: 2022-08-10T00:00:00Z
 thumbnail: 32090.jpg
 duration: 138
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '627'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Implementeringshandbok för enkel sökning{#simple-search-implementation-guide}
 
-Den enkla sökimplementeringen är material från **Adobe Summit lab AEM Search Demystified**. Den här sidan innehåller material från det här labbet. En guidad visning av labbet finns i Lab-arbetsboken i avsnittet Presentation på den här sidan.
+Den enkla sökimplementeringen är material från **Adobe Summit labb AEM Search Demystified**. Den här sidan innehåller material från det här labbet. En guidad visning av labbet finns i Lab-arbetsboken i avsnittet Presentation på den här sidan.
 
 ![Översikt över sökarkitekturen](assets/l4080/simple-search-application.png)
 
@@ -42,7 +42,7 @@ Den enkla sökimplementeringen är material från **Adobe Summit lab AEM Search 
 
 ### Kapitel {#chapters}
 
-*Kapitel-länkarna nedan förutsätter att [Initiala paket](#initialpackages) är installerade på AEM författare på`http://localhost:4502`*
+*Kapitel-länkarna nedan förutsätter att [Initiala paket](#initialpackages) är installerade på AEM Author på`http://localhost:4502`*
 
 * [Kapitel 1](http://localhost:4502/editor.html/content/summit/l4080/chapter-1.html)
 * [Kapitel 2](http://localhost:4502/editor.html/content/summit/l4080/chapter-2.html)
@@ -86,7 +86,7 @@ Rättelser och förtydliganden från labbdiskussionerna och svar på uppföljnin
 
 1. **Hur avbryter jag omindexering?**
 
-   Omindexering kan stoppas via IndexStats MBean via [AEM Web Console > JMX](http://localhost:4502/system/console/jmx)
+   Omindexering kan stoppas via IndexStats MBean som är tillgängligt via [AEM Web Console > JMX](http://localhost:4502/system/console/jmx)
 
    * [http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats](http://localhost:4502/system/console/jmx/org.apache.jackrabbit.oak%3Aname%3Dasync%2Ctype%3DIndexStats)
       * Kör `abortAndPause()` om du vill avbryta omindexeringen. Detta låser indexet för ytterligare omindexering tills `resume()` anropas.
@@ -107,7 +107,7 @@ Rättelser och förtydliganden från labbdiskussionerna och svar på uppföljnin
    * Frågor MÅSTE ange en sökvägsbegränsning som är lika med indexets sökvägsomfång, eller vara en underordnad där till.
    * Bredare index (till exempel `/oak:index/cqPageLucene`) indexerar också data, vilket resulterar i duplicerat intag och kostnad för diskanvändning.
    * Kan kräva duplicerad konfigurationshantering (t.ex. lägga till samma indexRules i flera innehavarindex om de måste uppfylla samma frågeuppsättningar)
-   * Det här arbetssättet används bäst på AEM Publish-nivå för anpassad webbplatssökning, till exempel AEM författare, eftersom det är vanligt att frågor körs uppåt i innehållsträdet för olika innehavare (till exempel via OmniSearch) - olika indexdefinitioner kan ge olika beteenden baserat enbart på sökvägsbegränsningen.
+   * Det här arbetssättet används bäst på AEM Publish-nivån för anpassad webbplatssökning, som på AEM Author, det är vanligt att frågor körs uppåt i innehållsträdet för olika innehavare (till exempel via OmniSearch) - olika indexdefinitioner kan ge olika beteenden baserat enbart på sökvägsbegränsningen.
 
 3. **Var finns en lista över alla tillgängliga analytiker?**
 
@@ -142,7 +142,7 @@ Rättelser och förtydliganden från labbdiskussionerna och svar på uppföljnin
 
 5. **Hur söker man över flera sökvägar i samma fråga?**
 
-   Nytt i AEM 6.3 är möjligheten att fråga över flera sökvägar i samma fråga. Följande QueryBuilder-fråga. Observera att varje &quot;underfråga&quot; kan tolkas som ett eget index.
+   Nytt i AEM 6.3 är möjligheten att fråga flera sökvägar i samma fråga. Följande QueryBuilder-fråga. Observera att varje &quot;underfråga&quot; kan tolkas som ett eget index.
 
    ```plain
    group.p.or=true

@@ -5,13 +5,13 @@ feature: Adaptive Forms
 type: Documentation
 role: Developer
 level: Beginner
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations
 jira: KT-14795
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 duration: 46
 exl-id: 9abe9f9d-8fb3-4e01-a830-1dad1c27274d
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '240'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Fyll i anpassat formulär i förväg med data från Share Point List
 
-I den tidigare versionen av AEM Form(6.5) behövde man skriva egen kod för att förifylla formulärdatamodellen med hjälp av attributet request. I AEM Forms som molntjänst behöver du inte längre skriva egen kod.
+I den tidigare versionen av AEM Form(6.5) behövde man skriva egen kod för att förifylla blankettens datamodell med hjälp av attributet request. I AEM Forms som molntjänst behöver du inte längre skriva egen kod.
 
 I den här artikeln beskrivs stegen som krävs för att förifylla/förifylla anpassningsbara formulär med data som hämtats från SharePoint lista med hjälp av förifyllningstjänsten för formulärdatamodellen.
 

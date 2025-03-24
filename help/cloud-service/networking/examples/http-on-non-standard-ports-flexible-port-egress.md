@@ -1,7 +1,7 @@
 ---
 title: HTTP/HTTPS-anslutningar på portar som inte är standard för flexibel portutgång
 description: Lär dig hur du gör HTTP/HTTPS-förfrågningar från AEM as a Cloud Service till externa webbtjänster som körs på icke-standardportar för flexibel portadress.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9354
 thumbnail: KT-9354.jpeg
 exl-id: c8cc0385-9e94-4120-9fb1-aeccbfcc8aa4
 duration: 86
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '237'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Kontrollera att den [lämpliga](../advanced-networking.md#advanced-networking) a
 
 ## Exempel på kod
 
-Detta Java™-kodexempel är en OSGi-tjänst som kan köras i AEM as a Cloud Service och som gör en HTTP-anslutning till en extern webbserver på 8080. För anslutningar till HTTPS-webbservrar används miljövariablerna `AEM_PROXY_HOST` och `AEM_HTTPS_PROXY_PORT` (standard är `proxy.tunnel:3128` i AEM versioner &lt; 6094).
+Detta Java™-kodexempel är en OSGi-tjänst som kan köras i AEM as a Cloud Service och som gör en HTTP-anslutning till en extern webbserver på 8080. För anslutningar till HTTPS-webbservrar används miljövariablerna `AEM_PROXY_HOST` och `AEM_HTTPS_PROXY_PORT` (standard är `proxy.tunnel:3128` i AEM-versioner &lt; 6094).
 
 >[!NOTE]
 > Vi rekommenderar att [Java™ 11 HTTP API:er](https://docs.oracle.com/en/java/javase/11/docs/api/java.net.http/java/net/http/package-summary.html) används för att göra HTTP/HTTPS-anrop från AEM.

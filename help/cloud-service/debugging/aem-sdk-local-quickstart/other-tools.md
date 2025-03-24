@@ -1,8 +1,8 @@
 ---
-title: Andra verktyg för felsökning AEM SDK
-description: En mängd andra verktyg kan hjälpa dig att felsöka AEM SDK:s lokala snabbstart.
+title: Andra verktyg för felsökning av AEM SDK
+description: En mängd andra verktyg kan hjälpa dig att felsöka AEM SDK lokala snabbstart.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5251
 topic: Development
@@ -10,24 +10,24 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: 11fb83e9-dbaf-46e5-8102-ae8cc716c6ba
 duration: 107
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '514'
 ht-degree: 0%
 
 ---
 
-# Andra verktyg för felsökning AEM SDK
+# Andra verktyg för felsökning av AEM SDK
 
-En mängd andra verktyg kan hjälpa dig att felsöka programmet på AEM SDK:s lokala snabbstart.
+En mängd andra verktyg kan hjälpa dig att felsöka programmet på AEM SDK lokala snabbstart.
 
 ## CRXDE Lite
 
 ![CRXDE Lite](./assets/other-tools/crxde-lite.png)
 
-CRXDE Lite är ett webbaserat gränssnitt som används för att interagera med JCR, AEM datalagret. CRXDE Lite ger fullständig synlighet i JCR-rapporterna, inklusive noder, egenskaper, egenskapsvärden och behörigheter.
+CRXDE Lite är ett webbaserat gränssnitt för interaktion med JCR, AEM datalager. CRXDE Lite ger fullständig insyn i JCR-rapporterna, inklusive noder, egenskaper, egenskapsvärden och behörigheter.
 
-CRXDE Lite ligger på:
+CRXDE Lite finns här:
 
 + Verktyg > Allmänt > CRXDE Lite
 + eller direkt på [http://localhost:4502/crx/de/index.jsp](http://localhost:4502/crx/de/index.jsp)
@@ -44,13 +44,13 @@ CRXDE Lite ger direktåtkomst till JCR. Det innehåll som visas via CRXDE Lite b
 
 ![CRXDE Lite - Felsöka innehåll](./assets/other-tools/crxde-lite__debugging-content.png)
 
-Ändringar som görs direkt i AEM SDK via CRXDE Lite kan vara svåra att spåra och styra. Se till att ändringar som görs via CRXDE Lite återgår till det ändringsbara innehållspaketet (`ui.content`) för AEM som är kopplat till Git. Helst utgår alla innehållsändringar i programmet från kodbasen och flödar in i AEM SDK via distributioner, i stället för att göra ändringar direkt i AEM SDK via CRXDE Lite.
+Ändringar som görs direkt i AEM SDK via CRXDE Lite kan vara svåra att spåra och styra. Se till att ändringar som görs via CRXDE Lite återgår till AEM-projektets ändringsbara innehållspaket (`ui.content`) och implementeras i Git. Helst kommer alla innehållsändringar från kodbasen och flödar in i AEM SDK via distributioner, i stället för att göra ändringar direkt i AEM SDK via CRXDE Lite.
 
 ### Åtkomstkontroller för felsökning
 
-Med CRXDE Lite kan du testa och utvärdera åtkomstkontroll på en specifik nod för en viss användare eller grupp (även huvudnamn).
+CRXDE Lite erbjuder ett sätt att testa och utvärdera åtkomstkontroll på en specifik nod för en viss användare eller grupp (även huvudnamn).
 
-Om du vill få åtkomst till kontrollkonsolen Testa åtkomst i CRXDE Lite går du till:
+Om du vill få åtkomst till Test Access Control Console i CRXDE Lite går du till:
 
 + CRXDE Lite > Verktyg > Testa åtkomstkontroll ...
 
@@ -72,7 +72,7 @@ Resultaten visas nedan:
 
 ![Förklara fråga](./assets/other-tools/explain-query.png)
 
-Förklara frågebaserade verktyg i AEM SDK:s lokala snabbstart, som ger viktiga insikter i hur AEM tolkar och kör frågor, och ett värdefullt verktyg för att säkerställa att frågor körs på ett bra sätt av AEM.
+Det webbaserade verktyget Förklara fråga i AEM SDK - lokal snabbstart, som ger viktiga insikter i hur AEM tolkar och kör frågor, och ett värdefullt verktyg för att säkerställa att frågor körs på ett bra sätt av AEM.
 
 Förklara frågan finns på:
 
@@ -83,7 +83,7 @@ Förklara frågan finns på:
 
 ![QueryBuilder-felsökning](./assets/other-tools/query-debugger.png)
 
-QueryBuilder-felsökningsverktyget är ett webbaserat verktyg som hjälper dig att felsöka och förstå sökfrågor med hjälp av AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html) -syntax.
+QueryBuilder-felsökningsverktyget är ett webbaserat verktyg som hjälper dig att felsöka och förstå sökfrågor med AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html) -syntax.
 
 Felsökaren för QueryBuilder finns på:
 

@@ -1,7 +1,7 @@
 ---
 title: Utveckla för Cross-Origin Resource Sharing (CORS) med AEM
-description: Ett kort exempel på hur CORS kan utnyttja AEM material från ett externt webbprogram via JavaScript på klientsidan.
-version: 6.4, 6.5
+description: Ett kort exempel på hur CORS kan utnyttja AEM-material från ett externt webbprogram via JavaScript på klientsidan.
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Security, Development
 role: Developer
 level: Beginner
@@ -9,7 +9,7 @@ feature: Security
 doc-type: Technical Video
 exl-id: 867cf74e-44e7-431b-ac8f-41b63c370635
 duration: 333
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
@@ -18,12 +18,12 @@ ht-degree: 0%
 
 # Utveckla för Cross-Origin Resource Sharing (CORS)
 
-Ett kort exempel på hur [!DNL CORS] kan användas för att få åtkomst AEM innehåll från ett externt webbprogram via JavaScript på klientsidan. I det här exemplet används CORS OSGi-konfigurationen för att aktivera CORS-åtkomst på AEM. OSGi-konfigurationsmetoden är användbar när:
+Ett kort exempel på hur [!DNL CORS] kan utnyttja AEM-innehåll från ett externt webbprogram via JavaScript på klientsidan. I det här exemplet används CORS OSGi-konfigurationen för att aktivera CORS-åtkomst på AEM. OSGi-konfigurationsmetoden är användbar när:
 
-* Ett enda ursprung är åtkomst AEM Publish-innehåll
-* CORS-åtkomst krävs för AEM författare
+* Ett enda ursprung är åtkomst till AEM Publish-innehåll
+* CORS-åtkomst krävs för AEM Author
 
-Om åtkomst till AEM Publish krävs med flera ursprung, se [den här dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
+Om åtkomst till AEM Publish med flera ursprung krävs, se [det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
 
 >[!VIDEO](https://video.tv.adobe.com/v/18837?quality=12&learn=on)
 
@@ -103,7 +103,7 @@ Access-Control-Request-Method,Access-Control-Request-Headers]"
 
 ### Tillåt CORS-begäranderubriker
 
-Om du vill tillåta att de begärda [HTTP-begäranrubrikerna skickas till AEM för bearbetning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders), måste de tillåtas i Dispatcher-konfigurationens `/clientheaders`.
+Om du vill tillåta de begärda [HTTP-begäranrubrikerna att gå igenom till AEM för bearbetning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) måste de tillåtas i Dispatcher-konfigurationen `/clientheaders`.
 
 ```
 /clientheaders {
@@ -116,7 +116,7 @@ Om du vill tillåta att de begärda [HTTP-begäranrubrikerna skickas till AEM f�
 
 ### Cachelagra CORS-svarshuvuden
 
-Om du vill tillåta cachelagring och visning av CORS-huvuden i cachelagrat innehåll lägger du till följande [/cache /headers-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers) i den AEM Publish `dispatcher.any` -filen.
+Om du vill tillåta cachelagring och visning av CORS-huvuden i cachelagrat innehåll lägger du till följande [/cache /headers-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers) i AEM Publish `dispatcher.any`-filen.
 
 ```
 /publishfarm {

@@ -2,7 +2,7 @@
 title: Extrahera nod från skickad data-xml
 description: Anpassat processsteg för att lägga till skrivdokument i nyttolastmappen i filsystemet
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -10,7 +10,7 @@ kt: kt-9860
 exl-id: 5282034f-275a-479d-aacb-fc5387da793d
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 35
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '179'
 ht-degree: 0%

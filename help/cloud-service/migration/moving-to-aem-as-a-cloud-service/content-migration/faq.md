@@ -1,7 +1,7 @@
 ---
 title: Vanliga frågor om migrering av AEM as a Cloud Service-innehåll
 description: Få svar på vanliga frågor om innehållsmigrering till AEM as a Cloud Service.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: article
 topic: Migration
 feature: Migration
@@ -11,7 +11,7 @@ jira: KT-11200
 thumbnail: kt-11200.jpg
 exl-id: bdec6cb0-34a0-4a28-b580-4d8f6a249d01
 duration: 399
-source-git-commit: e29eaefb20d466126d0d31ad8eb598b63a0cebcd
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1884'
 ht-degree: 0%
@@ -29,15 +29,15 @@ Få svar på vanliga frågor om innehållsmigrering till AEM as a Cloud Service.
 + **CTT**: [Verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
 + **CAM**: [Cloud Acceleration Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-acceleration-manager/using-cam/getting-started-cam.html)
 + **IMS**: [Identity Management System](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html)
-+ **DM**: [Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dm-journey/dm-journey-part1.html)
++ **DM**: [Dynamiska media](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/dm-journey/dm-journey-part1.html)
 
-Använd mallen nedan om du vill ha mer information när du skapar supportbiljetter för CTT-relaterade Adobe.
+Använd mallen nedan om du vill ha mer information när du skapar CTT-relaterade Adobe supportärenden.
 
-![Mall för innehållsmigrering på Adobe - supportanmälan](../../assets/faq/adobe-support-ticket-template.png) { align=&quot;center&quot; }
+![Innehållsmigrering - Adobe supportmall](../../assets/faq/adobe-support-ticket-template.png) { align=&quot;center&quot; }
 
 ## Allmänna frågor om innehållsmigrering
 
-### F: Vilka olika metoder använder man för att migrera innehåll till AEM som Cloud Service?
+### F: Vilka olika metoder använder man för att migrera innehåll till AEM som molntjänster?
 
 Det finns tre olika metoder
 
@@ -47,7 +47,7 @@ Det finns tre olika metoder
 
 ### F: Finns det någon gräns för hur mycket innehåll som kan överföras med CTT?
 
-Nej. CTT som ett verktyg kan extrahera från AEM och importera till AEMaaCS. Det finns dock specifika begränsningar för AEMaaCS-plattformen som bör beaktas före migreringen.
+Nej. CTT som ett verktyg kan extrahera från AEM-källa och importera till AEMaaCS. Det finns dock specifika begränsningar för AEMaaCS-plattformen som bör beaktas före migreringen.
 
 Mer information finns i [Krav för molnmigrering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/prerequisites-content-transfer-tool.html).
 
@@ -65,11 +65,11 @@ Vi rekommenderar alltid att du utför 1:1-extrahering och -förtäring mellan f�
 
 Eftersom migreringsprocessen är beroende av internetbandbredd, heap som allokerats för CTT-processen, ledigt minne och disk-I/O som är beroende av varje källsystem, rekommenderas att proof of migrations körs tidigt och att datapunkter extrapoleras för att få en uppskattning.
 
-### F: Hur påverkas min AEM prestanda om jag startar extraheringsprocessen för CTT?
+### F: Hur påverkas min AEM källprestanda om jag startar extraheringsprocessen för CTT?
 
 CTT-verktyget körs i en egen Java™-process som tar upp till 4 GB heap, som kan konfigureras med OSGi-konfiguration. Antalet kan komma att ändras, men du kan hoppa till Java™-processen och ta reda på det.
 
-Om AZCopy är installerat och/eller Pre copy-alternativ/valideringsfunktion är aktiverad förbrukar AZCopy-processen processorcykler.
+Om AZCopy är installerat och/eller Pre copy-alternativ/valideringsfunktion är aktiverad förbrukar AZCopy-processen CPU-cykler.
 
 Förutom jvm använder verktyget även disk-I/O för att lagra data på ett tillfälligt övergångsutrymme som rensas efter extraheringscykeln. Förutom RAM, CPU och disk-I/O använder CTT-verktyget även källsystemets nätverksbandbredd för att överföra data till Azure-blobbutiken.
 
@@ -101,7 +101,7 @@ Ja. Slutanvändartrafiken avbryts inte av innehållsmigreringsaktiviteten. Förf
 
 ### F: BPA-rapporten innehåller objekt som är relaterade till saknade ursprungliga återgivningar. Ska jag städa upp dem vid källan innan jag extraherar dem?
 
-Ja. Den saknade ursprungliga återgivningen innebär att resursens binärfil inte överförs korrekt från början. Om du ser det som felaktiga data bör du granska, säkerhetskopiera med Package Manager (efter behov) och ta bort dem från AEM innan du kör extraheringen. Felaktiga data kommer att få negativa resultat i tillgångsbearbetningsstegen.
+Ja. Den saknade ursprungliga återgivningen innebär att resursens binärfil inte överförs korrekt från början. Om du ser det som felaktiga data bör du granska, säkerhetskopiera med Package Manager (efter behov) och ta bort dem från AEM-källfilen innan du kör extraheringen. Felaktiga data kommer att få negativa resultat i tillgångsbearbetningsstegen.
 
 ### F: BPA-rapporten innehåller objekt som är relaterade till den saknade `jcr:content`-noden för mappar. Vad ska jag göra med dem?
 
@@ -117,7 +117,7 @@ Ja, det finns en [validering](https://experienceleague.adobe.com/docs/experience
 
 ### F: Kunden måste flytta innehåll mellan AEMaaCS-miljöer som AEMaaCS Dev till AEMaaCS Stage eller till AEMaaCS Prod. Kan jag använda verktyget för innehållsöverföring för de här användningsområdena?
 
-Tyvärr, nej. CTT:s användningsexempel är att migrera innehåll från en lokal/AMS-värd AEM 6.3+-källa till AEMaaCS-molnmiljöer. [Läs CTT-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html).
+Tyvärr, nej. CTT:s användningsexempel är att migrera innehåll från AEM 6.3+-källan som är lokal/AMS-värd till AEMaaCS-molnmiljöer. [Läs CTT-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html).
 
 ### F: Vilka typer av problem förväntas vid extraktion?
 
@@ -148,7 +148,7 @@ CTT-processen kräver anslutning till resurserna nedan:
 
 Mer information om [källanslutning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/cloud-migration/content-transfer-tool/getting-started-content-transfer-tool.html#source-environment-connectivity) finns i dokumentationen.
 
-## Tillgångshantering Dynamic Media relaterade frågor
+## Dynamisk mediehantering - frågor
 
 ### F: Kommer materialet att bearbetas om automatiskt efter intag i AEMaaCS?
 
@@ -158,15 +158,15 @@ Nej. Begäran om ombearbetning måste initieras för att resurserna ska kunna be
 
 Ja. Resurserna indexeras om baserat på de indexdefinitioner som är tillgängliga i AEMaaCS.
 
-### F: AEM är integrerat med Dynamic Media. Finns det några specifika saker som måste övervägas före innehållsmigrering?
+### F: Källa AEM är integrerat med Dynamic Media. Finns det några specifika saker som måste övervägas före innehållsmigrering?
 
 Ja, tänk på följande när AEM har Dynamic Media Integration.
 
-+ AEMaaCS stöder endast Dynamic Media Scene7 Mode. Om källsystemet är i hybrid-läge krävs DM-migrering till Scene7-lägen.
++ AEMaaCS har endast stöd för läget Dynamic Media Scene7. Om källsystemet är i hybrid-läge krävs DM-migrering till Scene7-lägen.
 + Om metoden är att migrera från källkloninstanser är det säkert att inaktivera DM-integrering på klon som skulle användas för CTT. Detta steg är enbart för att undvika skrivningar till DM eller för att undvika belastning på DM-trafiken.
 + Observera att CTT migrerar noder, metadata för en migreringsuppsättning från AEM till AEMaaCS. Den utför inga åtgärder direkt på DM.
 
-### F: Vilka olika migreringsstrategier gäller när DM-integrering finns på Source AEM?
+### F: Vilka olika migreringsstrategier gäller när DM-integrering förekommer i Source AEM?
 
 Läs ovanstående fråga och svar innan
 
@@ -184,8 +184,8 @@ Om antalet resurser/noder i källmiljön ligger på en lägre nivå (~100 kB), u
    + Observera att den här åtgärden migrerar hela nodarkivet, men endast ändrade blobbar i motsats till hela blobbar. Den tidigare uppsättningen blober finns i Azure-blobbbutiken för AEMaaCS-målinstansen.
    + Använd det här migreringsbeviset för att mäta migreringens varaktighet, testning och validering av alla andra funktioner
 + Utför slutligen en svepning=verklig migrering före veckan då det publiceras
-   + Ansluta Dynamic Media till AEMaaCS
-   + Koppla från DM-konfiguration AEM lokal källa
+   + Anslut de dynamiska medierna i AEMaaCS
+   + Koppla från DM-konfiguration från AEM lokala källa
 
 Med det här alternativet kan du köra migrering från en till en, vilket betyder On-prem Dev → AEMaaCS Dev osv. och flytta DM-konfigurationerna från respektive miljö
 
@@ -207,7 +207,7 @@ Ovanstående metod kan bara användas för att mäta migreringstiden, men den m�
 
 ## Ytterligare resurser
 
-+ [Tips och tricks för migrering till Experience Manager i molnet ( Summit 2022)](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
++ [Tips och tricks för migrering till Experience Manager i molnet (Summit 2022)](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
 
 + [Video från CTT Expert Series](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html)
 

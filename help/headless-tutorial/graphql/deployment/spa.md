@@ -1,7 +1,7 @@
 ---
 title: Distribuera SPA för AEM GraphQL
-description: Läs mer om distributionsaspekter för single-page-program (SPA) AEM Headless-distributioner.
-version: Cloud Service
+description: Ta reda på vad som gäller vid driftsättning av SPA-program (Single-page app) AEM Headless.
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -11,20 +11,20 @@ thumbnail: KT-10587.jpg
 mini-toc-levels: 2
 exl-id: 3fe175f7-6213-439a-a02c-af3f82b6e3b7
 duration: 136
-source-git-commit: f1b13bba9e83ac1d25f2af23ff2673554726eb19
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '655'
 ht-degree: 0%
 
 ---
 
-# AEM driftsättning av SPA utan headless
+# AEM Headless SPA-driftsättningar
 
-AEM Headless single-page app (SPA) deployment omfattar JavaScript-baserade applikationer som byggts med ramverk som React eller Vue och som konsumerar och interagerar med AEM på ett headless sätt.
+AEM Headless Single-page app (SPA) innehåller JavaScript-baserade applikationer som byggts med ramverk som React eller Vue och som konsumerar och interagerar med material i AEM på ett headless sätt.
 
-För att driftsätta en SPA som interagerar AEM utan att vara i kö måste du vara värd för SPA och göra den tillgänglig via en webbläsare.
+Driftsättning av en SPA som interagerar med AEM utan att ha något gränssnitt innebär att man måste vara värd för SPA och göra det tillgängligt via en webbläsare.
 
-## SPA
+## Värd för SPA
 
 En SPA består av en samling med inbyggda webbresurser: **HTML, CSS och JavaScript**. De här resurserna genereras under _build_-processen (till exempel `npm run build`) och distribueras till en värd som ska användas av slutanvändare.
 
@@ -38,7 +38,7 @@ Det finns olika **värdalternativ** beroende på organisationens krav:
 
 ## Distributionskonfigurationer
 
-Det viktigaste att tänka på när du är värd för en SPA som interagerar med AEM utan huvud är om SPA nås via AEM domän (eller värd), eller på en annan domän.  Orsaken är SPA webbprogram som körs i webbläsare och därför omfattas av webbläsarens säkerhetsprofiler.
+Det viktigaste att tänka på när du är värd för ett SPA som samverkar med AEM utan huvud är om SPA nås via AEM domän (eller värd), eller på en annan domän.  Orsaken är att SPA-program är webbprogram som körs i webbläsare och därför omfattas av webbläsarens säkerhetsprofiler.
 
 ### Delad domän
 
@@ -47,52 +47,52 @@ En SPA och AEM delar domäner när båda är åtkomliga för slutanvändare frå
 + AEM nås via: `https://wknd.site/`
 + SPA nås via `https://wknd.site/spa`
 
-Eftersom både AEM och SPA är åtkomliga från samma domän kan SPA göra XHR till AEM Headless-slutpunkter utan CORS, och tillåta delning av HTTP-cookies (till exempel AEM `login-token`-cookies).
+Eftersom både AEM och SPA är åtkomliga från samma domän kan SPA i webbläsare göra XHR till AEM Headless-slutpunkter utan CORS och tillåta delning av HTTP-cookies (till exempel AEM `login-token`-cookies).
 
-Det är upp till dig att dirigera SPA- och AEM-trafik till den delade domänen: CDN med flera ursprung, HTTP-server med omvänd proxy, som är värd för SPA direkt i AEM och så vidare.
+Hur trafik från SPA och AEM dirigeras till den delade domänen är upp till dig: CDN med flera ursprung, HTTP-server med omvänd proxy, värdtjänst för SPA direkt i AEM osv.
 
-Nedan visas distributionskonfigurationer som krävs för SPA produktionsdistributioner, när de finns på samma domän som AEM.
+Nedan visas distributionskonfigurationer som krävs för SPA-produktionsdistributioner, när de finns på samma domän som AEM.
 
-| SPA ansluter till → | AEM | AEM Publish | AEM |
+| SPA ansluter till → | AEM Author | AEM Publish | AEM Preview |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | Cross-origin resource sharing (CORS) | ✘ | ✘ | ✘ |
-| AEM | ✘ | ✘ | ✘ |
+| AEM-värdar | ✘ | ✘ | ✘ |
 
 ### Olika domäner
 
-En SPA och AEM har olika domäner när slutanvändare från olika domäner har åtkomst till dem. Till exempel:
+En SPA och AEM har olika domäner när slutanvändare från olika domäner får åtkomst till dem. Till exempel:
 
 + AEM nås via: `https://wknd.site/`
 + SPA nås via `https://wknd-app.site/`
 
 Eftersom AEM och SPA används från olika domäner tillämpar webbläsare säkerhetsprofiler som [korsdomänsresursdelning (CORS)](./configurations/cors.md) och förhindrar delning av HTTP-cookies (till exempel AEM `login-token`-cookies).
 
-Nedan visas distributionskonfigurationer som krävs för SPA av produktionsdistributioner, när dessa lagras på en annan domän än AEM.
+Nedan visas distributionskonfigurationer som krävs för SPA-produktionsdistributioner, när dessa lagras på en annan domän än AEM.
 
-| SPA ansluter till → | AEM | AEM Publish | AEM |
+| SPA ansluter till → | AEM Author | AEM Publish | AEM Preview |
 |---------------------------------------------------:|:----------:|:-----------:|:-----------:|
 | [Dispatcher-filter](./configurations/dispatcher-filters.md) | ✘ | ✔ | ✔ |
 | [Resursdelning mellan ursprung (CORS)](./configurations/cors.md) | ✔ | ✔ | ✔ |
-| [AEM värdar](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
+| [AEM-värdar](./configurations/aem-hosts.md) | ✔ | ✔ | ✔ |
 
-#### Exempel SPA distribution på olika domäner
+#### Exempel på SPA-distribution på olika domäner
 
-I det här exemplet distribueras SPA till en Netlify-domän (`https://main--sparkly-marzipan-b20bf8.netlify.app/`) och SPA använder AEM GraphQL API:er från den AEM Publish-domänen (`https://publish-p65804-e666805.adobeaemcloud.com`). Skärmbilderna nedan visar CORS-kraven.
+I det här exemplet distribueras SPA till en Netlify-domän (`https://main--sparkly-marzipan-b20bf8.netlify.app/`) och SPA använder AEM GraphQL API:er från AEM Publish-domänen (`https://publish-p65804-e666805.adobeaemcloud.com`). Skärmbilderna nedan visar CORS-kraven.
 
-1. SPA hanteras från en Netlify-domän, men gör ett XHR-anrop till AEM GraphQL API:er på en annan domän. Den här begäran över flera platser kräver att [CORS](./configurations/cors.md) har konfigurerats AEM för att tillåta begäran från Netlify-domänen att få åtkomst till dess innehåll.
+1. SPA hanteras från en Netlify-domän, men gör ett XHR-anrop till AEM GraphQL API:er på en annan domän. Den här begäran över flera platser kräver att [CORS](./configurations/cors.md) har konfigurerats på AEM för att tillåta begäran från Netlify-domänen att få åtkomst till dess innehåll.
 
-   ![SPA begäran från SPA och AEM ](assets/spa/cors-requirement.png)
+   ![SPA-begäran från SPA- och AEM-värdar ](assets/spa/cors-requirement.png)
 
-2. XHR-begäran inspekteras till AEM GraphQL API. `Access-Control-Allow-Origin` finns, vilket anger för webbläsaren att AEM tillåter begäran från den här Netlify-domänen att komma åt dess innehåll.
+2. `Access-Control-Allow-Origin` är närvarande när XHR-begäran inspekteras i AEM GraphQL API, vilket anger för webbläsaren att AEM tillåter begäran från den här Netlify-domänen att komma åt dess innehåll.
 
-   Om AEM [CORS](./configurations/cors.md) saknades eller inte innehöll Netlify-domänen, misslyckas webbläsaren med XHR-begäran och rapporterar ett CORS-fel.
+   Om AEM [CORS](./configurations/cors.md) saknades eller inte innehöll Netlify-domänen misslyckas XHR-begäran och ett CORS-fel rapporteras.
 
    ![CORS-svarshuvud AEM GraphQL API](assets/spa/cors-response-headers.png)
 
 ## Exempel på enkelsidig app
 
-Adobe tillhandahåller ett exempel på en enkelsidig app som kodats i React.
+Adobe tillhandahåller ett exempel på en app för en sida som är kodad i React.
 
 <div class="columns is-multiline">
 <!-- React app -->

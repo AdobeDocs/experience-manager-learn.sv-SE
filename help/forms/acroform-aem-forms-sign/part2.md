@@ -3,11 +3,11 @@ title: Acrobat med AEM Forms
 description: Del 2 i Integrering av Acrobat med AEM Forms. Skapa ett schema från en Acrobat.
 feature: adaptive-forms
 doc-type: Tutorial
-version: 6.5
+version: Experience Manager 6.5
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 34
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Nästa steg är att skapa ett schema från den Acrobat som skapades i det tidiga
 1. Logga in på [CRXDE Lite](http://localhost:4502/crx/de)
 2. Öppna i filen `/apps/AemFormsSamples/components/createxsd/POST.jsp`
 3. Ändra `saveLocation` till en lämplig mapp på hårddisken. Kontrollera att mappen som du sparar i redan har skapats.
-4. Peka webbläsaren på sidan [Skapa XSD](http://localhost:4502/content/DocumentServices/CreateXsd.html) som finns på AEM.
+4. Peka webbläsaren på sidan [Skapa XSD](http://localhost:4502/content/DocumentServices/CreateXsd.html) på AEM.
 5. Dra och släpp Acrobat.
 6. Kontrollera mappen som anges i steg 3. Schemafilen sparas på den här platsen.
 

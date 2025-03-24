@@ -1,7 +1,7 @@
 ---
 title: Installera GraphiQL IDE på AEM 6.5
 description: Lär dig installera och konfigurera GraphiQL IDE på AEM 6.5
-version: 6.5
+version: Experience Manager 6.5
 topic: Headless
 feature: GraphQL API
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-11614
 thumbnail: KT-10253.jpeg
 exl-id: 04fcc24c-7433-4443-a109-f01840ef1a89
 duration: 41
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -27,9 +27,9 @@ I AEM 6.5 måste GraphiQL IDE-verktyget installeras manuellt.
 
    ![Hämta GraphiQL-paket](assets/graphiql/software-distribution.png)
 
-   Zip-filen är ett AEM som kan installeras direkt.
+   ZIP-filen är ett AEM-paket som kan installeras direkt.
 
-1. Gå till **Verktyg** > **Distribution** > **Paket** från AEM Start-menyn.
+1. Gå till **Verktyg** > **Distribution** > **Paket** på Start-menyn i AEM.
 1. Klicka på **Överför paket** och välj det paket som hämtades i det föregående steget. Klicka på **Installera** för att installera paketet.
 
    ![Installera GraphiQL-paketet](assets/graphiql/install-graphiql-package.png)

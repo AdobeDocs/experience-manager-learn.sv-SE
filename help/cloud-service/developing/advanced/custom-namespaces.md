@@ -1,7 +1,7 @@
 ---
 title: Anpassade namnutrymmen
 description: Lär dig hur du definierar och distribuerar anpassade namnutrymmen till AEM as a Cloud Service.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development, Content Management
 feature: Metadata
 role: Developer
@@ -11,7 +11,7 @@ thumbnail: 3412319.jpg
 last-substantial-update: 2022-12-14T00:00:00Z
 exl-id: e86ddc9d-ce44-407a-a20c-fb3297bb0eb2
 duration: 496
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -22,18 +22,18 @@ ht-degree: 0%
 
 Lär dig hur du definierar och distribuerar anpassade [namnutrymmen](https://developer.adobe.com/experience-manager/reference-materials/spec/jcr/1.0/4.5_Namespaces.html) till AEM as a Cloud Service.
 
-Anpassade namnutrymmen är den valfria delen av en JCR-egenskap som föregår `:`. AEM använder flera namnutrymmen som:
+Anpassade namnutrymmen är den valfria delen av en JCR-egenskap som föregår `:`. I AEM används flera namnutrymmen som:
 
 + `jcr` för JCR-systemegenskaper
-+ `cq` för AEM (tidigare Adobe CQ) egenskaper
-+ `dam` för AEM egenskaper som är specifika för DAM-resurser
++ `cq` för AEM-egenskaper (tidigare Adobe CQ)
++ `dam` för AEM-egenskaper som är specifika för DAM-resurser
 + `dc` för Dublin Core-egenskaper
 
 ... och många andra.
 
-Namnutrymmen kan användas för att ange en egenskaps omfång och avsikt. Om du skapar ett anpassat namnutrymme, ofta ditt företagsnamn, blir det lättare att identifiera noder eller egenskaper som är specifika för din AEM och innehåller data som är specifika för ditt företag.
+Namnutrymmen kan användas för att ange en egenskaps omfång och avsikt. Genom att skapa ett anpassat namnutrymme, ofta ditt företagsnamn, kan du tydligt identifiera noder eller egenskaper som är specifika för din AEM-implementering och innehålla data som är specifika för din verksamhet.
 
-Anpassade namnutrymmen hanteras i [Repoinit (Sling Repository Initialization)](https://sling.apache.org/documentation/bundles/repository-initialization.html) -skript och distribueras till AEM as a Cloud Service som OSGi-konfigurationer - och läggs till i [AEM ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) `ui.config` -projektet i ditt   -projekt.
+Anpassade namnutrymmen hanteras i [Sling Repoinit (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html) -skript och distribueras till AEM as a Cloud Service som OSGi-konfigurationer - och läggs till i [AEM-projektets](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) `ui.config` -projekt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412319?quality=12&learn=on)
 

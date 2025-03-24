@@ -1,7 +1,7 @@
 ---
-title: Loggningsvariabler i AEM [del6]
-description: Logga värdet AEM arbetsflödesvariablerna
-version: 6.5
+title: Loggningsvariabler i AEM Workflow[Del6]
+description: Logga värdet på AEM arbetsflödesvariabler
+version: Experience Manager 6.5
 topic: Development
 feature: Adaptive Forms, Workflow
 role: Developer
@@ -9,16 +9,16 @@ level: Beginner
 jira: KT-13783
 exl-id: 6afb3a52-9879-4393-8efd-ec3e5c303063
 duration: 84
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '125'
 ht-degree: 0%
 
 ---
 
-# Logga variabelvärdet i AEM
+# Logga variabelvärdet i AEM Workflow
 
-Det är vanligt att logga variabelvärdet vid programutveckling. Det hjälper utvecklare att spåra och förstå hur ett AEM arbetsflöde körs, diagnostisera problem och övervaka dataflödet i ett AEM arbetsflöde.
+Det är vanligt att logga variabelvärdet vid programutveckling. Det hjälper utvecklare att spåra och förstå hur ett AEM-arbetsflöde körs, diagnostisera problem och övervaka dataflödet i ett AEM-arbetsflöde.
 
 
 
@@ -175,9 +175,9 @@ public class LogWorkflowVariables implements WorkflowProcess {
 
 >[!NOTE]
 >
->Dokumenten sparas i rotmappen i AEM.
+>Dokumenten sparas i rotmappen för AEM-serverinstallationen.
 
 ## Distribuera exempelpaketet
 
 [Distribuera variabelloggningspaketet](assets/VariableLogger.core-1.0.0-SNAPSHOT.jar) med Felix webbkonsol.
-Koppla det här paketet till ett processsteg i AEM arbetsflöde för att logga värdet för variabeln String och Document.
+Koppla det här paketet till ett processsteg i ditt AEM-arbetsflöde för att logga värdet för variabeln String och Document.

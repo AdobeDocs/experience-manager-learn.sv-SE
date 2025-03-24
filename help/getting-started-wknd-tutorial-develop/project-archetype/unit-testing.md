@@ -1,7 +1,7 @@
 ---
 title: Enhetstestning
 description: Implementera ett enhetstest som validerar beteendet för den inbyggda komponentens Sling Model, som skapats i självstudiekursen för anpassade komponenter.
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: APIs, AEM Project Archetype
 topic: Content Management, Development
 role: Developer
@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: b926c35e-64ad-4507-8b39-4eb97a67edda
 recommendations: noDisplay, noCatalog
 duration: 706
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2923'
 ht-degree: 0%
@@ -45,7 +45,7 @@ Ta en titt på den baslinjekod som självstudiekursen bygger på:
    $ git checkout tutorial/unit-testing-start
    ```
 
-1. Distribuera kodbasen till en lokal AEM med dina Maven-kunskaper:
+1. Distribuera kodbasen till en lokal AEM-instans med dina Maven-kunskaper:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -64,12 +64,12 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 ## Syfte
 
 1. Förstå grunderna för enhetstestning.
-1. Lär dig mer om ramverk och verktyg som ofta används för att testa AEM kod.
-1. Förstå alternativen för att gungera eller simulera AEM när du skriver enhetstester.
+1. Läs om ramverk och verktyg som ofta används för att testa AEM-kod.
+1. Förstå alternativen för att gnugga eller simulera AEM-resurser när du skriver enhetstester.
 
 ## Bakgrund {#unit-testing-background}
 
-I den här självstudiekursen ska vi utforska hur du skriver [enhetstester](https://en.wikipedia.org/wiki/Unit_testing) för vår Byline-komponents [segmenteringsmodell](https://sling.apache.org/documentation/bundles/models.html) (skapad i [Skapa en anpassad AEM](custom-component.md)). Enhetstester är körtidstester skrivna i Java™ som verifierar förväntade beteenden hos Java™-kod. Varje enhetstest är vanligen litet och validerar resultatet av en metod (eller arbetsenheter) mot förväntade resultat.
+I den här självstudiekursen ska vi utforska hur du skriver [enhetstester](https://en.wikipedia.org/wiki/Unit_testing) för vår Byline-komponents [segmenteringsmodell](https://sling.apache.org/documentation/bundles/models.html) (skapad i [Skapa en anpassad AEM-komponent](custom-component.md)). Enhetstester är körtidstester skrivna i Java™ som verifierar förväntade beteenden hos Java™-kod. Varje enhetstest är vanligen litet och validerar resultatet av en metod (eller arbetsenheter) mot förväntade resultat.
 
 Vi använder AEM bästa praxis och använder:
 
@@ -79,7 +79,7 @@ Vi använder AEM bästa praxis och använder:
 
 ## Enhetstestning och Adobe Cloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) integrerar körning av enhetstest och [rapportering av kodtäckning](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html) i sin CI/CD-pipeline för att uppmuntra och främja bästa praxis för enhetstestning AEM kod.
+[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) integrerar körning av enhetstest och [rapportering av kodtäckning](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html) i sin CI/CD-pipeline för att uppmuntra och främja bästa sättet att testa AEM-kod.
 
 Även om kod för enhetstestning är en bra vana för alla kodbaser är det viktigt att kunna dra nytta av kodkvalitetstestningen och rapporteringsmöjligheterna genom att tillhandahålla enhetstester som Cloud Manager kan köra när man använder Cloud Manager.
 
@@ -92,9 +92,9 @@ Det första steget är att undersöka Maven-beroenden för att stödja skrivande
 1. Apache Sling Mocks
 1. AEM Mocks Test Framework (av io.wcm)
 
-Testberoendena **JUnit5**, **Mockito och **AEM Mocks** läggs automatiskt till i projektet under installationen med [AEM Maven-arkitypen](project-setup.md).
+Testberoendena **JUnit5**, **Mockito och **AEM Mocks** läggs automatiskt till i projektet under installationen med [AEM Maven-arketypen](project-setup.md).
 
-1. Om du vill visa dessa beroenden öppnar du POM-filen för den överordnade reaktorn på **aem-guides-wknd/pom.xml**, går till `<dependencies>..</dependencies>` och visar beroendena för JUnit, Mockito, Apache Sling Mocks och AEM Mock Tests av io.wcm under `<!-- Testing -->`.
+1. Om du vill visa dessa beroenden öppnar du den överordnade reaktorns POM på **aem-guides-wknd/pom.xml**, navigerar till `<dependencies>..</dependencies>` och visar beroendena för JUnit, Mockito, Apache Sling Mocks och AEM Mock Tests av io.wcm under `<!-- Testing -->`.
 1. Kontrollera att `io.wcm.testing.aem-mock.junit5` är inställt på **4.1.0**:
 
    ```xml
@@ -211,17 +211,17 @@ När enhetstester skrivs finns det två primära metoder:
 * [TDD eller Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development), som innebär att enhetstesterna skrivs stegvis, omedelbart innan implementeringen utvecklas. Skriv ett test och gör testet.
 * Utveckling av implementering först, vilket innebär att först utveckla arbetskoden och sedan skriva tester som validerar den koden.
 
-I den här självstudiekursen används den senare metoden (eftersom vi redan har skapat en fungerande **BylineImpl.java** i ett tidigare kapitel). På grund av detta måste vi granska och förstå hur dess publika metoder fungerar, men också en del av dess implementeringsdetaljer. Detta kan låta tvärtom, eftersom ett bra test endast bör omfatta in- och utdata, men när AEM utförs måste olika implementeringsöverväganden göras för att man ska kunna konstruera arbetstester.
+I den här självstudiekursen används den senare metoden (eftersom vi redan har skapat en fungerande **BylineImpl.java** i ett tidigare kapitel). På grund av detta måste vi granska och förstå hur dess publika metoder fungerar, men också en del av dess implementeringsdetaljer. Detta kan låta tvärtom, eftersom ett bra test endast bör omfatta in- och utdata, men när du arbetar i AEM finns det olika implementeringsöverväganden som måste förstås för att kunna konstruera arbetstester.
 
-TDD krävs inom ramen för AEM och är bäst lämpat för AEM utvecklare som är skickliga på AEM utveckling och enhetstestning av AEM kod.
+TDD inom ramen för AEM kräver expertis och används bäst av AEM-utvecklare som är skickliga på AEM-utveckling och enhetstestning av AEM-kod.
 
-## Konfigurera AEM testkontext  {#setting-up-aem-test-context}
+## Konfigurera testkontext för AEM  {#setting-up-aem-test-context}
 
-De flesta koder som skrivits för AEM är beroende av JCR-, Sling- eller AEM-API:er, som i sin tur kräver att en AEM körs på rätt sätt.
+De flesta koder som skrivs för AEM använder JCR-, Sling- eller AEM-API:er, som i sin tur kräver att en AEM körs på rätt sätt.
 
-Eftersom enhetstester utförs vid bygget, utanför en pågående AEM, finns det ingen sådan kontext. För att underlätta detta skapar [wcm.ios AEM Mocks](https://wcm.io/testing/aem-mock/usage.html) ett standardsammanhang som tillåter att dessa API:er _fungerar till största delen_ som om de körs i AEM.
+Eftersom enhetstester utförs vid bygget, utanför en AEM-instans som körs, finns det ingen sådan kontext. För att underlätta detta skapar [wcm.ios AEM Mocks](https://wcm.io/testing/aem-mock/usage.html) en dummikontext som tillåter att dessa API:er _fungerar till största delen_ som om de körs i AEM.
 
-1. Skapa en AEM kontext med **wcm.ios** `AemContext` i **BylineImplTest.java** genom att lägga till det som ett JUnit-tillägg som dekorerats med `@ExtendWith` i filen **BylineImplTest.java** . Tillägget hanterar alla initierings- och rensningsåtgärder som krävs. Skapa en klassvariabel för `AemContext` som kan användas för alla testmetoder.
+1. Skapa en AEM-kontext med **wcm.ios** `AemContext` i **BylineImplTest.java** genom att lägga till den som ett JUnit-tillägg som dekorerats med `@ExtendWith` i filen **BylineImplTest.java** . Tillägget hanterar alla initierings- och rensningsåtgärder som krävs. Skapa en klassvariabel för `AemContext` som kan användas för alla testmetoder.
 
    ```java
    import org.junit.jupiter.api.extension.ExtendWith;
@@ -235,12 +235,12 @@ Eftersom enhetstester utförs vid bygget, utanför en pågående AEM, finns det 
        private final AemContext ctx = new AemContext();
    ```
 
-   Den här variabeln, `ctx`, visar en AEM som innehåller vissa AEM- och Sling-abstraktioner:
+   Den här variabeln, `ctx`, visar en AEM-kontext som innehåller vissa AEM- och Sling-abstraktioner:
 
    * BylineImpl Sling Model är registrerad i den här kontexten
    * Mock JCR-innehållsstrukturer skapas i det här sammanhanget
    * Anpassade OSGi-tjänster kan registreras i den här kontexten
-   * Innehåller olika vanliga nödvändiga modellobjekt och hjälpmedel, till exempel SlingHttpServletRequest-objekt, olika tjänster för modelldelning och AEM OSGi, till exempel ModelFactory, PageManager, Page, Template, ComponentManager, Component, TagManager, Tag, etc.
+   * Innehåller olika vanliga modellobjekt och hjälpprogram som SlingHttpServletRequest-objekt, olika tjänster för Mock Sling och AEM OSGi som ModelFactory, PageManager, Page, Template, ComponentManager, Component, TagManager, Tag, etc.
       * *Alla metoder för dessa objekt är inte implementerade!*
    * Och [mycket mer](https://wcm.io/testing/aem-mock/usage.html)!
 
@@ -256,7 +256,7 @@ Eftersom enhetstester utförs vid bygget, utanför en pågående AEM, finns det 
    }
    ```
 
-   * **`addModelsForClasses`** registrerar den Sling-modell som ska testas i AEM-kontexten, så att den kan instansieras i `@Test`-metoderna.
+   * **`addModelsForClasses`** registrerar den Sling-modell som ska testas i AEM-standardkontexten, så att den kan instansieras i `@Test`-metoderna.
    * **`load().json`** läser in resursstrukturer i standardkontexten, vilket gör att koden kan interagera med dessa resurser som om de vore från en riktig databas. Resursdefinitionerna i filen **`BylineImplTest.json`** läses in i JCR-standardkontexten under **/content**.
    * **`BylineImplTest.json`** finns inte än, så vi skapar den och definierar de JCR-resursstrukturer som behövs för testet.
 

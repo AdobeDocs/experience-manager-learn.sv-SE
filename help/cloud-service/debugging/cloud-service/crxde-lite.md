@@ -2,7 +2,7 @@
 title: CRXDE Lite
 description: CRXDE Lite är ett klassiskt men ändå kraftfullt verktyg för felsökning i AEM as a Cloud Service Developer-miljöer. CRXDE Lite har en uppsättning funktioner som hjälper till att felsöka från att inspektera alla resurser och egenskaper, manipulera de ändringsbara delarna av JCR och undersöka behörigheter.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 kt: KT-5481
 thumbnail: kt-5481.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: f3f2c89f-6ec1-49d3-91c7-10a42b897780
 duration: 125
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '613'
 ht-degree: 0%
@@ -20,18 +20,18 @@ ht-degree: 0%
 
 # Felsöka AEM as a Cloud Service med CRXDE Lite
 
-CRXDE Lite är __ENDAST__ tillgängligt i AEM as a Cloud Service Development-miljöer (samt lokal AEM SDK).
+CRXDE Lite är __ENDAST__ tillgängligt i AEM as a Cloud Service Development-miljöer (samt i den lokala AEM SDK).
 
-## Åtkomst till CRXDE Lite på AEM författare
+## Åtkomst till CRXDE Lite på AEM Author
 
 CRXDE Lite är __endast__ tillgängligt i AEM as a Cloud Service Development-miljöer och är __inte__ tillgängligt i Stage- eller Production-miljöer.
 
-Så här öppnar du CRXDE Lite på AEM författare:
+Så här öppnar du CRXDE Lite på AEM Author:
 
 1. Logga in på tjänsten AEM as a Cloud Service AEM Author.
 1. Navigera till Verktyg > Allmänt > CRXDE Lite
 
-Detta öppnar CRXDE Lite med hjälp av de inloggningsuppgifter och behörigheter som används för att logga in AEM författare.
+Detta öppnar CRXDE Lite med de inloggningsuppgifter och behörigheter som används för att logga in på AEM Author.
 
 ## Felsöka innehåll
 
@@ -48,13 +48,13 @@ Observera att `/apps`, `/libs` och `/oak:index` inte kan ändras, vilket innebä
 ![CRXDE Lite - Felsöka innehåll](./assets/crxde-lite/debugging-content.png)
 
 Det måste göras med försiktighet att göra ändringar i muterbart innehåll under körning i AEM as a Cloud Service utvecklingsmiljöer via CRXDE Lite.
-Ändringar som görs direkt till AEM via CRXDE Lite kan vara svåra att spåra och styra. Se till att ändringar som görs via CRXDE Lite återgår till det ändringsbara innehållspaketet (`ui.content`) i AEM-projektet och utförs i Git, för att problemet ska kunna lösas. Helst utgår alla innehållsändringar i programmet från kodbasen och flödar in i AEM via distributioner i stället för att göra ändringar direkt i AEM via CRXDE Lite.
+Ändringar som görs direkt i AEM via CRXDE Lite kan vara svåra att spåra och styra. Se till att ändringar som görs via CRXDE Lite återgår till AEM-projektets ändringsbara innehållspaket (`ui.content`) och implementeras i Git för att säkerställa att problemet löses. Helst kommer alla ändringar av programinnehåll att härröra från kodbasen och flöda in i AEM via distributioner, i stället för att göra ändringar direkt i AEM via CRXDE Lite.
 
 ### Åtkomstkontroller för felsökning
 
-Med CRXDE Lite kan du testa och utvärdera åtkomstkontroll på en specifik nod för en viss användare eller grupp (även huvudnamn).
+CRXDE Lite erbjuder ett sätt att testa och utvärdera åtkomstkontroll på en specifik nod för en viss användare eller grupp (även huvudnamn).
 
-Om du vill få åtkomst till kontrollkonsolen Testa åtkomst i CRXDE Lite går du till:
+Om du vill få åtkomst till Test Access Control Console i CRXDE Lite går du till:
 
 + CRXDE Lite > Verktyg > Testa åtkomstkontroll ...
 
@@ -78,6 +78,6 @@ Följande är felsökningsaktiviteter som __inte__ kan utföras i CRXDE Lite.
 
 ### Felsöka OSGi-konfigurationer
 
-Distribuerade OSGi-konfigurationer kan inte granskas via CRXDE Lite. OSGi-konfigurationer underhålls i AEM Project `ui.apps`-kodpaketet på `/apps/example/config.xxx`, men vid distributionen till AEM as a Cloud Service-miljöer sparas inte OSGi-konfigurationsresurserna i JCR-konfigurationen, och visas därför inte via CRXDE Lite.
+Distribuerade OSGi-konfigurationer kan inte granskas via CRXDE Lite. OSGi-konfigurationer underhålls i AEM Projects `ui.apps`-kodpaket på `/apps/example/config.xxx`, men vid distributionen till AEM as a Cloud Service-miljöer sparas inte OSGi-konfigurationsresurserna i JCR-konfigurationen, och visas därför inte via CRXDE Lite.
 
 Använd i stället [Developer Console > Konfigurationer](./developer-console.md#configurations) för att granska distribuerade OSGi-konfigurationer.

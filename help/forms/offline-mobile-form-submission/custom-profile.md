@@ -1,9 +1,9 @@
 ---
-title: Utlös AEM arbetsflöde vid HTML 5-formulärskickning - Skapa anpassad profil
-description: Skapa en anpassad profil för att hämta en interaktiv PDF med data från det delvis ifyllda HTML 5-formuläret
+title: Starta AEM-arbetsflödet vid inskickning av HTML5-formulär - Skapa anpassad profil
+description: Skapa en anpassad profil för att ladda ned en interaktiv PDF med data från det delvis ifyllda HTML5-formuläret
 feature: Mobile Forms
 doc-type: article
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
@@ -11,7 +11,7 @@ jira: kt-16133
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: b6e3acee-4a07-4d00-b3a1-f7aedda21e6e
 duration: 102
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '244'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Skapa anpassad profil
 
-I den här delen skapar vi en [anpassad profil.](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) En profil ansvarar för att återge XDP som HTML. En standardprofil anges i rutan för återgivning av XDP-filer som HTML. Den representerar en anpassad version av Forms Rendition-tjänsten för mobiler. Du kan använda tjänsten Mobile Form Rendition för att anpassa utseende, beteende och interaktioner för Mobile Forms. I vår anpassade profil samlar vi in data som fyllts i mobilformuläret med hjälp av API:t för vägbeskrivningar. Dessa data skickas sedan till en anpassad server som sedan genererar ett interaktivt PDF och strömmar tillbaka dem till det anropande programmet.
+I den här delen skapar vi en [anpassad profil.](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html) En profil ansvarar för att återge XDP som HTML. En standardprofil anges i kartongen för återgivning av XDP-filer som HTML. Den representerar en anpassad version av Forms Rendition-tjänsten för mobiler. Du kan använda tjänsten Mobile Form Rendition för att anpassa utseende, beteende och interaktioner för Mobile Forms. I vår anpassade profil samlar vi in data som fyllts i mobilformuläret med hjälp av API:t för vägbeskrivningar. Dessa data skickas sedan till en anpassad server som sedan genererar en interaktiv PDF och strömmar den tillbaka till det anropande programmet.
 
 Hämta formulärdata med JavaScript-API:t `formBridge`. Vi använder metoden `getDataXML()`:
 

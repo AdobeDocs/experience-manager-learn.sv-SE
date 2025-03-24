@@ -5,10 +5,10 @@ breadcrumb-title: Självstudiekurs om AEM Headless
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Sites
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-2963
 index: y
-source-git-commit: c498783aceaf3bb389baaeaeefbe9d8d0125a82e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 7%
@@ -31,7 +31,7 @@ ht-degree: 7%
       + [3 - Skapa GraphQL-frågor](./graphql/video-series/creating-graphql-queries.md)
       + [4 - Variationer i innehållsfragment](./graphql/video-series/content-fragment-variations.md)
       + [5 - GraphQL Endpoints](./graphql/video-series/graphql-endpoints.md)
-      + [6 - Författare och Publish-arkitektur](./graphql/video-series/author-publish-architecture.md)
+      + [6 - Skapa och publicera arkitektur](./graphql/video-series/author-publish-architecture.md)
       + [7 - GraphQL: Beständiga frågor](./graphql/video-series/graphql-persisted-queries.md)
    + Grundläggande självstudiekurs{#multi-step}
       + [Ökning](./graphql/multi-step/overview.md)
@@ -58,7 +58,7 @@ ht-degree: 7%
    + [Mobil](./graphql/deployment/mobile.md)
    + [Server-till-server](./graphql/deployment/server-to-server.md)
    + Konfigurationer {#configurations}
-      + [AEM](./graphql/deployment/configurations/aem-hosts.md)
+      + [AEM-värdar](./graphql/deployment/configurations/aem-hosts.md)
       + [CORS](./graphql/deployment/configurations/cors.md)
       + [Dispatcher-filter](./graphql/deployment/configurations/dispatcher-filters.md)
 + Använda {#how-to}
@@ -77,27 +77,27 @@ ht-degree: 7%
       + [iOS](./graphql/example-apps/ios-swiftui-app.md)
       + [Android](./graphql/example-apps/android-app.md)
       + [Node.js](./graphql/example-apps/server-to-server-app.md)
-+ SPA Editor{#spa-editor}
++ SPA-redigerare{#spa-editor}
    + Reagera {#react}
       + [Ökning](./spa-editor/react/overview.md)
       + [1 - Skapa projekt](./spa-editor/react/create-project.md)
-      + [2 - SPA](./spa-editor/react/integrate-spa.md)
-      + [3 - SPA](./spa-editor/react/map-components.md)
+      + [2 - Integrera SPA](./spa-editor/react/integrate-spa.md)
+      + [3 - Mappa SPA-komponenter](./spa-editor/react/map-components.md)
       + [4 - Navigering och routning](./spa-editor/react/navigation-routing.md)
       + [5 - Anpassad komponent](./spa-editor/react/custom-component.md)
       + [6 - Utöka komponent](./spa-editor/react/extend-component.md)
    + Angular{#angular}
       + [Ökning](./spa-editor/angular/overview.md)
-      + [1 - SPA](./spa-editor/angular/create-project.md)
-      + [2 - SPA](./spa-editor/angular/integrate-spa.md)
-      + [3 - SPA](./spa-editor/angular/map-components.md)
+      + [1 - SPA-redigeringsprojekt](./spa-editor/angular/create-project.md)
+      + [2 - Integrera SPA](./spa-editor/angular/integrate-spa.md)
+      + [3 - Mappa SPA-komponenter](./spa-editor/angular/map-components.md)
       + [4 - Navigering och routning](./spa-editor/angular/navigation-routing.md)
       + [5 - Anpassad komponent](./spa-editor/angular/custom-component.md)
       + [6 - Utöka komponent](./spa-editor/angular/extend-component.md)
-   + SPA{#remote-spa}
+   + Fjärr-SPA{#remote-spa}
       + [Ökning](./spa-editor/remote-spa/overview.md)
       + [1 - Konfigurera AEM](./spa-editor/remote-spa/aem-configure.md)
-      + [2 - BOOTSTRAP i SPA](./spa-editor/remote-spa/spa-bootstrap.md)
+      + [2 - Bootstrap och SPA](./spa-editor/remote-spa/spa-bootstrap.md)
       + [3 - fasta komponenter](./spa-editor/remote-spa/spa-fixed-component.md)
       + [4 - Behållarkomponenter](./spa-editor/remote-spa/spa-container-component.md)
       + [5 - Dynamiska vägar](./spa-editor/remote-spa/spa-dynamic-routes.md)
@@ -114,12 +114,12 @@ ht-degree: 7%
    + [3 - Innehållsfragment för redigeringshändelser](./content-services/chapter-3.md)
    + [4 - Definiera mallar för innehållstjänster](./content-services/chapter-4.md)
    + [5 - Skapa sidor för innehållstjänster](./content-services/chapter-5.md)
-   + [6 - Visa innehållet på AEM Publish för leverans](./content-services/chapter-6.md)
-   + [7 - Använda AEM innehållstjänster från en mobilapp](./content-services/chapter-7.md)
+   + [6 - Visa innehållet i AEM Publish for Delivery](./content-services/chapter-6.md)
+   + [7 - Använda AEM Content Services från en mobilapp](./content-services/chapter-7.md)
 + Kodexempel {#code-samples}
    + [Filtrera React-app](./graphql/code-samples/filtering-react-app.md)
    + [Filtrera preact-program](./graphql/code-samples/filtering-preact-app.md)
-   + [Program för filtrering av Angular](./graphql/code-samples/filtering-angular-app.md)
+   + [Filtrerar Angular-program](./graphql/code-samples/filtering-angular-app.md)
    + [Filtrera Vue-app](./graphql/code-samples/filtering-vue-app.md)
    + [Filtrera med jQuery och Handtag](./graphql/code-samples/filtering-jquery-handlebars.md)
    + [Filtrera appen SvelteKit](./graphql/code-samples/filtering-sveltekit-app.md)

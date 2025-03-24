@@ -1,7 +1,7 @@
 ---
 title: Komma igång med AEM SPA Editor och Angular
-description: Skapa ett program med en Angular (SPA) som kan redigeras i Adobe Experience Manager AEM med WKND-SPA.
-version: Cloud Service
+description: Skapa ditt första Angular Single Page Application (SPA) som kan redigeras i Adobe Experience Manager, AEM med WKND SPA.
+version: Experience Manager as a Cloud Service
 jira: KT-5913
 thumbnail: 5913-spa-angular.jpg
 feature: SPA Editor
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: f2cf4063-0b08-4b4f-91e6-70e5a148f931
 duration: 123
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '583'
 ht-degree: 0%
@@ -22,20 +22,20 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Välkommen till en självstudiekurs i flera delar som utformats för utvecklare som inte har använt funktionen **SPA Editor** i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en Angular för ett fiktivt livsstilsmärke, WKND. Appen Angular har utvecklats och utformats för att användas med AEM SPA Editor, som mappar Angular-komponenter till AEM. Den färdiga SPA, som används för AEM, kan redigeras dynamiskt med AEM traditionella textbundna redigeringsverktyg.
+Välkommen till en självstudiekurs i flera delar som utformats för utvecklare som inte har använt funktionen **SPA Editor** i Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en Angular-applikation för ett fiktivt livsstilsmärke, WKND. Angular-appen har utvecklats och utformats för att användas med AEM SPA Editor, som mappar Angular-komponenter till AEM-komponenter. Den kompletta SPA-lösningen, som används i AEM, kan redigeras dynamiskt med AEM traditionella textbundna redigeringsverktyg.
 
 ![Slutlig SPA har implementerats](assets/wknd-spa-implementation.png)
 
-*WKND-SPA*
+*WKND SPA-implementering*
 
 ## Om
 
-Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar en Angular som fungerar med SPA redigeringsfunktion i AEM. I ett verkligt scenario bryts utvecklingsaktiviteterna ned per person, ofta med en **Front End-utvecklare** och en **Back End-utvecklare**. Vi anser att det är bra att alla utvecklare som arbetar med ett AEM redigeringsprojekt kan slutföra den här självstudiekursen.
+Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar ett Angular-program så att det fungerar med SPA-redigeringsfunktionen i AEM. I ett verkligt scenario bryts utvecklingsaktiviteterna ned per person, ofta med en **Front End-utvecklare** och en **Back End-utvecklare**. Vi anser att det är bra att alla utvecklare som arbetar med ett AEM SPA Editor-projekt slutför kursen.
 
 Självstudiekursen är utformad för att fungera med **AEM as a Cloud Service** och är bakåtkompatibel med **AEM 6.5.4+** och **AEM 6.4.8+**. SPA implementeras med:
 
 * [Maven AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
-* [AEM SPA redigeraren](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
+* [AEM SPA Editor](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-walkthrough.html#content-editing-experience-with-spa)
 * [Kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [Angular](https://angular.io/)
 
@@ -45,7 +45,7 @@ Självstudiekursen är utformad för att fungera med **AEM as a Cloud Service** 
 
 All självstudiekod finns på [GitHub](https://github.com/adobe/aem-guides-wknd-spa).
 
-Den [senaste kodbasen](https://github.com/adobe/aem-guides-wknd-spa/releases) är tillgänglig som hämtningsbara AEM.
+Den [senaste kodbasen](https://github.com/adobe/aem-guides-wknd-spa/releases) är tillgänglig som hämtningsbara AEM-paket.
 
 ## Förutsättningar
 
@@ -72,7 +72,7 @@ En lokal utvecklingsmiljö krävs för att slutföra den här självstudiekursen
 
 ## Nästa steg {#next-steps}
 
-Vad väntar du på?! Starta självstudiekursen genom att gå till kapitlet [SPA Editor Project](create-project.md) och lära dig hur du skapar ett projekt som är aktiverat för SPA redigeraren med hjälp av den AEM projekttypen.
+Vad väntar du på?! Starta självstudiekursen genom att gå till kapitlet [SPA Editor Project](create-project.md) och lära dig hur du genererar ett SPA Editor-aktiverat projekt med AEM Project Archetype.
 
 ## Bakåtkompatibilitet {#compatibility}
 
@@ -91,7 +91,7 @@ Projektkoden för den här självstudiekursen har skapats för AEM as a Cloud Se
 </dependency>
 ```
 
-En ytterligare Maven-profil med namnet `classic` har lagts till för att ändra bygget till AEM 6.x-miljöer:
+En ytterligare Maven-profil med namnet `classic` har lagts till för att ändra byggprocessen till AEM 6.x-miljöer:
 
 ```xml
   <!-- AEM 6.x Profile to include Core Components-->
@@ -105,10 +105,10 @@ En ytterligare Maven-profil med namnet `classic` har lagts till för att ändra 
     </profile>
 ```
 
-Profilen `classic` är inaktiverad som standard. Om du följer självstudiekursen med AEM 6.x lägger du till profilen `classic` när du får instruktioner om att utföra en Maven-konstruktion:
+Profilen `classic` är inaktiverad som standard. Om du följer självstudiekursen med AEM 6.x ska du lägga till profilen `classic` när du får instruktioner om att utföra en Maven-version:
 
 ```shell
 $ mvn clean install -PautoInstallSinglePackage -Pclassic
 ```
 
-När du genererar ett nytt projekt för en AEM implementering ska du alltid använda den senaste versionen av [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) och uppdatera `aemVersion` så att den målversionen av AEM används.
+När du genererar ett nytt projekt för en AEM-implementering ska du alltid använda den senaste versionen av [AEM Project Archetype](https://github.com/adobe/aem-project-archetype) och uppdatera `aemVersion` så att den är avsedd för din version av AEM.

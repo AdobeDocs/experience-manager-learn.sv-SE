@@ -1,7 +1,7 @@
 ---
 title: Edge Delivery Services and Universal Editor developer tutorial
 description: Lär dig grunderna i hur du utvecklar en ny webbplats som skapats i AEM Universal Editor och levererats med Edge Delivery Services.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ doc-type: Catalog
 jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%

@@ -5,13 +5,13 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Developer Tools
 jira: KT-14581
 duration: 90
 exl-id: 2a33a9a9-1eef-425d-aec5-465030ee9b74
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '378'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Bindning av serverlets efter sökvägar har flera nackdelar jämfört med bindni
 
 * Sökvägsbundna servrar kan inte åtkomststyras med JCR-databasens standardåtkomstkontrollistor
 * Sökvägsbundna serverlets kan endast registreras för en sökväg och inte för en resurstyp (d.v.s. ingen suffixhantering)
-* Om en banbunden servlet inte är aktiv, t.ex. om paketet saknas eller inte har startats, kan en POST ge oväntade resultat. oftast skapar en nod vid `/bin/xyz` som sedan täcker serverlets sökvägbindning
+* Om en banbunden servlet inte är aktiv, t.ex. om paketet saknas eller inte har startats, kan POST ge oväntade resultat. oftast skapar en nod vid `/bin/xyz` som sedan täcker serverlets sökvägbindning
 mappningen är inte genomskinlig för en utvecklare som bara tittar på databasen
 Med tanke på dessa nackdelar rekommenderar vi att du binder servlets till resurstyper i stället för sökvägar
 
@@ -83,7 +83,7 @@ public class GetFieldChoices extends SlingAllMethodsServlet implements Serializa
 
 ## Skapa resurser i CRX
 
-* Logga in på ditt lokala AEM SDK.
+* Logga in på din AEM SDK.
 * Skapa en resurs med namnet `fetchchoices` (du kan namnge den här noden ändå) av typen `cq:Page` under innehållsnoden.
 * Spara ändringarna
 * Skapa en nod med namnet `jcr:content` av typen `cq:PageContent` och spara ändringarna
@@ -105,15 +105,15 @@ http://localhost:4502/content/fetchchoices/jcr:content.json?formPath=/content/fo
 
 Sökvägen `/content/fetchchoices/jcr:content` är sökvägen till resursen och tillägget `.json` är den som anges i serverleten
 
-## Synkronisera AEM
+## Synkronisera ditt AEM-projekt
 
-1. Öppna det AEM projektet i din favoritredigerare. Jag har använt IntelliJ för det här.
+1. Öppna AEM-projektet i din favoritredigerare. Jag har använt IntelliJ för det här.
 1. Skapa en mapp med namnet `fetchchoices` under `\aem-banking-application\ui.content\src\main\content\jcr_root\content`
 1. Högerklicka på mappen `fetchchoices` och välj `repo | Get Command` (Det här menyalternativet är konfigurerat i ett tidigare kapitel i den här självstudiekursen).
 
-Den här noden bör synkroniseras från AEM till ditt lokala AEM.
+Den här noden bör synkroniseras från AEM till ditt lokala AEM-projekt.
 
-Din AEM projektstruktur bör se ut så här
+Projektstrukturen för AEM bör se ut så här
 ![resource-resolver](assets/mapping-servlet-resource.png)
 Uppdatera filter.xml i mappen aem-Banking-application\ui.content\src\main\content\META-INF\vault med följande post
 

@@ -4,12 +4,12 @@ description: Kör ExecuteAssemblerService.java för att testa lösningen
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 exl-id: 5139aa84-58d5-40e3-936a-0505bd407ee8
 duration: 55
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -27,12 +27,12 @@ ht-degree: 0%
 
 ![resources-file](./assets/resources.png)
 
-## Testa att samla ihop PDF-filer
+## Testa att sammanställa PDF-filer
 
 * Kopiera och klistra in dina inloggningsuppgifter i tjänstens_token.json-resursfil i projektet.
 * Öppna filen AssemblePDFFiles.java och ange i vilken mapp du vill spara de genererade PDF-filerna
 * Öppna executeAssemblerService.java. Ange värdet för variabeln _AEM_FORMS_CS_ så att den pekar på din instans.
-* Avkommentera lämpliga rader för att testa sammansättning av två eller flera PDF-filer
+* Avkommentera lämpliga rader för att testa att sätta ihop två eller flera PDF-filer
 * Kör ExecuteAssemblerService.java som java-program
 
 ### Testa PDFA-verktyg
@@ -46,6 +46,6 @@ ht-degree: 0%
 
 
 >[!NOTE]
-> Första gången du kör java-programmet får du ett HTTP 403-fel. För att komma förbi detta måste du ge den [lämpliga behörigheten till den tekniska kontoanvändaren i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
+> Första gången du kör java-programmet får du ett HTTP 403-fel. För att komma förbi detta måste du ge [lämplig behörighet till den tekniska kontoanvändaren i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
 
 **AEM Forms-användare** är den roll jag har använt för kursen.

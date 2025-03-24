@@ -1,14 +1,14 @@
 ---
 title: Hantera hemligheter i AEM as a Cloud Service
 description: Lär dig de bästa sätten att hantera hemligheter inom AEM as a Cloud Service med verktyg och tekniker från AEM för att skydda känslig information och säkerställa att programmet förblir säkert och konfidentiellt.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development, Security
 feature: OSGI, Cloud Manager
 role: Developer
 jira: KT-15880
 level: Intermediate, Experienced
 exl-id: 856b7da4-9ee4-44db-b245-4fdd220e8a4e
-source-git-commit: ba744f95f8d1f0b982cd5430860f0cb0945a4cda
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '702'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Hantering av hemligheter, som API-nycklar och lösenord, är avgörande för att upprätthålla programsäkerheten. Adobe Experience Manager (AEM) as a Cloud Service har kraftfulla verktyg för att hantera hemligheter på ett säkert sätt.
 
-I den här självstudiekursen lär du dig de bästa sätten att hantera hemligheter i AEM. Vi kommer att gå igenom de verktyg och tekniker som AEM tillhandahåller för att skydda känslig information och säkerställa att din applikation förblir säker och konfidentiell.
+I den här självstudiekursen får du lära dig de bästa sätten att hantera hemligheter inom AEM. Vi kommer att behandla de verktyg och tekniker som AEM tillhandahåller för att skydda känslig information och säkerställa att din applikation förblir säker och konfidentiell.
 
 I den här självstudiekursen förutsätts det att du har kunskaper om AEM Java-utveckling, OSGi-tjänster, Sling Models och Adobe Cloud Manager.
 
@@ -82,7 +82,7 @@ public interface SecretsManager {
 
 Visa hemliga värden i OSGi-tjänsten genom att mappa dem till OSGi-konfigurationer med hjälp av [OSGi-hemliga konfigurationsvärden](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#secret-configuration-values). Definiera OSGi-egenskapsnamnet som nyckel för att hämta det hemliga värdet från metoden `SecretsManager.getSecret()`.
 
-Definiera hemligheterna i OSGi-konfigurationsfilen `/apps/example/osgiconfig/config/com.example.core.util.impl.SecretsManagerImpl.cfg.json` i ditt AEM Maven-projekt. Varje egenskap representerar en hemlighet som exponeras i AEM, med värdet inställt via Cloud Manager. Nyckeln är OSGi-egenskapsnamnet som används för att hämta det hemliga värdet från tjänsten `SecretsManager`.
+Definiera hemligheterna i OSGi-konfigurationsfilen `/apps/example/osgiconfig/config/com.example.core.util.impl.SecretsManagerImpl.cfg.json` i ditt AEM Maven-projekt. Varje egenskap representerar en hemlighet som exponeras i AEM, där värdet anges via Cloud Manager. Nyckeln är OSGi-egenskapsnamnet som används för att hämta det hemliga värdet från tjänsten `SecretsManager`.
 
 ```json
 {
@@ -127,7 +127,7 @@ public class ExampleDatabaseModelImpl implements ExampleDatabaseModel {
 
 ### Från OSGi-tjänst
 
-OSGi-tjänster visar ofta återanvändbar affärslogik i AEM, som används av Sling Models, AEM som Workflows eller andra anpassade OSGi-tjänster. OSGi-tjänsten `SecretsManager` kan användas via anteckningen `@Reference` och användas i OSGi-tjänsten för att hämta det hemliga värdet.
+OSGi-tjänster visar ofta återanvändbar affärslogik i AEM, som används av Sling Models, AEM-tjänster som arbetsflöden eller andra anpassade OSGi-tjänster. OSGi-tjänsten `SecretsManager` kan användas via anteckningen `@Reference` och användas i OSGi-tjänsten för att hämta det hemliga värdet.
 
 ```java
 import com.example.core.util.SecretsManager;
@@ -156,15 +156,15 @@ Värden för hemligheter kan anges via [Cloud Manager API](https://developer.ado
 ![Konfiguration av Cloud Manager Secrets](./assets/secrets/cloudmanager-configuration.png)
 
 1. Logga in på [Adobe Cloud Manager](https://my.cloudmanager.adobe.com).
-1. Välj det AEM program och den miljö som du vill ange hemligheten för.
+1. Välj det AEM-program och den miljö som du vill ange hemligheten för.
 1. Välj fliken **Konfiguration** i vyn Miljöinformation.
 1. Välj **Lägg till**.
 1. I dialogrutan Miljökonfiguration:
    - Ange det hemliga variabelnamnet (t.ex. `api_key`) som refereras i OSGi-konfigurationen.
    - Ange det hemliga värdet.
-   - Välj vilken AEM som hemligheten gäller för.
+   - Välj vilken AEM-tjänst hemligheten gäller för.
    - Välj **Hemlighet** som typ.
 1. Välj **Lägg till** om du vill behålla hemligheten.
-1. Lägg till så många hemligheter som behövs. När du är klar väljer du **Spara** om du vill använda ändringarna direkt i AEM.
+1. Lägg till så många hemligheter som behövs. När du är klar väljer du **Spara** om du vill använda ändringarna direkt i AEM-miljön.
 
-Att använda Cloud Manager-konfigurationer för hemligheter är en fördel om du tillämpar olika värden för olika miljöer eller tjänster och roterar hemligheter utan att behöva distribuera om AEM.
+Att använda Cloud Manager-konfigurationer för hemligheter är en fördel om du tillämpar olika värden för olika miljöer eller tjänster och roterar hemligheter utan att behöva omdistribuera AEM-programmet.

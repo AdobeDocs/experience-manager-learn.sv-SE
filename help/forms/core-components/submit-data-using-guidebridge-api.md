@@ -3,14 +3,14 @@ title: Använda GuideBridge API för att publicera formulärdata
 description: Lär dig hur du får åtkomst till och skickar formulärdata med GuideBridge API för adaptiva formulär. Spara och hämta enkelt in formulärdata.
 duration: 68
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 jira: KT-15286
 last-substantial-update: 2024-04-05T00:00:00Z
 exl-id: 099aaeaf-2514-4459-81a7-2843baa1c981
-source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%

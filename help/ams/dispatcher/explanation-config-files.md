@@ -1,7 +1,7 @@
 ---
 title: Förklaring av Dispatcher konfigurationsfiler
 description: Förstå konfigurationsfiler, namnkonventioner med mera.
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
 duration: 379
-source-git-commit: ef9c70e7895176e3cd535141a5de3c49886e666e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 [&lt;- Föregående: Grundläggande fillayout](./basic-file-layout.md)
 
-Det här dokumentet kommer att innehålla en beskrivning och en beskrivning av de konfigurationsfiler som distribueras i en standardserver som skapats av Dispatcher i Adobe Managed Services. deras användning, namnkonventioner osv.
+Det här dokumentet kommer att innehålla en beskrivning och en beskrivning av de konfigurationsfiler som distribueras i en standardbaserad Dispatcher-server som distribueras i Adobe Managed Services. deras användning, namnkonventioner osv.
 
 ## Namngivningskonvention
 
@@ -42,14 +42,14 @@ Apache Web Server bryr sig egentligen inte om vad filtillägget är för en fil 
 
 | Fil | Filmål | Beskrivning |
 | --- | --- | --- |
-| FILNAMN `.any` | `/etc/httpd/conf.dispatcher.d/` | AEM Dispatcher Apache-modulen hämtar inställningarna från `*.any` filer. Standardfilen för överordnad inkludering är `conf.dispatcher.d/dispatcher.any` |
+| FILNAMN `.any` | `/etc/httpd/conf.dispatcher.d/` | AEM Dispatcher Apache Module hämtar inställningarna från `*.any` filer. Standardfilen för överordnad inkludering är `conf.dispatcher.d/dispatcher.any` |
 | FILNAMN `_farm.any` | Mellanlagrad: `/etc/httpd/conf.dispatcher.d/available_farms/`<br>Aktiv: `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>Obs!</b> De här servergruppsfilerna ska inte kopieras till mappen `enabled_farms`, men använd `symlinks` för att ange en relativ sökväg till `available_farms/*_farm.any` file <br/>`*_farm.any` -filerna som finns i filen `conf.dispatcher.d/dispatcher.any` . Dessa överordnade gruppfiler finns för att styra modulbeteendet för varje rendering eller webbplatstyp. Filerna skapas i katalogen `available_farms` och aktiveras med en `symlink` i katalogen `enabled_farms`.  <br/>De inkluderas automatiskt efter namn från filen `dispatcher.any`.<br/><b>Baslinje</b>-servergruppsfiler börjar med `000_` för att se till att de läses in först.<br><b>Egna </b>-servergruppsfiler ska läsas in efter att deras nummerschema har startats på `100_` för att säkerställa korrekt inkluderingsbeteende. |
 | FILNAMN `_filters.any` | `/etc/httpd/conf.dispatcher.d/filters/` | `*_filters.any` filer inkluderas från `conf.dispatcher.d/enabled_farms/*_farm.any`-filerna. Varje gård har en uppsättning regler som förändrar vilken trafik som ska filtreras bort och inte övergå till renderarna. |
 | FILNAMN `_vhosts.any` | `/etc/httpd/conf.dispatcher.d/vhosts/` | `*_vhosts.any` filer inkluderas från `conf.dispatcher.d/enabled_farms/*_farm.any`-filerna. De här filerna är en lista över värdnamn eller uri-sökvägar som matchas av blobbmatchning för att avgöra vilken renderare som ska användas för begäran |
 | FILNAMN `_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any` filer inkluderas från `conf.dispatcher.d/enabled_farms/*_farm.any`-filerna. De här filerna anger vilka objekt som cachelagras och vilka som inte |
 | FILNAMN `_invalidate_allowed.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_invalidate_allowed.any` filer ingår i `conf.dispatcher.d/enabled_farms/*_farm.any`-filerna. De anger vilka IP-adresser som tillåts skicka begäranden om tömning och ogiltigförklaring. |
 | FILNAMN `_clientheaders.any` | `/etc/httpd/conf.dispatcher.d/clientheaders/` | `*_clientheaders.any` filer ingår i `conf.dispatcher.d/enabled_farms/*_farm.any`-filerna. De anger vilka klientrubriker som ska skickas till varje återgivning. |
-| FILNAMN `_renders.any` | `/etc/httpd/conf.dispatcher.d/renders/` | `*_renders.any` filer ingår i `conf.dispatcher.d/enabled_farms/*_farm.any`-filerna. De anger inställningar för IP, port och timeout för varje återgivning. En korrekt återgivare kan vara en LiveCycle-server eller något annat AEM system där Dispatcher kan hämta/proxyköra begäranden från |
+| FILNAMN `_renders.any` | `/etc/httpd/conf.dispatcher.d/renders/` | `*_renders.any` filer ingår i `conf.dispatcher.d/enabled_farms/*_farm.any`-filerna. De anger inställningar för IP, port och timeout för varje återgivning. En korrekt återgivare kan vara en LiveCycle-server eller ett AEM-system där Dispatcher kan hämta/proxyköra förfrågningar från |
 
 ## Undantagna problem
 

@@ -1,8 +1,8 @@
 ---
-title: AEM UI-tillägg för Adobe I/O Runtime-åtgärder
-description: Lär dig hur du skapar ett AEM gränssnittstillägg modal.
+title: Adobe I/O Runtime-åtgärder för AEM UI-tillägg
+description: Lär dig hur du skapar ett modalt AEM UI-tillägg.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11603
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: 3062900a-0461-4c6f-81e6-c76a7f613804
 duration: 240
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '474'
 ht-degree: 1%
@@ -20,11 +20,11 @@ ht-degree: 1%
 
 # Adobe I/O Runtime action
 
-![AEM åtgärder för UI-tillägg för körningsmiljö](./assets/runtime-action/action-runtime-flow.png){align="center"}
+![Körningsåtgärder för AEM UI-tillägg](./assets/runtime-action/action-runtime-flow.png){align="center"}
 
 AEM UI-tillägg kan innehålla valfritt antal [Adobe I/O Runtime-åtgärder](https://developer.adobe.com/runtime/docs/).
 
-Adobe I/O Runtime-åtgärder är serverlösa funktioner som kan anropas av tillägget. Funktionsmakron är användbara för att utföra arbete som kräver interaktion med AEM eller andra webbtjänster från Adobe. Åtgärder är vanligtvis mest användbara för att utföra åtgärder som varar länge (är längre än några sekunder) eller för att göra HTTP-begäranden till AEM eller andra webbtjänster.
+Adobe I/O Runtime-åtgärder är serverlösa funktioner som kan anropas av tillägget. Funktionsmakron är användbara för att utföra arbete som kräver interaktion med AEM eller andra Adobe webbtjänster. Åtgärder är vanligtvis mest användbara för att utföra långvariga (mer än några sekunder) åtgärder eller för att göra HTTP-begäranden till AEM eller andra webbtjänster.
 
 Fördelarna med att använda Adobe I/O Runtime-funktionsmakron är:
 
@@ -32,17 +32,17 @@ Fördelarna med att använda Adobe I/O Runtime-funktionsmakron är:
 + Funktionsmakron kan inte avbrytas av användaren (till exempel uppdatering av webbläsaren)
 + Åtgärderna är asynkrona, så de kan köras så länge som behövs utan att blockera användaren
 
-När det gäller AEM UI-tillägg används åtgärder ofta för att kommunicera direkt med AEM as a Cloud Service:
+I samband med AEM UI-tillägg används åtgärder ofta för att kommunicera direkt med AEM as a Cloud Service:
 
 + Samla in relaterade data från AEM om det markerade eller aktuella innehållet
 + Utföra anpassade åtgärder för innehåll
 + Början på framtagning av innehåll
 
-AEM UI-tillägg finns i specifika gränssnitt, tillägg och tillhörande åtgärder, men kan anropa alla tillgängliga AEM HTTP API:er, inklusive anpassade AEM API-slutpunkter.
+AEM UI-tillägget finns i vissa AEM-gränssnitt, tillägg och tillhörande åtgärder, och kan anropa alla tillgängliga AEM HTTP API:er, inklusive anpassade AEM API-slutpunkter.
 
 ## Anropa en åtgärd
 
-Adobe I/O Runtime-åtgärder anropas främst från två platser i ett AEM användargränssnitt:
+Adobe I/O Runtime-åtgärder anropas huvudsakligen från två platser i ett AEM-användargränssnitt:
 
 1. ](./extension-registration.md) `onClick(..)`-hanteraren för [tilläggsregistreringen
 1. Inom en [modal](./modal.md)
@@ -112,7 +112,7 @@ export default ExtensionRegistration;
 
 Adobe I/O Runtime-åtgärder kan anropas direkt från modulerna för att utföra mer engagerande arbete, särskilt arbete som bygger på kommunikation med AEM as a Cloud Service, Adobe webbtjänst eller till och med tredjepartstjänster.
 
-Adobe I/O Runtime åtgärder är Node.js-baserade JavaScript-program som körs i den serverlösa Adobe I/O Runtime-miljön. Dessa åtgärder kan adresseras via HTTP av SPA.
+Adobe I/O Runtime åtgärder är Node.js-baserade JavaScript-program som körs i den serverlösa Adobe I/O Runtime-miljön. Dessa åtgärder kan adresseras via HTTP av tillägget SPA.
 
 + `./src/aem-ui-extension/web-src/src/components/MyModal.js`
 
@@ -304,7 +304,7 @@ async function main (params) {
 
 ## AEM HTTP API:er
 
-Följande AEM HTTP-API:er används ofta för interaktion med AEM från tillägg:
+Följande HTTP-API:er från AEM används ofta för interaktion med AEM från tillägg:
 
 + [AEM GraphQL API:er](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
 + [AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)
@@ -326,6 +326,6 @@ Följande är användbara npm-moduler för utveckling av Adobe I/O Runtime-åtg�
    + [Adobe Campaign Standard Library](https://github.com/adobe/aio-lib-campaign-standard)
    + [Adobe kundprofilbibliotek](https://github.com/adobe/aio-lib-customer-profile)
    + [Adobe Audience Manager kunddatabibliotek](https://github.com/adobe/aio-lib-audience-manager-cd)
-   + [Adobe I/O-händelser](https://github.com/adobe/aio-lib-events)
+   + [Adobe I/O Events](https://github.com/adobe/aio-lib-events)
 + [@adobe/aio-lib-core-network](https://github.com/adobe/aio-lib-core-networking)
 + [@adobe/node-httptransfer](https://github.com/adobe/node-httptransfer)

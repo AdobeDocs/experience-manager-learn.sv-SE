@@ -2,14 +2,14 @@
 title: Leverera innehållsfragment i AEM
 description: Content Fragments, independent of layout, can be used directly in AEM Sites with Core Components or can be delivery in a headless channel channel.
 feature: Content Fragments
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 525cd30c-05bf-4f17-b61b-90609ce757ea
 duration: 878
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Den här videoserien innehåller leveransalternativ för Content Fragments. Info
 
 >[!VIDEO](https://video.tv.adobe.com/v/22449?quality=12&learn=on)
 
-Innehållsfragment kan användas på AEM Sites-sidor, eller på ett liknande sätt, med Experience Fragments, med AEM [Content Fragment-komponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) för WCM Core-komponenterna.
+Innehållsfragment kan användas på AEM Sites-sidor, eller på liknande sätt, med Experience Fragments, med AEM WCM Core Components [Content Fragment-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html).
 
 Innehållsfragmentskomponenter kan formateras med AEM Style System för att visa innehållet efter behov.
 
@@ -40,7 +40,7 @@ Innehållsfragmentskomponenter kan formateras med AEM Style System för att visa
 
 >[!VIDEO](https://video.tv.adobe.com/v/22448?quality=12&learn=on)
 
-AEM Content Services underlättar skapandet av AEM sidbaserade HTTP-slutpunkter som återger innehåll till ett normaliserat JSON-format.
+AEM Content Services underlättar framtagning av AEM Page-baserade HTTP-slutpunkter som återger innehåll i ett normaliserat JSON-format.
 
 I videon ovan används komponenten [Content Fragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html) för att visa enskilda innehållsfragment. [Listkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-list.html) är en ny komponent som gör att en författare kan definiera en fråga som dynamiskt fyller sidan med en lista med innehållsfragment. Komponenten Lista med innehållsfragment är att föredra när flera innehållsfragment behöver visas.
 
@@ -66,14 +66,14 @@ Det är enkelt att leverera ett innehållsfragment via en webbkanal genom att an
 
 Det finns två alternativ för att visa Content Fragment som JSON som stöd för en kanal från tredje part i ett headless-fall:
 
-1. Använd AEM Content Services- och Proxy API-sidor (Video #2) när det primära användningsexemplet är att leverera innehållsfragment som ska konsumeras (skrivskyddade) av en kanal från tredje part. Content Services-ramverket ger större flexibilitet och fler alternativ vad gäller vilka data som exponeras. Utvecklare kan också utöka Content Services-ramverket för att utöka och/eller berika data.
+1. Använd AEM Content Services- och Proxy API-sidor (Video #2) när huvudanvändningsexemplet är att leverera innehållsfragment som ska konsumeras (skrivskyddade) av en tredjepartskanal. Content Services-ramverket ger större flexibilitet och fler alternativ vad gäller vilka data som exponeras. Utvecklare kan också utöka Content Services-ramverket för att utöka och/eller berika data.
 
-2. Använd Assets HTTP API (video nr 3) när tredjepartskanalen behöver ändra och/eller uppdatera innehållsfragment. Ett typiskt användningsfall är att importera innehåll från tredje part i en AEM författarmiljö.
+2. Använd Assets HTTP API (video nr 3) när tredjepartskanalen behöver ändra och/eller uppdatera innehållsfragment. Ett typiskt användningsexempel är att importera innehåll från tredje part i en AEM-redigeringsmiljö.
 
 ## Ytterligare resurser {#additional-resources}
 
 * [Skapa innehållsfragment](content-fragments-feature-video-use.md)
-* [AEM WCM-kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [AEM WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [AEM WCM Core Content Fragment Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 Så här hämtar och installerar du paketet nedan på en AEM 6.4+-instans för det slutliga läget från videoserien:\

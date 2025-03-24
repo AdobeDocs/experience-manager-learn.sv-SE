@@ -1,15 +1,15 @@
 ---
 title: Använda videospelaren i AEM Dynamic Media
-description: AEM Dynamic Media videospelare förlitade sig tidigare på Flash runtime för att stödja adaptiv videoströmning på skrivbordsklienter och webbläsare blev mer aggressiva när det gäller Flash-baserad innehållsströmning. I och med lanseringen av HLS (Apple HTTP Live Streaming video delivery protocol) kan innehåll nu strömmas utan att förlita sig på flash.
+description: AEM Dynamic Media-videospelare som använde Flash-miljön för att stödja adaptiv videoströmning på skrivbordsklienter och webbläsare blev mer aggressiva när det gäller Flash-baserad innehållsströmning. I och med lanseringen av HLS (Apple HTTP Live Streaming video delivery protocol) kan man nu strömma material utan att behöva använda flash.
 feature: Video Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 7e4cb782-836d-4ec0-97d0-645b91ea43e0
 duration: 568
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 0%
@@ -19,15 +19,15 @@ ht-degree: 0%
 
 # Använda videospelaren i AEM Dynamic Media{#using-the-video-player-in-aem-dynamic-media}
 
-AEM Dynamic Media videospelare förlitade sig tidigare på Flash runtime för att stödja adaptiv videoströmning på skrivbordsklienter och webbläsare blev mer aggressiva när det gäller Flash-baserad innehållsströmning. I och med lanseringen av HLS (Apple HTTP Live Streaming video delivery protocol) kan innehåll nu strömmas utan att förlita sig på flash.
+AEM Dynamic Media-videospelare som använde Flash-miljön för att stödja adaptiv videoströmning på skrivbordsklienter och webbläsare blev mer aggressiva när det gäller Flash-baserad innehållsströmning. I och med lanseringen av HLS (Apple HTTP Live Streaming video delivery protocol) kan man nu strömma material utan att behöva använda flash.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16791?quality=12&learn=on)
 
-## Snabb titt på videospelare som inte är Flash {#quick-look-into-non-flash-video-player}
+## Snabb sökning i icke-Flash Video Player {#quick-look-into-non-flash-video-player}
 
 >[!VIDEO](https://video.tv.adobe.com/v/17429?quality=12&learn=on)
 
-Stöd för HLS-webbläsare är följande, för webbläsare som inte stöds används progressiv videoleverans
+Stöd för webbläsare i HLS är följande för webbläsare som inte stöds: vi övergår till progressiv videoutgång
 
 >[!NOTE]
 >
@@ -50,8 +50,8 @@ Stöd för HLS-webbläsare är följande, för webbläsare som inte stöds anvä
   <tr>
    <td> <p>Skrivbord</p> </td>
    <td> <p>Internet Explorer 11+</p> </td>
-   <td> <p>Dynamic Media - Scene 7-läge: HLS-videoströmning</p> 
-        <p>Dynamic Media - hybridläge: Progressiv nedladdning</p>
+   <td> <p>Dynamiska media - Scen 7-läge: HLS direktuppspelad video</p> 
+        <p>Dynamiska media - hybridläge: Progressiv nedladdning</p>
    </td>
   </tr>
   <tr>
@@ -62,17 +62,17 @@ Stöd för HLS-webbläsare är följande, för webbläsare som inte stöds anvä
   <tr> 
    <td> <p>Skrivbord</p> </td>
    <td> <p>Firefox 45 eller senare</p> </td>
-   <td> <p>HLS-videoströmning</p> </td>
+   <td> <p>HLS direktuppspelad video</p> </td>
   </tr>
   <tr> 
    <td> <p>Skrivbord</p> </td>
    <td> <p>Chrome</p> </td>
-   <td> <p>HLS-videoströmning</p> </td>
+   <td> <p>HLS direktuppspelad video</p> </td>
   </tr>
   <tr> 
    <td> <p>Skrivbord</p> </td>
    <td> <p>Safari (Mac)</p> </td>
-   <td> <p>HLS-videoströmning</p> </td>
+   <td> <p>HLS direktuppspelad video</p> </td>
   </tr>
   <tr> 
    <td> <p>Mobil</p> </td>
@@ -82,7 +82,7 @@ Stöd för HLS-webbläsare är följande, för webbläsare som inte stöds anvä
   <tr> 
    <td> <p>Mobil</p> </td>
    <td> <p>Chrome (Android 7 eller senare)</p> </td>
-   <td> <p>HLS-videoströmning</p> </td>
+   <td> <p>HLS direktuppspelad video</p> </td>
   </tr>
   <tr> 
    <td> <p>Mobil</p> </td>
@@ -92,17 +92,17 @@ Stöd för HLS-webbläsare är följande, för webbläsare som inte stöds anvä
   <tr> 
    <td> <p>Mobil</p> </td>
    <td> <p>Safari (iOS)</p> </td>
-   <td> <p>HLS-videoströmning</p> </td>
+   <td> <p>HLS direktuppspelad video</p> </td>
   </tr>
   <tr> 
    <td> <p>Mobil</p> </td>
    <td> <p>Chrome (iOS)</p> </td>
-   <td> <p>HLS-videoströmning</p> </td>
+   <td> <p>HLS direktuppspelad video</p> </td>
   </tr>
   <tr> 
    <td> <p>Mobil</p> </td>
    <td> <p>Blackberry</p> </td>
-   <td> <p>HLS-videoströmning</p> </td>
+   <td> <p>HLS direktuppspelad video</p> </td>
   </tr>
  </tbody>
 </table>

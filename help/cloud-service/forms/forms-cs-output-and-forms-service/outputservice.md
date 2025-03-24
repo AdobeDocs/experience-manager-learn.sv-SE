@@ -1,36 +1,36 @@
 ---
-title: Generera PDF-dokument med hjälp av utdatatjänsten
-description: Sammanfoga data med XDP-mall för att generera icke-interaktiva PDF
+title: Generera PDF-dokument med hjälp av utdatatjänst
+description: Sammanfoga data med XDP-mall för att generera icke-interaktiv PDF
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-16384
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: a0de7eaa391749b6b0d90e7cf3e363c2d5a232b5
+exl-id: 8a5a4d11-12a2-462d-8684-a0c6ec0cac0e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%
 
 ---
 
-
-# Generera PDF-dokument med hjälp av utdatatjänsten
+# Generera PDF-dokument med hjälp av utdatatjänst
 
 [Utdatatjänsten](https://javadoc.io/static/com.adobe.aem/aem-forms-sdk-api/2024.07.31.00-240800/com/adobe/fd/output/api/OutputService.html) är en OSGi-tjänst som ingår i AEM Document Services. Det stöder olika utformat och designfunktioner i AEM Forms Designer. Output-tjänsten konverterar XFA-mallar och XML-data för att generera utskriftsdokument i olika format.
 
-Utdatatjänsten i AEM Forms liknar as a Cloud Service den i AEM Forms 6.5, så om du är van vid att använda utdatatjänsten i AEM Forms 6.5 bör det vara enkelt att gå över till AEM Forms as a Cloud Service.
+Output-tjänsten i AEM Forms as a Cloud Service liknar den i AEM Forms 6.5, så om du är van vid att använda Output-tjänsten i AEM Forms 6.5 bör det vara enkelt att gå över till AEM Forms as a Cloud Service.
 
 Med tjänsten Output kan du skapa program som gör att du kan:
 
 + Generera slutliga formulärdokument genom att fylla i mallfiler med XML-data.
 + Generera utdataformulär i olika format, inklusive icke-interaktiva PDF-, PostScript-, PCL- och ZPL-utskriftsströmmar.
-+ Generera PDF från XFA-PDF.
-+ Generera PDF-, PostScript-, PCL- och ZPL-dokument i grupp genom att sammanfoga flera datauppsättningar med medföljande mallar.
++ Generera utskrifts-PDF:er från XFA-formulär-PDF:er.
++ Generera flera olika PDF-, PostScript-, PCL- och ZPL-dokument genom att slå samman olika datauppsättningar med medföljande mallar.
 
-Den här tjänsten är avsedd att användas i samband med en AEM Forms as a Cloud Service-instans. Följande kodfragment genererar ett PDF-dokument i en serverlet med `OutputService`.
+Den här tjänsten är avsedd att användas i ett AEM Forms as a Cloud Service-sammanhang. Följande kodfragment genererar ett PDF-dokument i en serverlet med `OutputService`.
 
 ```java
 import com.adobe.fd.output.api.OutputService;

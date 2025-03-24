@@ -1,7 +1,7 @@
 ---
 title: Implementeringsfaserna för Cloud Acceleration Manager
 description: Granska och förstå de viktigaste implementeringsfaserna eller gå över till AEM as a Cloud Service med Cloud Acceleration Manager.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Migration
 topic: Migration, Upgrade
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-8660
 thumbnail: 336691.jpeg
 exl-id: 35420690-061a-4562-a933-e7bacd9e116d
 duration: 97
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%

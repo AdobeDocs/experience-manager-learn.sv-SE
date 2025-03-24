@@ -1,8 +1,8 @@
 ---
 title: Utöka en kärnkomponent | Komma igång med AEM SPA Editor och React
-description: Lär dig hur du utökar JSON-modellen för en befintlig Core-komponent som ska användas med AEM SPA. Att förstå hur du lägger till egenskaper och innehåll i en befintlig komponent är en kraftfull teknik som utökar funktionerna i en AEM redigeringsimplementering. Lär dig använda delegeringsmönstret för att utöka Sling-modeller och funktioner i Sling Resource Merger.
+description: Lär dig hur du utökar JSON-modellen för en befintlig Core-komponent som ska användas med AEM SPA Editor. Att förstå hur man lägger till egenskaper och innehåll i en befintlig komponent är en kraftfull teknik som utökar funktionerna i en AEM SPA Editor-implementering. Lär dig använda delegeringsmönstret för att utöka Sling-modeller och funktioner i Sling Resource Merger.
 feature: SPA Editor, Core Components
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5879
 thumbnail: 5879-spa-react.jpg
 topic: SPA
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
 duration: 316
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Utöka en kärnkomponent {#extend-component}
 
-Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SPA Editor. Att förstå hur man utökar en befintlig komponent är en kraftfull teknik för att anpassa och utöka funktionerna i en AEM redigeringsimplementering.
+Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SPA Editor. Att förstå hur man utökar en befintlig komponent är en kraftfull teknik för att anpassa och utöka funktionerna i en AEM SPA Editor-implementering.
 
 ## Syfte
 
@@ -36,11 +36,11 @@ I det här kapitlet visas den ytterligare kod som behövs för att lägga till e
 
 ## Förutsättningar
 
-Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). I det här skedet antas att användarna har en god förståelse för AEM redigeringsfunktion SPA självstudiekursen.
+Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal utvecklingsmiljö](overview.md#local-dev-environment). I det här skedet antas att användarna har en god förståelse för AEM SPA Editor.
 
 ## Arv med SSling Resource Super Type {#sling-resource-super-type}
 
-Om du vill utöka en befintlig komponentuppsättning anger du en egenskap med namnet `sling:resourceSuperType` i komponentdefinitionen.  `sling:resourceSuperType` är en [egenskap](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties) som kan anges för en AEM som pekar på en annan komponent. Detta anger uttryckligen att komponenten ska ärva alla funktioner i komponenten som identifieras som `sling:resourceSuperType`.
+Om du vill utöka en befintlig komponentuppsättning anger du en egenskap med namnet `sling:resourceSuperType` i komponentdefinitionen.  `sling:resourceSuperType` är en [egenskap](https://sling.apache.org/documentation/the-sling-engine/resources.html#resource-properties) som kan anges för en AEM-komponents definition som pekar på en annan komponent. Detta anger uttryckligen att komponenten ska ärva alla funktioner i komponenten som identifieras som `sling:resourceSuperType`.
 
 Om vi vill utöka komponenten `Image` på `wknd-spa-react/components/image` måste vi uppdatera koden i modulen `ui.apps`.
 
@@ -239,11 +239,11 @@ Komponenten `Banner` kräver ett extra textfält i dialogrutan för att hämta `
 
    Observera att vi inte behövde definiera flikarna för **Resurs** eller **Metadata**. Dessa ärvs via egenskapen `sling:resourceSuperType`.
 
-   Innan vi kan förhandsgranska dialogrutan måste vi implementera SPA och funktionen `MapTo`.
+   Innan vi kan förhandsgranska dialogrutan måste vi implementera SPA-komponenten och funktionen `MapTo`.
 
-## Implementera SPA {#implement-spa-component}
+## Implementera SPA-komponent {#implement-spa-component}
 
-För att du ska kunna använda banderollkomponenten med SPA Editor måste en ny SPA skapas som ska mappas till `wknd-spa-react/components/banner`. Detta görs i modulen `ui.frontend`.
+Om du vill använda banderollkomponenten med SPA-redigeraren måste en ny SPA-komponent skapas som ska mappas till `wknd-spa-react/components/banner`. Detta görs i modulen `ui.frontend`.
 
 1. Skapa en ny mapp för `Banner` på `ui.frontend/src/components/Banner` i modulen `ui.frontend`.
 1. Skapa en ny fil med namnet `Banner.js` under mappen `Banner`. Fyll den med följande:
@@ -296,9 +296,9 @@ För att du ska kunna använda banderollkomponenten med SPA Editor måste en ny 
    MapTo('wknd-spa-react/components/banner')(Banner, BannerEditConfig);
    ```
 
-   Den här SPA mappas till den AEM komponenten `wknd-spa-react/components/banner` som skapades tidigare.
+   Den här SPA-komponenten mappar till AEM-komponenten `wknd-spa-react/components/banner` som skapades tidigare.
 
-1. Uppdatera `import-components.js` vid `ui.frontend/src/components/import-components.js` för att inkludera den nya SPA `Banner`:
+1. Uppdatera `import-components.js` vid `ui.frontend/src/components/import-components.js` om du vill inkludera den nya SPA-komponenten `Banner`:
 
    ```diff
      import './ExperienceFragment/ExperienceFragment';
@@ -315,17 +315,17 @@ För att du ska kunna använda banderollkomponenten med SPA Editor måste en ny 
 
 1. Uppdatera SPA-mallens princip för att lägga till komponenten `Banner` som en **tillåten komponent**.
 
-1. Navigera till en SPA sida och lägg till komponenten `Banner` på en av SPA sidor:
+1. Navigera till en SPA-sida och lägg till komponenten `Banner` på en av SPA-sidorna:
 
    ![Lägg till banderollkomponent](assets/extend-component/add-banner-component.png)
 
    >[!NOTE]
    >
-   > I dialogrutan kan du spara ett värde för **banderolltext**, men det här värdet återspeglas inte i SPA. För att aktivera måste vi utöka komponentens Sling-modell.
+   > I dialogrutan kan du spara ett värde för **banderolltext**, men det här värdet återspeglas inte i SPA-komponenten. För att aktivera måste vi utöka komponentens Sling-modell.
 
 ## Lägg till Java-gränssnitt {#java-interface}
 
-För att exponera värdena från komponentdialogrutan för React-komponenten måste vi uppdatera Sling-modellen som fyller i JSON-koden för `Banner`-komponenten. Detta görs i modulen `core` som innehåller all Java-kod för vårt SPA.
+För att exponera värdena från komponentdialogrutan för React-komponenten måste vi uppdatera Sling-modellen som fyller i JSON-koden för `Banner`-komponenten. Detta görs i modulen `core` som innehåller all Java-kod för vårt SPA-projekt.
 
 Först skapar vi ett nytt Java-gränssnitt för `Banner` som utökar Java-gränssnittet i `Image`.
 
@@ -461,7 +461,7 @@ Implementera sedan Sling-modellen för gränssnittet `BannerModel`.
 
 ## Sammanställ allt {#put-together}
 
-1. Återgå till AEM och öppna den SPA sidan som har komponenten `Banner`.
+1. Återgå till AEM och öppna den SPA-sida som innehåller komponenten `Banner`.
 1. Uppdatera komponenten `Banner` så att den innehåller **banderolltext**:
 
    ![Banderolltext](assets/extend-component/banner-text-dialog.png)
@@ -491,4 +491,4 @@ Implementera sedan Sling-modellen för gränssnittet `BannerModel`.
 
 ## Grattis! {#congratulations}
 
-Grattis! Du lärde dig att utöka en AEM med hjälp av och hur Sling-modeller och dialogrutor fungerar med JSON-modellen.
+Grattis! Du har lärt dig att utöka en AEM-komponent med hjälp av och hur Sling-modeller och dialogrutor fungerar med JSON-modellen.

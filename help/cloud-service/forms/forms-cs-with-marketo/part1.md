@@ -2,7 +2,7 @@
 title: Integrera AEM Forms as a Cloud Service och Marketo
 description: Lär dig hur du integrerar AEM Forms och Marketo med AEM Forms Form Data Model.
 feature: Form Data Model,Integration
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -11,7 +11,7 @@ badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 last-substantial-update: 2024-07-24T00:00:00Z
 jira: KT-15876
 exl-id: c3145149-bfa4-4dcb-acde-c359e9348f99
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Vi rekommenderar att du är bekant med följande ämnen i avsnittet Krav för at
 
 ## Förutsättning
 
-1. Åtkomst till AEM Forms as a Cloud ServiceInstance
+1. Åtkomst till instansen AEM Forms as a Cloud Service
 1. Välbekant med formulärdatamodell
 1. Grundläggande kunskap om växlingsfiler
 1. Skapa adaptiv Forms

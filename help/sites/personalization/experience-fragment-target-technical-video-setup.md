@@ -1,8 +1,8 @@
 ---
 title: Konfigurera Experience Fragments och Adobe Target Integration i AEM
-description: Adobe Experience Manager 6.4 förnyar personaliseringsarbetsflödet mellan AEM och Target. Upplevelser som skapats i AEM kan nu levereras direkt till Adobe Target som HTML Offers. Marknadsförarna kan smidigt testa och personalisera innehåll i olika kanaler.
+description: Adobe Experience Manager 6.4 förnyar personaliseringsarbetsflödet mellan AEM och Target. Upplevelser som skapats i AEM kan nu levereras direkt till Adobe Target som HTML-erbjudanden. Marknadsförarna kan smidigt testa och personalisera innehåll i olika kanaler.
 feature: Experience Fragments
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 16cb0b92-9398-4fd2-b8c3-f4b7675ef72c
 topic: Personalization
 role: Admin, Developer
@@ -10,7 +10,7 @@ level: Intermediate
 doc-type: Technical Video
 exl-id: 9c139a36-e3c5-407e-af5d-b4fb8860f5a2
 duration: 238
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Konfigurera Experience Fragments och Adobe Target Integration{#set-up-experience-fragments-and-adobe-target-integration}
 
-Adobe Experience Manager 6.4 förnyar personaliseringsarbetsflödet mellan AEM och Target. Upplevelser som skapats i AEM kan nu levereras direkt till Adobe Target som HTML Offers. Marknadsförarna kan smidigt testa och personalisera innehåll i olika kanaler.
+Adobe Experience Manager 6.4 förnyar personaliseringsarbetsflödet mellan AEM och Target. Upplevelser som skapats i AEM kan nu levereras direkt till Adobe Target som HTML-erbjudanden. Marknadsförarna kan smidigt testa och personalisera innehåll i olika kanaler.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22380?quality=12&learn=on)
 

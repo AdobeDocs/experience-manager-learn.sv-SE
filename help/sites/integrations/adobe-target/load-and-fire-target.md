@@ -2,7 +2,7 @@
 title: Läsa in och utlösa ett Target-anrop
 description: Lär dig hur du läser in, skickar parametrar till sidbegäran och startar ett Target-anrop från din webbplatssida med hjälp av en taggregel.
 feature: Core Components, Adobe Client Data Layer
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6133
 thumbnail: 41243.jpg
 topic: Integrations
@@ -13,7 +13,7 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: ec048414-2351-4e3d-b5f1-ade035c07897
 duration: 588
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 0%
@@ -22,13 +22,13 @@ ht-degree: 0%
 
 # Läsa in och utlösa ett Target-anrop {#load-fire-target}
 
-Lär dig hur du läser in, skickar parametrar till sidbegäran och startar ett Target-anrop från din webbplatssida med hjälp av en taggregel. Webbsidesinformation hämtas och skickas som parametrar med hjälp av Adobe klientdatalager, som du kan använda för att samla in och lagra data om besökarnas upplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data.
+Lär dig hur du läser in, skickar parametrar till sidbegäran och startar ett Target-anrop från din webbplatssida med hjälp av en taggregel. Webbsidesinformation hämtas och skickas som parametrar med hjälp av Adobe Client Data Layer, där du kan samla in och lagra data om besökarnas upplevelse på en webbsida och sedan göra det enkelt att komma åt dessa data.
 
 >[!VIDEO](https://video.tv.adobe.com/v/41243?quality=12&learn=on)
 
 ## Inläsningsregel för sida
 
-Adobe Client Data Layer är ett händelsestyrt datalager. När AEM siddatalager läses in utlöses en händelse `cmp:show`. I videon anropas regeln `tags Library Loaded` med en anpassad händelse. Nedan hittar du de kodfragment som används i videon för den anpassade händelsen och för dataelementen.
+Adobe klientdatalager är ett händelsestyrt datalager. När datalagret för AEM Page har lästs in utlöses en händelse `cmp:show`. I videon anropas regeln `tags Library Loaded` med en anpassad händelse. Nedan hittar du de kodfragment som används i videon för den anpassade händelsen och för dataelementen.
 
 ### Egen sidvisningshändelse{#page-event}
 
@@ -80,7 +80,7 @@ window.adobeDataLayer.push(function (dataLayer) {
 });
 ```
 
-En anpassad funktion definierar `pageShownEventHandler` och lyssnar efter händelser som skickas av AEM Core Components, hämtar relevant information från Core Component, paketerar den i ett händelseobjekt och utlöser taggen Event med den härledda händelseinformationen vid dess nyttolast.
+En anpassad funktion definierar `pageShownEventHandler` och lyssnar efter händelser som skickas av AEM Core Components, hämtar relevant information från Core Component, paketerar den i ett händelseobjekt och utlöser tagghändelsen med den härledda händelseinformationen vid dess nyttolast.
 
 Taggregeln aktiveras med hjälp av taggarnas `trigger(...)`-funktion, som __endast__ är tillgänglig inifrån händelsekodfragmentsdefinitionen för en regel.
 
@@ -115,7 +115,7 @@ if (event && event.component && event.component.hasOwnProperty('repo:path')) {
 }
 ```
 
-Den här koden returnerar AEM sökväg.
+Den här koden returnerar AEM-sidans sökväg.
 
 ![Sidsökväg](assets/pagepath.png)
 
@@ -127,7 +127,7 @@ if (event && event.component && event.component.hasOwnProperty('dc:title')) {
 }
 ```
 
-Den här koden returnerar AEM sidtitel.
+Den här koden returnerar AEM-sidans titel.
 
 ![Sidtitel](assets/pagetitle.png)
 
@@ -160,7 +160,7 @@ window.targetGlobalSettings = {
 
 ## Stödlänkar
 
-+ [Adobe-datalagerdokumentation](https://github.com/adobe/adobe-client-data-layer/wiki)
++ [Adobe Client Data Layer Documentation](https://github.com/adobe/adobe-client-data-layer/wiki)
 + [Adobe Experience Cloud Debugger - Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-+ [Använda Adobe-klientdatalagret och dokumentationen för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
++ [Använda Adobe Client Data Layer och Core Components Documentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
 + [Introduktion till Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

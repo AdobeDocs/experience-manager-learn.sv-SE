@@ -1,7 +1,7 @@
 ---
-title: Arbetsflöde för teman | Skapa AEM
-description: Lär dig hur du uppdaterar temakällorna för en Adobe Experience Manager-webbplats för att använda varumärkesspecifika format. Lär dig hur du använder en proxyserver för att visa en direktförhandsvisning av CSS- och JavaScript-uppdateringar. Den här självstudiekursen handlar också om hur du distribuerar temauppdateringar till en AEM webbplats med Adobe Cloud Manager Front End Pipeline.
-version: Cloud Service
+title: Arbetsflöde för teman | Skapa AEM-webbplatser snabbt
+description: Lär dig hur du uppdaterar temakällorna för en Adobe Experience Manager-webbplats för att använda varumärkesspecifika format. Lär dig hur du använder en proxyserver för att visa en direktförhandsvisning av CSS- och JavaScript-uppdateringar. Den här självstudiekursen handlar också om hur du distribuerar temauppdateringar till en AEM-webbplats med Adobe Cloud Manager Front End Pipeline.
+version: Experience Manager as a Cloud Service
 feature: Core Components
 topic: Content Management, Development
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 98946462-1536-45f9-94e2-9bc5d41902d4
 recommendations: noDisplay, noCatalog
 duration: 1275
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '458'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Arbetsflöde för teman {#theming}
 
-I det här kapitlet uppdaterar vi temakällorna för en Adobe Experience Manager-webbplats för att tillämpa varumärkesspecifika format. Vi lär oss hur du använder en proxyserver för att förhandsgranska CSS- och Javascript-uppdateringar när vi kodar mot den aktiva webbplatsen. Den här självstudiekursen handlar också om hur du distribuerar temauppdateringar till en AEM webbplats med Adobe Cloud Manager Front End Pipeline.
+I det här kapitlet uppdaterar vi temakällorna för en Adobe Experience Manager-webbplats för att tillämpa varumärkesspecifika format. Vi lär oss hur du använder en proxyserver för att förhandsgranska CSS- och Javascript-uppdateringar när vi kodar mot den aktiva webbplatsen. Den här självstudiekursen handlar också om hur du distribuerar temauppdateringar till en AEM-webbplats med Adobe Cloud Manager Front End Pipeline.
 
 Slutligen uppdateras vår webbplats med format som matchar WKND-varumärket.
 
@@ -54,7 +54,7 @@ Hämta de färdiga formaten för exempeltemat [WKND](assets/theming/WKND-THEME-s
 
 ## Distribuera ett tema med hjälp av en frontpipeline {#deploy-theme}
 
-Distribuera uppdateringar av ett tema till en AEM miljö med Cloud Manager Front End Pipeline.
+Distribuera uppdateringar av ett tema till en AEM-miljö med Cloud Manager Front End Pipeline.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338722?quality=12&learn=on)
 
@@ -72,7 +72,7 @@ Stegen på hög nivå för videon:
    ```
 
 1. Konfigurera en [frontpipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html) i Cloud Manager för att distribuera frontslutskoden.
-1. Kör Front End Pipeline för att distribuera uppdateringar till AEM.
+1. Kör Front End Pipeline för att distribuera uppdateringar till AEM-målmiljön.
 
 ### Exempelrapporter
 
@@ -83,8 +83,8 @@ Det finns några exempel på GitHub-repor som kan användas som referens:
 
 ## Grattis! {#congratulations}
 
-Grattis, du har precis uppdaterat och distribuerat ett tema till AEM!
+Grattis! Du har precis uppdaterat och distribuerat ett tema till AEM!
 
 ### Nästa steg {#next-steps}
 
-Ta en djupdykning AEM utvecklingen och förstå mer av den underliggande tekniken genom att skapa en webbplats med [AEM Project Archetype](../project-archetype/overview.md).
+Ta en djupdykning i utvecklingen av AEM och förstå mer av den underliggande tekniken genom att skapa en webbplats med [AEM Project Archetype](../project-archetype/overview.md).

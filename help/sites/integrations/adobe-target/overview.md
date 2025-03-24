@@ -2,7 +2,7 @@
 title: Integrera AEM Sites och Adobe Target
 description: Lär dig hur du integrerar AEM Sites och Adobe Target för att leverera personaliserade upplevelser.
 feature: Experience Fragments, Core Components, Adobe Client Data Layer
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6043
 thumbnail: 41241.jpg
 topic: Integrations, Personalization
@@ -13,7 +13,7 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: 2bc6cd90-7b23-4dde-bb07-bca0de9fa509
 duration: 262
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 0%
@@ -34,7 +34,7 @@ I den här videon diskuterar vi tre sätt att använda AEM och Target och hjälp
 
 * __Scenario 1:__ Personalization med AEM Experience Fragment Offers
 
-   1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
+   1. [Lägg till Adobe Target på AEM webbplats](./add-target-launch-extension.md)
    1. [Utlös ett Adobe Target-samtal från taggar](./load-and-fire-target.md)
    1. [Integrera AEM Author med Adobe Target](./setup-aem-target-cloud-service.md)
    1. [Exportera AEM Experience Fragments till Adobe Target](./export-experience-fragment-target.md)
@@ -42,12 +42,12 @@ I den här videon diskuterar vi tre sätt att använda AEM och Target och hjälp
 
 * __Scenario 2:__ Personalization med Visual Experience Composer (VEC)
 
-   1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
+   1. [Lägg till Adobe Target på AEM webbplats](./add-target-launch-extension.md)
    1. [Utlös ett Adobe Target-samtal från taggar](./load-and-fire-target.md)
    1. [Anpassa en del av en webbsida med Visual Experience Composer](./personalization-using-vec.md)
 
 * __Scenario 3:__ Personalization för webbsidesupplevelser
 
-   1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
+   1. [Lägg till Adobe Target på AEM webbplats](./add-target-launch-extension.md)
    1. [Utlös ett Adobe Target-samtal från taggar](./load-and-fire-target.md)
    1. [Personalisera hela webbsidan](./personalization-web-page.md)

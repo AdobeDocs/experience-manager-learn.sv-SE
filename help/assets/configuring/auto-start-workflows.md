@@ -2,7 +2,7 @@
 title: Starta arbetsflöden automatiskt
 description: Autostart-arbetsflöden utökar materialbearbetningen genom att automatiskt anropa ett anpassat arbetsflöde vid överföring eller ombearbetning.
 feature: Asset Compute Microservices, Workflow
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-4994
 thumbnail: 37323.jpg
 topic: Development
@@ -12,7 +12,7 @@ last-substantial-update: 2023-05-14T00:00:00Z
 doc-type: Feature Video
 exl-id: 5e423f2c-90d2-474f-8bdc-fa15ae976f18
 duration: 385
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
@@ -29,16 +29,16 @@ Autostart-arbetsflöden utökar materialbearbetningen i AEM as a Cloud Service g
 >
 >Använd Automatisk start av arbetsflöden för att anpassa efterbearbetning av resurser i stället för att använda Workflow Launcher. Autostart-arbetsflöden anropas _endast_ när en resurs har bearbetats, i stället för startprogram, som kan anropas flera gånger under bearbetning av resurser.
 
-## Anpassa arbetsflödet för Post-bearbetning
+## Anpassa efterbearbetningsarbetsflödet
 
-Om du vill anpassa arbetsflödet för Post-bearbetning kopierar du standardarbetsflödesmodellen [för Post-bearbetning](../../foundation/workflow/use-the-workflow-editor.md) i Assets Cloud.
+Om du vill anpassa efterbearbetningsarbetsflödet kopierar du standardarbetsflödesmodellen [för efterbearbetning](../../foundation/workflow/use-the-workflow-editor.md) i Assets Cloud.
 
 1. Börja på skärmen Arbetsflödesmodeller genom att gå till _Verktyg_ > _Arbetsflöde_ > _Modeller_
-2. Hitta och välj arbetsflödesmodellen _Assets Cloud Post-Processing_<br/>
-   ![Välj arbetsflödesmodellen för Post-bearbetning i Assets Cloud](assets/auto-start-workflow-select-workflow.png)
+2. Hitta och välj arbetsflödesmodellen _Efterbearbetning i Assets Cloud_<br/>
+   ![Välj arbetsflödesmodellen för efterbearbetning i Assets Cloud](assets/auto-start-workflow-select-workflow.png)
 3. Välj knappen _Kopiera_ för att skapa ett anpassat arbetsflöde
-4. Markera din arbetsflödesmodell nu (som kallas _Assets Cloud Post-Processing1_) och klicka på knappen _Redigera_ för att redigera arbetsflödet
-5. Ge ditt anpassade Post-bearbetningsarbetsflöde ett beskrivande namn <br/> i Egenskaper för arbetsflöde.
+4. Välj din arbetsflödesmodell nu (som kallas _Assets Cloud Post-Processing1_) och klicka på knappen _Redigera_ för att redigera arbetsflödet
+5. Ge ditt anpassade efterbearbetningsarbetsflöde ett beskrivande namn <br/> i Egenskaper för arbetsflöde
    ![Byter namn](assets/auto-start-workflow-change-name.png)
 6. Lägg till stegen för att uppfylla dina verksamhetskrav, i det här fallet lägga till en uppgift när resurserna är klara. Kontrollera att det sista steget i arbetsflödet alltid är _Slutför arbetsflöde_ <br/>
    ![Lägg till arbetsflödessteg](assets/auto-start-workflow-customize-steps.png)
@@ -49,14 +49,14 @@ Om du vill anpassa arbetsflödet för Post-bearbetning kopierar du standardarbet
 
 7. Välj knappen _Synkronisera_ om du vill spara ändringarna och synkronisera arbetsflödesmodellen
 
-## Använda ett anpassat arbetsflöde för Post-bearbetning
+## Använda ett anpassat efterbearbetningsarbetsflöde
 
-Anpassad Post-bearbetning är konfigurerad för mappar. Så här konfigurerar du ett anpassat Post-bearbetningsarbetsflöde för en mapp:
+Anpassad efterbearbetning är konfigurerad för mappar. Så här konfigurerar du ett anpassat efterbearbetningsarbetsflöde för en mapp:
 
 1. Markera mappen som du vill konfigurera arbetsflödet för och redigera mappegenskaperna
 2. Växla till fliken _Resursbearbetning_
-3. Välj ditt anpassade arbetsflöde för Post-bearbetning i _valrutan_ Starta arbetsflöde automatiskt<br/>
-   ![Ange arbetsflödet för Post-bearbetning](assets/auto-start-workflow-set-workflow.png)
+3. Välj ett anpassat arbetsflöde för efterbearbetning i markeringsrutan _Starta arbetsflöde automatiskt_<br/>
+   ![Ange efterbearbetningsarbetsflöde](assets/auto-start-workflow-set-workflow.png)
 4. Spara ändringarna
 
-Nu kommer ditt anpassade arbetsflöde för Post-bearbetning att köras för alla resurser som överförts eller bearbetats i den mappen.
+Nu kommer ditt anpassade efterbearbetningsarbetsflöde att köras för alla resurser som överförts eller bearbetats i den mappen.

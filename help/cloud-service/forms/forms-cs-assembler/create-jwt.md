@@ -1,16 +1,16 @@
 ---
 title: Skapa en JSON-webbtoken (JWT)
-description: Skapa en JSON Web Token (JWT) som kan bytas med Adobe IMS API:er för en AEM åtkomsttoken.
+description: Skapa en JSON Web Token (JWT) som kan bytas med Adobe IMS API:er för en AEM-åtkomsttoken.
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-9980
 exl-id: 0e3e186b-9fbe-40ad-a6cc-bdbf58b23009
 duration: 52
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '114'
 ht-degree: 0%

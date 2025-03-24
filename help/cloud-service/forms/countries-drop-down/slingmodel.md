@@ -5,23 +5,23 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
-source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
+exl-id: f4a18f02-61a2-4fa3-bfbb-41bf696cd2a8
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '384'
 ht-degree: 0%
 
 ---
 
-
 # Skapa en segmentmodell för komponenten
 
-En Sling Model i AEM är ett Java-baserat ramverk som används för att förenkla utvecklingen av bakomliggande logik för komponenter. Det gör att utvecklare kan mappa data från AEM (JCR-noder) till Java-objekt med hjälp av anteckningar, vilket ger ett rent och effektivt sätt att hantera dynamiska data för komponenter.
-Den här klassen, CountryDropDownImpl, är en implementering av gränssnittet CountryDropDown i ett AEM (Adobe Experience Manager) projekt. Den gör det möjligt för en nedrullningsbar komponent där användarna kan välja ett land baserat på den valda kontinenten. Listrutedata läses in dynamiskt från en JSON-fil som lagras i AEM DAM (Digital Asset Manager).
+En Sling Model i AEM är ett Java-baserat ramverk som används för att förenkla utvecklingen av back end-logik för komponenter. Det gör att utvecklare kan mappa data från AEM-resurser (JCR-noder) till Java-objekt med hjälp av anteckningar, vilket ger ett rent och effektivt sätt att hantera dynamiska data för komponenter.
+Den här klassen, CountryDropDownImpl, är en implementering av gränssnittet CountryDropDown i ett AEM-projekt (Adobe Experience Manager). Den gör det möjligt för en nedrullningsbar komponent där användarna kan välja ett land baserat på den valda kontinenten. Listrutedata läses in dynamiskt från en JSON-fil som lagras i AEM DAM (Digital Asset Manager).
 
 **Fält i klassen**
 
@@ -30,7 +30,7 @@ Inmatad från komponentegenskaperna med @ValueMapValue med standardvärdet false
 * **begäran**: Representerar den aktuella HTTP-begäran. Användbar för att komma åt sammanhangsspecifik information.
 * **kontinent**: Lagrar den markerade kontinenten för listrutan (t.ex. &quot;asia&quot;, &quot;europe&quot;).
 Inmatad från komponentens egenskapsdialogruta, med standardvärdet &quot;asia&quot; om ingen anges.
-* **resourceResolver**:Används för att komma åt och ändra resurser i AEM.
+* **resourceResolver**:Används för att komma åt och ändra resurser i AEM-databasen.
 * **jsonData**: Ett JSONObject som lagrar tolkade data från JSON-filen som motsvarar den valda kontinenten.
 
 **Metoder i klassen**

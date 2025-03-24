@@ -1,7 +1,7 @@
 ---
-title: Generera PDF med data från grundläggande komponentbaserad adaptiv form
+title: Generera PDF med data från komponentbaserade adaptiva formulär
 description: Sammanfoga data från inskickade kärnkomponentbaserade formulär med XDP-mallar i arbetsflödet
-version: 6.5
+version: Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -10,18 +10,18 @@ jira: KT-15025
 last-substantial-update: 2024-02-26T00:00:00Z
 exl-id: cae160f2-21a5-409c-942d-53061451b249
 duration: 97
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '324'
 ht-degree: 0%
 
 ---
 
-# Generera PDF med data från blankettinlämning som bygger på kärnkomponenter
+# Generera PDF med data från blankettinlämning
 
 Här är den reviderade texten med&quot;Core Components&quot; (kärnkomponenter) med inledande versal:
 
-Ett typiskt scenario är att generera ett PDF från data som skickas via en Core Components-baserad adaptiv form. Dessa data är alltid i JSON-format. Om du vill skapa en PDF med API:t Render PDF måste JSON-data konverteras till XML-format. Metoden `toString` i `org.json.XML` används för den här konverteringen. Mer information finns i [dokumentationen för `org.json.XML.toString` method](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-).
+Ett typiskt scenario är att generera en PDF från data som skickas via en Core Components-baserad anpassningsbar form. Dessa data är alltid i JSON-format. Om du vill generera en PDF med hjälp av API:t för renderaren i PDF måste du konvertera JSON-data till XML-format. Metoden `toString` i `org.json.XML` används för den här konverteringen. Mer information finns i [dokumentationen för `org.json.XML.toString` method](https://www.javadoc.io/doc/org.json/json/20171018/org/json/XML.html#toString-java.lang.Object-).
 
 ## Anpassningsbart formulär baserat på JSON-schema
 
@@ -110,7 +110,7 @@ public class ConvertJSONToXML implements WorkflowProcess {
 Om du vill hantera formuläröverföringar skapar du ett arbetsflöde som innehåller två steg:
 
 1. I det inledande steget används en anpassad process för att omvandla skickade JSON-data till XML.
-1. I det följande steget genereras ett PDF genom att XML-data kombineras med XDP-mallen.
+1. I nästa steg skapas en PDF genom att XML-data kombineras med XDP-mallen.
 
 ![json-to-xml](assets/json-to-xml-process-step.png)
 
@@ -119,10 +119,10 @@ Om du vill hantera formuläröverföringar skapar du ett arbetsflöde som inneh�
 
 Så här testar du detta på den lokala servern:
 
-1. [Hämta och installera det anpassade paketet via AEM OSGi-webbkonsolen](assets/convertJsonToXML.core-1.0.0-SNAPSHOT.jar).
+1. [Hämta och installera det anpassade paketet via webbkonsolen AEM OSGi](assets/convertJsonToXML.core-1.0.0-SNAPSHOT.jar).
 1. [Importera arbetsflödespaketet](assets/workflow_to_render_pdf.zip).
 1. [Importera exemplet Adaptivt formulär och XDP-mall](assets/adaptive_form_and_xdp_template.zip).
 1. [Förhandsgranska det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/f23/jcr:content?wcmmode=disabled).
 1. Fyll i några formulärfält.
-1. Skicka formuläret för att starta AEM arbetsflöde.
-1. Hitta det återgivna PDF i arbetsflödets nyttolastmapp.
+1. Skicka in formuläret för att initiera AEM arbetsflöde.
+1. Hitta den återgivna PDF-filen i arbetsflödets nyttolastmapp.

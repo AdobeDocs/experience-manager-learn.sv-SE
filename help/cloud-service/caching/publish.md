@@ -1,7 +1,7 @@
 ---
-title: AEM Publish servicecache
-description: Allmän översikt över tjänstcachning i AEM as a Cloud Service Publish.
-version: Cloud Service
+title: AEM Publish service caching
+description: Allmän översikt över cachelagring av tjänsten AEM as a Cloud Service Publish.
+version: Experience Manager as a Cloud Service
 feature: Dispatcher, Developer Tools
 topic: Performance
 role: Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: 1a1accbe-7706-4f9b-bf63-755090d03c4c
 duration: 240
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1134'
 ht-degree: 0%
@@ -21,9 +21,9 @@ ht-degree: 0%
 
 # AEM Publish
 
-AEM Publish-tjänsten har två primära cachningslager, AEM as a Cloud Service CDN och AEM Dispatcher. En kundhanterad CDN kan också placeras framför AEM as a Cloud Service CDN. AEM as a Cloud Service CDN levererar toppmaterial och levererar upplevelser med låg latens till användare i hela världen. AEM Dispatcher tillhandahåller cachelagring direkt framför AEM Publish och används för att minska onödig belastning på AEM Publish.
+AEM Publish-tjänsten har två primära cachningslager, AEM as a Cloud Service CDN och AEM Dispatcher. En kundhanterad CDN kan också placeras framför AEM as a Cloud Service CDN. AEM as a Cloud Service CDN levererar toppmaterial och levererar upplevelser med låg latens till användare i hela världen. AEM Dispatcher tillhandahåller cachelagring direkt framför AEM Publish och används för att minska onödig belastning på själva AEM Publish.
 
-![AEM Översikt över cachelagring i Publish](./assets/publish/publish-all.png){align="center"}
+![Översikt över cachelagring i AEM Publish](./assets/publish/publish-all.png){align="center"}
 
 ## CDN
 
@@ -31,7 +31,7 @@ AEM as a Cloud Service CDN:s cachelagring styrs av headers i HTTP-svarscache och
 
 ![AEM Publish CDN](./assets/publish/publish-cdn.png){align="center"}
 
-Att konfigurera hur CDN cachelagrar innehåll begränsas till att ange cacherubriker för HTTP-svar. Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher värdkonfigurationer med `mod_headers`, men kan också anges i anpassad Java™-kod som körs i AEM Publish.
+Att konfigurera hur CDN cachelagrar innehåll begränsas till att ange cacherubriker för HTTP-svar. Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher värdkonfigurationer med `mod_headers`, men kan även ställas in i anpassad Java™-kod som körs i AEM Publish.
 
 ### När cachelagras HTTP-begäranden/svar?
 
@@ -51,23 +51,23 @@ AEM as a Cloud Service CDN cachelagrar följande:
 + HTTP-svarsbrödtext
 + HTTP-svarsrubriker
 
-Vanligtvis cachelagras en HTTP-begäran/ett HTTP-svar för en enskild URL som ett enskilt objekt. CDN kan emellertid hantera cachelagring av flera objekt för en enda URL när rubriken `Vary` anges för HTTP-svaret. Undvik att ange `Vary` för rubriker vars värden inte har en tätt kontrollerad uppsättning värden, eftersom detta kan leda till många cachemissar, vilket minskar träffkvoten för cachen. [Granska dokumentationen för variantcachelagring](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/variant-caching.html) om du vill ha stöd för cachelagring av olika begäranden på AEM Dispatcher.
+Vanligtvis cachelagras en HTTP-begäran/ett HTTP-svar för en enskild URL som ett enskilt objekt. CDN kan emellertid hantera cachelagring av flera objekt för en enda URL när rubriken `Vary` anges för HTTP-svaret. Undvik att ange `Vary` för rubriker vars värden inte har en tätt kontrollerad uppsättning värden, eftersom detta kan leda till många cachemissar, vilket minskar träffkvoten för cachen. Om du vill ha stöd för cachelagring av olika begäranden på AEM Dispatcher [läser du dokumentationen för cachelagring av varianter](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/variant-caching.html).
 
 ### Cachelagring{#cdn-cache-life}
 
-Den AEM Publish CDN är TTL-baserad (time-to-live), vilket innebär att cachetiden bestäms av HTTP-svarshuvuden `Cache-Control`, `Surrogate-Control` eller `Expires`. Om rubrikerna för HTTP-svarscache inte anges av projektet och [kriterierna ](#when-are-http-requestsresponses-cached) uppfylls, anger Adobe en standardcachetid på 10 minuter (600 sekunder).
+AEM Publish CDN är TTL-baserad (time-to-live), vilket innebär att cachetiden bestäms av HTTP-svarshuvuden `Cache-Control`, `Surrogate-Control` eller `Expires`. Om rubrikerna för HTTP-svarscachning inte har angetts av projektet och [kriterierna ](#when-are-http-requestsresponses-cached) är uppfyllda, anger Adobe en standardcache på 10 minuter (600 sekunder).
 
 Så här påverkar cacherubrikerna CDN-cachens livslängd:
 
 + [`Cache-Control`](https://developer.fastly.com/reference/http/http-headers/Cache-Control/) HTTP-svarshuvudet anger för webbläsaren och CDN hur länge svaret ska cachelagras. Värdet anges i sekunder. `Cache-Control: max-age=3600` instruerar till exempel webbläsaren att cachelagra svaret i en timme. Detta värde ignoreras av CDN om även HTTP-svarshuvudet `Surrogate-Control` finns.
-+ [`Surrogate-Control`](https://developer.fastly.com/reference/http/http-headers/Surrogate-Control/) HTTP-svarshuvudet instruerar AEM CDN hur länge svaret ska cachelagras. Värdet anges i sekunder. `Surrogate-Control: max-age=3600` instruerar till exempel CDN att cachelagra svaret i en timme.
-+ [`Expires`](https://developer.fastly.com/reference/http/http-headers/Expires/) HTTP-svarshuvudet anger AEM CDN (och webbläsaren) hur länge det cachelagrade svaret är giltigt. Värdet är ett datum. `Expires: Sat, 16 Sept 2023 09:00:00 EST` instruerar till exempel webbläsaren att cachelagra svaret tills det angivna datumet och den angivna tiden.
++ [`Surrogate-Control`](https://developer.fastly.com/reference/http/http-headers/Surrogate-Control/) HTTP-svarshuvudet anger för AEM CDN hur länge svaret ska cachelagras. Värdet anges i sekunder. `Surrogate-Control: max-age=3600` instruerar till exempel CDN att cachelagra svaret i en timme.
++ [`Expires`](https://developer.fastly.com/reference/http/http-headers/Expires/) HTTP-svarshuvudet instruerar AEM CDN (och webbläsaren) hur länge det cachelagrade svaret är giltigt. Värdet är ett datum. `Expires: Sat, 16 Sept 2023 09:00:00 EST` instruerar till exempel webbläsaren att cachelagra svaret tills det angivna datumet och den angivna tiden.
 
 Använd `Cache-Control` för att styra cachetiden när den är densamma för både webbläsaren och CDN. Använd `Surrogate-Control` när webbläsaren ska cachelagra svaret med en annan varaktighet än CDN.
 
 #### Standardcachetid
 
-Om ett HTTP-svar kvalificerar för AEM Dispatcher-cachelagring [per ovan-kvalificerare](#when-are-http-requestsresponses-cached), är följande standardvärden såvida det inte finns någon anpassad konfiguration.
+Om ett HTTP-svar kvalificerar sig för AEM Dispatcher-cachelagring [per ovan-kvalificerare](#when-are-http-requestsresponses-cached), är följande standardvärden såvida det inte finns någon anpassad konfiguration.
 
 | Innehållstyp | Standardcachetid för CDN |
 |:------------ |:---------- |
@@ -79,7 +79,7 @@ Om ett HTTP-svar kvalificerar för AEM Dispatcher-cachelagring [per ovan-kvalifi
 
 ### Anpassa cacheregler
 
-[Konfigurationen av hur CDN cachelagrar innehåll ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#disp) begränsas till att ange cacherubriker för HTTP-svar. Dessa cacherubriker ställs vanligtvis in AEM Dispatcher `vhost`-konfigurationer med `mod_headers`, men kan även ställas in i anpassad Java™-kod som körs i AEM Publish.
+[Konfigurationen av hur CDN cachelagrar innehåll ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#disp) begränsas till att ange cacherubriker för HTTP-svar. Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher `vhost`-konfigurationer med `mod_headers`, men kan även ställas in i anpassad Java™-kod som körs i AEM Publish.
 
 ## AEM Dispatcher
 
@@ -94,7 +94,7 @@ HTTP-svar för motsvarande HTTP-begäranden cachelagras när alla följande vill
 + HTTP-svarsstatusen är `200`
 + HTTP-svaret är INTE för en binär fil.
 + URL-sökvägen för HTTP-begäran avslutas med ett tillägg, till exempel: `.html`, `.json`, `.css`, `.js` osv.
-+ HTTP-begäran innehåller ingen auktorisering och autentiseras inte av AEM.
++ HTTP-begäran innehåller ingen behörighet och autentiseras inte av AEM.
    + Cachelagring av autentiserade begäranden [kan dock aktiveras globalt](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used) eller selektivt via [behörighetskänslig cachning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html).
 + HTTP-begäran innehåller inga frågeparametrar.
    + Om du konfigurerar [ignorerade frågeparametrar](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters) kan HTTP-begäranden med de ignorerade frågeparametrarna cachelagras/hanteras från cachen.
@@ -110,7 +110,7 @@ HTTP-svar för motsvarande HTTP-begäranden cachelagras när alla följande vill
 AEM Dispatcher cachelagrar följande:
 
 + HTTP-svarsbrödtext
-+ HTTP-svarshuvuden har angetts i Dispatcher [cacherubrikskonfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-http-response-headers). Se standardkonfigurationen som levereras med [AEM Project Archettype](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L106-L113).
++ HTTP-svarshuvuden har angetts i Dispatcher [cacherubrikskonfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-http-response-headers). Se standardkonfigurationen som levereras med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L106-L113).
    + `Cache-Control`
    + `Content-Disposition`
    + `Content-Type`
@@ -127,7 +127,7 @@ AEM Dispatcher cachelagrar HTTP-svar med följande metoder:
 
 #### Standardcachetid
 
-Om ett HTTP-svar kvalificerar för AEM Dispatcher-cachelagring [per ovan-kvalificerare](#when-are-http-requestsresponses-cached-1), är följande standardvärden såvida det inte finns någon anpassad konfiguration.
+Om ett HTTP-svar kvalificerar sig för AEM Dispatcher-cachelagring [per ovan-kvalificerare](#when-are-http-requestsresponses-cached-1), är följande standardvärden såvida det inte finns någon anpassad konfiguration.
 
 | Innehållstyp | Standardcachetid för CDN |
 |:------------ |:---------- |
@@ -139,7 +139,7 @@ Om ett HTTP-svar kvalificerar för AEM Dispatcher-cachelagring [per ovan-kvalifi
 
 ### Anpassa cacheregler
 
-Den AEM Dispatcher-cachen kan konfigureras via [Dispatcher-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache), inklusive:
+AEM Dispatcher-cachen kan konfigureras via [Dispatcher-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache), inklusive:
 
 + Vad som cachelagras
 + Vilka delar av cachen som blir ogiltiga vid publicering/avpublicering
@@ -148,4 +148,4 @@ Den AEM Dispatcher-cachen kan konfigureras via [Dispatcher-konfigurationen](http
 + Aktivera eller inaktivera TTL-cachelagring
 + ... och mycket mer
 
-Om `mod_headers` används för att ange cacherubriker påverkar inte konfigurationen `vhost` Dispatcher-cachning (TTL-baserad) eftersom dessa läggs till i HTTP-svaret när AEM Dispatcher bearbetar svaret. För att påverka Dispatcher-cachning via HTTP-svarshuvuden krävs anpassad Java™-kod som körs i AEM Publish och som anger lämpliga HTTP-svarshuvuden.
+Om du använder `mod_headers` för att ange cacherubriker kommer konfigurationen `vhost` inte att påverka Dispatcher-cachning (TTL-baserad) eftersom dessa läggs till i HTTP-svaret när AEM Dispatcher bearbetar svaret. För att Dispatcher-cachning ska påverkas via HTTP-svarshuvuden krävs anpassad Java™-kod som körs i AEM Publish och som anger lämpliga HTTP-svarshuvuden.

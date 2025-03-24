@@ -5,13 +5,13 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: AEM Project Archetype
 jira: KT-9534
 exl-id: c2cd9c52-6f00-4cfe-a972-665093990e5d
 duration: 67
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
@@ -55,4 +55,4 @@ När du har kopierat all kod till ditt nya projekt kan du överföra projektet t
 
 >[!NOTE]
 >
->Om du vill synkronisera innehållet (Adaptive Forms, Form Data Model osv.) till ditt nya projekt måste du skapa rätt mappstruktur i IntelliJ-projektet och sedan synkronisera IntelliJ-projektet med din AEM med kommandot Get i repo-verktyget.
+>Om du vill synkronisera innehållet (Adaptive Forms, Form Data Model osv.) till ditt nya projekt måste du skapa rätt mappstruktur i IntelliJ-projektet och sedan synkronisera IntelliJ-projektet med din AEM-instans med kommandot Get i repo-verktyget.

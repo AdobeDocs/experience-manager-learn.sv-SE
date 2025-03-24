@@ -1,7 +1,7 @@
 ---
-title: Anpassat domännamn med CDN som hanteras av Adobe
-description: Lär dig hur du implementerar ett anpassat domännamn på AEM as a Cloud Service webbplats som använder ett CDN som hanteras med Adobe.
-version: Cloud Service
+title: Anpassat domännamn med Adobe hanterat CDN
+description: Lär dig hur du implementerar ett eget domännamn på AEM as a Cloud Service webbplats som använder ett Adobe-hanterat CDN.
+version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
 role: Admin, Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-08-12T00:00:00Z
 jira: KT-15121
 thumbnail: KT-15121.jpeg
 exl-id: 8936c3ae-2daf-4d0f-b260-28376ae28087
-source-git-commit: f92e66d6edc929bff1e8cae6adb7f408352aeb77
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '726'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Anpassat domännamn med Adobe CDN
 
-Lär dig hur du implementerar ett eget domännamn för en AEM as a Cloud Service-webbplats som använder CDN (Adobe Content Delivery Network).
+Lär dig hur du implementerar ett eget domännamn för en AEM as a Cloud Service-webbplats som använder Adobe Content Delivery Network (CDN).
 
 I den här självstudiekursen har varumärket för exempelwebbplatsen [AEM WKND](https://github.com/adobe/aem-guides-wknd) förbättrats genom att ett anpassat domännamn `wknd.enablementadobe.com` med HTTPS-adresserbart läggs till med TLS (Transport Layer Security).
 
@@ -40,7 +40,7 @@ Stegen på hög nivå är:
    - Certifikatutfärdare (CA) - att begära det signerade certifikatet för din webbplatsdomän, som [DigitCert](https://www.digicert.com/)
    - DNS-värdtjänst (Domain Name System) - för att lägga till DNS-poster för din anpassade domän, som Azure DNS eller AWS Route 53.
 - Åtkomst till [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/) som **Business Owner** eller **Deployment Manager**.
-- Exempelwebbplatsen [AEM WKND](https://github.com/adobe/aem-guides-wknd) har distribuerats till AEM as a Cloud Service-miljön av typen [production program](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs).
+- Exempelwebbplatsen [AEM WKND](https://github.com/adobe/aem-guides-wknd) har distribuerats till AEM as a Cloud Service-miljön av typen [produktionsprogram](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs).
 
 Om du inte har tillgång till tredjepartstjänster kan du _samarbeta med ditt säkerhets- eller värdteam för att slutföra stegen_.
 
@@ -92,7 +92,7 @@ Om du vill lägga till SSL-certifikatet i Cloud Manager följer du dokumentation
 Så här verifierar du domännamnet:
 
 - Lägg till ett domännamn i Cloud Manager genom att följa dokumentationen för [lägg till eget domännamn](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-custom-domain-name).
-- Lägg till en AEM specifik [TXT-post](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-text-record) i DNS-värdtjänsten.
+- Lägg till en AEM-specifik [TXT-post](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/custom-domain-names/add-text-record) i din DNS-värdtjänst.
 - Kontrollera ovanstående steg genom att fråga DNS-servrarna med kommandot `dig`.
 
 ```bash
@@ -142,7 +142,7 @@ Så här konfigurerar du DNS-posten för din anpassade domän:
 
 I den här självstudien läggs CNAME-posttypen som pekar på `cdn.adobeaemcloud.com` till, eftersom en **underdomän** `wknd.enablementadobe.com` används.
 
-Om du använder **rotdomänen** måste du lägga till en APEX-posttyp (även A, ALIAS eller ANAME) som pekar på de IP-adresser som tillhandahålls av Adobe.
+Om du använder **rotdomänen** måste du lägga till en APEX-posttyp (även A, ALIAS eller ANAME) som pekar på de specifika IP-adresserna som tillhandahålls av Adobe.
 
 ## Platsverifiering
 

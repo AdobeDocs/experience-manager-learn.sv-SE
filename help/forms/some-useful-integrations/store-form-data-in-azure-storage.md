@@ -2,7 +2,7 @@
 title: Spara formulärinlämning i Azure Storage
 description: Lagra formulärdata i Azure Storage med REST API
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -10,7 +10,7 @@ last-substantial-update: 2023-08-14T00:00:00Z
 jira: KT-13781
 exl-id: 2bec5953-2e0c-4ae6-ae98-34492d4cfbe4
 duration: 143
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '601'
 ht-degree: 0%
@@ -53,12 +53,12 @@ Kontrollera att du har / i slutet av lagringsURI:n och att SAS-token börjar med
 ![osgi-configuration](./assets/azure-portal-osgi-configuration.png)
 
 
-## Skapa PUT-begäran
+## Skapa PUT-förfrågan
 
 Nästa steg är att skapa en PUT-begäran om att lagra skickade formulärdata i Azure Storage. Varje formulärinlämning måste identifieras med ett unikt BLOB-ID. Det unika BLOB-ID:t skapas vanligtvis i koden och infogas i URL:en för PUT-begäran.
-Följande är den partiella URL:en för begäran från PUT. `aemformstutorial` är namnet på lagringskontot, formuläröverföringar är behållaren där data lagras med ett unikt BLOB ID. Resten av URL:en förblir densamma.
+Följande är den partiella URL:en för PUT-begäran. `aemformstutorial` är namnet på lagringskontot, formuläröverföringar är behållaren där data lagras med ett unikt BLOB ID. Resten av URL:en förblir densamma.
 https://aemformstutorial.blob.core.windows.net/formsubmissions/blobid/sastoken
-Följande funktion har skrivits för att lagra skickade formulärdata i Azure Storage med en PUT-begäran. Observera användningen av behållarnamnet och uuid i url:en. Du kan skapa en OSGi-tjänst eller en sling-server med exempelkoden nedan och lagra formulärskicken i Azure Storage.
+Följande funktion har skrivits för att lagra skickade formulärdata i Azure Storage med hjälp av en PUT-begäran. Observera användningen av behållarnamnet och uuid i url:en. Du kan skapa en OSGi-tjänst eller en sling-server med exempelkoden nedan och lagra formulärskicken i Azure Storage.
 
 ```java
  public String saveFormDatainAzure(String formData) {

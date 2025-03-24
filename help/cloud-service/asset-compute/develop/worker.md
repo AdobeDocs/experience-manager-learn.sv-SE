@@ -1,8 +1,8 @@
 ---
-title: Utveckla en Asset compute-arbetare
-description: Asset compute är kärnan i ett Asset compute-projekt och tillhandahåller anpassade funktioner som utför, eller koordinerar, det arbete som utförs på en resurs för att skapa en ny rendering.
+title: Utveckla en Asset Compute-arbetare
+description: Asset Compute-arbetare är kärnan i ett Asset Compute-projekt och tillhandahåller anpassade funktioner som utför, eller koordinerar, arbetet som utförs på en resurs för att skapa en ny rendering.
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6282
 thumbnail: KT-6282.jpg
@@ -11,43 +11,43 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 7d51ec77-c785-4b89-b717-ff9060d8bda7
 duration: 451
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1386'
 ht-degree: 0%
 
 ---
 
-# Utveckla en Asset compute-arbetare
+# Utveckla en Asset Compute-arbetare
 
-Arbetare i asset compute är kärnan i ett Asset compute-projekt och tillhandahåller anpassade funktioner som utför, eller koordinerar, det arbete som utförs på en resurs för att skapa en ny rendering.
+Asset Compute-arbetare är kärnan i ett Asset Compute-projekt och tillhandahåller anpassade funktioner som utför, eller koordinerar, arbetet som utförs på en resurs för att skapa en ny rendering.
 
-Asset compute-projektet genererar automatiskt en enkel arbetare som kopierar resursens ursprungliga binärfil till en namngiven återgivning, utan några omformningar. I den här självstudiekursen ska vi modifiera den här arbetaren för att göra en intressantare rendering, för att illustrera Asset compute arbetares styrka.
+Asset Compute-projektet genererar automatiskt en enkel arbetare som kopierar resursens ursprungliga binärfil till en namngiven återgivning, utan några omformningar. I den här självstudiekursen ska vi modifiera arbetaren för att göra en intressantare rendering som visar Asset Compute arbetares styrka.
 
-Vi kommer att skapa en Asset compute-arbetare som genererar en ny vågrät bildåtergivning, som omfattar tomt utrymme till vänster och höger om resursåtergivningen med en oskarp version av resursen. Bredden, höjden och oskärpan för den slutliga återgivningen parametriseras.
+Vi kommer att skapa en Asset Compute-arbetare som genererar en ny vågrät bildåtergivning, som omfattar tomt utrymme till vänster och höger om resursåtergivningen med en oskarp version av resursen. Bredden, höjden och oskärpan för den slutliga återgivningen parametriseras.
 
-## Logiskt flöde för ett anrop till en Asset compute-arbetare
+## Logiskt flöde för ett anrop till en Asset Compute-arbetare
 
-Asset Compute-arbetare implementerar Asset compute SDK-arbetarens API-kontrakt i funktionen `renditionCallback(...)` som är begreppsmässigt:
+Asset Compute-arbetare implementerar Asset Compute SDK-arbets-API-kontraktet i funktionen `renditionCallback(...)` som är begreppsmässigt:
 
-+ __Indata:__ En AEM ursprungliga binära parametrar och parametrar för bearbetningsprofil
-+ __Utdata:__ En eller flera återgivningar som ska läggas till i AEM
++ __Indata:__ En AEM-resurs ursprungliga binära parametrar och parametrar för Bearbetningsprofil
++ __Utdata:__ En eller flera återgivningar som ska läggas till i AEM-resursen
 
-![logiskt arbetsflöde för Asset compute](./assets/worker/logical-flow.png)
+![Logiskt arbetsflöde för Asset Compute-arbetare](./assets/worker/logical-flow.png)
 
-1. AEM författartjänsten anropar Asset compute-arbetaren och anger resursens __(1a)__ ursprungliga binärfil (`source` parameter) och __(1b)__ alla parametrar som definierats i Bearbetningsprofil (`rendition.instructions` parameter).
-1. Asset compute SDK koordinerar körningen av den anpassade Asset compute-metadataarbetarens `renditionCallback(...)`-funktion och genererar en ny binär återgivning baserat på resursens ursprungliga binära __(1a)__ och eventuella parametrar __(1b)__.
+1. AEM Author-tjänsten anropar Asset Compute-arbetaren och anger resursens __(1a)__ ursprungliga binärfil (`source` parameter) och __(1b)__ parametrar som definierats i Bearbetningsprofil (`rendition.instructions` parameter).
+1. Asset Compute SDK ordnar körningen av den anpassade Asset Compute-metadataarbetarens `renditionCallback(...)`-funktion, vilket genererar en ny binär återgivning baserat på resursens ursprungliga binära __(1a)__ och eventuella parametrar __(1b)__.
 
    + I den här självstudiekursen skapas återgivningen&quot;i arbete&quot;, vilket innebär att arbetaren komponerar återgivningen, men källbinärfilen kan även skickas till andra webbtjänstAPI:er för att återge återgivningen.
 
-1. Asset compute-arbetaren sparar den nya återgivningens binära data till `rendition.path`.
-1. Binära data som skrivs till `rendition.path` transporteras via Asset compute SDK till AEM Author Service och exponeras som __(4a)__ en textåtergivning och __(4b)__ beständig till resursens metadatanod.
+1. Asset Compute-arbetaren sparar den nya återgivningens binära data till `rendition.path`.
+1. Binära data som skrivs till `rendition.path` överförs via Asset Compute SDK till AEM Author Service och visas som __(4a)__ en textåtergivning och __(4b)__ beständig till objektets metadatanod.
 
-Diagrammet ovan redogör för de problem som Asset compute utvecklare står inför och det logiska flödet till Asset compute arbetares anrop. Av nyfikenhet är [intern information om körning av Asset compute ](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html) tillgänglig, men endast Asset compute SDK API-kontrakt kan vara beroende av.
+Diagrammet ovan beskriver Asset Compute utvecklarrelaterade problem och det logiska flödet till Asset Compute arbetaranrop. På grund av nyfikenheten finns de [interna detaljerna för körning av Asset Compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html), men endast de offentliga API-kontrakten för Asset Compute SDK kan vara beroende av.
 
 ## Anatomi för en arbetare
 
-Alla Asset compute-arbetare följer samma grundläggande struktur och in-/utdatakontrakt.
+Alla Asset Compute-arbetare följer samma grundläggande struktur och in-/utdatakontrakt.
 
 ```javascript
 'use strict';
@@ -102,7 +102,7 @@ function customHelperFunctions() { ... }
 
 ![Autogenererat index.js](./assets/worker/autogenerated-index-js.png)
 
-1. Kontrollera att Asset compute-projektet är öppet i VS-kod
+1. Kontrollera att Asset Compute-projektet är öppet i VS Code
 1. Navigera till mappen `/actions/worker`
 1. Öppna filen `index.js`
 
@@ -110,15 +110,15 @@ Det här är den JavaScript-fil för arbetaren som vi ska ändra i den här sjä
 
 ## Installera och importera stödda npm-moduler
 
-Node.js-baserade projekt är Asset compute-baserade och drar nytta av det robusta ekosystemet för [npm-modulen](https://npmjs.com). För att kunna utnyttja npm-moduler måste vi först installera dem i vårt Asset compute-projekt.
+Asset Compute-projekt är Node.js-baserade och drar nytta av det robusta ekosystemet för [npm-modulen](https://npmjs.com). För att kunna utnyttja npm-moduler måste vi först installera dem i vårt Asset Compute-projekt.
 
 I den här arbetaren använder vi [jimp](https://www.npmjs.com/package/jimp) för att skapa och ändra återgivningsbilden direkt i Node.js-koden.
 
 >[!WARNING]
 >
->Alla NPM-moduler för tillgångsändring stöds inte av Asset compute. NPM-moduler som är beroende av program som ImageMagick eller andra OS-beroende bibliotek stöds inte. Det är bäst att begränsa användningen av npm-moduler som bara är för JavaScript.
+>Alla NPM-moduler för tillgångsändring stöds inte av Asset Compute. NPM-moduler som är beroende av program som ImageMagick eller andra OS-beroende bibliotek stöds inte. Det är bäst att begränsa användningen av npm-moduler som bara är för JavaScript.
 
-1. Öppna kommandoraden i roten av ditt Asset compute-projekt (detta kan göras i VS-koden via __Terminal > New Terminal__) och kör kommandot:
+1. Öppna kommandoraden i roten av ditt Asset Compute-projekt (detta kan göras i VS-koden via __Terminal > New Terminal__) och kör kommandot:
 
    ```
    $ npm install jimp
@@ -147,7 +147,7 @@ Uppdatera `require`-direktiven högst upp i arbetarens `index.js` för att impor
 
 ## Läsa parametrar
 
-Asset compute kan läsa in parametrar som kan skickas via Bearbeta profiler som definierats i AEM as a Cloud Service Author. Parametrarna skickas till arbetaren via objektet `rendition.instructions`.
+Asset Compute-arbetare kan läsa in parametrar som kan skickas via Bearbeta profiler som definierats i tjänsten AEM as a Cloud Service Author. Parametrarna skickas till arbetaren via objektet `rendition.instructions`.
 
 Dessa kan läsas genom åtkomst till `rendition.instructions.<parameterName>` i arbetskoden.
 
@@ -178,7 +178,7 @@ exports.main = worker(async (source, rendition, params) => {
 
 ## Utlösande fel{#errors}
 
-Asset compute-arbetare kan stöta på situationer som leder till fel. Adobe Asset compute SDK innehåller [en serie fördefinierade fel](https://github.com/adobe/asset-compute-commons#asset-compute-errors) som kan genereras när sådana situationer uppstår. Om ingen specifik feltyp finns kan `GenericError` användas eller specifika anpassade `ClientErrors` kan definieras.
+Asset Compute-arbetare kan stöta på situationer som leder till fel. Adobe Asset Compute SDK innehåller [en serie fördefinierade fel](https://github.com/adobe/asset-compute-commons#asset-compute-errors) som kan genereras när sådana situationer uppstår. Om ingen specifik feltyp finns kan `GenericError` användas eller specifika anpassade `ClientErrors` kan definieras.
 
 Innan du börjar bearbeta återgivningen bör du kontrollera att alla parametrar är giltiga och stöds i den här arbetarens kontext:
 
@@ -246,11 +246,11 @@ När parametrarna har lästs, sanerats och validerats skrivs koden för att gene
    + Justera kontrast baserat på parametervärdet `CONTRAST`
    + Justera intensiteten baserat på parametervärdet `BRIGHTNESS`
 1. Placera den omformade `image` mitt i `renditionImage` som har en genomskinlig bakgrund
-1. Skriv det sammansatta, `renditionImage` till `rendition.path` så att det kan sparas i AEM som en resursåtergivning.
+1. Skriv det sammansatta, `renditionImage` till `rendition.path` så att det kan sparas tillbaka till AEM som en resursåtergivning.
 
 Den här koden använder [Jimp API:er](https://github.com/oliver-moran/jimp#jimp) för att utföra dessa bildomformningar.
 
-Asset compute-arbetare måste slutföra sitt arbete synkront och `rendition.path` måste skrivas tillbaka helt innan arbetarens `renditionCallback` slutförs. Detta kräver att asynkrona funktionsanrop görs synkrona med operatorn `await`. Om du inte känner till JavaScript asynkrona funktioner och hur de kan köras synkront, kan du bekanta dig med [JavaScript-operatorn för väntan](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await).
+Asset Compute-arbetare måste slutföra sitt arbete synkront och `rendition.path` måste skrivas tillbaka helt till innan arbetarens `renditionCallback` slutförs. Detta kräver att asynkrona funktionsanrop görs synkrona med operatorn `await`. Om du inte känner till JavaScript asynkrona funktioner och hur de kan köras synkront, kan du bekanta dig med [JavaScript-operatorn för väntan](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await).
 
 Den färdiga arbetaren `index.js` ska se ut så här:
 
@@ -316,9 +316,9 @@ class RenditionInstructionsError extends ClientError {
 
 ## Arbetaren körs
 
-Nu när arbetskoden är klar och har registrerats och konfigurerats i [manifest.yml](./manifest.md) kan den köras med det lokala utvecklingsverktyget i Asset compute för att se resultatet.
+Nu när arbetskoden är klar och har registrerats och konfigurerats i [manifest.yml](./manifest.md) kan den köras med det lokala Asset Compute Development Tool för att se resultatet.
 
-1. Från Asset compute-projektets rot
+1. Från Asset Compute-projektets rot
 1. Kör `aio app run`
 1. Vänta tills Asset Compute Development Tool öppnas i ett nytt fönster
 1. I listrutan __Välj en fil..__ väljer du en exempelbild som ska bearbetas
@@ -349,7 +349,7 @@ Parametrar, som skickas via Bearbeta profilkonfigurationer, kan simuleras i Asse
 
 >[!WARNING]
 >
->Vid lokal utveckling kan värden skickas med olika datatyper, när de skickas från AEM som Cloud Service Processing Profiles as strings, så se till att rätt datatyper analyseras om det behövs.
+>Vid lokal utveckling kan värden skickas med olika datatyper, när de skickas från AEM som Cloud Service Processing Profiles som strängar, så se till att rätt datatyper analyseras om det behövs.
 > Funktionen `crop(width, height)` för Jimp kräver till exempel att dess parametrar är `int`. Om `parseInt(rendition.instructions.size)` inte tolkas till ett int-värde misslyckas anropet till `jimp.crop(SIZE, SIZE)` eftersom parametrarna är inkompatibla med typen String.
 
 I vår kod accepteras parametrar för:

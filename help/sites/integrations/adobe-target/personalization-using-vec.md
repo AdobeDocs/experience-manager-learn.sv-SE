@@ -1,7 +1,7 @@
 ---
 title: Personalization med Visual Experience Composer
 description: Lär dig skapa en Adobe Target-aktivitet med Visual Experience Composer.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-6352
 thumbnail: 6352-personalization-using-vec.jpg
 topic: Integrations
@@ -13,7 +13,7 @@ badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title=
 doc-type: Tutorial
 exl-id: becf2bed-0541-45e8-9ce2-f9fb023234e0
 duration: 101
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '508'
 ht-degree: 0%
@@ -26,9 +26,9 @@ Lär dig hur du skapar en A/B Test Target-aktivitet med Visual Experience Compos
 
 ## Förutsättningar
 
-För att kunna använda VEC på en AEM webbplats måste följande konfiguration vara slutförd:
+För att kunna använda VEC på en AEM webbplats måste följande inställningar göras:
 
-1. [Lägg till Adobe Target på din AEM webbplats](./add-target-launch-extension.md)
+1. [Lägg till Adobe Target på AEM webbplats](./add-target-launch-extension.md)
 1. [Utlös ett Adobe Target-samtal från taggar](./load-and-fire-target.md)
 
 ## Scenarioöversikt
@@ -39,7 +39,7 @@ På WKND-webbplatsens hemsida visas lokala aktiviteter eller de bästa sakerna a
 
 1. Logga in på [Adobe Experience Cloud](https://experience.adobe.com/), tryck på __Mål__, navigera till fliken __Aktiviteter__
 
-   + Om du inte ser __Mål__ på kontrollpanelen Experience Cloud kontrollerar du att rätt Adobe-organisation har valts i organisationsväljaren i det övre högra hörnet och att den användaren har beviljats åtkomst till Target i [Adobe Admin Console](https://adminconsole.adobe.com/).
+   + Om du inte ser __Mål__ på Experience Cloud-kontrollpanelen kontrollerar du att rätt Adobe-organisation har valts i organisationsväljaren i det övre högra hörnet och att användaren har beviljats åtkomst till Target i [Adobe Admin Console](https://adminconsole.adobe.com/).
 
 1. Klicka på knappen **Skapa aktivitet** och välj sedan aktiviteten **A/B-test**
 
@@ -53,7 +53,7 @@ På WKND-webbplatsens hemsida visas lokala aktiviteter eller de bästa sakerna a
 
    ![Upplev A](assets/experience.png)
 
-1. Markera en bild eller text på sidan som du vill börja ändra, eller använd kodredigeraren för att välja och använda elementet HTML.
+1. Markera en bild eller text på sidan som du vill börja ändra, eller använd kodredigeraren för att välja och använda HTML-element.
 
    ![Element](assets/select-element.png)
 

@@ -4,12 +4,13 @@ description: Lär dig använda OpenAPI-baserade Forms Document Services API
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Document Services
 topic: Development
 jira: KT-17479
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
-source-git-commit: a72f533b36940ce735d5c01d1625c6f477ef4850
+exl-id: 7d8755de-c227-40e9-a533-0b20c91f1610
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '90'
 ht-degree: 0%

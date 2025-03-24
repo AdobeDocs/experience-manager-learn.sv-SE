@@ -2,7 +2,7 @@
 title: Använda Smart Crop med AEM Assets Dynamic Media
 description: Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma beskärningsåtgärder för responsiv design.
 feature: Smart Crop, Image Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
@@ -10,7 +10,7 @@ jira: KT-784
 doc-type: Feature Video
 exl-id: 295bbfb6-241f-41c0-972d-d9688863cea1
 duration: 443
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
@@ -25,11 +25,11 @@ Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma
 
 >[!NOTE]
 >
->I videon antas att AEM körs i Dynamic Media S7-läge. [Instruktioner om hur du konfigurerar AEM med Dynamic Media finns här.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>I videon antas att din AEM-instans körs i läget Dynamic Media S7. [Instruktioner för hur du konfigurerar AEM med Dynamic Media finns här.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## Adobe Experience Manager Dynamic Media Smart Crop innehåller
 
-* AEM kan enkelt skapa bildprofiler för smart beskärning baserat på enhetens bredd och höjd.
+* AEM Resursadministratörer kan enkelt skapa bildprofiler för smart beskärning baserat på enhetens bredd och höjd.
 * Smart beskärning kan utföras för en enskild resurs eller för alla resurser i en mapp.
 * Du kan ändra storlek på redigeringslayouten för smart beskärning så att den blir synligare.
 * AEM Sites Dynamic Media-komponent stöder Smart Crop.

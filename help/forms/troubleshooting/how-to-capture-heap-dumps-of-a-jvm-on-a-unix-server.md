@@ -4,12 +4,12 @@ description: Spara heap-dumpar för Java-processer som körs på en unix-server
 type: Troubleshooting
 role: Admin
 level: Intermediate
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 index: y
 exl-id: 6bb1d501-80c5-4f4d-af09-bbfcfcf51aa6
 duration: 96
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '53'
 ht-degree: 0%

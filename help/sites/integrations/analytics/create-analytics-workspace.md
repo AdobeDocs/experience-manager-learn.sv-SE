@@ -1,7 +1,7 @@
 ---
 title: Analysera data med Analysis Workspace
 description: Läs om hur du mappar data som samlats in från en Adobe Experience Manager-webbplats till mätvärden och dimensioner i Adobe Analytics rapporteringsprogram. Lär dig hur du skapar en detaljerad rapportkontrollpanel med Analysis Workspace-funktionen i Adobe Analytics.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: User
@@ -13,7 +13,7 @@ exl-id: b5722fe2-93bf-4b25-8e08-4cb8206771cb
 badgeIntegration: label="Integrering" type="positive"
 last-substantial-update: 2022-06-15T00:00:00Z
 duration: 443
-source-git-commit: 606607b85fae012e76d57b0b35820247a6862e32
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2072'
 ht-degree: 0%
@@ -55,13 +55,13 @@ Den här självstudiekursen är en fortsättning på komponenten [Spåra klickad
 
 * En **taggegenskap** med [Adobe Analytics-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html) aktiverat
 * **Adobe Analytics** test-/dev-rapportsprogram-ID och spårningsserver. I följande dokumentation finns information om hur du [skapar en rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html).
-* Webbläsartillägget [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) har konfigurerats med en taggegenskap inläst på [WKND-platsen](https://wknd.site/us/en.html) eller en AEM webbplats med datalagret Adobe aktiverat.
+* Webbläsartillägget [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) har konfigurerats med en taggegenskap inläst på [WKND-platsen](https://wknd.site/us/en.html) eller en AEM-webbplats där Adobe Data Layer är aktiverat.
 
 ## Konverteringsvariabler (eVars) och lyckade händelser (Event)
 
-Custom Insight Conversion Variable (eller eVar) placeras i Adobe-koden på de webbsidor du har valt. Dess främsta syfte är att segmentera framgångsstatistik för konverteringar i anpassade marknadsföringsrapporter. En eVar kan vara besöksbaserad och fungerar på liknande sätt som cookies. De värden som skickas till eVar-variabler följer efter användaren under en förbestämd period.
+Custom Insight Conversion Variable (eller eVar) placeras i Adobe-koden på de webbsidor du har valt. Dess främsta syfte är att segmentera framgångsstatistik för konverteringar i anpassade marknadsföringsrapporter. En eVar kan vara ett besöksbaserat program och fungerar på liknande sätt som cookies. De värden som skickas till eVar-variabler följer användaren under en förbestämd period.
 
-När en eVar är inställd på en besökares värde kommer Adobe automatiskt ihåg det värdet tills det upphör att gälla. Alla lyckade händelser som besökaren påträffar när eVarna är aktiv räknas mot eVarna.
+När en eVar är inställd på en besökares värde kommer Adobe automatiskt ihåg det värdet tills det upphör att gälla. Alla lyckade händelser som besökaren påträffar när eVar-värdet är aktivt räknas mot eVar-värdet.
 
 eVars är bäst att använda för att mäta orsak och effekt, till exempel:
 
@@ -75,7 +75,7 @@ Success-händelser är åtgärder som kan spåras. Du avgör vilken händelse so
 
 1. På Adobe Experience Cloud hemsida väljer du organisation och startar Adobe Analytics.
 
-   ![Analytics AEP](assets/create-analytics-workspace/analytics-aep.png)
+   ![Analysera AEP](assets/create-analytics-workspace/analytics-aep.png)
 
 1. Klicka på **Admin** > **Rapportsviter** i verktygsfältet Analyser och hitta din rapportsvit.
 
@@ -146,7 +146,7 @@ Skapa sedan en tabell för att skapa en visuell representation av hur användare
 
 1. Dra och släpp dimensionskomponenten **Sida** till frihandstabellen. Nu bör du kunna visa en visualisering som visar sidnamnet (eVar9) och motsvarande sidvyer (förekomster) som visas i tabellen.
 
-   ![Dimensionen Sida](assets/create-analytics-workspace/evar9-dimension.png)
+   ![Sidan Dimension](assets/create-analytics-workspace/evar9-dimension.png)
 
 1. Dra-och-släpp **CTA Click** (event8)-mätvärdet för förekomster och ersätt det. Nu kan du visa en visualisering som visar sidnamnet (eVar9) och motsvarande antal CTA Click-händelser på en sida.
 
@@ -158,9 +158,9 @@ Skapa sedan en tabell för att skapa en visuell representation av hur användare
      ![eVar5](assets/create-analytics-workspace/evar5.png)
 
    * **Efter**
-     ![eVar5-mått](assets/create-analytics-workspace/evar5-metrics.png)
+     ![eVar5 Metrics](assets/create-analytics-workspace/evar5-metrics.png)
 
-1. För att förstå hur användare interagerar med CTA Buttons när de finns på WKND-webbplatssidorna krävs ytterligare uppdelning genom att lägga till mätvärdet för Button ID (eVar8).
+1. För att förstå hur användare interagerar med CTA Buttons när de finns på WKND-webbplatssidorna krävs ytterligare uppdelning genom att lägga till mätvärden för Button ID (eVar8).
 
    ![eVar8](assets/create-analytics-workspace/evar8.png)
 

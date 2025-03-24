@@ -1,7 +1,7 @@
 ---
 title: Instrument React-app för att redigera innehåll med Universal Editor
 description: Lär dig hur du kan använda React-appen för att redigera innehåll med Universal Editor.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developer Tools, Headless
 topic: Development, Content Management
 role: Architect, Developer
@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 2a25cd44-cbd1-465e-ae3f-d3876e915114
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1606'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Vi börjar med att ta med huvudbiblioteket Universal Editor i appen WKND Teams R
 Det finns två sätt att inkludera huvudbiblioteket Universal Editor i React-appen:
 
 1. Nodmodulens beroende från nPM-registret finns i [@adobe/universal-editor-cors](https://www.npmjs.com/package/@adobe/universal-editor-cors).
-1. Skripttagg (`<script>`) i filen HTML.
+1. Skripttagg (`<script>`) i HTML-filen.
 
 I den här självstudiekursen ska vi använda metoden Script-tagg.
 
@@ -93,7 +93,7 @@ Anslutningens metadata lagras som `<meta>`-taggar i HTML-filen. Syntaxen för an
 <meta name="urn:adobe:aue:<category>:<referenceName>" content="<protocol>:<url>">
 ```
 
-Låt oss lägga till anslutningsmetadata i WKND Teams React-appen i komponenten `<Helmet>`. Uppdatera filen `src/App.js` med följande `<meta>`-tagg. I detta exempel är innehållskällan en lokal AEM som körs på `https://localhost:8443`.
+Låt oss lägga till anslutningsmetadata i WKND Teams React-appen i komponenten `<Helmet>`. Uppdatera filen `src/App.js` med följande `<meta>`-tagg. I detta exempel är innehållskällan en lokal AEM-instans som körs på `https://localhost:8443`.
 
 ```javascript
 ...
@@ -129,9 +129,9 @@ export default App;
 
 ## Lägg till metadata - lokal konfiguration för Universal Editor-tjänsten
 
-I stället för den universella redigeringstjänsten som finns på Adobe används en lokal kopia av den universella redigeringstjänsten för lokal utveckling. Den lokala tjänsten binder Universal Editor och AEM SDK, så vi lägger till den lokala Universal Editor-tjänstens metadata i WKND Teams React-appen.
+Istället för Adobe universella redigeringstjänst används en lokal kopia av den universella redigeringstjänsten för lokal utveckling. Den lokala tjänsten binder den universella redigeraren och AEM SDK, så vi lägger till den lokala tjänsten Universal Editor i appen WKND Teams React.
 
-Dessa konfigurationsinställningar lagras också som `<meta>`-taggar i filen HTML. Syntaxen för den lokala Universal Editor-tjänstens metadata är följande:
+Dessa konfigurationsinställningar lagras också som `<meta>`-taggar i HTML-filen. Syntaxen för den lokala Universal Editor-tjänstens metadata är följande:
 
 ```html
 <meta name="urn:adobe:aue:config:service" content="<url>">
@@ -178,7 +178,7 @@ export default App;
 
 ## Instrument för React-komponenterna
 
-Om du vill redigera innehållet i WKND Teams React-appen, t.ex. _teamets titel och teambeskrivning_, måste du mäta React-komponenterna. Instrumentationen innebär att du lägger till relevanta dataattribut (`data-aue-*`) till elementen i HTML som du vill göra redigerbara med den universella redigeraren. Mer information om dataattribut finns i [Attribut och typer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types).
+Om du vill redigera innehållet i WKND Teams React-appen, t.ex. _teamets titel och teambeskrivning_, måste du mäta React-komponenterna. Instrumentationen innebär att relevanta dataattribut (`data-aue-*`) läggs till i de HTML-element som du vill göra ändringsbara med den universella redigeraren. Mer information om dataattribut finns i [Attribut och typer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types).
 
 ### Definiera redigerbara element
 
@@ -216,13 +216,13 @@ Låt oss instrumentera komponenten `Teams` React för att göra teamets titel oc
 
    ![Universal Editor - WKND Teams Title and Desc loading](./assets/universal-editor-wknd-teams-title-desc-editable-loading.png)
 
-Sammanfattningsvis markerar ändringarna ovan teamets titel- och beskrivningselement som redigerbara i den universella redigeraren. **Du kan dock inte redigera (via intern- eller egenskapsfältet) och spara ändringarna än**. Därför måste du lägga till AEM resursinformation med attributet `data-aue-resource`. Låt oss göra det i nästa steg.
+Sammanfattningsvis markerar ändringarna ovan teamets titel- och beskrivningselement som redigerbara i den universella redigeraren. **Du kan dock inte redigera (via intern- eller egenskapsfältet) och spara ändringarna än**. Därför måste du lägga till AEM-resursinformation med attributet `data-aue-resource`. Låt oss göra det i nästa steg.
 
-### Definiera AEM resursinformation
+### Definiera resursinformation för AEM
 
-Om du vill spara tillbaka det redigerade innehållet till AEM och även läsa in innehållet i egenskapsfältet måste du ange AEM resursinformation till den universella redigeraren.
+Om du vill spara det redigerade innehållet till AEM och även läsa in innehållet i egenskapsfältet måste du ange AEM resursinformation till den universella redigeraren.
 
-I det här fallet är AEM resurs sökvägen för teaminnehållsfragment, så vi lägger till resursinformationen i komponenten `Teams` React på den översta `<div>` -elementet.
+I det här fallet är AEM-resursen sökvägen för teaminnehållsfragment, så vi lägger till resursinformationen i `Teams`-komponenten på den översta `<div>` -elementet.
 
 1. Uppdatera filen `src/components/Teams.js` om du vill lägga till attributen `data-aue-resource`, `data-aue-type` och `data-aue-label` i elementet på den översta nivån `<div>`.
 
@@ -250,13 +250,13 @@ I det här fallet är AEM resurs sökvägen för teaminnehållsfragment, så vi 
    export default Teams;
    ```
 
-   Värdet för attributet `data-aue-resource` är den AEM resurssökvägen för teaminnehållsfragmentet. Prefixet `urn:aemconnection:` använder det korta namnet på innehållskällan som definieras i anslutningsmetadata.
+   Värdet för attributet `data-aue-resource` är AEM-resurssökvägen för teaminnehållsfragmentet. Prefixet `urn:aemconnection:` använder det korta namnet på innehållskällan som definieras i anslutningsmetadata.
 
-1. Uppdatera sidan Universal Editor i webbläsaren som läser in appen WKND Teams React. Du kan nu se att det översta teamelementet är redigerbart, men egenskapsfältet läser fortfarande inte in innehållet. På webbläsarens nätverksflik kan du se felet 401 Obehörig för den `details`-begäran som läser in innehållet. Det försöker använda IMS-token för autentisering, men den lokala AEM SDK saknar stöd för IMS-autentisering.
+1. Uppdatera sidan Universal Editor i webbläsaren som läser in appen WKND Teams React. Du kan nu se att det översta teamelementet är redigerbart, men egenskapsfältet läser fortfarande inte in innehållet. På webbläsarens nätverksflik kan du se felet 401 Obehörig för den `details`-begäran som läser in innehållet. Den försöker använda IMS-token för autentisering, men den lokala AEM SDK stöder inte IMS-autentisering.
 
    ![Universal Editor - WKND Teams Team editable](./assets/universal-editor-wknd-teams-team-editable.png)
 
-1. Om du vill åtgärda det obehöriga felet 401 måste du ange den lokala AEM SDK-autentiseringsinformationen till den universella redigeraren med alternativet **Autentiseringsrubriker** i den universella redigeraren. Ange värdet `Basic YWRtaW46YWRtaW4=` för `admin:admin` som lokal AEM SDK.
+1. Om du vill åtgärda det obehöriga felet 401 måste du ange den lokala autentiseringsinformationen för AEM SDK till den universella redigeraren med alternativet **Autentiseringsrubriker** i den universella redigeraren. Som lokal AEM SDK anger du värdet `Basic YWRtaW46YWRtaW4=` för `admin:admin`-autentiseringsuppgifter.
 
    ![Universell redigerare - lägg till autentiseringsrubriker](./assets/universal-editor-wknd-teams-team-editable-auth.png)
 
@@ -266,9 +266,9 @@ I det här fallet är AEM resurs sökvägen för teaminnehållsfragment, så vi 
 
 #### Under huven
 
-Egenskapsfältet läser in innehållet från AEM med hjälp av den lokala tjänsten Universal Editor. Med hjälp av webbläsarens nätverksflik kan du se en begäran om POST till den lokala Universal Editor-tjänsten (`https://localhost:8001/details`) för att läsa in innehållet.
+Egenskapslisten läser in innehåll från AEM-resursen med hjälp av den lokala tjänsten Universella redigerare. Med hjälp av webbläsarens nätverksflik kan du se POST-begäran till den lokala Universal Editor-tjänsten (`https://localhost:8001/details`) för inläsning av innehållet.
 
-När du redigerar innehållet med hjälp av den infogade redigerings- eller egenskapslisten sparas ändringarna i den AEM resursen med hjälp av den lokala tjänsten Universell redigerare. Med hjälp av webbläsarens nätverksflik kan du se en begäran om POST till den lokala tjänsten Universal Editor (`https://localhost:8001/update` eller `https://localhost:8001/patch`) för att spara innehållet.
+När du redigerar innehållet med hjälp av den infogade redigerings- eller egenskapslisten sparas ändringarna tillbaka till AEM-resursen med hjälp av den lokala universella redigeringstjänsten. På webbläsarens nätverksflik kan du se POST-begäran till den lokala Universal Editor-tjänsten (`https://localhost:8001/update` eller `https://localhost:8001/patch`) för att spara innehållet.
 
 ![Universal Editor - WKND Teams Team editable](./assets/universal-editor-under-the-hood-request.png)
 
@@ -413,7 +413,7 @@ Men som en snabb sammanfattning lagras WKND-teammedlemmarna som `Person`-innehå
 
 #### Under huven
 
-Åtgärder för att lägga till och ta bort innehåll utförs av den lokala tjänsten Universell redigerare. Begäran om POST till `/add` eller `/remove` med en detaljerad nyttolast görs till den lokala tjänsten Universal Editor för att lägga till eller ta bort innehåll i AEM.
+Åtgärder för att lägga till och ta bort innehåll utförs av den lokala tjänsten Universell redigerare. POST-begäran till `/add` eller `/remove` med en detaljerad nyttolast görs till den lokala Universal Editor-tjänsten för att lägga till eller ta bort innehåll i AEM.
 
 ## Lösningsfiler
 

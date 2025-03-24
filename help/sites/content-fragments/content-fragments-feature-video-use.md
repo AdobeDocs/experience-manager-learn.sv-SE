@@ -2,14 +2,14 @@
 title: Skapa innehållsfragment i AEM
 description: Innehållsfragment är en innehållsabstraktion i AEM som gör det möjligt att skapa och hantera textbaserat innehåll oberoende av vilka kanaler det stöder.
 feature: Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: d33c033a-9577-4d4e-99be-f3c7e2a4ce73
 duration: 665
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '358'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Innehållsfragment är en innehållsabstraktion i AEM som gör det möjligt att skapa och hantera textbaserat innehåll oberoende av vilka kanaler det stöder.
 
-AEM innehållsfragment är textbaserat redaktionellt innehåll som kan innehålla vissa strukturerade dataelement som är kopplade till, men som betraktas som rent innehåll utan design- eller layoutinformation. Innehållsfragment skapas vanligtvis som kanalbaserat innehåll, som är avsett att användas och återanvändas i alla kanaler, vilket i sin tur omsluter innehållet i en kontextspecifik upplevelse.
+AEM Content Fragments är textbaserat redaktionellt innehåll som kan innehålla vissa strukturerade dataelement som är kopplade till, men som betraktas som rent innehåll utan design- eller layoutinformation. Innehållsfragment skapas vanligtvis som kanalbaserat innehåll, som är avsett att användas och återanvändas i alla kanaler, vilket i sin tur omsluter innehållet i en kontextspecifik upplevelse.
 
 Den här videoserien handlar om redigeringscykeln för innehållsfragment i AEM. Information om att [leverera innehållsfragment finns här](content-fragments-delivery-feature-video-use.md).
 
@@ -38,13 +38,13 @@ Den här videoserien handlar om redigeringscykeln för innehållsfragment i AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
 
-AEM Content Fragments Models, innehållsfragmentens datascheman, måste aktiveras via AEM [[!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html), vilket gör att Content Fragment Models kan definieras per konfiguration.
+AEM Content Fragments Models, datascheman för Content Fragments, måste aktiveras via AEM [[!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html), som gör att Content Fragment Models kan definieras per konfiguration.
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
 >[!VIDEO](https://video.tv.adobe.com/v/22451?quality=12&learn=on)
 
-AEM konfigurationer tillämpas på AEM Assets mapphierarkier så att deras Content Fragment Models kan skapas som Content Fragments. Content Fragments har stöd för en omfattande formulärbaserad redigeringsfunktion som gör att innehållet kan modelleras som en samling element.
+AEM-konfigurationer tillämpas på AEM Assets mapphierarkier så att deras Content Fragment Models kan skapas som Content Fragments. Content Fragments har stöd för en omfattande formulärbaserad redigeringsfunktion som gör att innehållet kan modelleras som en samling element.
 
 Innehållsfragment kan ha flera varianter, där varje variant adresserar olika användningsfall (inte nödvändigtvis kanal) för innehållet.
 
@@ -55,7 +55,7 @@ Innehållsfragment kan ha flera varianter, där varje variant adresserar olika a
 
 >[!VIDEO](https://video.tv.adobe.com/v/22450?quality=12&learn=on)
 
-AEM innehållsfragment kan laddas ned från AEM författare som en ZIP-fil som innehåller varianter, element och metadata.
+AEM Content Fragments kan laddas ned från AEM Author som en ZIP-fil som innehåller Varianter, Elements och Metadata.
 
 *Exempel på ZIP-fil för hämtning av innehållsfragment:*\
 **[daniel_schreder.zip](assets/daniel_schreder.zip)**
@@ -75,7 +75,7 @@ Lär dig mer om att [leverera innehållsfragment](content-fragments-delivery-fea
 ## Ytterligare resurser {#additional-resources}
 
 * [Leverera innehållsfragment](content-fragments-delivery-feature-video-use.md)
-* [AEM WCM-kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [AEM WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
 * [AEM WCM Core Content Fragment Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
 
 Så här hämtar och installerar du paketet nedan på en AEM 6.4+-instans för det slutliga läget från videoserien:

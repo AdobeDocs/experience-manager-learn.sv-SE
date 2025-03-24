@@ -1,8 +1,8 @@
 ---
-title: Mappa SPA komponenter till AEM | Komma igång med AEM SPA Editor och Angular
-description: Lär dig hur du mappar komponentkomponenter till Adobe Experience Manager (AEM) med AEM SPA Editor JS SDK. Komponentmappning gör att användare kan göra dynamiska uppdateringar av SPA komponenter i AEM SPA Editor, på samma sätt som vid traditionell AEM.
+title: Mappa SPA-komponenter till AEM-komponenter | Komma igång med AEM SPA Editor och Angular
+description: Lär dig mappa Angular-komponenter till Adobe Experience Manager-komponenter (AEM) med AEM SPA Editor JS SDK. Med komponentmappning kan man göra dynamiska uppdateringar av SPA-komponenter i AEM SPA Editor, på samma sätt som vid vanlig redigering i AEM.
 feature: SPA Editor
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5311
 thumbnail: 5311-spa-angular.jpg
 topic: SPA
@@ -11,28 +11,28 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 19a8917c-a1e7-4293-9ce1-9f4c1a565861
 duration: 509
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2211'
 ht-degree: 0%
 
 ---
 
-# Mappa SPA komponenter till AEM {#map-components}
+# Mappa SPA-komponenter till AEM-komponenter {#map-components}
 
-Lär dig hur du mappar komponentkomponenter till Adobe Experience Manager (AEM) med AEM SPA Editor JS SDK. Komponentmappning gör att användare kan göra dynamiska uppdateringar av SPA komponenter i AEM SPA Editor, på samma sätt som vid traditionell AEM.
+Lär dig mappa Angular-komponenter till Adobe Experience Manager-komponenter (AEM) med AEM SPA Editor JS SDK. Med komponentmappning kan man göra dynamiska uppdateringar av SPA-komponenter i AEM SPA Editor, på samma sätt som vid vanlig redigering i AEM.
 
-I det här kapitlet finns en djupdykning i AEM JSON-modell-API:t och hur JSON-innehåll som exponeras av en AEM automatiskt kan injiceras i en Angular som props.
+Det här kapitlet innehåller en djupdykning i AEM JSON-modell-API:t och hur JSON-innehåll som exponeras av en AEM-komponent automatiskt kan injiceras i en Angular-komponent som props.
 
 ## Syfte
 
-1. Lär dig hur du mappar AEM komponenter till SPA.
+1. Lär dig mappa AEM-komponenter till SPA-komponenter.
 2. Förstå skillnaden mellan **Container**-komponenter och **Content**-komponenter.
-3. Skapa en ny komponentkomponent som mappar till en befintlig AEM.
+3. Skapa en ny Angular-komponent som mappar till en befintlig AEM-komponent.
 
 ## Vad du ska bygga
 
-I det här kapitlet granskas hur den tillhandahållna `Text`-SPA mappas till AEM `Text`komponenten. En ny `Image` SPA-komponent skapas som kan användas i SPA och redigeras i AEM. Funktionerna i **Layoutbehållaren** och **Mallredigeraren** kommer också att användas för att skapa en vy som är lite mer varierad.
+I det här kapitlet granskas hur den angivna `Text` SPA-komponenten mappas till AEM `Text` -komponenten. En ny SPA-komponent för `Image` skapas som kan användas i SPA och skapas i AEM. Funktionerna i **Layoutbehållaren** och **Mallredigeraren** kommer också att användas för att skapa en vy som är lite mer varierad.
 
 ![Slutredigering av kapitelexempel](./assets/map-components/final-page.png)
 
@@ -50,7 +50,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
    $ git checkout Angular/map-components-start
    ```
 
-2. Distribuera kodbasen till en lokal AEM med Maven:
+2. Distribuera kodbasen till en lokal AEM-instans med Maven:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -66,32 +66,32 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Mappningsmetod
 
-Det grundläggande konceptet är att mappa en SPA till en AEM. AEM komponenter, kör serversidan, exportera innehåll som en del av JSON-modellens API. JSON-innehållet används av SPA, som kör klientsidan i webbläsaren. En 1:1-mappning skapas mellan SPA och en AEM.
+Det grundläggande konceptet är att mappa en SPA-komponent till en AEM-komponent. AEM-komponenter kör serversidan och exporterar innehåll som en del av JSON-modellens API. JSON-innehållet används av SPA, som kör klientsidan i webbläsaren. En 1:1-mappning mellan SPA-komponenter och en AEM-komponent skapas.
 
-![Översikt på hög nivå över mappning av en AEM till en Angular-komponent](./assets/map-components/high-level-approach.png)
+![Översikt på hög nivå över mappning av en AEM-komponent till en Angular-komponent](./assets/map-components/high-level-approach.png)
 
-*Översikt på hög nivå över mappning av en AEM till en Angular-komponent*
+*Översikt på hög nivå över mappning av en AEM-komponent till en Angular-komponent*
 
-## Inspect textkomponenten
+## Inspektera textkomponenten
 
-[AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en `Text`-komponent som är mappad till AEM [Text-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html). Detta är ett exempel på en **content** -komponent, eftersom den återger *innehåll* från AEM.
+[AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en `Text`-komponent som är mappad till AEM [Text-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html). Det här är ett exempel på en **content** -komponent, eftersom den återger *innehåll* från AEM.
 
 Låt oss se hur komponenten fungerar.
 
-### Inspect JSON-modellen
+### Inspektera JSON-modellen
 
-1. Innan du hoppar in i SPA är det viktigt att förstå den JSON-modell som AEM tillhandahåller. Navigera till [Core Component Library](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/text.html) och visa sidan för Text-komponenten. Core Component Library innehåller exempel på alla AEM Core Components.
+1. Innan du hoppar in i SPA-koden är det viktigt att förstå den JSON-modell som AEM tillhandahåller. Navigera till [Core Component Library](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/text.html) och visa sidan för Text-komponenten. Core Component Library innehåller exempel på alla AEM Core-komponenter.
 2. Välj fliken **JSON** för ett av exemplen:
 
    ![Text-JSON-modell](./assets/map-components/text-json.png)
 
    Du bör se tre egenskaper: `text`, `richText` och `:type`.
 
-   `:type` är en reserverad egenskap som visar `sling:resourceType` (eller sökväg) för AEM. Värdet `:type` är det som används för att mappa AEM till SPA.
+   `:type` är en reserverad egenskap som visar `sling:resourceType` (eller sökväg) för AEM-komponenten. Värdet `:type` är det som används för att mappa AEM-komponenten till SPA-komponenten.
 
-   `text` och `richText` är ytterligare egenskaper som exponeras för SPA.
+   `text` och `richText` är ytterligare egenskaper som exponeras för SPA-komponenten.
 
-### Inspect komponenten Text
+### Inspektera komponenten Text
 
 1. Öppna en ny terminal och navigera till mappen `ui.frontend` i projektet. Kör `npm install` och sedan `npm start` för att starta **webbpaketets dev-server**:
 
@@ -106,9 +106,9 @@ Låt oss se hur komponenten fungerar.
 
    ![Webbpaketets dev-server med modellinnehåll](assets/map-components/initial-start.png)
 
-3. I den utvecklingsmiljö du väljer öppnar du AEM för WKND-SPA. Expandera modulen `ui.frontend` och öppna filen **text.component.ts** under `ui.frontend/src/app/components/text/text.component.ts`:
+3. Öppna AEM Project för WKND SPA i den utvecklingsmiljö du valt. Expandera modulen `ui.frontend` och öppna filen **text.component.ts** under `ui.frontend/src/app/components/text/text.component.ts`:
 
-   ![Komponenten Text.js Angular Source Code](assets/map-components/vscode-ide-text-js.png)
+   ![Text.js Angular Component Source Code](assets/map-components/vscode-ide-text-js.png)
 
 4. Det första området som ska inspekteras är `class TextComponent` på ~rad 35:
 
@@ -131,7 +131,7 @@ Låt oss se hur komponenten fungerar.
 
    [@Input()](https://angular.io/api/core/Input) används för att deklarera fält vars värden anges via det mappade JSON-objektet som granskats tidigare.
 
-   `@HostBinding('innerHtml') get content()` är en metod som visar det redigerade textinnehållet från värdet `this.text`. Om innehållet är RTF-text (som bestäms av flaggan `this.richText`) kringgås Angularnas inbyggda säkerhet. Angularnas [DomSanitizer](https://angular.io/api/platform-browser/DomSanitizer) används för att&quot;rensa&quot; HTML och förhindra serveröverskridande skriptproblem (cross site scripting). Metoden är bunden till egenskapen `innerHtml` med dekoratorn [@HostBinding](https://angular.io/api/core/HostBinding).
+   `@HostBinding('innerHtml') get content()` är en metod som visar det redigerade textinnehållet från värdet `this.text`. Om innehållet är RTF (som bestäms av flaggan `this.richText`) kringgås Angular inbyggda säkerhet. Angular [DomSanitizer](https://angular.io/api/platform-browser/DomSanitizer) används för att&quot;rensa&quot; HTML-råfilen och förhindra serveröverskridande skriptproblem (cross site scripting). Metoden är bunden till egenskapen `innerHtml` med dekoratorn [@HostBinding](https://angular.io/api/core/HostBinding).
 
 5. Kontrollera sedan `TextEditConfig` på ~rad 24:
 
@@ -151,9 +151,9 @@ Låt oss se hur komponenten fungerar.
    MapTo('wknd-spa-angular/components/text')(TextComponent, TextEditConfig );
    ```
 
-   **MapTo** tillhandahålls av AEM JS SDK för SPA (`@adobe/cq-angular-editable-components`). Sökvägen `wknd-spa-angular/components/text` representerar `sling:resourceType` för AEM. Den här sökvägen matchas med `:type` som exponeras av JSON-modellen som observerats tidigare. **MapTo** tolkar JSON-modellsvaret och skickar de korrekta värdena till `@Input()` -variablerna i SPA.
+   **MapTo** tillhandahålls av AEM SPA Editor JS SDK (`@adobe/cq-angular-editable-components`). Sökvägen `wknd-spa-angular/components/text` representerar `sling:resourceType` för AEM-komponenten. Den här sökvägen matchas med `:type` som exponeras av JSON-modellen som observerats tidigare. **MapTo** tolkar JSON-modellsvaret och skickar de korrekta värdena till `@Input()` -variablerna i SPA-komponenten.
 
-   Du hittar AEM `Text`-komponentdefinitionen på `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/text`.
+   Komponentdefinitionen för AEM `Text` finns på `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/text`.
 
 7. Experimentera genom att ändra filen **en.model.json** på `ui.frontend/src/mocks/json/en.model.json`.
 
@@ -173,11 +173,11 @@ Låt oss se hur komponenten fungerar.
 
    Försök att växla egenskapen `richText` mellan **true** / **false** för att se hur återgivningslogiken fungerar.
 
-8. Inspect **text.component.html** at `ui.frontend/src/app/components/text/text.component.html`.
+8. Granska **text.component.html** på `ui.frontend/src/app/components/text/text.component.html`.
 
    Den här filen är tom eftersom hela innehållet i komponenten anges av egenskapen `innerHTML`.
 
-9. Inspect the **app.module.ts** at `ui.frontend/src/app/app.module.ts`.
+9. Granska **app.module.ts** vid `ui.frontend/src/app/app.module.ts`.
 
    ```js
    @NgModule({
@@ -194,21 +194,21 @@ Låt oss se hur komponenten fungerar.
    export class AppModule {}
    ```
 
-   **TextComponent** inkluderas inte explicit, utan dynamiskt via **AEMResponsiveGridComponent** som tillhandahålls av AEM JS SDK för SPA. Därför måste finnas med i listan i arrayen **app.module.ts** [entryComponents](https://angular.io/guide/entry-components) .
+   **TextComponent** inkluderas inte explicit, utan dynamiskt via **AEMResponsiveGridComponent** som tillhandahålls av AEM SPA Editor JS SDK. Därför måste finnas med i listan i arrayen **app.module.ts** [entryComponents](https://angular.io/guide/entry-components) .
 
 ## Skapa bildkomponenten
 
-Skapa sedan en `Image`-Angular-komponent som är mappad till AEM [Image-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html). Komponenten `Image` är ett annat exempel på en **content**-komponent.
+Skapa sedan en `Image` Angular-komponent som är mappad till AEM [Image-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html). Komponenten `Image` är ett annat exempel på en **content**-komponent.
 
-### Inspect the JSON
+### Inspektera JSON
 
-Innan du hoppar in i SPA ska du kontrollera JSON-modellen som finns i AEM.
+Innan du hoppar in i SPA-koden ska du kontrollera JSON-modellen som tillhandahålls av AEM.
 
 1. Navigera till [Bildexemplen i Core Component Library](https://www.aemcomponents.dev/content/core-components-examples/library/core-content/image.html).
 
    ![Image Core Component JSON](./assets/map-components/image-json.png)
 
-   Egenskaper för `src`, `alt` och `title` används för att fylla i SPA `Image` -komponenten.
+   Egenskaper för `src`, `alt` och `title` används för att fylla i SPA-komponenten `Image`.
 
    >[!NOTE]
    >
@@ -299,7 +299,7 @@ Innan du hoppar in i SPA ska du kontrollera JSON-modellen som finns i AEM.
 
    `hasImage()` är en metod som avgör om bilden ska återges eller inte.
 
-   `MapTo` mappar SPA till AEM på `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image`.
+   `MapTo` mappar SPA-komponenten till AEM-komponenten på `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image`.
 
 4. Öppna **image.component.html** och uppdatera den enligt följande:
 
@@ -327,7 +327,7 @@ Innan du hoppar in i SPA ska du kontrollera JSON-modellen som finns i AEM.
 
    >[!NOTE]
    >
-   > Regeln `:host-context` är **kritisk** för att AEM platshållare för SPA ska fungera korrekt. Alla SPA komponenter som ska redigeras i den AEM sidredigeraren behöver den här regeln som mest.
+   > Regeln `:host-context` är **kritisk** för att AEM SPA-redigerarplatshållaren ska fungera korrekt. Alla SPA-komponenter som ska redigeras i AEM sidredigerare måste ha den här regeln minst.
 
 6. Öppna `app.module.ts` och lägg till `ImageComponent` i arrayen `entryComponents`:
 
@@ -345,7 +345,7 @@ Innan du hoppar in i SPA ska du kontrollera JSON-modellen som finns i AEM.
 
    ![Bilden har lagts till i modellen](assets/map-components/image-added-mock.png)
 
-   *Bilden har lagts till i SPA*
+   *Bild har lagts till i SPA*
 
    >[!NOTE]
    >
@@ -353,20 +353,20 @@ Innan du hoppar in i SPA ska du kontrollera JSON-modellen som finns i AEM.
 
 ## Uppdatera principer i AEM
 
-Komponenten `ImageComponent` visas bara på **webbpaketets dev-server**. Distribuera sedan den uppdaterade SPA för att AEM och uppdatera mallprofilerna.
+Komponenten `ImageComponent` visas bara på **webbpaketets dev-server**. Distribuera sedan den uppdaterade produktinformationen till AEM och uppdatera mallprofilerna.
 
-1. Stoppa **webpack-dev-servern** och från **root** i projektet, distribuera ändringarna till AEM med dina Maven-kunskaper:
+1. Stoppa **webpack-dev-servern** och distribuera ändringarna till AEM med dina Maven-kunskaper från **root** i projektet:
 
    ```shell
    $ cd aem-guides-wknd-spa
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-2. Navigera från AEM startskärm till **[!UICONTROL Tools]** > **[!UICONTROL Templates]** > **[WKND SPA Angular](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-angular)**.
+2. Gå till **[!UICONTROL Tools]** > **[!UICONTROL Templates]** > **[WKND SPA Angular](http://localhost:4502/libs/wcm/core/content/sites/templates.html/conf/wknd-spa-angular)** från startskärmen i AEM.
 
-   Markera och redigera **SPA sida**:
+   Markera och redigera **SPA-sidan**:
 
-   ![Redigera SPA sidmall](assets/map-components/edit-spa-page-template.png)
+   ![Redigera SPA-sidmall](assets/map-components/edit-spa-page-template.png)
 
 3. Markera **layoutbehållaren** och klicka på dess **policy**-ikon för att redigera profilen:
 
@@ -376,7 +376,7 @@ Komponenten `ImageComponent` visas bara på **webbpaketets dev-server**. Distrib
 
    ![Bildkomponenten har valts](assets/map-components/check-image-component.png)
 
-   Under **Standardkomponenter** > **Lägg till mappning** och välj Angularna **Bild - WKND SPA - Innehåll**:
+   Under **Standardkomponenter** > **Lägg till mappning** och välj komponenten **Image - WKND SPA Angular - Content** :
 
    ![Ange standardkomponenter](assets/map-components/default-components.png)
 
@@ -388,7 +388,7 @@ Komponenten `ImageComponent` visas bara på **webbpaketets dev-server**. Distrib
 
    ![Ikon för textkomponentpolicy](./assets/map-components/edit-text-policy.png)
 
-   Skapa en ny princip med namnet **WKND SPA Text**. Under **Plugins** > **Formatering** > markerar du alla rutor för att aktivera ytterligare formateringsalternativ:
+   Skapa en ny princip med namnet **WKND SPA-text**. Under **Plugins** > **Formatering** > markerar du alla rutor för att aktivera ytterligare formateringsalternativ:
 
    ![Aktivera RTE-formatering](assets/map-components/enable-formatting-rte.png)
 
@@ -408,13 +408,13 @@ Komponenten `ImageComponent` visas bara på **webbpaketets dev-server**. Distrib
 
    ![Dra och släpp bild](./assets/map-components/drag-drop-image.gif)
 
-8. Lägg till egna bilder via [AEM Assets](http://localhost:4502/assets.html/content/dam) eller installera den färdiga kodbasen för standardreferensplatsen [WKND](https://github.com/adobe/aem-guides-wknd/releases/latest). [WKND-referenswebbplatsen](https://github.com/adobe/aem-guides-wknd/releases/latest) innehåller många bilder som kan återanvändas på WKND-SPA. Paketet kan installeras med [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
+8. Lägg till egna bilder via [AEM Assets](http://localhost:4502/assets.html/content/dam) eller installera den färdiga kodbasen för standardreferensplatsen [WKND](https://github.com/adobe/aem-guides-wknd/releases/latest). [WKND-referenswebbplatsen](https://github.com/adobe/aem-guides-wknd/releases/latest) innehåller många bilder som kan återanvändas på WKND SPA. Paketet kan installeras med [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
 
    ![Pakethanteraren installerades wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
-## Inspect layoutbehållaren
+## Inspektera layoutbehållaren
 
-Stöd för **layoutbehållaren** tillhandahålls automatiskt av AEM SDK för SPA. **Layoutbehållaren**, som anges av namnet, är en **container**-komponent. Behållarkomponenter är komponenter som accepterar JSON-strukturer som representerar *andra* komponenter och instansierar dem dynamiskt.
+Stöd för **layoutbehållaren** tillhandahålls automatiskt av AEM SPA Editor SDK. **Layoutbehållaren**, som anges av namnet, är en **container**-komponent. Behållarkomponenter är komponenter som accepterar JSON-strukturer som representerar *andra* komponenter och instansierar dem dynamiskt.
 
 Låt oss inspektera layoutbehållaren ytterligare.
 
@@ -432,9 +432,9 @@ Låt oss inspektera layoutbehållaren ytterligare.
 
    ![JSON-modell-API - responsivt stödraster](./assets/map-components/responsive-grid-modeljson.png)
 
-   Komponenten **Layoutbehållare** har `sling:resourceType` `wcm/foundation/components/responsivegrid` och känns igen av SPA Editor med egenskapen `:type`, precis som komponenterna `Text` och `Image`.
+   Komponenten **Layoutbehållare** har `sling:resourceType` `wcm/foundation/components/responsivegrid` och känns igen av SPA-redigeraren med egenskapen `:type`, precis som komponenterna `Text` och `Image`.
 
-   Samma funktioner för att ändra storlek på en komponent med [layoutläget](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) finns i SPA Editor.
+   Samma funktioner för att ändra storlek på en komponent med [Layoutläge](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) finns i SPA-redigeraren.
 
 3. Gå tillbaka till [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html). Lägg till ytterligare **Bild**-komponenter och försök ändra storlek på dem med alternativet **Layout** :
 
@@ -456,33 +456,33 @@ Låt oss inspektera layoutbehållaren ytterligare.
 
 ## Grattis! {#congratulations}
 
-Du lärde dig att mappa SPA till AEM komponenter och du implementerade en ny `Image`-komponent. Du har också en chans att utforska de responsiva funktionerna i **layoutbehållaren**.
+Du lärde dig att mappa SPA-komponenter till AEM-komponenter och du implementerade en ny `Image`-komponent. Du har också en chans att utforska de responsiva funktionerna i **layoutbehållaren**.
 
 Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/map-components-solution) eller checka ut koden lokalt genom att växla till grenen `Angular/map-components-solution`.
 
 ### Nästa steg {#next-steps}
 
-[Navigering och routning](navigation-routing.md) - Lär dig hur flera vyer i SPA kan användas genom att mappa till AEM sidor med SPA Editor SDK. Dynamisk navigering implementeras med Angular Router och läggs till i en befintlig Header-komponent.
+[Navigering och routning](navigation-routing.md) - Lär dig hur flera vyer i SPA kan användas genom att mappa till AEM Pages med SPA Editor SDK. Dynamisk navigering implementeras med Angular Router och läggs till i en befintlig Header-komponent.
 
 ## Bonus - Beständiga konfigurationer till källkontroll {#bonus}
 
-I många fall, särskilt i början av ett AEM projekt, är det viktigt att behålla konfigurationer som mallar och relaterade innehållsprinciper för källkontroll. Detta garanterar att alla utvecklare arbetar mot samma uppsättning innehåll och konfigurationer och kan säkerställa ytterligare enhetlighet mellan miljöer. När ett projekt når en viss mognadsnivå kan rutinen med mallhantering överföras till en särskild grupp med avancerade användare.
+I många fall, särskilt i början av ett AEM-projekt, är det värdefullt att behålla konfigurationer som mallar och relaterade innehållsprinciper för källkontroll. Detta garanterar att alla utvecklare arbetar mot samma uppsättning innehåll och konfigurationer och kan säkerställa ytterligare enhetlighet mellan miljöer. När ett projekt når en viss mognadsnivå kan rutinen med mallhantering överföras till en särskild grupp med avancerade användare.
 
-Nästa steg kommer att utföras med Visual Studio Code IDE och [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) men kan utföras med alla verktyg och alla IDE som du har konfigurerat till **pull** - eller **import** -innehåll från en lokal AEM.
+Nästa steg kommer att utföras med Visual Studio Code IDE och [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync) men kan utföras med alla verktyg och alla IDE som du har konfigurerat till **pull** - eller **import** -innehåll från en lokal instans av AEM.
 
 1. I Visual Studio Code IDE kontrollerar du att du har **VSCode AEM Sync** installerat via Marketplace-tillägget:
 
-   ![Synkronisering AEM VSCode](./assets/map-components/vscode-aem-sync.png)
+   ![VSCode AEM Sync](./assets/map-components/vscode-aem-sync.png)
 
 2. Utöka modulen **ui.content** i Project Explorer och gå till `/conf/wknd-spa-angular/settings/wcm/templates`.
 
-3. **Högerklicka** på mappen `templates` och välj **Importera från AEM server**:
+3. **Högerklicka** på mappen `templates` och välj **Importera från AEM Server**:
 
    ![VSCode-importmall](assets/map-components/import-aem-servervscode.png)
 
 4. Upprepa stegen för att importera innehåll men välj mappen **policies** på `/conf/wknd-spa-angular/settings/wcm/policies`.
 
-5. Inspect filen `filter.xml` på `ui.content/src/main/content/META-INF/vault/filter.xml`.
+5. Granska filen `filter.xml` som finns på `ui.content/src/main/content/META-INF/vault/filter.xml`.
 
    ```xml
    <!--ui.content filter.xml-->

@@ -1,7 +1,7 @@
 ---
-title: AEM händelsehantering med Adobe I/O Runtime Action
-description: Lär dig hur du bearbetar mottagna AEM med Adobe I/O Runtime Action.
-version: Cloud Service
+title: AEM Events-bearbetning med Adobe I/O Runtime Action
+description: Lär dig hur du bearbetar mottagna AEM-händelser med Adobe I/O Runtime Action.
+version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
 role: Architect, Developer
@@ -12,20 +12,20 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
 
 ---
 
-# AEM händelsehantering med Adobe I/O Runtime Action
+# AEM Events-bearbetning med Adobe I/O Runtime Action
 
-Lär dig hur du bearbetar mottagna AEM med åtgärden [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/). Det här exemplet förbättrar det tidigare exemplet [Adobe I/O Runtime Action och AEM Events](runtime-action.md). Kontrollera att du har slutfört det innan du fortsätter med det här exemplet.
+Lär dig hur du bearbetar mottagna AEM-händelser med åtgärden [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/guides/overview/what_is_runtime/) . Det här exemplet förbättrar det tidigare exemplet [Adobe I/O Runtime Action och AEM Events](runtime-action.md). Kontrollera att du har slutfört det innan du fortsätter med det här exemplet.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427054?quality=12&learn=on)
 
-I det här exemplet lagrar händelsebearbetningen de ursprungliga händelsedata och mottagna händelser som ett aktivitetsmeddelande i Adobe I/O Runtime-lagringen. Om händelsen är av typen _Innehållsfragment ändrat_ anropas även AEM författartjänst för att hitta ändringsinformationen. Slutligen visas händelseinformationen i ett enda program (SPA).
+I det här exemplet lagrar händelsebearbetningen de ursprungliga händelsedata och mottagna händelser som ett aktivitetsmeddelande i Adobe I/O Runtime-lagringen. Om händelsen är av typen _Innehållsfragment ändrat_ anropas även AEM författartjänst för att hitta ändringsinformationen. Slutligen visas händelseinformationen i ett SPA-program (single page application).
 
 ## Krav
 
@@ -39,12 +39,12 @@ För att kunna genomföra den här självstudiekursen behöver du:
 
 - Lokalt initierat projekt från det tidigare exemplet [Adobe I/O Runtime Action och AEM Events](./runtime-action.md#initialize-project-for-local-development).
 
-## Processor för AEM-händelser
+## AEM Events-processoråtgärd
 
 I det här exemplet utför händelseprocessorn [åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/) följande uppgifter:
 
 - Tolkar mottagen händelse i ett aktivitetsmeddelande.
-- Om den mottagna händelsen är av typen _Innehållsfragment ändrat_, kan du ringa AEM författartjänsten för att hitta ändringsinformationen.
+- Om den mottagna händelsen är av typen _Innehållsfragment ändrat_, kan du ringa tillbaka till AEM författartjänst för att hitta ändringsinformationen.
 - Bevarar ursprungliga händelsedata, aktivitetsmeddelanden och ändringsinformation (om sådana finns) i Adobe I/O Runtime-lagringsutrymme.
 
 För att utföra ovanstående uppgifter börjar vi med att lägga till en åtgärd i projektet, utveckla JavaScript-moduler för att utföra ovanstående uppgifter och slutligen uppdatera åtgärdskoden så att den använder de utvecklade modulerna.
@@ -162,7 +162,7 @@ För att utföra de uppgifter som nämns ovan ska vi utveckla följande JavaScri
   ...
   ```
 
-  Mer information finns i självstudiekursen [AEM Tjänstautentiseringsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en). [App Builder konfigurationsfiler](https://developer.adobe.com/app-builder/docs/guides/configuration/) för hantering av hemligheter och åtgärdsparametrar.
+  Se självstudiekursen [AEM Service Credentials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en) om du vill veta mer om den. [App Builder konfigurationsfiler](https://developer.adobe.com/app-builder/docs/guides/configuration/) för hantering av hemligheter och åtgärdsparametrar.
 
 - Modulen `src/dx-excshell-1/actions/aem-event-processor/storeEventData.js` lagrar ursprungliga händelsedata, aktivitetsmeddelanden och ändringsinformation (om sådan finns) i Adobe I/O Runtime-lagringsutrymme.
 
@@ -248,8 +248,8 @@ if (params.challenge) {
 ## Ytterligare resurser
 
 - Mappen `src/dx-excshell-1/actions/model` innehåller `aemEvent.js`- och `errors.js`-filer, som används av åtgärden för att tolka den mottagna händelsen och hantera fel.
-- Mappen `src/dx-excshell-1/actions/load-processed-aem-events` innehåller åtgärdskod. Den här åtgärden används av SPA för att läsa in de bearbetade AEM händelserna från Adobe I/O Runtime-lagringsutrymmet.
-- Mappen `src/dx-excshell-1/web-src` innehåller den SPA koden som visar de bearbetade AEM.
+- Mappen `src/dx-excshell-1/actions/load-processed-aem-events` innehåller åtgärdskod. Den här åtgärden används av SPA för att läsa in bearbetade AEM Events från Adobe I/O Runtime-lagringsutrymme.
+- Mappen `src/dx-excshell-1/web-src` innehåller SPA-koden som visar de bearbetade AEM-händelserna.
 - Filen `src/dx-excshell-1/ext.config.yaml` innehåller åtgärdskonfiguration och parametrar.
 
 ## Koncept och viktiga arbetsmoment

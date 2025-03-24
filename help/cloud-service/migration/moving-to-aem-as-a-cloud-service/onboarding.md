@@ -1,7 +1,7 @@
 ---
 title: Onboarding för AEM as a Cloud Service
 description: Läs om hur du kommer igång med AEM as a Cloud Service, från avtalsfasen hela vägen till konfiguration av miljöer med Cloud Manager.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Onboarding
 topic: Migration, Upgrade
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-8631
 thumbnail: 336959.jpeg
 exl-id: 9d2004e5-e928-4190-8298-695635c8e92c
 duration: 504
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '277'
 ht-degree: 5%
@@ -27,13 +27,13 @@ Läs om hur du kommer igång med AEM as a Cloud Service från avtalsfasen hela v
 
 ![Startar högnivådiagram](assets/onboarding-diagram.png)
 
-En viktig del av nyanställda är att skapa AEM as a Cloud Service-program och tillhandahålla olika miljöer med hjälp av Adobe Cloud Manager. [Admin Console](https://adminconsole.adobe.com/) används för att tilldela roller och ge användare i din organisation åtkomst till AEM miljöer.
+En viktig del av introduktionen är att skapa AEM as a Cloud Service-program och tillhandahålla olika miljöer med Adobe Cloud Manager. [Admin Console](https://adminconsole.adobe.com/) används för att tilldela roller och ge åtkomst för användare i din organisation till AEM-miljöer.
 
 ## Viktiga aktiviteter
 
 + En systemadministratör använder [Admin Console](https://adminconsole.adobe.com/) för att tilldela en eller flera användare till produktprofilen [Cloud Manager - Business Owner](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html).
 + Användare som har tilldelats till företagsägarens produktprofil använder självbetjäningsfunktionerna i [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html) för att [skapa program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/production-programs/creating-production-program.html) och [lägga till miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html)
-+ Använd [Admin Console](https://adminconsole.adobe.com/) för att tilldela utvecklare och användare till olika [Cloud Manager-roller](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) och ge behörighet till olika AEM miljöer.
++ Använd [Admin Console](https://adminconsole.adobe.com/) för att tilldela utvecklare och användare till olika [Cloud Manager-roller](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html) och ge behörighet till olika AEM-miljöer.
 
 ## Handövning
 
@@ -46,7 +46,7 @@ Innan du provar övningen bör du kontrollera att du har tittat på och förstå
 
 Se även till att du har fullföljt tidigare övningar:
 
-+ [AEM Moderniseringsverktyg: praktiska övningar](./aem-modernization-tools.md#hands-on-exercise)
++ [AEM Modernization Tools - övning](./aem-modernization-tools.md#hands-on-exercise)
 
 <table style="border-width:0">
     <tr>
@@ -59,7 +59,7 @@ Se även till att du har fullföljt tidigare övningar:
         <td style="width:100%;margin-bottom:1rem;">
             <div style="font-size:1.25rem;font-weight:400;">Handsnack med introduktion</div>
             <p style="margin:1rem 0">
-                Utforska AEM as a Cloud Service introduktionsprocess och hur du distribuerar ett AEM till AEM SDK.
+                Utforska AEM as a Cloud Service introduktionsprocess och hur man driftsätter en AEM-applikation till AEM SDK.
             </p>
             <a  rel="noreferrer"
                 target="_blank"

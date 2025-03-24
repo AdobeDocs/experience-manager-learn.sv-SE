@@ -1,7 +1,7 @@
 ---
 title: AEM Dispatcher Flushing
 description: Förstå hur AEM gör gamla cachefiler från Dispatcher ogiltiga.
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 461873a1-1edf-43a3-b4a3-14134f855d86
 duration: 520
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '2225'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Här är ett exempel på skärmbilder av en konfigurerad standardimporteringsage
 
 ### DISPATCHER FLUSH REPLICATION MOTTAR VIRTUELL VÄRD
 
-Dispatcher-modulen letar efter särskilda rubriker som ska veta när en begäran om POST är något att skicka vidare till AEM rendering eller om den är serialiserad som en tömningsbegäran och måste hanteras av Dispatcher-hanteraren.
+Dispatcher-modulen letar efter särskilda rubriker som ska veta när en POST-begäran är något att skicka vidare till AEM-renderingar eller om den är serialiserad som en tömningsbegäran och måste hanteras av Dispatcher-hanteraren.
 
 Här är en skärmbild av konfigurationssidan som visar följande värden:
 ![bild på fliken Inställningar för huvudkonfigurationsskärmen med serialiseringstypen som visas som Dispatcher Flush](assets/disp-flushing/disp-flush-agent1.png "disp-flush-agent1")
@@ -69,15 +69,15 @@ Standardinställningssidan visar `Serialization Type` som `Dispatcher Flush` och
 
 På fliken `Transport` kan du se att `URI` är inställd på att peka på IP-adressen för den Dispatcher som ska ta emot rensningsbegäranden.  Sökvägen `/dispatcher/invalidate.cache` är inte så som modulen avgör om det är en tömning, det är bara en tydlig slutpunkt som du kan se i åtkomstloggen för att veta att det var en tömningsbegäran.  På fliken `Extended` går vi igenom de saker som finns för att kvalificera att det här är en rensningsförfrågan till Dispatcher-modulen.
 
-![Skärmbild av fliken Utökat i replikeringsagenten.  Observera rubrikerna som skickas med begäran om POST som skickats för att tala om för Dispatcher att tömma](assets/disp-flushing/disp-flush-agent3.png "disp-flush-agent3")
+![Skärmbild av fliken Utökat i replikeringsagenten.  Observera de huvuden som skickas med POST-begäran som skickats för att instruera Dispatcher att tömma](assets/disp-flushing/disp-flush-agent3.png "disp-flush-agent3")
 
 `HTTP Method` för rensningsbegäranden är bara en `GET`-begäran med några särskilda begäranderubriker:
 - CQ-Action
-   - Detta använder en AEM variabel som baseras på begäran och värdet är vanligtvis *activate eller delete*
+   - Detta använder en AEM-variabel som baseras på begäran och värdet är vanligtvis *activate eller delete*
 - CQ-Handle
-   - Detta använder en AEM variabel som baseras på begäran och värdet är vanligtvis den fullständiga sökvägen till objektet som tömts, till exempel `/content/dam/logo.jpg`
+   - Detta använder en AEM-variabel som baseras på begäran och värdet är vanligtvis den fullständiga sökvägen till objektet som tömts, till exempel `/content/dam/logo.jpg`
 - CQ-Path
-   - Detta använder en AEM variabel som baseras på begäran och värdet är vanligtvis den fullständiga sökvägen till objektet som töms, till exempel `/content/dam`
+   - Detta använder en AEM-variabel som baseras på begäran och värdet är vanligtvis den fullständiga sökvägen till objektet som rensas, till exempel `/content/dam`
 - Värd
    - Det är här `Host` Header placeras i en buffert som mål för en specifik `VirtualHost` som har konfigurerats på API-avsändarens webbserver (`/etc/httpd/conf.d/enabled_vhosts/aem_flush.vhost`).  Det är ett hårdkodat värde som matchar en post i `ServerName` eller `ServerAlias` för filen `aem_flush.vhost`
 
@@ -150,7 +150,7 @@ I det här exemplet använder du en inställning för statusfilnivå på 4. Dett
 När en begäran om innehåll kommer in i samma rutin händer
 
 1. Tidsstämpeln för filen `.stat` jämförs med tidsstämpeln för den begärda filen
-2. Om filen `.stat` är nyare än den begärda filen tar den bort det cachelagrade innehållet och hämtar ett nytt från AEM och cachelagrar det.  Ändrar sedan innehållet
+2. Om filen `.stat` är nyare än den begärda filen tar den bort det cachelagrade innehållet och hämtar ett nytt från AEM och sparar det i cacheminnet.  Ändrar sedan innehållet
 3. Om filen `.stat` är äldre än den begärda filen vet den att filen är ny och kan hantera innehållet.
 
 ### CACHEMANG - EXEMPEL 1

@@ -5,13 +5,13 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Developer Tools
 jira: KT-10423
 exl-id: 2ce0c07b-1316-4170-a84d-23430437a9cc
 duration: 80
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '379'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Context Aware Cloud-konfigurationer
 
-När du skapar en molnkonfiguration i din lokala miljö och vill testa utan fel bör du använda samma molnkonfiguration i dina överordnade miljöer, men utan att behöva ändra slutpunkt, hemlig nyckel/lösenord och användarnamn. För att uppnå detta har AEM Forms on Cloud Service introducerat möjligheten att definiera kontextmedvetna molnkonfigurationer.
+När du skapar en molnkonfiguration i din lokala miljö och vill testa utan fel bör du använda samma molnkonfiguration i dina överordnade miljöer, men utan att behöva ändra slutpunkt, hemlig nyckel/lösenord och användarnamn. För att uppnå detta har AEM Forms på Cloud Service introducerat möjligheten att definiera sammanhangsberoende molnkonfigurationer.
 Till exempel kan molnkonfigurationen för Azure-lagringskontot återanvändas i dev-, stage- och produktionsmiljöer genom att använda olika anslutningssträngar och nycklar för.
 
 Följande steg krävs för att skapa kontextuell molnkonfiguration
@@ -73,4 +73,4 @@ För REST-baserade molnkonfigurationer med grundläggande autentisering vill du 
 
 ## Nästa steg
 
-[Flytta ditt AEM till molnhanteraren](./push-project-to-cloud-manager-git.md)
+[Flytta ditt AEM-projekt till molnhanteraren](./push-project-to-cloud-manager-git.md)

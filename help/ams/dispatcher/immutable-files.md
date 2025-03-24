@@ -1,7 +1,7 @@
 ---
 title: AMS Dispatcher skrivskyddade eller oföränderliga filer
 description: Förstå varför vissa filer är skrivskyddade eller inte går att redigera och hur du gör de funktionsändringar du vill
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration, Development
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 7be6b3f9-cd53-41bc-918d-5ab9b633ffb3
 duration: 253
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '824'
 ht-degree: 0%
@@ -36,7 +36,7 @@ Detta gör också att du kan vara säker på att när AMS korrigerar utskickarna
 Som framgår av bilden ovan hindrar inte oföränderliga filer dig från att spela spelet.  De hindrar dig bara från att skada din prestanda och håller dig i farten.  Med den här metoden får vi några viktiga funktioner:
 
 - Anpassningar hanteras i sina egna säkra utrymmen
-- Övertäckning för anpassade ändringar speglar för övertäckningsmetoder i AEM
+- Övertäckning av anpassade ändringsspeglar som för överläggsmetoder i AEM
 - Du kan korrigera AMS-konfigurationer utan att ändra anpassningar
 - Testa grundinstallationen jämfört med anpassade konfigurationer kan göras samtidigt för att hjälpa till att avgöra om problemen beror på anpassningar eller något annat. Vilka filer?
 

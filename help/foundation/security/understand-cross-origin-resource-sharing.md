@@ -1,7 +1,7 @@
 ---
-title: Cross-Origin Resource Sharing (CORS) med AEM
-description: Adobe Experience Manager Cross-Origin Resource Sharing (CORS) underlättar för icke-AEM webbegenskaper att anropa AEM på klientsidan, både autentiserad och oautentiserad, för att hämta innehåll eller interagera direkt med AEM.
-version: 6.4, 6.5
+title: CORS (Cross-Origin Resource Sharing) med AEM
+description: Adobe Experience Manager Cross-Origin Resource Sharing (CORS) underlättar för andra webbegenskaper än AEM att ringa klientanrop till AEM, både autentiserade och oautentiserade, för att hämta innehåll eller direkt interagera med AEM.
+version: Experience Manager 6.4, Experience Manager 6.5
 sub-product: Experience Manager, Experience Manager Sites
 feature: Security, APIs
 doc-type: Article
@@ -10,7 +10,7 @@ role: Developer
 level: Intermediate
 exl-id: 6009d9cf-8aeb-4092-9e8c-e2e6eec46435
 duration: 240
-source-git-commit: 6922d885c25d0864560ab3b8e38907060ff3cc70
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 0%
@@ -19,14 +19,14 @@ ht-degree: 0%
 
 # Förstå resursdelning mellan ursprung ([!DNL CORS])
 
-Adobe Experience Manager Cross-Origin Resource Sharing ([!DNL CORS]) underlättar för icke-AEM webbegenskaper att göra anrop på klientsidan till AEM, både autentiserad och oautentiserad, för att hämta innehåll eller direkt interagera med AEM.
+Adobe Experience Manager Cross-Origin Resource Sharing ([!DNL CORS]) underlättar för icke-AEM-webbegenskaper att ringa klientanrop till AEM, både autentiserad och oautentiserad, för att hämta innehåll eller direkt interagera med AEM.
 
 OSGI-konfigurationen som beskrivs i det här dokumentet räcker för att:
 
-1. Resursdelning från en källa på AEM Publish
-2. CORS åtkomst till AEM Author
+1. Resursdelning från en källa i AEM Publish
+2. CORS-åtkomst till AEM Author
 
-Om CORS-åtkomst med flera ursprung krävs på AEM Publish, se [den här dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
+Om CORS-åtkomst med flera ursprung krävs för AEM Publish finns mer information i [den här dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
 
 ## Adobe Granite Cross-Origin Resource Sharing Policy OSGi configuration
 
@@ -131,7 +131,7 @@ Plats 1 är ett grundläggande, anonym, skrivskyddat scenario där innehåll kon
 }
 ```
 
-Webbplats 2 är mer komplex och kräver godkännande och mutering (POST, PUT, DELETE):
+Site 2 är mer komplicerat och kräver auktoriserade och muterande förfrågningar (POST, PUT, DELETE):
 
 ```json
 {
@@ -181,13 +181,13 @@ I allmänhet kan samma aspekter för cachelagring av innehåll i Dispatcher anv�
 
 | Cacheable | Miljö | Autentiseringsstatus | Förklaring |
 |-----------|-------------|-----------------------|-------------|
-| Nej | AEM Publish | Autentiserad | Dispatcher cachning på AEM författare är begränsad till statiskt, icke-redigerat material. Detta gör det svårt och opraktiskt att cachelagra de flesta resurser på AEM Author, inklusive HTTP-svarshuvuden. |
+| Nej | AEM Publish | Autentiserad | Dispatcher cachning på AEM Author är begränsad till statiska, icke-redigerade resurser. Detta gör det svårt och opraktiskt att cachelagra de flesta resurser på AEM Author, inklusive HTTP-svarshuvuden. |
 | Nej | AEM Publish | Autentiserad | Undvik cachelagring av CORS-huvuden vid autentiserade begäranden. Detta anpassas till den vanliga vägledningen om att inte cachelagra autentiserade begäranden, eftersom det är svårt att avgöra hur autentiserings-/auktoriseringsstatusen för den begärande användaren kommer att påverka den levererade resursen. |
-| Ja | AEM Publish | Anonym | Anonyma förfrågningar som kan cache-lagras hos dispatchern kan även ha sina svarshuvuden cachelagrade, vilket garanterar att framtida CORS-förfrågningar kan komma åt det cachelagrade innehållet. Alla ändringar av CORS-konfigurationen på AEM Publish **måste** följas av en ogiltigförklaring av de cachelagrade resurserna som påverkas. De bästa sätten är att styra koddistributioner och konfigurationsdistributioner eftersom det är svårt att avgöra vilket cachelagrat innehåll som kan utföras. |
+| Ja | AEM Publish | Anonym | Anonyma förfrågningar som kan cache-lagras hos dispatchern kan även ha sina svarshuvuden cachelagrade, vilket garanterar att framtida CORS-förfrågningar kan komma åt det cachelagrade innehållet. Alla ändringar av CORS-konfigurationen i AEM Publish **måste** följas av en ogiltigförklaring av de cachelagrade resurserna som påverkas. De bästa sätten är att styra koddistributioner och konfigurationsdistributioner eftersom det är svårt att avgöra vilket cachelagrat innehåll som kan utföras. |
 
 ### Tillåt CORS-begäranderubriker
 
-Om du vill tillåta att de begärda [HTTP-begäranrubrikerna skickas till AEM för bearbetning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) måste de tillåtas i Dispatcher `/clientheaders`-konfigurationen.
+Om du vill tillåta de [HTTP-begäranrubriker som krävs att gå igenom till AEM för bearbetning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) måste de tillåtas i Dispatcher `/clientheaders`-konfigurationen.
 
 ```
 /clientheaders {
@@ -200,7 +200,7 @@ Om du vill tillåta att de begärda [HTTP-begäranrubrikerna skickas till AEM f�
 
 ### Cachelagra CORS-svarshuvuden
 
-Om du vill tillåta cachelagring och visning av CORS-huvuden i cachelagrat innehåll lägger du till följande [/cache /headers-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers) i den AEM Publish `dispatcher.any` -filen.
+Om du vill tillåta cachelagring och visning av CORS-huvuden i cachelagrat innehåll lägger du till följande [/cache /headers-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers) i AEM Publish `dispatcher.any`-filen.
 
 ```
 /publishfarm {

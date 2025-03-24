@@ -1,25 +1,25 @@
 ---
-title: Variabler i AEM [del 4]
-description: Använda variabler av typen XML, JSON, ArrayList, Document i ett AEM arbetsflöde
-version: 6.5
+title: Variabler i AEM Workflow[Part4]
+description: Använda variabler av typen XML, JSON, ArrayList, Document i ett AEM-arbetsflöde
+version: Experience Manager 6.5
 topic: Development
 feature: Adaptive Forms, Workflow
 role: Developer
 level: Beginner
 exl-id: 269e43f7-24cf-4786-9439-f51bfe91d39c
 duration: 102
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
 
 ---
 
-# Variabeln ArrayList i AEM arbetsflöde
+# ArrayList-variabel i AEM Workflow
 
 Variabler av typen ArrayList har införts i AEM Forms 6.5. Ett vanligt användningsexempel för ArrayList-variabeln är att definiera anpassade vägar som ska användas i AssignTask.
 
-Om du vill använda variabeln ArrayList i ett AEM arbetsflöde måste du skapa ett adaptivt formulär som genererar upprepade element i skickade data. Ett vanligt tillvägagångssätt är att definiera ett schema som innehåller ett arrayelement. I den här artikeln har jag skapat ett enkelt JSON-schema som innehåller arrayelement. Användningsexemplet är att en anställd fyller i en utgiftsrapport. I utgiftsrapporten tar vi reda på vem som har skickat in inskickarens namn och chefens namn. Hanterarens namn lagras i en array som kallas hanterarkedja. På skärmbilden nedan visas utgiftsrapportformuläret och data från inskickandet av Adaptiv Forms.
+Om du vill använda variabeln ArrayList i ett AEM-arbetsflöde måste du skapa ett adaptivt formulär som genererar upprepade element i skickade data. Ett vanligt tillvägagångssätt är att definiera ett schema som innehåller ett arrayelement. I den här artikeln har jag skapat ett enkelt JSON-schema som innehåller arrayelement. Användningsexemplet är att en anställd fyller i en utgiftsrapport. I utgiftsrapporten tar vi reda på vem som har skickat in inskickarens namn och chefens namn. Hanterarens namn lagras i en array som kallas hanterarkedja. På skärmbilden nedan visas utgiftsrapportformuläret och data från inskickandet av Adaptiv Forms.
 
 ![utgiftsrapport](assets/expensereport.jpg)
 

@@ -5,13 +5,13 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 thumbnail: 7818.jpg
 jira: KT-7818
 exl-id: 1f34c356-6c0c-46ff-9cea-7baacfc4bb7f
 duration: 22
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 1%

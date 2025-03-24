@@ -1,8 +1,8 @@
 ---
 title: Felsöka AEM SDK med OSGi-webbkonsolen
-description: AEM SDK:s lokala snabbstart har en OSGi-webbkonsol som innehåller en mängd information och introspectioner i den lokala AEM som är användbara för att förstå hur programmet känns igen av och fungerar i AEM.
+description: AEM SDK lokala snabbstart har en OSGi-webbkonsol som innehåller olika typer av information och introspection i den lokala AEM-miljön som är användbara för att förstå hur programmet känns igen av och fungerar i AEM.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 kt: 5265, 5366, 5267
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Beginner, Intermediate
 exl-id: 0929bc1a-376c-4e16-a540-a276fd5af164
 duration: 486
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '369'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Felsöka AEM SDK med OSGi-webbkonsolen
 
-AEM SDK:s lokala snabbstart har en OSGi-webbkonsol som innehåller en mängd information och introspectioner i den lokala AEM som är användbara för att förstå hur programmet känns igen av och fungerar i AEM.
+AEM SDK lokala snabbstart har en OSGi-webbkonsol som innehåller olika typer av information och introspection i den lokala AEM-miljön som är användbara för att förstå hur programmet känns igen av och fungerar i AEM.
 
 AEM innehåller många OSGi-konsoler, där var och en ger viktiga insikter i olika aspekter av AEM, men det här är vanligtvis det mest användbara när du felsöker programmet.
 
@@ -27,7 +27,7 @@ AEM innehåller många OSGi-konsoler, där var och en ger viktiga insikter i oli
 
 >[!VIDEO](https://video.tv.adobe.com/v/34335?quality=12&learn=on)
 
-Bundles-konsolen är en katalog över OSGi-paketen och deras information, som distribueras till AEM, tillsammans med ad hoc-möjligheten att starta och stoppa dem.
+Bundles Console är en katalog över OSGi-paketen och deras information, som distribueras till AEM, tillsammans med ad hoc-möjligheten att starta och stoppa dem.
 
 Konsolen Bundles finns på:
 

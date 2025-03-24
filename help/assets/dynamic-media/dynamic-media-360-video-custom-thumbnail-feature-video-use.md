@@ -1,15 +1,15 @@
 ---
 title: Använda Dynamic Media 360-videor och en anpassad videominiatyr med AEM Assets
-description: Förbättringarna i Dynamic Media Viewer i AEM 6.5 inkluderar stöd för 360-videoåtergivning, 360 medievyer (video360Social och video360VR) samt möjlighet att välja anpassade videominiatyrer.
+description: Förbättringarna i Dynamic Media Viewer i AEM 6.5 innefattar stöd för 360-videoåtergivning, 360 medievyer (video360Social och video360VR) samt möjlighet att välja anpassade videominiatyrer.
 feature: Video Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
 exl-id: 4ee0b68f-3897-4104-8615-9de8dbb8f327
 duration: 656
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '394'
 ht-degree: 0%
@@ -18,17 +18,17 @@ ht-degree: 0%
 
 # Använda Dynamic Media 360-videor och en anpassad videominiatyr med AEM Assets
 
-Förbättringarna i Dynamic Media Viewer i AEM 6.5 inkluderar stöd för 360-videoåtergivning, 360 medievyer (video360Social och video360VR) samt möjlighet att välja anpassade videominiatyrer.
+Förbättringarna i Dynamic Media Viewer i AEM 6.5 innefattar stöd för 360-videoåtergivning, 360 medievyer (video360Social och video360VR) samt möjlighet att välja anpassade videominiatyrer.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26391?quality=12&learn=on)
 
 >[!NOTE]
 >
->I videon antas att AEM körs i Dynamic Media S7-läge.  [Anvisningar om hur du konfigurerar AEM med Dynamic Media finns här](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). När du överför en video bearbetar Dynamic Media som standard tagningen som en 360-video, om den har proportionerna 2:1. dvs. förhållandet mellan bredd och höjd är 2:1.
+>I videon antas att din AEM-instans körs i läget Dynamic Media S7.  [Instruktioner om hur du konfigurerar AEM med Dynamic Media finns här](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html). När du överför en video bearbetar Dynamic Media som standard tagningen som en 360-video, om den har proportionerna 2:1. dvs. förhållandet mellan bredd och höjd är 2:1.
 
 >[!NOTE]
 >
->Dynamic Media 360 Media-komponenter stöder endast 360-videor.
+>Dynamic Media 360 Media-komponenter har endast stöd för 360-videor.
 
 ## Dynamic Media 360-videor
 
@@ -48,8 +48,8 @@ Dynamic Media-video har nu stöd för möjligheten att välja en anpassad miniat
       <td>**Video360VR Viewer**</td>
    </tr>
    <tr>
-      <td>Dynamic Media körningsläge</td>
-      <td>Endast Dynamic Media Scene7 Mode</td>
+      <td>Körningsläge för dynamiska media</td>
+      <td>Endast Dynamic Media Scene7-läge</td>
       <td>Dynamic Media Scene7 Mode only<br>
          <br>
       </td>
@@ -104,4 +104,4 @@ Dynamic Media-video har nu stöd för möjligheten att välja en anpassad miniat
 
 ## Ytterligare resurser{#additional-resources}
 
-[Konfigurera Dynamic Media i Scene7-läge](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[Konfigurera dynamiska media i Scene7-läge](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)

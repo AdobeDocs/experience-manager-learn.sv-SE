@@ -1,7 +1,7 @@
 ---
 title: Förstå DoS/DDoS-skydd
-description: Lär dig hur du förhindrar och minskar DoS- och DDoS-attacker mot AEM.
-version: 6.5, Cloud Service
+description: Lär dig hur du förhindrar och förhindrar DoS- och DDoS-attacker mot AEM.
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Development
 role: Admin, Architect, Developer
@@ -11,7 +11,7 @@ duration: 75
 last-substantial-update: 2024-03-30T00:00:00Z
 jira: KT-15219
 exl-id: 1d7dd829-e235-4884-a13f-b6ea8f6b4b0b
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 # Förstå DoS/DDoS-skydd i AEM
 
-Läs mer om de alternativ som finns för att förhindra och begränsa DoS- och DDoS-attacker på din AEM. En kort översikt över [DoS](https://developer.mozilla.org/en-US/docs/Glossary/DOS_attack) och [DDoS](https://developer.mozilla.org/en-US/docs/Glossary/Distributed_Denial_of_Service) innan du börjar använda de förebyggande mekanismerna.
+Läs mer om de alternativ som finns för att förhindra och begränsa DoS- och DDoS-attacker på din AEM-miljö. En kort översikt över [DoS](https://developer.mozilla.org/en-US/docs/Glossary/DOS_attack) och [DDoS](https://developer.mozilla.org/en-US/docs/Glossary/Distributed_Denial_of_Service) innan du börjar använda de förebyggande mekanismerna.
 
 - DoS-attacker (Denial of Service) och DDoS-attacker (Distributed Denial of Service) är båda skadliga försök att störa den normala funktionen hos en målserver, tjänst eller nätverk, vilket gör den oåtkomlig för de avsedda användarna.
 - DoS-attacker kommer vanligtvis från en enda källa, medan DDoS-attacker kommer från flera källor.
@@ -42,13 +42,13 @@ I följande tabell beskrivs hur du förhindrar och minskar DoS- och DDoS-attacke
             <td>Brandvägg för webbaserade program (WAF)</td>
             <td>En säkerhetslösning som utformats för att skydda webbapplikationer från olika typer av attacker.</td>
             <td>
-            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis#waf-rules" target="_blank">WAF-DDoS-skyddslicens</a></td>
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/examples-and-analysis#waf-rules" target="_blank">Licens för WAF-DDoS-skydd</a></td>
             <td><a href="https://docs.aws.amazon.com/waf/" target="_blank">AWS</a> eller <a href="https://azure.microsoft.com/en-us/products/web-application-firewall" target="_blank">Azure</a> WAF via AMS-kontrakt.</td>
-            <td>Din egen WAF</td>
+            <td>Ditt favoritprogram för WAF</td>
         </tr>
         <tr>
             <td>ModSecurity</td>
-            <td>ModSecurity (även kallad "mod_security" Apache-modulen) är en plattformsoberoende lösning med öppen källkod som skyddar mot en rad attacker mot webbprogram.<br/> I AEM as a Cloud Service gäller detta endast AEM Publish eftersom det inte finns någon Apache-webbserver och AEM Dispatcher framför AEM Author-tjänsten.</td>
+            <td>ModSecurity (även kallad "mod_security" Apache-modulen) är en plattformsoberoende lösning med öppen källkod som skyddar mot en rad attacker mot webbprogram.<br/> I AEM as a Cloud Service gäller detta endast AEM Publish-tjänsten eftersom det inte finns någon Apache-webbserver och AEM Dispatcher framför AEM Author-tjänsten.</td>
             <td colspan="3"><a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/modsecurity-crs-dos-attack-protection" target="_blank">Aktivera ModSecurity </a></td>
         </tr>
         <tr>
@@ -61,7 +61,7 @@ I följande tabell beskrivs hur du förhindrar och minskar DoS- och DDoS-attacke
     </tbody>
 </table>
 
-## Post incidentanalys och kontinuerlig förbättring
+## Analys efter incident och kontinuerlig förbättring
 
 Det finns inte ett standardflöde som passar alla för att identifiera och förhindra DoS/DDoS-attacker, och det beror på organisationens säkerhetsprocess. **Efterfallsanalysen och den kontinuerliga förbättringen** är ett viktigt steg i processen. Här är några tips att tänka på:
 

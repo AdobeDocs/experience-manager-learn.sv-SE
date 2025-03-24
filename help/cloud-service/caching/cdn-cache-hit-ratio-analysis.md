@@ -1,7 +1,7 @@
 ---
 title: Analys av träffgrad i CDN-cache
 description: Lär dig hur du analyserar de CDN-loggar som tillhandahålls av AEM as a Cloud Service. Få insikter som till exempel cacheminnets träffgrad och de översta URL:erna för MISS- och PASS-cachetyperna för optimeringsändamål.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
 role: Admin, Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: 4111ae0cf8777ce21c224991b8b1c66fb01041b3
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Analys av träffgrad i CDN-cache
 
-Innehåll som cachas vid CDN minskar den fördröjning som webbplatsanvändare upplever, som inte behöver vänta på att en begäran ska skickas tillbaka till Apache/Dispatcher eller AEM publicering. Med detta i åtanke är det värt att optimera CDN-cache-träffkvoten för att maximera mängden innehåll som kan cachas vid CDN.
+Cachelagrat innehåll på CDN minskar den fördröjning som webbplatsanvändare upplever, som inte behöver vänta på att en begäran ska skickas tillbaka till Apache/Dispatcher eller AEM-publicering. Med detta i åtanke är det värt att optimera CDN-cache-träffkvoten för att maximera mängden innehåll som kan cachas vid CDN.
 
 Lär dig hur du analyserar de **CDN-loggar** som tillhandahålls av AEM as a Cloud Service och får insikter som **cache-träffgrad** och **högsta URL:er för _MISS_ och _PASS_ cache-typer**, för optimeringsändamål.
 
@@ -30,9 +30,9 @@ CDN-loggarna är tillgängliga i JSON-format, som innehåller olika fält, bland
 
 | Tillstånd för cache </br>, möjligt värde | Beskrivning |
 |------------------------------------|:-----------------------------------------------------:|
-| TRYCK | Begärda data _hittades i CDN-cachen och kräver inte att en hämtningsbegäran_ görs till AEM. |
-| MISS | Begärda data _hittades inte i CDN-cachen och måste begäras_ från AEM. |
-| PASS | Begärda data är _uttryckligen inställda på att inte cachelagras_ och hämtas alltid från AEM. |
+| TRYCK | Begärda data _hittades i CDN-cachen och kräver inte att en hämtningsbegäran_ görs till AEM-servern. |
+| MISS | Begärda data _hittades inte i CDN-cachen och måste begäras_ från AEM-servern. |
+| PASS | Begärda data är _uttryckligen inställda på att inte cachelagras_ och hämtas alltid från AEM-servern. |
 
 I den här självstudiekursen distribueras [AEM WKND-projektet](https://github.com/adobe/aem-guides-wknd) till AEM as a Cloud Service-miljön och ett litet prestandatest aktiveras med [Apache JMeter](https://jmeter.apache.org/).
 
@@ -52,7 +52,7 @@ Så här hämtar du CDN-loggarna:
 
    ![Hämta loggar - Cloud Manager](assets/cdn-logs-analysis/download-logs.png){width="500" zoomable="yes"}
 
-1. I dialogrutan **Hämta loggar** väljer du **Publish**-tjänsten i listrutan och klickar sedan på nedladdningsikonen bredvid raden **CDN** .
+1. I dialogrutan **Hämta loggar** väljer du tjänsten **Publicera** i listrutan och klickar sedan på nedladdningsikonen bredvid raden **CDN** .
 
    ![CDN-loggar - Cloud Manager](assets/cdn-logs-analysis/download-cdn-logs.png){width="500" zoomable="yes"}
 
@@ -65,13 +65,13 @@ Analysera CDN-loggfilen om du vill få insikter om till exempel cacheminnets tr�
 
 I den här självstudiekursen visas tre alternativ för att analysera CDN-loggarna:
 
-1. **Elasticsearch, Logstash och Kibana (ELK)**: [ELK-kontrollpanelen ](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) kan installeras lokalt.
+1. **Elasticsearch, Logstash och Kibana (ELK)**: [ELK-instrumentpanelsverktyget](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) kan installeras lokalt.
 1. **Splunk**: Verktyget [Splunk-kontrollpanelen](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) kräver åtkomst till Splunk och [AEMCS-loggvidarebefordran aktiverad](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) för att kunna importera CDN-loggarna.
 1. **Jupyter-anteckningsbok**: Den kan nås via fjärråtkomst som en del av [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) utan att ytterligare programvara installeras, för kunder som har licensierat Adobe Experience Platform.
 
 ### Alternativ 1: Använda verktygen på ELK-kontrollpanelen
 
-[ELK-stacken](https://www.elastic.co/elastic-stack) är en uppsättning verktyg som ger en skalbar lösning för att söka, analysera och visualisera data. Den består av Elasticsearch, Logstash och Kibana.
+[ELK-stacken](https://www.elastic.co/elastic-stack) är en uppsättning verktyg som ger en skalbar lösning för att söka, analysera och visualisera data. Det består av Elasticsearch, Logstash och Kibana.
 
 Om du vill identifiera nyckeldetaljerna använder du projektet [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling). Det här projektet innehåller en Docker-behållare för ELK-stacken och en förkonfigurerad Kibana-kontrollpanel för analys av CDN-loggarna.
 
@@ -157,7 +157,7 @@ Hämta först filen [AEM-as-CloudService - CDN-logganalys - Jupyter-anteckningsb
 
 - **Installera ytterligare bibliotek**: installerar `termcolor` - och `tabulate` Python-biblioteken.
 - **Läs in CDN-loggar**: läser in CDN-loggfilen med hjälp av variabelvärdet `log_file`. Se till att uppdatera värdet. CDN-loggen transformeras också till [Pandas DataFrame](https://pandas.pydata.org/docs/reference/frame.html).
-- **Utför analys**: Det första kodblocket är _Resultat av visningsanalys för Total-, HTML-, JS/CSS- och bildbegäranden_. Det ger cacheträffprocent, stapel- och cirkeldiagram.
+- **Utför analys**: Det första kodblocket är _Resultat av visningsanalys för Total-, HTML-, JS-/CSS- och bildbegäranden_. Det ger cacheträffprocent, stapel- och cirkeldiagram.
 Det andra kodblocket är _Top 5 MISS and PASS Request URLs for HTML, JS/CSS, and Image_; det visar URL:er och deras antal i tabellformat.
 
 #### Kör Jupyter-anteckningsboken
@@ -186,7 +186,7 @@ Kör sedan Jupyter Notebook i Adobe Experience Platform enligt följande:
 
    ![Värdeuppdatering för loggfil för anteckningsbok](assets/cdn-logs-analysis/notebook-run-cell.png){width="500" zoomable="yes"}
 
-1. När du har kört kodcellen **Visningsanalysresultat för Total, HTML, JS/CSS och Image Requests** visas cache-träffprocenten, stapeln och cirkeldiagrammen i utdata.
+1. När du har kört kodcellen **Visningsanalysresultat för totalt, HTML, JS/CSS och Bildbegäranden** visas cache-träff i procent, staplar och cirkeldiagram i utdata.
 
    ![Värdeuppdatering för loggfil för anteckningsbok](assets/cdn-logs-analysis/output-cache-hit-ratio.png){width="500" zoomable="yes"}
 
@@ -198,7 +198,7 @@ Du kan förbättra Jupyter-anteckningsboken för att analysera CDN-loggarna utif
 
 ## Optimerar CDN-cachekonfiguration
 
-När du har analyserat CDN-loggarna kan du optimera CDN-cachekonfigurationen för att förbättra platsens prestanda. Det AEM bästa sättet är att ha en cacheträffkvot på 90 % eller mer.
+När du har analyserat CDN-loggarna kan du optimera CDN-cachekonfigurationen för att förbättra platsens prestanda. AEM bästa metod är att ha en cache-träfffrekvens på 90 % eller mer.
 
 Mer information finns i [Optimera CDN-cachekonfiguration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching).
 

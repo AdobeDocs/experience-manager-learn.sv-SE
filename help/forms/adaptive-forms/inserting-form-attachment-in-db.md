@@ -1,8 +1,8 @@
 ---
 title: Infoga formulärbilaga i databas
-description: Infoga formulärbilaga i databas med AEM arbetsflöde.
+description: Infoga formulärbilagor i databasen med hjälp av AEM-arbetsflöde.
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
@@ -10,7 +10,7 @@ jira: KT-10488
 exl-id: e8a6cab8-423b-4a8e-b2b7-9b24ebe23834
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 82
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%
@@ -38,7 +38,7 @@ En formulärdatamodell skapades för att kommunicera med MySQL-databasen. Du må
 
 ## Skapa arbetsflöde
 
-Om du konfigurerar ditt adaptiva formulär så att det skickas till ett AEM arbetsflöde kan du välja att spara formulärbilagorna i en arbetsflödesvariabel eller spara de bifogade filerna i en angiven mapp under nyttolasten. I det här fallet måste vi spara de bifogade filerna i en arbetsflödesvariabel av typen ArrayList of Document. Från denna ArrayList måste vi extrahera det första objektet och initiera en dokumentvariabel. Arbetsflödesvariablerna **listOfDocuments** och **employeePhoto** skapades.
+Om du konfigurerar ditt adaptiva formulär så att det skickas till ett AEM-arbetsflöde kan du välja att spara formulärbilagorna i en arbetsflödesvariabel eller spara de bifogade filerna i en angiven mapp under nyttolasten. I det här fallet måste vi spara de bifogade filerna i en arbetsflödesvariabel av typen ArrayList of Document. Från denna ArrayList måste vi extrahera det första objektet och initiera en dokumentvariabel. Arbetsflödesvariablerna **listOfDocuments** och **employeePhoto** skapades.
 När det adaptiva formuläret skickas för att utlösa arbetsflödet initierar ett steg i arbetsflödet variabeln employeePhoto med ECMA-skriptet. Följande är ECMA-skriptkoden
 
 ```javascript

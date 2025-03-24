@@ -1,7 +1,7 @@
 ---
 title: Skapa ett block
 description: Bygg ett block för en Edge Delivery Services-webbplats som kan redigeras med Universell redigerare.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: 9698c17a-0ac8-426d-bccb-729b048cabd1
-source-git-commit: 2722a4d4a34172e2f418f571f9de3872872e682a
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1767'
 ht-degree: 0%

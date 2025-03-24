@@ -1,7 +1,7 @@
 ---
 title: AEM Assets Content Hub
 description: Läs mer om AEN Assets as a Cloud Service Content Hub.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Asset Management, Upload, Marketing Campaigns
 topic: Content Supply Chain, Content Management
 role: User
@@ -10,7 +10,7 @@ doc-type: Catalog
 duration: 60
 last-substantial-update: 2024-11-20T00:00:00Z
 exl-id: ea7b852e-b40d-44ef-ba63-69081e68456e
-source-git-commit: 3a64b985bac3e13755a37064f5e55547b0eb8496
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -149,7 +149,7 @@ Den här videoserien innehåller allt du behöver för att arbeta effektivt med 
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/image-variants" target="_blank" rel="referrer" title="Skapa bildvarianter">Skapa bildvarianter</a>
                     </p>
-                    <p class="is-size-6">Lär dig hur du skapar och redigerar bildvarianter med Adobe Express i Experience Manager Assets Content Hub.</p>
+                    <p class="is-size-6">Lär dig skapa och redigera bildvarianter med Adobe Express i Experience Manager Assets Content Hub.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/content-hub/image-variants" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Bevakning</span>

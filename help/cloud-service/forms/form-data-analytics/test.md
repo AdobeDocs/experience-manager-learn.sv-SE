@@ -5,7 +5,7 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Integrations, Development
 jira: KT-12557
@@ -13,7 +13,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 43665a1e-4101-4b54-a6e0-d189e825073e
 duration: 38
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Fältvalideringsfel
 
 ## Felsökning
 
-Kontrollera att det adaptiva formuläret använder samma konfigurationsbehållare som innehåller startkonfigurationen för Adobe.
+Kontrollera att det adaptiva formuläret använder samma konfigurationsbehållare som innehåller Adobe Launch Configuration.
 
 Så här bekräftar du att formuläret skickar data till Adobe Analytics:
 
@@ -61,4 +61,4 @@ Lägg till [AEP-felsökningstillägget](https://experienceleague.adobe.com/docs/
 
 ## Grattis
 
-Du har integrerat AEM Forms as a Cloud Service med Adobe Analytics för att rapportera formulärdatafält.
+Du har nu integrerat AEM Forms as a Cloud Service med Adobe Analytics för att rapportera formulärdatafält.

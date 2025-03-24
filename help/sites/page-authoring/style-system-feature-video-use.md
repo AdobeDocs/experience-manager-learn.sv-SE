@@ -1,8 +1,8 @@
 ---
 title: Använda formatsystemet med AEM Sites
-description: Adobe Experience Manager Style System möjliggör visuella variationer av komponenterna utan bakomliggande utveckling, vilket möjliggör bättre återanvändning av AEM och mer flexibel och effektiv framtagning av innehåll. Style System, som används tillsammans med AEM kärnkomponenter, mallredigerare och responsiv layout, har kraftfulla funktioner för att snabbt skapa avancerade upplevelser.
+description: Adobe Experience Manager Style System möjliggör visuella variationer av komponenterna utan backend-utveckling, vilket möjliggör bättre återanvändning av AEM-komponenter och mer flexibel och effektiv framtagning av innehåll. Style System, som används tillsammans med AEM Core Components, malleditor och responsiv layout, har kraftfulla funktioner för att snabbt skapa avancerat material.
 feature: Style System
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-974
 thumbnail: 21750.jpg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Intermediate
 doc-type: Feature Video
 exl-id: 12490c29-91f4-4bb7-b7b6-7ed7cd3fb76d
 duration: 220
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 {{edge-delivery-services-and-page-editor}}
 
-Adobe Experience Manager Style System möjliggör visuella variationer av komponenterna utan bakomliggande utveckling, vilket möjliggör bättre återanvändning av AEM och mer flexibel och effektiv framtagning av innehåll. Style System, som används tillsammans med AEM Core Components, malleditor och responsiv layout, har kraftfulla funktioner för att snabbt skapa avancerade upplevelser.
+Adobe Experience Manager Style System möjliggör visuella variationer av komponenterna utan backend-utveckling, vilket möjliggör bättre återanvändning av AEM-komponenter och mer flexibel och effektiv framtagning av innehåll. Style System, som används tillsammans med AEM Core Components, malleditor och responsiv layout, har kraftfulla funktioner för att snabbt skapa avancerat material.
 
 >[!VIDEO](https://video.tv.adobe.com/v/21750?quality=12&learn=on)
 

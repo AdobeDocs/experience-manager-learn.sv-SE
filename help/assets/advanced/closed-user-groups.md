@@ -1,7 +1,7 @@
 ---
 title: Stängda användargrupper i AEM Assets
 description: Stängda användargrupper (CUG) är en funktion som används för att begränsa åtkomst till innehåll för en viss grupp användare på en publicerad webbplats. I den här videon visas hur stängda användargrupper kan användas med Adobe Experience Manager Assets för att begränsa åtkomst till en viss mapp med resurser.
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Administration, Security
 feature: User and Groups
 role: Admin
@@ -12,7 +12,7 @@ last-substantial-update: 2022-06-06T00:00:00Z
 doc-type: Feature Video
 exl-id: a2bf8a82-15ee-478c-b7c3-de8a991dfeb8
 duration: 321
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Stängda användargrupper (CUG) är en funktion som används för att begränsa 
 
 ## CUG (Closed User Group) med AEM Assets
 
-* Utformad för att begränsa åtkomst till resurser på en AEM Publish-instans.
+* Utformad för att begränsa åtkomst till resurser i en AEM Publish-instans.
 * Ger läsåtkomst till en uppsättning användare/grupper.
 * CUG kan bara konfigureras på mappnivå. CUG kan inte anges för enskilda resurser.
 * CUG-profiler ärvs automatiskt av alla undermappar och tillämpade resurser.
@@ -35,11 +35,11 @@ Stängda användargrupper (CUG) är en funktion som används för att begränsa 
 
 ## Stängda användargrupper jämfört med åtkomstkontrollistor {#closed-user-groups-vs-access-control-lists}
 
-Både stängda användargrupper (CUG) och åtkomstkontrollistor (ACL) används för att styra åtkomst till innehåll i AEM och baserat på AEM och grupper. Tillämpningen och implementeringen av dessa funktioner är dock mycket annorlunda. I följande tabell sammanfattas skillnaderna mellan de två funktionerna.
+Både stängda användargrupper (CUG) och åtkomstkontrollistor (ACL) används för att styra åtkomst till innehåll i AEM och baserat på AEM säkerhetsanvändare och -grupper. Tillämpningen och implementeringen av dessa funktioner är dock mycket annorlunda. I följande tabell sammanfattas skillnaderna mellan de två funktionerna.
 
 |                   | ACL | CUG |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Avsedd användning | Konfigurera och tillämpa behörigheter för innehåll på den **aktuella** AEM instansen. | Konfigurera CUG-principer för innehåll på AEM **author**-instans. Använd CUG-principer för innehåll på AEM **publicera** instans(er). |
+| Avsedd användning | Konfigurera och tillämpa behörigheter för innehåll på AEM-instansen **current**. | Konfigurera CUG-principer för innehåll på instansen **author** i AEM. Använd CUG-principer för innehåll i AEM **publish**-instanser. |
 | Behörighetsnivåer | Definierar beviljade/nekade behörigheter för användare/grupper på alla nivåer: Läs, Ändra, Skapa, Ta bort, Läs ACL, Redigera ACL, Replikera. | Ger läsåtkomst till en uppsättning användare/grupper. Nekar läsåtkomst till *alla andra* användare/grupper. |
 | Publicering | ACL-listor är *inte* publicerade med innehåll. | CUG-principer *publiceras* med innehåll. |
 

@@ -1,7 +1,7 @@
 ---
 title: AEM Assets Admin - visa videouppspelningslistor
-description: Lär dig utnyttja AEM Assets as a Cloud Service Admin-funktioner med den här samlingen videouppspelningslistor som är utformade för att förbättra dina produktfärdigheter.
-version: Cloud Service
+description: Lär dig använda funktionerna i AEM Assets as a Cloud Service Admin med den här samlingen videouppspelningslistor som är utformade för att förbättra dina produktfärdigheter.
+version: Experience Manager as a Cloud Service
 topic: Content Management
 role: User
 level: Beginner
@@ -9,7 +9,7 @@ last-substantial-update: 2024-11-01T00:00:00Z
 doc-type: Catalog
 duration: 60
 exl-id: 924b3bab-e0ed-4b07-bded-344aab61eac5
-source-git-commit: 33e0ded0cdcb5d8ed146fdc59c6f37495cd251eb
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 ![AEM Assets Admin-vy](./assets/admin-view.png){align="center"}
 
-Utforska de här spellistorna för att lära dig mer om AEM Assets as a Cloud Service administratörsvy - som omfattar konfiguration, optimering, användning och smidig integrering med kreativa arbetsflöden. Få de insikter ni behöver för att lyckas med AEM Assets as a Cloud Service.
+Utforska dessa spellistor och lär dig mer om hur du hanterar AEM Assets as a Cloud Service Admin - som omfattar konfiguration, optimering, användning och smidig integrering med kreativa arbetsflöden. Få de insikter ni behöver för att lyckas med AEM Assets as a Cloud Service.
 
 ## Konfigurera administratörsvyn
 
-Kom igång med viktiga konfigurationer och konfigurationer som gör AEM Assets as a Cloud Service smidigt för team och projekt.
+Kom igång med viktiga konfigurationer och konfigurationer så att AEM Assets as a Cloud Service fungerar smidigt för team och projekt.
 
 <!-- CARDS
 
@@ -49,7 +49,7 @@ Kom igång med viktiga konfigurationer och konfigurationer som gör AEM Assets a
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" title="Konfigurera administrativ åtkomst till Experience Manager">Konfigurera administrativ åtkomst till Experience Manager</a>
                     </p>
-                    <p class="is-size-6">Se hur användare autentiserar med Adobe IMS för AEM as a Cloud Service och hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomsten till AEM samt funktioner.</p>
+                    <p class="is-size-6">Se hur användare autentiserar med Adobe IMS för AEM as a Cloud Service och hur Adobe IMS-användare, användargrupper och produktprofiler används för att styra åtkomsten till AEM och dess funktioner.</p>
                 </div>
                 <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-all-configure-administrative-access" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Bevakning</span>
@@ -222,8 +222,8 @@ Få smidigt samarbete genom att integrera AEM Assets as a Cloud Service med dina
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-create-renditions-content-automation" title="Skapa anpassade återgivningar med AEM innehållsautomatisering" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_13985b4766ee5b638f540f60e2a52fb024471662e.jpeg?width=400&format=pjpg&optimize=medium" alt="Skapa anpassade återgivningar med AEM innehållsautomatisering"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-create-renditions-content-automation" title="Skapa anpassade återgivningar med AEM Content Automation" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_13985b4766ee5b638f540f60e2a52fb024471662e.jpeg?width=400&format=pjpg&optimize=medium" alt="Skapa anpassade återgivningar med AEM Content Automation"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -231,7 +231,7 @@ Få smidigt samarbete genom att integrera AEM Assets as a Cloud Service med dina
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-create-renditions-content-automation" target="_blank" rel="referrer" title="Skapa anpassade återgivningar med AEM innehållsautomatisering">Skapa anpassade återgivningar med AEM innehållsautomatisering</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-create-renditions-content-automation" target="_blank" rel="referrer" title="Skapa anpassade återgivningar med AEM Content Automation">Skapa anpassade återgivningar med AEM Content Automation</a>
                     </p>
                     <p class="is-size-6">Upptäck hur du kan använda tillägget för innehållsautomatisering för att integrera Adobe Experience Manager Assets som en molntjänst med Adobe Creative Cloud tjänst-API:er för effektiv materialbearbetning.</p>
                 </div>
@@ -245,8 +245,8 @@ Få smidigt samarbete genom att integrera AEM Assets as a Cloud Service med dina
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" title="Använd kreativa funktioner med AEM Assets Content Automation" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1d229d6d304f8ef16f59a8e759bd1b55a9b3b4d1d.jpeg?width=400&format=pjpg&optimize=medium" alt="Använd kreativa funktioner med AEM Assets Content Automation"
+                    <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" title="Använda Creative Operations med AEM Assets Content Automation" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/playlists/media_1d229d6d304f8ef16f59a8e759bd1b55a9b3b4d1d.jpeg?width=400&format=pjpg&optimize=medium" alt="Använda Creative Operations med AEM Assets Content Automation"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -254,7 +254,7 @@ Få smidigt samarbete genom att integrera AEM Assets as a Cloud Service med dina
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" target="_blank" rel="referrer" title="Använd kreativa funktioner med AEM Assets Content Automation">Använd kreativa åtgärder med AEM Assets Content Automation</a>
+                        <a href="https://experienceleague.adobe.com/en/playlists/experience-manager-assets-use-creative-operations-with-content-automation" target="_blank" rel="referrer" title="Använda Creative Operations med AEM Assets Content Automation">Använd Creative-åtgärder med AEM Assets Content Automation</a>
                     </p>
                     <p class="is-size-6">Lär dig hur du använder tillägget för innehållsautomatisering för att utföra Creative Cloud-åtgärder på Adobe Experience Manager Assets.</p>
                 </div>

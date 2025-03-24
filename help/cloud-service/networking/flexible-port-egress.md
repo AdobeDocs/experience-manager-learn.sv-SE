@@ -1,7 +1,7 @@
 ---
 title: Flexibel portutgång
 description: Lär dig hur du konfigurerar och använder flexibel portutgångar för att stödja externa anslutningar från AEM as a Cloud Service till externa tjänster.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -11,7 +11,7 @@ thumbnail: KT-9350.jpeg
 exl-id: 5c1ff98f-d1f6-42ac-a5d5-676a54ef683c
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 870
-source-git-commit: 29ac030f3774da2c514525f7cb85f6f48b84369f
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1275'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Lär dig hur du konfigurerar och använder flexibel portutgångar för att stöd
 
 ## Vad är flexibel hamnutgång?
 
-Flexibla portutgångar gör det möjligt att koppla anpassade, specifika regler för portvidarebefordran till AEM as a Cloud Service, vilket gör det möjligt att ansluta från AEM till externa tjänster.
+Flexibel portutgång gör det möjligt att koppla anpassade, specifika regler för portvidarebefordran till AEM as a Cloud Service, vilket gör det möjligt att ansluta från AEM till externa tjänster.
 
 Ett Cloud Manager-program kan bara ha en __enskild__ nätverksinfrastrukturtyp. Kontrollera att flexibel portutgång är den [lämpligaste typen av nätverksinfrastruktur](./advanced-networking.md) för din AEM as a Cloud Service innan du kör följande kommandon.
 
@@ -174,7 +174,7 @@ När du har skapat en flexibel portutgång kan du nu konfigurera regler för por
    |---------------------------------|----------|----------------|------------------|----------|
    | `AEM_PROXY_HOST` | `portForwards.portOrig` | → | `portForwards.name` | `portForwards.portDest` |
 
-   Om AEM __endast__ kräver HTTP/HTTPS-anslutningar (port 80/443) till den externa tjänsten lämnar du `portForwards`-arrayen tom, eftersom dessa regler bara krävs för icke-HTTP/HTTPS-begäranden.
+   Om din AEM-distribution __endast__ kräver HTTP/HTTPS-anslutningar (port 80/443) till den externa tjänsten lämnar du `portForwards`-arrayen tom, eftersom dessa regler bara krävs för icke-HTTP/HTTPS-begäranden.
 
 1. Verifiera egresreglerna för varje miljö med Cloud Manager API-åtgärden [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
@@ -190,12 +190,12 @@ När du har skapat en flexibel portutgång kan du nu konfigurera regler för por
 
 1. Flexibla portutgångskonfigurationer kan uppdateras med Cloud Manager API-åtgärden [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) . Kom ihåg att `enableEnvironmentAdvancedNetworkingConfiguration` är en `PUT`-åtgärd, så alla regler måste anges med varje anrop av den här åtgärden.
 
-1. Nu kan du använda den flexibla konfigurationen av portutgångar i din anpassade AEM och konfiguration.
+1. Nu kan du använda den flexibla konfigurationen av portutgångar i din anpassade AEM-kod och konfiguration.
 
 
 ## Ansluta till externa tjänster via flexibel hamnutgång
 
-När den flexibla portaregresproxyn är aktiverad kan AEM kod och konfiguration använda dem för att ringa till externa tjänster. Det finns två varianter av externa anrop som AEM behandlar på olika sätt:
+När den flexibla portaregresproxyn är aktiverad kan AEM-kod och konfiguration använda dem för att ringa till externa tjänster. Det finns två varianter av externa anrop som AEM hanterar på olika sätt:
 
 1. HTTP/HTTPS-anrop till externa tjänster på icke-standardportar
    + Innehåller HTTP/HTTPS-anrop till tjänster som körs på andra portar än standardportarna 80 eller 443.
@@ -209,7 +209,7 @@ HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standa
 
 När du skapar HTTP/HTTPS-anslutningar till portar som inte är standard (not-80/443) från AEM, måste anslutningarna göras via en särskild värd och portar, som tillhandahålls via platshållare.
 
-AEM innehåller två uppsättningar särskilda Java™-systemvariabler som mappar till AEM HTTP/HTTPS-proxy.
+AEM tillhandahåller två uppsättningar särskilda Java™-systemvariabler som mappar till AEM HTTP/HTTPS-proxy.
 
 | Variabelnamn | Använd | Java™-kod | OSGi-konfiguration |
 | - |  - | - | - |
@@ -241,14 +241,14 @@ När du gör HTTP/HTTPS-anrop till externa tjänster på icke-standardportar, be
 
 ### Icke-HTTP/HTTPS-anslutningar till externa tjänster
 
-När anslutningar som inte är HTTP/HTTPS skapas (t.ex. SQL, SMTP och så vidare) från AEM måste anslutningen upprättas via ett särskilt värdnamn som AEM anger.
+När anslutningar som inte är HTTP/HTTPS skapas (t.ex. SQL, SMTP och så vidare) från AEM måste anslutningen upprättas via ett särskilt värdnamn som tillhandahålls av AEM.
 
 | Variabelnamn | Använd | Java™-kod | OSGi-konfiguration |
 | - |  - | - | - |
 | `AEM_PROXY_HOST` | Proxyvärd för icke-HTTP/HTTPS-anslutningar | `System.getenv().getOrDefault("AEM_PROXY_HOST", "proxy.tunnel")` | `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` |
 
 
-Anslutningar till externa tjänster anropas sedan via `AEM_PROXY_HOST` och den mappade porten (`portForwards.portOrig`), som AEM sedan dirigeras till det mappade externa värdnamnet (`portForwards.name`) och porten (`portForwards.portDest`).
+Anslutningar till externa tjänster anropas sedan via `AEM_PROXY_HOST` och den mappade porten (`portForwards.portOrig`), som AEM sedan dirigerar till det mappade externa värdnamnet (`portForwards.name`) och porten (`portForwards.portDest`).
 
 | Proxyvärd | Proxyport |  | Extern värd | Extern port |
 |---------------------------------|----------|----------------|------------------|----------|

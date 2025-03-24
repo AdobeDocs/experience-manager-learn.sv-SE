@@ -2,14 +2,14 @@
 title: Importera data från en PDF-fil till ett adaptivt format
 description: Självstudiekurs för att fylla i ett anpassat formulär genom att importera en PDF-fil
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 jira: KT-14196
 exl-id: a9ad8f4d-695e-4eb3-8d35-a399d1700f90
 duration: 16
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 1%
@@ -18,9 +18,9 @@ ht-degree: 1%
 
 # Introduktion
 
-Ett vanligt användningsfall är att man kan fylla i ett anpassningsbart formulär från ett delvis ifyllt PDF-formulär.
+Ett vanligt användningsexempel är möjligheten att fylla i ett anpassningsbart formulär från ett delvis ifyllt PDF-formulär.
 
-Vi kommer att använda [IRS-formulär F23](./assets/f23.pdf) för att demonstrera det här användningsexemplet
+Vi ska demonstrera det här användningsexemplet genom att använda [IRS-formulär F23](./assets/f23.pdf)
 
 ## Förutsättningar
 

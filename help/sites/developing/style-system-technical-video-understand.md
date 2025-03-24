@@ -2,14 +2,14 @@
 title: Så här kodar du för AEM Style System
 description: I den här videon ska vi titta närmare på den beskrivning av CSS (eller LESS) och JavaScript som användes för att formatera Adobe Experience Managers Core Title Component med Style System, samt hur dessa format tillämpas på HTML och DOM.
 feature: Style System
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Intermediate, Experienced
 doc-type: Technical Video
 exl-id: 8fbc3819-3214-4c58-8629-a27eb6f0c545
 duration: 1005
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1065'
 ht-degree: 0%
@@ -25,7 +25,7 @@ I den här videon ska vi titta närmare på den beskrivning av CSS (eller [!DNL 
 
 >[!VIDEO](https://video.tv.adobe.com/v/21538?quality=12&learn=on)
 
-Det angivna AEM-paketet (**technical-review.sites.style-system-1.0.0.zip**) installerar exempelnamnstilen, exempelprinciper för komponenterna Web.Retail Layout Container och Title samt en exempelsida.
+Angivet AEM-paket (**technical-review.sites.style-system-1.0.0.zip**) installerar exempelnamnstilen, exempelprinciper för komponenterna Web.Retail Layout Container och Title samt en exempelsida.
 
 [technical-review.sites.style-system-1.0.0.zip](assets/technical-review.sites.style-system-1.0.0.zip)
 
@@ -63,7 +63,7 @@ För dem som föredrar CSS är det CSS som [!DNL LESS] kompilerar till under det
 }
 ```
 
-Ovanstående [!DNL LESS] kompileras av Experience Manager till följande CSS.
+Ovanstående [!DNL LESS] kompileras internt av Experience Manager till följande CSS.
 
 ```css
 /* CSS */
@@ -148,7 +148,7 @@ jQuery(function ($) {
 
 ### HTML bästa praxis {#html-best-practices}
 
-* HTML (som genereras via HTML) ska vara så strukturellt semantiskt som möjligt, så att onödiga grupperingar/kapslingar av element undviks.
+* HTML (genereras via HTML) ska vara så strukturellt semantiskt som möjligt, så att man slipper gruppera/kapsla element i onödan.
 * HTML-element ska kunna adresseras via CSS-klasser i BEM-format.
 
 **Bra** - Alla element i komponenten kan adresseras via BEM-notation:
@@ -175,7 +175,7 @@ jQuery(function ($) {
 
 * Det är bättre att exponera mer data och dölja dem än att exponera för för lite data som kräver framtida backend-utveckling för att exponera dem.
 
-   * Att implementera skribentreglage kan vara till hjälp när det gäller att behålla HTML, där författarna kan välja vilka innehållselement som ska skrivas till HTML. Funktionen kan vara särskilt viktig när du skriver bilder till HTML som inte kan användas för alla format.
+   * Att använda skribentreglage kan hjälpa till att hålla HTML stabilt, där författarna kan välja vilka innehållselement som ska skrivas till HTML. Funktionen kan vara särskilt viktig när du skriver bilder till HTML som inte kan användas för alla format.
    * Undantaget till den här regeln är när dyra resurser, till exempel bilder, exponeras som standard, eftersom händelsebilder som döljs av CSS i det här fallet hämtas i onödan.
 
       * Moderna bildkomponenter använder ofta JavaScript för att välja och läsa in den lämpligaste bilden för användningsfallet (visningsruta).
@@ -190,11 +190,11 @@ jQuery(function ($) {
 >
 >Alla andra innehavare av [BEM](https://en.bem.info/) ska justeras mot.
 
-* Använd preprocessorer som [LESS](https://lesscss.org/) (stöds av AEM internt) eller [SCSS](https://sass-lang.com/) (kräver anpassat byggsystem) för att tillåta en tydlig CSS-definition och återanvändbarhet.
+* Använd preprocessorer som [LESS](https://lesscss.org/) (stöds av AEM internt) eller [SCSS](https://sass-lang.com/) (kräver anpassat build-system) för att tillåta tydlig CSS-definition och återanvändbarhet.
 
 * Se till att väljarens vikt/specificitet är enhetlig. Detta hjälper till att undvika och lösa problem med att identifiera CSS-överlappningskonflikter.
 * Ordna varje format i en separat fil.
-   * Dessa filer kan kombineras med LESS/SCSS `@imports` eller om rå CSS krävs, via filinkludering i HTML-klientbibliotek eller anpassade system för framend-resursbygge.
+   * Dessa filer kan kombineras med LESS/SCSS `@imports` eller om rå CSS krävs, via filinkludering i HTML Client Library eller anpassade front-end-system för att skapa resurser.
 * Undvik att blanda många komplexa format.
    * Ju fler format som kan användas samtidigt på en komponent, desto fler möjligheter till genomskinlighet. Det kan bli svårt att upprätthålla/kvalitetssäkra varumärkesprofiler/säkerställa varumärkesanpassning.
 * Använd alltid CSS-klasser (efter BEM-notation) för att definiera CSS-regler.
@@ -240,11 +240,11 @@ De bästa metoderna som definieras i det här avsnittet gäller&quot;style-JavaS
 * Style-JavaScript ska i första hand användas för att ändra komponentens DOM för att ge stöd för formatering med CSS.
 * Utvärdera användningen av Javascript på nytt om komponenterna kommer att visas många gånger på en sida och förstå kostnaderna för beräkning/ritning och återanvändning.
 * Utvärdera användningen av Javascript på nytt om nya data/nytt innehåll hämtas asynkront (via AJAX) när komponenten kan visas många gånger på en sida.
-* Hantera både Publish- och redigeringsupplevelser.
+* Hantera både publicerings- och redigeringsupplevelser.
 * Återanvänd style-Javascript när det är möjligt.
    * Om flera format för en komponent till exempel kräver att bilden flyttas till en bakgrundsbild, kan style-JavaScript implementeras en gång och kopplas till flera `BLOCK--MODIFIERs`.
 * Separera style-JavaScript från fungerande JavaScript när det är möjligt.
-* Utvärdera kostnaden för JavaScript jämfört med att visa dessa DOM-förändringar i HTML direkt via HTML.
+* Utvärdera kostnaden för JavaScript jämfört med att visa dessa DOM-ändringar i HTML direkt via HTML.
    * När en komponent som använder style-JavaScript behöver ändras på serversidan, ska du utvärdera om JavaScript-manipuleringen kan utföras just nu och vilka effekter/förändringar som är kopplade till komponentens prestanda och stödbarhet.
 
 #### Prestandaöverväganden {#performance-considerations}
@@ -257,7 +257,7 @@ De bästa metoderna som definieras i det här avsnittet gäller&quot;style-JavaS
 ## Ytterligare resurser {#additional-resources}
 
 * [Systemdokumentation för format](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html)
-* [Skapar AEM klientbibliotek](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [Skapar AEM-klientbibliotek](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [BEM-dokumentationswebbplats (Block Element Modifier)](https://getbem.com/)
 * [LESS Documentation website](https://lesscss.org/)
 * [jQuery-webbplats](https://jquery.com/)

@@ -1,7 +1,7 @@
 ---
 title: Lägga till Symlinks i GIT på rätt sätt
 description: Instruktioner om hur och var du ska lägga till länkar när du arbetar med dina Dispatcher-konfigurationer.
-version: 6.5
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 6e751586-e92e-482d-83ce-6fcae4c1102c
 duration: 295
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1231'
 ht-degree: 0%
@@ -29,7 +29,7 @@ När du har skapat din första `.vhost`-fil eller `farm.any`-fil på den överst
 
 ## Dispatcher Archetype
 
-AEM utvecklare startar sitt projekt vanligtvis från [AEM-arkitypen](https://github.com/adobe/aem-project-archetype)
+AEM-utvecklaren startar sitt projekt vanligtvis från [AEM-arkitypen](https://github.com/adobe/aem-project-archetype)
 
 Här följer ett exempel på området i källkoden där du kan se de symboler som används:
 
@@ -176,7 +176,7 @@ Standardvärdet är true, förutom `git-clone[1]` eller `git-init[1] will probe 
 
 Beteendet för Git i Windows förklaras här: Symboliska länkar ・ Git-for-windows/git Wiki ・ GitHub
 
-> `Info`: Antagandena i den dokumentation som är länkad ovan verkar vara OK med en möjlig AEM Developer&#39;s Setup i Windows, framför allt NTFS, och det faktum att vi bara har filsymboler jämfört med katalogsymboler
+> `Info`: Antagandena i den dokumentation som är länkad ovan verkar vara OK med en möjlig AEM Developer-konfiguration i Windows, främst NTFS, och det faktum att vi bara har filsymboler jämfört med katalogsymboler
 
 Här är de goda nyheterna eftersom [Git för Windows version 2.10.2](https://github.com/git-for-windows/git/releases/tag/v2.10.2.windows.1) har installeraren ett [explicit alternativ för att aktivera stöd för symboliska länkar.](https://github.com/git-for-windows/git/issues/921)
 
@@ -228,7 +228,7 @@ MSYS=winsymlinks:nativestrict ln -s test_vhost_symlink ../dispatcher/src/conf.d/
 
 #### Sammanfattning
 
-För att få Git-hanteringssymboler på rätt sätt (åtminstone för omfånget för den aktuella AEM dispatcher-konfigurationsbaslinjen) på ett Microsoft Windows-operativsystem behöver du:
+För att få Git-hanteringssymboler på rätt sätt (åtminstone för omfånget för den aktuella AEM-dispatcherkonfigurationsbaslinjen) på ett Microsoft Windows-operativsystem behöver du:
 
 | Objekt | Minsta version/konfiguration | Rekommenderad version/konfiguration |
 |------|---------------------------------|-------------------------------------|

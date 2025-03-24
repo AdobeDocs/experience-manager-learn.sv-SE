@@ -4,13 +4,13 @@ description: I den här artikeln beskrivs stegen för hur du ansluter Workbench 
 type: Troubleshooting
 role: Admin
 level: Intermediate
-version: 6.5
+version: Experience Manager 6.5
 feature: Workbench
 topic: Administration
 index: y
 exl-id: 89f485c3-cd6f-4814-8538-de9c07b33ba4
 duration: 53
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%

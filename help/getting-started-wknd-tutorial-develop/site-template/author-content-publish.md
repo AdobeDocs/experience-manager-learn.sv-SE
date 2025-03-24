@@ -1,7 +1,7 @@
 ---
-title: Introduktion till redigering och publicering | Skapa AEM
-description: Använd sidredigeraren i Adobe Experience Manager AEM för att uppdatera webbplatsens innehåll. Lär dig hur komponenter används för att underlätta redigering. Förstå skillnaden mellan en AEM författare och Publish-miljö och lär dig hur du publicerar ändringar på den publicerade webbplatsen.
-version: Cloud Service
+title: Introduktion till redigering och publicering | Skapa AEM-webbplatser snabbt
+description: Använd sidredigeraren i Adobe Experience Manager, AEM för att uppdatera webbplatsens innehåll. Lär dig hur komponenter används för att underlätta redigering. Förstå skillnaden mellan en AEM Author- och Publish-miljö och lär dig hur man publicerar ändringar på den publicerade webbplatsen.
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 17ca57d1-2b9a-409c-b083-398d38cd6a19
 recommendations: noDisplay, noCatalog
 duration: 263
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1285'
 ht-degree: 0%
@@ -37,8 +37,8 @@ Det här är en självstudiekurs i flera delar och det antas att stegen som besk
 
 En webbplats delas vanligtvis upp i sidor för att skapa en flersidig upplevelse. AEM strukturerar innehållet på samma sätt. Skapa sedan en ny sida för webbplatsen.
 
-1. Logga in på AEM **Författartjänst** som användes i föregående kapitel.
-1. Klicka på **Webbplatser** > **WKND-plats** > **Engelska** > **Artikel** på AEM startskärm
+1. Logga in på AEM **Author** Service som användes i föregående kapitel.
+1. På startskärmen i AEM klickar du på **Webbplatser** > **WKND-plats** > **Engelska** > **Artikel**
 1. Klicka på **Skapa** > **Sida** i det övre högra hörnet.
 
    ![Skapa sida](assets/author-content-publish/create-page-button.png)
@@ -58,7 +58,7 @@ En webbplats delas vanligtvis upp i sidor för att skapa en flersidig upplevelse
 
 ## Skapa en komponent {#author-component}
 
-AEM kan ses som små modulära byggstenar på en webbsida. Genom att dela upp användargränssnittet i logiska segment eller komponenter blir det mycket enklare att hantera. För att återanvända komponenter måste komponenterna vara konfigurerbara. Detta sker via författardialogrutan.
+AEM-komponenter kan ses som små modulära byggstenar på en webbsida. Genom att dela upp användargränssnittet i logiska segment eller komponenter blir det mycket enklare att hantera. För att återanvända komponenter måste komponenterna vara konfigurerbara. Detta sker via författardialogrutan.
 
 AEM tillhandahåller en uppsättning [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) som är färdiga att använda. **Kärnkomponenterna** sträcker sig från grundläggande element som [Text](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) och [Bild](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) till mer komplexa gränssnittselement som [Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html).
 
@@ -92,83 +92,83 @@ Skapa sedan några komponenter med AEM Page Editor.
 
 Experimentera fritt med några andra komponenter. Dokumentation om varje [kärnkomponent finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). En detaljerad videoserie om [Sidredigering finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html).
 
-## Publish-uppdateringar {#publish-updates}
+## Publicera uppdateringar {#publish-updates}
 
-AEM har delats mellan en **författartjänst** och en **Publish-tjänst**. I det här kapitlet har vi gjort flera ändringar av webbplatsen på **författartjänsten**. För att webbplatsbesökarna ska kunna se ändringarna måste de publiceras på **Publish-tjänsten**.
+AEM-miljöer delas mellan en **författartjänst** och en **publiceringstjänst**. I det här kapitlet har vi gjort flera ändringar av webbplatsen på **författartjänsten**. För att webbplatsbesökarna ska kunna se ändringarna måste de publiceras i **publiceringstjänsten**.
 
 ![Högnivådiagram](assets/author-content-publish/author-publish-high-level-flow.png)
 
-*Högt innehållsflöde från författare till Publish*
+*Högt innehållsflöde från författare till publicering*
 
 **1.** Innehållsförfattare uppdaterar webbplatsinnehållet. Uppdateringarna kan förhandsgranskas, granskas och godkännas för publicering.
 
 **2.**-innehåll publiceras. Publicering kan utföras on demand eller planeras för ett framtida datum.
 
-**3.** Besökare på webbplatsen kommer att se ändringarna som återspeglas i Publish-tjänsten.
+**3.** Webbplatsbesökarna ser ändringarna som återspeglas i publiceringstjänsten.
 
-### Publish the changes
+### Publicera ändringarna
 
 Nu ska vi publicera ändringarna.
 
-1. Gå till **Webbplatser** från AEM startsida och välj **WKND-plats**.
+1. På startskärmen i AEM går du till **Webbplatser** och väljer **WKND-webbplatsen**.
 1. Klicka på **Hantera publikation** på menyraden.
 
    ![Hantera publikation](assets/author-content-publish/click-manage-publiciation.png)
 
    Eftersom det här är en helt ny webbplats vill vi publicera alla sidor och kan använda guiden Hantera publikation för att definiera exakt vad som behöver publiceras.
 
-1. Under **Alternativ** låter du standardinställningarna vara **Publish** och schemalägger dem för **Now**. Klicka på **Nästa**.
+1. Under **Alternativ** låter du standardinställningarna vara **Publicera** och schemalägger den för **nu**. Klicka på **Nästa**.
 1. Under **Omfång** markerar du **WKND-platsen** och klickar på **Inkludera underordnade inställningar**. Markera **Inkludera underordnade** i dialogrutan. Avmarkera resten av rutorna för att säkerställa att hela webbplatsen publiceras.
 
    ![Uppdatera publiceringsomfång](assets/author-content-publish/update-scope-publish.png)
 
 1. Klicka på knappen **Publicerade referenser**. Kontrollera att allt är markerat i dialogrutan. Detta inkluderar **standardplatsmallen** och flera konfigurationer som genereras av platsmallen. Klicka på **Klar** för att uppdatera.
 
-   ![Publish-referenser](assets/author-content-publish/publish-references.png)
+   ![Publicera referenser](assets/author-content-publish/publish-references.png)
 
 1. Markera kryssrutan intill **WKND-plats** och klicka på **Nästa** i det övre högra hörnet.
-1. Ange en **arbetsflödesrubrik** i steget **Arbetsflöden**. Detta kan vara vilken text som helst och kan vara användbart som en del av en granskningsversion senare. Ange&quot;Inledande publicering&quot; och klicka på **Publish**.
+1. Ange en **arbetsflödesrubrik** i steget **Arbetsflöden**. Detta kan vara vilken text som helst och kan vara användbart som en del av en granskningsversion senare. Ange&quot;Inledande publicering&quot; och klicka på **Publicera**.
 
 ![Inledande publicering av arbetsflödessteg](assets/author-content-publish/workflow-step-publish.png)
 
 ## Visa publicerat innehåll {#publish}
 
-Gå sedan till Publish-tjänsten för att se ändringarna.
+Navigera sedan till Publicera-tjänsten för att visa ändringarna.
 
-1. Ett enkelt sätt att hämta URL:en för Publish-tjänsten är att kopiera författar-URL:en och ersätta ordet `author` med `publish`. Till exempel:
+1. Ett enkelt sätt att hämta URL:en för publiceringstjänsten är att kopiera författar-URL:en och ersätta `author`-ordet med `publish`. Till exempel:
 
    * **Författar-URL** - `https://author-pYYYY-eXXXX.adobeaemcloud.com/`
-   * **Publish URL** - `https://publish-pYYYY-eXXXX.adobeaemcloud.com/`
+   * **Publicera URL** - `https://publish-pYYYY-eXXXX.adobeaemcloud.com/`
 
-1. Lägg till `/content/wknd.html` i Publish URL så att den slutliga URL:en ser ut så här: `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd.html`.
+1. Lägg till `/content/wknd.html` i publicerings-URL:en så att den slutliga URL:en ser ut så här: `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd.html`.
 
    >[!NOTE]
    >
    > Ändra `wknd.html` så att det matchar namnet på din webbplats, om du angav ett unikt namn när [platsen skapades](create-site.md).
 
-1. Om du navigerar till Publish URL bör du se webbplatsen, utan någon AEM redigeringsfunktion.
+1. Navigera till publicerings-URL:en som du vill visa webbplatsen, utan någon av AEM-redigeringsfunktionerna.
 
    ![Publicerad webbplats](assets/author-content-publish/publish-url-update.png)
 
 1. Använd menyn **Navigering** och klicka på **Artikel** > **Hello World** för att navigera till sidan Hello World som skapades tidigare.
-1. Gå tillbaka till **AEM författartjänsten** och gör ytterligare innehållsändringar i sidredigeraren.
-1. Publish dessa ändringar direkt från sidredigeraren genom att klicka på ikonen **Sidegenskaper** > **Publish Page**
+1. Gå tillbaka till **AEM Author Service** och gör ytterligare innehållsändringar i sidredigeraren.
+1. Publicera dessa ändringar direkt i sidredigeraren genom att klicka på ikonen **Sidegenskaper** > **Publicera sida**
 
    ![publicera direkt](assets/author-content-publish/page-editor-publish.png)
 
-1. Gå tillbaka till **AEM Publish-tjänsten** om du vill visa ändringarna. Troligen kommer du **inte** omedelbart att se uppdateringarna. Detta beror på att **AEM Publish-tjänsten** inkluderar [cachelagring via en Apache-webbserver och CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html). Som standard cachelagras HTML innehåll i cirka 5 minuter.
+1. Gå tillbaka till **AEM Publish Service** om du vill visa ändringarna. Troligen kommer du **inte** omedelbart att se uppdateringarna. Detta beror på att **AEM Publiceringstjänst** inkluderar [cachelagring via en Apache-webbserver och CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html). Som standard cachelagras HTML-innehåll i cirka 5 minuter.
 
 1. Om du vill kringgå cachen för testnings-/felsökningssyften lägger du bara till en frågeparameter som `?nocache=true`. URL:en skulle se ut som `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`. Mer information om cachningsstrategi och konfigurationer som är tillgängliga [finns här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html).
 
-1. Du kan även hitta URL:en till Publish-tjänsten i Cloud Manager. Navigera till **Cloud Manager-programmet** > **Miljö** > **Miljö**.
+1. Du kan också hitta URL:en till publiceringstjänsten i Cloud Manager. Navigera till **Cloud Manager-programmet** > **Miljö** > **Miljö**.
 
-   ![Visa Publish-tjänsten](assets/author-content-publish/view-environment-segments.png)
+   ![Visa publiceringstjänst](assets/author-content-publish/view-environment-segments.png)
 
-   Under **Miljösegment** hittar du länkar till tjänsterna **Författare** och **Publish**.
+   Under **Miljösegment** hittar du länkar till tjänsterna **Författare** och **Publicera**.
 
 ## Grattis! {#congratulations}
 
-Grattis! Du har just skrivit och publicerat ändringar på din AEM webbplats!
+Grattis! Du har just skrivit och publicerat ändringar på din AEM-webbplats!
 
 ### Nästa steg {#next-steps}
 

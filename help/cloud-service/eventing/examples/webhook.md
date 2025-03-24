@@ -1,7 +1,7 @@
 ---
-title: Webbhooks och AEM
-description: Lär dig hur du tar emot AEM händelser på en webbkrok och granskar händelseinformation som nyttolast, rubriker och metadata.
-version: Cloud Service
+title: Webbhooks och AEM Events
+description: Lär dig hur du tar emot AEM Events på en webbkrok och granskar händelseinformation som nyttolast, rubriker och metadata.
+version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
 role: Architect, Developer
@@ -12,20 +12,20 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
 exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
-source-git-commit: efa0a16649c41fab8309786a766483cfeab98867
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%
 
 ---
 
-# Webbhooks och AEM
+# Webbhooks och AEM Events
 
-Lär dig hur du tar emot AEM på en webbkrok och granskar händelseinformation som nyttolast, huvuden och metadata.
+Lär dig hur du tar emot AEM-händelser på en webbkrok och granskar händelseinformation som nyttolast, sidhuvuden och metadata.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
 
-I det här exemplet kan du använda en _webbkrok_ som tillhandahålls av Adobe för att ta emot AEM händelser utan att behöva konfigurera en egen webbkrok. Den här webbkroken som tillhandahålls av Adobe finns på [Glitch](https://glitch.com/), en plattform som är känd för att erbjuda en webbaserad miljö som underlättar skapandet och distributionen av webbprogram. Alternativet att använda din egen webkrok är dock också tillgängligt om du vill.
+I det här exemplet kan du använda en _webbkrok_ som tillhandahålls av Adobe för att ta emot AEM-händelser utan att behöva konfigurera en egen webbkrok. Den här webbkroken som tillhandahålls av Adobe ligger på [Glitch](https://glitch.com/), en plattform som är känd för att erbjuda en webbaserad miljö som underlättar skapandet och distributionen av webbprogram. Alternativet att använda din egen webkrok är dock också tillgängligt om du vill.
 
 ## Förutsättningar
 
@@ -33,7 +33,7 @@ För att kunna genomföra den här självstudiekursen behöver du:
 
 - AEM as a Cloud Service-miljö med [AEM Eventing aktiverat](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#enable-aem-events-on-your-aem-cloud-service-environment).
 
-- [Adobe Developer Console-projekt konfigurerat för AEM ](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console).
+- [Adobe Developer Console-projekt konfigurerat för AEM Events](https://developer.adobe.com/experience-cloud/experience-manager-apis/guides/events/#how-to-subscribe-to-aem-events-in-the-adobe-developer-console).
 
 
 ## Åtkomst till webkrok
@@ -52,11 +52,11 @@ Följ de här stegen för att få åtkomst till webbkroken som tillhandahålls a
 
 ## Konfigurera webkrok i Adobe Developer Console Project
 
-Följ de här stegen för att ta emot AEM händelser på webbkroks-URL:en ovan:
+Så här tar du emot AEM Events på webbholländarens URL:
 
 - Gå till ditt projekt i [Adobe Developer Console](https://developer.adobe.com) och klicka för att öppna det.
 
-- Under avsnittet **Produkter och tjänster** klickar du på ellipser `...` bredvid önskat händelsekort som ska skicka AEM till webbkroken och välja **Redigera**.
+- Under avsnittet **Produkter och tjänster** klickar du på ellipser `...` bredvid önskat händelsekort som ska skicka AEM-händelser till webbkroken och välja **Redigera**.
 
   ![Adobe Developer Console Project Edit](../assets/examples/webhook/adobe-developer-console-project-edit.png)
 
@@ -68,14 +68,14 @@ Följ de här stegen för att ta emot AEM händelser på webbkroks-URL:en ovan:
 
   ![Adobe Developer Console Project Webkrok](../assets/examples/webhook/adobe-developer-console-project-webhook.png)
 
-- På Glitch-webbbokssidan bör du se en GET-förfrågan. Det är en utmaningsbegäran som skickas av Adobe I/O Events för att verifiera webboks-URL:en.
+- På Glitch-webbbokssidan bör du se en GET-förfrågan. Det är en utmaningsförfrågan som skickas av Adobe I/O Events för att verifiera webboks-URL:en.
 
   ![Fel - utmaningsbegäran](../assets/examples/webhook/glitch-challenge-request.png)
 
 
-## Utlös AEM
+## Utlös AEM-event
 
-Så här utlöser du AEM händelser från din AEM as a Cloud Service-miljö som har registrerats i ovanstående Adobe Developer Console-projekt:
+Så här utlöser du AEM-händelser från din AEM as a Cloud Service-miljö som har registrerats i ovanstående Adobe Developer Console-projekt:
 
 - Få åtkomst till och logga in i AEM as a Cloud Service redigeringsmiljö via [Cloud Manager](https://my.cloudmanager.adobe.com/).
 
@@ -83,15 +83,15 @@ Så här utlöser du AEM händelser från din AEM as a Cloud Service-miljö som 
 
 ## Granska händelseinformation
 
-När du är klar med ovanstående steg bör du se AEM händelser levereras till webbkroken. Leta efter POSTENS förfrågan på Glitch-webbkroksidan.
+När du är klar med ovanstående steg bör du se vilka AEM Events som levereras till webbkroken. Leta efter POST-begäran på Glitch-webbsidan.
 
-![Fel - begäran om POST](../assets/examples/webhook/glitch-post-request.png)
+![Fel - POST-begäran](../assets/examples/webhook/glitch-post-request.png)
 
-Här är viktig information om POSTEN:
+Här är viktig information om POST-begäran:
 
 - sökväg: `/webhook/${YOUR-WEBHOOK-URL}`, till exempel `/webhook/AdobeTM-aem-eventing`
 
-- rubriker: begäranrubriker som skickas av Adobe I/O-händelser, till exempel:
+- rubriker: begäranrubriker som skickas av Adobe I/O Events, till exempel:
 
 ```json
 {
@@ -117,7 +117,7 @@ Här är viktig information om POSTEN:
 }
 ```
 
-- body/payload: request body sent by the Adobe I/O Events, till exempel:
+- body/payload: request body sent by Adobe I/O Events, till exempel:
 
 ```json
 {
@@ -151,7 +151,7 @@ Här är viktig information om POSTEN:
 }
 ```
 
-Du kan se att informationen om AEM har all information som krävs för att bearbeta händelsen i webkroken. Händelsetypen (`type`), händelsekällan (`source`), händelse-ID (`event_id`), händelsetypen (`time`) och händelsedata (`data`).
+Du ser att informationen om AEM-händelsen innehåller all information som krävs för att händelsen ska kunna bearbetas i webkroken. Händelsetypen (`type`), händelsekällan (`source`), händelse-ID (`event_id`), händelsetypen (`time`) och händelsedata (`data`).
 
 ## Ytterligare resurser
 

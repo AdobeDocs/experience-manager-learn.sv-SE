@@ -4,12 +4,12 @@ description: Skapa en ny adresskomponent i AEM Forms as a Cloud Service
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-15752
 exl-id: 6f2b280d-c2b5-4b75-88e4-2296329d69e7
-source-git-commit: b4df652fcda0af5d01077b97aa7fa17cfe2abf4b
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '73'
 ht-degree: 0%

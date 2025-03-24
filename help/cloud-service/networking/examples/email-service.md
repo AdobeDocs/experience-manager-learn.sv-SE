@@ -1,7 +1,7 @@
 ---
 title: E-posttjänst
 description: Lär dig hur du konfigurerar AEM as a Cloud Service att ansluta till en e-posttjänst med hjälp av utgångsportar.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9353
 thumbnail: KT-9353.jpeg
 exl-id: 5f919d7d-e51a-41e5-90eb-b1f6a9bf77ba
 duration: 76
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # E-posttjänst
 
-Skicka e-postmeddelanden från AEM as a Cloud Service genom att konfigurera AEM `DefaultMailService` så att avancerade nätverksportar används.
+Skicka e-postmeddelanden från AEM as a Cloud Service genom att konfigurera AEM `DefaultMailService` så att den använder avancerade portar för nätverksutgångar.
 
 Eftersom (de flesta) e-posttjänster inte körs via HTTP/HTTPS måste anslutningar till e-posttjänster från AEM as a Cloud Service proxideras.
 
@@ -31,9 +31,9 @@ Eftersom (de flesta) e-posttjänster inte körs via HTTP/HTTPS måste anslutning
 
 Eftersom hemligheter inte får lagras i kod bör e-posttjänstens användarnamn och lösenord anges med [hemliga OSGi-konfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values), som anges med AIO CLI eller Cloud Manager API.
 
-Vanligtvis används [flexibel portutgång](../flexible-port-egress.md) för att underlätta integrering med en e-posttjänst, såvida det inte är nödvändigt att `allowlist` IP-adressen för Adobe, och i så fall kan [dedikerad IP-adress](../dedicated-egress-ip-address.md) användas.
+[Flexibel portutgång](../flexible-port-egress.md) används vanligtvis för att underlätta integrering med en e-posttjänst, såvida det inte är nödvändigt att `allowlist` Adobe IP, vilket innebär att [dedikerad IP-adress](../dedicated-egress-ip-address.md) kan användas.
 
-Granska även AEM dokumentation om [att skicka e-post](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
+Läs även AEM-dokumentationen om att [skicka e-post](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines.html#sending-email).
 
 ## Avancerat nätverksstöd
 
@@ -47,7 +47,7 @@ Kontrollera att den [lämpliga](../advanced-networking.md#advanced-networking) a
 
 ## OSGi-konfiguration
 
-I det här OSGi-konfigurationsexemplet konfigureras AEM Mail OSGi-tjänsten att använda en extern e-posttjänst med hjälp av följande Cloud Manager `portForwards`-regel i åtgärden [ enableEnvironmentAdvancedNetworkingConfiguration ](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) .
+I det här OSGi-konfigurationsexemplet konfigureras AEM Mail OSGi-tjänsten till att använda en extern e-posttjänst med hjälp av följande Cloud Manager `portForwards`-regel i åtgärden [ enableEnvironmentAdvancedNetworkingConfiguration ](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) .
 
 ```json
 ...

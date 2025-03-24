@@ -2,14 +2,14 @@
 title: Ställ in översättningsregler i AEM
 description: Med översättningskonfigurationens gränssnitt kan en användare hantera regler för översättning av innehåll i AEM Sites. I den här videon beskrivs hur du skapar en ny översättningsregel för en anpassad komponent.
 feature: Language Copy
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Localization
 role: User
 level: Beginner
 doc-type: Technical Video
 exl-id: 359da531-839c-4680-abf9-c880cc700159
 duration: 542
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Med översättningskonfigurationens gränssnitt kan en användare hantera regler
 
 >[!NOTE]
 >
-> Videon nedan spelades in AEM 6.3. I AEM 6.4+ introduceras en ny databasstruktur för lagring av XML-filen för översättningsregler. När användargränssnittet för översättningskonfiguration används i AEM 6.4 sparas reglerna på platsen `/conf/global/settings/translation/rules/translation_rules.xml`. Mer information finns i [Identifiera innehåll som ska översättas](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html).
+> Videon nedan spelades in på AEM 6.3. I AEM 6.4+ introduceras en ny databasstruktur för lagring av XML-filen för översättningsregler. När du använder användargränssnittet för översättningskonfiguration i AEM 6.4 sparas reglerna på platsen `/conf/global/settings/translation/rules/translation_rules.xml`. Mer information finns i [Identifiera innehåll som ska översättas](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135?quality=12&learn=on)
 
@@ -40,7 +40,7 @@ Gå till gränssnittet för översättningskonfiguration:
 
 ## Före AEM 6.3 {#prior-to-aem}
 
-Översättningsreglerna i tidigare AEM har uppdaterats manuellt genom att en XML-fil som finns under översättningsarbetsflödet har redigerats: `/etc/workflow/models/translation/translation_rules.xml`.
+Översättningsreglerna för tidigare versioner av AEM uppdaterades manuellt genom att en XML-fil som finns under översättningsarbetsflödet redigerades: `/etc/workflow/models/translation/translation_rules.xml`.
 
 ## Ytterligare resurser {#additional-resources}
 

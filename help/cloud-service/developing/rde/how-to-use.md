@@ -2,7 +2,7 @@
 title: Så här använder du Rapid Development Environment
 description: Lär dig hur du använder Rapid Development Environment för att distribuera kod och innehåll från din lokala dator.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ thumbnail: KT-11862.png
 last-substantial-update: 2023-02-15T00:00:00Z
 exl-id: 1d1bcb18-06cd-46fc-be2a-7a3627c1e2b2
 duration: 792
-source-git-commit: 98d67d5b624b386c6a579cd03117372bc9058acb
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '792'
 ht-degree: 0%

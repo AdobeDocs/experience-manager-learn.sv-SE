@@ -1,7 +1,7 @@
 ---
-title: UI Planning with Adobe XD | Skapa AEM
+title: UI Planning with Adobe XD | Skapa AEM-webbplatser snabbt
 description: Läs om hur Adobe XD UI Kits kan användas för att utforma och snabba upp implementeringen av Adobe Experience Manager Sites.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 3155e0fa-56b7-4a52-8eef-fee488e95f68
 recommendations: noDisplay, noCatalog
 duration: 646
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # UI Planning with Adobe XD {#ui-planning-adobe-xd}
 
-I de flesta fall börjar planering av en ny webbplats med dummies och statisk design. [Adobe XD](https://www.adobe.com/products/xd.html) är det bästa designverktyget för att skapa användarupplevelser. Adobe rekommenderar att du planerar implementeringen av dina webbplatser med hjälp av gränssnittsmodeller med Adobe XD eller något annat verktyg.
+I de flesta fall börjar planering av en ny webbplats med dummies och statisk design. [Adobe XD](https://www.adobe.com/products/xd.html) är det bästa designverktyget för att skapa användarupplevelser. Adobe rekommenderar att du planerar implementeringen av dina webbplatser genom att använda gränssnittsmodeller med Adobe XD eller något annat verktyg.
 
 ## Förutsättningar {#prerequisites}
 
@@ -45,8 +45,8 @@ I det här kapitlet inspekteras två Adobe XD-filer, en för [standardwebbplatsm
 
 Steg på hög nivå:
 
-1. Hämta [standardwebbplatsmallen XD filen ](https://github.com/adobe/aem-site-template-standard/raw/main/files/wireframe.xd).
-1. Inspect the UI Kit in Adobe XD.
+1. Hämta XD-filen [Standardwebbplatsmall](https://github.com/adobe/aem-site-template-standard/raw/main/files/wireframe.xd).
+1. Inspektera UI Kit i Adobe XD.
 1. Simulera vidarebefordran av materialet till en utvecklare.
 
 ## WKND UI Kit {#wknd-ui-kit}
@@ -55,8 +55,8 @@ Steg på hög nivå:
 
 Steg på hög nivå:
 
-1. Hämta [WKND-XD](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd).
-1. Inspect designen för WKND-artikelmallen.
+1. Hämta [WKND-artikelfilen för XD](https://github.com/adobe/aem-guides-wknd/releases/download/aem-guides-wknd-0.0.2/AEM_UI-kit-WKND-article-design.xd).
+1. Granska designen för WKND-artikelmallen.
 
 ## Grattis! {#congratulations}
 

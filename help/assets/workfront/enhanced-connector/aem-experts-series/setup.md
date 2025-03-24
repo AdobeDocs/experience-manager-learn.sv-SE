@@ -1,7 +1,7 @@
 ---
-title: Inledande installation och konfiguration av Workfront för AEM förbättrade anslutningsprogram
-description: Lär dig hur du konfigurerar och konfigurerar den utökade Workfront-anslutningen för Experience Manager och frigör AEM Assets och Workfront kombinerade kapacitet.
-version: Cloud Service
+title: Inledande installation och konfiguration av Workfront för AEM med utökad anslutning
+description: Lär dig hur du konfigurerar och konfigurerar den förbättrade anslutningen till Workfront för Experience Manager och frigör den kombinerade kraften hos AEM Assets och Workfront.
+version: Experience Manager as a Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
 role: Admin, Architect, Developer
@@ -14,7 +14,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: f0018d16-af96-4b92-b0fc-6130d812bf8f
 duration: 2479
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
@@ -23,10 +23,10 @@ ht-degree: 0%
 
 # Inledande konfiguration och konfiguration
 
-![AEM expertsserie](./assets/banner.png)
+![AEM Experts Series](./assets/banner.png)
 
-Lär dig hur du konfigurerar och konfigurerar den utökade Workfront-anslutningen för Experience Manager och frigör AEM Assets och Workfront kombinerade kapacitet.
+Lär dig hur du konfigurerar och konfigurerar den förbättrade anslutningen till Workfront för Experience Manager och frigör den kombinerade kraften hos AEM Assets och Workfront.
 
 >[!VIDEO](https://video.tv.adobe.com/v/340331?quality=12&learn=on)
 
-_Det här är en del av en [expertserie i fyra delar på Workfront för den utökade anslutningen Experience Manager](./overview.md)_
+_Det här är en del av en [expertserie i fyra delar på den utökade anslutningen för Workfront för Experience Manager](./overview.md)_

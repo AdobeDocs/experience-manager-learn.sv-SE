@@ -1,7 +1,7 @@
 ---
 title: Spåra klickade komponenter med Adobe Analytics
-description: Använd det händelsestyrda Adobe Client Data-lagret för att spåra klickningar på specifika komponenter på en Adobe Experience Manager-plats. Lär dig hur du använder taggregler för att lyssna efter dessa händelser och skicka data till en Adobe Analytics-rapportserie med hjälp av en spårlänkssignal.
-version: Cloud Service
+description: Använd det händelsestyrda Adobe Client Data-lagret för att spåra klickningar på specifika komponenter på en Adobe Experience Manager-webbplats. Lär dig hur du använder taggregler för att lyssna efter dessa händelser och skicka data till en Adobe Analytics-rapportserie med hjälp av en spårlänkssignal.
+version: Experience Manager as a Cloud Service
 topic: Integrations
 feature: Adobe Client Data Layer
 role: Developer
@@ -12,7 +12,7 @@ badgeIntegration: label="Integrering" type="positive"
 doc-type: Tutorial
 exl-id: ab051363-d3e8-4c07-b1fa-3a5d24757496
 duration: 394
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1750'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Spåra klickade komponenter med Adobe Analytics
 
-Använd det händelsestyrda [Adobe-klientdatalagret med AEM kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) för att spåra klickningar på specifika komponenter på en Adobe Experience Manager-plats. Lär dig hur du använder regler i taggegenskapen för att lyssna efter klickhändelser, filtrera efter komponent och skicka data till en Adobe Analytics med en spårlänkssignal.
+Använd det händelsestyrda [Adobe Client Data Layer med AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) för att spåra klickningar på specifika komponenter på en Adobe Experience Manager-webbplats. Lär dig hur du använder regler i taggegenskapen för att lyssna efter klickhändelser, filtrera efter komponent och skicka data till en Adobe Analytics med en spårlänkssignal.
 
 ## Vad du ska bygga {#what-build}
 
@@ -41,9 +41,9 @@ Den här självstudien är en fortsättning på [Samla in siddata med Adobe Anal
 
 * En **taggegenskap** med [Adobe Analytics-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html) aktiverat
 * **Adobe Analytics** test-/dev-rapportsprogram-ID och spårningsserver. I följande dokumentation finns information om hur du [skapar en rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html).
-* Webbläsartillägget [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) har konfigurerats med taggegenskapen inläst på [WKND-webbplatsen](https://wknd.site/us/en.html) eller en AEM webbplats med datalagret Adobe aktiverat.
+* Webbläsartillägget [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) har konfigurerats med taggegenskapen inläst på [WKND-webbplatsen](https://wknd.site/us/en.html) eller en AEM-webbplats där Adobe Data Layer är aktiverat.
 
-## Inspect the Button and Teaser schema
+## Inspektera schema för knappar och Teaser
 
 Innan du skapar regler i taggegenskapen är det praktiskt att granska [schemat för Button och Teaser](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item) och inspektera dem i datalagrets implementering.
 
@@ -54,7 +54,7 @@ Innan du skapar regler i taggegenskapen är det praktiskt att granska [schemat f
    adobeDataLayer.getState();
    ```
 
-   Ovanför kod returnerar det aktuella läget för Adobe-klientdatalagret.
+   Ovanför kod returnerar det aktuella läget för Adobe Client Data Layer.
 
    ![Datalagrets tillstånd via webbläsarkonsolen](assets/track-clicked-component/adobe-data-layer-state-browser.png)
 
@@ -83,17 +83,17 @@ Innan du skapar regler i taggegenskapen är det praktiskt att granska [schemat f
 
    Ovanstående datainformation baseras på schemat [Component/Container Item](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item). Den nya taggregeln använder det här schemat.
 
-## Skapa en CTA-klickad regel
+## Skapa en regel som CTA klickat på
 
 Adobe-klientdatalagret är ett **händelsestyrt** datalager. När någon Core Component klickas skickas en `cmp:click`-händelse via datalagret. Om du vill lyssna efter `cmp:click`-händelsen skapar vi en regel.
 
-1. Navigera till Experience Platform och till taggegenskapen som är integrerad med AEM.
+1. Navigera till Experience Platform och till taggegenskapen som är integrerad med AEM Site.
 1. Navigera till avsnittet **Regler** i gränssnittet för taggegenskaper och klicka sedan på **Lägg till regel**.
-1. Namnge regeln **CTA klickad**.
+1. Namnge regeln **CTA klickade**.
 1. Klicka på **Händelser** > **Lägg till** för att öppna guiden **Händelsekonfiguration**.
 1. För fältet **Händelsetyp** väljer du **Egen kod**.
 
-   ![Namnge regeln CTA Klicka på och lägg till den anpassade kodhändelsen](assets/track-clicked-component/custom-code-event.png)
+   ![Namnge regeln CTA klickade och lägg till den anpassade kodhändelsen](assets/track-clicked-component/custom-code-event.png)
 
 1. Klicka på **Öppna redigeraren** i huvudpanelen och ange följande kodfragment:
 
@@ -147,7 +147,7 @@ Adobe-klientdatalagret är ett **händelsestyrt** datalager. När någon Core Co
 
    Objektet `event` skickas från metoden `trigger()` som anropas i den anpassade händelsen. Objektet `component` är det aktuella läget för komponenten som härleds från datalagrets `getState()`-metod och är det element som utlöste klickningen.
 
-1. Spara ändringarna och kör en [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) i taggegenskapen för att befordra koden till den [miljö](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) som används på AEM.
+1. Spara ändringarna och kör en [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) i taggegenskapen för att marknadsföra koden till den [miljö](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) som används på din AEM-webbplats.
 
    >[!NOTE]
    >
@@ -155,11 +155,11 @@ Adobe-klientdatalagret är ett **händelsestyrt** datalager. När någon Core Co
 
 1. Navigera till [WKND-platsen](https://wknd.site/us/en.html) och öppna utvecklarverktygen för att visa konsolen. Markera kryssrutan **Bevara logg**.
 
-1. Klicka på någon av **Teaser**- eller **Button** CTA-knapparna för att navigera till en annan sida.
+1. Klicka på någon av CTA-knapparna **Teaser** eller **Button** för att navigera till en annan sida.
 
-   ![CTA-knapp för att klicka på](assets/track-clicked-component/cta-button-to-click.png)
+   ![CTA-knapp för att klicka](assets/track-clicked-component/cta-button-to-click.png)
 
-1. Observera i utvecklarkonsolen att regeln **CTA Click** har utlösts:
+1. Observera i utvecklarkonsolen att regeln **CTA klickade** har utlösts:
 
    ![CTA-knapp klickad](assets/track-clicked-component/cta-button-clicked-log.png)
 
@@ -169,7 +169,7 @@ Skapa sedan ett dataelement för att hämta komponent-ID:t och titeln som du kli
 
 ### Komponent-ID
 
-1. Navigera till Experience Platform och till taggegenskapen som är integrerad med AEM.
+1. Navigera till Experience Platform och till taggegenskapen som är integrerad med AEM Site.
 1. Navigera till avsnittet **Dataelement** och klicka på **Lägg till nytt dataelement**.
 1. Ange **komponent-ID** för fältet **Namn**.
 1. För fältet **Dataelementtyp** väljer du **Egen kod**.
@@ -207,11 +207,11 @@ Skapa sedan ett dataelement för att hämta komponent-ID:t och titeln som du kli
 
 1. Spara ändringarna.
 
-## Lägga till ett villkor i regeln CTA klickat
+## Lägga till ett villkor i regeln Klickade i CTA
 
-Uppdatera sedan regeln **CTA Click** för att se till att regeln bara aktiveras när händelsen `cmp:click` utlöses för en **Teaser** eller en **Button** . Eftersom Teaser CTA betraktas som ett separat objekt i datalagret är det viktigt att kontrollera det överordnade objektet för att verifiera att det kommer från ett Teaser.
+Uppdatera sedan regeln **CTA Click** så att den bara aktiveras när händelsen `cmp:click` aktiveras för en **Teaser** eller en **Button** . Eftersom Teaser&#39;s CTA betraktas som ett separat objekt i datalagret är det viktigt att kontrollera att det överordnade objektet kommer från ett Teaser.
 
-1. Gå till regeln **CTA-klickning** som skapades tidigare i gränssnittet för taggegenskaper.
+1. Gå till regeln **CTA Clicked** som skapades tidigare i gränssnittet för taggegenskaper.
 1. Under **Villkor** klickar du på **Lägg till** för att öppna guiden **Konfiguration av villkor**.
 1. Välj **Anpassad kod** för fältet **Villkorstyp**.
 
@@ -233,15 +233,15 @@ Uppdatera sedan regeln **CTA Click** för att se till att regeln bara aktiveras 
    return false;
    ```
 
-   Ovanstående kod kontrollerar först om resurstypen är från en **Button** eller om resurstypen är från en CTA inom en **Teaser**.
+   Ovanstående kod kontrollerar först om resurstypen är från en **Button** eller om resurstypen kommer från en CTA i en **Teaser**.
 
 1. Spara ändringarna.
 
 ## Ange analysvariabler och utlösa Track Link Beacon
 
-För närvarande ger regeln **CTA Click** bara en konsolsats. Därefter använder du dataelementen och Analytics-tillägget för att ange Analytics-variabler som en **åtgärd**. Vi ställer också in en extra åtgärd som utlöser **spårlänken** och skickar insamlade data till Adobe Analytics.
+För närvarande genererar regeln **CTA Click** bara en konsolsats. Därefter använder du dataelementen och Analytics-tillägget för att ange Analytics-variabler som en **åtgärd**. Vi ställer också in en extra åtgärd som utlöser **spårlänken** och skickar insamlade data till Adobe Analytics.
 
-1. I regeln **som klickades på** CTA  **tar du bort** åtgärden **Core - Custom Code** (konsolprogramsatserna):
+1. I regeln **CTA klickade** **tar du bort** åtgärden **Core - Custom Code** (konsolprogramsatserna):
 
    ![Ta bort anpassad kodåtgärd](assets/track-clicked-component/remove-console-statements.png)
 
@@ -254,7 +254,7 @@ För närvarande ger regeln **CTA Click** bara en konsolsats. Därefter använde
    * `prop8` - `%Component ID%`
    * `event8`
 
-   ![Ange eVar Prop och händelser](assets/track-clicked-component/set-evar-prop-event.png)
+   ![Ange eVar-status och händelser](assets/track-clicked-component/set-evar-prop-event.png)
 
    >[!NOTE]
    >
@@ -272,7 +272,7 @@ För närvarande ger regeln **CTA Click** bara en konsolsats. Därefter använde
 
    Ovanstående config kombinerar den dynamiska variabeln från dataelementet **Component Title** och den statiska strängen **CTA Click**.
 
-1. Spara ändringarna. Regeln **CTA-klickad** bör nu ha följande konfiguration:
+1. Spara ändringarna. Regeln **CTA klickade** bör nu ha följande konfiguration:
 
    ![Konfiguration av slutlig taggregel](assets/track-clicked-component/final-page-loaded-config.png)
 
@@ -285,7 +285,7 @@ För närvarande ger regeln **CTA Click** bara en konsolsats. Därefter använde
 
 ## Validera beteendet för spårlänk och Analytics-anropet
 
-Nu när regeln **CTA Click** skickar analysfyren bör du kunna se analysspårningsvariablerna med Experience Platform-felsökaren.
+Nu när regeln **CTA Click** skickar analysfyren bör du kunna se analysspårningsvariablerna med Experience Platform Debugger.
 
 1. Öppna [WKND-platsen](https://wknd.site/us/en.html) i webbläsaren.
 1. Klicka på felsökningsikonen ![Experience platform Debugger icon](assets/track-clicked-component/experience-cloud-debugger.png) för att öppna Experience Platform Debugger.
@@ -294,11 +294,11 @@ Nu när regeln **CTA Click** skickar analysfyren bör du kunna se analysspårnin
 
    ![Flikfelsökning för analys](assets/track-clicked-component/analytics-tab-debugger.png)
 
-1. Klicka på någon av **Teaser**- eller **Button** CTA-knapparna i webbläsaren för att navigera till en annan sida.
+1. Klicka på någon av CTA-knapparna **Teaser** eller **Button** i webbläsaren för att navigera till en annan sida.
 
-   ![CTA-knapp för att klicka på](assets/track-clicked-component/cta-button-to-click.png)
+   ![CTA-knapp för att klicka](assets/track-clicked-component/cta-button-to-click.png)
 
-1. Gå tillbaka till Felsökning för Experience Platform och bläddra nedåt och expandera **Nätverksförfrågningar** > *Din rapportsvit*. Du bör kunna hitta uppsättningen **eVar**, **prop** och **event** .
+1. Gå tillbaka till Experience Platform Debugger och bläddra nedåt och expandera **Nätverksförfrågningar** > *Din rapportsvit*. Du bör kunna hitta uppsättningen **eVar**, **prop** och **event** .
 
    ![Analyshändelser, evar och prop spåras vid klickning](assets/track-clicked-component/evar-prop-link-clicked-tracked-debugger.png)
 
@@ -306,14 +306,14 @@ Nu när regeln **CTA Click** skickar analysfyren bör du kunna se analysspårnin
 
    ![Klicka på navigeringslänken i sidfoten](assets/track-clicked-component/click-navigation-link-footer.png)
 
-1. Observera att meddelandet *&quot;Anpassad kod&quot; för regeln&quot;Klickad CTA&quot; inte uppfylldes i webbläsarkonsolen*.
+1. Observera att meddelandet *&quot;Anpassad kod&quot; för regeln&quot;CTA klickad&quot; inte uppfylldes i webbläsarkonsolen.*
 
    Ovanstående meddelande beror på att navigeringskomponenten utlöser en `cmp:click`-händelse *men* på grund av [villkoret för regeln ](#add-a-condition-to-the-cta-clicked-rule) som kontrollerar resurstypen. Ingen åtgärd utförs.
 
    >[!NOTE]
    >
-   > Om du inte ser några konsolloggar kontrollerar du att **Konsolloggning** finns under **Experience Platform-taggar** i Felsökning för Experience Platform.
+   > Om du inte ser några konsolloggar kontrollerar du att **Konsolloggning** finns under **Experience Platform-taggar** i Experience Platform Debugger.
 
 ## Grattis!
 
-Du har precis använt det händelsestyrda Adobe-klientdatalagret och -taggen i Experience Platform för att spåra klickningar på specifika komponenter på en AEM plats.
+Du har precis använt det händelsestyrda Adobe Client Data Layer and Tag i Experience Platform för att spåra klickningar på specifika komponenter på en AEM-webbplats.

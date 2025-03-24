@@ -1,7 +1,7 @@
 ---
 title: Komma igång med AEM Sites - Project Archetype
-description: Komma igång med AEM Sites - Project Archetype. WKND-självstudiekursen är en självstudiekurs i flera delar som utformats för utvecklare som är nybörjare på Adobe Experience Manager. Självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, prototyper, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling.
-version: 6.5, Cloud Service
+description: Komma igång med AEM Sites - Project Archetype. WKND-självstudiekursen är en självstudiekurs i flera delar som utformats för utvecklare som är nybörjare på Adobe Experience Manager. Självstudiekursen går igenom implementeringen av en AEM-sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, prototyper, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling.
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
 topic: Content Management, Development
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 90d14734-f644-4a45-9361-1e47a5b52fff
 recommendations: disable
 duration: 74
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 {{edge-delivery-services-and-page-editor}}
 
-Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som inte har använt Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND.
+Välkommen till en självstudiekurs i flera delar som utformats för utvecklare som inte använt Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM-sajt för ett påhittat livsstilsmärke, WKND.
 
 Den här självstudien börjar med att använda [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) för att generera ett nytt projekt.
 
@@ -46,7 +46,7 @@ En lokal utvecklingsmiljö krävs för att slutföra den här självstudiekursen
 
 Följande bör installeras lokalt:
 
-* [Lokal AEM **Författare** instans](https://experience.adobe.com/#/downloads) (Cloud Service SDK eller 6.5.14+)
+* [Lokal instans av AEM **Författare**](https://experience.adobe.com/#/downloads) (Cloud Service SDK eller 6.5.14+)
 * [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 * [Apache Maven](https://maven.apache.org/) (3.3.9 eller senare)
 * [Node.js](https://nodejs.org/en/) (LTS - långsiktig support)
@@ -71,4 +71,4 @@ Dessutom har varje del av självstudiekursen en egen gren i GitHub. Användaren 
 
 ## Nästa steg {#next-steps}
 
-Vad väntar du på? Starta självstudiekursen genom att gå till kapitlet [Projektinställningar](project-setup.md) och lära dig hur du skapar ett nytt Adobe Experience Manager-projekt med hjälp av den AEM projekttypen.
+Vad väntar du på? Starta självstudiekursen genom att gå till kapitlet [Projektinställningar](project-setup.md) och lära dig hur du skapar ett nytt Adobe Experience Manager-projekt med AEM Project Archetype.

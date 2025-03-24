@@ -1,7 +1,7 @@
 ---
 title: API-referenser och hantering av produktprofiler
 description: Lär dig hur du hanterar autentiseringsuppgifter och produktprofiler för AEM API:er.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
 role: Architect, Developer, Leader
@@ -11,13 +11,13 @@ jira: KT-17428
 thumbnail: KT-17428.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
-source-git-commit: e4cf47e14fa7dfc39ab4193d35ba9f604eabf99f
+exl-id: 277b4789-b035-4904-b489-c827c970fb55
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 0%
 
 ---
-
 
 # API-referenser och hantering av produktprofiler
 

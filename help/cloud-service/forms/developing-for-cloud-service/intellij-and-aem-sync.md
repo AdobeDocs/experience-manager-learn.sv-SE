@@ -5,12 +5,12 @@ solution: Experience Manager
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 jira: KT-8844
 exl-id: 9a7ed792-ca0d-458f-b8dd-9129aba37df6
 duration: 92
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '501'
 ht-degree: 0%
@@ -64,34 +64,34 @@ Lägg till följande i miljövariabeln Path C:\cygwin64\bin;C:\CloudManager\adob
 **Arbetsflöde**: \$ProjectFileDir\$
 ![diff-command](assets/diff-command.png)
 
-Extrahera .repo-filen från [repo.zip](assets/repo.zip) och placera den i rotmappen för AEM projekt. (C:\CloudManager\aem-banking-application). Öppna .repo-filen och kontrollera att server- och inloggningsinställningarna matchar din miljö.
+Extrahera .repo-filen från [repo.zip](assets/repo.zip) och placera den i AEM-projektens rotmapp. (C:\CloudManager\aem-banking-application). Öppna .repo-filen och kontrollera att server- och inloggningsinställningarna matchar din miljö.
 Öppna .gitignore-filen och lägg till följande längst ned i filen och spara ändringarna
 \# repo
 .repo
 
 Välj ett projekt i ett aem-Banking-applikationsprojekt, till exempel ui.content, och högerklicka så ser du repoalternativet och under repoalternativet ser du de fyra kommandona vi lade till tidigare.
 
-## AEM författarinstans{#set-up-aem-author-instance}
+## Konfigurera AEM Author Instance{#set-up-aem-author-instance}
 
 Följande steg kan följas för att snabbt konfigurera en molnklar instans på ditt lokala system.
-* [Hämta den senaste AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
+* [Hämta den senaste versionen av AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
 
 * [Ladda ned den senaste AEM Forms-appen](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)
 
 * Skapa följande mappstruktur
 c:\aemformscs\aem-sdk\author
 
-* Extrahera filen aem-sdk-quickstart-xxxxxxx.jar från AEM SDK zip-filen och placera den i mappen c:\aemformscs\aem-sdk\author.Byt namn på filen jar till aem-author-p4502.jar
+* Extrahera filen aem-sdk-quickstart-xxxxxxx.jar från filen AEM SDK zip och placera den i mappen c:\aemformscs\aem-sdk\author.Byt namn på filen jar till aem-author-p4502.jar
 
 * Öppna kommandotolken och gå till \aemformscs\aem-sdk\author
 Ange följande kommando java -jar aem-author-p4502.jar -gui. Detta startar installationen av AEM.
 * Logga in med administratörs-/administratörsbehörighet
-* Stoppa AEM
+* Stoppa AEM-instansen
 * Skapa följande mappstruktur.C:\aemformscs\aem-sdk\author\crx-quickstart\install
 * Kopiera aem-forms-addon-xxxxxx.far till installationsmappen
 * Öppna kommandotolken och gå till \aemformscs\aem-sdk\author
-Ange följande kommando java -jar aem-author-p4502.jar -gui. Detta distribuerar formulären som läggs till i paketet i AEM.
+Ange följande kommando java -jar aem-author-p4502.jar -gui. Då distribueras de formulär som läggs till i paketet i din AEM-instans.
 
 ## Nästa steg
 
-[Synkronisera AEM formulär och mallar med AEM projekt](./deploy-your-first-form.md)
+[Synkronisera formulär och mallar från AEM med AEM-projekt](./deploy-your-first-form.md)

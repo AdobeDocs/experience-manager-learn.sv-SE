@@ -5,12 +5,13 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
-source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
+exl-id: e1e5745e-96fb-46c6-aa7f-43cdf2dfddbc
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '132'
 ht-degree: 0%
@@ -23,7 +24,7 @@ Komponenten countries ärver dialogstrukturen för den nedrullningsbara komponen
 
 Det enklaste sättet att skapa den här dialogrutan är att:
 
-1. I AEM skapar du en mapp med namnet _cq_dialog under landskomponentmappen.
+1. I ditt AEM-projekt skapar du en mapp med namnet _cq_dialog under komponentmappen countries.
 2. I mappen _cq_dialog skapar du en fil med namnet .content.xml.
 3. Klistra in XML-koden nedan i den här filen.
 4. Spara ändringarna och synkronisera projektet med AEM.

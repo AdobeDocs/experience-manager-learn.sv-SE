@@ -1,8 +1,8 @@
 ---
 title: Lägg till märken i RTF-redigeraren
-description: Lär dig hur du lägger till märken i RTF-redigeraren i AEM Content Fragment Editor
+description: Lär dig hur du lägger till märken i textredigeraren i AEM Content Fragment Editor
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 83acbddb-9168-4d8b-84b5-97577d8a1ead
 duration: 538
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Lägg till märken i RTF-redigeraren
 
-Lär dig hur du lägger till märken i RTF-redigeraren i AEM Content Fragment Editor.
+Lär dig hur du lägger till märken i textredigeraren i AEM Content Fragment Editor.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3420831?quality=12&learn=on)
 
@@ -55,7 +55,7 @@ När det önskade kundservicenumret har lagts till från modala ikoner gör badg
 
 ### Tillägg - registrering
 
-`ExtensionRegistration.js`, mappad till `index.html`-vägen, är startpunkten för AEM och definierar:
+`ExtensionRegistration.js`, mappad till `index.html`-vägen, är startpunkten för AEM-tillägget och definierar:
 
 + Badges definition definieras i `getBadges()` med hjälp av konfigurationsattributen `id`, `prefix`, `suffix`, `backgroundColor` och `textColor`.
 + I det här exemplet används tecknet `#` för att definiera gränserna för det här märket, vilket innebär att alla strängar i den textredigerare som omges av `#` behandlas som en instans av det här märket.
@@ -144,10 +144,10 @@ Komponentkoden React när du lägger till kundtjänstinformation omger telefonnu
 Här är viktiga markeringar av `LargeBookingsCustomerService`-koden:
 
 + Gränssnittet återges med React Spectrum-komponenter, som [ComboBox](https://react-spectrum.adobe.com/react-spectrum/ComboBox.html), [ButtonGroup](https://react-spectrum.adobe.com/react-spectrum/ButtonGroup.html), [Button](https://react-spectrum.adobe.com/react-spectrum/Button.html)
-+ Arrayen `largeGroupCustomerServiceList` har hårdkodad mappning av representativt namn och telefonnummer. I verkligheten kan dessa data hämtas från Adobe AppBuilder-åtgärd, externa system eller hemmabruk eller molnproviderbaserad API-gateway.
-+ `guestConnection` initieras med `useEffect` [React-krok](https://react.dev/reference/react/useEffect) och hanteras som komponenttillstånd. Den används för att kommunicera med AEM.
++ Arrayen `largeGroupCustomerServiceList` har hårdkodad mappning av representativt namn och telefonnummer. I verkligheten kan dessa data hämtas från en Adobe AppBuilder-åtgärd, externa system eller hemmabruk eller molnproviderbaserad API-gateway.
++ `guestConnection` initieras med `useEffect` [React-krok](https://react.dev/reference/react/useEffect) och hanteras som komponenttillstånd. Den används för att kommunicera med AEM-värden.
 + Funktionen `handleCustomerServiceChange` hämtar representativt namn och telefonnummer och uppdaterar komponentens lägesvariabler.
-+ Funktionen `addCustomerServiceDetails` som använder objektet `guestConnection` tillhandahåller RTE-instruktion att köra. I det här fallet `insertContent`-instruktion och kodfragment i HTML.
++ Funktionen `addCustomerServiceDetails` som använder objektet `guestConnection` tillhandahåller RTE-instruktion att köra. I det här fallet `insertContent`-instruktion och HTML-kodfragment.
 + `#`-specialtecknet läggs till före och efter variabeln `phoneNumber`, till exempel `...<div><p>Phone Number: #${phoneNumber}#</strong></p></div>`, för att **telefonnumret inte ska kunna redigeras** med hjälp av emblem.
 
 `src/aem-cf-editor-1/web-src/src/components/LargeBookingsCustomerService.js`

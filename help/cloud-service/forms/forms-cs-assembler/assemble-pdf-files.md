@@ -1,27 +1,27 @@
 ---
 title: Sammanställa PDF-filer med hjälp av DX-åtgärden invoke
-description: Begär en POST att anropa DDX-slutpunkten med de nödvändiga parametrarna
+description: Gör en POST-begäran om att anropa DDX-slutpunkten med de nödvändiga parametrarna
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-9980
 exl-id: 693dac88-84f3-4051-8e46-3105093711a3
 duration: 56
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%
 
 ---
 
-# Ring POSTEN
+# Ring POST
 
 
-Nästa steg är att göra ett HTTP-POST-anrop till slutpunkten med de nödvändiga parametrarna. DDX- och pdf-filerna tillhandahålls som resursfiler. Slutpunkten har tokenbaserad autentisering. Vi skickar åtkomsttoken i begärandehuvudet.
-När du använder Assembler-tjänsten ska du använda ett XML-baserat språk som kallas för dokumentbeskrivnings-XML (DDX) för att beskriva de utdata du vill använda. DDX är ett deklarativt kodspråk vars element representerar byggstenar i dokument. Följande DDX användes för att sammanfoga de två PDF-dokument som identifieras i källelementen i PDF.
+Nästa steg är att göra ett HTTP POST-anrop till slutpunkten med de nödvändiga parametrarna. DDX- och pdf-filerna tillhandahålls som resursfiler. Slutpunkten har tokenbaserad autentisering. Vi skickar åtkomsttoken i begärandehuvudet.
+När du använder Assembler-tjänsten ska du använda ett XML-baserat språk som kallas för dokumentbeskrivnings-XML (DDX) för att beskriva de utdata du vill använda. DDX är ett deklarativt kodspråk vars element representerar byggstenar i dokument. Följande DDX användes för att sammanfoga de två PDF-dokument som identifieras i PDF källelement.
 
 ```xml
 <DDX xmlns="http://ns.adobe.com/DDX/1.0/">

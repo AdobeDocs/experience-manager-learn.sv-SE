@@ -1,7 +1,7 @@
 ---
 title: Distribuera via pipeline i frontend-läget
 description: Lär dig hur du skapar och kör en frontpipeline som bygger frontendresurser och distribuerar till det inbyggda CDN i AEM as a Cloud Service.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
 duration: 225
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # Distribuera via pipeline i frontend-läget
 
-I det här kapitlet skapar och driver vi en rörledning i Adobe Cloud Manager. Den skapar bara filer från modulen `ui.frontend` och distribuerar dem till det inbyggda CDN-numret i AEM as a Cloud Service. På så sätt flyttas bort från den `/etc.clientlibs`-baserade leveransen av frontendresurser.
+I det här kapitlet skapar och kör vi en frontpipeline i Adobe Cloud Manager. Den skapar bara filer från modulen `ui.frontend` och distribuerar dem till det inbyggda CDN-numret i AEM as a Cloud Service. På så sätt flyttas bort från den `/etc.clientlibs`-baserade leveransen av frontendresurser.
 
 
 ## Mål {#objectives}
@@ -36,7 +36,7 @@ I det här kapitlet skapar och driver vi en rörledning i Adobe Cloud Manager. D
 
 ## Förutsättningar {#prerequisites}
 
-Det här är en självstudiekurs i flera delar och det antas att de steg som beskrivs i [Uppdatera AEM ](./update-project.md) har slutförts.
+Det här är en självstudiekurs i flera delar och det antas att de steg som beskrivs i [Uppdatera AEM-standardprojekt](./update-project.md) har slutförts.
 
 Kontrollera att du har [behörighet att skapa och distribuera pipelines i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions) och [åtkomst till en AEM as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html).
 
@@ -70,7 +70,7 @@ Och __viktigast__ för fältet __Kodplats__ är värdet `/ui.frontend` och slutl
 
 ## Distributionssekvens
 
-* Kör först den nyligen namnändrade __FullStack WKND-distributionen till AVD__-pipelinen för att ta bort WKND-klientfilerna från AEM. Och viktigast av allt är att förbereda AEM för det rörliga slutavtalet genom att lägga till __Sling config__-filer (`SiteConfig`, `HtmlPageItemsConfig`).
+* Kör först den nyligen namnändrade __FullStack WKND-distributionen till AVD__-pipelinen för att ta bort WKND-klientfilerna från AEM-databasen. Och viktigast av allt är att förbereda AEM för det rörliga slutavtalet genom att lägga till __Sling config__-filer (`SiteConfig`, `HtmlPageItemsConfig`).
 
 ![WKND-plats utan formatering](assets/unstyled-wknd-site.png)
 
@@ -87,7 +87,7 @@ Och __viktigast__ för fältet __Kodplats__ är värdet `/ui.frontend` och slutl
 
 ## Verifiera formatändringar och nya leveranssätt
 
-* Öppna WKND-platsens alla sidor och du kan se textfärgen __Adobe Red__ och frontend-resursfilerna (CSS, JS) levereras från CDN. Värdnamnet för resursbegäran börjar med `https://static-pXX-eYY.p123-e456.adobeaemcloud.com/$HASH_VALUE$/theme/site.css` och jämför site.js eller andra statiska resurser som du refererade till i filen `HtmlPageItemsConfig`.
+* Öppna WKND-platsens alla sidor så ser du textfärgen som __Adobe Red__ och frontend-resursfilerna (CSS, JS) levereras från CDN. Värdnamnet för resursbegäran börjar med `https://static-pXX-eYY.p123-e456.adobeaemcloud.com/$HASH_VALUE$/theme/site.css` och jämför site.js eller andra statiska resurser som du refererade till i filen `HtmlPageItemsConfig`.
 
 
 ![Ny formaterad WKND-webbplats](assets/newly-styled-wknd-site.png)
@@ -96,7 +96,7 @@ Och __viktigast__ för fältet __Kodplats__ är värdet `/ui.frontend` och slutl
 
 >[!TIP]
 >
->`$HASH_VALUE$` här är samma som det du ser i __FrontEnd WKND-distributionen till Developer__-pipelinets __CONTENT HASH__-fält. AEM meddelas om frontend-resursens CDN-URL och värdet lagras på `/conf/wknd/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content` under egenskapen __prefixPath__.
+>`$HASH_VALUE$` här är samma som det du ser i __FrontEnd WKND-distributionen till Developer__-pipelinets __CONTENT HASH__-fält. AEM meddelas om klientresursens CDN-URL. Värdet lagras på `/conf/wknd/sling:configs/com.adobe.cq.wcm.core.components.config.HtmlPageItemsConfig/jcr:content` under egenskapen __prefixPath__.
 
 
 ![Hash-värdekorrelation](assets/hash-value-correlartion.png)
@@ -105,7 +105,7 @@ Och __viktigast__ för fältet __Kodplats__ är värdet `/ui.frontend` och slutl
 
 ## Grattis! {#congratulations}
 
-Gratulerar, du skapade, körde och verifierade frontpipeline som bara bygger och distribuerar ui.front-modulen i WKND Sites-projektet. Nu kan teamet snabbt iterera på webbplatsens design och gränssnitt, utanför hela AEM.
+Gratulerar, du skapade, körde och verifierade frontpipeline som bara bygger och distribuerar ui.front-modulen i WKND Sites-projektet. Nu kan teamet snabbt iterera på webbplatsens design och gränssnitt, utanför AEM hela livscykel.
 
 ## Nästa steg {#next-steps}
 

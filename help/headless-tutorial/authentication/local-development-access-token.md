@@ -1,7 +1,7 @@
 ---
 title: Åtkomsttoken för lokal utveckling
-description: AEM Local Development Access-token används för att snabba upp utvecklingen av integreringar med AEM as a Cloud Service som programmässigt interagerar med AEM Author eller Publish-tjänster via HTTP.
-version: Cloud Service
+description: AEM Local Development Access Tokens används för att snabba upp utvecklingen av integreringar med AEM as a Cloud Service som programmässigt interagerar med AEM Author eller Publish services via HTTP.
+version: Experience Manager as a Cloud Service
 feature: APIs
 jira: KT-6785
 thumbnail: 330477.jpg
@@ -12,7 +12,7 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: 197444cb-a68f-4d09-9120-7b6603e1f47d
 duration: 572
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Åtkomsttoken för lokal utveckling
 
-Utvecklare som bygger integreringar som kräver programmatisk åtkomst till AEM as a Cloud Service behöver ett enkelt och snabbt sätt att få temporära åtkomsttoken för AEM för att underlätta lokala utvecklingsaktiviteter. För att tillgodose detta behov AEM Developer Console tillåter utvecklare att själva generera temporära åtkomsttoken som kan användas för programmässig åtkomst till AEM.
+Utvecklare som bygger integreringar som kräver programmatisk åtkomst till AEM as a Cloud Service behöver ett enkelt och snabbt sätt att få temporära åtkomsttoken för AEM för att underlätta lokala utvecklingsaktiviteter. För att tillgodose detta behov gör AEM Developer Console det möjligt för utvecklare att själva generera tillfälliga åtkomsttoken som kan användas för programmässig åtkomst till AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330477?quality=12&learn=on)
 
@@ -29,12 +29,12 @@ Utvecklare som bygger integreringar som kräver programmatisk åtkomst till AEM 
 
 ![Hämtar en åtkomsttoken för lokal utveckling](assets/local-development-access-token/getting-a-local-development-access-token.png)
 
-Token för lokal utvecklingsåtkomst ger åtkomst till AEM författare och Publish-tjänster som den användare som skapade token, tillsammans med deras behörigheter. Trots att detta är en utvecklingstoken bör du inte dela denna token eller lagra den i källkontrollen.
+Token för lokal utvecklingsåtkomst ger åtkomst till AEM Author- och Publish-tjänster som den användare som skapade token, tillsammans med deras behörigheter. Trots att detta är en utvecklingstoken bör du inte dela denna token eller lagra den i källkontrollen.
 
 1. I [Adobe Admin Console](https://adminconsole.adobe.com/) kontrollerar du att du, utvecklaren, är medlem i:
    + __Cloud Manager - utvecklare__ IMS-produktprofil (beviljar åtkomst till AEM Developer Console)
-   + Åtkomsttoken integreras antingen med __AEM-administratörerna__ eller __AEM användare__ IMS-produktprofilen för AEM tjänst.
-   + För sandlådemiljön i AEM as a Cloud Service krävs endast medlemskap i produktprofilen __AEM administratörer__ eller __AEM användare__
+   + Åtkomsttoken kan integreras med __AEM-administratörer__ eller __AEM-användare__ IMS-produktprofilen för AEM-miljöns tjänst
+   + Sandbox AEM as a Cloud Service-miljö kräver endast medlemskap i __AEM Administrators__ eller __AEM Users__ produktprofil
 1. Logga in på [Adobe Cloud Manager](https://my.cloudmanager.adobe.com)
 1. Öppna programmet som innehåller AEM as a Cloud Service-miljön som du kan integrera med
 1. Tryck på __ellipsen__ bredvid miljön i avsnittet __Miljö__ och välj __Developer Console__
@@ -44,13 +44,13 @@ Token för lokal utvecklingsåtkomst ger åtkomst till AEM författare och Publi
 1. Tryck på __hämtningsknappen__ i det övre vänstra hörnet för att hämta JSON-filen som innehåller värdet `accessToken` och spara JSON-filen på en säker plats på utvecklingsdatorn.
    + Detta är din dygnet-runt-token för utvecklaråtkomst till AEM as a Cloud Service-miljön.
 
-![AEM Developer Console - Integreringar - Hämta lokal utvecklingstoken](./assets/local-development-access-token/developer-console.png)
+![AEM Developer Console - integreringar - Hämta lokal utvecklingstoken](./assets/local-development-access-token/developer-console.png)
 
 ## Använde token för lokal utvecklingsåtkomst{#use-local-development-access-token}
 
 ![Åtkomsttoken för lokal utveckling - externt program](assets/local-development-access-token/local-development-access-token-external-application.png)
 
-1. Ladda ned den temporära Local Development Access Token från AEM Developer Console
+1. Ladda ned en temporär Local Development Access Token från AEM Developer Console
    + Den lokala utvecklingsåtkomsttoken upphör att gälla var 24:e timme, så utvecklare måste hämta nya åtkomsttoken varje dag
 1. Ett externt program utvecklas som programmässigt interagerar med AEM as a Cloud Service
 1. Det externa programmet läser i åtkomsttoken för lokal utveckling
@@ -61,14 +61,14 @@ Token för lokal utvecklingsåtkomst ger åtkomst till AEM författare och Publi
 
 Vi ska skapa ett enkelt externt JavaScript-program som visar hur man programmässigt får åtkomst till AEM as a Cloud Service via HTTPS med hjälp av den lokala utvecklaråtkomsttoken. Detta visar hur _alla_-program eller system som körs utanför AEM, oavsett ramverk eller språk, kan använda åtkomsttoken för att autentisera till och få åtkomst till AEM as a Cloud Service via programkod. I [nästa avsnitt](./service-credentials.md) uppdaterar vi den här programkoden så att den stöder metoden för att generera en token för användning i produktionen.
 
-Det här exempelprogrammet körs från kommandoraden och uppdaterar metadata AEM resurser med hjälp av AEM Assets HTTP API:er, med följande flöde:
+Det här exempelprogrammet körs från kommandoraden och uppdaterar metadata för AEM-resurser med hjälp av AEM Assets HTTP API:er, med följande flöde:
 
 1. Läser in parametrar från kommandoraden (`getCommandLineParams()`)
 1. Hämtar den åtkomsttoken som används för autentisering till AEM as a Cloud Service (`getAccessToken(...)`)
-1. Visar alla resurser i en AEM resursmapp som anges i kommandoradsparametrar (`listAssetsByFolder(...)`)
+1. Visar alla resurser i en AEM-resursmapp som anges i kommandoradsparametrar (`listAssetsByFolder(...)`)
 1. Uppdatera metadata för resurser i listan med värden som anges i kommandoradsparametrar (`updateMetadata(...)`)
 
-Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är att lägga till en HTTP-begäranderubrik för auktorisering till alla HTTP-begäranden som görs till AEM, i följande format:
+Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är att lägga till en HTTP-begäranderubrik för autentisering till alla HTTP-begäranden som görs till AEM, i följande format:
 
 + `Authorization: Bearer ACCESS_TOKEN`
 

@@ -1,8 +1,8 @@
 ---
-title: Felsöka utbyggbarhet för Asset Compute i AEM Assets
-description: Nedan följer ett index över vanliga problem och fel, samt lösningar som kan uppstå när du utvecklar och distribuerar anpassade Asset compute-arbetare för AEM Assets.
+title: Felsöka Asset Compute utbyggbarhet för AEM Assets
+description: Nedan följer ett index över vanliga problem och fel, samt lösningar som kan uppstå när du utvecklar och distribuerar anpassade Asset Compute-arbetare för AEM Assets.
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-5802
 thumbnail: KT-5802.jpg
@@ -11,16 +11,16 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: d851d315-ed0e-46b8-bcd8-417e1e58c0c4
 duration: 260
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1218'
 ht-degree: 0%
 
 ---
 
-# Felsöka utbyggbarhet för Asset Compute
+# Felsöka Asset Compute utbyggbarhet
 
-Nedan följer ett index över vanliga problem och fel, samt lösningar som kan uppstå när du utvecklar och distribuerar anpassade Asset compute-arbetare för AEM Assets.
+Nedan följer ett index över vanliga problem och fel, samt lösningar som kan uppstå när du utvecklar och distribuerar anpassade Asset Compute-arbetare för AEM Assets.
 
 ## Utveckla{#develop}
 
@@ -38,11 +38,11 @@ Nedan följer ett index över vanliga problem och fel, samt lösningar som kan u
 ### Console.json-filen saknas i Asset Compute-projektet{#missing-console-json}
 
 + __Fel:__ Fel: Nödvändiga filer saknas vid validate (`.../node_modules/@adobe/asset-compute-client/lib/integrationConfiguration.js:XX:YY`) vid async setupAssetCompute (`.../node_modules/@adobe/asset-compute-devtool/src/assetComputeDevTool.js:XX:YY`)
-+ __Orsak:__ Filen `console.json` saknas i roten för Asset compute-projektet
++ __Orsak:__ Filen `console.json` saknas i Asset Compute-projektets rot
 + __Upplösning:__ Hämta ett nytt `console.json` från ditt Adobe I/O-projekt
-   1. I console.adobe.io öppnar du det Adobe I/O-projekt som Asset compute har konfigurerats att använda
+   1. I console.adobe.io öppnar du det Adobe I/O-projekt som Asset Compute-projektet är konfigurerat att använda
    1. Tryck på knappen __Hämta__ i det övre högra hörnet
-   1. Spara den hämtade filen i roten av ditt Asset compute-projekt med filnamnet `console.json`
+   1. Spara den hämtade filen i roten för ditt Asset Compute-projekt med filnamnet `console.json`
 
 ### Ogiltig YAML-indrag i manifest.yml{#incorrect-yaml-indentation}
 
@@ -52,7 +52,7 @@ Nedan följer ett index över vanliga problem och fel, samt lösningar som kan u
 
 ### gränsen för memorySize är för låg{#memorysize-limit-is-set-too-low}
 
-+ __Fel:__ OpenWhiskError för den lokala Dev-servern: PUT https://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true Returned HTTP 400 (Ogiltig begäran) —> &quot;Innehållet i begäran hade fel format:krav misslyckades: minne 64 MB under det tillåtna tröskelvärdet 134217728 B&quot;
++ __Fel:__ OpenWhiskError för lokal Dev-server: PUT https://adobeioruntime.net/api/v1/namespaces/xxx-xxx-xxx/actions/xxx-0.0.1/__secured_workeroverwrite=true Returned HTTP 400 (Ogiltig begäran) —> &quot;Innehållet i begäran hade fel format:krav misslyckades: minne 64 MB under tillåtet tröskelvärde på 134217728 B&quot;
 + __Orsak:__ En `memorySize`-gräns för arbetaren i `manifest.yml` angavs till under det lägsta tillåtna tröskelvärdet som rapporterades av felmeddelandet i byte.
 + __Upplösning:__ Granska `memorySize`-gränserna i `manifest.yml` och se till att alla är stora än det lägsta tillåtna tröskelvärdet.
 
@@ -74,7 +74,7 @@ Asset Compute Development Tool kan försättas i ett läge där inaktuella data 
 
 + __Fel:__ Meddelande om obehörig i Asset Compute Development Tool
 + __Orsak:__ `devToolToken` saknas eller är ogiltig
-+ __Upplösning:__ Stäng webbläsarfönstret Asset Compute Development Tool, avsluta alla processer som körs med Development Tool som initierats via kommandot `aio app run` och starta om Development Tool (med `aio app run`).
++ __Upplösning:__ Stäng webbläsarfönstret för Asset Compute Development Tool, avsluta alla processer som körs med Development Tool som initierats via kommandot `aio app run` och starta om Development Tool (med `aio app run`).
 
 ### Det går inte att ta bort källfiler{#unable-to-remove-source-files}
 
@@ -98,7 +98,7 @@ Asset Compute Development Tool kan försättas i ett läge där inaktuella data 
 
 + __Fel:__ Fel: Återgivningen &#39;rendition.xxx&#39; är inte som förväntad.
 + __Orsak:__ Arbetaren returnerade en återgivning som inte var densamma som `rendition.<extension>` som angavs i testfallet.
-   + Om den förväntade `rendition.<extension>`-filen inte skapas på exakt samma sätt som den lokalt genererade återgivningen i testfallet, kan testet misslyckas eftersom det kan finnas vissa skillnader i bitarna. Om Asset compute-arbetaren till exempel ändrar kontrasten med hjälp av API:er och det förväntade resultatet skapas genom att justera kontrasten i Adobe Photoshop CC, kan filerna se likadana ut, men mindre bitvariationer kan vara annorlunda.
+   + Om den förväntade `rendition.<extension>`-filen inte skapas på exakt samma sätt som den lokalt genererade återgivningen i testfallet, kan testet misslyckas eftersom det kan finnas vissa skillnader i bitarna. Om Asset Compute-arbetaren till exempel ändrar kontrasten med hjälp av API:er och det förväntade resultatet skapas genom att justera kontrasten i Adobe Photoshop CC, kan filerna se likadana ut, men mindre bitvariationer kan vara annorlunda.
 + __Upplösning:__ Granska återgivningsutdata från testet genom att navigera till `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>` och jämföra det med den förväntade återgivningsfilen i testfallet. Så här skapar du en exakt förväntad resurs:
    + Använd utvecklingsverktyget för att generera en återgivning, verifiera att den är korrekt och använd den som den förväntade återgivningsfilen
    + Eller validera den testgenererade filen på `/build/test-worker/<worker-name>/<test-run-timestamp>/<test-case>/rendition.<extension>`, verifiera att den är korrekt och använd den som den förväntade återgivningsfilen
@@ -113,7 +113,7 @@ Asset Compute Development Tool kan försättas i ett läge där inaktuella data 
 
 ### Brytpunkter pausas inte{#breakpoints-no-pausing}
 
-+ __Fel__: VS-koden pausar inte vid brytpunkter när Asset compute-arbetaren körs från det felsökningsbara utvecklingsverktyget.
++ __Fel__: När Asset Compute-arbetaren körs från det felsökningsbara utvecklingsverktyget pausas inte VS-koden vid brytpunkter.
 
 #### Felsökning för VS-kod är inte bifogad{#vs-code-debugger-not-attached}
 
@@ -123,7 +123,7 @@ Asset Compute Development Tool kan försättas i ett läge där inaktuella data 
 #### VS-kodfelsökning bifogad efter att körningen av arbetaren påbörjats{#vs-code-debugger-attached-after-worker-execution-began}
 
 + __Orsak:__ VS-kodsfelsökaren anslöts inte innan användaren knackade på __Kör__ i utvecklingsverktyget.
-+ __Upplösning:__ Kontrollera att felsökaren har bifogats genom att granska VS-kodens felsökningskonsol (Visa > Felsökningskonsol) och kör sedan Asset compute-arbetaren igen från utvecklingsverktyget.
++ __Upplösning:__ Kontrollera att felsökaren har bifogats genom att granska VS-kodens felsökningskonsol (Visa > Felsökningskonsol) och kör sedan om Asset Compute-arbetaren från utvecklingsverktyget.
 
 ### Arbetarens timeout vid felsökning{#worker-times-out-while-debugging}
 
@@ -145,7 +145,7 @@ Asset Compute Development Tool kan försättas i ett läge där inaktuella data 
 
 ## Distribuera{#deploy}
 
-### Anpassad återgivning saknas för resurs i AEM{#custom-rendition-missing-from-asset}
+### Anpassad återgivning saknas i resurs i AEM{#custom-rendition-missing-from-asset}
 
 + __Fel:__ Ny och ombearbetad resursprocess lyckades, men den anpassade återgivningen saknas
 

@@ -1,7 +1,7 @@
 ---
 title: Integrera AEM Headless och Target
-description: Lär dig integrera AEM Headless och Adobe Target för att personalisera headless-upplevelser med Experience Platform Web SDK.
-version: Cloud Service
+description: Läs om hur du integrerar AEM Headless och Adobe Target för att personalisera headless-upplevelser med Experience Platform Web SDK.
+version: Experience Manager as a Cloud Service
 feature: Content Fragments, Integrations
 topic: Personalization, Headless
 role: Admin, Developer
@@ -11,10 +11,10 @@ last-substantial-update: 2023-05-09T00:00:00Z
 jira: KT-12433
 thumbnail: KT-12433.jpeg
 badgeIntegration: label="Integrering" type="positive"
-badgeVersions: label="AEM as a Cloud Service" before-title="false"
+badgeVersions: label="AEM Headless as a Cloud Service" before-title="false"
 exl-id: be886c64-9b8e-498d-983c-75f32c34be4b
 duration: 1549
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1618'
 ht-degree: 0%
@@ -23,19 +23,19 @@ ht-degree: 0%
 
 # Integrera AEM Headless och Target
 
-Lär dig integrera AEM Headless med Adobe Target genom att exportera AEM Content Fragments till Adobe Target och använda dem för att personalisera headless-upplevelser med Adobe Experience Platform Web SDK:s alloy.js. [React WKND-appen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) används för att utforska hur en anpassad Target-aktivitet med hjälp av Content Fragments Offers kan läggas till i upplevelsen för att marknadsföra ett WKND-äventyr.
+Lär dig integrera AEM Headless med Adobe Target genom att exportera AEM Content Fragments till Adobe Target och använda dem för att personalisera headless-upplevelser med Adobe Experience Platform Web SDK alloy.js. [React WKND-appen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) används för att utforska hur en anpassad Target-aktivitet med hjälp av Content Fragments Offers kan läggas till i upplevelsen för att marknadsföra ett WKND-äventyr.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416585/?quality=12&learn=on)
 
 Självstudiekursen beskriver de steg som krävs för att konfigurera AEM och Adobe Target:
 
-1. [Skapa Adobe IMS-konfiguration för Adobe Target](#adobe-ims-configuration) i AEM
-2. [Skapa Adobe Target-Cloud Service](#adobe-target-cloud-service) i AEM
-3. [Använd Adobe Target-Cloud Service på AEM Assets-mappar](#configure-asset-folders) i AEM författare
-4. [Behörighet för Adobe Target-Cloud Servicen](#permission) i Adobe Admin Console
-5. [Exportera innehållsfragment](#export-content-fragments) från AEM författare till mål
+1. [Skapa Adobe IMS-konfiguration för Adobe Target](#adobe-ims-configuration) i AEM Author
+2. [Skapa Adobe Target Cloud Service](#adobe-target-cloud-service) i AEM Author
+3. [Använd Adobe Target Cloud Service på AEM Assets-mappar](#configure-asset-folders) i AEM Author
+4. [Behörighet för Adobe Target Cloud Service](#permission) i Adobe Admin Console
+5. [Exportera innehållsfragment](#export-content-fragments) från AEM Author till Target
 6. [Skapa en aktivitet med Content Fragment-erbjudanden](#activity) i Adobe Target
-7. [Skapa en dataström i Experience Platform](#datastream-id) i Experience Platform
+7. [Skapa en Experience Platform Datastream](#datastream-id) i Experience Platform
 8. [Integrera personalisering i en React-baserad AEM Headless-app](#code) med Adobe Web SDK.
 
 ## Adobe IMS-konfiguration{#adobe-ims-configuration}
@@ -48,24 +48,24 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
 
 ## Adobe Target Cloud Service{#adobe-target-cloud-service}
 
-En Adobe Target-Cloud Service skapas i AEM för att underlätta export av innehållsfragment till Adobe Target.
+En Adobe Target Cloud Service skapas i AEM för att underlätta exporten av innehållsfragment till Adobe Target.
 
-Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html) om du vill ha stegvisa instruktioner om hur du skapar en Adobe Target-Cloud Service.
+Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html) om du vill ha stegvisa instruktioner om hur du skapar en Adobe Target Cloud Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416499/?quality=12&learn=on)
 
 
 ## Konfigurera resursmappar{#configure-asset-folders}
 
-Adobe Target-Cloud Servicen, som konfigureras i en kontextmedveten konfiguration, måste tillämpas på AEM Assets-mapphierarkin som innehåller de innehållsfragment som ska exporteras till Adobe Target.
+Adobe Target Cloud Service, som konfigurerats i en kontextmedveten konfiguration, måste tillämpas på AEM Assets mapphierarki som innehåller de innehållsfragment som ska exporteras till Adobe Target.
 
 +++Expandera för steg-för-steg-instruktioner
 
-1. Logga in på __AEM författartjänsten__ som DAM-administratör
+1. Logga in på __AEM Author Service__ som DAM-administratör
 1. Navigera till __Assets > Filer__ och leta upp resursmappen som `/conf` har tillämpats på
 1. Markera resursmappen och välj __Egenskaper__ i det övre åtgärdsfältet
-1. Markera fliken __Cloud Service__
-1. Kontrollera att molnkonfigurationen är inställd på den kontextmedvetna konfiguration (`/conf`) som innehåller konfigurationen för Adobe Target-Cloud Service.
+1. Välj fliken __Molntjänster__
+1. Kontrollera att molnkonfigurationen är inställd på den kontextmedvetna konfiguration (`/conf`) som innehåller Adobe Target Cloud Services-konfigurationen.
 1. Välj __Adobe Target__ i listrutan __Cloud Service Configurations__.
 1. Välj __Spara och stäng__ längst upp till höger
 
@@ -100,7 +100,7 @@ Innehållsfragment som finns under den [konfigurerade AEM Assets-mapphierarkin](
 
 +++Expandera för steg-för-steg-instruktioner
 
-1. Logga in på __AEM författare__ som DAM-användare
+1. Logga in på __AEM Author__ som DAM-användare
 1. Navigera till __Assets > Filer__ och leta upp Content Fragments som ska exporteras som JSON till Target under mappen&quot;Adobe Target enabled&quot;
 1. Markera de innehållsfragment som ska exporteras till Adobe Target
 1. Välj __Exportera till Adobe Target-erbjudanden__ i det övre åtgärdsfältet
@@ -117,7 +117,7 @@ Innehållsfragment som finns under den [konfigurerade AEM Assets-mapphierarkin](
 1. Markera listrutan __Typ__ och välj __Innehållsfragment__
 1. Kontrollera att det innehållsfragment som exporteras från AEM visas i listan
    + Hovra över erbjudandet och välj knappen __Visa__
-   + Granska __erbjudandeinformationen__ och se den __AEM djupa länken__ som öppnar innehållsfragmentet direkt i AEM författartjänst
+   + Granska __erbjudandeinformationen__ och se den __djupa AEM-länken__ som öppnar innehållsfragmentet direkt i AEM författartjänst
 
 +++
 
@@ -148,7 +148,7 @@ I det här exemplet använder vi en enkel A/B-aktivitet, men alla Target-aktivit
    + I det här exemplet anger du en anpassad plats med namnet `wknd-adventure-promo` som mål
 1. Under __Innehåll__ markerar du standardinnehållet och väljer __Ändra innehållsfragment__
 1. Markera det exporterade innehållsfragment som ska användas för den här upplevelsen och välj __Klar__
-1. Granska JSON-erbjudandet för innehållsfragment i textområdet Innehåll. Det är samma JSON som finns i AEM Author-tjänsten via funktionen Förhandsgranska för innehållsfragment.
+1. Granska JSON-erbjudandet om innehållsfragment i textområdet Innehåll. Det är samma JSON som finns i AEM Author-tjänsten via funktionen Förhandsgranska i innehållsfragment.
 1. Lägg till en upplevelse i den vänstra listen och välj ett annat erbjudande om innehållsfragment som ska användas
 1. Välj __Nästa__ och konfigurera målreglerna som krävs för aktiviteten
    + I det här exemplet lämnar du A/B-testningen som en manuell delning på 50/50.
@@ -164,7 +164,7 @@ Adobe Target-aktiviteten som riktar sig till platsen `wknd-adventure-promo` kan 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416507/?quality=12&learn=on)
 
-## Experience Platform DataStream ID{#datastream-id}
+## Experience Platform Datastream ID{#datastream-id}
 
 Ett [Adobe Experience Platform Datastream](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html)-ID krävs för att AEM Headless-appar ska kunna interagera med Adobe Target med [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html).
 
@@ -186,7 +186,7 @@ Ett [Adobe Experience Platform Datastream](https://experienceleague.adobe.com/do
       + Målmiljön kan anges i Adobe Target på __Administration > Värdar__.
    + Tredjeparts-ID-målnamnområde: __Lämna tomt__
 1. Välj __Spara__
-1. Till höger kopierar du __Datastream ID__ för användning i konfigurationsanropet [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html).
+1. Till höger kopierar du __Datastream ID__ för användning i konfigurationsanropet för [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html).
 
 +++
 
@@ -204,7 +204,7 @@ Android™- och iOS-mobilupplevelser kan anpassas efter liknande mönster med [A
 
 + Node.js 14
 + Git
-+ [WKND Shared 2.1.4+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) har installerats på AEM som molnförfattare och Publish-tjänster
++ [WKND Shared 2.1.4+](https://github.com/adobe/aem-guides-wknd-shared/releases/latest) har installerats på AEM som molnförfattare och publiceringstjänster
 
 ### Konfigurera
 
@@ -216,7 +216,7 @@ Android™- och iOS-mobilupplevelser kan anpassas efter liknande mönster med [A
    ```
 
 1. Öppna kodbasen på `~/Code/aem-guides-wknd-graphql/personalization-tutorial` i din favoritutvecklingsmiljö
-1. Uppdatera den AEM tjänstvärd som du vill att appen ska ansluta till `~/Code/aem-guides-wknd-graphql/personalization-tutorial/src/.env.development`
+1. Uppdatera den värddator för AEM-tjänsten som du vill att appen ska ansluta till `~/Code/aem-guides-wknd-graphql/personalization-tutorial/src/.env.development`
 
    ```
    ...
@@ -224,7 +224,7 @@ Android™- och iOS-mobilupplevelser kan anpassas efter liknande mönster med [A
    ...
    ```
 
-1. Kör programmet och kontrollera att det är anslutet till den konfigurerade AEM. Kör från kommandoraden:
+1. Kör programmet och kontrollera att det är anslutet till den konfigurerade AEM-tjänsten. Kör från kommandoraden:
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/personalization-tutorial
@@ -244,9 +244,9 @@ Android™- och iOS-mobilupplevelser kan anpassas efter liknande mönster med [A
    När du konfigurerar Web SDK krävs två ID:
 
    + `edgeConfigId` som är [DataStream ID](#datastream-id)
-   + `orgId` det AEM as a Cloud Service/Target-organisations-ID som finns på __Experience Cloud > Profil > Kontoinformation > Aktuellt organisations-ID__
+   + `orgId` det AEM as a Cloud Service/Target Adobe Org ID som finns på __Experience Cloud > Profil > Kontoinformation > Aktuellt Org ID__
 
-   När Web SDK anropas måste Adobe Target-aktivitetsplatsen (i vårt exempel `wknd-adventure-promo`) anges som värdet i `decisionScopes`-arrayen.
+   När du anropar Web SDK måste aktivitetsplatsen för Adobe Target (i vårt exempel `wknd-adventure-promo`) anges som värdet i arrayen `decisionScopes`.
 
    ```javascript
    import { createInstance } from "@adobe/alloy";

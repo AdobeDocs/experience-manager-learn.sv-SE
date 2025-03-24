@@ -1,8 +1,8 @@
 ---
 title: Verifiera ett AEM UI-tillägg
-description: Lär dig hur du förhandsgranskar, testar och verifierar ett AEM UI-tillägg innan du distribuerar till produktion.
+description: Lär dig hur du förhandsgranskar, testar och verifierar ett AEM UI-tillägg innan du distribuerar det till produktionen.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11603, KT-13382
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: c5c1df23-1c04-4c04-b0cd-e126c31d5acc
 duration: 600
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '739'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Verifiera ett tillägg
 
-AEM UI-tillägg kan verifieras mot alla AEM as a Cloud Service-miljöer i Adobe-organisationen som tillägget tillhör.
+AEM UI-tillägg kan verifieras mot alla AEM as a Cloud Service-miljöer i Adobe Org som tillägget tillhör.
 
 Testning av ett tillägg görs via en URL som skapats för ändamålet och som instruerar AEM att läsa in tillägget, endast för den begäran som skickas.
 
@@ -28,31 +28,31 @@ Testning av ett tillägg görs via en URL som skapats för ändamålet och som i
 
 >[!IMPORTANT]
 >
-> I videon ovan visas hur ett tillägg till Content Fragment Console används för att illustrera förhandsgranskning och verifiering av App Builder-tilläggsappar. Det är dock viktigt att komma ihåg att de koncept som omfattas kan tillämpas på alla AEM UI-tillägg.
+> I videon ovan visas hur ett tillägg till Content Fragment Console används för att illustrera förhandsgranskning och verifiering av App Builder-tilläggsappar. Det är dock viktigt att komma ihåg att de koncept som behandlas kan tillämpas på alla AEM UI-tillägg.
 
-## AEM URL
+## AEM UI URL
 
-![AEM URL:en för konsolen Innehållsfragment](./assets/verify/content-fragment-console-url.png){align="center"}
+![AEM Content Fragment Console-URL](./assets/verify/content-fragment-console-url.png){align="center"}
 
-Om du vill skapa en URL som monterar det icke-producerade tillägget i AEM måste URL:en för det AEM användargränssnittet som tillägget matas in i hämtas. Navigera till AEM as a Cloud Service-miljön för att verifiera tillägget och öppna användargränssnittet som tillägget ska förhandsgranskas i.
+Om du vill skapa en URL som monterar tillägget som inte är i produktion till AEM måste URL:en för det AEM-gränssnitt som tillägget matas in i hämtas. Navigera till AEM as a Cloud Service-miljön för att verifiera tillägget och öppna användargränssnittet som tillägget ska förhandsgranskas i.
 
 Om du till exempel vill förhandsgranska ett tillägg för konsolen Innehållsfragment:
 
 1. Logga in på önskad AEM as a Cloud Service-miljö.
 1. Välj ikonen __Innehållsfragment__ .
-1. Vänta tills AEM Content Fragment Console läses in i webbläsaren.
+1. Vänta tills AEM Content Fragment Console har lästs in i webbläsaren.
 1. Kopiera URL:en för AEM Content Fragment Console från webbläsarens adressfält. Den ska likna:
 
    ```
    https://experience.adobe.com/?repo=author-p1234-e5678.adobeaemcloud.com#/@wknd/aem/cf/admin
    ```
 
-Den här URL:en används nedan när du skapar URL:er för utveckling och scenverifiering. Om du verifierar tillägget mot andra AEM UI:er hämtar du dessa URL:er och utför samma steg nedan.
+Den här URL:en används nedan när du skapar URL:er för utveckling och scenverifiering. Om du verifierar tillägget mot andra AEM-användargränssnitt hämtar du dessa URL:er och utför samma steg nedan.
 
 ## Verifiera lokala utvecklingsbyggen
 
 1. Öppna en kommandorad i tilläggsprojektets rot.
-1. Kör AEM UI-tillägg som en lokal App Builder-app
+1. Kör AEM UI-tillägget som en lokal App Builder-app
 
    ```shell
    $ aio app run
@@ -72,7 +72,7 @@ Observera den lokala program-URL:en som visas ovan som `-> https://localhost:908
    + `&devMode=true`
    + `&ext=<LOCAL APPLICATION URL>`, vanligen `&ext=https://localhost:9080`.
 
-   Lägg till de två ovanstående frågeparametrarna (`devMode` och `ext`) som __first__ -frågeparametrar i URL:en. AEM utökningsbart användargränssnitt använder hash-vägar (`#/@wknd/aem/...`), vilket gör att parametrarna inte fungerar korrekt efter att `#` har åtgärdats.
+   Lägg till de två ovanstående frågeparametrarna (`devMode` och `ext`) som __first__ -frågeparametrar i URL:en. AEM utökningsbart användargränssnitt använder hash-vägar (`#/@wknd/aem/...`), vilket innebär att parametrarna inte fungerar korrekt efter att `#` har åtgärdats.
 
    URL:en för förhandsgranskning ska se ut så här:
 
@@ -84,11 +84,11 @@ Observera den lokala program-URL:en som visas ovan som `-> https://localhost:908
 
    + Du kan behöva göra det först, och sedan regelbundet, [acceptera HTTPS-certifikatet](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/extension-development/#accepting-the-certificate-first-time-users) för det lokala programmets värd (`https://localhost:9080`).
 
-1. Det AEM användargränssnittet läses in med den lokala versionen av tillägget inmatad i det för verifiering.
+1. AEM-gränssnittet läses in med den lokala versionen av tillägget inmatad i det för verifiering.
 
 >[!IMPORTANT]
 >
->Kom ihåg att när du använder den här metoden så påverkar tillägget under utveckling bara din upplevelse, och alla andra användare av AEM gränssnitt upplever användargränssnittet utan det injicerade tillägget.
+>När du använder den här metoden påverkar tillägget under utveckling bara din upplevelse, och alla andra användare i AEM-användargränssnittet upplever gränssnittet utan det injicerade tillägget.
 
 ## Verifiera scenbyggen
 
@@ -121,7 +121,7 @@ Observera den lokala program-URL:en som visas ovan som `-> https://localhost:908
    + `&devMode=true`
    + `&ext=<DEPLOYED APPLICATION URL>`
 
-   Lägg till de två ovanstående frågeparametrarna (`devMode` och `ext`) som __first__ -frågeparametrarna i URL:en, eftersom utökningsbara gränssnitt AEM använder en hash-väg (`#/@wknd/aem/...`), vilket innebär att korrigeringen av parametrarna efter att `#` inte fungerar korrekt.
+   Lägg till de två ovanstående frågeparametrarna (`devMode` och `ext`) som __first__ -frågeparametrarna i URL:en, eftersom utbyggbara AEM-gränssnitt använder en hash-väg (`#/@wknd/aem/...`), vilket innebär att korrigeringen av parametrarna efter att `#` inte fungerar korrekt.
 
    URL:en för förhandsgranskning ska se ut så här:
 
@@ -161,7 +161,7 @@ Bokmärkesschemat nedan förhandsvisar de [lokala utvecklingsbyggen](#verify-loc
    })();
    ```
 
-1. Navigera till ett utökningsbart AEM för att läsa in förhandsvisningstillägget och klicka sedan på bokmärkesdiagrammet.
+1. Navigera till ett utbyggbart AEM-gränssnitt för att läsa in förhandsvisningstillägget och klicka sedan på bokmärket.
 
 >[!TIP]
 >

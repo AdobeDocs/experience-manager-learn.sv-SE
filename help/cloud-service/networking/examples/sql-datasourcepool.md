@@ -1,7 +1,7 @@
 ---
 title: SQL-anslutningar med JDBC DataSourcePool
 description: Lär dig hur du ansluter till SQL-databaser från AEM as a Cloud Service med AEM JDBC DataSourcePool och utgångsportar.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
 duration: 117
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '329'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # SQL-anslutningar med JDBC DataSourcePool
 
-Anslutningar till SQL-databaser (och andra icke-HTTP/HTTPS-tjänster) måste vara AEM, inklusive de som görs med AEM DataSourcePool OSGi-tjänst för att hantera anslutningarna.
+Anslutningar till SQL-databaser (och andra icke-HTTP/HTTPS-tjänster) måste proxiceras ut från AEM, inklusive de som gjorts med AEM DataSourcePool OSGi-tjänst för att hantera anslutningarna.
 
 ## Avancerat nätverksstöd
 
@@ -134,7 +134,7 @@ public class JdbcExternalServiceImpl implements ExternalService {
 
 ## MySQL-drivrutinsberoenden
 
-AEM as a Cloud Service kräver ofta att du tillhandahåller Java™-databasdrivrutiner som stöder anslutningarna. Det bästa sättet att tillhandahålla drivrutinerna är oftast att bädda in OSGi-paketartefakter som innehåller de här drivrutinerna i det AEM projektet via paketet `all`.
+AEM as a Cloud Service kräver ofta att du tillhandahåller Java™-databasdrivrutiner som stöder anslutningarna. Det bästa sättet att tillhandahålla drivrutinerna är oftast att bädda in OSGi-paketartefakter som innehåller dessa drivrutiner i AEM-projektet via paketet `all`.
 
 ### Reaktorprom.xml
 

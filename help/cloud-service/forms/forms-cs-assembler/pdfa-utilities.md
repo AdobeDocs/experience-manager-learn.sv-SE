@@ -4,13 +4,13 @@ description: Skapa och validera PDF/A-filer i Forms CA med HTTP-slutpunkterna
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Output Service
 topic: Development
 jira: KT-10105
 exl-id: a4955104-8a87-4add-85c7-c3e3395f5f1a
 duration: 65
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Skapa och validera PDF/A-dokument
 
-PDF/A är en ISO-standardiserad version av Portable Document Format (PDF) som är specialanpassad för arkivering och långtidsarkivering av elektroniska dokument. PDF/A skiljer sig från PDF genom att förbjuda funktioner som inte är lämpliga för långtidsarkivering, som till exempel teckensnittslänkning (till skillnad från teckensnittsinbäddning) och kryptering.
+PDF/A är en ISO-standardiserad version av PDF (Portable Document Format) som är specialanpassad för arkivering och långtidsarkivering av elektroniska dokument. PDF/A skiljer sig från PDF genom att förbjuda funktioner som inte är lämpliga för långtidsarkivering, som till exempel teckensnittslänkning (till skillnad från teckensnittsinbäddning) och kryptering.
 
 ## Konvertera till PDF/A
 

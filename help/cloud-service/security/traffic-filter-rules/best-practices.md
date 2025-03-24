@@ -1,7 +1,7 @@
 ---
-title: Bästa tillvägagångssätt för trafikfilterregler inklusive WAF-regler
-description: Lär dig rekommenderade metoder för trafikfilterregler, inklusive WAF-regler.
-version: Cloud Service
+title: Metodtips för trafikfilterregler inklusive WAF-regler
+description: Läs rekommenderad praxis för trafikfilterregler inklusive WAF regler.
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
 role: Admin, Architect
@@ -12,16 +12,16 @@ jira: KT-13148
 thumbnail: KT-13148.jpeg
 exl-id: 4a7acdd2-f442-44ee-8560-f9cb64436acf
 duration: 170
-source-git-commit: c7c78ca56c1d72f13d2dc80229a10704ab0f14ab
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
-# Bästa tillvägagångssätt för trafikfilterregler inklusive WAF-regler
+# Metodtips för trafikfilterregler inklusive WAF-regler
 
-Lär dig rekommenderade metoder för trafikfilterregler, inklusive WAF-regler. Det är viktigt att notera att de bästa metoder som beskrivs i denna artikel inte är uttömmande och inte är avsedda att ersätta dina egna säkerhetsregler och säkerhetsförfaranden.
+Läs rekommenderad praxis för trafikfilterregler, inklusive WAF regler. Det är viktigt att notera att de bästa metoder som beskrivs i denna artikel inte är uttömmande och inte är avsedda att ersätta dina egna säkerhetsregler och säkerhetsförfaranden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425408?quality=12&learn=on)
 
@@ -38,7 +38,7 @@ Lär dig rekommenderade metoder för trafikfilterregler, inklusive WAF-regler. D
 
 ## Bästa tillvägagångssätt för trafikfilterregler
 
-Aktivera trafikfilterreglerna nedan för ditt AEM. De önskade värdena för egenskaperna `rateLimit` och `clientCountry` måste dock fastställas i samarbete med säkerhetsteamet.
+Aktivera trafikfilterreglerna nedan för ditt AEM-projekt. De önskade värdena för egenskaperna `rateLimit` och `clientCountry` måste dock fastställas i samarbete med säkerhetsteamet.
 
 ```yaml
 kind: CDN
@@ -89,11 +89,11 @@ data:
 >
 >Samarbeta med webbsäkerhetsteamet för att fastställa lämpliga värden för `rateLimit` i din produktionsmiljö
 
-## Bästa tillvägagångssätt för WAF-regler
+## God praxis för WAF regler
 
-När WAF har licensierats och aktiverats för programmet visas WAF-flaggor som matchar trafik i diagram och begärandeloggar, även om du inte deklarerat dem i en regel. Ni är alltså alltid medvetna om potentiellt ny skadlig trafik och kan skapa regler efter behov. Titta på WAF-flaggor som inte återspeglas i de deklarerade reglerna och överväg att deklarera dem.
+När WAF har licensierats och aktiverats för ditt program visas WAF-flaggor som matchar trafiken i diagram och begärandeloggar, även om du inte deklarerat dem i en regel. Ni är alltså alltid medvetna om potentiellt ny skadlig trafik och kan skapa regler efter behov. Titta på WAF-flaggor som inte återspeglas i de deklarerade reglerna och överväg att deklarera dem.
 
-Titta på WAF-reglerna nedan för ditt AEM. De önskade värdena för egenskapen `action` och `wafFlags` måste dock fastställas i samarbete med säkerhetsteamet.
+Se WAF regler nedan för ditt AEM-projekt. De önskade värdena för egenskapen `action` och `wafFlags` måste dock fastställas i samarbete med säkerhetsteamet.
 
 ```yaml
 kind: CDN

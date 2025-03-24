@@ -4,11 +4,11 @@ user-guide-description: En självstudiekurs i flera delar för utvecklare som ä
 breadcrumb-title: Självstudiekurser om AEM Sites WKND
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 activity: develop
 audience: developer
 index: y
-source-git-commit: beebd6a354a9efb77d6e5e463559b34be78c006e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 37%

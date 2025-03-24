@@ -2,14 +2,14 @@
 title: Implementera anpassat processsteg
 description: Skriva adaptiva formulärbilagor till filsystemet med ett anpassat processsteg
 feature: Workflow
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 879518db-3f05-4447-86e8-5802537584e5
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 203
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Den här självstudiekursen är avsedd för AEM Forms-kunder som behöver implementera ett anpassat processsteg. Ett processteg kan köra ett ECMA-skript eller anropa anpassad Java™-kod för att utföra åtgärder. I den här självstudiekursen beskrivs de steg som behövs för att implementera den WorkflowProcess som körs i processteget.
 
-Det främsta skälet till att implementera ett anpassat processsteg är att utöka AEM arbetsflöde. Om du till exempel använder AEM Forms-komponenter i arbetsflödesmodellen kanske du vill utföra följande åtgärder:
+Huvudskälet till att implementera ett anpassat processsteg är att utöka AEM Workflow. Om du till exempel använder AEM Forms-komponenter i arbetsflödesmodellen kanske du vill utföra följande åtgärder:
 
 * Spara de anpassade formulärbilagorna i filsystemet
 * Bearbeta inskickade data
@@ -29,7 +29,7 @@ För att uppnå ovanstående användningsfall skriver du vanligtvis en OSGi-tjä
 
 ## Create Maven Project
 
-Det första steget är att skapa ett maven-projekt med lämplig Adobe Maven Archetype. De detaljerade stegen visas i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat Maven-projektet till Eclipse är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
+Det första steget är att skapa ett maven-projekt med rätt Adobe Maven Archetype. De detaljerade stegen visas i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat Maven-projektet till Eclipse är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
 
 
 ### Skapa klass som implementerar WorkflowProcess
@@ -137,9 +137,9 @@ Rad 1 - definierar komponentens egenskaper. Egenskapen `process.label` är vad d
 
 Rader 13-15 - Processargumenten som skickas till den här OSGi-komponenten delas med avgränsaren &quot;,&quot;. Värdena för attachmentPath och saveToLocation extraheras sedan från strängarrayen.
 
-* attachmentPath - Det här är samma plats som du angav i det adaptiva formuläret när du konfigurerade skicka-åtgärden för det adaptiva formuläret för att anropa AEM arbetsflöde. Detta är ett namn på mappen som du vill att de bifogade filerna ska sparas i AEM i förhållande till arbetsflödets nyttolast.
+* attachmentPath - Det här är samma plats som du angav i det adaptiva formuläret när du konfigurerade skicka-åtgärden för det adaptiva formuläret för att anropa AEM Workflow. Detta är ett namn på den mapp som du vill att de bifogade filerna ska sparas i AEM i förhållande till arbetsflödets nyttolast.
 
-* saveToLocation - Det här är platsen där du vill att de bifogade filerna ska sparas i AEM filsystem.
+* saveToLocation - Det är den plats där du vill att de bifogade filerna ska sparas i filsystemet på AEM-servern.
 
 Dessa två värden skickas som processargument, vilket visas i skärmbilden nedan.
 

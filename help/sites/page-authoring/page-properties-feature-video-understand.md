@@ -1,7 +1,7 @@
 ---
 title: Sidegenskaper i AEM Sites
 description: I följande video visas de metadata för sidegenskaper som är kopplade till en sida i Adobe Experience Manager.
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 feature: Page Editor
 role: User
@@ -11,7 +11,7 @@ thumbnail: 32192.jpg
 doc-type: Feature Video
 exl-id: 41b40982-9796-418e-9bfc-af6fc720e9b8
 duration: 410
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 7%
@@ -52,7 +52,7 @@ I den här videon beskrivs följande sidegenskapselement:
    * Exportera
 * Miniatyrbild
 * Delning i sociala medier
-* Konfigurationer av Cloud Service
+* Konfigurationer av molntjänster
 * Personalization
    * ContextHub-konfigurationer
    * Målkonfiguration

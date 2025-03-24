@@ -2,7 +2,7 @@
 title: Skriv nyttolastdokumentet till filsystemet
 description: Anpassat processsteg för att lägga till skrivdokument i nyttolastmappen i filsystemet
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -10,7 +10,7 @@ kt: kt-9859
 exl-id: bab7c403-ba42-4a91-8c86-90b43ca6026c
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 27
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%

@@ -1,18 +1,18 @@
 ---
 title: Skapa ett anpassat formulärtema
-description: Temat är ett AEM klientbibliotek som definierar utseendet och känslan i din adaptiva form.
+description: Temat är ett AEM-klientbibliotek som definierar utseendet och känslan i ditt adaptiva formulär.
 solution: Experience Manager,Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Adaptive Forms
 topic: Development
 jira: KT-7386
 thumbnail: 332229.jpg
 exl-id: c8c04528-384b-48b3-abba-04db16fd87c5
 duration: 58
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 0%

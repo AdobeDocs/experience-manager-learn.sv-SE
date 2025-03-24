@@ -2,7 +2,7 @@
 title: Distribuera ett AEM UI-tillägg
 description: Lär dig hur du distribuerar ett AEM UI-tillägg.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 166
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '765'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Det finns flera saker att tänka på när du distribuerar tillägg till App Buil
    + Arbetsytan i __produktionen__ innehåller tilläggsdistributioner som är tillgängliga i alla AEM as a Cloud Service.
    + __Stage__-arbetsytan fungerar som en utvecklararbetsyta. Tillägg som distribueras till scenarbetsytan är inte tillgängliga i AEM as a Cloud Service.
 Adobe Developer Console arbetsytor har ingen direkt koppling till AEM as a Cloud Service miljötyper.
-+ Ett tillägg som distribueras till arbetsytan Produktion visas i alla AEM as a Cloud Service-miljöer i Adobe-organisationen som tillägget finns i.
++ Ett tillägg som distribueras till arbetsytan Produktion visas i alla AEM as a Cloud Service-miljöer i Adobe Org som tillägget finns i.
 Ett tillägg kan inte begränsas till de miljöer som det är registrerat med genom att lägga till [villkorlig logik som kontrollerar AEM as a Cloud Service värdnamn](https://developer.adobe.com/uix/docs/guides/publication/#enabling-extension-only-on-specific-aem-environments).
 + Flera tillägg kan användas på AEM as a Cloud Service. Adobe rekommenderar att App Builder-apparna används för att uppnå ett enda affärsmål. Med det sagt kan en App Builder-app med ett enda tillägg implementera flera tilläggspunkter som stöder ett gemensamt affärsmål.
 
@@ -79,7 +79,7 @@ Distribuera tillägget till arbetsytan Produktion. Tillägg som distribueras til
 1. Logga in på [Adobe Exchange](https://exchange.adobe.com/)
 1. Navigera till __Hantera__ > __Program som väntar på granskning__
 1. __Granska__ tillägget i App Builder
-1. Om tilläggets ändringar är godtagbara __Acceptera__ granskningen. Detta lägger omedelbart in tillägget på alla AEM as a Cloud Service Author-tjänster i Adobe Org.
+1. Om tilläggets ändringar är godtagbara __Acceptera__ granskningen. Detta lägger omedelbart in tillägget på alla AEM as a Cloud Service Author-tjänster i Adobe.
 
 När tilläggsbegäran har godkänts aktiveras tillägget omedelbart i AEM as a Cloud Service Author-tjänsterna.
 
@@ -89,7 +89,7 @@ Uppdatering och tillägg av App Builder-programmet följer samma process som den
 
 ### Återkalla tillägget
 
-Om du vill distribuera en ny version av ett tillägg måste det först återkallas (eller tas bort). Tillägget återkallas men är inte tillgängligt i AEM.
+Om du vill distribuera en ny version av ett tillägg måste det först återkallas (eller tas bort). Tillägget återkallas men är inte tillgängligt i AEM-konsoler.
 
 1. Logga in på [Adobe Exchange](https://exchange.adobe.com/)
 1. Navigera till __Hantera__ > __App Builder-appar__
@@ -133,7 +133,7 @@ Distribuera tillägget till arbetsytan Produktion. Tillägg som distribueras til
 1. Logga in på [Adobe Exchange](https://exchange.adobe.com/)
 1. Navigera till __Hantera__ > __Program som väntar på granskning__
 1. __Granska__ tillägget i App Builder
-1. Om tilläggets ändringar är godtagbara __Acceptera__ granskningen. Detta lägger omedelbart in tillägget på alla AEM as a Cloud Service Author-tjänster i Adobe Org.
+1. Om tilläggets ändringar är godtagbara __Acceptera__ granskningen. Detta lägger omedelbart in tillägget på alla AEM as a Cloud Service Author-tjänster i Adobe.
 
 När tilläggsbegäran har godkänts aktiveras tillägget omedelbart i AEM as a Cloud Service Author-tjänsterna.
 

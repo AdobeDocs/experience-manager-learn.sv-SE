@@ -2,7 +2,7 @@
 title: Generera JWT-åtkomsttoken i App Builder-åtgärd
 description: Lär dig hur du skapar en åtkomsttoken med JWT-autentiseringsuppgifter som kan användas i en App Builder-åtgärd.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Intermediate
@@ -10,7 +10,7 @@ jira: KT-11743
 last-substantial-update: 2023-01-17T00:00:00Z
 exl-id: 9a3fed96-c99b-43d1-9dba-a4311c65e5b9
 duration: 151
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Generera JWT-åtkomsttoken i App Builder-åtgärd
 
-App Builder-åtgärder kan behöva interagera med Adobe API:er som är kopplade till Adobe Developer Console-projekt som App Builder-appen också är distribuerad till.
+App Builder-åtgärder kan behöva interagera med Adobe API:er som är kopplade till Adobe Developer Console-projekt om App Builder-appen också ska användas.
 
 Detta kan kräva att App Builder-åtgärden genererar en egen JWT-åtkomsttoken som är kopplad till önskat Adobe Developer Console-projekt.
 
@@ -50,7 +50,7 @@ Värdena för `JWT_CLIENT_ID`, `JWT_CLIENT_SECRET`, `JWT_TECHNICAL_ACCOUNT_ID`, 
 
 ### Metasskop
 
-Bestäm vilka Adobe-API:er och deras metaskop App Builder-åtgärden interagerar med. Visa metaseparerade områden med kommaavgränsare i tangenten `JWT_METASCOPES`. Giltiga metascopes listas i [Adobe JWT Metascope documentation](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/).
+Bestäm vilka Adobe-API:er och deras metaskop App Builder-åtgärden interagerar med. Visa metaseparerade områden med kommaavgränsare i tangenten `JWT_METASCOPES`. Giltiga metascope-objekt visas i [Adobe JWT Metascope-dokumentation](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/Scopes/).
 
 
 Följande värde kan till exempel läggas till i nyckeln `JWT_METASCOPES` i `.env`:

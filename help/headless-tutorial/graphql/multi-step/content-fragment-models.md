@@ -1,7 +1,7 @@
 ---
 title: Definiera modeller för innehållsfragment - Komma igång med AEM Headless - GraphQL
-description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Lär dig modellera innehåll och skapa ett schema med Content Fragment Models i AEM. Granska befintliga modeller och skapa en modell. Lär dig mer om de olika datatyper som kan användas för att definiera ett schema.
-version: Cloud Service
+description: Kom igång med Adobe Experience Manager (AEM) och GraphQL. Lär dig modellera innehåll och skapa ett schema med Content Fragment-modeller i AEM. Granska befintliga modeller och skapa en modell. Lär dig mer om de olika datatyper som kan användas för att definiera ett schema.
+version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 jira: KT-6712
 thumbnail: 22452.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: 9400d9f2-f828-4180-95a7-2ac7b74cd3c9
 duration: 228
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1110'
 ht-degree: 0%
@@ -40,8 +40,8 @@ Det här är en självstudiekurs i flera delar och det antas att en [AEM-rediger
 
 En projektkonfiguration innehåller alla Content Fragment-modeller som är kopplade till ett visst projekt och erbjuder ett sätt att ordna modeller. Minst ett projekt måste skapas **innan** skapar innehållsfragmentmodellen.
 
-1. Logga in i AEM **författarmiljö** (t.ex. `https://author-pYYYY-eXXXX.adobeaemcloud.com/`)
-1. Gå till **Verktyg** > **Allmänt** > **Konfigurationsläsaren** från AEM startsida.
+1. Logga in i AEM **Author**-miljö (t.ex. `https://author-pYYYY-eXXXX.adobeaemcloud.com/`)
+1. På startskärmen i AEM går du till **Verktyg** > **Allmänt** > **Konfigurationsläsaren**.
 
    ![Navigera till Configuration Browser](assets/content-fragment-models/navigate-config-browser.png)
 1. Klicka på **Skapa** längst upp till höger
@@ -62,7 +62,7 @@ Skapa sedan två modeller för ett **Team** och en **person**.
 
 Skapa en modell för en **person**, som är datamodellen som representerar en person som ingår i ett team.
 
-1. Navigera från AEM startskärm till **Verktyg** > **Allmänt** > **Modeller för innehållsfragment**.
+1. På startskärmen i AEM går du till **Verktyg** > **Allmänt** > **Modeller för innehållsfragment**.
 
    ![Navigera till modeller för innehållsfragment](assets/content-fragment-models/navigate-cf-models.png)
 
@@ -78,7 +78,7 @@ Skapa en modell för en **person**, som är datamodellen som representerar en pe
 
    ![Egenskapsfältet Fullständigt namn](assets/content-fragment-models/full-name-property-field.png)
 
-   Egenskapsnamnet **Egenskap** definierar namnet på den egenskap som ska AEM. Egenskapsnamnet **Property Name** definierar också namnet **key** för den här egenskapen som en del av dataschemat. Den här **nyckeln** används när data för innehållsfragment visas via GraphQL API:er.
+   Egenskapsnamnet **Egenskap** definierar namnet på egenskapen som är beständig för AEM. Egenskapsnamnet **Property Name** definierar också namnet **key** för den här egenskapen som en del av dataschemat. Den här **nyckeln** används när data för innehållsfragment visas via GraphQL API:er.
 
 1. Tryck på fliken **Datatyper** och dra och släpp ett **flerradigt textfält** under fältet **Fullständigt namn**. Ange följande egenskaper:
 
@@ -163,23 +163,23 @@ Skapa en modell för ett **team**, som är datamodell för ett team med personer
 
    ![Två modeller](assets/content-fragment-models/two-new-models.png)
 
-## Publish Project Configuration &amp; Content Fragment Models
+## Publicera projektkonfigurationer och innehållsfragmentmodeller
 
 Publicera `Project Configuration` &amp; `Content Fragment Model` vid granskning och verifiering
 
-1. Gå till **Verktyg** > **Allmänt** > **Konfigurationsläsaren** från AEM startsida.
+1. På startskärmen i AEM går du till **Verktyg** > **Allmänt** > **Konfigurationsläsaren**.
 
-1. Tryck på kryssrutan bredvid **Mitt projekt** och tryck på **Publish**
+1. Tryck på kryssrutan bredvid **Mitt projekt** och tryck på **Publicera**
 
-   ![Publish Project Config](assets/content-fragment-models/publish-project-config.png)
+   ![Publicera projektkonfiguration](assets/content-fragment-models/publish-project-config.png)
 
-1. Navigera från AEM startskärm till **Verktyg** > **Allmänt** > **Modeller för innehållsfragment**.
+1. På startskärmen i AEM går du till **Verktyg** > **Allmänt** > **Modeller för innehållsfragment**.
 
 1. Navigera till mappen **Mitt projekt**.
 
-1. Tryck på modellerna **Person** och **Team** och tryck sedan på **Publish**
+1. Tryck på modellerna **Person** och **Team** och tryck sedan på **Publicera**
 
-   ![Publish Content Fragment Models](assets/content-fragment-models/publish-content-fragment-model.png)
+   ![Publicera modeller för innehållsfragment](assets/content-fragment-models/publish-content-fragment-model.png)
 
 ## Grattis! {#congratulations}
 

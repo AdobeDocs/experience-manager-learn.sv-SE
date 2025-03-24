@@ -1,7 +1,7 @@
 ---
-title: Skapa en plats | Skapa AEM
+title: Skapa en plats | Skapa AEM-webbplatser snabbt
 description: Lär dig hur du använder guiden Skapa webbplats för att skapa en ny webbplats. Standardwebbplatsmallen som tillhandahålls av Adobe är en startpunkt för den nya webbplatsen.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 feature: Core Components, Page Editor
 role: Developer
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: 6d0fdc4d-d85f-4966-8f7d-d53506a7dd08
 recommendations: noDisplay, noCatalog
 duration: 198
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '959'
 ht-degree: 0%
@@ -21,13 +21,13 @@ ht-degree: 0%
 
 # Skapa en plats {#create-site}
 
-Som en del av guiden Skapa webbplats i Adobe Experience Manager, AEM, skapar du en ny webbplats. Standardwebbplatsmallen som tillhandahålls av Adobe används som startpunkt för den nya platsen.
+Som en del av guiden Skapa webbplats i Adobe Experience Manager, AEM, använder du guiden Skapa webbplats för att skapa en ny webbplats. Standardwebbplatsmallen från Adobe används som utgångspunkt för den nya webbplatsen.
 
 ## Förutsättningar {#prerequisites}
 
-Stegen i det här kapitlet kommer att utföras i en Adobe Experience Manager as a Cloud Service-miljö. Kontrollera att du har administratörsbehörighet för AEM. Vi rekommenderar att du använder ett [Sandbox-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) och [Utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) när du slutför den här självstudiekursen.
+Stegen i det här kapitlet kommer att utföras i en Adobe Experience Manager as a Cloud Service-miljö. Kontrollera att du har administratörsbehörighet för AEM-miljön. Vi rekommenderar att du använder ett [Sandbox-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) och [Utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) när du slutför den här självstudiekursen.
 
-[Produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) -miljöer kan även användas för den här självstudiekursen. Se dock till att aktiviteterna i den här självstudiekursen inte påverkar det arbete som utförs i målmiljöerna, eftersom den här självstudiekursen distribuerar innehåll och kod till AEM.
+[Produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) -miljöer kan även användas för den här självstudiekursen. Se dock till att aktiviteterna i den här självstudiekursen inte påverkar det arbete som utförs i målmiljöerna, eftersom den här självstudiekursen distribuerar innehåll och kod till AEM-målmiljön.
 
 [AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html) kan användas för delar av den här självstudien. De aspekter av den här självstudiekursen som är beroende av molntjänster, till exempel [distribuera teman med Cloud Manager frontendpipeline](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html), kan inte utföras på AEM SDK.
 
@@ -37,21 +37,21 @@ Mer information finns i [introduktionsdokumentationen](https://experienceleague.
 
 1. Lär dig hur du använder guiden Skapa plats för att skapa en ny plats.
 1. Förstå webbplatsmallarnas roll.
-1. Utforska den genererade AEM.
+1. Utforska AEM webbplats.
 
 ## Logga in på Adobe Experience Manager Author {#author}
 
-Som ett första steg loggar du in i din AEM as a Cloud Service-miljö. AEM har delats mellan en **författartjänst** och en **Publish-tjänst**.
+Som ett första steg loggar du in i din AEM as a Cloud Service-miljö. AEM-miljöer delas mellan en **författartjänst** och en **publiceringstjänst**.
 
 * **Författartjänst** - där webbplatsinnehåll skapas, hanteras och uppdateras. Vanligtvis har bara interna användare åtkomst till **författartjänsten** och finns bakom en inloggningsskärm.
-* **Publish-tjänst** - är värd för den publicerade webbplatsen. Detta är den tjänst som slutanvändarna kommer att se och vanligtvis är allmänt tillgänglig.
+* **Publiceringstjänst** - är värd för den publicerade webbplatsen. Detta är den tjänst som slutanvändarna kommer att se och vanligtvis är allmänt tillgänglig.
 
 Huvuddelen av självstudiekursen kommer att äga rum med **författartjänsten**.
 
 1. Gå till Adobe Experience Cloud [https://experience.adobe.com/](https://experience.adobe.com/). Logga in med ditt personliga konto eller ett företags-/skolkonto.
 1. Kontrollera att rätt organisation är markerad på menyn och klicka på **Experience Manager**.
 
-   ![Experience Cloud, startsida](assets/create-site/experience-cloud-home-screen.png)
+   ![Experience Cloud Home](assets/create-site/experience-cloud-home-screen.png)
 
 1. Under **Cloud Manager** klickar du på **Starta**.
 1. Håll muspekaren över det program du vill använda och klicka på ikonen **Cloud Manager Program** .
@@ -70,13 +70,13 @@ Huvuddelen av självstudiekursen kommer att äga rum med **författartjänsten**
 
 1. En ny flik startas för AEM **Författartjänst**. Klicka på **Logga in med Adobe** så loggas du in automatiskt med samma inloggningsuppgifter för Experience Cloud.
 
-1. När du har omdirigerat och autentiserat dig bör du nu se AEM startskärm.
+1. När du har omdirigerats och autentiserats bör du nu se startskärmen för AEM.
 
-   ![AEM Startskärmen](assets/create-site/aem-start-screen.png)
+   ![AEM startskärm](assets/create-site/aem-start-screen.png)
 
 >[!NOTE]
 >
-> Har du svårt att få åtkomst till Experience Manager? Granska [startdokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)
+> Har du problem med att få åtkomst till Experience Manager? Granska [startdokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)
 
 ## Ladda ned mallen för grundläggande webbplats
 
@@ -98,13 +98,13 @@ En platsmall är en startpunkt för en ny plats. En webbplatsmall innehåller gr
 
 Generera sedan en ny plats med hjälp av platsmallen från föregående övning.
 
-1. Återgå till AEM. Navigera från AEM startskärm till **Platser**.
+1. Gå tillbaka till AEM. Gå till **Webbplatser** från startskärmen i AEM.
 1. Klicka på **Skapa** > **Plats (mall)** i det övre högra hörnet. Då visas guiden **Skapa plats**.
 1. Under **Välj en webbplatsmall** klickar du på knappen **Importera** .
 
    Överför mallfilen **.zip** som hämtats från föregående övning.
 
-1. Markera **mallen för grundläggande AEM** och klicka på **Nästa**.
+1. Markera **den grundläggande AEM-webbplatsmallen** och klicka på **Nästa**.
 
    ![Välj webbplatsmall](assets/create-site/select-site-template.png)
 
@@ -118,7 +118,7 @@ Generera sedan en ny plats med hjälp av platsmallen från föregående övning.
 
    >[!NOTE]
    >
-   > Om du använder en delad AEM lägger du till en unik identifierare till **platsnamnet**. Till exempel `wknd-site-johndoe`. Detta garanterar att flera användare kan slutföra samma självstudiekurs, utan några kollisioner.
+   > Om du använder en delad AEM-miljö lägger du till en unik identifierare till **platsnamnet**. Till exempel `wknd-site-johndoe`. Detta garanterar att flera användare kan slutföra samma självstudiekurs, utan några kollisioner.
 
 1. Klicka på **Skapa** om du vill skapa platsen. Klicka på **Klar** i dialogrutan **Klart** när AEM har skapat webbplatsen.
 
@@ -138,8 +138,8 @@ Generera sedan en ny plats med hjälp av platsmallen från föregående övning.
 
 ## Grattis! {#congratulations}
 
-Grattis, du har just skapat din första AEM webbplats!
+Grattis! Du har just skapat din första AEM-webbplats!
 
 ### Nästa steg {#next-steps}
 
-Använd sidredigeraren i Adobe Experience Manager, AEM, för att uppdatera webbplatsens innehåll i kapitlet [Författare och publicera](author-content-publish.md). Lär dig hur atomiska komponenter kan konfigureras för att uppdatera innehåll. Förstå skillnaden mellan en AEM Author och Publish och lär dig hur man publicerar uppdateringar till den publicerade webbplatsen.
+Använd sidredigeraren i Adobe Experience Manager, AEM för att uppdatera webbplatsens innehåll i kapitlet [Författare och publicera](author-content-publish.md). Lär dig hur atomiska komponenter kan konfigureras för att uppdatera innehåll. Förstå skillnaden mellan en AEM Author- och Publish-miljö och lär dig hur man publicerar uppdateringar till den publicerade webbplatsen.

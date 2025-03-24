@@ -2,7 +2,7 @@
 title: Exportera innehållsfragment till XML
 description: Lär dig hur ett innehållsfragment kan exporteras från AEM Content Fragment Editor
 feature: Developer Tools, Content Fragments
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Beginner
@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 70adb2c1-9e08-4a4b-b8f1-16bddd84c23d
 duration: 307
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
@@ -43,9 +43,9 @@ Koden visar hur innehållet i innehållsfragmentet kan hämtas i tilläggets reg
 
 ### Tillägg - registrering
 
-`ExtensionRegistration.js`, mappad till index.html-vägen, är startpunkten för AEM och definierar:
+`ExtensionRegistration.js`, mappad till metoden index.html, är startpunkten för AEM-tillägget och definierar:
 
-+ Platsen för tilläggsknappen visas (`headerMenu`) i AEM.
++ Platsen för tilläggsknappen visas (`headerMenu`) i AEM-redigeringsgränssnittet
 + Tilläggsknappens definition i funktionen getButton()
 + Knappens klickningshanterare, funktionen onClick() eller en lista med underobjekt och deras klickningshanterare.
 

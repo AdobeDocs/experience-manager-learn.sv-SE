@@ -1,7 +1,7 @@
 ---
 title: Använda SSL-guiden i AEM
-description: Adobe Experience Manager SSL-installationsguide gör det enklare att konfigurera en AEM som körs över HTTPS.
-version: 6.5, Cloud Service
+description: Adobe Experience Manager SSL-installationsguide gör det enklare att konfigurera en AEM-instans för att köra över HTTPS.
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-13839
 doc-type: Technical Video
 topic: Security
@@ -10,7 +10,7 @@ level: Beginner
 exl-id: 4e69e115-12a6-4a57-90da-b91e345c6723
 last-substantial-update: 2023-08-08T00:00:00Z
 duration: 564
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '448'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Lär dig hur du konfigurerar SSL i Adobe Experience Manager så att det körs ö
 
 ## Använda SSL-konfigurationsguiden
 
-Navigera till __AEM Författare > Verktyg > Säkerhet > SSL-konfiguration__ och öppna __SSL-konfigurationsguiden__.
+Navigera till __AEM Author > Tools > Security > SSL Configuration__ och öppna __SSL Configuration Wizard__.
 
 ![SSL-konfigurationsguiden](assets/use-the-ssl-wizard/ssl-config-wizard.png)
 
@@ -72,11 +72,11 @@ Om du vill uppdatera _värdnamnet_ och _porten_ använder du guidesteget __SSL C
 1. Verifiera SSL genom att klicka på knappen __Gå till HTTPS-URL__ .
 1. Om du använder självsignerat certifikat visas `Your connection is not private`-fel.
 
-   ![SSL-inställning - Verifiera AEM över HTTPS](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
+   ![SSL-inställningar - Verifiera AEM via HTTPS](assets/use-the-ssl-wizard/verify-aem-over-ssl.png)
 
 ## Självsignerad privat nyckel och certifikat
 
-Följande ZIP-adress innehåller [!DNL DER]- och [!DNL CRT]-filer som krävs för att konfigurera AEM SSL lokalt och som endast är avsedda för lokal utveckling.
+Följande ZIP-fil innehåller [!DNL DER]- och [!DNL CRT]-filer som krävs för att konfigurera AEM SSL lokalt och som endast är avsedda för lokal utveckling.
 
 Filerna [!DNL DER] och [!DNL CERT] tillhandahålls av praktiska skäl och genereras med de steg som beskrivs i avsnittet Generera privat nyckel och Självsignerat certifikat nedan.
 
@@ -88,7 +88,7 @@ Den här lokala värden - privat nyckel och självsignerat certifikat.zip (upph�
 
 ### Skapa privata nycklar och självsignerade certifikat
 
-I videon ovan visas konfigurationen och konfigurationen av SSL på en AEM författarinstans med självsignerade certifikat. Nedanstående kommandon som använder [[!DNL OpenSSL]](https://www.openssl.org/) kan generera en privat nyckel och ett certifikat som ska användas i steg 2 i guiden.
+I videon ovan visas konfigurationen och konfigurationen av SSL på en AEM-författarinstans med självsignerade certifikat. Nedanstående kommandon som använder [[!DNL OpenSSL]](https://www.openssl.org/) kan generera en privat nyckel och ett certifikat som ska användas i steg 2 i guiden.
 
 ```shell
 ### Create Private Key

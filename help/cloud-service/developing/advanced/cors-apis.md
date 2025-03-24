@@ -1,7 +1,7 @@
 ---
 title: CORS API:er
 description: Förstå vilka AEM-relaterade API:er som skyddas av COR:er.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Developer
@@ -10,7 +10,7 @@ doc-type: Article
 last-substantial-update: 2025-03-11T00:00:00Z
 jira: KT-
 duration: 30
-source-git-commit: 77beb9f543bc6dc8c1ab4993c969375ce3e238e8
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '65'
 ht-degree: 1%

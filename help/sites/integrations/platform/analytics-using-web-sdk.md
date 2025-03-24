@@ -1,7 +1,7 @@
 ---
 title: Integrera AEM Sites och Adobe Analytics med Platform Web SDK
-description: Integrera AEM Sites och Adobe Analytics med modern Platform Web SDK.
-version: Cloud Service
+description: Integrera AEM Sites och Adobe Analytics med SDK.
+version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
 role: Admin, Architect, Data Architect, Developer
@@ -14,7 +14,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2252
-source-git-commit: 774267b4f4c65c79f185fa3b33383ce9ddd136cb
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 0%
@@ -38,11 +38,11 @@ Genom att spåra sidvisningar kan teamet analysera vilka sidor som får flest up
 
 Följande krävs vid integrering av Adobe Analytics med Platform Web SDK.
 
-Du har slutfört konfigurationsstegen från självstudiekursen **[Integrate Experience Platform Web SDK](./web-sdk.md)**.
+Du har slutfört konfigurationsstegen från självstudiekursen **[Integrera Experience Platform Web SDK](./web-sdk.md)**.
 
 I **AEM som Cloud Service**:
 
-+ [AEM Administratörsåtkomst till AEM as a Cloud Service-miljön](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html)
++ [AEM Administratörsåtkomst till AEM as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html)
 + Tillgång till Cloud Manager för Distributionshanteraren
 + Klona och distribuera [WKND - exempelprojektet för Adobe Experience Manager](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) till din AEM as a Cloud Service-miljö.
 
@@ -61,11 +61,11 @@ I **Experience Platform**:
 
 Om du inte har nödvändiga behörigheter kan systemadministratören som använder [Adobe Admin Console](https://adminconsole.adobe.com/) bevilja nödvändiga behörigheter.
 
-Innan vi går vidare till integreringsprocessen för AEM och analys med Platform Web SDK kan vi _finjustera de viktigaste komponenterna och nyckelelementen_ som fastställdes i självstudiekursen [Integrate Experience Platform Web SDK](./web-sdk.md). Den utgör en stabil grund för integreringen.
+Innan vi börjar med integreringsprocessen för AEM och Analytics med Platform Web SDK kan vi _ta en titt på de viktigaste komponenterna och nyckelelementen_ som introducerades i självstudiekursen [Integrate Experience Platform Web SDK](./web-sdk.md) . Den utgör en stabil grund för integreringen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419873?quality=12&learn=on)
 
-Efter citattecknet för XDM-schemat, Datastream, Dataset, Tag-egenskapen och, AEM och taggegenskapsanslutningen, går vi vidare med integreringsresan.
+När vi har fått en sammanfattning av XDM-schemat, Datastream, Dataset, Tag-egenskapen och, AEM och taggegenskapsanslutningen, går vi vidare med integreringsresan.
 
 ## Definiera dokument för SDR (Analytics Solution Design Reference)
 
@@ -105,7 +105,7 @@ En dataström instruerar Platform Edge Network var insamlade data ska skickas. I
 
 XDM-schemat (Experience Data Model) hjälper er att standardisera insamlade data. I den [tidigare självstudiekursen](./web-sdk.md) skapas ett XDM-schema med `AEP Web SDK ExperienceEvent` en fältgrupp. Med det här XDM-schemat skapas dessutom en datauppsättning för lagring av insamlade data i Experience Platform.
 
-Det XDM-schemat har dock inte Adobe Analytics-specifika fältgrupper för att skicka eVar, händelsedata. Ett nytt XDM-schema skapas i stället för att det befintliga schemat uppdateras för att undvika att eVarna, händelsedata i plattformen lagras.
+Det XDM-schemat har dock inte Adobe Analytics-specifika fältgrupper för att skicka händelsedata till eVar. Ett nytt XDM-schema skapas i stället för att det befintliga schemat uppdateras för att undvika att eVar, händelsedata i plattformen, lagras.
 
 Det nya XDM-schemat har `AEP Web SDK ExperienceEvent` och `Adobe Analytics ExperienceEvent Full Extension` fältgrupper.
 
@@ -118,7 +118,7 @@ I den [tidigare självstudiekursen](./web-sdk.md) skapas en taggegenskap med dat
 
 + Mappar sidnamnet till `eVar5`
 + Startar analysanropet **pageview** ( eller skicka signal)
-+ Samla in CTA-data med Adobe Client Data Layer
++ Samla in CTA-data med Adobe klientdatalager
 + Mappar CTA-ID och namn till `eVar6` respektive `eVar7`. Dessutom räknas CTA-klickningar till `event7`
 + Startar **link click**-analysanropet ( eller skicka beacon)
 
@@ -127,7 +127,7 @@ I den [tidigare självstudiekursen](./web-sdk.md) skapas en taggegenskap med dat
 
 >[!TIP]
 >
->Data Element- och Rule-Event-koden som visas i videon är tillgänglig för din referens. **Expandera dragspelselementet nedan**. Om du emellertid INTE använder Adobe-klientdatalagret måste du ändra nedanstående kod, men begreppet att definiera dataelementen och använda dem i regeldefinitionen gäller fortfarande.
+>Data Element- och Rule-Event-koden som visas i videon är tillgänglig för din referens. **Expandera dragspelselementet nedan**. Om du emellertid INTE använder Adobe Client Data Layer måste du ändra nedanstående kod, men begreppet att definiera dataelementen och använda dem i regeldefinitionen gäller fortfarande.
 
 +++ Dataelement och regelhändelsekod
 
@@ -214,7 +214,7 @@ I den [tidigare självstudiekursen](./web-sdk.md) skapas en taggegenskap med dat
 
 +++
 
-Mer information om hur du integrerar AEM kärnkomponenter med Adobe Client Data Layer finns i [Använda Adobe Client Data Layer med AEM Core Components Guide](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html).
+Mer information om hur du integrerar AEM Core Components med Adobe Client Data Layer finns i [Using the Adobe Client Data Layer with AEM Core Components guide](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html).
 
 
 >[!INFO]
@@ -225,7 +225,7 @@ Mer information om hur du integrerar AEM kärnkomponenter med Adobe Client Data 
 
 ## Verifiera uppdaterad taggegenskap på WKND
 
-För att säkerställa att den uppdaterade taggegenskapen byggs, publiceras och fungerar korrekt på WKND-webbplatsens sidor. Använd Google Chrome webbläsares [Adobe Experience Platform Debugger-tillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob):
+För att säkerställa att den uppdaterade taggegenskapen byggs, publiceras och fungerar korrekt på WKND-webbplatsens sidor. Använd [Adobe Experience Platform Debugger-tillägget](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) i Google Chrome webbläsare:
 
 + Kontrollera byggdatumet för att se till att taggegenskapen är den senaste versionen.
 
@@ -241,7 +241,7 @@ För att generera en meningsfull mängd trafik för testningsändamål utvecklas
 
 ## Datauppsättningsverifiering - WKND-sidvy, CTA-data
 
-Datauppsättningen är en lagrings- och hanteringskonstruktion för en samling data, som en databastabell som följer ett schema. Den datauppsättning som skapades i den [föregående självstudiekursen](./web-sdk.md) återanvänds för att verifiera att sidvyn och CTA klickdata är inkapslade i datauppsättningen Experience Platform. I datauppsättningens användargränssnitt visas olika detaljer, t.ex. totala poster, storlek och inkapslade batchar, tillsammans med ett visuellt tilltalande stapeldiagram.
+Datauppsättningen är en lagrings- och hanteringskonstruktion för en samling data, som en databastabell som följer ett schema. Den datauppsättning som skapades i den [föregående självstudiekursen](./web-sdk.md) återanvänds för att verifiera att sidvyn och CTA klickdata är inkapslade i Experience Platform datauppsättning. I datauppsättningens användargränssnitt visas olika detaljer, t.ex. totala poster, storlek och inkapslade batchar, tillsammans med ett visuellt tilltalande stapeldiagram.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419885?quality=12&learn=on)
 
@@ -257,7 +257,7 @@ Om du vill visualisera användarresor använder du Flödesvisualisering, med bö
 
 ## Sammanfattning
 
-Snyggt jobb! Du har slutfört konfigurationen av AEM och Adobe Analytics med Platform Web SDK för att samla in, analysera sidvyn och CTA klickdata.
+Snyggt jobb! Du har slutfört installationen av AEM och Adobe Analytics med Platform Web SDK för att samla in, analysera sidvyn och CTA klickdata.
 
 Implementering av Adobe Analytics är avgörande för att marknadsföringsteamen ska få insikter i användarbeteenden, fatta välgrundade beslut, så att de kan optimera sitt innehåll och fatta datadrivna beslut.
 
@@ -278,4 +278,4 @@ Genom att implementera de rekommenderade stegen och använda de tillhandahållna
 + [Integrerar Experience Platform-datainsamlingstaggar och AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
 + [Adobe Experience Platform Web SDK och Edge Network - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
 + [Självstudiekurser för datainsamling](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
-+ [Översikt över Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
++ [Adobe Experience Platform Debugger - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

@@ -1,8 +1,8 @@
 ---
 title: Utöka en komponent | Komma igång med AEM SPA Editor och Angular
-description: Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SPA Editor. Att förstå hur du lägger till egenskaper och innehåll i en befintlig komponent är en kraftfull teknik som utökar funktionerna i en AEM redigeringsimplementering. Lär dig att använda delegeringsmönstret för att utöka Sling-modeller och funktioner i Sling Resource Merger.
+description: Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SPA Editor. Att förstå hur man lägger till egenskaper och innehåll i en befintlig komponent är en kraftfull teknik som utökar funktionerna i en AEM SPA Editor-implementering. Lär dig att använda delegeringsmönstret för att utöka Sling-modeller och funktioner i Sling Resource Merger.
 feature: SPA Editor, Core Components
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-5871
 thumbnail: 5871-spa-angular.jpg
 topic: SPA
@@ -11,7 +11,7 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
 duration: 435
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1713'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Utöka en kärnkomponent {#extend-component}
 
-Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SPA Editor. Att förstå hur man utökar en befintlig komponent är en kraftfull teknik för att anpassa och utöka funktionerna i en AEM redigeringsimplementering.
+Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SPA Editor. Att förstå hur man utökar en befintlig komponent är en kraftfull teknik för att anpassa och utöka funktionerna i en AEM SPA Editor-implementering.
 
 ## Syfte
 
@@ -52,7 +52,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
    $ git checkout Angular/extend-component-start
    ```
 
-2. Distribuera kodbasen till en lokal AEM med Maven:
+2. Distribuera kodbasen till en lokal AEM-instans med Maven:
 
    ```shell
    $ mvn clean install -PautoInstallSinglePackage
@@ -64,20 +64,20 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
    $ mvn clean install -PautoInstallSinglePackage -Pclassic
    ```
 
-3. Installera det färdiga paketet för den traditionella [WKND-referensplatsen](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-2.1.0). Bilderna som tillhandahålls av [WKND-referenswebbplatsen](https://github.com/adobe/aem-guides-wknd/releases/latest) återanvänds på WKND-SPA. Paketet kan installeras med [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
+3. Installera det färdiga paketet för den traditionella [WKND-referensplatsen](https://github.com/adobe/aem-guides-wknd/releases/tag/aem-guides-wknd-2.1.0). Bilderna som tillhandahålls av [WKND-referensplatsen](https://github.com/adobe/aem-guides-wknd/releases/latest) återanvänds i WKND SPA. Paketet kan installeras med [AEM Package Manager](http://localhost:4502/crx/packmgr/index.jsp).
 
    ![Pakethanteraren installerades wknd.all](./assets/map-components/package-manager-wknd-all.png)
 
 Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) eller checka ut koden lokalt genom att växla till grenen `Angular/extend-component-solution`.
 
-## Implementering av Inspect initial Card
+## Inspektera den inledande kortimplementeringen
 
-En initial kortkomponent har tillhandahållits av kapitelstartkoden. Inspect som startpunkt för kortimplementeringen.
+En initial kortkomponent har tillhandahållits av kapitelstartkoden. Granska startpunkten för kortimplementeringen.
 
 1. Öppna modulen `ui.apps` i den IDE du väljer.
 2. Navigera till `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/card` och visa filen `.content.xml`.
 
-   ![Kortkomponent AEM definition start](assets/extend-component/aem-card-cmp-start-definition.png)
+   ![Start för AEM-definition för kortkomponent](assets/extend-component/aem-card-cmp-start-definition.png)
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -88,9 +88,9 @@ En initial kortkomponent har tillhandahållits av kapitelstartkoden. Inspect som
        componentGroup="WKND SPA Angular - Content"/>
    ```
 
-   Egenskapen `sling:resourceSuperType` pekar på `wknd-spa-angular/components/image` som anger att komponenten `Card` ärver funktionaliteten från komponenten WKND SPA Image.
+   Egenskapen `sling:resourceSuperType` pekar på `wknd-spa-angular/components/image` som anger att komponenten `Card` ärver funktionaliteten från WKND SPA Image-komponenten.
 
-3. Inspect filen `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image/.content.xml`:
+3. Granska filen `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components/image/.content.xml`:
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -101,7 +101,7 @@ En initial kortkomponent har tillhandahållits av kapitelstartkoden. Inspect som
        componentGroup="WKND SPA Angular - Content"/>
    ```
 
-   Observera att `sling:resourceSuperType` pekar på `core/wcm/components/image/v2/image`. Detta anger att WKND-SPA Image-komponenten ärver funktionaliteten från Core Component Image.
+   Observera att `sling:resourceSuperType` pekar på `core/wcm/components/image/v2/image`. Detta anger att WKND SPA Image-komponenten ärver funktionaliteten från Core Component Image.
 
    Det kallas också [Proxymönstret](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) Att dela resursarv är ett kraftfullt designmönster som tillåter att underordnade komponenter ärver funktioner och utökar/åsidosätter beteenden när det behövs. Sling-arv har stöd för flera nivåer av arv, så i slutändan ärver den nya `Card`-komponenten funktionerna i Core Component Image.
 
@@ -113,7 +113,7 @@ En initial kortkomponent har tillhandahållits av kapitelstartkoden. Inspect som
 
    Egenskaper som `sling:orderBefore` låter en utvecklare välja var nya flikar eller formulärfält ska infogas. I det här fallet infogas fliken `Text` före fliken `asset`. Om du vill använda Sling Resource Merger fullt ut är det viktigt att du känner till den ursprungliga dialognodstrukturen för dialogrutan [Bildkomponent](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml).
 
-5. Öppna filen `_cq_editConfig.xml` under mappen `card`. Den här filen styr dra och släpp-beteendet i AEM redigeringsgränssnitt. När du utökar bildkomponenten är det viktigt att resurstypen matchar själva komponenten. Granska noden `<parameters>`:
+5. Öppna filen `_cq_editConfig.xml` under mappen `card`. Den här filen styr dra och släpp-funktionen i AEM redigeringsgränssnitt. När du utökar bildkomponenten är det viktigt att resurstypen matchar själva komponenten. Granska noden `<parameters>`:
 
    ```xml
    <parameters
@@ -128,9 +128,9 @@ En initial kortkomponent har tillhandahållits av kapitelstartkoden. Inspect som
 
 6. I IDE-växeln till modulen `ui.frontend` navigerar du till `ui.frontend/src/app/components/card`:
 
-   ![Start för Angular-komponent](assets/extend-component/angular-card-component-start.png)
+   ![Angular Component Start](assets/extend-component/angular-card-component-start.png)
 
-7. Inspect filen `card.component.ts`.
+7. Granska filen `card.component.ts`.
 
    Komponenten har redan delats ut för att mappa till AEM `Card`-komponenten med standardfunktionen `MapTo`.
 
@@ -138,7 +138,7 @@ En initial kortkomponent har tillhandahållits av kapitelstartkoden. Inspect som
    MapTo('wknd-spa-angular/components/card')(CardComponent, CardEditConfig);
    ```
 
-   Granska de tre `@Input` parametrarna i klassen för `src`, `alt` och `title`. Dessa är förväntade JSON-värden från AEM som mappas till komponenten Angular.
+   Granska de tre `@Input` parametrarna i klassen för `src`, `alt` och `title`. Dessa är förväntade JSON-värden från AEM-komponenten som mappas till Angular-komponenten.
 
 8. Öppna filen `card.component.html`:
 
@@ -148,20 +148,20 @@ En initial kortkomponent har tillhandahållits av kapitelstartkoden. Inspect som
    </div>
    ```
 
-   I det här exemplet valde vi att återanvända den befintliga bildkomponenten `app-image` genom att helt enkelt skicka `@Input`-Angularna från `card.component.ts`. Senare i självstudiekursen läggs ytterligare egenskaper till och visas.
+   I det här exemplet valde vi att återanvända den befintliga Angular Image-komponenten `app-image` genom att helt enkelt skicka `@Input`-parametrarna från `card.component.ts`. Senare i självstudiekursen läggs ytterligare egenskaper till och visas.
 
 ## Uppdatera mallprincipen
 
-I den här inledande `Card`-implementeringen granskas funktionen i AEM SPA Editor. Om du vill visa den inledande `Card`-komponenten krävs en uppdatering av mallprincipen.
+I den här initiala `Card`-implementeringen granskas funktionen i AEM SPA Editor. Om du vill visa den inledande `Card`-komponenten krävs en uppdatering av mallprincipen.
 
-1. Distribuera startkoden till en lokal instans av AEM, om du inte redan har gjort det:
+1. Distribuera startkoden till en lokal instans av AEM, om du inte redan gjort det:
 
    ```shell
    $ cd aem-guides-wknd-spa
    $ mvn clean install -PautoInstallSinglePackage
    ```
 
-2. Navigera till SPA sidmall på [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html).
+2. Gå till SPA-sidmallen på [http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html](http://localhost:4502/editor.html/conf/wknd-spa-angular/settings/wcm/templates/spa-page-template/structure.html).
 3. Uppdatera layoutbehållarens princip så att den nya `Card`-komponenten läggs till som en tillåten komponent:
 
    ![Uppdatera behållarprincipen för layout](assets/extend-component/card-component-allowed.png)
@@ -188,7 +188,7 @@ Därefter redigerar du komponenten `Card` med AEM SPA Editor.
 
    ![Fliken Textkomponent](assets/extend-component/card-component-text.png)
 
-   **Kortsökväg** - välj en sida under SPA hemsida.
+   **Kortsökväg** - välj en sida under SPA-startsidan.
 
    **CTA-text** - &quot;Läs mer&quot;
 
@@ -198,9 +198,9 @@ Därefter redigerar du komponenten `Card` med AEM SPA Editor.
 
 6. Uppdatera fliken **Resursmetadata** om du vill lägga till värden för **Alternativ text** och **Bildtext**.
 
-   Inga ytterligare ändringar visas efter att dialogrutan har uppdaterats. Om du vill visa de nya fälten för komponentkomponenten Angular måste du uppdatera segmentmodellen för komponenten `Card`.
+   Inga ytterligare ändringar visas efter att dialogrutan har uppdaterats. Om du vill visa de nya fälten för Angular-komponenten måste du uppdatera Sling-modellen för `Card`-komponenten.
 
-7. Öppna en ny flik och gå till [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd-spa-angular/us/en/home/jcr%3Acontent/root/responsivegrid/card). Inspect innehållsnoderna under `/content/wknd-spa-angular/us/en/home/jcr:content/root/responsivegrid` för att hitta `Card`-komponentinnehållet.
+7. Öppna en ny flik och gå till [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/content/wknd-spa-angular/us/en/home/jcr%3Acontent/root/responsivegrid/card). Sök efter `Card`-komponentinnehållet genom att granska innehållsnoderna under `/content/wknd-spa-angular/us/en/home/jcr:content/root/responsivegrid`.
 
    ![CRXDE-Lite-komponentegenskaper](assets/extend-component/crxde-lite-properties.png)
 
@@ -208,7 +208,7 @@ Därefter redigerar du komponenten `Card` med AEM SPA Editor.
 
 ## Uppdatera kortförsäljningsmodell
 
-För att exponera värdena från komponentdialogrutan för komponentkomponenten måste vi uppdatera Sling Model som fyller i JSON-Angularna för `Card`-komponenten. Vi har också möjlighet att implementera två affärslogikfunktioner:
+För att slutligen visa värdena från komponentdialogen för Angular-komponenten måste vi uppdatera Sling-modellen som fyller i JSON för `Card`-komponenten. Vi har också möjlighet att implementera två affärslogikfunktioner:
 
 * Om `titleFromPage` till **true** returnerar du sidans rubrik som anges av `cardPath`, annars returneras värdet för textfältet `cardTitle`.
 * Returnera det senaste ändringsdatumet för sidan som anges av `cardPath`.
@@ -217,7 +217,7 @@ Gå tillbaka till den utvecklingsmiljö du valt och öppna modulen `core`.
 
 1. Öppna filen `Card.java` vid `core/src/main/java/com/adobe/aem/guides/wknd/spa/angular/core/models/Card.java`.
 
-   Observera att gränssnittet `Card` för närvarande utökar `com.adobe.cq.wcm.core.components.models.Image` och därför ärver metoderna för gränssnittet `Image`. Gränssnittet `Image` utökar redan gränssnittet `ComponentExporter` som gör att Sling Model kan exporteras som JSON och mappas av SPA redigerare. Därför behöver vi inte utöka gränssnittet `ComponentExporter` explicit, som vi gjorde i kapitlet [Anpassad komponent](custom-component.md).
+   Observera att gränssnittet `Card` för närvarande utökar `com.adobe.cq.wcm.core.components.models.Image` och därför ärver metoderna för gränssnittet `Image`. Gränssnittet `Image` utökar redan gränssnittet `ComponentExporter` som gör att Sling Model kan exporteras som JSON och mappas av SPA-redigeraren. Därför behöver vi inte utöka gränssnittet `ComponentExporter` explicit, som vi gjorde i kapitlet [Anpassad komponent](custom-component.md).
 
 2. Lägg till följande metoder i gränssnittet:
 
@@ -257,7 +257,7 @@ Gå tillbaka till den utvecklingsmiljö du valt och öppna modulen `core`.
    }
    ```
 
-   Dessa metoder exponeras via JSON-modellens API och skickas till Angular-komponenten.
+   Dessa metoder visas via JSON-modellens API och skickas till Angular-komponenten.
 
 3. Öppna `CardImpl.java`. Detta är implementeringen av gränssnittet `Card.java`. Implementeringen har delvis stoppats för att snabba upp självstudiekursen.  Observera att anteckningarna `@Model` och `@Exporter` används för att se till att Sling Model kan serialiseras som JSON via Sling Model Exporter.
 
@@ -293,7 +293,7 @@ Gå tillbaka till den utvecklingsmiljö du valt och öppna modulen `core`.
    }
    ```
 
-   `@PostConstruct initModel()` anropas när delningsmodellen initieras och därför är det en bra möjlighet att initiera objekt som kan användas av andra metoder i modellen. `pageManager` är ett av flera [Java™-bakomliggande globala objekt](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html) som är tillgängliga för Sling-modeller via anteckningen `@ScriptVariable`. Metoden [getPage](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) tar i en sökväg och returnerar ett AEM [Page](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html) -objekt eller null om sökvägen inte pekar på en giltig sida.
+   `@PostConstruct initModel()` anropas när delningsmodellen initieras och därför är det en bra möjlighet att initiera objekt som kan användas av andra metoder i modellen. `pageManager` är ett av flera [Java™-bakomliggande globala objekt](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html) som är tillgängliga för Sling-modeller via anteckningen `@ScriptVariable`. Metoden [getPage](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) tar en sökväg och returnerar ett AEM [Page](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html)-objekt eller null om sökvägen inte pekar på en giltig sida.
 
    Detta initierar variabeln `cardPage`, som används av andra nya metoder för att returnera data om den underliggande länkade sidan.
 
@@ -380,7 +380,7 @@ Gå tillbaka till den utvecklingsmiljö du valt och öppna modulen `core`.
 
 ## Uppdatera Angular-komponent
 
-Nu när JSON-modellen har fyllts i med nya egenskaper för `ctaLinkURL`, `ctaText`, `cardTitle` och `cardLastModified` kan vi uppdatera Angularna så att de visas.
+Nu när JSON-modellen har fyllts i med nya egenskaper för `ctaLinkURL`, `ctaText`, `cardTitle` och `cardLastModified` kan vi uppdatera Angular-komponenten så att de visas.
 
 1. Återgå till IDE och öppna modulen `ui.frontend`. Du kan också starta webbpaketets dev-server från ett nytt terminalfönster för att se ändringarna i realtid:
 
@@ -448,7 +448,7 @@ Nu när JSON-modellen har fyllts i med nya egenskaper för `ctaLinkURL`, `ctaTex
 
    >[!NOTE]
    >
-   > Du kan visa den färdiga [Angular-kortskomponentkoden här](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card).
+   > Du kan visa den färdiga koden för [Angular-kortkomponenten här](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution/ui.frontend/src/app/components/card).
 
 5. Använd de fullständiga ändringarna i AEM från projektets rot i Maven:
 
@@ -459,7 +459,7 @@ Nu när JSON-modellen har fyllts i med nya egenskaper för `ctaLinkURL`, `ctaTex
 
 6. Navigera till [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html) för att se den uppdaterade komponenten:
 
-   ![Kortkomponenten i AEM](assets/extend-component/updated-card-in-aem.png) har uppdaterats
+   ![Kortkomponenten i AEM har uppdaterats](assets/extend-component/updated-card-in-aem.png)
 
 7. Du bör kunna omskapa det befintliga innehållet för att skapa en sida som ser ut ungefär så här:
 
@@ -467,6 +467,6 @@ Nu när JSON-modellen har fyllts i med nya egenskaper för `ctaLinkURL`, `ctaTex
 
 ## Grattis! {#congratulations}
 
-Grattis! Du har lärt dig hur du utökar en AEM och hur Sling-modeller och dialogrutor fungerar med JSON-modellen.
+Grattis! Du har lärt dig hur du utökar en AEM-komponent och hur Sling-modeller och dialogrutor fungerar med JSON-modellen.
 
 Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-guides-wknd-spa/tree/Angular/extend-component-solution) eller checka ut koden lokalt genom att växla till grenen `Angular/extend-component-solution`.

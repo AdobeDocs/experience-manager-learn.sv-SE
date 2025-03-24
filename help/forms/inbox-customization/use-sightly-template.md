@@ -3,14 +3,14 @@ title: Använda enkel mall för att visa inkorgsdata
 description: Lägg till anpassade kolumner för att visa ytterligare data i arbetsflödet med hjälp av en enkel mall
 feature: Adaptive Forms
 doc-type: article
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-5830
 topic: Development
 role: Developer
 level: Experienced
 exl-id: d09b46ed-3516-44cf-a616-4cb6e9dfdf41
 duration: 68
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%
@@ -84,7 +84,7 @@ return val;
 
 * [Logga in för att krascha som administratörsanvändare](http://localhost:4502/crx/de/index.jsp)
 * [importera enkel mall](assets/sightly-template.zip)
-* [Logga in AEM webbkonsolen](http://localhost:4502/system/console/bundles)
+* [Logga in på AEM webbkonsol](http://localhost:4502/system/console/bundles)
 * [Distribuera och starta anpassningspaketet för inkorgen](assets/income-column-customization.jar)
 * [Öppna din inkorg](http://localhost:4502/aem/inbox)
 * Öppna administrationskontrollen genom att klicka på listvyn bredvid knappen Skapa

@@ -1,8 +1,8 @@
 ---
-title: Utforska Dynamic Media bildhantering med ögonblicksbild
-description: Dynamic Media Snapshot är ett visuellt demonstrationsverktyg som illustrerar kraften i Dynamic Media för optimerad och dynamisk bildleverans.
+title: Utforska Dynamic Media Imaging med Snapshot
+description: Dynamic Media Snapshot är ett visuellt demonstrationsverktyg som är utformat för att illustrera kraften i Dynamic Media för optimerad och dynamisk bildleverans.
 feature: Smart Services, Image Sets, Image Profiles
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 jira: KT-13269
 thumbnail: 3419421.jpeg
 topic: Content Management
@@ -11,7 +11,7 @@ level: Intermediate
 doc-type: Feature Video
 exl-id: 3f2f3fe4-a3cf-4494-a318-bf82aee20dc7
 duration: 214
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 1%
@@ -20,12 +20,12 @@ ht-degree: 1%
 
 # Dynamic Media Snapshot {#snapshot}
 
-Dynamic Media Snapshot är ett visuellt demonstrationsverktyg som illustrerar kraften i Dynamic Media för optimerad och dynamisk bildleverans. Experimentera med testbilder eller Dynamic Media-URL:er för att se utdata från olika bildmodifierare i Dynamic Media och optimera smarta bilder för filstorlek (med WebP- och AVIF-leverans), nätverk och DPR (Device Pixel Ratio).
+Dynamic Media Snapshot är ett visuellt demonstrationsverktyg som är utformat för att illustrera kraften i Dynamic Media för optimerad och dynamisk bildleverans. Experimentera med testbilder eller dynamiska medie-URL:er för att se utdata från olika dynamiska mediabildsmodifierare och optimera smart bildbehandling för filstorlek (med WebP- och AVIF-leverans), nätverk och enhetspixelproportioner (DPR).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419421/?learn=on)
 
 <a href="https://snapshot.scene7.com/" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
-  <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Starta Dynamic Media Snapshot </span>
+  <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Starta ögonblicksbild av dynamiska media </span>
 </a>
 
 ## Ytterligare resurser

@@ -1,8 +1,8 @@
 ---
-title: Konfigurera konton och tjänster för utbyggbarhet för Asset compute
+title: Konfigurera konton och tjänster för Asset Compute-utbyggbarhet
 description: För att kunna utveckla Asset Compute-arbetare måste du ha tillgång till konton och tjänster, inklusive AEM as a Cloud Service, App Builder och molnlagring från Microsoft eller Amazon.
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6264
 thumbnail: 40377.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 707657ad-221e-4dab-ac2a-46a4fcbc55bc
 duration: 212
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 1%
@@ -22,7 +22,7 @@ ht-degree: 1%
 
 Den här självstudiekursen kräver att följande tjänster är provisioneringstjänster och tillgängliga via elevens Adobe ID.
 
-Alla Adobe-tjänster måste vara tillgängliga via samma Adobe Org, med din Adobe ID.
+Alla Adobes tjänster måste vara tillgängliga via samma Adobe Org som använder din Adobe ID.
 
 + [AEM as a Cloud Service](#aem-as-a-cloud-service)
 + [App Builder](#app-builder)
@@ -43,11 +43,11 @@ Du måste ha tillgång till en AEM as a Cloud Service-miljö för att kunna konf
 
 Helst är ett sandlådeprogram eller en utvecklingsmiljö som inte är sandlåda tillgänglig för användning.
 
-Observera att en lokal AEM SDK inte räcker till för att slutföra den här självstudiekursen, eftersom den lokala AEM SDK inte kan kommunicera med Asset compute-mikrotjänster, i stället krävs en verklig AEM as a Cloud Service-miljö.
+Observera att en lokal AEM SDK inte räcker till för att slutföra den här självstudiekursen eftersom den lokala AEM SDK inte kan kommunicera med Asset Compute mikrotjänster, utan en verklig AEM as a Cloud Service-miljö krävs.
 
 ## App Builder{#app-builder}
 
-[App Builder](https://developer.adobe.com/app-builder/)-ramverket används för att skapa och distribuera anpassade åtgärder till Adobe I/O Runtime, Adobe serverless. AEM Asset Compute-projekt är specialbyggda App Builder-projekt som integreras med AEM Assets via Bearbetningsprofiler och ger möjlighet att komma åt och bearbeta resurbinärfiler.
+[App Builder](https://developer.adobe.com/app-builder/)-ramverket används för att skapa och distribuera anpassade åtgärder till Adobe I/O Runtime, Adobe serverlösa plattform. AEM Asset Compute-projekt är specialbyggda App Builder-projekt som integreras med AEM Assets via Bearbetningsprofiler och ger möjlighet att komma åt och bearbeta resurbinärfiler.
 
 Registrera dig för förhandsgranskningen om du vill få tillgång till App Builder.
 
@@ -59,7 +59,7 @@ Registrera dig för förhandsgranskningen om du vill få tillgång till App Buil
 
 Molnlagring krävs för lokal utveckling av Asset Compute-projekt.
 
-När arbetare i Asset Compute distribueras till Adobe I/O Runtime för direkt användning av AEM as a Cloud Service krävs inte detta molnlagringsutrymme eftersom AEM tillhandahåller det molnlagringsutrymme som resursen läses från och återgivningen skrivs till.
+När Asset Compute-arbetare distribueras till Adobe I/O Runtime för direkt användning av AEM as a Cloud Service krävs inte detta molnlagringsutrymme eftersom AEM tillhandahåller molnlagringsutrymmet som resursen läses från och återgivningen skrivs till.
 
 ### Microsoft Azure Blob Storage{#azure-blob-storage}
 
@@ -76,7 +76,7 @@ _Klicka igenom etableringen av Azure Blob Storage (inget ljud)_
 1. Tryck på __+ Lägg till__ för att skapa ett nytt Blob Storage-konto
 1. Skapa en ny __resursgrupp__ efter behov, till exempel: `aem-as-a-cloud-service`
 1. Ange ett __lagringskontonamn__, till exempel: `aemguideswkndassetcomput`
-   + __Lagringskontots namn__ som används för [konfigurering av molnlagring](../develop/environment-variables.md) i det lokala utvecklingsverktyget i Asset compute
+   + __Lagringskontots namn__ som används för [konfigurering av molnlagring](../develop/environment-variables.md) i det lokala Asset Compute Development Tool
    + __Åtkomstnycklarna__ som är associerade med lagringskontot krävs också när [molnlagring](../develop/environment-variables.md) konfigureras.
 1. Lämna allt annat som standard och tryck på knappen __Granska + skapa__
    + Du kan också markera __platsen__ som är nära dig.

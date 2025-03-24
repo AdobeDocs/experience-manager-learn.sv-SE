@@ -1,7 +1,7 @@
 ---
 title: Inaktivera CDN-cachning
 description: Lär dig hur du inaktiverar cachelagring av HTTP-svar i AEM as a Cloud Service CDN.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
 role: Admin, Architect, Developer
@@ -12,7 +12,7 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
 duration: 100
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
@@ -23,11 +23,11 @@ ht-degree: 0%
 
 Lär dig hur du inaktiverar cachelagring av HTTP-svar i AEM as a Cloud Service CDN. Cachelagringen av svar styrs av `Cache-Control`, `Surrogate-Control` eller `Expires` cachehuvuden för HTTP-svar.
 
-Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher värdkonfigurationer med `mod_headers`, men kan också anges i anpassad Java™-kod som körs i AEM Publish.
+Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher värdkonfigurationer med `mod_headers`, men kan även ställas in i anpassad Java™-kod som körs i AEM Publish.
 
 ## Standardbeteende för cachelagring
 
-Granska standardbeteendet för cachning för AEM Publish och författare när ett [AEM Project Archetype](./enable-caching.md#default-caching-behavior)-baserat AEM distribueras.
+Granska standardbeteendet för cachelagring för AEM Publish och Author när ett [AEM Project Archetype](./enable-caching.md#default-caching-behavior) -baserat AEM-projekt distribueras.
 
 ## Inaktivera cachelagring
 
@@ -41,7 +41,7 @@ Det finns dock vissa scenarier där du kanske vill inaktivera cachelagring, som:
 Om du vill inaktivera cachelagring kan du uppdatera cacherubrikerna på två sätt.
 
 1. **Dispatcher-värdkonfiguration:** Endast tillgänglig för AEM Publish.
-1. **Anpassad Java™-kod:** Tillgänglig för både AEM Publish och författare.
+1. **Anpassad Java™-kod:** Tillgänglig för både AEM Publish och Author.
 
 Låt oss titta närmare på de här alternativen.
 
@@ -66,7 +66,7 @@ Följ de här stegen för att inaktivera CDN-cachelagring av **CSS-innehållstyp
 
 Observera att om du vill åsidosätta den befintliga CSS-cachen måste du ändra CSS-filen för att skapa en ny cachenyckel för CSS-filen.
 
-1. Leta reda på önskad värdfil från katalogen `dispatcher/src/conf.d/available_vhosts` i ditt AEM projekt.
+1. Leta reda på önskad värdfil från katalogen `dispatcher/src/conf.d/available_vhosts` i ditt AEM-projekt.
 1. Uppdatera Vhost-filen (t.ex. `wknd.vhost`) enligt följande:
 
    ```
@@ -85,7 +85,7 @@ Observera att om du vill åsidosätta den befintliga CSS-cachen måste du ändra
 
 ### Anpassad Java™-kod
 
-Det här alternativet är tillgängligt för både AEM Publish och författare. Om du vill uppdatera cacherubrikerna använder du objektet `SlingHttpServletResponse` i anpassad Java™-kod (Sling-servlet, Sling-serverletsfilter). Den allmänna syntaxen är följande:
+Det här alternativet är tillgängligt för både AEM Publish och Author. Om du vill uppdatera cacherubrikerna använder du objektet `SlingHttpServletResponse` i anpassad Java™-kod (Sling-servlet, Sling-serverletsfilter). Den allmänna syntaxen är följande:
 
 ```java
 response.setHeader("Cache-Control", "private");

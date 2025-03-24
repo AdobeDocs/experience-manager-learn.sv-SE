@@ -1,7 +1,7 @@
 ---
 title: HTTP/HTTPS-anslutningar för dedikerad IP-adress och VPN
 description: Lär dig hur du gör HTTP/HTTPS-begäranden från AEM as a Cloud Service till externa webbtjänster som körs för dedikerad IP-adress och VPN
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
 role: Architect, Developer
@@ -10,7 +10,7 @@ jira: KT-9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
 duration: 70
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%

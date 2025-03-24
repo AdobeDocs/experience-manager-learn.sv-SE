@@ -1,25 +1,25 @@
 ---
-title: Om resursvisningsprogrammet med AEM Dynamic Media
-description: AEM Dynamic Media Viewer-förbättringarna gör det möjligt för AEM att definiera och anpassa hur resurser presenteras för webbplatsanvändare.
+title: Så här fungerar resursvisningsprogrammet med AEM Dynamic Media
+description: Förbättringarna i AEM Dynamic Media Viewer gör det möjligt för författare av AEM att definiera och anpassa hur resurser presenteras för webbplatsanvändare.
 sub-product: Experience Manager Assets
 feature: Viewer Presets, Image Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
 doc-type: Feature Video
 exl-id: db4fc561-2368-4df8-9b02-fc08afa00805
 duration: 254
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '119'
 ht-degree: 0%
 
 ---
 
-# Om resursvisningsprogrammet med AEM Dynamic Media{#understanding-the-asset-viewer-with-aem-dynamic-media}
+# Så här fungerar resursvisningsprogrammet med AEM Dynamic Media{#understanding-the-asset-viewer-with-aem-dynamic-media}
 
-AEM Dynamic Media Viewer-förbättringarna gör det möjligt för AEM att definiera och anpassa hur resurser presenteras för webbplatsanvändare.
+Förbättringarna i AEM Dynamic Media Viewer gör det möjligt för författare av AEM att definiera och anpassa hur resurser presenteras för webbplatsanvändare.
 
 >[!VIDEO](https://video.tv.adobe.com/v/17783?quality=12&learn=on)
 

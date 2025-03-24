@@ -4,13 +4,13 @@ user-guide-description: En samling videor för Adobe Experience Manager Content 
 breadcrumb-title: AEM Content Fragment console videos
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature-set: Experience Manager Sites
 feature: Content Fragments
 topic: Content Management
 role: User
 team: TM
-source-git-commit: 0c95df469885b84aa7585975a89811efab0ae5e7
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '54'
 ht-degree: 0%

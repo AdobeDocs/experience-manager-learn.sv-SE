@@ -1,7 +1,7 @@
 ---
-title: Använda RTF med AEM Headless
-description: Lär dig att skapa innehåll och bädda in refererat innehåll med en multiline textredigerare med Adobe Experience Manager Content Fragments, och hur avancerad text levereras genom att AEM GraphQL API:er som JSON som ska användas av headless-program.
-version: Cloud Service
+title: Använda formaterad text med AEM Headless
+description: Lär dig att skapa innehåll och bädda in refererat innehåll med en multiline textredigerare med Adobe Experience Manager Content Fragments, och hur avancerad text levereras av AEM GraphQL API:er som JSON som ska användas av headless-program.
+version: Experience Manager as a Cloud Service
 doc-type: article
 jira: KT-9985
 feature: Content Fragments, GraphQL API
@@ -10,7 +10,7 @@ level: Intermediate
 role: Developer
 exl-id: 790a33a9-b4f4-4568-8dfe-7e473a5b68b6
 duration: 785
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1409'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Flerradigt textfält är en datatyp i Content Fragments som gör att författare kan skapa RTF-innehåll. Referenser till annat innehåll, t.ex. bilder eller andra innehållsfragment, kan infogas dynamiskt textbundet i textflödet. Textfältet En rad är en annan datatyp för innehållsfragment som ska användas för enkla textelement.
 
-AEM GraphQL API har en robust funktion för att returnera RTF som HTML, oformaterad text eller som ren JSON. JSON-representationen är kraftfull eftersom den ger klientprogrammet full kontroll över hur innehållet ska återges.
+AEM GraphQL API har en robust funktion för att returnera fullödig text som HTML, oformaterad text eller som ren JSON. JSON-representationen är kraftfull eftersom den ger klientprogrammet full kontroll över hur innehållet ska återges.
 
 ## Flerradsredigerare
 
@@ -131,7 +131,7 @@ Variabeln `$path` som används i filtret `_path` kräver den fullständiga sökv
 
 Nedan visas flera exempel på svarstyper för ett flerradsfält med namnet `main` som innehåller ett stycke:&quot;Det här är ett stycke som innehåller **viktigt** -innehåll.&quot; där&quot;important&quot; har markerats som **bold**.
 
-+++HTML, exempel
++++HTML-exempel
 
 **GraphQL beständig fråga:**
 
@@ -351,7 +351,7 @@ Referenser till andra innehållsfragment kan också länkas eller infogas i fler
 
 ![Infoga innehållsfragmentreferens](assets/rich-text/insert-contentfragment.png)
 
-Skärmbilden ovan visar ett annat Content Fragment, Ultimate Guide till LA Skate Parks, som infogas i fältet med flera rader. De typer av innehållsfragment som kan infogas i fältet styrs av konfigurationen **Tillåtna modeller för innehållsfragment** i datatypen [Flera rader](#multi-line-data-type) i modellen för innehållsfragment.
+Skärmbilden ovan visar ett annat Content Fragment, Ultimate Guide to LA Skate Parks, som infogas i flerradsfältet. De typer av innehållsfragment som kan infogas i fältet styrs av konfigurationen **Tillåtna modeller för innehållsfragment** i datatypen [Flera rader](#multi-line-data-type) i modellen för innehållsfragment.
 
 ## Fråga textbundna referenser med GraphQL
 
@@ -545,4 +545,4 @@ I föregående video visas ett exempel från början till slut:
 1. Uppdatera ett textfält med flera rader i en innehållsfragmentmodell så att fragmentreferenser tillåts
 2. Använd Content Fragment Editor för att inkludera en bild och referera till ett annat fragment i ett textfält med flera rader.
 3. Skapar en GraphQL-fråga som innehåller flerradssvaret som JSON och eventuella `_references` som används.
-4. Skriva en SPA som återger textbundna referenser för RTF-svaret.
+4. Skriva en React SPA som återger textbundna referenser för RTF-svaret.

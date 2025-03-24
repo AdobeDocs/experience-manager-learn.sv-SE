@@ -1,8 +1,8 @@
 ---
-title: Konfigurera miljövariabler för Asset Compute-utökningsbarhet
-description: Miljövariabler bevaras i .env-filen för lokal utveckling, och används för att ange autentiseringsuppgifter för Adobe I/O och molnlagring som krävs för lokal utveckling.
+title: Konfigurera miljövariabler för Asset Compute-utbyggbarhet
+description: Miljövariabler bevaras i .env-filen för lokal utveckling och används för att ange Adobe I/O-autentiseringsuppgifter och molnlagringsreferenser som krävs för lokal utveckling.
 feature: Asset Compute Microservices
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 doc-type: Tutorial
 jira: KT-6270
 thumbnail: KT-6270.jpg
@@ -11,7 +11,7 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: c63c5c75-1deb-4c16-ba33-e2c338ef6251
 duration: 121
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ![punktmiljöfil](assets/environment-variables/dot-env-file.png)
 
-Innan du börjar utveckla Asset Compute-arbetare bör du kontrollera att projektet har konfigurerats med Adobe I/O och molnlagringsinformation. Den här informationen lagras i projektets `.env`, som bara används för lokal utveckling, och inte sparas i Git. Filen `.env` är ett praktiskt sätt att visa nyckel-/värdepar för den lokala utvecklingsmiljön i Asset compute. När [distribuerar](../deploy/runtime.md) Asset compute-arbetare till Adobe I/O Runtime används inte filen `.env`, utan en delmängd av värdena skickas via miljövariabler. Andra anpassade parametrar och hemligheter kan lagras i filen `.env`, t.ex. utvecklingsuppgifter för webbtjänster från tredje part.
+Innan du börjar utveckla Asset Compute-arbetare bör du kontrollera att projektet har konfigurerats med Adobe I/O och molnlagringsinformation. Den här informationen lagras i projektets `.env`, som bara används för lokal utveckling, och inte sparas i Git. Filen `.env` är ett praktiskt sätt att visa nyckelpar/värdepar för den lokala Asset Compute-utvecklingsmiljön. När [distribuerar](../deploy/runtime.md) Asset Compute-arbetare till Adobe I/O Runtime används inte filen `.env`, utan en delmängd av värdena skickas via miljövariabler. Andra anpassade parametrar och hemligheter kan lagras i filen `.env`, t.ex. utvecklingsuppgifter för webbtjänster från tredje part.
 
 ## Referera till `private.key`
 
@@ -30,8 +30,8 @@ Innan du börjar utveckla Asset Compute-arbetare bör du kontrollera att projekt
 
 Öppna filen `.env`, avkommentera nyckeln `ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH` och ange den absoluta sökvägen i filsystemet till den `private.key` som har det offentliga certifikatet som lagts till i ditt Adobe I/O App Builder-projekt.
 
-+ Om nyckelparet genererades av Adobe I/O har det hämtats automatiskt som en del av `config.zip`.
-+ Om du har gett Adobe I/O den offentliga nyckeln bör du också ha den motsvarande privata nyckeln.
++ Om nyckelparet genererades av Adobe I/O hämtades det automatiskt som en del av `config.zip`.
++ Om du gav Adobe I/O den offentliga nyckeln bör du också ha den motsvarande privata nyckeln.
 + Om du inte har dessa nyckelpar kan du generera nya nyckelpar eller överföra nya publika nycklar längst ned i:
   [https://console.adobe.com](https://console.adobe.io) > Ditt Asset Compute App Builder-projekt > Arbetsytor @ Utveckling > Tjänstkonto (JWT).
 
@@ -47,7 +47,7 @@ ASSET_COMPUTE_PRIVATE_KEY_FILE_PATH=/Users/example-user/credentials/aem-guides-w
 
 ## Konfigurera autentiseringsuppgifter för molnlagring
 
-Lokal utveckling av arbetare i Asset Compute kräver åtkomst till [molnlagring](../set-up/accounts-and-services.md#cloud-storage). De autentiseringsuppgifter för molnlagring som används för lokal utveckling anges i filen `.env`.
+Lokal utveckling av Asset Compute-arbetare kräver åtkomst till [molnlagring](../set-up/accounts-and-services.md#cloud-storage). De autentiseringsuppgifter för molnlagring som används för lokal utveckling anges i filen `.env`.
 
 I den här självstudiekursen föredrar du att använda Azure Blob Storage, men Amazon S3 och dess motsvarande nycklar i filen `.env` kan användas i stället.
 
@@ -94,22 +94,22 @@ AWS_REGION=us-east-1
 
 ## Validerar projektkonfigurationen
 
-När det genererade Asset Compute-projektet har konfigurerats ska du validera konfigurationen innan du gör kodändringar för att se till att stödtjänsterna etableras i `.env`-filerna.
+När det genererade Asset Compute-projektet har konfigurerats ska du validera konfigurationen innan du gör kodändringar för att se till att stödtjänsterna har etablerats i `.env`-filerna.
 
-Så här startar du Asset Compute Development Tool för projektet Asset compute:
+Så här startar du Asset Compute Development Tool för Asset Compute-projektet:
 
-1. Öppna en kommandorad i Asset compute projektroten (i VS-koden kan du öppna den direkt i IDE via Terminal > New Terminal) och köra kommandot:
+1. Öppna en kommandorad i Asset Compute-projektroten (i VS-koden kan den öppnas direkt i IDE via Terminal > New Terminal) och kör kommandot:
 
    ```
    $ aio app run
    ```
 
-1. Det lokala utvecklingsverktyget för Asset compute öppnas i din standardwebbläsare på __http://localhost:9000__.
+1. Det lokala Asset Compute Development Tool öppnas i din standardwebbläsare på __http://localhost:9000__.
 
    ![AIR-appkörning](assets/environment-variables/aio-app-run.png)
 
 1. Se kommandoradsutdata och webbläsaren för felmeddelanden när utvecklingsverktyget initieras.
-1. Om du vill stoppa utvecklingsverktyget i Asset compute trycker du på `Ctrl-C` i det fönster som körde `aio app run` för att avsluta processen.
+1. Stoppa Asset Compute Development Tool genom att trycka på `Ctrl-C` i det fönster som körde `aio app run` för att avsluta processen.
 
 ## Felsökning
 

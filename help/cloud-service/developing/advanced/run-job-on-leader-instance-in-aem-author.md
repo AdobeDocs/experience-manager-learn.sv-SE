@@ -1,7 +1,7 @@
 ---
 title: Så här kör du ett jobb på en ledarinstans i AEM as a Cloud Service
 description: Lär dig hur du kör ett jobb på ledarinstansen i AEM as a Cloud Service.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: OSGI, Cloud Manager
 role: Architect, Developer
@@ -11,17 +11,17 @@ duration: 0
 last-substantial-update: 2024-10-23T00:00:00Z
 jira: KT-16399
 thumbnail: KT-16399.jpeg
-source-git-commit: 7dca86137d476418c39af62c3c7fa612635c0583
+exl-id: b8b88fc1-1de1-4b5e-8c65-d94fcfffc5a5
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
 
 ---
 
-
 # Så här kör du ett jobb på en ledarinstans i AEM as a Cloud Service
 
-Lär dig hur du kör ett jobb på ledarinstansen i AEM Author-tjänsten som en del av AEM as a Cloud Service och hur du konfigurerar det så att det bara körs en gång.
+Lär dig hur du kör ett jobb på ledarinstansen i AEM Author som en del av AEM as a Cloud Service och hur du konfigurerar det så att det bara körs en gång.
 
 Sling-jobb är asynkrona uppgifter som körs i bakgrunden och är utformade för att hantera systemhändelser eller händelser som utlöses av användaren. Som standard fördelas dessa jobb jämnt över alla instanser (poder) i klustret.
 
@@ -128,15 +128,15 @@ De viktigaste punkterna att notera i ovanstående kod är:
 
 ### Standardbearbetning av jobb
 
-När du distribuerar ovanstående kod till en AEM as a Cloud Service-miljö och kör den på AEM Author-tjänsten, som fungerar som ett kluster med flera AEM Author JVMs, körs jobbet en gång på varje AEM Author instance (pod), vilket innebär att antalet jobb som skapas matchar antalet pod. Antalet poder kommer alltid att vara fler än ett (för miljöer som inte är i en RDE-miljö), men kommer att variera beroende på AEM as a Cloud Service interna resurshantering.
+När du distribuerar ovanstående kod till en AEM as a Cloud Service-miljö och kör den på AEM Author-tjänsten, som fungerar som ett kluster med flera AEM Author JVM:er, körs jobbet en gång på varje AEM Author-instans (pod), vilket innebär att antalet jobb som skapas matchar antalet poder. Antalet poder kommer alltid att vara fler än ett (för miljöer som inte är i en RDE-miljö), men kommer att variera beroende på AEM as a Cloud Service interna resurshantering.
 
-Jobbet körs på varje AEM Author-instans (pod) eftersom `wknd/simple/job/topic` är associerat med AEM huvudkö, som fördelar jobb över alla tillgängliga instanser.
+Jobbet körs på varje instans av AEM Author (pod) eftersom `wknd/simple/job/topic` är associerat med AEM huvudkö, som distribuerar jobb över alla tillgängliga instanser.
 
 Detta är ofta problematiskt om jobbet ansvarar för att ändra tillstånd, till exempel skapa eller uppdatera resurser eller externa tjänster.
 
-Om du vill att jobbet bara ska köras en gång på AEM författartjänst lägger du till konfigurationen [jobbkö](#how-to-run-a-job-on-the-leader-instance) som beskrivs nedan.
+Om du vill att jobbet bara ska köras en gång på AEM Author-tjänsten lägger du till konfigurationen [jobbkö](#how-to-run-a-job-on-the-leader-instance) som beskrivs nedan.
 
-Du kan verifiera den genom att granska loggarna för AEM författartjänst i [Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#cloud-manager).
+Du kan verifiera den genom att granska loggarna för AEM Author-tjänsten i [Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#cloud-manager).
 
 ![Jobbet har bearbetats av alla instanser](./assets/run-job-once/job-processed-by-all-instances.png)
 
@@ -155,9 +155,9 @@ Det finns två loggposter, en för varje AEM Author-instans (`68775db964-nxxcx` 
 
 ## Så här kör du ett jobb på ledarinstansen
 
-Om du vill köra ett jobb _endast en gång_ på AEM författartjänst skapar du en ny Sling-jobbkö av typen **Beställd** och associerar ditt jobbämne (`wknd/simple/job/topic`) med den här kön. Med den här konfigurationen tillåts endast ledaren AEM författarinstansen (pod) att bearbeta jobbet.
+Om du vill köra ett jobb _endast en gång_ på AEM Author-tjänsten skapar du en ny Sling-jobbkö av typen **Beställd** och associerar jobbämnet (`wknd/simple/job/topic`) med den här kön. Med den här konfigurationen tillåts endast den ledande AEM Author-instansen (pod) att bearbeta jobbet.
 
-Skapa en OSGi-konfigurationsfil (`org.apache.sling.event.jobs.QueueConfiguration~wknd.cfg.json`) i modulen `ui.config` i ditt AEM projekt och lagra den i mappen `ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author`.
+Skapa en OSGi-konfigurationsfil (`org.apache.sling.event.jobs.QueueConfiguration~wknd.cfg.json`) i modulen `ui.config` i ditt AEM-projekt och lagra den i mappen `ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author`.
 
 ```json
 {

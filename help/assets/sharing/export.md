@@ -2,7 +2,7 @@
 title: Exportera resurser
 description: Lär dig hur du exporterar och hämtar resurser i grupp på din lokala dator.
 feature: Asset Management
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Content Management
 role: Developer
 level: Experienced
@@ -12,7 +12,7 @@ jira: KT-15313
 thumbnail: KT-15313.jpeg
 exl-id: d04c3316-6f8f-4fd1-9df1-3fe09d44f735
 duration: 256
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -25,9 +25,9 @@ Lär dig hur du exporterar resurser till din lokala dator med ett anpassningsbar
 
 Skriptet hämtar bara resursens ursprungliga återgivningar, utan tillhörande metadata, såvida inte dessa metadata har bäddats in i resursen som XMP. Detta innebär att beskrivande information, kategoriseringar eller taggar som lagras i AEM men inte är integrerade i resursfilerna inte inkluderas i hämtningen. Andra återgivningar kan också laddas ned genom att skriptet ändras så att de inkluderas. Se till att du har tillräckligt med utrymme för att lagra de exporterade resurserna.
 
-Skriptet körs vanligtvis mot AEM författare, men kan även köras mot AEM Publish så länge som AEM Assets HTTP API-slutpunkter och resursåtergivningar är tillgängliga via Dispatcher.
+Skriptet körs vanligtvis mot AEM Author, men kan även köras mot AEM Publish så länge som AEM Assets HTTP API-slutpunkter och resursrenderingar är tillgängliga via Dispatcher.
 
-Innan du kör skriptet måste du konfigurera det med din AEM instans-URL, inloggningsuppgifter (åtkomsttoken) och sökvägen till mappen som du vill exportera.
+Innan du kör skriptet måste du konfigurera det med din AEM instans-URL, inloggningsuppgifter (åtkomsttoken) och sökvägen till den mapp som du vill exportera.
 
 ## Exportera skript
 
@@ -294,6 +294,6 @@ Downloaded asset: exported-assets/wknd-shared/en/magazine/western-australia/adob
 Download AEM assets: 24.770s
 ```
 
-De exporterade resurserna finns i den lokala mappen som anges i konfigurationen `LOCAL_DOWNLOAD_FOLDER`. Mappstrukturen speglar mappstrukturen i AEM Assets, med resurserna hämtade till rätt undermappar. Dessa filer kan överföras till [molnlagringsleverantörer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view) som stöds, för [bulkimport](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/bulk-import) till andra AEM eller för säkerhetskopiering.
+De exporterade resurserna finns i den lokala mappen som anges i konfigurationen `LOCAL_DOWNLOAD_FOLDER`. Mappstrukturen speglar mappstrukturen i AEM Assets, med resurserna hämtade till rätt undermappar. Dessa filer kan överföras till [molnlagringsleverantörer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view) som stöds, för [bulkimport](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/bulk-import) till andra AEM-instanser eller för säkerhetskopiering.
 
 ![Exporterade resurser](./assets/export/exported-assets.png)

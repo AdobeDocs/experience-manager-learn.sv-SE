@@ -1,7 +1,7 @@
 ---
 title: Anpassa komponentikoner i Adobe Experience Manager Sites
 description: Med komponentikoner kan författare snabbt identifiera en komponent med ikoner eller meningsfulla förkortningar. Nu kan man hitta de komponenter som behövs för att skapa webbupplevelser snabbare än någonsin.
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Core Components
 topic: Development
 role: User
@@ -9,7 +9,7 @@ level: Intermediate
 doc-type: Technical Video
 exl-id: 37dc26aa-0773-4749-8c8b-4544bd4d5e5f
 duration: 379
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '353'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Komponentwebbläsaren visas nu i ett konsekvent grått tema och med följande:
 * **[!UICONTROL Component Icon]**
    * De två första bokstäverna i komponenttiteln *(standard)*
    * Anpassad PNG-bild *(konfigurerad av en utvecklare)*
-   * Anpassad SVG-avbildning *(konfigurerad av en utvecklare)*
+   * Anpassad SVG-bild *(konfigurerad av en utvecklare)*
    * CoralUI-ikon *(konfigurerad av en utvecklare)*
 
 ## Konfigurationsalternativ för komponentikoner {#component-icon-configuration-options}
@@ -49,7 +49,7 @@ Förkortningen kan anpassas via egenskapen **[cq:Component]@abbreption** . Även
 
 ### CoralUI-ikoner {#coralui-icons}
 
-CoralUI-ikoner från AEM kan användas för komponentikoner. Om du vill konfigurera en CoralUI-ikon anger du en **[cq:Component]@cq:icon** -egenskap som motsvarar HTML-ikonens attributvärde för CoralUI-ikonen (som räknas upp i [CoralUI-dokumentationen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)).
+CoralUI-ikoner från AEM kan användas för komponentikoner. Om du vill konfigurera en CoralUI-ikon anger du en **[cq:Component]@cq:icon** -egenskap till den önskade CoralUI-ikonens HTML-ikonattributvärde (som räknas upp i [CoralUI-dokumentationen](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html)).
 
 ```plain
 /apps/.../components/content/my-component
@@ -72,9 +72,9 @@ PNG-bilderna skalas till **20px med 20px**. Det kan dock vara bättre att använ
      - jcr:primaryType = "nt:file"
 ```
 
-### SVG bilder {#svg-images}
+### SVG Images {#svg-images}
 
-SVG-bilder (vektorbaserade) kan användas för komponentikoner. Om du vill konfigurera en SVG-bild som en komponentikon lägger du till SVG som en **nt:file** med namnet **cq:icon.svg** under **[cq:Component]** .
+SVG-bilder (vektorbaserade) kan användas för komponentikoner. Om du vill konfigurera en SVG-bild som en komponentikon lägger du till önskad SVG som en **nt:file** med namnet **cq:icon.svg** under **[cq:Component]** .
 
 SVG-bilder bör ha en bakgrundsfärg inställd på **#707070** och storleken **20px gånger 20px.**
 

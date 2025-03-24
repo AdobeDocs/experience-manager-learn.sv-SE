@@ -1,7 +1,7 @@
 ---
 title: Kom igång med AEM Sites - WKND, genomgång
-description: Lär dig implementera en AEM sajt för ett fiktivt livsstilsmärke som kallas WKND. Få en genomgång av grundläggande Experience Manager-teman som projektinställningar, prototyper, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling.
-version: Cloud Service
+description: Lär dig hur du implementerar en AEM-sajt för ett varumärke som kallas WKND. Få en genomgång av grundläggande Experience Manager-ämnen som projektinställningar, prototyper, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling.
+version: Experience Manager as a Cloud Service
 jira: KT-13565
 mini-toc-levels: 1
 index: y
@@ -13,7 +13,7 @@ level: Beginner
 doc-type: Catalog
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: af928e60410022f12207082467d3bd9b818af59d
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
@@ -24,11 +24,11 @@ ht-degree: 0%
 
 {{edge-delivery-services}}
 
-Välkommen till en självstudiekurs i flera delar som är utformad för utvecklare som inte har använt Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM sajt för ett fiktivt livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
+Välkommen till en självstudiekurs i flera delar som utformats för utvecklare som inte använt Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM-sajt för ett påhittat livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
 
 ## Ökning {#wknd-tutorial-overview}
 
-Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar en webbplats med de senaste standarderna och teknikerna i Adobe Experience Manager (AEM). När du är klar med självstudiekursen bör utvecklaren förstå den grundläggande grunden för plattformen och de vanliga designmönstren i AEM.
+Målet med den här självstudiekursen är att lära en utvecklare hur man implementerar en webbplats med de senaste standarderna och teknikerna i Adobe Experience Manager (AEM). När du är klar med självstudiekursen bör utvecklaren förstå grunderna för plattformen och de vanliga designmönstren i AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30476?quality=12&learn=on)
 
@@ -36,17 +36,17 @@ Målet med den här självstudiekursen är att lära en utvecklare hur man imple
 
 Det finns två grundläggande strategier för att starta ett AEM Sites-projekt.
 
-**AEM Project Archetype** - Traditionell metod för AEM genom att generera ett minimalt AEM med en Maven-mall. Detta är det rekommenderade tillvägagångssättet för AEM 6.5/6.4-projekt och AEM as a Cloud Service-projekt som förutser omfattande anpassningar. Självstudiekursen ger en djupdykning i AEM utveckling.
+**AEM Project Archetype** - Traditionell metod för AEM-utveckling genom att generera ett minimalt AEM-projekt med en Maven-mall. Detta är det rekommenderade tillvägagångssättet för AEM 6.5/6.4-projekt och AEM as a Cloud Service-projekt som förutser omfattande anpassningar. Självstudiekursen ger en djupdykning i AEM utveckling.
 
 [Starta självstudiekursen med AEM Project Archetype](./project-archetype/overview.md)
 
-**AEM Webbplatsmallar** - Kallas även för att skapa snabbwebbplats, en lågkodsmetod för att generera en AEM genom att använda en fördefinierad webbplatsmall. Använd färdiga komponenter och mallar för att snabbt komma igång med en webbplats. Använd ett temaarbetsflöde för att tillämpa varumärkesspecifika format och anpassningar med bara CSS och JavaScript. Rekommenderas för nya projekt och utvecklare. Endast för AEM as a Cloud Service.
+**AEM webbplatsmallar** - Kallas även för snabbwebbplatsgenerering, en lågkodsmetod för att generera en AEM-webbplats med en fördefinierad webbplatsmall. Använd färdiga komponenter och mallar för att snabbt komma igång med en webbplats. Använd ett temaarbetsflöde för att tillämpa varumärkesspecifika format och anpassningar med bara CSS och JavaScript. Rekommenderas för nya projekt och utvecklare. Endast för AEM as a Cloud Service.
 
 [Starta självstudiekursen med hjälp av en webbplatsmall](./site-template/create-site.md)
 
 ## Adobe XD UI Kit
 
-För att göra den här självstudiekursen närmare ett verkligt scenario skapade Adobe-användargränssnittsdesigners dummies för webbplatsen med [Adobe XD](https://www.adobe.com/products/xd.html). Under självstudiekursen implementeras olika delar av designen till en helt redigerbar AEM. Ett särskilt tack till **Lorenzo Buosi** och **Kilian Modiola** som skapade den vackra designen för WKND-webbplatsen.
+För att den här självstudiekursen ska bli närmare ett verkligt scenario skapade Adobe begåvade UX-designers dummies för webbplatsen med [Adobe XD](https://www.adobe.com/products/xd.html). Under självstudiekursen implementeras olika delar av designen till en helt redigerbar AEM-webbplats. Ett särskilt tack till **Lorenzo Buosi** och **Kilian Modiola** som skapade den vackra designen för WKND-webbplatsen.
 
 Ladda ned XD UI-kit:
 
@@ -57,7 +57,7 @@ Ladda ned XD UI-kit:
 
 En färdig version av WKND-webbplatsen finns också tillgänglig som referens: [https://wknd.site/](https://wknd.site/)
 
-Självstudiekursen behandlar de viktigaste utvecklingskunskaperna som en AEM behöver, men *inte* skapar hela webbplatsen från början till slut. Den färdiga referenssajten är en annan bra resurs att utforska och se mer av AEM funktioner.
+Självstudiekursen behandlar de viktigaste utvecklingskunskaperna som en AEM-utvecklare behöver, men *inte* skapar hela webbplatsen från början till slut. Den färdiga referenssajten är en annan bra resurs att utforska och se mer av AEM funktioner direkt.
 
 Om du vill testa den senaste koden innan du går in i självstudiekursen hämtar och installerar du den **[senaste versionen från GitHub](https://github.com/adobe/aem-guides-wknd/releases/latest)**.
 
@@ -69,4 +69,4 @@ Med Adobe Stock får du tillgång till över 140 miljoner högklassiga royaltyfr
 
 ## Nästa steg {#next-steps}
 
-Vad väntar du på?! Lär dig hur du [genererar ett nytt Adobe Experience Manager-projekt med den AEM projekttypen ](./project-archetype/overview.md) eller [skapar en webbplats med hjälp av en webbplatsmall](./site-template/create-site.md).
+Vad väntar du på?! Lär dig hur du [skapar ett nytt Adobe Experience Manager-projekt med AEM Project Archetype](./project-archetype/overview.md) eller [skapar en webbplats med hjälp av en webbplatsmall](./site-template/create-site.md).

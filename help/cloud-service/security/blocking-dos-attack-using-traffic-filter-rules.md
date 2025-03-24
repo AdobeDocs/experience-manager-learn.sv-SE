@@ -1,7 +1,7 @@
 ---
 title: Blockera DoS- och DDoS-attacker med trafikfilterregler
 description: Lär dig hur du blockerar DoS- och DDoS-attacker med trafikfilterregler på det CDN som tillhandahålls av AEM as a Cloud Service.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Security, Operations
 topic: Security, Administration, Performance
 role: Admin, Architect
@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 67091c068634e6c309afaf78942849db626128f6
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1924'
 ht-degree: 0%

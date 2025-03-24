@@ -1,7 +1,7 @@
 ---
 title: Standardinnehåll och -avsnitt
 description: Gör en djupdykning i dokumentutvecklingen av standardinnehåll och -avsnitt.
-version: 6.5, Cloud Service
+version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: User
@@ -12,7 +12,7 @@ jira: KT-14468
 thumbnail: 3425702.jpeg
 duration: 91
 exl-id: 17c7919e-3216-4f71-a553-bc5b2e1b6014
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '45'
 ht-degree: 0%

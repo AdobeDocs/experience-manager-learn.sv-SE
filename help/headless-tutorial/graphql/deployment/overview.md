@@ -1,7 +1,7 @@
 ---
-title: AEM driftsättningar utan headless
+title: AEM Headless-driftsättningar
 description: Läs mer om de olika distributionsaspekterna för AEM Headless-appar.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -11,32 +11,32 @@ thumbnail: kt-10794.jpg
 last-substantial-update: 2022-08-26T00:00:00Z
 exl-id: 6de58ca0-9444-4272-9487-15a9e3c89231
 duration: 59
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
 
 ---
 
-# AEM driftsättningar utan headless
+# AEM Headless-driftsättningar
 
-AEM Headless-klientinstallationer har många olika former: AEM-SPA, externa SPA, webbplatser, mobilappar och till och med server-till-server-processer.
+AEM Headless-klientdriftsättningar har många former: AEM-värdbaserade SPA, extern SPA, webbplats, mobilapp eller till och med server-till-server-process.
 
 Beroende på klienten och hur den distribueras har AEM Headless-distributioner olika överväganden.
 
-## AEM
+## AEM tjänstearkitektur
 
-Innan du utforskar olika aspekter av driftsättningen är det viktigt att du förstår AEM logiska arkitekturen och hur de olika tjänstenivåerna i AEM as a Cloud Service är uppdelade och har olika roller. AEM as a Cloud Service består av två logiska tjänster:
+Innan du utforskar olika aspekter av driftsättningen är det viktigt att du förstår AEM logiska arkitektur och hur de olika tjänstenivåerna i AEM as a Cloud Service är uppdelade och har olika roller. AEM as a Cloud Service består av två logiska tjänster:
 
-+ __AEM Författare__ är den tjänst där team skapar, samarbetar och publicerar innehållsfragment (och andra resurser).
-+ __AEM Publish__ är den tjänst som publicerades som innehållsfragment (och andra resurser) replikeras för allmän användning.
-+ __AEM Preview__ är den tjänst som påminner AEM Publish i beteendet, men har innehåll publicerat till den för förhandsgranskning eller granskning. AEM Preview är avsett för interna målgrupper och inte för allmän leverans av innehåll. Det är valfritt att använda AEM förhandsgranskning, baserat på önskat arbetsflöde.
++ __AEM Author__ är den tjänst där team skapar, samarbetar och publicerar innehållsfragment (och andra resurser).
++ __AEM Publish__ är den tjänst som publicerades som innehållsfragment (och andra resurser) som replikeras för allmän användning.
++ __AEM Preview__ är den tjänst som liknar AEM Publish i beteendet, men som har innehåll publicerat till den för förhandsgranskning eller granskning. AEM Preview är avsett för interna målgrupper och inte för allmän distribution av innehåll. Det är valfritt att använda AEM Preview beroende på vilket arbetsflöde du vill använda.
 
 ![AEM tjänstarkitektur](./assets/overview/aem-service-architecture.png)
 
 Typiskt AEM as a Cloud Service headless-driftsättningsarkitektur_
 
-AEM Huvudlösa kunder som arbetar i produktionskapacitet interagerar vanligtvis med AEM Publish, som innehåller det godkända publicerade innehållet. Klienter som interagerar med AEM författare måste vara särskilt försiktiga, eftersom AEM författare är säker som standard, kräver behörighet för alla förfrågningar och kan även innehålla pågående arbete eller icke godkänt innehåll.
+AEM Headless-klienter som arbetar i produktionskapacitet interagerar vanligtvis med AEM Publish, som innehåller det godkända publicerade materialet. Kunder som interagerar med AEM Author måste vara särskilt försiktiga, eftersom AEM Author är säkert som standard, kräver godkännande för alla förfrågningar och kan även innehålla pågående arbete eller icke godkänt innehåll.
 
 ## Huvudlösa klientdistributioner
 
@@ -54,7 +54,7 @@ AEM Huvudlösa kunder som arbetar i produktionskapacitet interagerar vanligtvis 
            <div class="card-content is-padded-small">
                <div class="content">
                    <p class="headline is-size-6 has-text-weight-bold"><a href="./spa.md" title="Single-page App (SPA)">Single-page app (SPA)</a></p>
-                   <p class="is-size-6">Lär dig mer om distributionsaspekter för single-page-appar (SPA).</p>
+                   <p class="is-size-6">Läs mer om distributionsaspekter för fristående program (SPA).</p>
                    <a href="./spa.md" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                        <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lär dig</span>
                    </a>

@@ -1,15 +1,15 @@
 ---
 title: Färghantering med AEM Dynamic Media
-description: I den här videon utforskar vi Dynamic Media Color Management och hur det kan användas för att förgranska färgkorrigeringar i för AEM Assets.
+description: I den här videon utforskar vi Dynamic Media Color Management och hur den kan användas för att förgranska färgkorrigeringar i för AEM Assets.
 feature: Image Profiles, Video Profiles
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: Developer
 level: Intermediate
 doc-type: Feature Video
 exl-id: a733532b-db64-43f6-bc43-f7d422d5071a
 duration: 274
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Färghantering med AEM Dynamic Media{#understanding-color-management-with-aem-dynamic-media}
 
-I den här videon utforskar vi Dynamic Media Color Management och hur det kan användas för att förgranska färgkorrigeringar i för AEM Assets.
+I den här videon utforskar vi Dynamic Media Color Management och hur den kan användas för att förgranska färgkorrigeringar i för AEM Assets.
 
 >[!VIDEO](https://video.tv.adobe.com/v/16792?quality=12&learn=on)
 
@@ -26,7 +26,7 @@ I den här videon utforskar vi Dynamic Media Color Management och hur det kan an
 >
 >[Aktivera Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) i AEM för att använda den här funktionen.
 
-Den här funktionen är tillgänglig för AEM 6.1- och 6.2-versioner som ett funktionspaket.
+Den här funktionen finns för AEM 6.1 och 6.2 som funktionspaket.
 
 ## XML-mall för konfigurationsnoden Färghantering {#xml-template-for-the-color-management-configuration-node}
 
@@ -86,7 +86,7 @@ Nedan följer XML-mallen för konfigurationsnoden Färghantering. Denna XML-mall
 />
 ```
 
-### Lista över standardfärgprofiler för Adobe anges nedan {#list-of-default-adobe-color-profiles-are-listed-below}
+### Lista över Adobe standardfärgprofiler visas nedan {#list-of-default-adobe-color-profiles-are-listed-below}
 
 | Namn | Färgrymd | Beskrivning |
 | ------------------- | ---------- | ------------------------------------- |
@@ -121,8 +121,8 @@ Nedan följer XML-mallen för konfigurationsnoden Färghantering. Denna XML-mall
 | WebCoatedGrade3 | CMYK | Web Coated SWOP 2006 Grade 3 Paper |
 | WebCoatedGrade5 | CMYK | Web Coated SWOP 2006 Grade 5 Paper |
 | WebUncoated | CMYK | U.S. Web Uncoated v2 |
-| WideGamutRGB | RGB | Bred färgomfång RGB |
+| WideGamutRGB | RGB | Wide Gamut RGB |
 
 ## Ytterligare resurser{#additional-resources}
 
-* [Konfigurerar Dynamic Media Color Management](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
+* [Konfigurerar dynamisk mediefärghantering](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)

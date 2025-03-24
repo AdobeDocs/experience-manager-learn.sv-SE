@@ -2,14 +2,14 @@
 title: Skapa OSGi-tjänst för att exportera data från ett PDF-formulär
 description: Exportera data från ett PDF-formulär med FormsService API
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 jira: KT-14196
 exl-id: c3032669-154c-4565-af6e-32d94e975e37
 duration: 52
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Exportera data
 
-Det första steget för att fylla i ett adaptivt formulär från en PDF-fil är att exportera data från den angivna PDF-filen och lagra dem i AEM.
+Det första steget för att fylla i ett adaptivt formulär från en PDF-fil är att exportera data från den angivna PDF-filen och lagra dem i AEM-databasen.
 
 Följande kod har skrivits för att extrahera data från den överförda PDF-filen och masserats för att få rätt format än vad som kan användas för att fylla i det adaptiva formuläret
 

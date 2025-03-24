@@ -2,7 +2,7 @@
 title: Generera åtkomsttoken för server-till-server i App Builder-åtgärden
 description: Lär dig hur du genererar en åtkomsttoken med hjälp av autentiseringsuppgifter för OAuth Server-till-Server för användning i en App Builder-åtgärd.
 feature: Developer Tools
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 role: Developer
 level: Intermediate
@@ -10,7 +10,7 @@ jira: KT-14724
 last-substantial-update: 2024-02-29T00:00:00Z
 duration: 122
 exl-id: 919cb9de-68f8-4380-940a-17274183298f
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 0%
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 # Generera åtkomsttoken för server-till-server i App Builder-åtgärden
 
-App Builder-åtgärder kan behöva interagera med Adobe API:er som har stöd för **OAuth Server-till-Server-autentiseringsuppgifter** och som är kopplade till Adobe Developer Console-projekt som App Builder-appen är distribuerad.
+App Builder-åtgärder kan behöva interagera med Adobe API:er som stöder **OAuth Server-till-Server-autentiseringsuppgifter** och som är kopplade till Adobe Developer Console-projekt som App Builder-appen är distribuerad till.
 
 I den här guiden beskrivs hur du skapar en åtkomsttoken med hjälp av _OAuth Server-to-Server-inloggningsuppgifter_ som kan användas i en App Builder-åtgärd.
 
 >[!IMPORTANT]
 >
-> JWT-autentiseringsuppgifterna (Service Account) har ersatts med autentiseringsuppgifterna för OAuth Server-till-Server. Det finns dock fortfarande vissa Adobe-API:er som bara stöder JWT-autentiseringsuppgifter och migrering till OAuth Server-till-Server pågår. Läs Adobe API-dokumentationen för att ta reda på vilka autentiseringsuppgifter som stöds.
+> JWT-autentiseringsuppgifterna (Service Account) har ersatts med autentiseringsuppgifterna för OAuth Server-till-Server. Det finns dock fortfarande vissa Adobe-API:er som bara stöder JWT-referenser (Service Account) och migrering till OAuth Server-till-Server pågår. Läs Adobe API-dokumentationen för att ta reda på vilka autentiseringsuppgifter som stöds.
 
 ## Adobe Developer Console projektkonfigurationer
 
@@ -87,9 +87,9 @@ Nycklarna som definieras under `inputs` är tillgängliga för objektet `params`
 
 ## OAuth Server-till-Server-autentiseringsuppgifter för att komma åt token
 
-I App Builder-åtgärden är autentiseringsuppgifterna för OAuth Server-till-Server tillgängliga i objektet `params`. Med dessa autentiseringsuppgifter kan åtkomsttoken genereras med [OAuth 2.0-bibliotek](https://oauth.net/code/). Du kan också använda biblioteket [Nodhämtning](https://www.npmjs.com/package/node-fetch) för att göra en POST-förfrågan till Adobe IMS-tokenslutpunkten för att hämta åtkomsttoken.
+I App Builder-åtgärden är autentiseringsuppgifterna för OAuth Server-till-Server tillgängliga i objektet `params`. Med dessa autentiseringsuppgifter kan åtkomsttoken genereras med [OAuth 2.0-bibliotek](https://oauth.net/code/). Du kan också använda biblioteket [Nodhämtning](https://www.npmjs.com/package/node-fetch) för att göra en POST-begäran till Adobe IMS-tokenslutpunkten för att hämta åtkomsttoken.
 
-I följande exempel visas hur du använder biblioteket `node-fetch` för att göra en POST-förfrågan till Adobe IMS-tokenslutpunkten för att hämta åtkomsttoken.
+I följande exempel visas hur du använder biblioteket `node-fetch` för att göra en POST-begäran till Adobe IMS-tokenslutpunkten för att hämta åtkomsttoken.
 
 ```javascript
 const fetch = require("node-fetch");

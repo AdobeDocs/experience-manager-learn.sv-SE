@@ -1,7 +1,7 @@
 ---
 title: URL-omdirigeringar
 description: Lär dig mer om de olika alternativen för att utföra URL-omdirigering i AEM.
-version: 6.4, 6.5, Cloud Service
+version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Development, Administration
 feature: Operations, Dispatcher
 role: Developer, Architect
@@ -12,7 +12,7 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: bc2f4655631f28323a39ed5b4c7878613296a0ba
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 0%

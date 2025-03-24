@@ -3,13 +3,13 @@ title: Anpassat processsteg för att fylla i listvariabler
 description: Lär dig hur du skapar ett anpassat processsteg för att fylla i listvariabler av typen dokument och sträng i Adobe Experience Manager.
 feature: Workflow
 topic: Development
-version: 6.5
+version: Experience Manager 6.5
 role: Developer
 level: Beginner
 kt: kt-8063
 exl-id: 09d9eabf-4815-4159-b6c7-cf2ebc8a2df5
 duration: 68
-source-git-commit: 52b7e6afbfe448fd350e84c3e8987973c87c4718
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%

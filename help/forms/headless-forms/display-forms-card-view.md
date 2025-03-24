@@ -2,14 +2,14 @@
 title: Visa de hämtade formulären i kortvyn
 description: Använd listforms-API för att visa formulären
 feature: Adaptive Forms
-version: 6.5
+version: Experience Manager 6.5
 jira: KT-13311
 topic: Development
 role: User
 level: Intermediate
 exl-id: c01ad68e-23c9-4564-8e3e-1924af34a493
 duration: 91
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 0%
@@ -27,7 +27,7 @@ I den här artikeln använder vi [listforms-API](https://opensource.adobe.com/ae
 
 ## Kortmall
 
-Följande kod användes för att utforma kortmallen. Kortmallen visar det adaptiva formulärets rubrik och beskrivning tillsammans med Adobe logotyp. [Material-gränssnittskomponenter](https://mui.com/) har använts för att skapa den här layouten.
+Följande kod användes för att utforma kortmallen. Kortmallen visar det adaptiva formulärets titel och beskrivning tillsammans med Adobe logotyp. [Material-gränssnittskomponenter](https://mui.com/) har använts för att skapa den här layouten.
 
 
 
@@ -85,7 +85,7 @@ Följande väg definierades i Main.js för att navigera till DisplayForm.js
 
 ## Hämta formulären
 
-Listforms-API användes för att hämta formulären från AEM. API:t returnerar en array med JSON-objekt, där varje JSON-objekt representerar ett formulär.
+Listforms-API användes för att hämta formulären från AEM-servern. API:t returnerar en array med JSON-objekt, där varje JSON-objekt representerar ett formulär.
 
 ```javascript
 import { useState,useEffect } from "react";

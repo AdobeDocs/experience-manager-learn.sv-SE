@@ -5,12 +5,13 @@ solution: Experience Manager, Experience Manager Forms
 type: Documentation
 role: Developer
 level: Beginner, Intermediate
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Development
 feature: Adaptive Forms
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 jira: KT-16517
-source-git-commit: f9a1fb40aabb6fdc1157e1f2576f9c0d9cf1b099
+exl-id: ab9bd406-e25e-4e3c-9f67-ad440a8db57e
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '209'
 ht-degree: 0%
@@ -19,7 +20,7 @@ ht-degree: 0%
 
 # Bygg, driftsätt och testa komponenten för länder
 
-Om du vill skapa alla moduler och distribuera paketet `all` till en lokal instans av AEM kör du följande kommando i projektets rotkatalog:
+Om du vill skapa alla moduler och distribuera `all`-paketet till en lokal instans av AEM kör du följande kommando i projektets rotkatalog:
 
 ```mvn clean install -PautoInstallSinglePackage```
 
@@ -39,4 +40,3 @@ String jsonPath = "/content/dam/mydata/" + getContinent() + ".json"; // Update p
 * Konfigurera komponenten Länder med hjälp av dialogruteredigeraren och ange olika egenskaper, inklusive kontinenten
   ![innehåll](assets/select-continent.png)
 * Förhandsgranska formuläret och kontrollera att den nedrullningsbara listan fungerar som förväntat
-

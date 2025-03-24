@@ -1,7 +1,7 @@
 ---
 title: AEM as a Cloud Service-integreringar med Adobe Experience Cloud
 description: Läs mer om AEM as a Cloud Service integreringar med andra Adobe Experience Cloud-produkter.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations
 role: Leader, Architect, Admin, Developer
@@ -14,7 +14,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM as a Cloud Service" before-title="false"
 exl-id: 9e856dcc-f042-4e9d-bf97-dd4f72e837e3
 duration: 135
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '682'
 ht-degree: 1%
@@ -24,7 +24,7 @@ ht-degree: 1%
 # AEM as a Cloud Service-integreringar med Adobe Experience Cloud
 
 Läs mer om AEM as a Cloud Service integreringar med andra Adobe Experience Cloud-produkter.
-Klicka på Experience Cloud för att få dokumentation om hur du konfigurerar och använder integreringarna.
+Klicka på Experience Cloud-produkten för att få dokumentation om hur du konfigurerar och använder integreringarna.
 
 |                                                                   | AEM Sites | AEM Assets | AEM Forms |
 |-------------------------------------------------------------------|:---------:|:----------:|:---------:|
@@ -38,7 +38,7 @@ Klicka på Experience Cloud för att få dokumentation om hur du konfigurerar oc
 | Customer Journey Analytics |           |            |          |
 | [Experience Platform-taggar](#adobe-experience-platform-tags) | ✔ |            | ✔ |
 | [Journey Optimizer](#adobe-journey-optimizer) |           | ✔ |          |
-| [Utbildningshanteraren](#adobe-learning-manager) | ✔ |            |          |
+| [Learning Manager](#adobe-learning-manager) | ✔ |            |          |
 | Marketo Engage |           |            |          |
 | CDP i realtid |           |            |          |
 | [Sensei](#adobe-sensei) | ✔ | ✔ | ✔ |
@@ -63,10 +63,10 @@ Tack vare Adobe Analytics integrering med AEM as a Cloud Service kan ni spåra i
 
 + [Konfigurera Adobe Analytics-integreringen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-analytics.html)
 + [AEM Sites och Analytics, genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/analytics/collect-data-analytics.html)
-+ Adobe-klientdatalager (ACDL)
++ Adobe Client Data Layer (ACDL)
 
-   + [Utöka ACDL AEM WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)
-   + [Integrera ACDL med AEM WCM-kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/integrations.html)
+   + [Utöka ACDL i AEM WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)
+   + [Integrera ACDL med AEM WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/integrations.html)
    + [Händelsedriven datahantering med ACDL](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/adobe-client-data-layer.html)
    + [Adobe Client Data Layer (ACDL), genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
 
@@ -84,30 +84,30 @@ Tack vare Adobe Analytics integrering med AEM as a Cloud Service kan ni spåra i
 
 + [Integrera med Adobe Campaign Classic](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-campaign-classic.html#configure-user)
 + [Skapa ett Adobe Experience Manager-nyhetsbrev](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/creating-newsletter.html)
-+ [AEM E-postkärnkomponentdokumentation](https://github.com/adobe/aem-core-email-components#aem-email-core-components)
++ [AEM-dokumentation om kärnkomponenter för e-post](https://github.com/adobe/aem-core-email-components#aem-email-core-components)
 
 ## Adobe Commerce
 
-Tack vare Adobe Commerce integrering med AEM as a Cloud Service kan varumärken skalas och utvecklas snabbare för att särskilja sina handelsupplevelser och fånga upp ökade webbutgifter. AEM med Commerce kombinerar de engagerande, flerkanaliga och personaliserade upplevelserna i Experience Manager med ett obegränsat antal handelslösningar för att ge olika upplevelser till alla delar av kundresan, minska time to value och öka konverteringsgraden.
+Tack vare Adobe Commerce integrering med AEM as a Cloud Service kan varumärken skalas och utvecklas snabbare för att särskilja sina handelsupplevelser och fånga upp ökade webbutgifter. AEM och Commerce kombinerar de engagerande, flerkanaliga och personaliserade upplevelserna i Experience Manager med ett obegränsat antal e-handelslösningar för att ge olika upplevelser på alla delar av kundresan, minska time to value och öka konverteringsgraden.
 
 ### AEM Sites
 
-+ [AEM Användarhandbok för Innehåll och Commerce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
++ [Användarhandbok för AEM Content och Commerce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
 
 
 ## Taggar i Adobe Experience Platform
 
-Taggar i Adobe Experience Platform integreras smidigt med AEM, vilket är ett enkelt sätt att distribuera och hantera [analyser](#adobe-analytics), [målgruppsanpassning](#adobe-target) samt marknadsförings- och annonstaggar som krävs för engagerande kundupplevelser.
+Taggar i Adobe Experience Platform integreras smidigt med AEM, vilket är ett enkelt sätt att driftsätta och hantera [analystaggar](#adobe-analytics), [målgruppsanpassningar](#adobe-target) samt marknadsförings- och annonstaggar som krävs för att skapa engagerande kundupplevelser.
 
 ### AEM Sites
 
 + [Användarhandbok för Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
-+ [Experience Platform taggar, genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
++ [Självstudiekurs om Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
 
 ### AEM Forms
 
 + [Användarhandbok för Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
-+ [Experience Platform taggar, genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
++ [Självstudiekurs om Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
 
 ## Adobe Journey Optimizer
 
@@ -119,7 +119,7 @@ Adobe Journey Optimizer hjälper er att schemalägga flerkanalskampanjer och en-
 
 ## Adobe Learning Manager
 
-Adobe Learning Manager (tidigare Adobe Captivate Prime) levererar skräddarsytt lärande till kunder och anställda.
+Adobe Learning Manager (tidigare Adobe Captivate Prime) ger skräddarsydd inlärning till kunder och anställda.
 
 ### AEM Sites
 
@@ -144,27 +144,27 @@ Beskär, visuell sökning med mera!
 
 ### AEM Forms
 
-+ [Tjänsten Automated forms conversion](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
++ [Automatiserad formulärkonverteringstjänst](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
 
 
 ## Adobe Target
 
-Adobe Target kan integreras med AEM as a Cloud Service för att leverera optimerad webbupplevelse för alla slutanvändare, som alla drivs av innehåll från AEM.
+Adobe Target kan integreras med AEM as a Cloud Service för att ge optimerad webbupplevelse för alla slutanvändare, som alla drivs av innehåll från AEM.
 
 ### AEM Sites
 
 + [Konfigurera Adobe Target-integreringen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
 + Upplev fragment till mål
 
-   + [Publish Experience Fragments to Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
-   + [Publish Experience Fragments som JSON till Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
+   + [Publicera Experience Fragments till Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
+   + [Publicera upplevelsefragment som JSON till mål](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
 
-+ [Använd AEM kontextnav med mål](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/audiences.html#creating-an-adobe-target-audience-using-the-audience-console)
++ [Använd AEM Context Hub med Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/audiences.html#creating-an-adobe-target-audience-using-the-audience-console)
 + [AEM Sites och Target, självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/target/overview.html)
 
 ## Adobe Workfront
 
-Adobe Workfront integreringar med AEM är en Cloud Service som effektiviserar arbetet med att skapa digitala resurser, samarbeta och livscykelhantering.
+Adobe Workfront integreringar med AEM som Cloud Service effektiviserar arbetet med att skapa digitala resurser, samarbeta och hantera livscykeln.
 
 ### AEM Assets
 
@@ -172,5 +172,5 @@ Adobe Workfront integreringar med AEM är en Cloud Service som effektiviserar ar
 + [Workfront förbättrade anslutningsvideor](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html)
 + AEM Assets Essentials
 
-   + [Användarhandbok för Adobe Workfront för Assets Essentials](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
-   + [Adobe Workfront- och Assets Essentials-videor](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
+   + [Användarhandbok för Adobe Workfront for Assets Essentials](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
+   + [Videofilmer om Adobe Workfront och Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)

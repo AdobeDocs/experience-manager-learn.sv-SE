@@ -1,7 +1,7 @@
 ---
 title: Granska ui.front-modulen för ett projekt i full hög
 description: Granska utvecklingsfasen, driftsättningen och leveranscykeln för ett webbaserat AEM Sites-projekt i full hög.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
 role: Developer, Architect, Admin
@@ -13,25 +13,25 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
 duration: 364
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
 
 ---
 
-# Granska modulen ui.front för AEM i fullstacksprojektet {#aem-full-stack-ui-frontent}
+# Granska AEM-projektets ui.front-modul i full hög {#aem-full-stack-ui-frontent}
 
-I det här kapitlet går vi igenom utveckling, distribution och leverans av frontendartefakter i ett AEM i full hög genom att fokusera på modulen &quot;ui.front&quot; i __WKND Sites-projektet__.
+I det här kapitlet går vi igenom utveckling, distribution och leverans av frontendartefakter i ett AEM-projekt i full hög genom att fokusera på modulen &quot;ui.front&quot; i __WKND Sites-projektet__.
 
 
 ## Mål {#objective}
 
-* Förstå hur frontendartefakter byggs och driftsätts i ett AEM projekt i full hög
-* Granska [webpack](https://webpack.js.org/)-konfigurationer för AEM fullstacksprojekt i modulen `ui.frontend`
-* Genereringsprocess för AEM klientbibliotek (kallas även klientbibliotek)
+* Förstå hur frontendartefakter byggs och driftsätts i ett högklassigt AEM-projekt
+* Granska [webpack](https://webpack.js.org/)-konfigurationer för AEM-fullstacksprojektet i modulen `ui.frontend`
+* Genereringsprocess för AEM klientbibliotek (kallas även klientlibs)
 
-## Driftsättningsflöde i gränssnittet för projekt med AEM i fullhög och snabb utveckling av webbplatser
+## Driftsättningsflöde i gränssnittet för AEM-projekt i full hög och snabbinstallation av webbplatser
 
 >[!IMPORTANT]
 >
@@ -43,13 +43,13 @@ I det här kapitlet går vi igenom utveckling, distribution och leverans av fron
 
 
 * Klona [AEM WKND Sites-projektet](https://github.com/adobe/aem-guides-wknd)
-* Bygg och driftsatte det klonade projektet AEM WKND Sites till AEM as a Cloud Service.
+* Bygg och driftsätt det klonade AEM WKND Sites-projektet i AEM as a Cloud Service.
 
-Mer information finns i AEM WKND-webbplatsprojektet [README.md](https://github.com/adobe/aem-guides-wknd/blob/main/README.md).
+Mer information finns i AEM WKND Site-projektet [README.md](https://github.com/adobe/aem-guides-wknd/blob/main/README.md).
 
-## AEM slutartefaktflöde för projekt i full hög {#flow-of-frontend-artifacts}
+## AEM front-end-artefaktflöde för projekt i full hög {#flow-of-frontend-artifacts}
 
-Nedan visas en högnivårepresentation av __utveckling, distribution och leverans__-flödet för frontendartefakter i ett AEM i en fullständig stack.
+Nedan visas en högnivårepresentation av __utvecklingen, distributionen och leveransflödet__ för frontendartefakterna i ett AEM-projekt i full hög.
 
 ![Utveckling, driftsättning och leverans av frontendartefakter](assets/Dev-Deploy-Delivery-AEM-Project.png)
 
@@ -58,12 +58,12 @@ Under utvecklingsfasen utförs ändringar i gränssnittet, som formatering och o
 
 Front-end-ändringar distribueras till AEM as a Cloud Service-miljön när du kör pipelinen [__Full-stack__ i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html).
 
-Framsidesresurserna levereras till webbläsarna via URI-sökvägar som börjar med `/etc.clientlibs/`, och cachas vanligtvis AEM Dispatcher och CDN.
+Framsidesresurserna levereras till webbläsarna via URI-sökvägar som börjar med `/etc.clientlibs/`, och cachas vanligtvis i AEM Dispatcher och CDN.
 
 
 >[!NOTE]
 >
-> På samma sätt distribueras [front-end-ändringarna](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html) i __AEM-snabbwebbplatsresan__ till AEM as a Cloud Service-miljön genom att du kör pipeline __Front-End__ (se [Konfigurera pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html)).
+> På samma sätt distribueras [ändringarna i gränssnittet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html) i __AEM snabbplatsresa__ till AEM as a Cloud Service-miljön genom att pipeline __Front-End__ körs. Se [Konfigurera pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html).
 
 ### Granska webbpaketskonfigurationer i WKND Sites-projektet {#development-frontend-webpack-clientlib}
 
@@ -80,7 +80,7 @@ Framsidesresurserna levereras till webbläsarna via URI-sökvägar som börjar m
       ...    
   ```
 
-   1. `webpack.dev.js` innehåller konfigurationen __development__ för webbpack-dev-server och pekar på HTML-mallen som ska användas. Den innehåller också en proxykonfiguration till en AEM som körs på `localhost:4502`.
+   1. `webpack.dev.js` innehåller konfigurationen __development__ för webbpack-dev-server och pekar på den HTML-mall som ska användas. Den innehåller även en proxykonfiguration för en AEM-instans som körs på `localhost:4502`.
 
   ```javascript
       ...
@@ -128,7 +128,7 @@ Framsidesresurserna levereras till webbläsarna via URI-sökvägar som börjar m
     ...
 ```
 
-* __front-maven-plugin__ från `ui.frontend/pom.xml` orkestrerar webbpaketering och klientlib-generering när AEM byggs.
+* __front-maven-plugin__ från `ui.frontend/pom.xml` orkestrerar webbpaketering och klientlib-generering när AEM-projekt byggs.
 
 `$ mvn clean install -PautoInstallSinglePackage`
 
@@ -139,7 +139,7 @@ Framsidesresurserna levereras till webbläsarna via URI-sökvägar som börjar m
 
 ### Leverans från AEM as a Cloud Service {#delivery-frontend-aemaacs}
 
-De frontendresurser som distribueras via hela stacken levereras från AEM till webbläsare som `/etc.clientlibs` filer. Du kan verifiera detta genom att gå till den [offentliga WKND-webbplatsen](https://wknd.site/content/wknd/us/en.html) och visa webbsidans källa.
+De front end-resurser som distribueras via pipeline i helhög levereras från AEM Site till webbläsare som `/etc.clientlibs`-filer. Du kan verifiera detta genom att gå till den [offentliga WKND-webbplatsen](https://wknd.site/content/wknd/us/en.html) och visa webbsidans källa.
 
 ```html
     ....

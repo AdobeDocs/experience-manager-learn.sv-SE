@@ -1,7 +1,7 @@
 ---
 title: Lägg till webbplatsmärkning
 description: Definiera global CSS, CSS-variabler och webbteckensnitt för en Edge Delivery Services-webbplats.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ doc-type: Tutorial
 jira: KT-15832
 duration: 900
 exl-id: a5cd9906-7e7a-43dd-a6b2-e80f67d37992
-source-git-commit: ecd3ce33204fa6f3f2c27ebf36e20ec26e429981
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1315'
 ht-degree: 0%
@@ -48,7 +48,7 @@ $ git checkout -b wknd-styles
 
 ## Global CSS
 
-Edge Delivery Servicens använder en global CSS-fil, som finns på `styles/styles.css`, för att konfigurera de gemensamma formaten för hela webbplatsen. `styles.css` styr aspekter som färger, teckensnitt och mellanrum och ser till att allt ser likadant ut på webbplatsen.
+Edge Delivery Services använder en global CSS-fil, som finns på `styles/styles.css`, för att konfigurera de gemensamma formaten för hela webbplatsen. `styles.css` styr aspekter som färger, teckensnitt och mellanrum och ser till att allt ser likadant ut på webbplatsen.
 
 Global CSS bör vara agnostisk för konstruktion på lägre nivå, t.ex. block, med fokus på webbplatsens övergripande utseende och känsla samt gemensamma visuella behandlingar.
 
@@ -96,7 +96,7 @@ När du utvecklar en webbplats och märker att du upprepar samma CSS-värden bö
 
 Bare element formateras direkt genom elementnamnet i stället för att använda en CSS-klass. I stället för att formatera en CSS-klass `.page-heading` används till exempel format på elementet `h1` med `h1 { ... }`.
 
-I filen `styles/styles.css` används en uppsättning basformat på osynliga HTML-element. Edge Delivery Servicens webbplatser prioriterar med oskarpa element eftersom de är i linje med Edge Delivery tjänsts inbyggda semantiska HTML.
+I filen `styles/styles.css` används en uppsättning basformat på osynliga HTML-element. Edge Delivery Services webbplatser prioriterar med oskarpa element eftersom de är i linje med Edge Delivery tjänsts inbyggda semantiska HTML.
 
 Om du vill anpassa dig till WKND-branding kan vi formatera några osynliga element i `styles.css`:
 
@@ -123,11 +123,11 @@ Dessa format säkerställer att `h2`-element, om de inte åsidosätts, formatera
 
 ### Indragna element
 
-I Edge Delivery Services förbättrar projektets `scripts.js`- och `aem.js`-kod automatiskt specifika Bare HTML-element baserat på deras kontext i HTML.
+I Edge Delivery Services förbättrar projektets `scripts.js`- och `aem.js`-kod automatiskt specifika Bare HTML-element baserat på deras kontext inom HTML.
 
 Ankarelement (`<a>`) som har skapats på en egen rad, i stället för inline med omgivande text, tolkas som knappar som baseras på det här sammanhanget. Dessa ankare radbryts automatiskt med behållaren `div` med CSS-klassen `button-container` och ankarelementet har en `button` CSS-klass tillagd.
 
-När en länk till exempel skapas på en egen rad uppdaterar Edge Delivery Servicens JavaScript sin DOM till följande:
+När en länk skapas på en egen rad uppdaterar Edge Delivery Services JavaScript sin DOM till följande:
 
 ```html
 <p class="button-container">
@@ -174,7 +174,7 @@ Denna CSS definierar basknappsformat och innehåller WKND-specifika behandlingar
 
 ## Webbteckensnitt
 
-Edge Delivery Servicens optimerar användningen av webbteckensnitt för att bibehålla höga prestanda och minimera effekten på poängen i Lightroom. Den här metoden garanterar snabb återgivning utan att webbplatsens visuella identitet äventyras. Så här implementerar du webbteckensnitt effektivt för optimala prestanda.
+Edge Delivery Services-projekt optimerar användningen av webbteckensnitt för att bibehålla höga prestanda och minimera effekten på poängen i Lightroom. Den här metoden garanterar snabb återgivning utan att webbplatsens visuella identitet äventyras. Så här implementerar du webbteckensnitt effektivt för optimala prestanda.
 
 ### Typsnitt
 
@@ -289,13 +289,13 @@ Uppdatera slutligen CSS-variablerna `styles/styles.css` så att de använder de 
 
 ### Reservteckensnitt
 
-Webbteckensnitt påverkar ofta prestandan på grund av sin storlek, vilket kan öka poängen för Cumulative Layout Shift (CLS) och minska de totala poängen för Lightroom. För att säkerställa snabb textvisning när webbteckensnitt läses in används webbläsarbaserade reservteckensnitt i Edge Delivery Services. Det här arbetssättet gör att du får en smidig användarupplevelse medan det önskade teckensnittet används.
+Webbteckensnitt påverkar ofta prestandan på grund av sin storlek, vilket kan öka poängen för Cumulative Layout Shift (CLS) och minska de totala poängen för Lightroom. För att säkerställa snabb textvisning när webbteckensnitt läses in använder Edge Delivery Services-projekt webbläsarbaserade reservteckensnitt. Det här arbetssättet gör att du får en smidig användarupplevelse medan det önskade teckensnittet används.
 
-Om du vill välja det bästa reservteckensnittet använder du Adobe [Helix Font Fallback Chrome-tillägget](https://www.aem.live/developer/font-fallback) som anger ett teckensnitt som matchar webbläsarna innan det anpassade teckensnittet läses in. De resulterande reservtypsnittsdeklarationerna bör läggas till i filen `styles/styles.css` för att förbättra prestandan och ge användarna en smidig upplevelse.
+Om du vill välja det bästa reservteckensnittet använder du Adobe [Helix Font Fallback Chrome-tillägg](https://www.aem.live/developer/font-fallback) som anger ett teckensnitt som matchar webbläsarna innan det anpassade teckensnittet läses in. De resulterande reservtypsnittsdeklarationerna bör läggas till i filen `styles/styles.css` för att förbättra prestandan och ge användarna en smidig upplevelse.
 
 ![Helix Font Fallback Chrome-tillägg](./assets/4-website-branding/font-fallback-chrome-plugin.png){align=center}
 
-Om du vill använda Chrome-tillägget [Helix Font Fallback](https://www.aem.live/developer/font-fallback) kontrollerar du att webbsidan har webbteckensnitt i samma varianter som används på webbplatsen Edge Delivery Services. I den här självstudien demonstreras tillägget på [wknd.site](http://wknd.site/us/en.html). När du utvecklar en webbplats ska du tillämpa tillägget på den webbplats som du arbetar med i stället för på [wknd.site](http://wknd.site/us/en.html).
+Om du vill använda Chrome-tillägget [Helix Font Fallback](https://www.aem.live/developer/font-fallback) kontrollerar du att webbsidan har webbteckensnitt i samma varianter som används på Edge Delivery Services webbplats. I den här självstudien demonstreras tillägget på [wknd.site](http://wknd.site/us/en.html). När du utvecklar en webbplats ska du tillämpa tillägget på den webbplats som du arbetar med i stället för på [wknd.site](http://wknd.site/us/en.html).
 
 ```css
 /* styles/styles.css */
@@ -385,10 +385,10 @@ När ändringarna har skickats till `wknd-styles`-grenen skapar du en pull-begä
    ```
 
    * `Fix #1` refererar till GitHub-problemet som skapades tidigare.
-   * Test-URL:erna anger AEM Code Sync vilka grenar som ska användas för validering och jämförelse. Efter-URL:en använder arbetsgrenen `wknd-styles` för att kontrollera hur koden påverkar webbplatsens prestanda.
+   * Test-URL:erna talar om för AEM Code Sync vilka grenar som ska användas för validering och jämförelse. Efter-URL:en använder arbetsgrenen `wknd-styles` för att kontrollera hur koden påverkar webbplatsens prestanda.
 
 6. Klicka på **Skapa pull-begäran**.
-7. Vänta tills [AEM-appen GitHub för kodsynkronisering](./1-new-code-project.md) har **slutfört kvalitetskontroller**. Lös felen och kör om kontrollerna om de misslyckas.
+7. Vänta tills [AEM Code Sync GitHub-appen](./1-new-code-project.md) har **slutfört kvalitetskontroller**. Lös felen och kör om kontrollerna om de misslyckas.
 8. **Sammanfoga pull-begäran** till `main` när kontrollerna har slutförts.
 
 När ändringarna har sammanfogats med `main` betraktas de inte som distribuerade till produktionen, och ny utveckling kan fortsätta baserat på dessa uppdateringar.

@@ -1,7 +1,7 @@
 ---
-title: Använda AEM för att uppgradera till AEM as a Cloud Service
-description: Lär dig hur AEM modernization Tools används för att uppgradera ett befintligt AEM och befintligt material så att det blir AEM as a Cloud Service-kompatibelt.
-version: Cloud Service
+title: Använda AEM moderniseringsverktyg för att gå över till AEM as a Cloud Service
+description: Läs om hur AEM Moderniseringsverktyg används för att uppgradera ett befintligt AEM-projekt och innehåll så att det blir AEM as a Cloud Service-kompatibelt.
+version: Experience Manager as a Cloud Service
 topic: Migration, Upgrade
 feature: Migration
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-8629
 thumbnail: 336965.jpeg
 exl-id: 310f492c-0095-4015-81a4-27d76f288138
 duration: 2502
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 1%
@@ -40,14 +40,14 @@ Läs om hur AEM Moderniseringsverktyg används för att uppgradera befintligt AE
 
 ## Använda AEM moderniseringsverktyg
 
-![AEM Verktyg för modernisering ](./assets/aem-modernization-tools.png)
+![Livscykel för AEM moderniseringsverktyg](./assets/aem-modernization-tools.png)
 
-AEM verktyg för modernisering konverterar automatiskt befintliga AEM sidor som består av gamla statiska mallar, grundkomponenter och parsys, och använder moderna metoder som redigerbara mallar, AEM viktiga WCM-komponenter och layoutbehållare.
+AEM moderniseringsverktyg konverterar automatiskt befintliga AEM Pages-sidor som består av gamla statiska mallar, grundkomponenter och parsys för att använda moderna metoder som redigerbara mallar, AEM Core WCM-komponenter och layoutbehållare.
 
 ## Viktiga aktiviteter
 
-+ Klona AEM 6.x-produktion och kör AEM moderniseringsverktyg mot
-+ Hämta och installera de [senaste AEM moderniseringsverktygen](https://github.com/adobe/aem-modernize-tools/releases/latest) på AEM 6.x-produktionsklonen via Package Manager
++ Klona produktionen av AEM 6.x och kör AEM moderniseringsverktyg mot
++ Hämta och installera de [senaste AEM-moderniseringsverktygen](https://github.com/adobe/aem-modernize-tools/releases/latest) på produktionsklonen AEM 6.x via Package Manager
 
 + [Sidstrukturkonverteraren](https://opensource.adobe.com/aem-modernize-tools/pages/structure/about.html) uppdaterar befintligt sidinnehåll från en statisk mall till en mappad redigerbar mall med layoutbehållare
    + Definiera konverteringsregler med OSGi-konfiguration
@@ -60,7 +60,7 @@ AEM verktyg för modernisering konverterar automatiskt befintliga AEM sidor som 
 + [Principimporteraren](https://opensource.adobe.com/aem-modernize-tools/pages/policy/about.html) skapar principer från designkonfigurationen
    + Definiera konverteringsregler med JCR-noddefinitioner/XML
    + Kör principimporteraren mot befintliga designdefinitioner
-   + Använd importerade profiler på AEM och behållare
+   + Använd importerade profiler på AEM-komponenter och -behållare
 
 ## Handövning
 
@@ -86,14 +86,14 @@ Se även till att du har fullföljt tidigare övningar:
             </a>        
         </td>
         <td style="width:100%;margin-bottom:1rem;">
-            <div style="font-size:1.25rem;font-weight:400;">Praktisk med AEM modernisering</div>
+            <div style="font-size:1.25rem;font-weight:400;">Handfast med AEM modernisering</div>
             <p style="margin:1rem 0">
-                Upptäck hur du använder AEM Moderniseringsverktyg för att uppdatera en äldre WKND-webbplats i enlighet med AEM as a Cloud Service bästa praxis.
+                Upptäck hur du använder AEM Modernization Tools för att uppdatera en äldre WKND-sajt som följer AEM as a Cloud Service praxis.
             </p>
             <a  rel="noreferrer"
                 target="_blank"
                 href="https://github.com/adobe/aem-cloud-engineering-video-series-exercises/tree/session2-migration#bootcamp---session-2-migration-methodology" class="spectrum-Button spectrum-Button--primary spectrum-Button--sizeM">
-                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Prova de AEM moderniseringsverktygen </span>
+                <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Prova AEM moderniseringsverktyg</span>
             </a>
         </td>
     </tr>
@@ -101,9 +101,9 @@ Se även till att du har fullföljt tidigare övningar:
 
 ## Andra resurser
 
-+ [Ladda ned verktyg AEM moderniseringar](https://github.com/adobe/aem-modernize-tools/releases/latest)
-+ [AEM Dokumentation för moderniseringsverktyg](https://opensource.adobe.com/aem-modernize-tools/)
-+ [AEM Gems - Vi presenterar AEM Moderniseringssvit](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
++ [Ladda ned verktyg för AEM-modernisering](https://github.com/adobe/aem-modernize-tools/releases/latest)
++ [Dokumentation för AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/)
++ [AEM Gems - Nu kommer AEM Modernization Suite](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
 
-1. Distribuera den nymoderniserade äldre webbplatsen på den lokala AEM SDK. AEM ASK finns att ladda ned här:
+1. Distribuera den nymoderniserade äldre webbplatsen på AEM SDK. AEM ASK finns att ladda ned här:
    + [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).

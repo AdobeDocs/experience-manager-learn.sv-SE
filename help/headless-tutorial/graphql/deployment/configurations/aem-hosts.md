@@ -1,7 +1,7 @@
 ---
-title: Hantera AEM för AEM GraphQL
-description: Lär dig hur du konfigurerar AEM i AEM Headless-appen.
-version: Cloud Service
+title: Hantera AEM-värdar för AEM GraphQL
+description: Lär dig hur du konfigurerar AEM-värdar i appen AEM Headless.
+version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
 role: Developer, Architect
@@ -10,53 +10,53 @@ jira: KT-10831
 thumbnail: KT-10831.jpg
 exl-id: a932147c-2245-4488-ba1a-99c58045ee2b
 duration: 496
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1614'
 ht-degree: 0%
 
 ---
 
-# Hantera AEM
+# Hantera AEM-värdar
 
-Distribuering av ett AEM Headless-program kräver uppmärksamhet i hur AEM URL:er skapas för att säkerställa att rätt AEM värd/domän används. Den primära URL/request-typen som ska vara medveten om är:
+Distribuering av ett AEM Headless-program kräver att du är uppmärksam på hur AEM URL:er konstrueras för att säkerställa att rätt AEM-värd/domän används. Den primära URL/request-typen som ska vara medveten om är:
 
 + HTTP-begäranden till __[AEM GraphQL API:er](#aem-graphql-api-requests)__
 + __[Bild-URL:er](#aem-image-urls)__ till bildresurser som refereras i innehållsfragment och levereras av AEM
 
-Vanligtvis interagerar en AEM Headless-app med en enda AEM för både GraphQL API och bildbegäranden. AEM ändras baserat på den AEM Headless-appdistributionen:
+Vanligtvis interagerar en AEM Headless-app med en enda AEM-tjänst för både GraphQL API och bildförfrågningar. AEM-tjänsten ändras baserat på driftsättningen av appen AEM Headless:
 
-| AEM driftsättningstyp utan headless | AEM | AEM |
+| Driftsättningstyp för AEM Headless | AEM | AEM |
 |-------------------------------|:---------------------:|:----------------:|
-| Produktion | Produktion | Publish |
+| Produktion | Produktion | Publicera |
 | Redigeringsförhandsgranskning | Produktion | Förhandsgranska |
-| Utveckling | Utveckling | Publish |
+| Utveckling | Utveckling | Publicera |
 
-För att hantera permutationer av distributionstyp skapas varje programdistribution med en konfiguration som anger vilken AEM som ska anslutas. Värden/domän för den konfigurerade AEM används sedan för att skapa URL:er för AEM GraphQL och Image URL:er. För att avgöra hur du hanterar byggberoende konfigurationer på rätt sätt, se AEM Headless-appens ramverk (till exempel React, iOS, Android™ och så vidare), eftersom arbetssättet varierar beroende på ramverket.
+För att hantera permutationer av distributionstyp skapas varje programdistribution med en konfiguration som anger vilken AEM-tjänst som ska anslutas. Den konfigurerade AEM-tjänstens värd/domän används sedan för att skapa AEM GraphQL API:er och Image URL:er. Om du vill se hur du hanterar byggberoende konfigurationer på rätt sätt kan du läsa dokumentationen för appen AEM Headless (till exempel React, iOS, Android™ och så vidare), eftersom arbetssättet varierar beroende på ramverket.
 
-| Klienttyp | [Enkelsidig app (SPA)](../spa.md) | [Webbkomponent/JS](../web-component.md) | [Mobil](../mobile.md) | [Server-till-server](../server-to-server.md) |
+| Klienttyp | [Single-page app (SPA)](../spa.md) | [Webbkomponent/JS](../web-component.md) | [Mobil](../mobile.md) | [Server-till-server](../server-to-server.md) |
 |------------------------------------------:|:---------------------:|:----------------:|:---------:|:----------------:|
 | AEM värdkonfiguration | ✔ | ✔ | ✔ | ✔ |
 
-Nedan följer exempel på möjliga strategier för att skapa URL:er för [AEM GraphQL API](#aem-graphql-api-requests) och [image-begäranden](#aem-image-requests) för flera populära headless-ramverk och plattformar.
+Nedan följer exempel på möjliga strategier för att skapa URL:er för [AEM GraphQL API](#aem-graphql-api-requests) och [bildbegäranden](#aem-image-requests) för flera populära headless-ramverk och plattformar.
 
-## AEM GraphQL API-begäranden
+## AEM GraphQL API-förfrågningar
 
-HTTP-GET-begäranden från den headless-appen till AEM GraphQL API:er måste konfigureras för att interagera med rätt AEM, vilket beskrivs i [tabellen ovan](#managing-aem-hosts).
+HTTP GET-begäranden från den headless-appen till AEM GraphQL-API:er måste konfigureras för att interagera med rätt AEM-tjänst, enligt beskrivningen i [tabellen ovan](#managing-aem-hosts).
 
-När du använder [AEM Headless SDK:er](../../how-to/aem-headless-sdk.md) (tillgängligt för webbläsarbaserade JavaScript, serverbaserade JavaScript och Java™) kan en AEM initiera det AEM Headless-klientobjektet med AEM Service att ansluta till.
+När du använder [AEM Headless SDK:er](../../how-to/aem-headless-sdk.md) (tillgängligt för webbläsarbaserade JavaScript, serverbaserade JavaScript och Java™) kan en AEM-värd initiera AEM Headless-klientobjektet med AEM-tjänsten som du vill ansluta till.
 
-När du utvecklar en anpassad AEM Headless-klient måste du se till att AEM är parameteriseringsbar baserat på build-parametrar.
+När du utvecklar en anpassad AEM Headless-klient måste du se till att AEM-tjänstens värd kan parametriseras baserat på build-parametrar.
 
 ### Exempel
 
-Nedan följer exempel på hur AEM GraphQL API-begäranden kan göra det AEM värdvärdet konfigurerbart för olika headless-appramverk.
+Nedan följer exempel på hur AEM GraphQL API-begäranden kan göra AEM-värdvärdet konfigurerbart för olika headless-appramverk.
 
 +++ Reaktionsexempel
 
-Det här exemplet, som är löst baserat på appen [AEM Headless React](../../example-apps/react-app.md), visar hur AEM GraphQL API-begäranden kan konfigureras för att ansluta till olika AEM tjänster baserat på miljövariabler.
+Det här exemplet, som är löst baserat på [AEM Headless React-appen](../../example-apps/react-app.md), visar hur AEM GraphQL API-begäranden kan konfigureras för att ansluta till olika AEM-tjänster baserat på miljövariabler.
 
-Reaktionsappar bör använda den [AEM Headless Client för JavaScript](../../how-to/aem-headless-sdk.md) för att interagera med AEM GraphQL API:er. Den AEM Headless-klienten som tillhandahålls av den AEM Headless-klienten för JavaScript måste initieras med den AEM Service-värd som den ansluter till.
+Reaktionsappar bör använda [AEM Headless Client för JavaScript](../../how-to/aem-headless-sdk.md) för att interagera med AEM GraphQL API:er. Klienten AEM Headless, som tillhandahålls av AEM Headless Client för JavaScript, måste initieras med den AEM Service Host som den ansluter till.
 
 #### Reagera på miljöfil
 
@@ -86,9 +86,9 @@ En React-apps `package.json` kan till exempel innehålla följande `scripts`-kon
 ...
 ```
 
-#### AEM utan huvud
+#### AEM headless Client
 
-[AEM Headless Client för JavaScript](../../how-to/aem-headless-sdk.md) innehåller en AEM Headless-klient som gör HTTP-begäranden till AEM GraphQL API:er. Den AEM Headless-klienten måste initieras med den AEM värd som den interagerar med, med hjälp av värdet från den aktiva `.env`-filen.
+[AEM Headless-klienten för JavaScript](../../how-to/aem-headless-sdk.md) innehåller en AEM Headless-klient som gör HTTP-begäranden till AEM GraphQL API:er. Klienten AEM Headless måste initieras med den AEM-värd som den interagerar med, med hjälp av värdet från den aktiva `.env`-filen.
 
 + `src/api/headlessClient.js`
 
@@ -110,9 +110,9 @@ export const aemHeadlessClient = new AEMHeadless({
 });
 ```
 
-#### Reagera useEffect(..) krok
+#### Reagera useEffect(..)-krok
 
-Anropar den AEM Headless-klienten, som initieras med AEM, för att återge vyn för React-komponenten.
+Anrop av funktionen Custom React useEffect anropar klienten AEM Headless, som initieras med AEM-värden, för att återge vyn för komponenten React.
 
 + `src/api/persistedQueries.js`
 
@@ -147,7 +147,7 @@ const executePersistedQuery = async function(persistedQueryPath, queryVariables)
 
 #### Reaktionskomponent
 
-Den anpassade useEffect-kroken, `useAdventureByPath`, importeras och används för att hämta data med den AEM Headless-klienten och återge innehållet till slutanvändaren.
+Den anpassade useEffect-kroken `useAdventureByPath` importeras och används för att hämta data med AEM Headless-klienten och återge innehållet till slutanvändaren.
 
 + src/components/AdventureDetail.js
 
@@ -164,9 +164,9 @@ let { data, error } = useAdventureByPath('/content/dam/wknd-shared/en/adventures
 
 +++ iOS™-exempel
 
-Det här exemplet, som baseras på [exemplet AEM Headless iOS™-appen](../../example-apps/ios-swiftui-app.md), visar hur AEM GraphQL API-begäranden kan konfigureras för att ansluta till olika AEM värdar baserat på [build-specifika konfigurationsvariabler](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3).
+Det här exemplet, som baseras på [exemplet med AEM Headless iOS™-appen](../../example-apps/ios-swiftui-app.md), visar hur AEM GraphQL API-begäranden kan konfigureras för att ansluta till olika AEM-värdar baserat på [build-specifika konfigurationsvariabler](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3).
 
-iOS™-appar kräver en anpassad AEM Headless-klient för att kunna interagera med AEM GraphQL API:er. Den AEM Headless-klienten måste skrivas så att AEM kan konfigureras.
+iOS™-appar kräver en anpassad AEM Headless-klient för att kunna interagera med AEM GraphQL API:er. AEM Headless-klienten måste skrivas så att AEM tjänstvärd kan konfigureras.
 
 #### Bygg konfiguration
 
@@ -185,7 +185,7 @@ AEM_HOST = publish-p123-e789.adobeaemcloud.com
 
 #### Initiera den anpassade AEM headless-klienten
 
-I [exemplet AEM Headless iOS-appen ](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app) används en anpassad AEM headless-klient som initierats med config-värdena för `AEM_SCHEME` och `AEM_HOST`.
+I [exempelappen AEM Headless iOS](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/ios-app) används en anpassad AEM Headless-klient som initierats med konfigurationsvärdena för `AEM_SCHEME` och `AEM_HOST`.
 
 ```swift
 ...
@@ -195,7 +195,7 @@ let aemHost: String = try Configuration.value(for: "AEM_HOST")      // publish-p
 let aemHeadlessClient = Aem(scheme: aemScheme, host: aemHost);
 ```
 
-Den anpassade AEM Headless-klienten (`api/Aem.swift`) innehåller en metod `makeRequest(..)` som prefix AEM GraphQL API:er med den konfigurerade AEM `scheme` och `host`.
+Den anpassade huvudlösa AEM-klienten (`api/Aem.swift`) innehåller metoden `makeRequest(..)` som prefixerar AEM GraphQL API:er med den konfigurerade AEM `scheme` och `host`.
 
 + `api/Aem.swift`
 
@@ -217,24 +217,24 @@ private func makeRequest(persistedQueryName: String, params: [String: String] = 
 }
 ```
 
-[Det går att skapa nya byggkonfigurationsfiler](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3) för att ansluta till olika AEM. De build-specifika värdena för `AEM_SCHEME` och `AEM_HOST` används baserat på den valda versionen i XCode, vilket gör att den anpassade AEM Headless-klienten ansluter till rätt AEM.
+[Det går att skapa nya byggkonfigurationsfiler](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3) för att ansluta till olika AEM-tjänster. De build-specifika värdena för `AEM_SCHEME` och `AEM_HOST` används baserat på den valda versionen i XCode, vilket gör att den anpassade AEM Headless-klienten kan ansluta till rätt AEM-tjänst.
 
 +++
 
 +++ Android™-exempel
 
-I det här exemplet, som baseras på [exemplet AEM Headless Android™-appen](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app), visas hur AEM GraphQL API-begäranden kan konfigureras för att ansluta till olika AEM-tjänster baserat på build-specifika (eller arom) konfigurationsvariabler.
+I det här exemplet, som baseras på [exemplet med AEM Headless Android™-appen](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app), visas hur AEM GraphQL API-begäranden kan konfigureras för att ansluta till olika AEM-tjänster baserat på build-specifika (eller arom) konfigurationsvariabler.
 
-Android™-appar (när de skrivs i Java™) bör använda [AEM Headless Client för Java™](https://github.com/adobe/aem-headless-client-java) för att interagera med AEM GraphQL API:er. Den AEM Headless-klienten som tillhandahålls av den AEM Headless-klienten för Java™ måste initieras med den AEM Service-värd som den ansluter till.
+Android™-appar (skrivna i Java™) bör använda [AEM Headless Client för Java™](https://github.com/adobe/aem-headless-client-java) för att interagera med AEM GraphQL API:er. Klienten AEM Headless, som tillhandahålls av AEM Headless Client för Java™, måste initieras med den AEM Service Host som den ansluter till.
 
 #### Bygg konfigurationsfil
 
 Android™-appar definierar&quot;productFlavors&quot; som används för att skapa artefakter för olika användningsområden.
-I det här exemplet visas hur två Android™-produktsmak kan definieras, vilket ger olika värden för AEM (`AEM_HOST`) för utveckling (`dev`) och produktion (`prod`).
+I det här exemplet visas hur två Android™-produktsmak kan definieras, vilket ger olika AEM-tjänstvärdar (`AEM_HOST`) för utveckling (`dev`) och produktion (`prod`).
 
 En ny `flavorDimension` med namnet `env` skapas i appens `build.gradle`-fil.
 
-I dimensionen `env` definieras två `productFlavors`: `dev` och `prod`. Varje `productFlavor` använder `buildConfigField` för att ange build-specifika variabler som definierar den AEM som ska anslutas.
+I dimensionen `env` definieras två `productFlavors`: `dev` och `prod`. Varje `productFlavor` använder `buildConfigField` för att ange byggspecifika variabler som definierar den AEM-tjänst som ska anslutas till.
 
 + `app/build.gradle`
 
@@ -261,7 +261,7 @@ android {
 
 #### Android™ loader
 
-Initiera `AEMHeadlessClient`-byggaren som tillhandahålls av den AEM Headless Client för Java™ med värdet `AEM_HOST` från fältet `buildConfigField`.
+Initiera `AEMHeadlessClient`-byggaren som tillhandahålls av AEM Headless Client för Java™ med värdet `AEM_HOST` från fältet `buildConfigField`.
 
 + `app/src/main/java/com/adobe/wknd/androidapp/loader/AdventuresLoader.java`
 
@@ -282,15 +282,15 @@ public class AdventuresLoader extends AsyncTaskLoader<AdventureList> {
 }
 ```
 
-När du skapar Android™-appen för olika användningsområden anger du varianten `env` och motsvarande AEM värdvärde används.
+När du skapar Android™-appen för olika användningsområden anger du varianten `env` och motsvarande värdvärde för AEM används.
 
 +++
 
-## AEM bildens URL:er
+## AEM bild-URL:er
 
-Avbildningsbegäranden från den headless-appen till AEM måste konfigureras för att interagera med rätt AEM, enligt beskrivningen i tabellen [ovan](#managing-aem-hosts).
+Avbildningsbegäranden från den Headless-appen till AEM måste konfigureras för att interagera med rätt AEM-tjänst, enligt beskrivningen i tabellen [ovan](#managing-aem-hosts).
 
-Adobe rekommenderar att du använder [optimerade bilder](../../how-to/images.md) som är tillgängliga via fältet `_dynamicUrl` i AEM GraphQL API:er. Fältet `_dynamicUrl` returnerar en värdlös URL som kan föregås av AEM som används för att fråga AEM GraphQL API:er. Fältet `_dynamicUrl` i GraphQL-svaret ser ut så här:
+Adobe rekommenderar att du använder [optimerade bilder](../../how-to/images.md) som är tillgängliga via fältet `_dynamicUrl` i AEM GraphQL API:er. Fältet `_dynamicUrl` returnerar en värdlös URL som kan föregås av den AEM-tjänstvärd som används för att fråga AEM GraphQL API:er. Fältet `_dynamicUrl` i GraphQL-svaret ser ut så här:
 
 ```json
 {
@@ -345,7 +345,7 @@ Det här GraphQL-svaret returnerar bildreferensens `_dynamicUrl`, vilket uteslut
 
 +++ Reaktionsexempel
 
-Det här exemplet, som baseras på [exemplet AEM programmet Headless React](../../example-apps/react-app.md), visar hur bild-URL:er kan konfigureras för att ansluta till rätt AEM Services baserat på miljövariabler.
+Det här exemplet, som baseras på [exempelappen AEM Headless React](../../example-apps/react-app.md), visar hur bild-URL:er kan konfigureras för att ansluta till rätt AEM Services baserat på miljövariabler.
 
 I det här exemplet visas hur du prefix i bildreferensfältet `_dynamicUrl` med en konfigurerbar `REACT_APP_AEM_HOST`-miljövariabel.
 
@@ -381,7 +381,7 @@ En React-apps `package.json` kan till exempel innehålla följande `scripts`-kon
 
 Komponenten React importerar miljövariabeln `REACT_APP_AEM_HOST` och prefixerar värdet för bilden `_dynamicUrl` för att ge en fullt matchningsbar bild-URL.
 
-Samma `REACT_APP_AEM_HOST`-miljövariabel används för att initiera den AEM Headless-klienten som används av den anpassade useEffect-kroken som används för att hämta GraphQL-data från AEM. `useAdventureByPath(..)` Om du använder samma variabel för att konstruera GraphQL API-begäran som bild-URL:en måste du se till att React-appen interagerar med samma AEM för båda användningsfallen.
+Samma `REACT_APP_AEM_HOST`-miljövariabel används för att initiera den AEM Headless-klient som används av `useAdventureByPath(..)` anpassad useEffect-krok som används för att hämta GraphQL-data från AEM. Om du använder samma variabel för att konstruera GraphQL API-begäran som bild-URL:en måste du se till att React-appen interagerar med samma AEM-tjänst för båda användningsområdena.
 
 + src/components/AdventureDetail.js
 
@@ -403,7 +403,7 @@ return (
 
 +++ iOS™-exempel
 
-Det här exemplet, som baseras på [exemplet AEM Headless iOS™-appen](../../example-apps/ios-swiftui-app.md), visar hur URL:er för AEM kan konfigureras för att ansluta till olika AEM baserade på [build-specifika konfigurationsvariabler](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3).
+Det här exemplet, som baseras på [exemplet med AEM Headless iOS™-appen](../../example-apps/ios-swiftui-app.md), visar hur AEM image-URL:er kan konfigureras för att ansluta till olika AEM-värdar baserat på [build-specifika konfigurationsvariabler](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3).
 
 #### Bygg konfiguration
 
@@ -422,7 +422,7 @@ AEM_HOST = publish-p123-e789.adobeaemcloud.com
 
 #### URL-generator för bild
 
-I `Aem.swift`, den anpassade AEM headless-klientimplementeringen, tar en anpassad funktion `imageUrl(..)` bildsökvägen som anges i fältet `_dynamicUrl` i GraphQL-svaret och lägger till den som AEM värd. Den här funktionen anropas sedan i iOS-vyerna när en bild återges.
+I `Aem.swift`, den anpassade AEM headless-klientimplementeringen, tar en anpassad funktion `imageUrl(..)` bildsökvägen som anges i fältet `_dynamicUrl` i GraphQL-svaret och lägger till den i AEM-värden. Den här funktionen anropas sedan i iOS-vyerna när en bild återges.
 
 + `WKNDAdventures/AEM/Aem.swift`
 
@@ -470,22 +470,22 @@ struct AdventureListItemView: View {
 ...
 ```
 
-[Det går att skapa nya byggkonfigurationsfiler](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3) för att ansluta till olika AEM. De build-specifika värdena för `AEM_SCHEME` och `AEM_HOST` används baserat på den valda versionen i XCode, vilket gör att den anpassade AEM Headless-klienten interagerar med rätt AEM.
+[Det går att skapa nya byggkonfigurationsfiler](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3) för att ansluta till olika AEM-tjänster. De build-specifika värdena för `AEM_SCHEME` och `AEM_HOST` används baserat på den valda versionen i XCode, vilket gör att den anpassade AEM Headless-klienten interagerar med rätt AEM-tjänst.
 
 +++
 
 +++ Android™-exempel
 
-I det här exemplet, som baseras på [exemplet AEM Headless Android™-appen](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app), visas hur URL:er för AEM kan konfigureras för att ansluta till olika AEM tjänster baserat på build-specifika (eller arom) konfigurationsvariabler.
+I det här exemplet, som baseras på [exemplet med AEM Headless Android™-appen](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/android-app), visas hur AEM bild-URL:er kan konfigureras för att ansluta till olika AEM-tjänster baserat på build-specifika (eller arom) konfigurationsvariabler.
 
 #### Bygg konfigurationsfil
 
 Android™-appar definierar&quot;productFlavors&quot; som används för att skapa artefakter för olika användningsområden.
-I det här exemplet visas hur två Android™-produktsmak kan definieras, vilket ger olika värden för AEM (`AEM_HOST`) för utveckling (`dev`) och produktion (`prod`).
+I det här exemplet visas hur två Android™-produktsmak kan definieras, vilket ger olika AEM-tjänstvärdar (`AEM_HOST`) för utveckling (`dev`) och produktion (`prod`).
 
 En ny `flavorDimension` med namnet `env` skapas i appens `build.gradle`-fil.
 
-I dimensionen `env` definieras två `productFlavors`: `dev` och `prod`. Varje `productFlavor` använder `buildConfigField` för att ange build-specifika variabler som definierar den AEM som ska anslutas.
+I dimensionen `env` definieras två `productFlavors`: `dev` och `prod`. Varje `productFlavor` använder `buildConfigField` för att ange byggspecifika variabler som definierar den AEM-tjänst som ska anslutas till.
 
 + `app/build.gradle`
 
@@ -510,9 +510,9 @@ android {
 }
 ```
 
-#### Läsa in AEM
+#### Läsa in AEM-bilden
 
-Android™ använder en `ImageGetter` för att hämta och lokalt cachelagra bilddata från AEM. I `prepareDrawableFor(..)` används AEM tjänstvärd, som definieras i den aktiva build-konfigurationen, som prefix till bildsökvägen för att skapa en matchningsbar URL till AEM.
+Android™ använder en `ImageGetter` för att hämta och lokalt cachelagra bilddata från AEM. I `prepareDrawableFor(..)` används AEM-tjänstvärden, som definieras i den aktiva build-konfigurationen, som prefix till bildsökvägen för att skapa en matchningsbar URL till AEM.
 
 + `app/src/main/java/com/adobe/wknd/androidapp/loader/RemoteImagesCache.java`
 
@@ -568,6 +568,6 @@ public class AdventureDetailFragment extends Fragment implements LoaderManager.L
 }
 ```
 
-När du skapar Android™-appen för olika användningsområden anger du varianten `env` och motsvarande AEM värdvärde används.
+När du skapar Android™-appen för olika användningsområden anger du varianten `env` och motsvarande värdvärde för AEM används.
 
 +++

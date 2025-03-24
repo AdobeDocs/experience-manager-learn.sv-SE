@@ -1,7 +1,7 @@
 ---
-title: Adobe IMS-användare och -AEM
+title: Adobe IMS-användare och AEM
 description: Användare som behöver åtkomst till AEM Author-tjänsten hanteras som Adobe IMS-användare i Adobe Admin Console. Lär dig mer om vad Adobe IMS-användare är och hur de nås och hanteras i Admin Console.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 topic: Administration, Security
 feature: User and Groups
 role: Admin
@@ -10,7 +10,7 @@ jira: KT-4997
 thumbnail: 39149.jpg
 exl-id: d35a7892-d707-4a5c-9e97-ec3abba0f30c
 duration: 174
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '143'
 ht-degree: 0%

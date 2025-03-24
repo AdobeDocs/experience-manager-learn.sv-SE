@@ -1,8 +1,8 @@
 ---
 title: Använda Brand Portal
-description: Videogenomgångar av integrationen mellan AEM författare och AEM Assets Brand Portal.
+description: Videogenomgångar av integrationen mellan AEM Author och AEM Assets Brand Portal.
 feature: Brand Portal
-version: 6.4, 6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
 role: User
 level: Beginner
@@ -10,9 +10,9 @@ last-substantial-update: 2022-06-15T00:00:00Z
 doc-type: Feature Video
 exl-id: 42f13a19-52bf-413d-a141-63f1f0910dce
 duration: 2460
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
-source-wordcount: '1703'
+source-wordcount: '1702'
 ht-degree: 0%
 
 ---
@@ -23,17 +23,17 @@ Videoguider för integrering av Adobe Experience Manager (AEM) Assets Brand Port
 
 ## Brand Portal, funktioner och förbättringar september 2019
 
-Brand Portal introducerar i september 2019 främst resurshantering, som ökar innehållets hastighet och möjliggör enkelt och snabbt utbyte av resurser mellan författare i Experience Manager och tredjepartskreatörer och medverkande.
+Brand Portal introducerar i september 2019 främst resurshantering, som ökar innehållets hastighet och möjliggör enkelt och snabbt utbyte av resurser mellan Experience Manager-författare och tredjepartsskapare och -medarbetare.
 
 ### Brand Portal Resurser{#asset-sourcing}
 
-Brand Portal Assets Sourcing används för att samla in resurser från tredjepartsorgan och -team och synka dem smidigt tillbaka till Experience Manager Author för granskning och användning.
+Brand Portal Assets Sourcing används för att samla in resurser från tredjepartsorgan och -team och smidigt synkronisera dem tillbaka till Experience Manager Author för granskning och användning.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29365?quality=12&learn=on)
 
 *Experience Manager Author 6.5 SP2 (6.5.2) eller senare krävs för att använda Resurser*
 
-Granska [Aktivera författaren av Experience Manager för resurskälla](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=en) om du vill ha instruktioner om hur du konfigurerar och konfigurerar resurskälla för författaren av Experience Manager.
+Granska [Aktivera Experience Manager Author för Resurser](https://experienceleague.adobe.com/docs/experience-manager-brand-portal/using/asset-sourcing-in-brand-portal/brand-portal-asset-sourcing.html?lang=en) om du vill ha instruktioner om hur du konfigurerar och konfigurerar Resurser för Experience Manager Author.
 
 ## Brand Portal februari 2019 Funktioner och förbättringar{#brand-portal-features-and-enhancements-644}
 
@@ -82,19 +82,19 @@ De delade mapparna ordnas i respektive katalog i virtuella mappar. Du känner ig
 
 Observera att standardminiatyrbilden för de virtuella mapparna är miniatyrbilden för den första delade mappen.
 
-### Stöd för videoåtergivningar från Dynamic Media
+### Stöd för videoåtergivningar i Dynamic Media
 
-Användare vars AEM Author-instans är i hybridläget Dynamic Media kan förhandsgranska och hämta de dynamiska medieåtergivningarna, förutom de ursprungliga videofilerna.
+Användare vars AEM Author-instans är i läget Dynamic Media kan förhandsgranska och ladda ned de dynamiska medieåtergivningarna utöver de ursprungliga videofilerna.
 
-Om du vill tillåta förhandsgranskning och hämtning av dynamiska medierenderingar på specifika klientkonton måste administratörer ange Dynamic Media Configuration (URL för videotjänst (DM-Gateway-URL) och registrerings-ID för att hämta den dynamiska videon) i videokonfigurationen från panelen Administrationsverktyg.
+För att tillåta förhandsgranskning och hämtning av dynamiska medierenderingar på specifika innehavarkonton måste administratörer ange Dynamic Media Configuration (DM-Gateway URL) och registrerings-ID för att hämta den dynamiska videon) i videokonfigurationen från administratörsverktygspanelen.
 
-Dynamic Media videor kan förhandsgranskas på:
+Dynamiska medievideor kan förhandsgranskas på:
 
 * Sidan Resursinformation
 * Resursvy
 * Förhandsgranskning av länkresurs
 
-Dynamic Media Video encodes kan laddas ned från:
+Dynamic Media Video-kodningar kan hämtas från:
 
 * Brand Portal
 * Delad länk
@@ -107,14 +107,14 @@ Publicerade resurser kan också tas bort från portalen vid ett senare datum (ti
 
 ### Konfigurerbart klientalias i URL
 
-Organisationer kan anpassa sin portal-URL genom att ha ett alternativt prefix i URL:en. För att få ett alias för innehavarens namn i den befintliga portalwebbadressen måste man kontakta supporten för Adobe.
+Organisationer kan anpassa sin portal-URL genom att ha ett alternativt prefix i URL:en. För att få ett alias för innehavarens namn i den befintliga portalwebbadressen måste man kontakta Adobe support.
 
 Observera att endast prefixet för Brand Portal URL kan anpassas och inte hela URL:en.
 En organisation med den befintliga domänen `wknd.brand-portal.adobe.com` kan till exempel få `wkndinc.brand-portal.adobe.com` skapad på begäran.
 
-AEM Author-instansen kan bara vara [konfigurerad](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) med URL:en för klient-ID och inte med URL:en för klientalias (alternativ).
+Instansen AEM Author kan dock bara vara [konfigurerad](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html) med URL:en för klient-ID och inte med URL:en för klientalias (alternativ).
 
-**Använd fall** : Organisationer kan uppfylla sina varumärkesbehov genom att anpassa portalens URL i stället för att följa den URL som Adobe tillhandahåller.
+**Använd fall** : Organisationer kan uppfylla sina varumärkesbehov genom att anpassa portalens URL i stället för att följa den URL som tillhandahålls av Adobe.
 
 ## Brand Portal December 2018 - funktioner och förbättringar{#brand-portal-features-and-enhancements-642}
 
@@ -157,9 +157,9 @@ Sex nya konfigurationer har lagts till för administratörer för att aktivera/i
 * *Sökväg till mapphierarkin på kort- och listvyer* - gör att användarna kan hitta de mappar som lagras i en Brand Portal-instans. Hjälper användarna att skilja mappar med samma namn i olika mapphierarkier.
 * *Översiktsalternativ* - ger icke-adminanvändare metadata om resursen/mappen genom att markera resursen/mappen och sedan välja översiktsalternativet i verktygsfältet. Visar för närvarande rubrik, skapad den och sökväg
 
-### Adobe I/O Värdar-användargränssnittet för att konfigurera autentiseringsintegreringar
+### Adobe I/O värdar-användargränssnitt för att konfigurera autentiseringsintegreringar
 
-Brand Portal använder Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) -gränssnittet för att skapa JWT-program, som gör det möjligt att konfigurera autentiseringsintegreringar för att tillåta AEM Assets-integrering med Brand Portal. Tidigare fanns användargränssnittet för konfigurering av OAuth-integreringar i `https://marketing.adobe.com/developer/`. Mer information om hur du integrerar AEM Assets med Brand Portal för publicering av resurser och samlingar i Brand Portal finns i [Konfigurera AEM Assets-integrering med Brand Portal](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
+Brand Portal använder Adobe I/O [https://legacy-oauth.cloud.adobe.io/](https://legacy-oauth.cloud.adobe.io/) -gränssnitt för att skapa JWT-program, som gör det möjligt att konfigurera autentiseringsintegreringar för att tillåta AEM Assets-integrering med Brand Portal. Tidigare fanns användargränssnittet för konfigurering av OAuth-integreringar i `https://marketing.adobe.com/developer/`. Mer information om hur du integrerar AEM Assets med Brand Portal för publicering av resurser och samlingar i Brand Portal finns i [Konfigurera AEM Assets-integrering med Brand Portal](https://helpx.adobe.com/experience-manager/6-4/assets/using/brand-portal-configuring-integration.html).
 
 ## Brand Portal, februari 2018 - funktioner och förbättringar{#brand-portal-features-and-enhancements-632}
 
@@ -170,7 +170,7 @@ Nya funktioner som är inriktade på att anpassa Brand Portal till AEM.
 ### Navigeringsförbättringar
 
 * Uppgraderat användargränssnitt som är anpassat till AEM och använder Coral3 UI.
-* Snabb och enkel åtkomst till administrationsverktyg med nya Adobe-logotypen.
+* Snabb och enkel åtkomst till administrationsverktyg med nya Adobe logotyp.
 * Produktnavigering genom en övertäckning
 * Snabbnavigering till överordnade mappar från en underordnad mapp.
 * Omsökningsalternativ för att navigera till administrationsverktyg och innehåll.
@@ -206,7 +206,7 @@ Nya funktioner som är inriktade på att anpassa Brand Portal till AEM.
 ## Ytterligare resurser{#additional-resources}
 
 * [Nyheter i Brand Portal](https://helpx.adobe.com/experience-manager/brand-portal/using/whats-new.html)
-* [AEM Författarreplikeringsagenter](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
+* [AEM Author Replication Agents](https://helpx.adobe.com/experience-manager/6-5/assets/using/brand-portal-configuring-integration.html)
 * [Guide till accelererad hämtning](https://helpx.adobe.com/experience-manager/brand-portal/using/accelerated-download.html#main-pars_header)
 * [AEM Assets Brand Portal Adobe Docs](https://helpx.adobe.com/experience-manager/brand-portal/using/brand-portal.html)
 * [AEM Assets Dynamic Media Adobe Docs](https://experienceleague.adobe.com/docs/)

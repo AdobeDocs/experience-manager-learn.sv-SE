@@ -1,7 +1,7 @@
 ---
-title: Integrering av Adobe Expresser med AEM Assets
-description: Lär dig hur du kan använda Adobe Expressens integrering med AEM Assets för att optimera innehållsleveranskedjor, förbättra produktiviteten och tillgängligheten för alla teammedlemmar.
-version: Cloud Service
+title: Adobe Express-integrering med AEM Assets
+description: Lär dig hur du använder Adobe Express integrering med AEM Assets för att optimera innehållsförsörjningskedjorna, förbättra produktiviteten och tillgängligheten för alla teammedlemmar.
+version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations, Content Management, Content Supply Chain
 role: User
@@ -11,14 +11,14 @@ jira: KT-15375
 doc-type: Feature Video
 duration: 583
 exl-id: 951bb255-e3e7-4bd5-9d48-7ff0469860af
-source-git-commit: 04037791eb5fe7a3b390b29d5c25f3260e5d41c9
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
 
 ---
 
-# Integrering av Adobe Expresser med AEM Assets
+# Adobe Express-integrering med AEM Assets
 
 Lär dig hur du använder [Adobe Express](https://www.adobe.com/express/)-integreringen med AEM Assets för att optimera innehållsleveranskedjor och förbättra produktiviteten och tillgängligheten för alla teammedlemmar.
 

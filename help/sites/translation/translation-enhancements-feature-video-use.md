@@ -1,7 +1,7 @@
 ---
 title: Översättningsförbättringar i AEM
-description: AEM robusta översättningsramverk gör att AEM kan översättas sömlöst av översättningsleverantörer som stöds. Läs om de senaste förbättringarna.
-version: 6.4, 6.5
+description: AEM robusta översättningsramverk gör att AEM-innehåll kan översättas sömlöst av översättningsleverantörer som stöds. Läs om de senaste förbättringarna.
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Localization
 feature: Multi Site Manager, Language Copy
 role: User
@@ -9,7 +9,7 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 21633308-ffe4-4023-affe-59269504da69
 duration: 677
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Översättningsförbättringar med Multi-Site Manager {#translation-enhancements}
 
-AEM robusta översättningsramverk gör att AEM kan översättas sömlöst av översättningsleverantörer som stöds.
+AEM robusta översättningsramverk gör att AEM-innehåll kan översättas sömlöst av översättningsleverantörer som stöds.
 
 ## Översättningsförbättringar i AEM 6.5
 
@@ -32,7 +32,7 @@ AEM 6.5-översättningsförbättringar:
 
 **Exportera översättningsobjekt i JSON-format**: AEM 6.4 och tidigare stöder XML- och XLIFF-format för översättningsobjekt. Du kan nu konfigurera exportformatet till JSON-format med systemkonsolen [!UICONTROL Config Manager]. Leta efter [!UICONTROL Translation Platform Configuration] och sedan kan du välja exportformatet som JSON.
 
-**Uppdatera översatt AEM i översättningsminnet (TMS)**: Den lokala författaren som inte har tillgång till AEM kan uppdatera översatt innehåll som redan har importerats till AEM direkt i översättningsminnet (TMS) och uppdatera översättningarna i AEM genom att skicka översättningsjobbet från TMS till AEM igen
+**Uppdatera översatt AEM-innehåll i översättningsminnet (TMS)**: den lokala författaren som inte har tillgång till AEM kan uppdatera översatt innehåll som redan har importerats till AEM, direkt i översättningsminnet (TMS) och uppdatera översättningarna i AEM genom att skicka översättningsjobbet från TMS till AEM igen
 
 ## Översättningsförbättringar i AEM 6.4
 

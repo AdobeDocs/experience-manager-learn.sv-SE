@@ -1,7 +1,7 @@
 ---
 title: AMS Dispatcher Health Check
-description: AMS tillhandahåller ett cgi-bin-skript för hälsokontroll som molnbelastningsutjämnarna kommer att köra för att se om AEM är hälsosamt och bör fortsätta vara i tjänst för allmän trafik.
-version: 6.5
+description: AMS tillhandahåller ett cgi-bin-skript för hälsokontroll som molnbelastningsutjämnarna kommer att köra för att se om AEM är felfritt och bör förbli i tjänst för allmän trafik.
+version: Experience Manager 6.5
 topic: Administration
 feature: Dispatcher
 role: Admin
@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 69b4e469-52cc-441b-b6e5-2fe7ef18da90
 duration: 247
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
 workflow-type: tm+mt
 source-wordcount: '1143'
 ht-degree: 0%
@@ -24,13 +24,13 @@ ht-degree: 0%
 [&lt;- Föregående: Skrivskyddade filer](./immutable-files.md)
 
 När du har en AMS-baslinje installerad som dispatcher levereras den med några kostnadsfria funktioner.  En av dessa funktioner är en uppsättning hälsokontrollsskript.
-Dessa skript gör att belastningsutjämnaren som AEM i stacken kan känna till vilka ben som är felfria och hålla dem i drift.
+Med dessa skript kan belastningsutjämnaren som sätter AEM-stacken i tur och ordning veta vilka ben som är felfria och hålla dem i drift.
 
-![Animerat GIF visar trafikflödet](assets/load-balancer-healthcheck/health-check.gif "Hälsokontrollsteg")
+![Animerad GIF som visar trafikflödet](assets/load-balancer-healthcheck/health-check.gif "Hälsokontrollsteg")
 
 ## Hälsokontroll för grundläggande belastningsutjämnare
 
-När kundtrafiken kommer via internet för att nå AEM kommer de att gå igenom en belastningsutjämnare
+När kundtrafiken kommer via internet för att nå din AEM-instans går de igenom en belastningsutjämnare
 
 ![Bilden visar trafikflödet från Internet till AEM via en belastningsutjämnare](assets/load-balancer-healthcheck/load-balancer-traffic-flow.png "belastningsutjämnare-trafikflöde")
 
@@ -38,11 +38,11 @@ Alla förfrågningar som kommer via belastningsutjämnaren rundar av robin till 
 
 Standardkontrollen är vanligtvis en portkontroll för att se om servrarna som är målinriktade i belastningsutjämnaren lyssnar på porttrafiken är på (dvs. TCP 80 och 443)
 
-> `Note:` Det här fungerar men det finns ingen riktig mätare för om AEM är hälsosam.  Testar bara om Dispatcher (webbservern Apache) är igång och körs.
+> `Note:` Även om detta fungerar har det ingen riktig mätare för om AEM är hälsosamt.  Testar bara om Dispatcher (webbservern Apache) är igång och körs.
 
 ## Hälsokontroll för AMS
 
-För att undvika att skicka trafik till en hälsosam dispatcher som står framför en icke-hälsosam AEM skapade AMS några extrafunktioner som utvärderar benets hälsa och inte bara Dispatcher.
+För att undvika att skicka trafik till en hälsosam dispatcher som står framför en ohälsosam AEM-instans skapade AMS några extrafunktioner som utvärderar benets hälsa och inte bara Dispatcher.
 
 ![Bilden visar de olika delarna som hälsokontrollen kan användas för ](assets/load-balancer-healthcheck/health-check-pieces.png "hälsokontroll-bitar")
 
@@ -56,9 +56,9 @@ Hälsokontrollen består av följande delar
 
 Vi ska ta upp vad varje stycke är utformat för och deras betydelse
 
-### AEM
+### AEM Package
 
-För att ange om AEM fungerar måste du göra en grundläggande sidkompilering och hantera sidan.  Adobe Managed Services har skapat ett grundläggande paket som innehåller testsidan.  Sidan testar att databasen är aktiv och att resurserna och sidmallen kan återges.
+För att ange om AEM fungerar måste du göra en grundläggande sidkompilering och skicka sidan.  Adobe Managed Services har skapat ett grundläggande paket som innehåller testsidan.  Sidan testar att databasen är aktiv och att resurserna och sidmallen kan återges.
 
 ![Bilden visar AMS-paketet i CRX-pakethanteraren](assets/load-balancer-healthcheck/health-check-package.png "healt-check-package")
 
@@ -68,7 +68,7 @@ Här är sidan.  Den visar databas-ID:t för installationen
 
 > `Note:` Vi ser till att sidan inte kan cachelagras.  Det skulle inte kontrollera den faktiska statusen om varje gång den returnerade en cachelagrad sida!
 
-Det här är den lätta viktslutpunkten som vi kan testa för att se att AEM är igång.
+Det här är den lätta slutpunkten som vi kan testa för att se att AEM är igång.
 
 ### Konfiguration av belastningsutjämnare
 
@@ -101,9 +101,9 @@ Listen 81
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_author.vhost`
 - `/etc/httpd/conf.d/available_vhosts/000_unhealthy_publish.vhost`
 
-Dessa filer namnges `000_` som prefix för syfte.  Det är avsiktligt konfigurerat att använda samma domännamn som den publicerade webbplatsen.  Avsikten är att den här filen ska aktiveras när hälsokontrollen upptäcker ett problem med en av de AEM.  Erbjud sedan en felsida istället för bara en 503 HTTP-svarskod utan någon sida.  Den stjäl trafik från den normala `.vhost`-filen eftersom den läses in före den `.vhost`-filen och delar samma `ServerName` eller `ServerAlias`.  Detta resulterar i sidor som är avsedda för en viss domän att gå till den ohälsosamma värden i stället för standardvärden, vilket är det normala trafikflödet.
+Dessa filer namnges `000_` som prefix för syfte.  Det är avsiktligt konfigurerat att använda samma domännamn som den publicerade webbplatsen.  Avsikten är att den här filen ska aktiveras när hälsokontrollen upptäcker ett problem med en av AEM-serverdelarna.  Erbjud sedan en felsida istället för bara en 503 HTTP-svarskod utan någon sida.  Den stjäl trafik från den normala `.vhost`-filen eftersom den läses in före den `.vhost`-filen och delar samma `ServerName` eller `ServerAlias`.  Detta resulterar i sidor som är avsedda för en viss domän att gå till den ohälsosamma värden i stället för standardvärden, vilket är det normala trafikflödet.
 
-När hälsokontrollsskripten körs loggar de ut sin aktuella hälsostatus.  En gång i minuten körs ett cronjob på servern som söker efter felfria poster i loggen.  Om den upptäcker att AEM inte är felfri kommer den att aktivera symbolen:
+När hälsokontrollsskripten körs loggar de ut sin aktuella hälsostatus.  En gång i minuten körs ett cronjob på servern som söker efter felfria poster i loggen.  Om utvecklaren av AEM-instansen inte är felfri aktiveras symbolen:
 
 Loggpost:
 
@@ -185,32 +185,32 @@ Det finns fem olika skript som kan konfigureras i inställningarna för belastni
 
 #### /bin/checkauthor
 
-Det här skriptet används för att kontrollera och logga alla förekomster det kör men returnerar bara ett fel om AEM `author` inte är felfri
+Det här skriptet används för att kontrollera och logga alla förekomster det kommer att köra men returnera bara ett fel om AEM-förekomsten `author` är ohälsosam
 
-> `Note:` Tänk på att om publiceringsinstansen AEM inte är felfri så stannar dispatchern i tjänst så att trafik kan flöda till AEM författarinstans
+> `Note:` Tänk på att om publiceringsinstansen AEM inte är felfri så stannar dispatchern i tjänst så att trafik kan flöda till författarens AEM-instans
 
 #### /bin/checkpublish (default)
 
-Det här skriptet används för att kontrollera och logga alla förekomster det kör men returnerar bara ett fel om AEM `publish` inte är felfri
+Det här skriptet används för att kontrollera och logga alla förekomster det kommer att köra men returnera bara ett fel om AEM-förekomsten `publish` är ohälsosam
 
-> `Note:` Tänk på att om författarinstansen AEM felfri så stannar dispatchern i tjänst så att trafik kan flöda till AEM publiceringsinstansen
+> `Note:` Tänk på att om författaren till AEM-instansen var felfri så stannar dispatchern i tjänst så att trafik kan flöda till den publicerade AEM-instansen
 
 #### /bin/checkeither
 
-Det här skriptet används för att kontrollera och logga alla förekomster som det kommer att köra framåt, men returnerar bara ett fel om `author`- eller `publisher`-AEM inte är felfri
+Det här skriptet används för att kontrollera och logga alla förekomster det kommer att köra men returnera bara ett fel om `author`- eller `publisher` AEM-förekomsten är ohälsosam
 
-> `Note:` Tänk på att om publiceringsinstansen eller författarinstansen AEM felfri så skulle dispatchern sluta använda tjänsten.  Betyder att om någon av dem var hälsosam så skulle den inte heller få någon trafik
+> `Note:` Tänk på att om publiceringsinstansen eller författaren av AEM-instansen inte är felfri, skulle dispatchern sluta använda tjänsten.  Betyder att om någon av dem var hälsosam så skulle den inte heller få någon trafik
 
 #### /bin/checkboth
 
-Det här skriptet används för att kontrollera och logga alla förekomster som det kommer att köra framåt, men returnerar bara ett fel om `author`- och `publisher`-AEM inte är felfria
+Det här skriptet används för att kontrollera och logga alla förekomster det kommer att köra men returnera bara ett fel om `author`- och `publisher` AEM-instansen inte är felfri
 
-> `Note:` Tänk på att om publiceringsinstansen eller författaren AEM instansen inte är felfri så skulle dispatchern inte sluta använda tjänsten.  Det innebär att om någon av dem var ohälsosam så skulle den även i fortsättningen få trafik och ge fel till personer som begär resurser.
+> `Note:` Tänk på att om publiceringsinstansen eller författaren i AEM inte var felfri så skulle dispatchern inte sluta använda tjänsten.  Det innebär att om någon av dem var ohälsosam så skulle den även i fortsättningen få trafik och ge fel till personer som begär resurser.
 
 #### /bin/fresh
 
-Skriptet kontrollerar och loggar alla instanser som körs men returnerar bara felfritt oavsett om AEM returnerar ett fel eller inte.
+Skriptet kommer att kontrollera och logga alla instanser som det kommer att starta men returnera felfritt oavsett om AEM returnerar ett fel eller inte.
 
-> `Note:` Det här skriptet används när hälsokontrollen inte fungerar som du vill och tillåter en åsidosättning för att behålla AEM instanser i belastningsutjämnaren.
+> `Note:` Det här skriptet används när hälsokontrollen inte fungerar som du vill och tillåter en åsidosättning för att behålla AEM-instanser i belastningsutjämnaren.
 
 [Nästa -> GIT-symboler](./git-symlinks.md)
