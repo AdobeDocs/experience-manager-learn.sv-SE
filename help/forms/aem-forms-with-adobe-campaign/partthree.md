@@ -2,7 +2,7 @@
 title: Förifyll anpassat formulär med ACS-profil
 description: Förifyll adaptiv Forms med ACS-profil
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -10,7 +10,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 502f4bdf-d4af-409f-a611-62b7a1a6065a
 duration: 144
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -23,7 +23,7 @@ I den här delen förifyller vi Adaptiv form med profilinformation som hämtats 
 
 Läs den här [självstudiekursen](https://helpx.adobe.com/experience-manager/kt/forms/using/prefill-service-adaptive-forms-article-use.html) om du vill veta mer om hur du fyller i anpassade formulär i förväg.
 
-Om du vill fylla i anpassat formulär i förväg genom att hämta data från ACS antar vi att det finns en profil i ACS som har samma e-postadress som den inloggade AEM. Om e-post-ID:t för den person som är inloggad AEM till exempel är csimms@adobe.com, förväntar vi oss att hitta en profil i ACS vars e-postadress är csimms@adobe.com.
+För att fylla i anpassat formulär i förväg genom att hämta data från ACS antar vi att det finns en profil i ACS som har samma e-postadress som den inloggade AEM-användaren. Om e-post-ID:t för den person som är inloggad på AEM till exempel är csimms@adobe.com, förväntar vi oss att hitta en profil i ACS vars e-postadress är csimms@adobe.com.
 
 Följande steg krävs för att hämta profilinformation från ACS med REST API
 
@@ -39,7 +39,7 @@ Koppla förifyllningstjänst till anpassningsbara formulär
 
 Följande kod används för att hämta och returnera profilinformation från ACS.
 
-På rad 68 hämtar vi e-post-ID för AEM användare. Profilinformationen hämtas genom ett REST-anrop till Adobe Campaign Standard. Från den hämtade profilinformationen är XML-dokumentet konstruerat på ett sätt som AEM Forms förstår. Indataströmmen för det här dokumentet returneras för förbrukning av AEM Forms.
+På rad 68 hämtar vi e-post-ID för AEM-användaren. Profilinformationen hämtas genom ett REST-anrop till Adobe Campaign Standard. Från den hämtade profilinformationen är XML-dokumentet konstruerat på ett sätt som AEM Forms förstår. Indataströmmen för det här dokumentet returneras för förbrukning av AEM Forms.
 
 ```java
 package aemforms.campaign.core;
@@ -234,8 +234,8 @@ return "Pre Fill Forms Using Campaign Profile";
 Följ följande anvisningar för att få det här att fungera i ditt system:
 
 * [Kontrollera att du har följt de steg som beskrivs här](aem-forms-with-campaign-standard-getting-started-tutorial.md)
-* [Importera ett anpassat formulär till AEM med hjälp av pakethanteraren](assets/pre-fill-af-from-campaign.zip)
-* Se till att du loggar in på AEM med en användare vars e-post-ID delas av en profil i Adobe Campaign. Om e-post-ID:t för den AEM användaren till exempel är johndoe@adobe.com, måste du ha en profil i ACS vars e-postadress är johndoe@adobe.com.
+* [Importera ett adaptivt formulär till AEM med hjälp av pakethanteraren](assets/pre-fill-af-from-campaign.zip)
+* Se till att du loggar in på AEM med en användare vars e-post-ID delas av en profil i Adobe Campaign. Om e-post-ID:t för AEM-användaren till exempel är johndoe@adobe.com, måste du ha en profil i ACS vars e-postadress är johndoe@adobe.com.
 * [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/prefillfromcampaign/jcr:content?wcmmode=disabled).
 
 ## Nästa steg

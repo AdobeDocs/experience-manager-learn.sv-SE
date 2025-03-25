@@ -2,7 +2,7 @@
 title: Skapa Forms för signering
 description: Skapa formulär som måste inkluderas i signeringspaketet.
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6893
 thumbnail: 6893.jpg
 topic: Development
@@ -10,7 +10,7 @@ role: User
 level: Beginner
 exl-id: 565d81a4-2918-44ea-a3e9-ed79f246f08a
 duration: 71
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '333'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Nästa steg är att skapa de adaptiva formulär som du vill ska ingå i paketet.
 * Formulären måste också associeras med clientLib som kallas **getnextform**
 * Formulären måste använda komponenten Signature Step.
 * Formuläret måste också använda den anpassade komponenten **Signera flera formulär**. Med den här komponenten kan du navigera till nästa formulär för att signera i paketet.
-* Överföringen av formuläret måste konfigureras för att utlösa AEM **Uppdatera signaturstatus**
+* Överföringen av formuläret måste konfigureras för att utlösa AEM-arbetsflödet **Uppdatera signaturstatus**
 * Kontrollera att sökvägen till datafilen är inställd på **Data.xml**. Detta är mycket viktigt eftersom exempelkoden söker efter en fil som heter Data.xml i nyttolasten när formuläret skickas.
 
 När du har skapat formuläret inkluderar du det adaptiva formulärfragmentet **commonField** i formuläret. Fragmentet är markerat som dolt. Detta fragment innehåller följande fält.

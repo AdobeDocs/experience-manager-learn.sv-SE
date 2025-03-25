@@ -2,14 +2,14 @@
 title: Använda Assembler Service i AEM Forms
 description: Använda Assembler Service i AEM Forms för att sammanställa flera PDF-filer
 feature: Assembler
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 18da12ea-b1ea-48e4-979e-3cb59584dfbd
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 76
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%
@@ -101,7 +101,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 }
 ```
 
-För att få den här funktionen att fungera på din AEM
+För att få den här funktionen att fungera på din AEM-server
 
 * Hämta [AssembleMultipleFiles.zip](assets/assemble-multiple-files.zip) till ditt lokala system.
 * Överför och installera paketet med hjälp av [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
@@ -109,7 +109,7 @@ För att få den här funktionen att fungera på din AEM
 * Hämta [Developing with Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * Distribuera och starta paketen med webbkonsolen [felix](http://localhost:4502/system/console/bundles)
 * Peka webbläsaren på [AssemblePdfs.html](http://localhost:4502/content/DocumentServices/AssemblePdfs.html)
-* Dra och släpp några filer med PDF-filer
+* Dra och släpp några filer från PDF
 
 >[!NOTE]
 >

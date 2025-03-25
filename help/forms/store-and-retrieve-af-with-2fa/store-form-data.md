@@ -3,7 +3,7 @@ title: Lagra formulärdata
 description: Lagra formulärdata tillsammans med den nya bilagemappningen i databasen
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6538
 thumbnail: 6538.jpg
 topic: Development
@@ -11,7 +11,7 @@ role: Developer
 level: Experienced
 exl-id: 2bd9fe63-8f42-4b89-95a0-13ade49bc31b
 duration: 38
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%

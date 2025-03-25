@@ -3,7 +3,7 @@ title: Hämta sparat anpassat formulär
 description: Servern som återger det adaptiva formuläret med sparade data
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6553
 thumbnail: 6553.jpg
 topic: Development
@@ -11,7 +11,7 @@ role: Developer
 level: Experienced
 exl-id: d722cb9c-6c8a-44de-aaea-fc07a555b864
 duration: 66
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '117'
 ht-degree: 0%

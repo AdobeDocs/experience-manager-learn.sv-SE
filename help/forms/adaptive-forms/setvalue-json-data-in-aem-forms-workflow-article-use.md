@@ -1,15 +1,15 @@
 ---
 title: Ange värde för Json-dataelement i AEM Forms Workflow
-description: Eftersom ett anpassat formulär dirigeras till olika användare i AEM arbetsflöde finns det krav på att dölja eller inaktivera vissa fält eller paneler baserat på den person som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
+description: Eftersom ett anpassat formulär dirigeras till olika användare i AEM Workflow, finns det krav på att dölja eller inaktivera vissa fält eller paneler baserat på den person som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
 feature: Adaptive Forms
-version: 6.4
+version: Experience Manager 6.4
 topic: Development
 role: Developer
 level: Experienced
 exl-id: fbe6d341-7941-46f5-bcd8-58b99396d351
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 126
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '656'
 ht-degree: 0%
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # Ställa in värdet för JSON-dataelement i AEM Forms Workflow {#setting-value-of-json-data-element-in-aem-forms-workflow}
 
-Eftersom ett anpassat formulär dirigeras till olika användare i AEM arbetsflöde finns det krav på att dölja eller inaktivera vissa fält eller paneler baserat på den person som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
+Eftersom ett anpassat formulär dirigeras till olika användare i AEM Workflow, finns det krav på att dölja eller inaktivera vissa fält eller paneler baserat på den person som granskar formuläret. För att tillgodose dessa användningsområden brukar vi ange ett värde för ett dolt fält. Baserat på det här dolda fältets värdeaffärsregler kan du skapa för att dölja/inaktivera lämpliga paneler eller fält.
 
 ![Anger ett elementvärde i JSON-data](assets/capture-3.gif)
 
 I AEM Forms OSGi måste vi skapa ett anpassat OSGi-paket för att ställa in JSON-dataelementets värde. Paketet ingår i kursen.
 
-Vi använder Processsteg i AEM arbetsflöde. Vi associerar OSGi-paketet&quot;Set Value of Element in Json&quot; med det här steget.
+Vi använder Process Step i AEM-arbetsflödet. Vi associerar OSGi-paketet&quot;Set Value of Element in Json&quot; med det här steget.
 
 Vi måste skicka två argument till det angivna värdepaketet. Det första argumentet är sökvägen till elementet vars värde måste anges. Det andra argumentet är värdet som måste anges.
 

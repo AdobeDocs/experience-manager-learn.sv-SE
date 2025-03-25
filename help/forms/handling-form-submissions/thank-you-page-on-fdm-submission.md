@@ -3,7 +3,7 @@ title: Visa överförings-ID för formulärinlämning
 description: Visa svaret på en formulärdatamodell som skickas på din tacksida
 feature: Adaptive Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -11,7 +11,7 @@ jira: KT-13900
 last-substantial-update: 2023-09-09T00:00:00Z
 exl-id: 18648914-91cc-470d-8f27-30b750eb2f32
 duration: 72
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -20,13 +20,13 @@ ht-degree: 0%
 
 # Anpassa tacksidan
 
-När du skickar ett anpassat formulär till en REST-slutpunkt vill du visa ett bekräftelsemeddelande som informerar användaren om att formuläröverföringen lyckades. POSTENS svar innehåller information om inlämnings-ID och ett väldesignat bekräftelsemeddelande innehåller inlämnings-ID som bidrar till en bättre användarupplevelse. Svaret kan visas på tacksidan som är konfigurerad med ditt adaptiva formulär.
+När du skickar ett anpassat formulär till en REST-slutpunkt vill du visa ett bekräftelsemeddelande som informerar användaren om att formuläröverföringen lyckades. POST-svaret innehåller information om inlämnings-ID och ett väldesignat bekräftelsemeddelande innehåller inlämnings-ID som bidrar till en bättre användarupplevelse. Svaret kan visas på tacksidan som är konfigurerad med ditt adaptiva formulär.
 
 Följande skärmbild visar att ett formulär skickas med åtgärden Skicka i formulärdatamodell med en tacksida konfigurerad
 
 ![tacksida](./assets/thank-you-page-fdm-submit.png)
 
-POSTEN för en formulärdatamodell returnerar alltid ett JSON-objekt i svaret. Denna JSON är tillgänglig på Tack-sidans URL som en frågeparameter med namnet _fdmSubmitResult_. Du kan tolka den här frågeparametern och visa JSON-elementen på tacksidan.
+POST för en formulärdatamodell returnerar alltid ett JSON-objekt i svaret. Denna JSON är tillgänglig på Tack-sidans URL som en frågeparameter med namnet _fdmSubmitResult_. Du kan tolka den här frågeparametern och visa JSON-elementen på tacksidan.
 Följande exempelkod tolkar JSON-svaret för att extrahera värdet för nummerfältet. Lämplig XML skapas sedan och skickas i slingRequest för att fylla i formuläret. Den här koden skrivs vanligtvis i jsp för den sidkomponent som är kopplad till mallen Adaptivt formulär.
 
 ```java

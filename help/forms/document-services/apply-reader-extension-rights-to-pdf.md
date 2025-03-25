@@ -1,7 +1,7 @@
 ---
 title: Använd användningsbehörighet för överförd PDF
 description: Använd användningsbehörighet för PDF
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Reader Extensions
 topic: Development
 role: Developer
@@ -9,19 +9,19 @@ level: Experienced
 exl-id: ea433667-81db-40f7-870d-b16630128871
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 129
-source-git-commit: f3f5c4c4349c8d02c88e1cf91dbf18f58db1e67e
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '357'
 ht-degree: 0%
 
 ---
 
-# Använder Reader-tillägg
+# Använda Reader-tillägg
 
-Med Reader Extensions kan du ändra användningsrättigheter för PDF-dokument. Användningsrättigheterna gäller funktioner som är tillgängliga i Acrobat men inte i Adobe Reader. Funktionen som styrs av Reader Extensions innefattar möjligheten att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet. PDF-dokument som har användarrättigheter tillagda kallas för rättighetsaktiverade dokument. En användare som öppnar ett rättighetsaktiverat PDF-dokument i Adobe Reader kan utföra de åtgärder som är aktiverade för det dokumentet.
+Med Reader Extensions kan du ändra användningsrättigheter för PDF-dokument. Användningsrättigheterna gäller funktioner som är tillgängliga i Acrobat men inte i Adobe Reader. Funktionerna som styrs av Reader Extensions inkluderar möjligheten att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet. PDF-dokument som har användarrättigheter tillagda kallas rättighetsaktiverade dokument. En användare som öppnar ett rättighetsaktiverat PDF-dokument i Adobe Reader kan utföra de åtgärder som är aktiverade för det dokumentet.
 
 För att uppnå detta måste vi göra följande:
-* [Lägg till certifikatet ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) för Reader-tillägg till användaren `fd-service`.
+* [Lägg till Reader Extensions-certifikatet ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) till `fd-service`-användaren.
 
 ## Skapa en anpassad OSGi-tjänst
 
@@ -71,9 +71,9 @@ public class ApplyUsageRights implements ReaderExtendPDF {
 }
 ```
 
-## Skapa servlet för direktuppspelning av läsarens utökade PDF
+## Skapa serverutrymme för direktuppspelning av Reader-utökad PDF
 
-Nästa steg är att skapa en serverlet med en POST-metod som returnerar läsaren extended PDF till användaren. I det här fallet uppmanas användaren att spara PDF i sitt filsystem. Detta beror på att PDF återges som dynamiskt PDF och att PDF-visningsprogrammen som medföljer webbläsarna inte hanterar dynamiska PDF-filer.
+Nästa steg är att skapa en servlet med en POST-metod som returnerar läsarprogrammet extendedPDF till användaren. I det här fallet uppmanas användaren att spara PDF i sitt filsystem. Detta beror på att PDF återges som en dynamisk PDF och att PDF-visningsprogrammen som medföljer webbläsarna inte hanterar dynamiska PDF-filer.
 
 Här följer koden för servleten. Servern anropas från anpassad skickaåtgärd i adaptiv form.
 Servlet skapar UsageRights-objektet och ställer in dess egenskaper baserat på de värden som användaren anger i det adaptiva formuläret. Servern anropar sedan metoden applyUsageRights för den tjänst som skapats för detta ändamål.
@@ -207,7 +207,7 @@ Så här testar du detta på den lokala servern:
 1. [Hämta och installera ares.ares.core-ares-paketet](assets/ares.ares.core-ares.jar). Detta har den anpassade tjänsten och servleten för att tillämpa användningsrättigheter och strömma tillbaka PDF-filen.
 1. [Importera klientlibs och anpassad sändning](assets/applyaresdemo.zip)
 1. [Importera det adaptiva formuläret](assets/applyaresform.zip)
-1. Lägg till certifikatet för Reader-tillägg till användaren fd-service. Kontrollera att aliaset är **ares**.
+1. Lägg till Reader Extensions-certifikat till &quot;fd-service&quot;-användare. Kontrollera att aliaset är **ares**.
 1. [Förhandsgranska anpassat formulär](http://localhost:4502/content/dam/formsanddocuments/applyreaderextensions/jcr:content?wcmmode=disabled)
-1. Välj rätt behörighet och överför PDF-filen
+1. Välj rätt behörighet och ladda upp PDF-fil
 1. Klicka på Skicka för att hämta Reader Extended PDF

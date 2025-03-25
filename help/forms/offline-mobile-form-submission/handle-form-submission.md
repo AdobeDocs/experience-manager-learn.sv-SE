@@ -1,15 +1,16 @@
 ---
-title: AEM arbetsflöde vid HTML 5-formulärinskickning - hantera PDF-inlämning
-description: Hantera inskickandet av HTML5/PDF
+title: Utlösa AEM-arbetsflöde vid inskickning av HTML5-formulär - hantera inlämning av PDF-formulär
+description: Hantera inlämningen av HTML5/PDF-formulär
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 jira: kt-16133
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+exl-id: ef8ed87d-37c1-4d01-8df6-7a78c328703d
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '146'
 ht-degree: 0%
@@ -18,14 +19,14 @@ ht-degree: 0%
 
 # Hantera inlämning av formulär
 
-I det här avsnittet ska vi skapa en enkel server som kan köras AEM Publish för att hantera PDF-formuläret eller HTML5-formuläret. Den här servern gör en HTTP-POST-begäran till en server som körs i en AEM författarinstans och som ansvarar för att spara skickade data som en `nt:file`-nod i AEM författardatabas.
+I det här avsnittet skapar vi en enkel webbtjänst som körs på AEM Publish för att hantera PDF-formuläret eller inskickandet av HTML5-formulär. Den här servern skickar en HTTP POST-begäran till en server som körs i en AEM-författarinstans och som ansvarar för att spara skickade data som en `nt:file`-nod i AEM Authors databas.
 
-Nedan följer koden för den server som hanterar PDF/HTML5-formuläröverföringen. I den här servertjänsten gör vi ett anrop till en POST som är monterad på **/bin/startworkflow** i en AEM Author-instans. Den här servern sparar formulärdata i AEM författares databas.
+Nedan följer koden för den server som hanterar PDF/HTML5-formuläröverföringen. På den här servern gör vi ett POST-anrop till en servlet som är monterad på **/bin/startworkflow** i en AEM Author-instans. Den här servern sparar formulärdata i AEM Authors databas.
 
 
-## AEM Publish-server
+## AEM Publish servlet
 
-Följande kod hanterar formulärinlämningen PDF/HTML5. Den här koden körs på publiceringsinstansen.
+Följande kod hanterar inskickandet av PDF/HTML5-formulär. Den här koden körs på publiceringsinstansen.
 
 ```java
 package com.aemforms.mobileforms.core.servlets;

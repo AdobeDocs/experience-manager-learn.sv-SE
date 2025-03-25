@@ -1,8 +1,8 @@
 ---
 title: Skapa ett webbformulär som ska presenteras för användaren för signering
-description: Skapa AEM paket för att visa de Acrobat signeringsmetoder som behövs för användningsfallet.
+description: Skapa AEM-paket för att visa de Acrobat signeringsmetoder som behövs för användningsfallet.
 feature: Adaptive Forms,Acrobat Sign
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
@@ -10,7 +10,7 @@ jira: KT-13099
 last-substantial-update: 2023-04-13T00:00:00Z
 exl-id: 15364571-070c-4497-a256-f0483d6f9585
 duration: 118
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Skapa en wrapper för Acrobat Sign REST API
 
-Ett anpassat AEM utvecklades för att skapa och returnera webbformulär till slutanvändaren
+Ett anpassat AEM-paket togs fram för att skapa och returnera webbformulär till slutanvändaren
 
 * [Skapa övergående dokument](https://secure.na1.echosign.com/public/docs/restapi/v6#!/transientDocuments/createTransientDocument). Dokumentet som överförs via det här anropet kallas för övergående eftersom det är tillgängligt endast i 7 dagar efter överföringen. Det returnerade tillfälliga dokument-ID:t kan användas i API-anrop där den överförda filen behöver refereras. Den tillfälliga dokumentbegäran är en multipart-begäran som består av tre delar - filnamn, mime-typ och filströmmen. Du kan bara överföra en fil åt gången i den här begäran.
 * [Skapa webbformulär](https://secure.na1.echosign.com/public/docs/restapi/v6#!/widgets/createWidget). Detta är en primär slutpunkt som används för att skapa ett nytt webbformulär. Webbformuläret skapades i ett ACTIVE-läge för att vara värd för webbformuläret omedelbart.

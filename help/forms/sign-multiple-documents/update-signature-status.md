@@ -1,8 +1,8 @@
 ---
 title: Uppdatera signaturstatusen för formuläret i databasen
-description: Uppdatera signaturstatusen för det signerade formuläret i databasen med hjälp av AEM arbetsflöde
+description: Uppdatera signaturstatusen för det signerade formuläret i databasen med hjälp av AEM-arbetsflödet
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6888
 thumbnail: 6888.jpg
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Experienced
 exl-id: 75852a4b-7008-4c65-bab1-cc5dbf525e20
 duration: 42
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Arbetsflödet UpdateSignatureStatus aktiveras när användaren har slutfört sig
 ![huvudarbetsflöde](assets/update-signature.PNG)
 
 Uppdatera signaturstatus är ett anpassat processsteg.
-Det främsta skälet till att implementera anpassade processsteg är att utöka ett AEM arbetsflöde. Här följer den anpassade koden som används för att uppdatera signaturstatusen.
+Huvudskälet till att implementera anpassade processsteg är att utöka ett AEM-arbetsflöde. Här följer den anpassade koden som används för att uppdatera signaturstatusen.
 Koden i det här anpassade processsteget refererar till tjänsten SignMultipleForms.
 
 

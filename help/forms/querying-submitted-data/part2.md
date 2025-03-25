@@ -3,13 +3,13 @@ title: AEM Forms med JSON-schema och data[del2]
 description: Självstudiekurs med flera delar för att vägleda dig genom stegen som ingår i att skapa ett adaptivt formulär med JSON-schema och fråga om skickade data.
 feature: Adaptive Forms
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 29195c70-af12-4a22-8484-3c87a1e07378
 duration: 110
-source-git-commit: f23c2ab86d42531113690df2e342c65060b5c7cd
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Om du vill lagra skickade data i databasen skriver vi en serverlet som extraherar bundna data och formulärnamnet och arkivet. Den fullständiga koden för att hantera formuläröverföringen och lagra afBoundData i databasen anges nedan.
 
-Vi har skapat en anpassad sändning för att hantera formuläröverföringen. I den här anpassade skickapostens post.POST.jsp vidarebefordrar vi begäran till vår tjänstserver.
+Vi har skapat en anpassad sändning för att hantera formuläröverföringen. I den här anpassade skickapostens post.POST.jsp vidarebefordrar vi begäran till vår servlet.
 
 Läs den här [artikeln](https://helpx.adobe.com/experience-manager/kt/forms/using/custom-submit-aem-forms-article.html) om du vill veta mer om anpassade inskickningsalternativ.
 

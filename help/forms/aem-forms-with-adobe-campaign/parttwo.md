@@ -2,7 +2,7 @@
 title: Skapa kampanjprofil för inskickning av adaptiva formulär
 description: I den här artikeln beskrivs hur du skapar en profil i Adobe Campaign Standard när du skickar in ett anpassat formulär. Den här processen använder en anpassad skicka-mekanism för att hantera inskickandet av anpassade formulär.
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -10,7 +10,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: deef09d9-82ec-4e61-b7ee-e72d1cd4e9e0
 duration: 182
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -23,13 +23,13 @@ I den här artikeln beskrivs hur du skapar en profil i Adobe Campaign Standard n
 
 I den här självstudiekursen går vi igenom stegen för att skapa en Campaign-profil för att skicka formulär som kan anpassas. För att uppnå detta måste vi göra följande
 
-* Skapa en AEM (CampaignService) för att skapa en Adobe Campaign Standard-profil med REST API
+* Skapa en AEM-tjänst (CampaignService) för att skapa en Adobe Campaign Standard-profil med REST API
 * Skapa en anpassad inskickningsåtgärd för hantering av inskickning av anpassade formulär
 * Anropa metoden createProfile för CampaignService
 
-## Skapa AEM {#create-aem-service}
+## Skapa AEM-tjänst {#create-aem-service}
 
-Skapa AEM tjänst för att skapa en Adobe Campaign-profil. Den här AEM hämtar Adobe Campaign-autentiseringsuppgifter från OSGI-konfigurationen. När kampanjinloggningsuppgifterna har erhållits skapas en åtkomsttoken och med åtkomsttoken görs ett HTTP-anrop från Post för att skapa profilen i Adobe Campaign. Här följer koden för att skapa en profil.
+Skapa en AEM-tjänst för att skapa en Adobe Campaign-profil. Den här AEM-tjänsten hämtar Adobe Campaign-autentiseringsuppgifterna från OSGI-konfigurationen. När kampanjinloggningsuppgifterna har erhållits skapas en åtkomsttoken och med åtkomsttoken HTTP Post-anrop görs för att skapa profilen i Adobe Campaign. Här följer koden för att skapa en profil.
 
 ```java
 package aemformwithcampaign.core.services.impl;

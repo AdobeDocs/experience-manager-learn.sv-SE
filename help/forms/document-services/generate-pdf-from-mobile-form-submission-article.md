@@ -1,15 +1,15 @@
 ---
 title: Generera PDF från HTML5-formulärskickning
-description: Generera PDF från inskickning av mobilformulär
+description: Generera PDF från inlämning av mobilformulär
 feature: Mobile Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 91b4a134-44a7-474e-b769-fe45562105b2
 last-substantial-update: 2020-01-07T00:00:00Z
 duration: 132
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 0%
@@ -18,12 +18,12 @@ ht-degree: 0%
 
 # Generera PDF från HTML5-formulärskickning {#generate-pdf-from-htm-form-submission}
 
-I den här artikeln får du stegvisa instruktioner för hur du genererar PDF-filer från inskickade formulär från HTML5 (även Mobile Forms). Denna demo förklarar också stegen som krävs för att lägga till en bild i HTML5-formuläret och sammanfoga bilden i den slutliga PDF-filen.
+I den här artikeln får du hjälp med att skapa PDF-filer från inskickade HTML5-formulär (även Mobile Forms). Denna demo förklarar också stegen som krävs för att lägga till en bild i HTML5-formuläret och sammanfoga bilden i den slutliga PDF-filen.
 
 
 Så här sammanfogar du skickade data i xdp-mallen:
 
-Skriv en serverlet som hanterar HTML5-formuläröverföringen
+Skriva en servett som hanterar inskickandet av HTML5-formulär
 
 * I den här serverboken får du tag i skickade data
 * Sammanfoga dessa data med xdp-mallen för att generera pdf
@@ -79,7 +79,7 @@ $("#file1").click();
 });
 ```
 
-[Anpassad profil](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). Om du använder en anpassad profil blir det enklare att manipulera HTML DOM-objekt i mobilformuläret. Ett dolt filelement läggs till i HTML.jsp. När användaren klickar på&quot;Lägg till ditt foto&quot; utlöser vi klickhändelsen för filelementet. På så sätt kan användaren bläddra och välja det foto som ska bifogas. Sedan använder vi Javascript FileReader-objektet för att hämta den base64-kodade strängen för bilden. base64-bildsträngen lagras i textfältet i formuläret. När formuläret skickas extraherar vi det här värdet och infogar det i img-elementet för XML. Denna XML används sedan för att sammanfoga med xdp för att generera den slutliga PDF-filen.
+[Anpassad profil](https://helpx.adobe.com/livecycle/help/mobile-forms/creating-profile.html#CreatingCustomProfiles). Med hjälp av en anpassad profil blir det enklare att hantera HTML DOM-objekt i mobilformuläret. Ett dolt filelement läggs till i HTML.jsp. När användaren klickar på&quot;Lägg till ditt foto&quot; utlöser vi klickhändelsen för filelementet. På så sätt kan användaren bläddra och välja det foto som ska bifogas. Sedan använder vi Javascript FileReader-objektet för att hämta den base64-kodade strängen för bilden. base64-bildsträngen lagras i textfältet i formuläret. När formuläret skickas extraherar vi det här värdet och infogar det i img-elementet för XML. Denna XML används sedan för att sammanfoga med xdp för att generera den slutliga PDF-filen.
 
 Den anpassade profil som används för den här artikeln har gjorts tillgänglig som en del av artikelns resurser.
 
@@ -106,7 +106,7 @@ Koden ovan körs när vi utlöser click-händelsen för filelementet. Rad 5 extr
 Sedan konfigurerar vi följande egenskaper (avancerade) för vårt mobilformulär i AEM
 
 * Skicka URL - http://localhost:4502/bin/handlemobileformsubmission. Det här är vår servlet som sammanfogar skickade data med xdp-mallen
-* Återgivningsprofil för HTML - Kontrollera att du väljer &quot;AddImageToMobileForm&quot;. Detta utlöser koden för att lägga till en bild i formuläret.
+* HTML-återgivningsprofil - Kontrollera att du väljer &quot;AddImageToMobileForm&quot;. Detta utlöser koden för att lägga till en bild i formuläret.
 
 Så här testar du den här funktionen på din egen server:
 
@@ -116,8 +116,8 @@ Så här testar du den här funktionen på din egen server:
 
 * [Hämta och installera det paket som är kopplat till den här artikeln.](assets/pdf-from-mobile-form-submission.zip)
 
-* Kontrollera att skicka-URL:en och HTML-återgivningsprofilen är rätt inställda genom att visa egenskapssidan för [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
+* Kontrollera att skicka-URL:en och HTML Rendering-profilen är korrekt inställda genom att visa egenskapssidan för [xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/schengen.xdp)
 
 * [Förhandsgranska XDP som html](http://localhost:4502/content/dam/formsanddocuments/schengen.xdp/jcr:content)
 
-* Lägg till en bild i formuläret och skicka. Du borde få tillbaka PDF med bilden i den.
+* Lägg till en bild i formuläret och skicka. Du bör få tillbaka PDF med bilden i den.

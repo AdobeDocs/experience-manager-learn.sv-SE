@@ -2,7 +2,7 @@
 title: Använda fragment i utdatatjänsten med bevakad mapp
 description: Generera PDF-dokument med fragment i crx-databasen
 feature: Output Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
@@ -10,7 +10,7 @@ last-substantial-update: 2022-09-07T00:00:00Z
 thumbnail: ecma-fragments.jpg
 exl-id: 6b0bd2f1-b8ee-4f96-9813-8c11aedd3621
 duration: 84
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 # Generera PDF-dokument med fragment med ECMA-skript{#developing-with-output-and-forms-services-in-aem-forms}
 
 
-I den här artikeln använder vi utdatatjänsten för att generera PDF-filer med hjälp av xdp-fragment. Den huvudsakliga xdp-filen och fragmenten finns i crx-databasen. Det är viktigt att efterlikna filsystemets mappstruktur i AEM. Om du till exempel använder ett fragment i fragmentmappen i din xdp måste du skapa en mapp med namnet **fragments** under din AEM. Basmappen kommer att innehålla din bas-xdp-mall. Om du till exempel har följande struktur i filsystemet
+I den här artikeln använder vi utdatatjänsten för att generera PDF-filer med hjälp av xdp-fragment. Den huvudsakliga xdp-filen och fragmenten finns i crx-databasen. Det är viktigt att efterlikna filsystemets mappstruktur i AEM. Om du till exempel använder ett fragment i fragmentmappen i din xdp måste du skapa en mapp med namnet **fragments** under din basmapp i AEM. Basmappen kommer att innehålla din bas-xdp-mall. Om du till exempel har följande struktur i filsystemet
 * c:\xdptemplates - Detta kommer att innehålla xdp-basmallen
 * c:\xdptemplates\fragments - Den här mappen innehåller fragment och huvudmallen refererar till fragmentet enligt nedan
   ![fragment-xdp](assets/survey-fragment.png).

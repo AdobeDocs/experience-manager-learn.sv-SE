@@ -3,7 +3,7 @@ title: Lagra och hämta formulärdata med bilagor från MySQL-databasen
 description: Flera delars självstudiekurser som visar hur du lagrar och hämtar formulärdata med bilagor
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6593
 thumbnail: 327122.jpg
 topic: Development
@@ -12,7 +12,7 @@ level: Experienced
 exl-id: b278652f-6c09-4abc-b92e-20bfaf2e791a
 last-substantial-update: 2020-11-07T00:00:00Z
 duration: 148
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '212'
 ht-degree: 0%
@@ -25,7 +25,7 @@ I den här självstudiekursen får du hjälp med att spara och hämta adaptiva f
 
 * Använd API:t för GuideBridge för att få åtkomst till data i det adaptiva formuläret
 
-* Ring en POST till en servett. Den här servern lagrar data i databasen och formulärbilagor i CRX-databasen. De lagrade data i databasen är kopplade till ett GUID.
+* Gör ett POST-anrop till en servlet. Den här servern lagrar data i databasen och formulärbilagor i CRX-databasen. De lagrade data i databasen är kopplade till ett GUID.
 
 * När du vill fylla i det adaptiva formuläret med lagrade data hämtar du data som är kopplade till GUID och fyller i det adaptiva formuläret med metoden **request.setAttribute**.
 

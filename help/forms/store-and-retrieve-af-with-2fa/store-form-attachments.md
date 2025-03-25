@@ -3,7 +3,7 @@ title: Lagra bifogade formulär
 description: Extrahera de bifogade filerna och spara dem på en ny plats i CRX-databasen.
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6537
 thumbnail: 6537.jpg
 topic: Development
@@ -11,7 +11,7 @@ role: Developer
 level: Experienced
 exl-id: ec50b9b1-e28c-4d84-ae90-6a21c9700688
 duration: 65
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 När du lägger till bilagor i ett anpassat formulär lagras bilagorna på en tillfällig plats i CRX-databasen. För att vi ska kunna arbeta måste vi lagra de bifogade filerna på en ny plats i CRX.
 
 OSGi-tjänsten skapas för att lagra de bifogade filerna på en ny plats i CRX-databasen. En ny filmappning skapas med den nya platsen för de bifogade filerna i CRX och returneras till det anropande programmet.
-Följande är den FileMap som skickas till servern. Nyckeln är det adaptiva formulärfältet och värdet är den temporära platsen för den bifogade filen. På vår server extraherar vi den bifogade filen och sparar den på en ny plats i AEM och uppdaterar FileMap med den nya platsen
+Följande är den FileMap som skickas till servern. Nyckeln är det adaptiva formulärfältet och värdet är den temporära platsen för den bifogade filen. På vår server extraherar vi bilagan och sparar den på en ny plats i AEM-databasen och uppdaterar FileMap med den nya platsen
 
 ```java
 {

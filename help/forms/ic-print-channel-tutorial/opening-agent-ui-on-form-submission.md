@@ -1,9 +1,9 @@
 ---
-title: Öppnar användargränssnittet för agenten när POST skickas
+title: Öppnar agentens användargränssnitt vid inskickning
 description: Detta är en del av en självstudiekurs i flera steg som du kan använda för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I den här delen startar vi gränssnittet för agenten för att skapa ad hoc-korrespondens när formulär skickas.
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6168
 thumbnail: 40122.jpg
 topic: Development
@@ -11,14 +11,14 @@ role: Developer
 level: Intermediate
 exl-id: 509b4d0d-9f3c-46cb-8ef7-07e831775086
 duration: 170
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '322'
 ht-degree: 0%
 
 ---
 
-# Öppnar användargränssnittet för agenten när POST skickas
+# Öppnar agentens användargränssnitt vid inskickning
 
 I den här delen startar vi gränssnittet för agenten för att skapa ad hoc-korrespondens när formulär skickas.
 

@@ -2,14 +2,14 @@
 title: Skapa formulärdatamodell utan data Source
 description: Från och med AEM Forms 6.4 har vi nu möjlighet att definiera FDM (Form Data Model) utan att associera den med en datakälla. I följande videofilm går du igenom stegen för att skapa FDM utan någon datakälla.
 feature: Workflow
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: b43568e7-99f0-425d-9601-c671ecdaff69
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 188
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%

@@ -1,15 +1,15 @@
 ---
-title: Skapa ditt första OSGi-paket med AEM formulär
+title: Skapa ditt första OSGi-paket med AEM-formulär
 description: Bygg ditt första OSGi-paket med maven och eclipse
 feature: Adaptive Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 last-substantial-update: 2021-06-09T00:00:00Z
 duration: 177
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Lägg till %JAVA_HOME%/bin i sökvägen
 ![datakälla](assets/java-home.JPG)
 
 >[!NOTE]
-> Använd inte JDK 15. Det stöds inte av AEM.
+> Använd inte JDK 15. Den stöds inte av AEM.
 
 ### Testa JDK-versionen
 
@@ -118,7 +118,7 @@ Expandera `src/main/java` under mappen `learningaemforms.core`. Det här är den
 
 ## Bygg ditt projekt
 
-När du har skrivit OSGi-tjänsten, eller servleten, måste du skapa ditt projekt för att generera OSGi-paketet som kan distribueras med Felix webbkonsol. Se [AEMFD Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) för att inkludera rätt klient-SDK i ditt Maven-projekt. Du måste inkludera AEM FD-klient-SDK i beroendeavsnittet för `pom.xml` i kärnprojektet enligt nedan.
+När du har skrivit OSGi-tjänsten, eller servleten, måste du skapa ditt projekt för att generera OSGi-paketet som kan distribueras med Felix webbkonsol. Se [AEMFD Client SDK](https://repo.adobe.com/nexus/content/repositories/public/com/adobe/aemfd/aemfd-client-sdk/) för att inkludera rätt klient-SDK i ditt Maven-projekt. Du måste inkludera AEM FD Client SDK i beroendeavsnittet för `pom.xml` i kärnprojektet enligt nedan.
 
 ```xml
 <dependency>

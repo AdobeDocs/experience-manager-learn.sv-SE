@@ -2,14 +2,14 @@
 title: Streckkodstjänst med adaptiv Forms
 description: Använda streckkodstjänsten för att avkoda streckkod och fylla i formulärfält från extraherade data.
 feature: Barcoded Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: f89cd02d-3ffe-42c6-b547-c0445f912ee8
 last-substantial-update: 2020-02-07T00:00:00Z
 duration: 115
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '354'
 ht-degree: 0%
@@ -132,7 +132,7 @@ $(document).ready(function()
 
 >[!NOTE]
 >
->Det adaptiva formuläret som ingår i paketet har skapats med AEM Forms 6.4. Om du tänker använda det här paketet i AEM Forms 6.3-miljö skapar du det adaptiva formuläret i AEM 6.3
+>Det adaptiva formuläret som ingår i paketet har skapats med AEM Forms 6.4. Om du tänker använda det här paketet i AEM Forms 6.3-miljö skapar du det adaptiva formuläret i AEM Form 6.3
 
 Rad 12 - Anpassad kod för att hämta tjänstmatcharen. Det här paketet ingår som en del av dessa artiklar.
 
@@ -143,7 +143,7 @@ Så här kör du det här på datorn:
 1. [Hämta BarcodeService.zip](assets/barcodeservice.zip) och importera till AEM med pakethanteraren
 1. [Hämta och installera paketet med anpassade Document Services](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 1. [Hämta och installera paketet DevelopingWithServiceUser](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
-1. [Ladda ned exempelformuläret PDF](assets/barcode.pdf)
+1. [Ladda ned exempelformuläret för PDF](assets/barcode.pdf)
 1. Peka webbläsaren på det [exempel på anpassningsbara formuläret](http://localhost:4502/content/dam/formsanddocuments/barcodedemo/jcr:content?wcmmode=disabled)
-1. Överför exempelfilen PDF
+1. Ladda upp exempelfilen för PDF
 1. Du bör se formulären som innehåller data

@@ -1,22 +1,22 @@
 ---
-title: Använda steget Skicka e-post för Forms Workflow
+title: Använda Skicka e-post-steget i Forms Workflow
 description: Steget Skicka e-post introducerades i AEM Forms 6.4. Med det här steget kan vi skapa affärsprocesser eller arbetsflöden som gör att du kan skicka e-postmeddelanden med eller utan bilagor. I följande videofilm visas hur du konfigurerar komponenten för att skicka e-post
 feature: Workflow
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 21e58bbc-c1d6-4d41-a4d4-f522a3a5d4a7
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 314
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
 
 ---
 
-# Använda steget Skicka e-post för Forms Workflow {#using-send-email-step-of-forms-workflow}
+# Använda Skicka e-post-steget i Forms Workflow {#using-send-email-step-of-forms-workflow}
 
 Steget Skicka e-post introducerades i AEM Forms 6.4. Med det här steget kan vi skapa affärsprocesser eller arbetsflöden som gör att du kan skicka e-postmeddelanden med eller utan bilagor. I följande videofilm visas hur du konfigurerar komponenten för att skicka e-post.
 
@@ -25,8 +25,8 @@ Steget Skicka e-post introducerades i AEM Forms 6.4. Med det här steget kan vi 
 Som en del av den här artikeln ska vi ta dig igenom följande exempel:
 
 1. En användare fyller i formuläret Time Off Request
-1. När formulär skickas aktiveras AEM arbetsflöde
-1. AEM använder komponenten Skicka e-post för att skicka ett e-postmeddelande med DoR som en bifogad fil
+1. När formulär skickas aktiveras AEM Workflow
+1. I AEM Workflow används komponenten Send Email för att skicka ett e-postmeddelande med DoR som en bilaga
 
 Innan du använder steget Skicka e-post måste du konfigurera Day CQ Mail Service från [configMgr](http://localhost:4502/system/console/configMgr). Ange värden som är specifika för din miljö
 
@@ -54,7 +54,7 @@ Ta en titt på arbetsflödets processsteg. Den anpassade kod som är associerad 
 
 >[!NOTE]
 >
->I AEM Forms 6.5 och senare behöver du inte den här anpassade koden för att skapa metadataegenskaper. Använd variabelfunktionerna i AEM
+>I AEM Forms 6.5 och senare behöver du inte den här anpassade koden för att skapa metadataegenskaper. Använd variabelfunktionerna i AEM Workflow
 
 Kontrollera att fliken Bifogade filer i komponenten Skicka e-post är konfigurerad enligt skärmbilden nedan
 ![Fliken Skicka e-postbilaga](assets/sendemailcomponentconfigure.jpg)Värdet DOR.pdf måste matcha det värde som anges i dokumentsökvägen som anges i alternativen för att skicka formulär som kan anpassas.

@@ -2,7 +2,7 @@
 title: Felsöka signering av flera dokument
 description: Testa och felsöka lösningen
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6960
 thumbnail: 6960.jpg
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Intermediate
 exl-id: 99cba29e-4ae3-4160-a4c7-a5b6579618c0
 duration: 81
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
@@ -38,7 +38,7 @@ E-postmeddelandet skickas av komponenten Skicka e-post i arbetsflödet Signera f
 
 ### Länken i e-postmeddelandet fungerar inte
 
-Länkarna i e-postmeddelandena genereras dynamiskt. Om AEM inte körs på localhost:4502 anger du rätt servernamn och port i argumenten i Store Forms To Sign-steget i Sign Multiple Forms-arbetsflödet
+Länkarna i e-postmeddelandena genereras dynamiskt. Om din AEM-server inte körs på localhost:4502 anger du rätt servernamn och port i argumenten i steget Spara Forms för signering i arbetsflödet Signera flera Forms
 
 ### Kan inte signera formuläret
 

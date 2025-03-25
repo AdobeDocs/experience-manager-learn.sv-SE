@@ -1,15 +1,15 @@
 ---
 title: Lagra adaptiva formulärdata
-description: Lagra adaptiva formulärdata i DataBase som en del av AEM arbetsflöde
+description: Lagra adaptiva formulärdata i DataBase som en del av ditt AEM-arbetsflöde
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 3dd552da-fc7c-4fc7-97ec-f20b6cc33df0
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 146
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '382'
 ht-degree: 0%
@@ -18,8 +18,8 @@ ht-degree: 0%
 
 # Lagra inskickade adaptiva formulär i databasen
 
-Det finns många sätt att lagra inskickade formulärdata i den databas du väljer. En JDBC-datakälla kan användas för att lagra data direkt i databasen. Ett anpassat OSGI-paket kan skrivas för att lagra data i databasen. I den här artikeln används anpassade processsteg i AEM arbetsflöde för att lagra data.
-Användningsexemplet är att utlösa ett AEM arbetsflöde för att skicka ett adaptivt formulär och ett steg i arbetsflödet lagrar skickade data i databasen.
+Det finns många sätt att lagra inskickade formulärdata i den databas du väljer. En JDBC-datakälla kan användas för att lagra data direkt i databasen. Ett anpassat OSGI-paket kan skrivas för att lagra data i databasen. I den här artikeln används anpassade processsteg i AEM-arbetsflödet för att lagra data.
+Användningsexemplet är att utlösa ett AEM-arbetsflöde när ett adaptivt formulär skickas och ett steg i arbetsflödet lagrar skickade data i databasen.
 
 
 
@@ -215,7 +215,7 @@ public class InsertAfData implements WorkflowProcess {
 
    * Distribuera jar-filen med [AEM webbkonsol](http://localhost:4502/system/console/bundles). Den här jar-filen innehåller koden som används för att lagra formulärdata i databasen.
 
-   * Importera de två ZIP-filerna till [AEM med hjälp av pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp). Det här ger dig arbetsflödet [för exempel](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) och det [exempel på adaptiva formulär](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) som utlöser arbetsflödet när formulär skickas. Observera processargumenten i arbetsflödessteget. De här argumenten anger formatnamnet och namnet på datafilen som ska innehålla data från det adaptiva formuläret. Datafilen lagras under nyttolastmappen i crx-databasen. Observera hur det adaptiva formuläret [ ](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) är konfigurerat för att utlösa det AEM arbetsflödet när det skickas och datafilskonfigurationen (data.xml)
+   * Importera de två ZIP-filerna till [AEM med hjälp av pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp). Det här ger dig arbetsflödet [för exempel](http://localhost:4502/editor.html/conf/global/settings/workflow/models/storeformdata.html) och det [exempel på adaptiva formulär](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) som utlöser arbetsflödet när formulär skickas. Observera processargumenten i arbetsflödessteget. De här argumenten anger formatnamnet och namnet på datafilen som ska innehålla data från det adaptiva formuläret. Datafilen lagras under nyttolastmappen i crx-databasen. Observera hur det adaptiva formuläret [ ](http://localhost:4502/editor.html/content/forms/af/addformdataindb.html) är konfigurerat för att utlösa AEM-arbetsflödet när det skickas och datafilskonfigurationen (data.xml)
 
    * Förhandsgranska och fyll i formuläret och skicka. Du bör se en ny rad som har skapats i databasen
 

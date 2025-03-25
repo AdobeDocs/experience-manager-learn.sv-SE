@@ -3,14 +3,14 @@ title: Skapa din första interaktiva kommunikation för webbkanalen
 description: Interactive Communications är nytt för AEM Forms 6.4. I det här dokumentet får du hjälp med att skapa en interaktiv kommunikation för webbkanalen.
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 65b1af30-9e22-4df0-ab91-479d5406df61
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 28
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '160'
 ht-degree: 0%

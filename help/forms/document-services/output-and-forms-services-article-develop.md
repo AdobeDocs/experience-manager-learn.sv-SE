@@ -2,14 +2,14 @@
 title: Utveckla med Output och Forms Services i AEM Forms
 description: Lär dig hur du utvecklar med Output och Forms Service API i AEM Forms.
 feature: Output Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 last-substantial-update: 2024-01-29T00:00:00Z
 exl-id: d268d5d6-f24f-4db9-b8e0-07dd769c6005
 duration: 122
-source-git-commit: 12af84e3d9be24fabb01a64eced6279749668599
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Lär dig hur du utvecklar med Output och Forms Service API i AEM Forms.
 I den här artikeln ska vi titta på följande
 
 * [Utdatatjänst](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) - Vanligtvis används den här tjänsten för att sammanfoga XML-data med xdp-mall eller pdf för att generera sammanlagd pdf.
-* [FormsService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) - Det här är en mycket mångsidig tjänst som gör att du kan återge xdp som pdf och exportera/importera data från och till PDF.
+* [FormsService](https://developer.adobe.com/experience-manager/reference-materials/6-5/forms/javadocs/com/adobe/fd/forms/api/FormsService.html) - Det här är en mycket mångsidig tjänst som gör att du kan återge xdp som pdf och exportera/importera data från och till PDF-fil.
 
 
 Följande kodfragment exporterar data från PDF-filen
@@ -67,12 +67,12 @@ Rad 6 exporterar xmlData från PDF-filen
 
 ## Testa proverna
 
-Du kan testa exempelkoden på flera olika sätt. Det snabbaste och enklaste är att använda Postman. Med Postman kan du göra förfrågningar om POST till servern.
+Du kan testa exempelkoden på flera olika sätt. Det snabbaste och enklaste är att använda Postman. Med Postman kan du göra POST-begäranden till servern.
 
 * Installera Postman-appen på datorn.
 * Starta programmet och ange rätt URL
-* Se till att du har valt &quot;POST&quot; i listrutan
-* Ange&quot;Authorization&quot; som&quot;Basic Auth&quot;. Ange AEM användarnamn och lösenord
+* Kontrollera att du har valt POST i listrutan
+* Ange&quot;Authorization&quot; som&quot;Basic Auth&quot;. Ange användarnamn och lösenord för AEM Server
 * Ange parametrarna för begäran på fliken Innehåll
 * Klicka på knappen Skicka
 
@@ -81,7 +81,7 @@ Paketet innehåller fyra exempel. I följande stycken förklaras när utdatatjä
 ## Använda OutputService för att sammanfoga data med xdp-mall
 
 * Använd Utdatatjänst för att sammanfoga data med xdp- eller pdf-dokument för att generera sammanlagd PDF
-* **POSTS-URL**: http://localhost:4502/content/AemFormsSamples/outputservice.html
+* **POST URL**: http://localhost:4502/content/AemFormsSamples/outputservice.html
 * **Begäranparametrar -**
 
    * **xdp_or_pdf_file** : Den xdp- eller pdf-fil som du vill sammanfoga data med
@@ -93,7 +93,7 @@ Paketet innehåller fyra exempel. I följande stycken förklaras när utdatatjä
 #### Importera data
 
 * Använd FormsService-importData för att importera data till PDF-filen
-* **POST-URL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
+* **POST URL** - http://localhost:4502/content/AemFormsSamples/mergedata.html
 
 * **Begärandeparametrar:**
 
@@ -104,7 +104,7 @@ Paketet innehåller fyra exempel. I följande stycken förklaras när utdatatjä
 #### Exportera data
 
 * Använd FormsService-API:t för export av data från PDF-filen
-* **POST-URL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
+* **POST URL** - http://localhost:4502/content/AemFormsSamples/exportdata.html
 * **Begärandeparametrar:**
 
    * **pdffile** : PDF-filen som du vill exportera data från
@@ -113,8 +113,8 @@ Paketet innehåller fyra exempel. I följande stycken förklaras när utdatatjä
 #### Återge XDP
 
 * Återge XDP-mall som statisk/dynamisk pdf
-* Använd FormsService-återgivnings-API:t PDFForm för att återge xdp-mallen som PDF
-* **POST-URL** - http://localhost:4502/content/AemFormsSamples/renderxdp?xdpName=f1040.xdp
+* Använd FormsService renderPDFForm API för att återge xdp-mall som PDF
+* **POST URL** - http://localhost:4502/content/AemFormsSamples/renderxdp?xdpName=f1040.xdp
 * Begäranparameter:
    * xdpName: Namnet på xdp-filen som ska återges som en pdf
 

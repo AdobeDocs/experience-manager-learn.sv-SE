@@ -2,7 +2,7 @@
 title: AEM Forms med Marketo (del 4)
 description: Självstudiekurs för att integrera AEM Forms med Marketo med AEM Forms Form Data Model.
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -10,7 +10,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms as a Cloud Service" before-title="false"
 exl-id: 6b44e6b2-15f7-45b2-8d21-d47f122c809d
 duration: 68
-source-git-commit: 426020f59c7103829b7b7b74acb0ddb7159b39fa
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 0%
@@ -20,6 +20,7 @@ ht-degree: 0%
 # Testa integreringen
 
 Vi testar integreringen genom att skapa en enkel formulärhämtning och visa ett lead-objekt från Market.
+
 >[!NOTE]
 >
 >Den här funktionen har testats på formulär baserade på grundkomponenter.

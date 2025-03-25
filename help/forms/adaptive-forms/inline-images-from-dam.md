@@ -2,7 +2,7 @@
 title: Visa DAM-bilder i Adaptive Forms
 description: Visa DAM-bilder i adaptiv Forms
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
@@ -11,7 +11,7 @@ thumbnail: inline-dam.jpg
 kt: kt-11307
 exl-id: 339eb16e-8ad8-4b98-939c-b4b5fd04d67e
 duration: 60
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '200'
 ht-degree: 0%
@@ -83,8 +83,8 @@ async function createFile(imageName){
 
 ### Distribuera på servern
 
-* Hämta och installera [klientbiblioteket och exempelbilderna](assets/InlineDAMImage.zip) på din AEM med AEM Package Manager.
-* Hämta och installera [exempelformuläret](assets/FieldInspectionForm.zip) till din AEM med AEM pakethanterare.
+* Hämta och installera [klientbiblioteket och exempelbilderna](assets/InlineDAMImage.zip) på din AEM-instans med AEM Package Manager.
+* Hämta och installera [exempelformuläret](assets/FieldInspectionForm.zip) på din AEM-instans med AEM pakethanterare.
 * Peka webbläsaren på [FileInspectionForm](http://localhost:4502/content/dam/formsanddocuments/fieldinspection/fieldinspection/jcr:content?wcmmode=disabled)
 * Välj en av korrigeringarna
 * Bilden ska visas i formuläret

@@ -1,7 +1,7 @@
 ---
 title: Skapa ditt första OSGi-paket med AEM Forms
 description: Skapa ditt första OSGi-paket med Maven och Eclipse
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Adaptive Forms
 topic: Development
 role: Developer
@@ -9,7 +9,7 @@ level: Beginner
 exl-id: 307cc3b2-87e5-4429-8f21-5266cf03b78f
 last-substantial-update: 2021-04-23T00:00:00Z
 duration: 145
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '665'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Lägg till %JAVA_HOME%/bin i sökvägen
 ![datakälla](assets/java-home.JPG)
 
 >[!NOTE]
-> Använd inte JDK 15. Det stöds inte av AEM.
+> Använd inte JDK 15. Den stöds inte av AEM.
 
 ### Testa JDK-versionen
 
@@ -101,9 +101,9 @@ Expandera `src/main/java` under mappen `mysite.core`. Det här är den mapp där
 
 ![datakälla](assets/mysite-core-project.png)
 
-## Inkludera AEMFD-klient-SDK
+## Inkludera AEMFD Client SDK
 
-Du måste inkludera AEMFD-klientens SDK i ditt projekt för att kunna utnyttja olika tjänster som medföljer AEM Forms. Se [AEMFD Client SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) för att inkludera rätt klient-SDK i ditt Maven-projekt. Du måste inkludera AEM FD-klient-SDK i beroendeavsnittet för `pom.xml` i kärnprojektet enligt nedan.
+Du måste inkludera AEMFD-klientens SDK i ditt projekt för att kunna utnyttja olika tjänster som medföljer AEM Forms. Se [AEMFD Client SDK](https://mvnrepository.com/artifact/com.adobe.aemfd/aemfd-client-sdk) för att inkludera rätt klient-SDK i ditt Maven-projekt. Du måste inkludera AEM FD Client SDK i beroendeavsnittet för `pom.xml` i kärnprojektet enligt nedan.
 
 ```xml
 <dependency>
@@ -118,7 +118,7 @@ Så här skapar du ditt projekt:
 * Öppna **kommandotolkfönstret**
 * Navigera till `c:\aemformsbundles\mysite\core`
 * Kör kommandot `mvn clean install -PautoInstallBundle`
-Kommandot ovan skapar och installerar paketet på den AEM servern som körs på `http://localhost:4502`. Paketet finns också i filsystemet på
+Kommandot ovan skapar och installerar paketet på AEM-servern som körs på `http://localhost:4502`. Paketet finns också i filsystemet på
   `C:\AEMFormsBundles\mysite\core\target` och kan distribueras med webbkonsolen [Felix](http://localhost:4502/system/console/bundles)
 
 ## Nästa steg

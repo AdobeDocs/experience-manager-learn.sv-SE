@@ -2,14 +2,14 @@
 title: Använda API för att generera arkivdokument med AEM Forms
 description: Generera DOR (Document Of Record) programmatiskt
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 9a3b2128-a383-46ea-bcdc-6015105c70cc
 last-substantial-update: 2023-01-26T00:00:00Z
 duration: 67
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Generera DOR (Document Of Record) programmatiskt
 
-I den här artikeln visas hur `com.adobe.aemds.guide.addon.dor.DoRService API` används för att generera **dokument med post** programmatiskt. [Postdokument](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) är en PDF-version av data som har hämtats i adaptiv form.
+I den här artikeln visas hur `com.adobe.aemds.guide.addon.dor.DoRService API` används för att generera **dokument med post** programmatiskt. [Dokument för post](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) är en PDF-version av data som har samlats in i adaptiv form.
 
 1. Här följer kodfragmentet. Den första raden hämtar DOR-tjänsten.
 1. Ange DoROptions.
@@ -80,6 +80,6 @@ Följ de här stegen för att prova detta på din lokala dator
 PDF visas inte på den nya webbläsarfliken:
 
 1. Kontrollera att du inte blockerar popup-fönster i webbläsaren
-1. Se till att du startar AEM som administratör (åtminstone i Windows)
+1. Kontrollera att du startar AEM-servern som administratör (åtminstone i Windows)
 1. Kontrollera att DevelopingWithServiceUser-paketet är i *aktivt läge*
 1. [Kontrollera att systemanvändaren ](http://localhost:4502/useradmin) fd-service har behörighet att läsa, ändra och skapa på följande nod `/content/usergenerated/content/aemformsenablement`

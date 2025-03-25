@@ -2,7 +2,7 @@
 title: AEM Forms med Marketo (del 3)
 description: Självstudiekurs för att integrera AEM Forms med Marketo med AEM Forms Form Data Model.
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -10,7 +10,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: 7096340b-8ccf-4f5e-b264-9157232e96ba
 duration: 78
-source-git-commit: 7e0d7e87d72aa1e4450649afa6a962099ceb2db4
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 När du har konfigurerat datakällan är nästa steg att skapa en formulärdatamodell som baseras på den datakälla som konfigurerats i det tidigare steget. Så här skapar du en formulärdatamodell:
 
-Peka webbläsaren på sidan [ dataintegreringar.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) Den här listan innehåller alla dataintegreringar som har skapats på din AEM.
+Peka webbläsaren på sidan [ dataintegreringar.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) Den här listan innehåller alla dataintegreringar som har skapats på din AEM-instans.
 
 1. Klicka på Skapa | Formulärdatamodell
 1. Ange beskrivande titel som FormsAndMarketo och klicka på Nästa

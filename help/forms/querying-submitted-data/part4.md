@@ -3,13 +3,13 @@ title: AEM Forms med JSON-schema och data [del 4]
 description: Självstudiekurs med flera delar för att vägleda dig genom stegen som ingår i att skapa ett adaptivt formulär med JSON-schema och fråga om skickade data.
 feature: Adaptive Forms
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: a8d8118d-f4a1-483f-83b4-77190f6a42a4
 duration: 99
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Det exempelgränssnitt som används för att fråga efter skickade data använde
 >
 >Den aktuella versionen av den här självstudiekursen stöder inte frågor i flera kolumner.
 
-När du väljer ett formulär som ska utföra din fråga görs ett GET-anrop till **/bin/getdatakeysfromschema**. Det här GET-anropet returnerar de obligatoriska fält som är kopplade till formulärets schema. De obligatoriska fälten fylls sedan i i den nedrullningsbara listan i QueryBuilder så att du kan skapa frågan.
+När du väljer ett formulär för att utföra din fråga görs ett GET-anrop till **/bin/getdatasfromschema**. Detta GET-anrop returnerar de obligatoriska fält som är kopplade till formulärets schema. De obligatoriska fälten fylls sedan i i den nedrullningsbara listan i QueryBuilder så att du kan skapa frågan.
 
 Följande kodfragment gör ett anrop till metoden getRequiredColumnsFromSchema i JSONSchemaOperations-tjänsten. Vi skickar egenskaperna och de nödvändiga elementen i schemat till det här metodanropet. Arrayen som returneras av det här funktionsanropet används sedan för att fylla i listrutan för frågebyggaren
 

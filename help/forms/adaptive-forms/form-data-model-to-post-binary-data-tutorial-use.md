@@ -1,30 +1,30 @@
 ---
-title: Använda formulärdatamodell för binära Post-data
-description: Bokföra binära data till AEM DAM med hjälp av formulärdatamodellen
+title: Bokför binära data med formulärdatamodellen
+description: Publicera binära data till AEM DAM med hjälp av formulärdatamodellen
 feature: Workflow
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 9c62a7d6-8846-424c-97b8-2e6e3c1501ec
 last-substantial-update: 2021-01-09T00:00:00Z
 duration: 95
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '454'
 ht-degree: 0%
 
 ---
 
-# Använda formulärdatamodell för binära Post-data{#using-form-data-model-to-post-binary-data}
+# Bokför binära data med formulärdatamodellen{#using-form-data-model-to-post-binary-data}
 
-Från och med AEM Forms 6.4 har vi nu möjlighet att anropa datamodelltjänsten i form av ett steg i AEM arbetsflöde. I den här artikeln får du hjälp med att skicka ett exempel på hur du kan använda Document of Record med hjälp av Form Data Model Service.
+Från och med AEM Forms 6.4 kan vi nu anropa Form Data Model Service som ett steg i AEM Workflow. I den här artikeln får du hjälp med att skicka ett exempel på hur du kan använda Document of Record med hjälp av Form Data Model Service.
 
 Användningsexemplet är följande:
 
 1. En användare fyller i och skickar ett adaptivt formulär.
 1. Det adaptiva formuläret är konfigurerat för att generera arkivdokument.
-1. När de här anpassningsbara formulären skickas aktiveras AEM arbetsflöde som använder anrop av datamodelltjänsten för att POST av arkivdokumentet till AEM DAM.
+1. När de här anpassningsbara formulären skickas aktiveras AEM Workflow, som kommer att använda tjänsten invoke Form Data Model för att skicka in arkivdokumentet till AEM DAM.
 
 ![posttodam](assets/posttodamshot1.png)
 
@@ -42,7 +42,7 @@ Tjänstindata
 
 >[!NOTE]
 >
->Felsökningstips - Om DOR.pdf av någon anledning inte har skapats i DAM återställer du autentiseringsinställningarna för datakällan genom att klicka [här](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam). Det här är AEM autentiseringsinställningar, som som standard är admin/admin.
+>Felsökningstips - Om DOR.pdf av någon anledning inte har skapats i DAM återställer du autentiseringsinställningarna för datakällan genom att klicka [här](http://localhost:4502/mnt/overlay/fd/fdm/gui/components/admin/fdmcloudservice/properties.html?item=%2Fconf%2Fglobal%2Fsettings%2Fcloudconfigs%2Ffdm%2Fpostdortodam). Det här är autentiseringsinställningarna för AEM, som som standard är admin/admin.
 
 Följ stegen nedan för att testa den här funktionen på servern:
 
@@ -50,10 +50,10 @@ Följ stegen nedan för att testa den här funktionen på servern:
 
 1. [Hämta och distribuera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar). Det här anpassade OSGI-paketet används för att skapa metadataegenskapen och ange dess värde från skickade formulärdata.
 
-1. [Importera de resurser](assets/postdortodam.zip) som är associerade med den här artikeln till AEM med hjälp av pakethanteraren. Du får följande
+1. [Importera de resurser](assets/postdortodam.zip) som är associerade med den här artikeln till AEM med hjälp av pakethanteraren.Du får följande
 
    1. Arbetsflödesmodell
-   1. Anpassat formulär har konfigurerats för att skickas till AEM arbetsflöde
+   1. Anpassat formulär har konfigurerats för att skickas till AEM Workflow
    1. Datakällan har konfigurerats att använda filen PostToDam.JSON
    1. Formulärdatamodell som använder Data Source
 

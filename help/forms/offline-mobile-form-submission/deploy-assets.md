@@ -1,9 +1,9 @@
 ---
-title: AEM arbetsflöde på HTML5-formulärskickning - Komma igång med användningsfallet
+title: Starta AEM-arbetsflödet vid inskickning av HTML5-formulär - få användningsfallet att fungera
 description: Distribuera exempelresurserna på ditt lokala system
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
@@ -11,7 +11,7 @@ jira: kt-16133
 exl-id: 79935ef0-bc73-4625-97dd-767d47a8b8bb
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 90
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Lägg till följande post i användarmappningstjänsten för Apache Sling med co
 DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 ```
 
-* Du kan lagra formulärinskickade formulär i en annan mapp genom att ange mappnamnet i konfigurationen AEM serverautentiseringsuppgifter med [configMgr](http://localhost:4502/system/console/configMg). Om du ändrar mappen måste du skapa ett startprogram för mappen som utlöser arbetsflödet **ReviewSubestedPDF**
+* Du kan lagra formulärinskickade formulär i en annan mapp genom att ange mappnamnet i AEM Server Credentials-konfigurationen med [configMgr](http://localhost:4502/system/console/configMg). Om du ändrar mappen måste du skapa ett startprogram för mappen som utlöser arbetsflödet **ReviewSubestedPDF**
 
 ![config-author](assets/author-config.png)
 * [Importera xdp-exempelfilen och arbetsflödespaketet med pakethanteraren](assets/xdp-form-and-workflow.zip).
@@ -49,7 +49,7 @@ DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 
 * [Installera paketet MobileFormToWorkflow](assets/MobileFormToWorkflow.core-1.0.0-SNAPSHOT.jar)
 
-* Ange användarnamn/lösenord för författarinstansen och en **befintlig plats i din AEM** för att lagra skickade data i AEM serverns autentiseringsuppgifter med [configMgr](http://localhost:4503/system/console/configMgr). Du kan lämna URL:en för slutpunkten på AEM Workflow Server som den är. Detta är slutpunkten som extraherar och lagrar data från överföringen i den angivna noden.
+* Ange användarnamn/lösenord för författarinstansen och en **befintlig plats i din AEM-databas** för att lagra skickade data i AEM Server-autentiseringsuppgifterna med [configMgr](http://localhost:4503/system/console/configMgr). Du kan lämna URL:en för slutpunkten på AEM Workflow Server som den är. Detta är slutpunkten som extraherar och lagrar data från överföringen i den angivna noden.
   ![publish-config](assets/publish-config.png)
 
 * [Distribuera Developing with Service User bundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=en)
@@ -64,16 +64,16 @@ DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 * [Redigera de avancerade egenskaperna för w9.xdp](http://localhost:4502/libs/fd/fm/gui/content/forms/formmetadataeditor.html/content/dam/formsanddocuments/w9.xdp). Kontrollera att skicka-URL:en och återgivningsprofilen är korrekt inställda enligt nedan.
   ![xdp-advanced-properties](assets/mobile-form-properties.png)
 
-* Publish the w9.xdp
+* Publicera w9.xdp
 * Logga in för att publicera instansen
 * [Förhandsgranska W9-formuläret](http://localhost:4503/content/dam/formsanddocuments/w9.xdp/jcr:content)
-* Fyll i flera fält och klicka sedan på knappen i verktygsfältet för att hämta den interaktiva PDF.
-* Fyll i PDF med Acrobat och tryck på Skicka.
+* Fyll i flera fält och klicka sedan på knappen i verktygsfältet för att hämta den interaktiva PDF-filen.
+* Fyll i det hämtade PDF-programmet med Acrobat och tryck på Skicka.
 * Du bör få ett meddelande om att du lyckats
 * Logga in på AEM Author instance som admin
-* [Markera AEM inkorg](http://localhost:4502/aem/inbox)
+* [Markera AEM Inbox](http://localhost:4502/aem/inbox)
 * Du bör ha en arbetsuppgift för att granska den inskickade PDF
 
 >[!NOTE]
 >
->I stället för att skicka PDF till serverpaketet som körs på en publiceringsinstans har vissa kunder distribuerat serverpaketet i en serverbehållare som Tomcat. Det beror helt på vilken topologi kunden är bekväm med. I den här självstudiekursen ska vi använda serverfunktionen som används på publiceringsinstansen för att hantera PDF-inskickade data.
+>I stället för att skicka PDF till en server som körs på en publiceringsinstans, har vissa kunder distribuerat servleten i en serverbehållare som Tomcat. Det beror helt på vilken topologi kunden är bekväm med. I den här självstudiekursen ska vi använda serverfunktionen som används på publiceringsinstansen för att hantera PDF-inskickade data.

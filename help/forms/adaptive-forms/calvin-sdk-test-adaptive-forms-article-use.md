@@ -3,14 +3,14 @@ title: Använda automatiska tester med AEM Adaptive Forms
 description: Automatiserad testning av Adaptive Forms med Calvin SDK
 feature: Adaptive Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 5a1364f3-e81c-4c92-8972-4fdc24aecab1
 last-substantial-update: 2020-09-10T00:00:00Z
 duration: 101
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '436'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Automatiserad testning av Adaptive Forms med Calvin SDK
 
-Calvin SDK är ett program-API för Adaptiva Forms-utvecklare som testar Adaptiv Forms. Calvin SDK är byggt ovanpå testramverket [Hobbes.js](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html). Calvin SDK finns med AEM Forms 6.3 och senare.
+Calvin SDK är ett program-API för att testa adaptiva Forms-utvecklare. Calvin SDK är byggt ovanpå testramverket [Hobbes.js](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html). Calvin SDK finns med AEM Forms 6.3 och senare.
 
 I den här självstudiekursen skapar du följande:
 
@@ -31,7 +31,7 @@ I den här självstudiekursen skapar du följande:
 
 ## Komma igång {#getting-started}
 
-[Hämta och installera Assets med Package Manager](assets/testingadaptiveformsusingcalvinsdk1.zip)Paketet innehåller exempelskript och flera adaptiva Forms. Dessa adaptiva Forms har skapats med AEM Forms 6.3. Vi rekommenderar att du skapar nya formulär som är specifika för din version av AEM Forms om du testar detta i AEM Forms 6.4 eller senare. Exempelskripten visar olika Calvin SDK API:er som finns för att testa Adaptive Forms. De allmänna stegen för testning AEM Adaptive Forms är:
+[Hämta och installera Assets med Package Manager](assets/testingadaptiveformsusingcalvinsdk1.zip)Paketet innehåller exempelskript och flera adaptiva Forms. Dessa adaptiva Forms har skapats med AEM Forms 6.3. Vi rekommenderar att du skapar nya formulär som är specifika för din version av AEM Forms om du testar detta i AEM Forms 6.4 eller senare. Exempelskripten visar olika Calvin SDK-API:er som finns för att testa adaptiv Forms. De allmänna stegen för testning av AEM Adaptive Forms är:
 
 * Navigera till formuläret som behöver testas
 * Ange fältets värde
@@ -51,7 +51,7 @@ var mortgageFormTS = new hobs.TestSuite("Mortgage Form Test", {
 Koden ovan skapar en ny testsvit.
 
 * Namnet på TestSuite i det här fallet är `Mortgage Form Test`.
-* Anges som absolut sökväg i AEM till JS-filen som innehåller testsviten.
+* Anges som den absoluta sökvägen i AEM till js-filen som innehåller testsviten.
 * Registerparametern när den anges till `true` gör testsviten tillgänglig i testgränssnittet.
 
 ```javascript

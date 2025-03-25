@@ -5,10 +5,10 @@ feature: Adaptive Forms
 topic: Development
 role: Developer
 level: Experienced
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 exl-id: f520e7a4-d485-4515-aebc-8371feb324eb
 duration: 47
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%

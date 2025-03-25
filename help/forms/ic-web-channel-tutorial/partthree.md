@@ -3,12 +3,12 @@ title: Skapar formulärdatamodell del 3
 description: Detta är en del av 3 i en självstudiekurs i flera steg för att skapa ditt första interaktiva kommunikationsdokument. I den här delen skapar vi en formulärdatamodell. Med formulärdatamodellen kan du konfigurera och ansluta till olika datakällor. Den tillhandahåller ett intuitivt användargränssnitt för att skapa ett enhetligt datarepresentationsschema för affärsenheter och tjänster över anslutna datakällor. I följande videofilm går du igenom stegen för att skapa formulärdatamodellen.
 feature: Interactive Communication
 topic: Development
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 role: Developer
 level: Beginner
 exl-id: 798012e5-5099-4fd0-82ad-a21f64a97aca
 duration: 406
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '256'
 ht-degree: 0%

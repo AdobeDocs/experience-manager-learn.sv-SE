@@ -3,7 +3,7 @@ title: Generera dokument för utskriftskanaler med bevakad mapp
 description: Det här är en del av 10 steg-självstudiekursen för att skapa ditt första interaktiva kommunikationsdokument för tryckkanalen. I den här delen genererar vi dokument i tryckkanaler med hjälp av bevakade mappfunktioner.
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 contentOwner: gbedekar
 discoiquuid: 23fbada3-d776-4b77-b381-22d3ec716ae9
 topic: Development
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: 9bb05c94-2a7b-4149-b567-186eb08b1c66
 duration: 70
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '351'
 ht-degree: 0%

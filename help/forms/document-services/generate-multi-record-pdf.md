@@ -2,7 +2,7 @@
 title: Generera flera PDF-filer från en datafil
 description: OutputService innehåller ett antal metoder för att skapa dokument med hjälp av en formulärdesign och data som ska sammanfogas med formulärdesignen. Lär dig att generera flera PDF-filer från en stor XML som innehåller flera enskilda poster.
 feature: Output Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
@@ -11,7 +11,7 @@ last-substantial-update: 2020-01-07T00:00:00Z
 duration: 138
 jira: KT-16142
 badgeVersions: label="AEM Forms 6.5" before-title="false"
-source-git-commit: 8cadbe92a7a2f47c33b0ca0fcf7313dc418ae7a4
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Signaturen för metoden generatePDFOutputBatch har följande parametrar
 
 ## Använd ärendeinformation{#use-case-details}
 
-I det här fallet kommer vi att tillhandahålla ett enkelt webbgränssnitt för att överföra mallen och XML-filen. När överföringen av filerna är klar och POSTEN har skickats till AEM. Den här servern extraherar dokumenten och anropar metoden generatePDFOutputBatch i OutputService. Den genererade PDF-filen zippas in i en zip-fil och görs tillgänglig för slutanvändaren för hämtning från webbläsaren.
+I det här fallet kommer vi att tillhandahålla ett enkelt webbgränssnitt för att överföra mallen och XML-filen. När överföringen av filerna är klar och POST-begäran skickas till AEM-servern. Den här servern extraherar dokumenten och anropar metoden generatePDFOutputBatch i OutputService. Den genererade PDF-filen zippas in i en zip-fil och görs tillgänglig för slutanvändaren för hämtning från webbläsaren.
 
 ## Servlet Code{#servlet-code}
 

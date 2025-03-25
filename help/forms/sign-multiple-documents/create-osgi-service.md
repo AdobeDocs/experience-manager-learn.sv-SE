@@ -2,7 +2,7 @@
 title: Skapa OSGi-tjänst
 description: Skapa OSGi-tjänst för att lagra formulären som ska signeras
 feature: Workflow
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 thumbnail: 6886.jpg
 jira: KT-6886
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Experienced
 exl-id: 49e7bd65-33fb-44d4-aaa2-50832dffffb0
 duration: 150
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '364'
 ht-degree: 0%
@@ -131,7 +131,7 @@ public String getFormData(String guid) {
 
 ## Uppdatera signaturstatus
 
-Underteckningsceremonin har slutförts och ett AEM som är kopplat till formuläret har startats. Det första steget i arbetsflödet är ett processsteg som uppdaterar statusen i databasen för raden som identifieras av GUID och kund-ID. Vi ställer också in värdet för det signerade elementet i formulärdata på Y för att ange att formuläret har fyllts i och signerats. Det adaptiva formuläret fylls i med dessa data och värdet för det signerade dataelementet i XML-data används för att visa rätt meddelande. Koden updateSignatureStatus anropas från det anpassade processsteget.
+Underteckningsceremonin slutförs utan fel och ett AEM-arbetsflöde som är kopplat till formuläret utlöses. Det första steget i arbetsflödet är ett processsteg som uppdaterar statusen i databasen för raden som identifieras av GUID och kund-ID. Vi ställer också in värdet för det signerade elementet i formulärdata på Y för att ange att formuläret har fyllts i och signerats. Det adaptiva formuläret fylls i med dessa data och värdet för det signerade dataelementet i XML-data används för att visa rätt meddelande. Koden updateSignatureStatus anropas från det anpassade processsteget.
 
 
 ```java

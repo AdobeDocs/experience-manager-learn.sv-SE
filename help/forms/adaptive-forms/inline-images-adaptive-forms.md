@@ -2,14 +2,14 @@
 title: Visa textbundna bilder i Adaptiv Forms
 description: Visa överförda bilder i adaptiv Forms
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 4a69513d-992c-435a-a520-feb9085820e7
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 58
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%
@@ -65,7 +65,7 @@ function consumeImage (file) {
 
 ### Distribuera på servern
 
-* Hämta och installera [klientbiblioteket](assets/inline-image-client-library.zip) på din AEM med AEM pakethanterare.
-* Hämta och installera [exempelformuläret](assets/inline-image-af.zip) till din AEM med AEM pakethanterare.
+* Hämta och installera [klientbiblioteket](assets/inline-image-client-library.zip) på din AEM-instans med AEM pakethanterare.
+* Hämta och installera [exempelformuläret](assets/inline-image-af.zip) på din AEM-instans med AEM pakethanterare.
 * Peka webbläsaren på [Lägg till textbunden bild](http://localhost:4502/content/dam/formsanddocuments/addinlineimage/jcr:content?wcmmode=disabled)
 * Klicka på knappen &quot;Bifoga ditt foto&quot; för att lägga till en bild

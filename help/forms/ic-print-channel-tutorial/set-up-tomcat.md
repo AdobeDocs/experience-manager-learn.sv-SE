@@ -3,7 +3,7 @@ title: Installera och konfigurera Tomcat-video
 description: Detta är en del av en flerstegskurs som lär dig skapa ditt första interaktiva kommunikationsdokument.
 feature: Interactive Communication
 doc-type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 thumbnail: 37815.jpg
 discoiquuid: 5f68be3d-aa35-4a3f-aaea-b8ee213c87ae
 topic: Development
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: faa9ca2d-6cfa-4abf-be5e-3e549202853a
 duration: 237
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 0%

@@ -1,28 +1,28 @@
 ---
-title: Återgivning av interaktiv PDF med Forms Services i AEM Forms
-description: Använda Forms Service API i AEM Forms för att återge interaktiv PDF
+title: Rendering Interactive PDF using Forms Services in AEM Forms
+description: Använda Forms Service API i AEM Forms för att återge interaktiva PDF
 feature: Forms Service
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 9b2ef4c9-8360-480d-9165-f56a959635fb
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 75
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '341'
 ht-degree: 0%
 
 ---
 
-# Återgivning av interaktiv PDF med Forms Services i AEM Forms
+# Rendering Interactive PDF using Forms Services in AEM Forms
 
-Använda Forms Service API i AEM Forms för att återge interaktiv PDF
+Använda Forms Service API i AEM Forms för att återge interaktiva PDF
 
 I den här artikeln ska vi ta en titt på följande tjänst
 
-* FormsService - Det här är en mycket mångsidig tjänst som gör att du kan exportera/importera data från och till PDF-fil och även generera interaktiv PDF genom att sammanfoga XML-data i xdp-mall
+* FormsService - Det här är en mycket mångsidig tjänst som gör att du kan exportera/importera data från och till PDF-filer och även generera interaktiv PDF genom att sammanfoga XML-data i xdp-mallen
 
 Tjänstemannen [javadoc för AEM Forms API visas här](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
@@ -46,7 +46,7 @@ Rad 1: Sökväg till mappen som innehåller xdp-mallen
 
 Line2-4: Skapa PDFormRenderOptions och ange dess egenskaper
 
-Rad 7: Generera interaktivt PDF med hjälp av tjänsten renderPDFForm i FormsService
+Rad 7: Generera interaktiv PDF med tjänsten renderPDFForm i FormsService
 
 Rad 1: Returnerar den genererade interaktiva PDF-filen till det anropande programmet
 
@@ -68,4 +68,4 @@ Rad 1: Returnerar den genererade interaktiva PDF-filen till det anropande progra
 1. Den interaktiva PDF-filen bör laddas ned till ditt lokala system
 
 
-Exempelpaketet innehåller den anpassade profil som är associerad med mobilformuläret. Utforska filen [custom toolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp). Denna jsp extraherar data från mobilformuläret och gör en begäran om POST till serverlet som är monterad på sökvägen ***/bin/generateinteractivepdf***. Servern returnerar den interaktiva PDF-filen till det anropande programmet. Koden i det anpassade verktygsfältet.jsp hämtar sedan filen till ditt lokala system
+Exempelpaketet innehåller den anpassade profil som är associerad med mobilformuläret. Utforska filen [custom toolbar.jsp](http://localhost:4502/apps/AEMFormsDemoListings/customprofiles/addImageToMobileForm/demo/customtoolbar.jsp). Denna jsp extraherar data från det mobila formuläret och gör en POST-begäran till en servlet som är monterad på sökvägen ***/bin/generateinteractivepdf***. Servern returnerar den interaktiva PDF-filen till det anropande programmet. Koden i det anpassade verktygsfältet.jsp hämtar sedan filen till ditt lokala system

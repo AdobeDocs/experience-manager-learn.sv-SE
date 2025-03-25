@@ -1,16 +1,16 @@
 ---
 title: Använda datamodelltjänst för formulär som ett steg i arbetsflödet
-description: Från och med AEM Forms 6.4 har vi nu möjlighet att använda formulärdatamodellen som en del av AEM arbetsflöde. I följande videofilm visas stegen som behövs för att konfigurera steget för formulärdatamodell i AEM arbetsflöde.
+description: Från och med AEM Forms 6.4 kan vi nu använda Form Data Model som en del av AEM Workflow. I följande videofilm visas stegen som behövs för att konfigurera steget för formulärdatamodell i AEM Workflow.
 feature: Workflow
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 0c77a853-fa71-46ac-8626-99bc69d6222d
 last-substantial-update: 2020-06-09T00:00:00Z
 duration: 205
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '261'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Använda datamodelltjänst för formulär som ett steg i arbetsflödet {#using-form-data-model-service-as-step-in-workflow}
 
-Från och med AEM Forms 6.4 har vi nu möjlighet att använda formulärdatamodellen som en del av AEM arbetsflöde. I följande videofilm visas de steg som krävs för att konfigurera steget Formulärdatamodell i AEM arbetsflöde
+Från och med AEM Forms 6.4 kan vi nu använda Form Data Model som en del av AEM Workflow. I följande videofilm visas de steg som krävs för att konfigurera steget Formulärdatamodell i AEM Workflow
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/21719?quality=12&learn=on)

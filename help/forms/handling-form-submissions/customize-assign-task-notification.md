@@ -3,7 +3,7 @@ title: Anpassa meddelande om tilldelning av uppgift
 description: Inkludera formulärdata i e-postmeddelanden om tilldelning av uppgifter
 feature: Workflow
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6279
 thumbnail: KT-6279.jpg
 topic: Development
@@ -12,7 +12,7 @@ level: Experienced
 exl-id: 0cb74afd-87ff-4e79-a4f4-a4634ac48c51
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 144
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '438'
 ht-degree: 0%
@@ -117,7 +117,7 @@ I e-postmallen kan du inkludera metadataegenskapen med följande syntax där amo
 
 ## Konfigurera Tilldela uppgift för att använda anpassad metadataegenskap
 
-När OSGi-komponenten har byggts och distribuerats till AEM server konfigurerar du den tilldelade uppgiftskomponenten enligt nedan så att den använder anpassade metadataegenskaper.
+När OSGi-komponenten har byggts och distribuerats till AEM-servern konfigurerar du Tilldela uppgift-komponenten enligt nedan så att den använder anpassade metadataegenskaper.
 
 
 ![Aktivitetsmeddelande](assets/task-notification.PNG)
@@ -131,7 +131,7 @@ När OSGi-komponenten har byggts och distribuerats till AEM server konfigurerar 
 * [Konfigurera daglig CQ-e-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
 * Associera ett giltigt e-post-ID med [administratörsanvändare](http://localhost:4502/security/users.html)
 * Hämta och installera mallen [Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip) med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
-* Hämta [anpassat formulär](assets/request-travel-authorization.zip) och importera till AEM från användargränssnittet för [formulär och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
+* Hämta [anpassat formulär](assets/request-travel-authorization.zip) och importera till AEM från gränssnittet för [formulär och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
 * Distribuera och starta det [anpassade paketet](assets/work-items-user-service-bundle.jar) med [webbkonsolen](http://localhost:4502/system/console/bundles)
 * [Förhandsgranska och skicka formuläret](http://localhost:4502/content/dam/formsanddocuments/requestfortravelauhtorization/jcr:content?wcmmode=disabled)
 

@@ -1,16 +1,16 @@
 ---
-title: Utlös AEM arbetsflöde vid HTML 5-formulärskickning - hantera formulärinlämning
-description: Lär dig hur du utlöser AEM arbetsflöde när HTML5-formuläret skickas och lagrar skickade data i databasen.
+title: Utlösa AEM-arbetsflöde vid inskickning av HTML5-formulär - Hantera inlämning av formulär
+description: Lär dig hur du utlöser ett AEM-arbetsflöde när HTML5-formuläret skickas och lagrar skickade data i databasen.
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
 exl-id: eafeafe1-7a72-4023-b5bb-d83b056ba207
 duration: 116
-source-git-commit: 9545fae5a5f5edd6f525729e648b2ca34ddbfd9f
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '171'
 ht-degree: 0%
@@ -20,8 +20,8 @@ ht-degree: 0%
 
 # Lagra inskickade data
 
-Nästa steg är att lagra skickade data i AEM författares databas. Servern som är monterad på `/bin/startworkflow` sparar skickade data.
-En AEM startfunktion för arbetsflödet har konfigurerats att utlösa varje gång en ny resurs av typen `nt:file` skapas under noden &lt;node_to_store_submitted_data>. Det här arbetsflödet skapar icke-interaktiva eller statiska PDF genom att sammanfoga skickade data med xdp-mallen. Den genererade PDF-filen tilldelas sedan en användare för granskning och godkännande.
+Nästa steg är att lagra skickade data i AEM Authors arkiv. Servern som är monterad på `/bin/startworkflow` sparar skickade data.
+En startfunktion för ett AEM-arbetsflöde har konfigurerats att utlösa varje gång en ny resurs av typen `nt:file` skapas under noden &lt;node_to_store_submitted_data>. Det här arbetsflödet skapar icke-interaktiva eller statiska PDF genom att sammanfoga skickade data med xdp-mallen. Den genererade PDF-filen tilldelas sedan en användare för granskning och godkännande.
 
 För att lagra skickade data under noden &lt;node_to_store_submitted_data> använder vi `GetResolver` OSGi-tjänsten, som gör att vi kan spara skickade data med `fd-service`-systemanvändaren som finns tillgänglig i alla AEM Forms-installationer.
 

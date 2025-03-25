@@ -1,7 +1,7 @@
 ---
-title: Rendera XDP till PDF med användarrättigheter
+title: Rendera XDP till PDF med användningsrättigheter
 description: Använd användningsbehörighet för PDF
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -9,18 +9,18 @@ level: Experienced
 exl-id: ce1793d1-f727-4bc4-9994-f495b469d1e3
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 150
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
-# Rendera XDP till PDF med användarrättigheter{#rendering-xdp-into-pdf-with-usage-rights}
+# Rendera XDP till PDF med användningsrättigheter{#rendering-xdp-into-pdf-with-usage-rights}
 
-Ett vanligt användningssätt är att återge xdp i PDF och använda Reader-tillägg på det återgivna PDF.
+Ett vanligt användningssätt är att återge xdp till PDF och använda Reader-tillägg på den återgivna PDF.
 
-När en användare klickar på XDP i till exempel AEM Forms formulärportal kan vi återge XDP som PDF och Reader utöka PDF.
+När en användare klickar på XDP i t.ex. AEM Forms formulärportal kan vi återge XDP som PDF och Reader utöka PDF.
 
 
 För att uppnå detta måste vi göra följande.
@@ -28,7 +28,7 @@ För att uppnå detta måste vi göra följande.
 * Lägg till certifikatet för Reader Extensions till användaren fd-service. Stegen för att lägga till autentiseringsuppgifter för Reader Extensions visas [här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)
 
 
-* Du kan också titta på videon om att [konfigurera inloggningsuppgifter för Reader-tillägg](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
+* Du kan också titta på videon om att [konfigurera inloggningsuppgifter för Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
 
 
 * Skapa en anpassad OSGi-tjänst som återger och tillämpar användarrättigheter. Koden för att uppnå detta visas nedan
@@ -122,15 +122,15 @@ public @interface DocSvcConfiguration {
 }
 ```
 
-## Skapa serverström för att strömma PDF {#create-servlet-to-stream-the-pdf}
+## Skapa en tjänst för direktuppspelning av PDF {#create-servlet-to-stream-the-pdf}
 
-Nästa steg är att skapa en servlet med en GET-metod som returnerar läsaren extended PDF till användaren. I det här fallet uppmanas användaren att spara PDF i sitt filsystem. Detta beror på att PDF återges som dynamiskt PDF och att PDF-visningsprogrammen som medföljer webbläsarna inte hanterar dynamiska PDF-filer.
+Nästa steg är att skapa en serverlet med en GET-metod som returnerar läsarutökad PDF till användaren. I det här fallet uppmanas användaren att spara PDF i sitt filsystem. Detta beror på att PDF återges som en dynamisk PDF och att PDF-visningsprogrammen som medföljer webbläsarna inte hanterar dynamiska PDF-filer.
 
 Här följer koden för serverleten. Vi skickar sökvägen till XDP-filen i CRX-databasen till den här servern.
 
 Vi anropar sedan metoden renderAndExtendXdp för com.aemformssamples.documents.core.DocumentServices.
 
-Läsaren extended PDF direktuppspelas sedan till det anropande programmet
+Läsaren extendedPDF direktuppspelas sedan i det anropande programmet
 
 ```java
 package com.aemformssamples.documentservices.core.servlets;
@@ -201,8 +201,8 @@ Följ de här stegen för att testa detta på den lokala servern
 1. [Hämta och installera paketet AEMFormsDocumentServices](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 
 1. [Hämta den anpassade portalmallens html](assets/render-and-extend-template.zip)
-1. [Hämta och importera resurser som är relaterade till den här artikeln till AEM med hjälp av pakethanteraren](assets/renderandextendxdp.zip)
+1. [Hämta och importera resurser som hör till den här artikeln till AEM med hjälp av pakethanteraren](assets/renderandextendxdp.zip)
    * Paketet har en exempelportal och en xdp-fil
-1. Lägg till certifikat för Reader-tillägg till användaren fd-service
+1. Lägg till Reader Extensions-certifikat till &quot;fd-service&quot;-användare
 1. Peka webbläsaren på [portalwebbsidan](http://localhost:4502/content/AemForms/ReaderExtensionsXdp.html)
 1. Klicka på pdf-ikonen för att återge xdp som en pdf-fil med användningsbehörighet.

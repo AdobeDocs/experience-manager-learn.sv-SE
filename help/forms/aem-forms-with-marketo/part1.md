@@ -2,7 +2,7 @@
 title: Integrera AEM Forms och Marketo
 description: Lär dig hur du integrerar AEM Forms och Marketo med AEM Forms Form Data Model.
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -11,7 +11,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 77
-source-git-commit: e02c3f66787c78152700b24236c29e9796f721de
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Marketo visar ett REST API som tillåter fjärrexekvering av många av systemets
 
 >[!NOTE]
 >
->Den här självstudiekursen är särskilt anpassad för AEM Forms 6.5. Om du vill integrera AEM Forms as a Cloud Service med Adobe Marketo Engage finns mer information i den [dedikerade dokumentationen för integreringen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-adaptive-form-with-market-engage/integrate-form-to-marketo-engage).
+>Den här självstudiekursen är särskilt anpassad för AEM Forms 6.5. Om du vill integrera AEM Forms as a Cloud Service med Adobe Marketo Engage läser du den [dedikerade dokumentationen för integreringen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/integrate/services/integrate-adaptive-form-with-market-engage/integrate-form-to-marketo-engage).
 
 I den här självstudiekursen får du hjälp med att integrera AEM Forms med Marketo med hjälp av Form Data Model. När du är klar med självstudiekursen får du ett OSGi-paket som utför den anpassade autentiseringen mot Marketo. Du kommer också att ha konfigurerat datakällan med den angivna swagger-filen.
 
@@ -39,8 +39,8 @@ Vi rekommenderar att du är bekant med följande ämnen i avsnittet Krav för at
 
 ## Förutsättning
 
-1. [AEM server med AEM Forms Add on-paketet installerat](/help/forms/adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
-1. Lokal AEM
+1. [AEM-server med AEM Forms Add on-paket installerat](/help/forms/adaptive-forms/installing-aem-form-on-windows-tutorial-use.md)
+1. Lokal AEM Development Environment
 1. Välbekant med formulärdatamodell
 1. Grundläggande kunskap om växlingsfiler
 1. Skapa adaptiv Forms

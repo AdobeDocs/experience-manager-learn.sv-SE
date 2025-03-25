@@ -1,7 +1,7 @@
 ---
 title: Visa dokument med post textbundet
-description: Sammanfoga adaptiva formulärdata med XDP-mall och visa PDF textbundet med dokumentmolnets inbäddade PDF-API.
-version: 6.4,6.5
+description: Sammanfoga adaptiva formulärdata med XDP-mallar och visa PDF inline med dokumentets molninbäddnings-API.
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-9411
 exl-id: 327ffe26-e88e-49f0-9f5a-63e2a92e1c8a
 last-substantial-update: 2021-07-07T00:00:00Z
 duration: 165
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '509'
 ht-degree: 0%
@@ -25,9 +25,9 @@ Vi har använt [Adobe PDF Embed API](https://www.adobe.io/apis/documentcloud/dcs
 
 Följande steg utfördes för att slutföra integreringen
 
-## Skapa en anpassad komponent för att visa PDF textbundet
+## Skapa en anpassad komponent för att visa PDF
 
-En anpassad komponent (embed-pdf) skapades för att bädda in den PDF-fil som returneras av POSTEN.
+En anpassad komponent (embed-pdf) skapades för att bädda in den PDF som returnerades av POST-anropet.
 
 ## Klientbibliotek
 
@@ -114,7 +114,7 @@ Konfigurera komponenten embed-pdf enligt skärmbilden nedan
 
 **Mallnamn** - Detta är sökvägen till xdp. Vanligtvis lagras den under mappen för formulärsanddokument.
 
-**PDF-filnamn** - Det här är strängen som kommer att visas i den inbäddade PDF-komponenten.
+**PDF-filnamn** - Det här är strängen som kommer att visas i den inbäddade pdf-komponenten.
 
 ## Skapa anpassad servett
 
@@ -230,7 +230,7 @@ Så här testar du detta på den lokala servern:
 
 1. [Hämta och installera det inbäddade PDF-paketet](assets/embedpdf.core-1.0-SNAPSHOT.jar).
 Detta har serverleten för att sammanfoga data med XDP-mallen och strömma tillbaka PDF-filen.
-1. Lägg till sökvägen /bin/getPDFToEmbed i avsnittet Undantagna sökvägar i Adobe Granite CSRF-filtret med hjälp av [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). I din produktionsmiljö bör du använda [CSRF-skyddsramverket](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
+1. Lägg till sökvägen /bin/getPDFToEmbed i avsnittet Undantagna sökvägar i Adobe Granite CSRF-filtret med [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). I din produktionsmiljö bör du använda [CSRF-skyddsramverket](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
 1. [Importera klientbiblioteket och den anpassade komponenten](assets/embed-pdf.zip)
 1. [Importera det adaptiva formuläret och mallen](assets/embed-pdf-form-and-xdp.zip)
 1. [Förhandsgranska anpassat formulär](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)

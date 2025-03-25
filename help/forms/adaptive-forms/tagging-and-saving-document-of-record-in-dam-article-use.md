@@ -2,14 +2,14 @@
 title: Tagga och lagra AEM Forms DoR i DAM
 description: I den här artikeln går vi igenom hur du lagrar och taggar DoR-filer som genererats av AEM Forms i AEM DAM. Dokumentets taggning görs utifrån skickade formulärdata.
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 832f04b4-f22f-4cf9-8136-e3c1081de7a9
 last-substantial-update: 2019-03-20T00:00:00Z
 duration: 191
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -20,17 +20,17 @@ ht-degree: 0%
 
 I den här artikeln går vi igenom hur du lagrar och taggar DoR-filer som genererats av AEM Forms i AEM DAM. Dokumentets taggning görs utifrån skickade formulärdata.
 
-En vanlig fråga från kunderna är att lagra och tagga det DoR-dokument som genererats av AEM Forms i AEM DAM. Dokumentets taggning måste baseras på inskickade data från Adaptive Forms. Om anställningsstatusen i inskickade data till exempel är &quot;Inaktuell&quot;, vill vi tagga dokumentet med taggen &quot;Inaktuell&quot; och lagra dokumentet i DAM.
+En vanlig fråga från kunderna är att lagra och tagga det DoR-dokument (Document of Record) som genererats av AEM Forms i AEM DAM. Dokumentets taggning måste baseras på inskickade data från Adaptive Forms. Om anställningsstatusen i inskickade data till exempel är &quot;Inaktuell&quot;, vill vi tagga dokumentet med taggen &quot;Inaktuell&quot; och lagra dokumentet i DAM.
 
 Användningsexemplet är följande:
 
 * En användare fyller i ett adaptivt formulär. I adaptiv form fångas användarens civilstånd (ex Single) och anställningsstatus (Ex pensionerad).
-* När formulär skickas aktiveras ett AEM arbetsflöde. I det här arbetsflödet taggas dokumentet med civilstånd (Single) och anställningsstatus (pensionerad) och dokumentet sparas i DAM.
+* När formulär skickas aktiveras ett AEM-arbetsflöde. I det här arbetsflödet taggas dokumentet med civilstånd (Single) och anställningsstatus (pensionerad) och dokumentet sparas i DAM.
 * När dokumentet har lagrats i DAM bör administratören kunna söka efter dokumentet med dessa taggar. Om du till exempel söker på En eller Återkallad hämtas rätt DoR-svar.
 
 Ett anpassat processsteg skrevs för att uppfylla detta användningsfall. I det här steget hämtar vi värdena för lämpliga dataelement från skickade data. Sedan konstruerar vi taggplattan med det här värdet. Om värdet för elementet för civilstånd till exempel är &quot;Enskilt&quot; blir taggtiteln **Peak:EmploymentStatus/Single. **Med hjälp av TagManager API hittar vi taggen och använder den på DoR-taggen.
 
-Här följer den fullständiga koden för att tagga och lagra postdokumentet i AEM DAM.
+Här följer den fullständiga koden för att tagga och lagra arkiveringsdokumentet i AEM DAM.
 
 ```java
 package com.aemforms.setvalue.core;

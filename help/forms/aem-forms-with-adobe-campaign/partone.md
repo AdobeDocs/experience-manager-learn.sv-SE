@@ -2,7 +2,7 @@
 title: Genererar JSON-webbtoken och åtkomsttoken
 description: I den här artikeln förklaras koden som behövs för att skapa JWT och Access Token som behövs för att göra REST-anrop till Adobe Campaign Standard
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Integrations, Development
 role: Developer
 level: Experienced
@@ -10,7 +10,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 exl-id: a5e5aad4-064f-4638-a53a-88dfb1d27c8f
 duration: 151
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '241'
 ht-degree: 0%
@@ -244,7 +244,7 @@ public class CampaignServiceImpl implements CampaignService {
 
 ## Generera åtkomsttoken {#generate-access-token}
 
-Sedan byter vi ut den genererade JWT-filen mot en Access-token genom att ringa ett POST-anrop. Denna åtkomsttoken skickas sedan som en auktoriseringsnyckel i HTTP Header för efterföljande REST-anrop
+Sedan byter vi ut genererad JWT mot en Access-token genom att ringa ett POST-anrop. Denna åtkomsttoken skickas sedan som en auktoriseringsnyckel i HTTP Header för efterföljande REST-anrop
 
 ## Nästa steg
 

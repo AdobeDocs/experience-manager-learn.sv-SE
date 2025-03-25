@@ -2,21 +2,21 @@
 title: PreFyll i HTML5 Forms med dataattribut.
 description: Fylla i HTML5-formulär genom att hämta data från backend-källan.
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: ab0f5282-383b-4be6-9c57-cded6ab37528
 last-substantial-update: 2020-01-09T00:00:00Z
 duration: 94
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '449'
 ht-degree: 0%
 
 ---
 
-# PrePopulate HTML5 Forms using data attribute {#prepopulate-html-forms-using-data-attribute}
+# PreFyll i HTML5 Forms med dataattribut {#prepopulate-html-forms-using-data-attribute}
 
 
 XDP-mallar som återges i HTML-format med AEM Forms kallas HTML5 eller Mobile Forms. Ett vanligt användningssätt är att fylla i dessa formulär i förväg när de återges.
@@ -49,7 +49,7 @@ Paketet installerar följande
 
    * CustomProfile
    * Exempel på XDP
-   * Exempel på POSTENS slutpunkt som returnerar data för att fylla i formuläret
+   * Exempel på POST-slutpunkt som returnerar data för att fylla i formuläret
 
 >[!NOTE]
 >

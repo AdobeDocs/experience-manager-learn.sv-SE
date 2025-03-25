@@ -2,7 +2,7 @@
 title: Integrerar med  [!DNL ServiceNow]
 description: Skapa och visa alla incidenter med hjälp av formulärdatamodell.
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-9957
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ level: Intermediate
 exl-id: 93a177b0-7852-44da-89cc-836d127be4e7
 last-substantial-update: 2022-07-07T00:00:00Z
 duration: 47
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '228'
 ht-degree: 0%

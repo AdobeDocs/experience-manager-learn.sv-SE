@@ -1,7 +1,7 @@
 ---
 title: Generera interaktiv DoR med data i adaptiv form
 description: Sammanfoga adaptiva formulärdata med XDP-mall för att generera en nedladdningsbar PDF
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 feature: Forms Service
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ jira: KT-9226
 exl-id: d9618cc8-d399-4850-8714-c38991862045
 last-substantial-update: 2020-02-07T00:00:00Z
 duration: 177
-source-git-commit: 2625a9127c36ee191eb67128546864c9f6901663
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '558'
 ht-degree: 0%
@@ -82,8 +82,8 @@ Du kan använda vilket som helst av de kostnadsfria onlineverktygen för att [ge
 
 ### Skapa anpassat formulär
 
-Skapa ett anpassat formulär baserat på XSD från föregående steg. Koppla formuläret till klientens lib &quot;irs&quot;. Det här klientbiblioteket har koden för att göra ett anrop från POSTEN till servern som returnerar PDF till det anropande programmet.
-Följande kod aktiveras när användaren klickar på PDF _Hämta_
+Skapa ett anpassat formulär baserat på XSD från föregående steg. Koppla formuläret till klientens lib &quot;irs&quot;. Det här klientbiblioteket har koden för att göra ett POST-anrop till servern som returnerar PDF till det anropande programmet.
+Följande kod aktiveras när användaren klickar på _Hämta PDF_
 
 ```javascript
 $(document).ready(function() {
@@ -225,11 +225,11 @@ DevelopingWithServiceUser.core:getformsresourceReser=fd-service
 1. [Importera artikeln Assets(Adaptiv form, XDP-mallar och XSD)](assets/generate-interactive-dor-sample-assets.zip)
 1. [Förhandsgranska anpassat formulär](http://localhost:4502/content/dam/formsanddocuments/f8918complete/jcr:content?wcmmode=disabled)
 1. Fyll i några av formulärfälten.
-1. Klicka på Hämta PDF för att hämta PDF. Du kanske måste vänta några sekunder på att PDF ska hämta.
+1. Klicka på Hämta PDF för att hämta PDF. Du kanske måste vänta några sekunder på att PDF ska laddas ned.
 
 >[!NOTE]
 >
->När du öppnar det hämtade PDF med webbläsarens PDF-visningsprogram visas inte data i PDF-filen. Öppna det hämtade PDF med Adobe Acrobat eller Adobe Reader.
+>När du öppnar det hämtade PDF-programmet med webbläsarens PDF-läsare visas inte data i PDF-filen. Öppna den nedladdade PDF-filen med Adobe Acrobat eller Adobe Reader.
 
 
 >[!NOTE]

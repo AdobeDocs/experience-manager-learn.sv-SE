@@ -2,7 +2,7 @@
 title: Listrutor för överlappande
 description: Fyll i listrutor baserat på ett tidigare val i listrutan.
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-9724
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ level: Intermediate
 exl-id: f1f2cacc-9ec4-46d6-a6af-dac3f663de78
 last-substantial-update: 2021-02-07T00:00:00Z
 duration: 185
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '610'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Skapa ett utvecklarkonto med [geografiska namn](https://www.geonames.org/login).
 
 OpenAPI-specifikationen (tidigare Swagger-specifikationen) är ett API-beskrivningsformat för REST API:er. Med en OpenAPI-fil kan du beskriva hela ditt API, inklusive:
 
-* Tillgängliga slutpunkter (/användare) och åtgärder för varje slutpunkt (GET /användare, POST /användare)
+* Tillgängliga slutpunkter (/users) och åtgärder för varje slutpunkt (GET /users, POST /users)
 * Operationsparametrar Indata och utdata för varje åtgärd
 Autentiseringsmetoder
 * Kontaktinformation, licens, användningsvillkor och annan information.
@@ -66,7 +66,7 @@ AEM Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa 
 
 ## Skapa anpassat formulär
 
-Integrera formulärdatamodellens anrop av GETEN med det anpassade formuläret för att fylla i listrutorna.
+Integrera GET-anropen i formulärdatamodellen med ditt anpassningsbara formulär för att fylla i listrutorna.
 Skapa ett anpassningsbart formulär med 2 nedrullningsbara listor. En för att lista länderna och en för att lista staterna/provinserna beroende på vilket land som valts.
 
 ### Listruta för att fylla i länder

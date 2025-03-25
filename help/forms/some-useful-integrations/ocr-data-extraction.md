@@ -2,7 +2,7 @@
 title: OCR-dataextrahering
 description: Extrahera data från dokument från myndigheter för att fylla i formulär.
 feature: Barcoded Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6679
 topic: Development
 role: Developer
@@ -10,7 +10,7 @@ level: Intermediate
 exl-id: 1532a865-4664-40d9-964a-e64463b49587
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 145
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Skapa ett utvecklarkonto med [ID Analyzer](https://portal.idanalyzer.com/signin.
 
 OpenAPI-specifikationen (tidigare Swagger-specifikationen) är ett API-beskrivningsformat för REST API:er. Med en OpenAPI-fil kan du beskriva hela ditt API, inklusive:
 
-* Tillgängliga slutpunkter (/användare) och åtgärder för varje slutpunkt (GET /användare, POST /användare)
+* Tillgängliga slutpunkter (/users) och åtgärder för varje slutpunkt (GET /users, POST /users)
 * Operationsparametrar Indata och utdata för varje åtgärd
 Autentiseringsmetoder
 * Kontaktinformation, licens, användningsvillkor och annan information.
@@ -98,14 +98,14 @@ Klientbiblioteket kan hämtas [härifrån.](assets/drivers-license-client-lib.zi
 
 ## Skapa anpassat formulär
 
-Integrera formulärdatamodellens anrop av POSTEN med ditt anpassningsbara formulär för att extrahera data från det överförda dokumentet av  i formuläret. Du kan skapa ett eget adaptivt formulär och använda formulärdatamodellens anrop till POSTEN för att skicka den base64-kodade strängen för det överförda dokumentet.
+Integrera POST-anropen i formulärdatamodellen med ditt adaptiva formulär för att extrahera data från det överförda dokumentet av användaren i formuläret. Du kan skapa ett eget adaptivt formulär och använda POST-anropet från formulärdatamodellen för att skicka base64-kodad sträng av det överförda dokumentet.
 
 ## Distribuera på servern
 
 Om du vill använda exempelresurserna med API-nyckeln följer du följande steg:
 
-* [Hämta datakällan](assets/drivers-license-source.zip) och importera till AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
-* [Hämta formulärdatamodellen](assets/drivers-license-fdm.zip) och importera till AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+* [Hämta datakällan](assets/drivers-license-source.zip) och importera den till AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
+* [Hämta formulärdatamodellen](assets/drivers-license-fdm.zip) och importera den till AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 * [Hämta klientbiblioteket](assets/drivers-license-client-lib.zip)
 * Du kan [hämta det adaptiva exempelformuläret här](assets/adaptive-form-dl.zip). Det här exempelformuläret använder tjänsteanropen för den formulärdatamodell som tillhandahålls som en del av den här artikeln.
 * Importera formuläret till AEM från [Forms och dokumentgränssnittet](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)

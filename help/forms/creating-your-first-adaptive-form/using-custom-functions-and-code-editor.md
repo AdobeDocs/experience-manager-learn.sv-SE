@@ -2,7 +2,7 @@
 title: Använda funktioner och kodredigerare
 description: Använda funktioner och kodredigerare för att skapa affärsregler
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-4270
 thumbnail: 22282.jpg
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Beginner
 exl-id: 7b2a4075-bfdf-49f3-b507-34d86193bf64
 duration: 460
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '140'
 ht-degree: 0%

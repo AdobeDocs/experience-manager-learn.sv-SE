@@ -2,14 +2,14 @@
 title: Certifiera dokument i AEM Forms
 description: Certifiera PDF-dokument i AEM Forms med hjälp av tjänsten Dokumentsäkerhet
 feature: Document Security
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Intermediate
 exl-id: 1471929f-d269-4adc-88ad-2ad3682305e1
 last-substantial-update: 2019-07-07T00:00:00Z
 duration: 75
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Certifiera dokument i AEM Forms
 
-Ett certifierat dokument ger PDF dokument och formulärmottagare ytterligare garantier för att de är autentiska och intakta.
+Ett certifierat dokument ger PDF-dokument och -formulärmottagare extra garantier för autenticitet och integritet.
 
 Om du vill certifiera ett dokument kan du använda Acrobat DC på skrivbordet eller AEM Forms Document Services som en del av en automatiserad process på en server.
 
@@ -64,4 +64,4 @@ Du kan också använda exempelpaketet som ingår i den här självstudiekursen.
 * Ladda upp PDF-dokument som behöver certifieras
   **valfri** - Ange det signaturfält som du vill använda för att certifiera dokumentet
 * Klicka på Skicka.
-* Certifierad PDF ska returneras till dig.
+* Certifierade PDF bör returneras till dig.

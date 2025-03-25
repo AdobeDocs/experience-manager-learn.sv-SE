@@ -5,10 +5,10 @@ feature: Adaptive Forms
 topic: Development
 role: Developer
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 last-substantial-update: 2019-06-09T00:00:00Z
 duration: 711
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '600'
 ht-degree: 0%
@@ -277,7 +277,7 @@ public class AemformWithDB implements AemFormsAndDB {
 
 ## Skapa klientbibliotek {#create-client-library}
 
-AEM Client Library hanterar all javascript-kod på klientsidan. För den här artikeln har jag skapat ett enkelt javascript för att hämta data för det adaptiva formuläret med hjälp av guide bridge API. När data för det adaptiva formuläret har hämtats anropas POSTEN till servern för att antingen infoga eller uppdatera adaptiva formulärdata i databasen. Funktionen getALLUrlParams returnerar parametrarna i URL:en. Detta används när du vill uppdatera data. Resten av funktionaliteten hanteras i koden som är kopplad till click-händelsen i klassen .saveButton. Om GUID-parametern finns i URL:en måste uppdateringsåtgärden utföras, om det inte är en infogningsåtgärd.
+AEM Client Library hanterar all javascript-kod på klientsidan. För den här artikeln har jag skapat ett enkelt javascript för att hämta data för det adaptiva formuläret med hjälp av guide bridge API. När data för det adaptiva formuläret har hämtats anropas POST till servern för att antingen infoga eller uppdatera adaptiva formulärdata i databasen. Funktionen getALLUrlParams returnerar parametrarna i URL:en. Detta används när du vill uppdatera data. Resten av funktionaliteten hanteras i koden som är kopplad till click-händelsen i klassen .saveButton. Om GUID-parametern finns i URL:en måste uppdateringsåtgärden utföras, om det inte är en infogningsåtgärd.
 
 ```javascript
 function getAllUrlParams(url) {

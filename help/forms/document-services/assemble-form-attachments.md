@@ -2,7 +2,7 @@
 title: Sammanställa formulärbilagor
 description: Sammanställa formulärbilagor i angiven ordning
 feature: Assembler
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6406
 thumbnail: kt-6406.jpg
 topic: Development
@@ -11,7 +11,7 @@ level: Experienced
 exl-id: a5df8780-b7ab-4b91-86f6-a24392752107
 last-substantial-update: 2021-07-07T00:00:00Z
 duration: 150
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '589'
 ht-degree: 0%
@@ -26,9 +26,9 @@ När du skickar in formuläret sätter du ihop de bifogade filerna för att gene
 
 ## Skapa OSGi-komponent som implementerar WorkflowProcess-gränssnittet
 
-Skapa en OSGi-komponent som implementerar gränssnittet [com.adobe.granite.workflow.exec.WorkflowProcess](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html). Koden i den här komponenten kan associeras med processstegskomponenten i AEM arbetsflöde. Körningsmetoden för gränssnittet com.adobe.granite.workflow.exec.WorkflowProcess implementeras i den här komponenten.
+Skapa en OSGi-komponent som implementerar gränssnittet [com.adobe.granite.workflow.exec.WorkflowProcess](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/exec/WorkflowProcess.html). Koden i den här komponenten kan associeras med processstegskomponenten i AEM-arbetsflödet. Körningsmetoden för gränssnittet com.adobe.granite.workflow.exec.WorkflowProcess implementeras i den här komponenten.
 
-När ett anpassningsbart formulär skickas för att utlösa ett AEM arbetsflöde, lagras skickade data i den angivna filen under nyttolastmappen. Det här är till exempel den skickade datafilen. Vi måste montera de bilagor som anges under ID-kortet och bankkontoutdragstaggen.
+När ett anpassningsbart formulär skickas för att utlösa ett AEM-arbetsflöde lagras skickade data i den angivna filen under nyttolastmappen. Det här är till exempel den skickade datafilen. Vi måste montera de bilagor som anges under ID-kortet och bankkontoutdragstaggen.
 ![skickad-data](assets/submitted-data.JPG).
 
 ### Hämta taggnamnen
@@ -132,11 +132,11 @@ Nedan följer mappstrukturen för nyttolast när formulärbilagor har monterats 
 
 ![nyttload-structure](assets/payload-structure.JPG)
 
-### För att få den här funktionen att fungera på din AEM
+### För att få den här funktionen att fungera på din AEM-server
 
 * Hämta formuläret [Sammanställ formulärbilagor](assets/assemble-form-attachments-af.zip) till ditt lokala system.
 * Importera formuläret från sidan [Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).
-* Hämta [arbetsflöde](assets/assemble-form-attachments.zip) och importera till AEM med pakethanteraren.
+* Hämta [arbetsflöde](assets/assemble-form-attachments.zip) och importera till AEM med hjälp av pakethanteraren.
 * Hämta det [anpassade paketet](assets/assembletaskattachments.assembletaskattachments.core-1.0-SNAPSHOT.jar)
 * Distribuera och starta paketet med [webbkonsolen](http://localhost:4502/system/console/bundles)
 * Peka webbläsaren på [Sammansättningsbifogade filer](http://localhost:4502/content/dam/formsanddocuments/assembleattachments/jcr:content?wcmmode=disabled)
@@ -145,4 +145,4 @@ Nedan följer mappstrukturen för nyttolast när formulärbilagor har monterats 
 * Kontrollera arbetsflödets [nyttolastmapp i crx](http://localhost:4502/crx/de/index.jsp#/var/fd/dashboard/payload) för den sammansatta PDF-filen
 
 >[!NOTE]
-> Om du har aktiverat loggning för det anpassade paketet skrivs DDX-filen och den sammansatta filen till mappen för din AEM installation.
+> Om du har aktiverat loggning för det anpassade paketet skrivs DDX-filen och den sammansatta filen till mappen för din AEM-installation.

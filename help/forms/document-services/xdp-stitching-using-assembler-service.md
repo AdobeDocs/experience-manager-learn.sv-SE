@@ -2,14 +2,14 @@
 title: XDP-sammanfogning med hjälp av monteringstjänst
 description: Använda Assembler Service i AEM Forms för att sätta ihop xdp
 feature: Assembler
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 last-substantial-update: 2022-12-19T00:00:00Z
 exl-id: e116038f-7d86-41ee-b1b0-7b8569121d6d
 duration: 91
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 # XDP Stitching using assembler Service
 
 I den här artikeln finns de resurser som du kan använda för att visa möjligheten att sammanfoga xdp-dokument med hjälp av sammansättningstjänsten.
-Följande jsp-kod skrevs för att infoga ett delformulär med namnet **address** från xdp-dokumentet med namnet address.xdp i en insättningspunkt med namnet **address** i master.xdp-dokumentet. Den resulterande xdp-filen sparades i rotmappen för AEM.
+Följande jsp-kod skrevs för att infoga ett delformulär med namnet **address** från xdp-dokumentet med namnet address.xdp i en insättningspunkt med namnet **address** i master.xdp-dokumentet. Den resulterande xdp-filen sparades i rotmappen för din AEM-installation.
 
 Assembler-tjänsten förlitar sig på ett giltigt DDX-dokument för att beskriva manipuleringen av PDF-dokument. Du kan referera till [DDX-referensdokumentet här](assets/ddxRef.pdf).Sidan 40 innehåller information om xdp-sammanfogning.
 
@@ -66,7 +66,7 @@ DDX-filen som infogar fragment i en annan xdp visas nedan. DDX infogar delformul
 </DDX>
 ```
 
-För att få den här funktionen att fungera på din AEM
+För att få den här funktionen att fungera på din AEM-server
 
 * Hämta [XDP-titelpaketet](assets/xdp-stitching.zip) till din lokala dator.
 * Överför och installera paketet med hjälp av [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
@@ -80,7 +80,7 @@ För att få den här funktionen att fungera på din AEM
 1. Lägg till följande sökväg i de uteslutna avsnitten och spara `/content/AemFormsSamples/assemblerservice`
 1. Sök efter filtret &quot;Sling Referrer&quot;
 1. Markera kryssrutan Tillåt tomt. (Den här inställningen bör endast användas i testsyfte)
-Du kan testa exempelkoden på flera olika sätt. Det snabbaste och enklaste är att använda Postman. Med Postman kan du göra förfrågningar om POST till servern. Installera Postman-appen på datorn.
+Du kan testa exempelkoden på flera olika sätt. Det snabbaste och enklaste är att använda Postman. Med Postman kan du göra POST-begäranden till servern. Installera Postman-appen på datorn.
 Starta programmet och ange följande URL för att testa API:t för exportdata
 http://localhost:4502/content/AemFormsSamples/assemblerservice.html
 

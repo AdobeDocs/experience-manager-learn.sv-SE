@@ -2,14 +2,14 @@
 title: Skapa din första OSGi-tjänst med AEM Forms
 description: Bygg din första OSGi-tjänst med AEM Forms
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Beginner
 exl-id: 2f15782e-b60d-40c6-b95b-6c7aa8290691
 last-substantial-update: 2021-04-23T00:00:00Z
 duration: 87
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '337'
 ht-degree: 0%
@@ -88,7 +88,7 @@ Anteckningen `@Reference` ingår i OSGi-deklarativa tjänster och används för 
 * Öppna **kommandotolkfönstret**
 * Navigera till `c:\aemformsbundles\mysite\core`
 * Kör kommandot `mvn clean install -PautoInstallBundle`
-* Ovanstående kommando skapar och distribuerar automatiskt paketet till din AEM som körs på localhost:4502
+* Ovanstående kommando skapar och distribuerar automatiskt paketet till din AEM-instans som körs på localhost:4502
 
 Paketet kommer också att vara tillgängligt på följande plats `C:\AEMFormsBundles\mysite\core\target`. Paketet kan också distribueras till AEM med webbkonsolen [Felix.](http://localhost:4502/system/console/bundles)
 
@@ -109,7 +109,7 @@ Exempelpaketet som innehåller JSP-sidan kan [hämtas här](assets/learning_aem_
 
 Importera och installera paketet i AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 
-Använd postman för att ringa ett POST-samtal och ange indataparametrarna som visas på bilden nedan
+Använd postman för att ringa ett POST-anrop och ange indataparametrarna som visas på bilden nedan
 ![postman](assets/test-service-postman.JPG)
 
 ## Nästa steg

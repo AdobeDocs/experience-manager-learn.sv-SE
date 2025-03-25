@@ -3,7 +3,7 @@ title: Konfigurera Source
 description: Skapa en datakälla som pekar på MySQL-databasen
 feature: Adaptive Forms
 type: Tutorial
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-6541
 thumbnail: 6541.jpg
 topic: Development
@@ -11,7 +11,7 @@ role: Developer
 level: Beginner
 exl-id: a87ff428-15f7-43c9-ad03-707eab6216a9
 duration: 64
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '302'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 # Konfigurera Source
 
 Det finns många sätt på vilka AEM kan integreras med en extern databas. En av de vanligaste och vanligaste sätten att integrera databaser är att använda konfigurationsegenskaperna för Apache Sling Connection-poolad DataSource via [configMgr](http://localhost:4502/system/console/configMgr).
-Det första steget är att hämta och distribuera rätt [MySQL-drivrutiner](https://mvnrepository.com/artifact/mysql/mysql-connector-java) till AEM.
+Det första steget är att hämta och distribuera lämpliga [MySQL-drivrutiner](https://mvnrepository.com/artifact/mysql/mysql-connector-java) till AEM.
 Ange sedan de egenskaper för datakälla för Sling-anslutning som är specifika för databasen. På följande skärmbild visas de inställningar som används för den här självstudiekursen. Databasschemat är en del av den här självstudiekursen.
 
 >[!NOTE]

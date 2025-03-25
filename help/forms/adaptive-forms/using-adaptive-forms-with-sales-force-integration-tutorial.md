@@ -1,15 +1,15 @@
 ---
 title: Konfigurera DataSource med Salesforce i AEM Forms 6.3 och 6.4
-description: Integrera AEM Forms med Salesforce med hjälp av formulärdatamodell
+description: Integrera AEM Forms med Salesforce med hjälp av Form Data Model
 feature: Adaptive Forms, Form Data Model
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 level: Experienced
 exl-id: 7a4fd109-514a-41a8-a3fe-53c1de32cb6d
 last-substantial-update: 2020-02-14T00:00:00Z
 duration: 175
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
@@ -27,10 +27,10 @@ Krav för den här självstudiekursen:
 * Bläddra längst ned på sidan och hämta swagger-filen och spara den på hårddisken.
 * AEM Forms med SSL aktiverat
 
-   * [Officiell dokumentation för aktivering av SSL på AEM 6.3](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
+   * [Officiell dokumentation för att aktivera SSL på AEM 6.3](https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/ssl-by-default.html)
    * [Officiell dokumentation för att aktivera SSL på AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
 
-* Du måste ha Salesforce-konto
+* Du måste ha ett Salesforce-konto
 * Du måste skapa en ansluten app. Den officiella dokumentationen från Salesforce för att skapa appen visas [här](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0).
 * Ange lämpliga OAuth-scope för appen (jag har valt alla tillgängliga OAuth-scope för testning)
 * Ange återanrops-URL. Återanrops-URL:en i mitt fall var
@@ -39,7 +39,7 @@ Krav för den här självstudiekursen:
 
    * Om du använder** AEM Forms 6.4** är återanrops-URL:en https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
-I det här exemplet är gbedekar -w7-1:6443 namnet på min server och den port som AEM körs på.
+I det här exemplet är gbedekar -w7-1:6443 namnet på min server och den port där AEM körs.
 
 När du har skapat den anslutna appanteckningen **Konsumentnyckel och hemlig nyckel**. Du behöver dessa när du skapar datakällan i AEM Forms.
 
@@ -73,13 +73,13 @@ Nästa steg är att skapa Data Source i AEM Forms. Följ de här stegen enligt d
 * Autentiseringshanterare: auktoriseringsgranskare
 * Klicka på &quot;Anslut till OAUTH&quot;.Om allt fungerar bra bör du inte se några fel
 
-När du har skapat formulärdatamodellen med Salesforce kan du sedan skapa integrering av formulärdata med hjälp av den Data Source som du just har skapat. Den officiella dokumentationen för att skapa integrering av formulärdata är [här](https://helpx.adobe.com/aem-forms/6-3/data-integration.html).
+När du har skapat formulärdatamodellen med Salesforce kan du sedan skapa integrering av formulärdata med den Data Source du just har skapat. Den officiella dokumentationen för att skapa integrering av formulärdata är [här](https://helpx.adobe.com/aem-forms/6-3/data-integration.html).
 
-Kontrollera att du har konfigurerat formulärdatamodellen så att den omfattar POSTEN för att skapa ett Lead-objekt i SFDC.
+Kontrollera att du har konfigurerat formulärdatamodellen så att den inkluderar POST-tjänsten för att skapa ett Lead-objekt i SFDC.
 
 Du måste också konfigurera läs- och skrivtjänsten för Lead-objektet. Se skärmbilderna längst ned på sidan.
 
-När du har skapat formulärdatamodellen kan du skapa adaptiv Forms baserat på den här modellen och använda överföringsmetoderna för formulärdatamodellen för att skapa en lead i SFDC.
+När du har skapat formulärdatamodellen kan du skapa adaptiv Forms baserat på den här modellen och använda inskickningsmetoderna för formulärdatamodellen för att skapa en lead i SFDC.
 
 ## AEM Forms 6.4 {#aem-forms-1}
 
@@ -106,13 +106,13 @@ När du har skapat formulärdatamodellen kan du skapa adaptiv Forms baserat på 
    * Autentiseringshanterare: auktoriseringsgranskare
    * Klicka på knappen &quot;Anslut till OAuth&quot;. Om du skulle få se några fel bör du gå igenom de föregående stegen för att säkerställa att all information har angetts korrekt.
 
-När du har skapat data-Source med SalesForce kan du skapa integrering av formulärdata med hjälp av den Data-Source som du just har skapat. Dokumentationslänken för det är [här](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
+När du har skapat din Data Source med Salesforce kan du sedan skapa integrering av formulärdata med hjälp av den Data Source som du just har skapat. Dokumentationslänken för det är [här](https://helpx.adobe.com/experience-manager/6-4/forms/using/create-form-data-models.html)
 
-Kontrollera att du har konfigurerat formulärdatamodellen så att den omfattar POSTEN för att skapa ett Lead-objekt i SFDC.
+Kontrollera att du har konfigurerat formulärdatamodellen så att den inkluderar POST-tjänsten för att skapa ett Lead-objekt i SFDC.
 
 Du måste också konfigurera läs- och skrivtjänsten för Lead-objektet. Se skärmbilderna längst ned på sidan.
 
-När du har skapat formulärdatamodellen kan du skapa adaptiv Forms baserat på den här modellen och använda överföringsmetoderna för formulärdatamodellen för att skapa en lead i SFDC.
+När du har skapat formulärdatamodellen kan du skapa adaptiv Forms baserat på den här modellen och använda inskickningsmetoderna för formulärdatamodellen för att skapa en lead i SFDC.
 
 >[!NOTE]
 >

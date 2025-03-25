@@ -2,7 +2,7 @@
 title: Skapa huvudarbetsflöde för att utlösa signaturprocessen
 description: Skapa ett arbetsflöde för att lagra formulären för signering i databasen
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 thumbnail: 6887.jpg
 jira: KT-6887
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Intermediate
 exl-id: 338d9522-f6da-4aa7-b5d8-b9fff39ea94b
 duration: 70
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '170'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Huvudarbetsflödet aktiveras när användaren skickar det ursprungliga formulär
 
 **Store Forms To Sign** är ett anpassat processsteg.
 
-Motiveringen för att implementera ett anpassat processsteg är att utöka ett AEM arbetsflöde. Följande kod implementerar ett anpassat processsteg. Koden extraherar namnen på formulären som ska signeras och skickar skickade formulärdata till metoden `insertData` i tjänsten SignMultipleForms. Metoden `insertData` infogar sedan raderna i databasen som identifieras av datakällan **aemformstutorial**.
+Motiveringen för att implementera ett anpassat processsteg är att utöka ett AEM Workflow. Följande kod implementerar ett anpassat processsteg. Koden extraherar namnen på formulären som ska signeras och skickar skickade formulärdata till metoden `insertData` i tjänsten SignMultipleForms. Metoden `insertData` infogar sedan raderna i databasen som identifieras av datakällan **aemformstutorial**.
 
 Koden i det här anpassade processsteget refererar till tjänsten `SignMultipleForms`.
 

@@ -1,15 +1,16 @@
 ---
-title: Utlös AEM arbetsflöde vid inskickning av HTML 5-formulär
-description: Hantera inskickandet av HTML5-formulär
+title: Utlösa AEM-arbetsflöde vid inskickning av HTML5-formulär
+description: Hantera inlämningen av HTML5-formulär
 feature: Mobile Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 topic: Development
 role: Developer
 jira: kt-16215
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 level: Experienced
-source-git-commit: 5f42678502a785ead29982044d1f3f5ecf023e0f
+exl-id: 5fbc0cb9-5b55-4269-9172-039414db89cc
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '138'
 ht-degree: 0%
@@ -18,14 +19,14 @@ ht-degree: 0%
 
 # Hantera inlämning av formulär
 
-I den här delen ska vi skapa en enkel server som kan köras AEM Publish för att hantera inskickandet av HTML 5-formulär. Den här servern gör en HTTP-POST-begäran till en server som körs i en AEM författarinstans och som ansvarar för att spara skickade data som en `nt:file`-nod i AEM författardatabas.
+I det här avsnittet ska vi skapa en enkel webbtjänst som körs på AEM Publish för att hantera inskickandet av HTML5-formulär. Den här servern skickar en HTTP POST-begäran till en server som körs i en AEM-författarinstans och som ansvarar för att spara skickade data som en `nt:file`-nod i AEM Authors databas.
 
-Nedan följer koden för den server som hanterar HTML5-formuläröverföringen. I den här servertjänsten gör vi ett anrop till en POST som är monterad på **/bin/startworkflow** i en AEM Author-instans. Den här servern sparar formulärdata i AEM författares databas.
+Nedan följer koden för den server som hanterar överföringen av HTML5-formulär. På den här servern gör vi ett POST-anrop till en servlet som är monterad på **/bin/startworkflow** i en AEM Author-instans. Den här servern sparar formulärdata i AEM Authors databas.
 
 
-## AEM Publish-server
+## AEM Publish servlet
 
-Följande kod hanterar HTML5-formulärskickandet. Den här koden körs på publiceringsinstansen.
+Följande kod hanterar inskickandet av HTML5-formulär. Den här koden körs på publiceringsinstansen.
 
 ```java
 package com.aemforms.mobileforms.core.servlets;

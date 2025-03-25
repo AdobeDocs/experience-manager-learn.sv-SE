@@ -2,7 +2,7 @@
 title: Hämta begäranparameter
 description: Åtkomst till begärandeparametern för en formulärdatamodell förifyllningstjänst
 feature: Adaptive Forms
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 jira: KT-5815
 thumbnail: kt-5815.jpg
 topic: Development
@@ -10,7 +10,7 @@ role: Developer
 level: Beginner
 exl-id: a640539d-c67f-4224-ad81-dd0b62e18c79
 duration: 40
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '176'
 ht-degree: 0%

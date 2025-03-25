@@ -1,9 +1,9 @@
 ---
 title: Arbetsflöde för enkel betald tid på begäran
-description: Dölja och visa anpassade formulärpaneler i AEM
+description: Dölja och visa anpassade formulärpaneler i AEM Workflow
 feature: Adaptive Forms
 doc-type: article
-version: 6.4,6.5
+version: Experience Manager 6.4, Experience Manager 6.5
 discoiquuid: 1c4822e6-76ce-446b-98cb-408900d68b24
 topic: Development
 role: Developer
@@ -11,7 +11,7 @@ level: Experienced
 exl-id: 9342bd2f-2ba9-42ee-9224-055649ac3c90
 last-substantial-update: 2020-07-07T00:00:00Z
 duration: 592
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
 workflow-type: tm+mt
 source-wordcount: '305'
 ht-degree: 0%
@@ -25,11 +25,11 @@ I den här artikeln tittar vi på ett enkelt arbetsflöde som används för att 
 * Användare En efterfrågar en viss tid genom att fylla i ett anpassat formulär.
 * Formuläret dirigeras till AEM admin-användare (i verkligheten dirigeras det till den som skickar in formuläret)
 * Administratören öppnar formuläret. Administratören ska inte kunna redigera någon information som fyllts i av den som skickar in formuläret.
-* Godkännaravsnittet ska vara synligt för godkännaren (i det här fallet är det AEM adminanvändaren).
+* Godkännaravsnittet ska vara synligt för godkännaren (i det här fallet är det AEM-administratörsanvändaren).
 
 För att uppfylla ovanstående krav använder vi ett dolt fält med namnet **initialstep** i formuläret och dess standardvärde är inställt på Ja. När formuläret skickas anges värdet för initialsteget med det första steget i arbetsflödet till Nej. Formuläret har affärsregler för att dölja och visa lämpliga avsnitt baserat på det initiala stegvärdet.
 
-**Konfigurera formuläret för att utlösa AEM**
+**Konfigurera formuläret för att utlösa AEM Workflow**
 
 >[!VIDEO](https://video.tv.adobe.com/v/28406?quality=12&learn=on)
 
