@@ -11,9 +11,9 @@ thumbnail: KT-9352.jpeg
 exl-id: 74cca740-bf5e-4cbd-9660-b0579301a3b4
 last-substantial-update: 2024-04-27T00:00:00Z
 duration: 919
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: e1bea4320ed7a8b6d45f674649ba9ba946054b17
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,13 @@ ht-degree: 0%
 
 Lär dig hur du ansluter AEM as a Cloud Service till ditt VPN för att skapa säkra kommunikationskanaler mellan AEM och interna tjänster.
 
-## Vad är Virtual Private Network?
+>[!IMPORTANT]
+>
+>Du kan konfigurera VPN och portvidarebefordran antingen via Cloud Manager-gränssnittet eller med API-anrop. Den här självstudien fokuserar på API-metoden.
+>
+>Om du föredrar att använda användargränssnittet läser du [Konfigurera avancerat nätverk för AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
+
+## Vad är ett virtuellt privat nätverk?
 
 Med VPN (Virtual Private Network) kan en AEM as a Cloud Service-kund ansluta **AEM-miljöerna** i ett Cloud Manager-program till en befintlig, [stödd](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) VPN. VPN ger säkra och kontrollerade anslutningar mellan AEM as a Cloud Service och tjänster i kundens nätverk.
 
@@ -51,7 +57,11 @@ Följande krävs när du konfigurerar ett virtuellt privat nätverk med Cloud Ma
 
 Mer information finns i [Konfigurera och hämta API-autentiseringsuppgifter för Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth) så att du kan använda dem för att göra ett Cloud Manager API-anrop.
 
-I den här självstudien används `curl` för att skapa Cloud Manager API-konfigurationer. De `curl`-kommandon som tillhandahålls förutsätter en Linux/macOS-syntax. Om du använder kommandotolken i Windows ersätter du radbrytningstecknet `\` med `^`.
+>[!IMPORTANT]
+>
+>I den här självstudien används `curl` för att göra Cloud Manager API-konfigurationer -*om du föredrar en programmatisk metod*. De `curl`-kommandon som tillhandahålls förutsätter en Linux®- eller macOS-syntax. Om du använder kommandotolken i Windows ersätter du radbrytningstecknet `\` med `^`.
+>
+>Du kan också slutföra samma uppgift via Cloud Manager-gränssnittet. *Om du föredrar gränssnittsmetoden* läser du [Konfigurera avancerat nätverk för AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
 
 ## Aktivera virtuellt privat nätverk per program
 
@@ -128,7 +138,7 @@ Virtuellt privat nätverk kan aktiveras med Cloud Manager API:er. I följande st
        -d @./vpn-create.json
    ```
 
-   Definiera JSON-parametrarna i en `vpn-create.json` och tillhandahåll för att rulla via `... -d @./vpn-create.json`.
+   Definiera JSON-parametrarna i en `vpn-create.json` och tillhandahålls för att rulla med hjälp av `... -d @./vpn-create.json`.
 
    [Hämta exemplet vpn-create.json](./assets/vpn-create.json).  Filen är bara ett exempel. Konfigurera filen efter behov baserat på de valfria/obligatoriska fälten som beskrivs i [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/).
 
@@ -215,7 +225,7 @@ När VPN har skapats kan du nu konfigurera det med Cloud Manager API:er enligt b
        -d @./vpn-configure.json
    ```
 
-   Definiera JSON-parametrarna i en `vpn-configure.json` och tillhandahåll för att rulla via `... -d @./vpn-configure.json`.
+   Definiera JSON-parametrarna i en `vpn-configure.json` och tillhandahålls för att rulla med hjälp av `... -d @./vpn-configure.json`.
 
 [Hämta exemplet vpn-configure.json](./assets/vpn-configure.json)
 
@@ -240,7 +250,7 @@ När VPN har skapats kan du nu konfigurera det med Cloud Manager API:er enligt b
    }
    ```
 
-   `nonProxyHosts` deklarerar en uppsättning värdar för vilka port 80 eller 443 ska dirigeras via de delade standardadressintervallen i stället för den dedikerade IP-adressen. `nonProxyHosts` kan vara användbart eftersom trafik som läses in via delade IP-adresser optimeras automatiskt av Adobe.
+   `nonProxyHosts` deklarerar en uppsättning värdar för vilka port 80 eller 443 ska dirigeras via de delade standardadressintervallen i stället för den dedikerade IP-adressen. `nonProxyHosts` kan vara användbart som trafikutjämning via delade IP-adresser som Adobe automatiskt optimerar.
 
    För varje `portForwards`-mappning definierar det avancerade nätverket följande vidarebefordringsregel:
 
@@ -272,9 +282,9 @@ När VPN har skapats kan du nu konfigurera det med Cloud Manager API:er enligt b
 När det virtuella privata nätverket är aktiverat kan AEM-kod och konfiguration använda dem för att ringa till externa tjänster via VPN. Det finns två varianter av externa anrop som AEM hanterar på olika sätt:
 
 1. HTTP/HTTPS-anrop till externa tjänster
-   + Innehåller HTTP/HTTPS-anrop till tjänster som körs på andra portar än standardportarna 80 eller 443.
-1. icke-HTTP/HTTPS-anrop till externa tjänster
-   + Inkluderar alla icke-HTTP-anrop, till exempel anslutningar med e-postservrar, SQL-databaser eller tjänster som körs på andra icke-HTTP/HTTPS-protokoll.
+   + Dessa externa tjänster inkluderar HTTP/HTTPS-anrop till tjänster som körs på andra portar än standardportarna 80 eller 443.
+1. Andra anrop än HTTP/HTTPS till externa tjänster
+   + Dessa externa tjänster omfattar alla icke-HTTP-anrop, till exempel anslutningar till e-postservrar, SQL-databaser eller tjänster som använder andra protokoll än HTTP/HTTPS.
 
 HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standard, men VPN-anslutningen används inte om den inte är korrekt konfigurerad enligt beskrivningen nedan.
 
