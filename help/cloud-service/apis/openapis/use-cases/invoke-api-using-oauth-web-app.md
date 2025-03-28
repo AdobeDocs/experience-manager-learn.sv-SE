@@ -12,7 +12,7 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
 workflow-type: tm+mt
 source-wordcount: '2245'
 ht-degree: 0%
@@ -95,9 +95,9 @@ Låt oss granska de kodfragment som används i WKND-PIM-webbappen för att förs
    ADOBE_IMS_USERINFO_ENDPOINT=https://ims-na1.adobelogin.com/ims/userinfo/v2
    
    # Adobe Developer Console (ADC) Project's OAuth Web App credential
-   ADC_CLIENT_ID=<ADC Project OAuth Server-to-Server credential ClientID>
-   ADC_CLIENT_SECRET=<ADC Project OAuth Server-to-Server credential Client Secret>
-   ADC_SCOPES=<ADC Project OAuth Server-to-Server credential Scopes>
+   ADC_CLIENT_ID=<ADC Project OAuth Web App credential ClientID>
+   ADC_CLIENT_SECRET=<ADC Project OAuth Web App credential Client Secret>
+   ADC_SCOPES=<ADC Project OAuth Web App credential credential Scopes>
    
    # AEM Assets Information
    AEM_ASSET_HOSTNAME=<AEM Assets Hostname, e.g., https://author-p63947-e1502138.adobeaemcloud.com/>
