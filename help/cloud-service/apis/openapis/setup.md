@@ -12,7 +12,7 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
 workflow-type: tm+mt
 source-wordcount: '1253'
 ht-degree: 0%
@@ -123,7 +123,7 @@ När du har skapat ADC-projektet måste du lägga till de AEM-API:er du vill anv
 
    ![Välj autentisering](./assets/s2s/select-authentication.png)
 
-   Server-till-server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Autentiseringsalternativen Web App och Single Page App är lämpliga för program som behöver API-åtkomst åt användarna. Mer information finns i [Skillnaden mellan autentiseringsuppgifterna för OAuth Server-till-Server och OAuth Web App/Single Page App](./overview.md#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials).
+   Server-till-server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Autentiseringsalternativen Web App och Single Page App är lämpliga för program som behöver API-åtkomst åt användarna. Mer information finns i [Skillnaden mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App respektive Single Page App ](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
 
 1. Om det behövs kan du byta namn på API:t för enklare identifiering. I demosyfte används standardnamnet.
 

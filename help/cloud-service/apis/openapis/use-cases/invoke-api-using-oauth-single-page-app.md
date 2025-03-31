@@ -11,13 +11,13 @@ jira: KT-17430
 thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
+source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
 workflow-type: tm+mt
-source-wordcount: '2103'
+source-wordcount: '2104'
 ht-degree: 0%
 
 ---
-
 
 # Anropa OpenAPI-baserade AEM-API:er med OAuth Single Page App
 
@@ -25,7 +25,7 @@ Lär dig hur du anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service m
 
 OAuth Single Page App-autentisering är idealisk för JavaScript-baserade program som körs i webbläsaren. Oavsett om de saknar en serverdelsserver eller behöver hämta åtkomsttoken för att kunna interagera med AEM API:er för en användares räkning.
 
-PKCE-flödet utökar anslagstypen OAuth 2.0 _permission_code_ och förbättrar säkerheten genom att förhindra avlyssning av auktoriseringskoden. Mer information finns i [Skillnaden mellan autentiseringsuppgifterna för OAuth Server-till-Server och OAuth Web App/Single Page App](../overview.md#difference-between-oauth-server-to-server-and-oauth-web-appsingle-page-app-credentials).
+PKCE-flödet utökar anslagstypen OAuth 2.0 _permission_code_ och förbättrar säkerheten genom att förhindra avlyssning av auktoriseringskoden. Mer information finns i avsnittet [Skillnad mellan autentiseringsuppgifter för OAuth Server-till-Server och Web App respektive Single Page App ](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
 
 >[!AVAILABILITY]
 >

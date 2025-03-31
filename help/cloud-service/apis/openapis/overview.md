@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '1015'
 ht-degree: 0%
 
 ---
@@ -59,15 +59,18 @@ OpenAPI-baserade AEM-API:er stöder OAuth 2.0-autentisering, inklusive följande
 
 - **Autentiseringsuppgifter för fristående program för OAuth**: Avsett för SPA som körs i webbläsaren, som behöver komma åt API:er för en användare utan serverdel. Den använder anslagstypen _permission_code_ och förlitar sig på säkerhetsmekanismer på klientsidan med PKCE (Proof Key for Code Exchange) för att skydda auktoriseringskodflödet. Mer information finns i [Autentiseringsuppgifter för fristående program för OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential).
 
-## Skillnad mellan autentiseringsuppgifter för OAuth Server-to-Server och OAuth Web App/Single Page App{#difference-between-oauth-server-to-server-and-oauth-web-app-single-page-app-credentials}
+## Skillnad mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App jämfört med Single Page App{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 
-| | OAuth server-till-server | OAuth-användarautentisering (webbprogram) |
-| --- | --- | --- |
-| Autentiseringssyfte | Utformad för interaktion mellan dator och dator. | Utformad för användardrivna interaktioner. |
-| Tokenbeteende | Utfärdar åtkomsttoken som representerar själva klientprogrammet. | Utfärdar åtkomsttoken för en autentiserad användare. |
-| Användningsexempel | Backend-tjänster som behöver API-åtkomst utan användarinteraktion. | Webbprogram med klientkomponenter och backend-komponenter som använder API:er å användarnas vägnar. |
-| Säkerhetsaspekter | Lagra känsliga autentiseringsuppgifter (`client_id`, `client_secret`) säkert i backend-system. | Användarens autentisering och får en egen temporär åtkomsttoken. Lagra känsliga autentiseringsuppgifter (`client_id`, `client_secret`) säkert i backend-system. |
-| Typ av bidrag | _client_credentials_ | _authentication_code_ |
+I följande tabell sammanfattas skillnaderna mellan de tre OAuth-autentiseringsmetoder som stöds av OpenAPI-baserade AEM API:er:
+
+|  | OAuth Server-till-server | OAuth Web App | OAuth Single Page App (SPA) |
+| --- | --- | --- | --- |
+| **Autentiseringssyfte** | Utformad för interaktion mellan dator och dator. | Utformad för användardrivna interaktioner i ett webbprogram med en _serverdel_. | Utformad för användardrivna interaktioner i ett _klientbaserat JavaScript-program_. |
+| **Tokenbeteende** | Utfärdar åtkomsttoken som representerar själva klientprogrammet. | Utfärdar åtkomsttoken för en autentiserad användare _via en serverdel_. | Utfärdar åtkomsttoken för en autentiserad användare _via ett frontendspecifikt flöde_. |
+| **Användningsexempel** | Backend-tjänster som behöver API-åtkomst utan användarinteraktion. | Webbprogram med klientkomponenter och backend-komponenter som använder API:er å användarnas vägnar. | JavaScript-program som använder API:er för användare utan serverdel. |
+| **Säkerhetsaspekter** | Lagra känsliga autentiseringsuppgifter (`client_id`, `client_secret`) säkert i backend-system. | Efter användarautentiseringen får de en egen _temporär åtkomsttoken via ett serverdelsanrop_. Lagra känsliga autentiseringsuppgifter (`client_id`, `client_secret`) säkert i backend-system för att utbyta auktoriseringskod för åtkomsttoken. | Efter användarautentiseringen får de en egen _temporär åtkomsttoken via ett klientanrop_. Använder inte `client_secret` eftersom det inte är säkert att lagra i klientprogram. PKCE förlitar sig på att växla auktoriseringskod för åtkomsttoken. |
+| **Typ av bidrag** | _client_credentials_ | _authentication_code_ | _authentication_code_ med **PKCE** |
+| **Adobe Developer Console-autentiseringstyp** | OAuth Server-till-server | OAuth Web App | OAuth Single-Page App |
 
 ## Åtkomst till Adobe API:er och relaterade koncept{#accessing-adobe-apis-and-related-concepts}
 
