@@ -1,6 +1,6 @@
 ---
-title: Tutorials för Headless i AEM
-description: En samling Headless CMS-handledningar för Adobe Experience Manager. Utforska självstudiekurser per API, ramverk och exempelprogram.
+title: Självstudiekurser för Headless i AEM
+description: En samling Headless CMS-kurser för Adobe Experience Manager. Utforska självstudiekurser per API, ramverk och exempelprogram.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
 role: Developer
@@ -8,16 +8,14 @@ level: Beginner
 doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: 30d6120ec99f7a95414dbc31c0cb002152bd6763
+source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%
 
 ---
 
-# Tutorials för Headless i AEM{#aem-headless-tutorials}
-
-{{aem-headless-trials-promo}}
+# Självstudiekurser för Headless i AEM{#aem-headless-tutorials}
 
 Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-slutpunkter och leverera dess innehåll som JSON. Använd praktiska självstudiekurser för att utforska hur du använder de olika alternativen och väljer vad som passar dig bäst.
 
@@ -25,7 +23,7 @@ Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-
 >
 >Den här samlingen självstudiekurser är utformade för dem som föredrar att **lära sig genom att göra**. Om du föredrar att lära dig koncept från grunden kan du ta en titt på [AEM Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). Denna uppsättning självstudiekurser och resan kompletterar varandra.
 
-## Tutorials efter API
+## Självstudiekurser per API
 
 <table>
 <tr>
@@ -73,7 +71,7 @@ Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-
 
 ## Exempelprogram
 
-Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-funktioner (AEM). Ladda ned och installera dessa färdiga exempel för att komma igång direkt.
+Exempelprogram är ett bra sätt att utforska de headless-funktionerna i Adobe Experience Manager (AEM). Ladda ned och installera dessa färdiga exempel för att komma igång direkt.
 
 <table>
 <tr>
@@ -87,7 +85,7 @@ Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-
     </a>
     </div>
     <p>
-    <em>Ett iOS-program som AEM GraphQL API:er.</em>
+    <em>Ett iOS-program som drivs av AEM GraphQL-API:er.</em>
     <p>
   </td>
   <td>
@@ -100,7 +98,7 @@ Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-
     </a>
     </div>
     <p>
-    <em>Ett Android™-program som AEM GraphQL API:er.</em>
+    <em>Ett Android™-program som drivs av AEM GraphQL-API:er.</em>
     </p>
   </td>
   <td>
@@ -113,15 +111,15 @@ Exempelprogram är ett bra sätt att utforska Adobe Experience Manager headless-
       </a>
     </div>
     <p>
-    <em>Ett React-program som AEM GraphQL API:er.</em>
+    <em>Ett React-program som drivs av AEM GraphQL API:er.</em>
     <p>
   </td>
 </tr>
 </table>
 
-## Tutorials per ramverk
+## Självstudiekurser per ramverk
 
-Bläddra bland följande självstudiekurser baserat på vilken teknik som används. Lär dig mer om AEM än bara vanliga användningsområden, med alternativ för kontextredigering och upplevelsehantering.
+Bläddra bland följande självstudiekurser baserat på vilken teknik som används. Läs om hur AEM kan användas på ett helt headless-sätt med alternativ för kontextredigering och upplevelsehantering.
 
 <table>
 <tr>
@@ -153,15 +151,15 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-      <img alt="Reagera - SPA" src="./assets/react-spa-editor.png" />
+      <img alt="Reagera - SPA-redigerare" src="./assets/react-spa-editor.png" />
     </a>
      <div>
       <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
-        <strong>Reagera - SPA </strong>
+        <strong> Reagera - SPA-redigerare </strong>
       </a>
     </div>
     <p>
-    <em>Använd AEM SPA redigerare för att hantera hela React-appupplevelsen.</em>
+    <em>Använd AEM SPA-redigeraren för att hantera hela React-appupplevelsen.</em>
     <p>
   </td>
 </tr>
