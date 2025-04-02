@@ -12,9 +12,9 @@ thumbnail: KT-17428.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 277b4789-b035-4904-b489-c827c970fb55
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: f125cffc72a6f0eb558492f8dde6f4f30bc074ec
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
@@ -93,24 +93,25 @@ När ett anrop till AEM Assets Author API tar emot [403-fel för icke-GET-begär
 
 Om du vill lägga till produktprofiler för ett AEM API klickar du på **Redigera produktprofiler** i avsnittet **API:er** i ADC-projektet, väljer önskad produktprofil i dialogrutan **Konfigurera API** och sparar ändringarna.
 
-    ![Redigera produktprofiler](../assets/how-to/edit-product-profiles.png)
+![Redigera produktprofiler](../assets/how-to/edit-product-profiles.png)
 
 Välj önskad produktprofil (t.ex. **AEM-administratörer - författare - Program XXX - Miljö XXX**) som är kopplad till de tjänster som krävs och spara sedan ändringarna.
 
-    ![Välj produktprofil](../assets/how-to/select-product-profile.png)
+![Välj produktprofil](../assets/how-to/select-product-profile.png)
 
 Observera att produktprofilen **AEM-administratörer - författare - program XXX - miljö XXX** är kopplad till både **AEM-administratörstjänsten** och **AEM Assets API-användartjänsten**. Utan den senare kommer produktprofilen inte att visas i listan över tillgängliga produktprofiler.
 
-    ![Product Profile Services](../assets/how-to/product-profile-services.png)
+![Produktprofiltjänster](../assets/how-to/product-profile-services.png)
 
 **PATCH**-begäran om att uppdatera metadata för resursen bör nu fungera utan problem.
 
-    ![PATCH Request](../assets/how-to/patch-request.png)
+![PATCH Request](../assets/how-to/patch-request.png)
 
 
 >[!TAB Ta bort produktprofiler]
 
 Om du vill ta bort produktprofiler för ett AEM API klickar du på **Redigera produktprofiler** i avsnittet **API:er** i ADC-projektet, avmarkerar önskad produktprofil i dialogrutan **Konfigurera API** och sparar ändringarna.
+
 ![Avmarkera produktprofil](../assets/how-to/deselect-product-profile.png)
 
 >[!ENDTABS]
