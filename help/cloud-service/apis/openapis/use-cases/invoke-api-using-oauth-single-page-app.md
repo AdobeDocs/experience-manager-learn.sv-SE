@@ -12,7 +12,7 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
+source-git-commit: 22d3c0058c04a1d812a95a47472f96efaa597513
 workflow-type: tm+mt
 source-wordcount: '2104'
 ht-degree: 0%
@@ -61,6 +61,9 @@ Adobe Developer Console-projektet (ADC) är konfigurerat för att aktivera auten
 >[!IMPORTANT]
 >
 >ADC-projektet tillhandahåller INTE någon _client_secrets_. I stället genererar SPA en _code_verifier_ och _code_enge_ för att på ett säkert sätt utbyta auktoriseringskoden för en _åtkomsttoken_. Det eliminerar behovet av att lagra en klienthemlighet på klientsidan, vilket förbättrar säkerheten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
+
 
 I följande diagram visas det funktionella flödet för WKND SPA _med användarspecifik åtkomsttoken för att anropa OpenAPI-baserade AEM API:er_:
 
