@@ -12,9 +12,9 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
 duration: 100
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: a98ca7ddc155190b63664239d604d11ad470fdf5
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,10 @@ Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher värdkonfigurationer 
 
 ## Standardbeteende för cachelagring
 
-Granska standardbeteendet för cachelagring för AEM Publish och Author när ett [AEM Project Archetype](./enable-caching.md#default-caching-behavior) -baserat AEM-projekt distribueras.
+Cachelagring av HTTP-svar i AEM as a Cloud Service CDN styrs av följande HTTP-svarshuvuden från ursprungsläget `Cache-Control`, `Surrogate-Control` eller `Expires`.  Ursprungliga svar som innehåller `private`, `no-cache` eller `no-store` i `Cache-Control` cachelagras inte.
+
+Granska [standardbeteendet för cachelagring](./enable-caching.md#default-caching-behavior) för AEM Publish och Author när ett AEM Project Archetype-baserat AEM-projekt distribueras.
+
 
 ## Inaktivera cachelagring
 
@@ -53,10 +56,14 @@ Det här alternativet rekommenderas för att inaktivera cachelagring, men det ä
 <LocationMatch "$URL$ || $URL_REGEX$">
     # Removes the response header of this name, if it exists. If there are multiple headers of the same name, all will be removed.
     Header unset Cache-Control
+    Header unset Surroagate-Control
     Header unset Expires
 
-    # Instructs the CDN to not cache the response.
-    Header set Cache-Control "private"
+    # Instructs the Browser and the CDN to not cache the response.
+    Header always set Cache-Control "private"
+
+    # Instructs only the CDN to not cache the response.
+    Header always set Surrogate-Control "private"
 </LocationMatch>
 ```
 
@@ -75,8 +82,8 @@ Observera att om du vill åsidosätta den befintliga CSS-cachen måste du ändra
        Header unset Cache-Control
        Header unset Expires
    
-       # Instructs the CDN to not cache the response.
-       Header set Cache-Control "private"
+       # Instructs the Browser and the CDN to not cache the response.
+       Header always set Cache-Control "private"
    </LocationMatch>
    ```
 
