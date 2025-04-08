@@ -12,7 +12,7 @@ jira: KT-14224
 thumbnail: KT-14224.jpeg
 exl-id: 22b1869e-5bb5-437d-9cb5-2d27f704c052
 duration: 100
-source-git-commit: a98ca7ddc155190b63664239d604d11ad470fdf5
+source-git-commit: cf006f24abbc5aa4b91277b91d68538c41d33e15
 workflow-type: tm+mt
 source-wordcount: '432'
 ht-degree: 0%
@@ -56,7 +56,7 @@ Det här alternativet rekommenderas för att inaktivera cachelagring, men det ä
 <LocationMatch "$URL$ || $URL_REGEX$">
     # Removes the response header of this name, if it exists. If there are multiple headers of the same name, all will be removed.
     Header unset Cache-Control
-    Header unset Surroagate-Control
+    Header unset Surrogate-Control
     Header unset Expires
 
     # Instructs the Browser and the CDN to not cache the response.
