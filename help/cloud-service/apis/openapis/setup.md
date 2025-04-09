@@ -12,7 +12,7 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: b17e228c33ff2e3f2ee2d7e13da65a648c5df79d
+source-git-commit: 7ec2db883ba485b4062db84630cf94c8ed0967ee
 workflow-type: tm+mt
 source-wordcount: '1291'
 ht-degree: 0%
@@ -27,6 +27,9 @@ Lär dig hur du konfigurerar AEM as a Cloud Service-miljön för att ge åtkomst
 >
 >OpenAPI-baserade AEM API:er är tillgängliga som en del av ett program för tidig åtkomst. Om du är intresserad av att få tillgång till dem bör du skicka ett e-postmeddelande till [aem-apis@adobe.com](mailto:aem-apis@adobe.com) med en beskrivning av ditt användningsfall.
 
+>[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
+
+
 Konfigurationsprocessen på hög nivå omfattar följande steg:
 
 1. Modernisering av AEM as a Cloud Service-miljön.
@@ -35,14 +38,14 @@ Konfigurationsprocessen på hög nivå omfattar följande steg:
 1. Konfigurera ADC-projekt
 1. Konfigurera AEM-instansen för att aktivera ADC-projektkommunikation.
 
-## Modernisering av AEM as a Cloud Service miljö
+## Modernisering av AEM as a Cloud Service miljö{#modernization-of-aem-as-a-cloud-service-environment}
 
 Moderniseringen av AEM as a Cloud Service-miljön är en engångsåtgärd per miljö som omfattar följande steg:
 
 - Uppdatera till AEM-utgåvan **2024.10.18459.20241031T210302Z** eller senare.
 - Lägg till nya produktprofiler i den om miljön skapades före utgåvan 2024.10.18459.20241031T210302Z.
 
-### Uppdatera AEM-instans
+### Uppdatera AEM-instans{#update-aem-instance}
 
 Om du vill uppdatera AEM-instansen väljer du _ellipsikonen_ bredvid miljönamnet i Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)s _Environment_ och sedan alternativet **Update** .
 
@@ -54,7 +57,7 @@ Klicka sedan på knappen **Skicka** och kör den _föreslagna_ kompletta stackpi
 
 I det här fallet heter Pipeline i helhög **Dev :: Fullstack-Deploy** och AEM-miljön kallas **wknd-program-dev**. Dina namn kan vara olika.
 
-### Lägg till nya produktprofiler
+### Lägg till nya produktprofiler{#add-new-product-profiles}
 
 Om du vill lägga till nya produktprofiler i AEM-instansen går du till avsnittet _Miljö_ för Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) och markerar ikonen _ellips_ bredvid miljönamnet. Välj sedan alternativet **Lägg till produktprofiler** .
 
@@ -88,7 +91,7 @@ Som standard är **AEM Assets API-användartjänsten** inte kopplad till någon 
 >
 >Ovanstående steg är viktigt för att aktivera autentisering från server till server för AEM Assets API. Utan den här associationen kan AEM Assets API inte användas med autentiseringsmetoden Server-till-server.
 
-## Skapa Adobe Developer Console-projekt (ADC)
+## Skapa Adobe Developer Console-projekt (ADC){#adc-project}
 
 ADC-projektet används för att lägga till önskade API:er, konfigurera autentiseringen och associera autentiseringskontot med produktprofilen.
 
@@ -110,7 +113,7 @@ Så här skapar du ett ADC-projekt:
 
    ![Redigera projektnamn](./assets/setup/edit-project-name.png)
 
-## Konfigurera ADC-projekt
+## Konfigurera ADC-projekt{#configure-adc-project}
 
 När du har skapat ADC-projektet måste du lägga till de AEM-API:er du vill använda, konfigurera autentiseringen och associera autentiseringskontot med produktprofilen.
 
@@ -144,7 +147,7 @@ När du har skapat ADC-projektet måste du lägga till de AEM-API:er du vill anv
 
 Om du väljer autentiseringsmetoden **OAuth Web App** eller **OAuth Single Page App** uppmanas inte associationen för produktprofilen, men en omdirigerings-URI krävs. Omdirigerings-URI för programmet används för att dirigera om användaren till programmet efter autentisering med en auktoriseringskod. De relevanta självstudiekurserna för användningsfall visar sådana autentiseringsspecifika konfigurationer.
 
-## Konfigurera AEM-instansen för att aktivera ADC-projektkommunikation
+## Konfigurera AEM-instansen för att aktivera ADC-projektkommunikation{#configure-aem-instance}
 
 Om du vill att ADC-projektets ClientID ska kunna kommunicera med AEM-instansen måste du konfigurera AEM-instansen.
 
