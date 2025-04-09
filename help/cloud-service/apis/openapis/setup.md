@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
+source-git-commit: b17e228c33ff2e3f2ee2d7e13da65a648c5df79d
 workflow-type: tm+mt
-source-wordcount: '1253'
+source-wordcount: '1291'
 ht-degree: 0%
 
 ---
@@ -68,12 +68,11 @@ Fönstret _Admin Console_ visar de nya produktprofilerna.
 
 Ovanstående steg avslutar moderniseringen av AEM as a Cloud Service-miljön.
 
-## Aktivera åtkomst till AEM API:er
+## Aktivera åtkomst till AEM API:er{#enable-aem-apis-access}
 
 Förekomsten av de _nya produktprofilerna_ aktiverar OpenAPI-baserad AEM API-åtkomst i Adobe Developer Console (ADC). Kom ihåg att [Adobe Developer Console (ADC)](./overview.md#accessing-adobe-apis-and-related-concepts) är utvecklarnavet för åtkomst till Adobe API:er, SDK:er, realtidshändelser, serverlösa funktioner med mera.
 
-De nya produktprofilerna är kopplade till _tjänsterna_ som representerar _AEM-användargrupper med fördefinierade åtkomstkontrollistor_.
-_Tjänsterna_ används för att styra åtkomstnivån för AEM API:er.
+De nya produktprofilerna är kopplade till _tjänsterna_ som representerar _AEM-användargrupper med fördefinierade åtkomstkontrollistor_. _Tjänsterna_ används för att styra åtkomstnivån för AEM API:er.
 
 Du kan också markera eller avmarkera de _tjänster_ som är kopplade till produktprofilen för att minska eller öka åtkomstnivån.
 
@@ -81,9 +80,13 @@ Granska associationen genom att klicka på ikonen _Visa detaljer_ bredvid produk
 
 ![Granska tjänster som är kopplade till produktprofilen](./assets/setup/review-services-associated-with-product-profile.png)
 
-Som standard är **AEM Assets API-användartjänsten** inte kopplad till någon produktprofil. Låt oss associera det med den nya produktprofilen **AEM Assets Collaborator Users - författare - Program XXX - Environment XXX**. Efter den här associationen kan ADC-projektets _API för resursförfattare_ konfigurera den önskade autentiseringen och associera autentiseringskontot med produktprofilen.
+Som standard är **AEM Assets API-användartjänsten** inte kopplad till någon produktprofil. Låt oss associera det med den nya produktprofilen **AEM Assets Collaborator Users - författare - Program XXX - Environment XXX**. Efter den här associationen kan ADC-projektets _API för tillgångsförfattare_ konfigurera den önskade autentiseringen från server till server och associera autentiseringskontot från ADC-projektet (som skapas i nästa steg) med produktprofilen.
 
 ![Koppla AEM Assets API-användartjänst till produktprofil](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
+
+>[!IMPORTANT]
+>
+>Ovanstående steg är viktigt för att aktivera autentisering från server till server för AEM Assets API. Utan den här associationen kan AEM Assets API inte användas med autentiseringsmetoden Server-till-server.
 
 ## Skapa Adobe Developer Console-projekt (ADC)
 
