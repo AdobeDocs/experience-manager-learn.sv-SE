@@ -11,9 +11,9 @@ thumbnail: KT-9351.jpeg
 exl-id: 311cd70f-60d5-4c1d-9dc0-4dcd51cad9c7
 last-substantial-update: 2024-04-26T00:00:00Z
 duration: 891
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 24d634fd1e62e873bc1dbb3ac0cd18f70129ee86
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1370'
 ht-degree: 0%
 
 ---
@@ -226,7 +226,7 @@ HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standa
 
 ### HTTP/HTTPS
 
-När du skapar HTTP/HTTPS-anslutningar från AEM proxideras automatiskt HTTP/HTTPS-anslutningar från AEM med den dedikerade IP-adressen för utgångar när du använder en dedikerad IP-adress. Ingen ytterligare kod eller konfiguration krävs för att stödja HTTP/HTTPS-anslutningar.
+När du skapar HTTP/HTTPS-anslutningar från AEM proxideras automatiskt HTTP/HTTPS-anslutningar från AEM med den dedikerade IP-adressen för utgångar när du använder en dedikerad IP-adress. Ingen ytterligare kod eller konfiguration krävs för att stödja HTTP/HTTPS-anslutningar, förutom att konfigurera en dedikerad IP-adress för avancerad nätverksanslutning.
 
 #### Exempel på koder
 
