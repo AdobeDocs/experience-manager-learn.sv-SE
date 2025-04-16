@@ -12,7 +12,7 @@ index: y
 doc-type: Article
 exl-id: 8e64f251-e5fd-4add-880e-9d54f8e501a6
 duration: 164
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 62887c6251b09ac22664cfeb9c5513363efb555e
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 0%
@@ -50,7 +50,7 @@ Här följer några alternativ för att komma närmare besökarens webbläsare.
 
 Det här alternativet är endast tillgängligt för AEM as a Cloud Service-kunder.
 
-[CDN](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn) som hanteras av AEM tillhandahåller en omdirigeringslösning på Edge-nivå, vilket reducerar antalet rundresor till ursprungsläget. Med funktionen [Omdirigering på klientsidan](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors) kan du konfigurera omdirigeringsreglerna i AEM-projektkoden och distribuera med [konfigurationspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager). CDN-konfigurationsfilen (`cdn.yaml`) får inte vara större än 100 kB.
+[CDN](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn) som hanteras av AEM tillhandahåller en omdirigeringslösning på Edge-nivå, vilket reducerar antalet rundresor till ursprungsläget. Med funktionen [Omdirigering på serversidan](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#server-side-redirectors) kan du konfigurera omdirigeringsreglerna i AEM-projektkoden och distribuera med [Konfigurera pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager). CDN-konfigurationsfilen (`cdn.yaml`) får inte vara större än 100 kB.
 
 Det finns prestandafördelar med att hantera omdirigeringar på Edge- eller CDN-nivå.
 
