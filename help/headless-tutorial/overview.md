@@ -8,9 +8,9 @@ level: Beginner
 doc-type: Catalog
 recommendations: disable, exclude
 exl-id: 57f88d79-9879-4bb9-a3db-9fec95e3a0bd
-source-git-commit: bd0f42fa37b7bbe19bf0d7fc65801198e64cbcd9
+source-git-commit: 46d65df60ce7a4cda7ff3aa3fb21c1ee60f59bc6
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '375'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ Exempelprogram är ett bra sätt att utforska de headless-funktionerna i Adobe E
 </tr>
 </table>
 
-## Självstudiekurser per ramverk
+## Självstudiekurser
 
 Bläddra bland följande självstudiekurser baserat på vilken teknik som används. Läs om hur AEM kan användas på ett helt headless-sätt med alternativ för kontextredigering och upplevelsehantering.
 
@@ -137,6 +137,19 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     <p>
   </td>
   <td>
+    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
+      <img alt="Reagera - Redigera innehåll via Universal Editor" src="./assets/react-universal-editor.png" />
+    </a>
+     <div>
+      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
+        <strong> Reagera - Redigera innehåll via universell redigerare </strong>
+      </a>
+    </div>
+    <p>
+    <em>Använd den universella redigeraren för att redigera innehåll i ett React-program.</em>
+    <p>
+  </td>  
+  <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
     <img alt="Reagera - fjärrredigerare" src="./assets/react-remote.png" />
     </a>
@@ -149,6 +162,8 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     <em>Skapa en del av ett React-program som körs på en fjärrserver.</em>
     </p>
   </td>
+</tr>
+<tr>  
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html">
       <img alt="Reagera - SPA-redigerare" src="./assets/react-spa-editor.png" />
@@ -162,8 +177,6 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     <em>Använd AEM SPA-redigeraren för att hantera hela React-appupplevelsen.</em>
     <p>
   </td>
-</tr>
-<tr>  
   <td>
     <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
     <img alt="Android - Innehållstjänster" src="./assets/android.png" />
@@ -190,6 +203,5 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     <em>Skapa en Node.js-app med utvecklare och tjänsttoken för autentisering.</em>
     <p>
   </td>
-  <td></td>
 </tr>
 </table>
