@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 52aad0b0e568ff7e4acd23742fc70f10b1dd14ee
+source-git-commit: 380bd2b3121db5810e4d295a5f7f9d1139d22402
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1385'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 # Självstudiekurser om Adobe Experience Manager as a Cloud Service {#cloud-service}
 
 + [Ökning](./overview.md)
-+ AEM-testversioner {#aem-trials}
++ AEM testversioner {#aem-trials}
    + [Bilder](./aem-trials/images.md)
 + Spellistor{#playlists}
    + [Utveckling av AEM](./playlists/development.md)
@@ -25,11 +25,11 @@ ht-degree: 4%
    + [Vad är AEM as a Cloud Service?](./introduction/what-is-aem-as-a-cloud-service.md)
    + [Arkitektur](./introduction/architecture.md)
    + [Cloud Manager](./introduction/cloud-manager.md)
-   + Strategi- och tankeledarskap{#strategy}
+   + Strategi och tankeledarskap{#strategy}
       + [Experience Manager - Styrnings- och personalmodeller och arkitekter](./introduction/experience-manager-governance-and-staffing-models.md)
 + Experience Cloud-integreringar{#integrations}
    + [Integreringar](./integrations/experience-cloud.md)
-   + [Adobe Target](./integrations/target.md)
+   + [AEM Headless och Target](./integrations/target.md)
 + Underliggande teknik {#underlying-technology}
    + [AEM Architecture](./underlying-technology/introduction-architecture.md)
    + [OSGi](./underlying-technology/introduction-osgi.md)
@@ -62,12 +62,12 @@ ht-degree: 4%
    + [Lokal AEM SDK](./local-development-environment/aem-runtime.md)
    + [Dispatcher verktyg lokalt](./local-development-environment/dispatcher-tools.md)
 + Utvecklar{#developing}
-   + Utbyggbarhet {#extensibility}
+   + Utbyggbarhet{#extensibility}
       + App Builder{#app-builder}
          + [Generera JWT-åtkomsttoken](./developing/extensibility/app-builder/jwt-auth.md)
          + [Generera åtkomsttoken för server-till-server](./developing/extensibility/app-builder/server-to-server-auth.md)
          + [Verifiering av Github-webkrok](./developing/extensibility/app-builder/github-webhook-verification.md)
-      + UI-utökningsbarhet{#ui}
+      + Utbyggbarhet för användargränssnitt{#ui}
          + [Ökning](./developing/extensibility/ui/overview.md)
          + [Adobe Developer Console Project](./developing/extensibility/ui/adobe-developer-console-project.md)
          + [Initiera app](./developing/extensibility/ui/app-initialization.md)
@@ -78,7 +78,7 @@ ht-degree: 4%
          + [Distribuera](./developing/extensibility/ui/deploy.md)
          + Innehållsfragment{#content-fragments}
             + [Ökning](./developing/extensibility/ui/content-fragments/overview.md)
-            + Exempel {#examples}
+            + Exempel{#examples}
                + [Generering av AI-bilder](./developing/extensibility/ui/content-fragments/examples/console-image-generation-and-image-upload.md)
                + [Uppdatering av massegenskap](./developing/extensibility/ui/content-fragments/examples/console-bulk-property-update.md)
                + [Kolumner för anpassat stödraster](./developing/extensibility/ui/content-fragments/examples/custom-grid-columns.md)
@@ -97,10 +97,10 @@ ht-degree: 4%
       + [Content Publishing](./developing/basics/content-publishing.md)
       + [OSGi-konfigurationer](./developing/basics/osgi-configurations.md)
       + [Migrering av Dispatcher-konfiguration](./developing/basics/dispatcher-configuration.md)
-   + AEM-projekt{#aem-projects}
+   + AEM Projects{#aem-projects}
       + [AEM Maven Project](./developing/projects/maven-project-structure.md)
       + [Rensa ett AEM Maven Project](./developing/projects/remove-samples.md)
-   + OSGi-tjänster{#osgi-services}
+   + OSGi Services{#osgi-services}
       + [OSGi Service Basics](./developing/osgi-services/basics.md)
       + [OSGi Component Lifecycle](./developing/osgi-services/lifecycle.md)
       + [Grundläggande om OSGi-konfigurationer](./developing/osgi-services/configurations.md)
@@ -114,18 +114,18 @@ ht-degree: 4%
       + [Tjänstanvändare](./developing/advanced/service-users.md)
       + [Webboptimerade bild-API:er](./developing/advanced/web-optimized-image-delivery-java-apis.md)
       + [Kör jobb på ledarinstans i AEM Author](./developing/advanced/run-job-on-leader-instance-in-aem-author.md)
-   + Snabb utvecklingsmiljö {#rde}
+   + Rapid Development Environment{#rde}
       + [Ökning](./developing/rde/overview.md)
       + [Så här konfigurerar du](./developing/rde/how-to-setup.md)
       + [Så här använder du](./developing/rde/how-to-use.md)
       + [Utveckling/livscykeln](./developing/rde/development-life-cycle.md)
-   + Universell redigerare{#universal-editor}
-      + Reagera på appredigering{#react-app-editing}
+   + Universal Editor{#universal-editor}
+      + Redigera appar{#react-app-editing}
          + [Ökning](./developing/universal-editor/react-app/overview.md)
          + [Lokal utvecklingskonfiguration](./developing/universal-editor/react-app/local-development-setup.md)
          + [Instrument React App](./developing/universal-editor/react-app/instrument-to-edit-content.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html){target=_blank}
-+ Felsöker AEM{#debugging}
++ Felsöka AEM{#debugging}
    + Felsöka AEM SDK{#debugging-aem-sdk}
       + [Ökning](./debugging/aem-sdk-local-quickstart/overview.md)
       + [Loggar](./debugging/aem-sdk-local-quickstart/logs.md)
@@ -133,13 +133,13 @@ ht-degree: 4%
       + [OSGi-webbkonsol](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher Tools](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [Andra verktyg](./debugging/aem-sdk-local-quickstart/other-tools.md)
-   + Felsöker AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
+   + Felsöka AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
       + [Ökning](./debugging/cloud-service/overview.md)
       + [Loggar](./debugging/cloud-service/logs.md)
       + [Bygg och driftsätt](./debugging/cloud-service/build-and-deployment.md)
       + [Developer Console](./debugging/cloud-service/developer-console.md)
       + [Databasläsare](./debugging/cloud-service/repository-browser.md)
-      + Risker {#risks}
+      + Risker{#risks}
          + [Traversal-varningar](./debugging/cloud-service/risks/traversals.md)
 + AEM API:er{#aem-apis}
    + [Ökning](./apis/overview.md)
@@ -149,7 +149,7 @@ ht-degree: 4%
       + [Server-till-server-autentisering](./apis/openapis/use-cases/invoke-api-using-oauth-s2s.md)
       + [Användarautentisering (webbprogram)](./apis/openapis/use-cases/invoke-api-using-oauth-web-app.md)
       + [Användarautentisering (SPA)](./apis/openapis/use-cases/invoke-api-using-oauth-single-page-app.md)
-      + Använda {#how-to}
+      + Så här gör du{#how-to}
          + [Autentiseringsuppgifter och hantering av produktprofiler](./apis/openapis/how-to/credentials-and-product-profile-management.md)
          + [Behörighetshantering](./apis/openapis/how-to/services-user-group-permission-management.md)
 + Innehållsleverans{#content-delivery}
@@ -160,12 +160,12 @@ ht-degree: 4%
    + [Adobe CDN - bortom cachelagring](./content-delivery/adobe-cdn-beyond-caching.md)
    + [Anpassade felsidor](./content-delivery/custom-error-pages.md)
    + [URL-omdirigeringar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
-+ Cachelagrar{#caching}
++ Cachning{#caching}
    + [Ökning](./caching/overview.md)
    + [AEM Publish Service](./caching/publish.md)
    + [AEM Author Service](./caching/author.md)
    + [Analys av träffar i CDN-cache](./caching/cdn-cache-hit-ratio-analysis.md)
-   + Använda {#how-to}
+   + Så här gör du{#how-to}
       + [Aktivera cachelagring](./caching/how-to/enable-caching.md)
       + [Inaktivera cachelagring](./caching/how-to/disable-caching.md)
       + [Rensa cache](./caching/how-to/purge-cache.md)
@@ -176,15 +176,15 @@ ht-degree: 4%
    + [Produktprofiler för Adobe IMS](./accessing/adobe-ims-product-profiles.md)
    + [AEM användare, grupper och behörigheter](./accessing/aem-users-groups-and-permissions.md)
    + [Konfigurera åtkomst till AEM genomgång](./accessing/walk-through.md)
-+ Autentisering {#authentication}
++ Autentisering{#authentication}
    + [Ökning](./authentication/authentication.md)
    + [SAML 2.0](./authentication/saml-2-0.md)
-+ Avancerat nätverk{#networking}
++ Avancerat nätverksbyggande{#networking}
    + [Ökning](./networking/advanced-networking.md)
    + [Flexibel portutgång](./networking/flexible-port-egress.md)
    + [Dedikerad IP-adress för utgångar](./networking/dedicated-egress-ip-address.md)
    + [Virtuellt privat nätverk](./networking/vpn.md)
-   + Kodexempel {#examples}
+   + Exempel på koder{#examples}
       + [HTTP/HTTPS på portar som inte är standard för flexibel portutgång](./networking/examples/http-on-non-standard-ports-flexible-port-egress.md)
       + [HTTP/HTTPS för dedikerad IP-adress/VPN](./networking/examples/http-dedicated-egress-ip-vpn.md)
       + [SQL-anslutningar med DataSourcePool](./networking/examples/sql-datasourcepool.md)
@@ -199,7 +199,7 @@ ht-degree: 4%
       + [God praxis](./security/traffic-filter-rules/best-practices.md)
 + AEM Eventing{#aem-eventing}
    + [Ökning](./eventing/overview.md)
-   + Exempel {#examples}
+   + Exempel{#examples}
       + [Webkrok - Ta emot AEM Events](./eventing/examples/webhook.md)
       + [Journalföring - Läs in AEM-händelser](./eventing/examples/journaling.md)
       + [Adobe I/O Runtime Action - Receive AEM Events](./eventing/examples/runtime-action.md)
@@ -208,7 +208,7 @@ ht-degree: 4%
 + Migrering {#migration}
    + [Verktyget Innehållsöverföring](./migration/content-transfer-tool.md)
    + [Massimport av resurser](./migration/bulk-import.md)
-   + Flytta till AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
+   + Flyttar till AEM as a Cloud Service {#moving-to-aem-as-a-cloud-service}
       + [Introduktion](./migration/moving-to-aem-as-a-cloud-service/introduction.md)
       + [Onboarding](./migration/moving-to-aem-as-a-cloud-service/onboarding.md)
       + [Cloud Manager](./migration/moving-to-aem-as-a-cloud-service/cloud-manager.md)
@@ -254,7 +254,7 @@ ht-degree: 4%
       + [11 - Skicka till Cloud Manager](./forms/developing-for-cloud-service/push-project-to-cloud-manager-git.md)
       + [12 - Distribuera till utvecklingsmiljö](./forms/developing-for-cloud-service/deploy-to-dev-environment.md)
       + [13 - Uppdaterar maven-arketype](./forms/developing-for-cloud-service/updating-project-archetype.md)
-   + Skapa anpassat formulär {#create-first-af}
+   + Skapa anpassat formulär{#create-first-af}
       + [Introduktion](./forms/create-first-af/introduction.md)
       + [Skapa tema](./forms/create-first-af/create-theme.md)
       + [Skapa mall](./forms/create-first-af/create-template.md)
@@ -266,16 +266,16 @@ ht-degree: 4%
       + [Konfigurera resurspanelen](./forms/create-first-af/configure-assets-panel.md)
       + [Konfigurera startpanel](./forms/create-first-af/configure-start-panel.md)
       + [Verktygsfältet Lägg till och konfigurera](./forms/create-first-af/add-configure-toolbar.md)
-   + Anpassad sändningstjänst med headless-form {#custom-submit-headless-forms}
+   + Anpassad sändningstjänst med headless-formulär{#custom-submit-headless-forms}
       + [1 - Introduktion](./forms/custom-submit-headless-forms/introduction.md)
       + [2 - Skapa en anpassad skicka-tjänst](./forms/custom-submit-headless-forms/custom-submit-service.md)
       + [3 - Visa svaret](./forms/custom-submit-headless-forms/handle-response-react-app.md)
-   + Skapa adressblockskomponent {#create-address-block}
+   + Skapa adressblockskomponent{#create-address-block}
       + [1 - Introduktion](./forms/create-address-block-component/introduction.md)
       + [2 - Inställningar](./forms/create-address-block-component/set-up.md)
       + [3 - Skapa komponent](./forms/create-address-block-component/creating-address-component.md)
       + [4 - Distribuera komponent](./forms/create-address-block-component/deploy-your-project.md)
-   + Skapa klickbar bildkomponent {#clickable-image-component}
+   + Skapa klickbar bildkomponent{#clickable-image-component}
       + [1 - Introduktion](./forms/clickable-image-component/introduction.md)
       + [2 - Skapa komponent](./forms/clickable-image-component/create-component.md)
       + [3 - Hantera klickningshändelse](./forms/clickable-image-component/handle-click-event.md)
@@ -284,13 +284,13 @@ ht-degree: 4%
       + [Skapa dataelement](./forms/form-data-analytics/data-elements.md)
       + [Skapa regler](./forms/form-data-analytics/rules.md)
       + [Testa lösningen](./forms/form-data-analytics/test.md)
-   + Skapar nedrullningskomponent för länder {#countries-drop-down}
+   + Skapa nedrullningskomponent för länder{#countries-drop-down}
       + [Introduktion](./forms/countries-drop-down/introduction.md)
       + [Skapa komponent](./forms/countries-drop-down/component.md)
       + [Dialogrutan Skapa](./forms/countries-drop-down/dialog.md)
       + [Skapa segmentmodell](./forms/countries-drop-down/slingmodel.md)
       + [Bygg och testa](./forms/countries-drop-down/build.md)
-   + Skapar knappvariationer {#style-system}
+   + Skapa knappvariationer{#style-system}
       + [Introduktion](./forms/style-system/introduction.md)
       + [Definiera princip](./forms/style-system/style-policy.md)
       + [Definiera variationer](./forms/style-system/create-variations.md)
@@ -300,9 +300,9 @@ ht-degree: 4%
       + [2. Skapa formulär](./forms/using-vertical-tabs/create-af.md)
       + [3. Navigera](./forms/using-vertical-tabs/navigation.md)
       + [4. Lägga till ikoner](./forms/using-vertical-tabs/icons.md)
-   + Använder utdata och formulärtjänst {#forms-cs-output-and-forms-service}
+   + Använda utdata och blanketttjänster{#forms-cs-output-and-forms-service}
       + [Generera PDF](./forms/forms-cs-output-and-forms-service/outputservice.md)
-   + Dokumentgenerering i AEM Forms CS{#doc-gen-formscs}
+   + Skapa dokument i AEM Forms CS{#doc-gen-formscs}
       + [Introduktion](./forms/doc-gen-forms-cs/introduction.md)
       + [Skapa tjänstautentiseringsuppgifter](./forms/doc-gen-forms-cs/service-credentials.md)
       + [Skapa JWT-token](./forms/doc-gen-forms-cs/create-jwt.md)
@@ -310,19 +310,19 @@ ht-degree: 4%
       + [Sammanfoga data med mall](./forms/doc-gen-forms-cs/merge-data-with-template.md)
       + [Testa lösningen](./forms/doc-gen-forms-cs/test.md)
       + [Utmaning](./forms/doc-gen-forms-cs/challenge.md)
-   + Använder Forms Document Services API{#forms-document-services-api}
+   + Använda Forms Document Services API{#forms-document-services-api}
       + [Introduktion](./forms/forms-document-services/introduction.md)
       + [Konfigurera OpenAPI](./forms/forms-document-services/using-open-api.md)
       + [Generera åtkomsttoken](./forms/forms-document-services/generate-access-token.md)
       + [Använd användningsbehörighet](./forms/forms-document-services/make-api-calls.md)
       + [Exempelkod](./forms/forms-document-services/sample-project.md)
-   + Dokumentgenerering med batch-API:t {#formscs-batch-api}
+   + Dokumentgenerering med hjälp av batch-API{#formscs-batch-api}
       + [Introduktion](./forms/formscs-batch-api/introduction.md)
       + [Konfigurera Azure Storage](./forms/formscs-batch-api/configure-azure-storage.md)
       + [Skapa USC-batchkonfiguration](./forms/formscs-batch-api/configure-usc-batch.md)
       + [Skapa batchkonfiguration](./forms/formscs-batch-api/create-batch-config.md)
       + [Kör grupp](./forms/formscs-batch-api/execute-batch-generate-documents.md)
-   + PDF-manipulering i Forms CS{#forms-cs-assembler}
+   + PDF Manipulation in Forms CS{#forms-cs-assembler}
       + [Introduktion](./forms/forms-cs-assembler/introduction.md)
       + [Skapa tjänstautentiseringsuppgifter](./forms/forms-cs-assembler/service-credentials.md)
       + [Skapa JWT-token](./forms/forms-cs-assembler/create-jwt.md)
@@ -335,13 +335,13 @@ ht-degree: 4%
       + [Introduktion](./forms/forms-cs-with-marketo/part1.md)
       + [Skapa data-Source](./forms/forms-cs-with-marketo/part2.md)
       + [Skapa formulärdatamodell](./forms/forms-cs-with-marketo/part3.md)
-   + Lagra formuläröverföringar med blobbindextaggar {#store-submiited-data-with-metadata-tags}
+   + Lagra formuläröverföringar med blobindextaggar{#store-submiited-data-with-metadata-tags}
       + [Introduktion](./forms/store-submiited-data-with-metadata-tags/introduction.md)
       + [Utöka alternativgruppskomponent](./forms/store-submiited-data-with-metadata-tags/extend-choice-group-components.md)
       + [Skapa OSGi-konfiguration](./forms/store-submiited-data-with-metadata-tags/create-osgi-configuration.md)
       + [Skapa indexmärkord](./forms/store-submiited-data-with-metadata-tags/create-blob-index-tags.md)
       + [Skapa anpassad sändning](./forms/store-submiited-data-with-metadata-tags/create-custom-submit.md)
-   + Komponentbaserad form för förifyll{#prefill-core-component-based-form}
+   + Komponentbaserad blankett för förifyllning{#prefill-core-component-based-form}
       + [Introduktion](./forms/prefill-core-component-form/introduction.md)
       + [Skriva förifyllningstjänst](./forms/prefill-core-component-form/pre-fill-service.md)
       + [Testa lösningen](./forms/prefill-core-component-form/test-solution.md)
@@ -351,7 +351,7 @@ ht-degree: 4%
       + [Lagra formulärdata i Azure Storage](./forms/forms-cs-azure-portal/create-af.md)
       + [Förifyll formulär](./forms/forms-cs-azure-portal/prefill-af-storage.md)
       + [Frågeöverföringar](./forms/forms-cs-azure-portal/query-submitted-data.md)
-   + Spara och återuppta formulärifyllning{#prefill-azure-storage}
+   + Spara och återuppta ifyllning av formulär{#prefill-azure-storage}
       + [1 - Introduktion](./forms/prefill-azure-storage/introduction.md)
       + [2- komponenten Skapa sida](./forms/prefill-azure-storage/page-component.md)
       + [3- Skapa adaptiv formulärmall](./forms/prefill-azure-storage/associate-page-component.md)
@@ -388,27 +388,27 @@ ht-degree: 4%
       + [Skapa formulärdatamodell](./forms/integrate-with-salesforce/create-form-data-model.md)
       + [Testa formulärinlämning](./forms/integrate-with-salesforce/create-lead-submitting-form.md)
       + [Test click-händelse](./forms/integrate-with-salesforce/create-lead-click-event.md)
-   + Lagra formulärinskickade formulär i en enhet och SharePoint {#one-drive}
+   + Spara formulärinskick i en och samma enhet{#one-drive}
       + [Lagra formulärdata på en enhet](./forms/forms-cs-one-drive/store-form-submission-one-drive.md)
       + [Lagra formulärdata i SharePoint](./forms/forms-cs-sharepoint/store-form-submission-in-sharepoint.md)
       + [Fyll i formulär i förväg med data från SharePoint-listan](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
       + [Infoga data i SharePoint-listan med hjälp av arbetsflöde](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
 + Asset Compute Extensibility{#asset-compute}
    + [Ökning](./asset-compute/overview.md)
-   + Konfigurera {#set-up}
+   + Konfigurera{#set-up}
       + [Konto- och tjänsteetablering](./asset-compute/set-up/accounts-and-services.md)
       + [Lokal utvecklingsmiljö](./asset-compute/set-up/development-environment.md)
       + [App Builder](./asset-compute/set-up/app-builder.md)
-   + Framkalla{#develop}
+   + Utveckla{#develop}
       + [Skapa ett Asset Compute-projekt](./asset-compute/develop/project.md)
       + [Konfigurera miljövariabler](./asset-compute/develop/environment-variables.md)
       + [Konfigurera manifest.yml](./asset-compute/develop/manifest.md)
       + [Utveckla en arbetare](./asset-compute/develop/worker.md)
       + [Använda utvecklingsverktyget](./asset-compute/develop/development-tool.md)
-   + Testa och felsök{#test-debug}
+   + Testa och felsöka{#test-debug}
       + [Testa en arbetare](./asset-compute/test-debug/test.md)
       + [Felsöka en arbetare](./asset-compute/test-debug/debug.md)
-   + Distribuera {#deploy}
+   + Distribuera{#deploy}
       + [Distribuera till Adobe I/O Runtime](./asset-compute/deploy/runtime.md)
       + [Integrera med AEM](./asset-compute/deploy/processing-profiles.md)
    + Avancerat{#advanced}

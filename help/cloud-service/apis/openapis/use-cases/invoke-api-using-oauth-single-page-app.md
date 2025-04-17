@@ -12,9 +12,9 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 3d42029f193f293631585314983956618d707244
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '2113'
+source-wordcount: '2081'
 ht-degree: 0%
 
 ---
@@ -26,10 +26,6 @@ Lär dig hur du anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service m
 OAuth Single Page App-autentisering är idealisk för JavaScript-baserade program som körs i webbläsaren. Oavsett om de saknar en serverdelsserver eller behöver hämta åtkomsttoken för att kunna interagera med AEM API:er för en användares räkning.
 
 PKCE-flödet utökar anslagstypen OAuth 2.0 _permission_code_ och förbättrar säkerheten genom att förhindra avlyssning av auktoriseringskoden. Mer information finns i avsnittet [Skillnad mellan autentiseringsuppgifter för OAuth Server-till-Server och Web App respektive Single Page App ](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
-
->[!AVAILABILITY]
->
->OpenAPI-baserade AEM API:er är tillgängliga som en del av ett program för tidig åtkomst. Om du är intresserad av att få tillgång till dem bör du skicka ett e-postmeddelande till [aem-apis@adobe.com](mailto:aem-apis@adobe.com) med en beskrivning av ditt användningsfall.
 
 ## Vad du lär dig{#what-you-learn}
 

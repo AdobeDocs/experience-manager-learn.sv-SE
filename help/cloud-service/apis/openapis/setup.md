@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 4cdab2b243af74a8075ae65e8f24e7f56ef2a23b
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1274'
 ht-degree: 0%
 
 ---
@@ -23,12 +23,7 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar AEM as a Cloud Service-miljön för att ge åtkomst till OpenAPI-baserade AEM API:er.
 
->[!AVAILABILITY]
->
->OpenAPI-baserade AEM API:er är tillgängliga som en del av ett program för tidig åtkomst. Om du är intresserad av att få tillgång till dem bör du skicka ett e-postmeddelande till [aem-apis@adobe.com](mailto:aem-apis@adobe.com) med en beskrivning av ditt användningsfall.
-
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
-
 
 Konfigurationsprocessen på hög nivå omfattar följande steg:
 
@@ -151,14 +146,13 @@ Om du väljer autentiseringsmetoden **OAuth Web App** eller **OAuth Single Page 
 
 Om du vill att ADC-projektets ClientID ska kunna kommunicera med AEM-instansen måste du konfigurera AEM-instansen.
 
-Detta görs genom att definiera API-konfigurationen i filen `config.yaml` i
-AEM Project och driftsätta det med Config Pipeline i Cloud Manager.
+Detta görs genom att definiera API-konfigurationen i en YAML-fil och distribuera den med Config Pipeline i Cloud Manager. YAML-filen definierar de tillåtna klient-ID:n från ADC-projektet som kan kommunicera med AEM-instansen.
 
-1. Leta reda på eller skapa filen `config.yaml` från mappen `config` i AEM Project.
+1. Leta reda på eller skapa filen `api.yaml` från mappen `config` i AEM Project.
 
-   ![Hitta konfigurationen YAML](./assets/setup/locate-config-yaml.png)
+   ![Hitta API YAML](./assets/setup/locate-api-yaml.png){width="500" zoomable="no"}
 
-1. Lägg till följande konfiguration i filen `config.yaml`.
+1. Lägg till följande konfiguration i filen `api.yaml`.
 
    ```yaml
    kind: "API"
@@ -179,9 +173,9 @@ AEM Project och driftsätta det med Config Pipeline i Cloud Manager.
 
 1. Bekräfta konfigurationsändringarna och skicka ändringarna till Git-fjärrdatabasen som Cloud Manager pipeline är ansluten till.
 
-1. Distribuera ovanstående ändringar med Config Pipeline i Cloud Manager. Observera att filen `config.yaml` också kan installeras i en RDE med kommandoradsverktyg.
+1. Distribuera ovanstående ändringar med Config Pipeline i Cloud Manager. Observera att filen `api.yaml` också kan installeras i en RDE med kommandoradsverktyg.
 
-   ![Distribuera config.yaml](./assets/setup/config-pipeline.png)
+   ![Distribuera YAML](./assets/setup/config-pipeline.png)
 
 ## Nästa steg
 

@@ -12,9 +12,9 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1518'
 ht-degree: 0%
 
 ---
@@ -106,13 +106,13 @@ Om du vill ta emot AEM Assets Events och köra Adobe I/O Runtime Action som skap
 
 Om du vill att ADC-projektets klient-ID för OAuth Server-till-Server-autentiseringsuppgifter ska kunna kommunicera med AEM-instansen måste du konfigurera AEM-instansen.
 
-Det görs genom att definiera konfigurationen i filen `config.yaml` i AEM Project. Distribuera sedan filen `config.yaml` med Config Pipeline i Cloud Manager.
+Det görs genom att definiera konfigurationen i filen `api.yaml` i AEM Project. Distribuera sedan filen `api.yaml` med Config Pipeline i Cloud Manager.
 
-- Leta reda på eller skapa filen `config.yaml` från mappen `config` i AEM Project.
+- Leta reda på eller skapa filen `api.yaml` från mappen `config` i AEM Project.
 
-  ![Hitta konfigurationen YAML](../assets/examples/assets-pim-integration/locate-config-yaml.png)
+  ![Hitta API YAML](../assets/examples/assets-pim-integration/locate-api-yaml.png)
 
-- Lägg till följande konfiguration i filen `config.yaml`.
+- Lägg till följande konfiguration i filen `api.yaml`.
 
   ```yaml
   kind: "API"
@@ -134,9 +134,9 @@ Det görs genom att definiera konfigurationen i filen `config.yaml` i AEM Projec
 
 - Bekräfta konfigurationsändringarna i Git-databasen och skicka ändringarna till fjärrdatabasen.
 
-- Distribuera ovanstående ändringar med Config Pipeline i Cloud Manager. Observera att filen `config.yaml` också kan installeras i en RDE med kommandoradsverktyg.
+- Distribuera ovanstående ändringar med Config Pipeline i Cloud Manager. Observera att filen `api.yaml` också kan installeras i en RDE med kommandoradsverktyg.
 
-  ![Distribuera config.yaml](../assets/examples/assets-pim-integration/config-pipeline.png)
+  ![Distribuera API YAML](../assets/examples/assets-pim-integration/config-pipeline.png)
 
 ### Åtgärd vid utveckling av körning
 
