@@ -7,10 +7,10 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: ebc609ae621ea5d4d0eba0e28202448b6eaeb8cc
 workflow-type: tm+mt
-source-wordcount: '450'
-ht-degree: 6%
+source-wordcount: '454'
+ht-degree: 7%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 6%
    + [Assets view](playlists/assets-view.md)
    + [Administratörsvy](playlists/admin-view.md)
 
-+ Konfigurerar {#configuring}
++ Konfigurerar{#configuring}
    + [Originalmappar](configuring/baseline-folders.md)
    + [Baslinjebehörigheter](configuring/baseline-permissions.md)
    + [Taggar](configuring/tagging.md)
@@ -34,7 +34,7 @@ ht-degree: 6%
    + [Bearbetar profiler](configuring/processing-profiles.md)
    + [Starta arbetsflöden automatiskt](configuring/auto-start-workflows.md)
 
-+ Redigerar{#authoring}
++ Redigering{#authoring}
    + [Växla vy](./authoring/switch-views.md)
    + [Navigering](./authoring/navigation.md)
    + [Grundläggande åtgärder](./authoring/basic-operations.md)
@@ -50,7 +50,7 @@ ht-degree: 6%
    + [Versioner](./collaboration/versions.md)
    + [Granskningsuppgift](./collaboration/review-task.md)
 
-+ Sökning och identifiering {#search-and-discovery}
++ Sökning och identifiering{#search-and-discovery}
    + [Sökning](./search-and-discovery/search.md)
    + [Sammanhangsbaserad sökning](./search-and-discovery/contextual-search.md)
    + [Integrering med Adobe Firefly](./search-and-discovery/adobe-firefly.md)
@@ -86,6 +86,8 @@ ht-degree: 6%
    + [Bildvarianter med Adobe Express](./content-hub/image-variants.md)
    + [Samlingar](./content-hub/collections.md)
    + [Delning](./content-hub/share.md)
+   + Användningsexempel{#use-cases}
+      + [Hantera resurser](./content-hub/use-cases/manage-assets.md)
 
 + Edge Delivery Services{#edge-delivery-services}
    + [Sidekick plugin](./edge-delivery-services/sidekick-plugin.md)
@@ -93,7 +95,7 @@ ht-degree: 6%
 + Adobe GenStudio{#adobe-genstudio}
    + [AEM Assets och GenStudio for Performance Marketing](https://experienceleague.adobe.com/en/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
 
-+ Delning och distribution {#sharing}
++ Delning och distribution{#sharing}
    + [Hämta resurser](./sharing/download.md)
    + [Exportera resurser](./sharing/export.md)
    + [Publicera resurser](./sharing/publish.md)
@@ -103,13 +105,13 @@ ht-degree: 6%
       + [Konfigurera resurskälla](brand-portal/configure-asset-sourcing.md)
       + [Aktivera hämtning av återgivning](brand-portal/enable-renditions-download.md)
 
-   + Resursresurs {#assets-share}
+   + Resursresurs{#assets-share}
       + [Kommandon för resursdelning](./sharing/asset-share-commons-user-experience-feature-video-understand.md)
       + [Konfigurera resursdelningskommentarer på lokal AEM](./sharing/asset-share-commons-technical-video-setup.md)
       + [Kommandon för att dela resurser med teman](./sharing/asset-share-commons-feature-video-theming.md)
       + [Resursresurskombinationspaket](./sharing/asset-share/asset-share-commons-asset-kits.md)
 
-+ Creative-arbetsflöden{#creative-workflows}
++ Creative arbetsflöden{#creative-workflows}
    + [Integrering med Adobe Express](./creative-workflows/adobe-express.md)
    + [Adobe Express och AEM Assets](./creative-workflows/adobe-express-aem-assets.md)
    + [AEM-datorprogram](./creative-workflows/aem-desktop-app.md)
@@ -134,7 +136,7 @@ ht-degree: 6%
    + [Creative](./content-automation/creative-operations.md)
    + [Photoshop-åtgärder](./content-automation/photoshop-actions.md)
 
-+ Dynamiska media{#dynamic-media}
++ Dynamiska medier{#dynamic-media}
    + [Dynamic Media - översikt](dynamic-media/dynamic-media-overview-feature-video-use.md)
    + [Dynamic Media Classic Desktop](dynamic-media/dynamic-media-classic-desktop-application.md)
    + Bilder {#images}
@@ -149,7 +151,7 @@ ht-degree: 6%
       + [DASH adaptive streaming](dynamic-media/dynamic-media-dash.md)
       + [Dynamic Media Smart Crop-video](dynamic-media/dynamic-media-smart-crop-video.md)
       + [Videospelare](dynamic-media/dynamic-media-video-player-feature-video-use.md)
-   + Visare {#viewers}
+   + Tittare {#viewers}
       + [Tittare](dynamic-media/dynamic-media-viewer-feature-video-understand.md)
       + [Panoramabilder och bildvisningsprogram](dynamic-media/panorama-vertical-image-viewer-feature-video-use.md)
       + [Tittare med Adobe Analytics](dynamic-media/dynamic-media-viewer-extension-use.md)
@@ -175,11 +177,11 @@ ht-degree: 6%
       + [Ladda ned Assets i Dynamic Media Classic App](dynamic-media/tutorials/how-to-download-asset-in-dynamic-media-classic-app.md)
       + [Dynamic Media Classic IPS API:er](dynamic-media/tutorials/introduction-to-dynamic-media-classic-ips-api.md)
 
-+ Workfront-integrering{#workfront}
-   + Utökad koppling {#enhanced-connector}
++ Integrering med Workfront{#workfront}
+   + Förbättrad anslutning{#enhanced-connector}
       + [Förbättrade anslutningsmöjligheter](./workfront/enhanced-connector/basics.md)
       + [Projektmappar](./workfront/enhanced-connector/project-folders.md)
-      + AEM Experts-serien {#aem-experts-series}
+      + AEM Experts Series{#aem-experts-series}
          + [Ökning](./workfront/enhanced-connector/aem-experts-series/overview.md)
          + [Konfigurera](./workfront/enhanced-connector/aem-experts-series/setup.md)
          + [Workfront-blanketter och AEM-metadata](./workfront/enhanced-connector/aem-experts-series/custom-forms.md)
