@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 34aaecb7b82d7fae068549fad3ec9a4895fb9ec7
+source-git-commit: 182d7b76411ab885ab93b7724b97bf75cc52323c
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1002'
 ht-degree: 0%
 
 ---
@@ -45,10 +45,6 @@ Lär dig mer om OpenAPI-baserade AEM API:er, inklusive autentiseringsstöd, vikt
 
 I framtida versioner kommer fler OpenAPI-baserade AEM-API:er att läggas till som stöd för fler användningsfall.
 
->[!AVAILABILITY]
->
->OpenAPI-baserade AEM API:er är tillgängliga som en del av ett program för tidig åtkomst. Om du är intresserad av att få tillgång till dem bör du skicka ett e-postmeddelande till [aem-apis@adobe.com](mailto:aem-apis@adobe.com) med en beskrivning av ditt användningsfall.
-
 ## Autentiseringsstöd{#authentication-support}
 
 OpenAPI-baserade AEM-API:er stöder OAuth 2.0-autentisering, inklusive följande typer av bidrag:
@@ -71,6 +67,7 @@ I följande tabell sammanfattas skillnaderna mellan de tre OAuth-autentiseringsm
 | **Säkerhetsaspekter** | Lagra känsliga autentiseringsuppgifter (`client_id`, `client_secret`) säkert i backend-system. | Efter användarautentiseringen får de en egen _temporär åtkomsttoken via ett serverdelsanrop_. Lagra känsliga autentiseringsuppgifter (`client_id`, `client_secret`) säkert i backend-system för att utbyta auktoriseringskod för åtkomsttoken. | Efter användarautentiseringen får de en egen _temporär åtkomsttoken via ett klientanrop_. Använder inte `client_secret` eftersom det inte är säkert att lagra i klientprogram. PKCE förlitar sig på att växla auktoriseringskod för åtkomsttoken. |
 | **Typ av bidrag** | _client_credentials_ | _authentication_code_ | _authentication_code_ med **PKCE** |
 | **Adobe Developer Console-autentiseringstyp** | OAuth Server-till-server | OAuth Web App | OAuth Single-Page App |
+| **Självstudiekurs** | [Anropa API med autentisering från server till server](./use-cases/invoke-api-using-oauth-s2s.md) | [Anropa API med autentisering via webbapp](./use-cases/invoke-api-using-oauth-web-app.md) | [Anropa API med autentisering för Single Page-app](./use-cases/invoke-api-using-oauth-single-page-app.md) |
 
 ## Åtkomst till Adobe API:er och relaterade koncept{#accessing-adobe-apis-and-related-concepts}
 
