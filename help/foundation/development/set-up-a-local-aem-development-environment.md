@@ -11,9 +11,9 @@ last-substantial-update: 2022-07-20T00:00:00Z
 doc-type: Tutorial
 thumbnail: aem-local-dev-env.jpg
 duration: 4537
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
 workflow-type: tm+mt
-source-wordcount: '2394'
+source-wordcount: '2379'
 ht-degree: 0%
 
 ---
@@ -179,7 +179,6 @@ Kontrollera `classic` på fliken Maven-profil när du använder en IDE.
 
 * [**Hämta**](https://code.visualstudio.com/Download) **Visual Studio-kod**
 * **[repo](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)** - FTP-liknande verktyg för JCR-innehåll
-* **[nonsrat](https://aemfed.io/)** - Snabba upp AEM-arbetsflödet
 * **[AEM Sync](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)** - Tillägg som stöds av communityn&#42; för Visual Studio-kod
 * **[WKND-projekt](https://github.com/adobe/aem-guides-wknd)** - Exempel på AEM-projekt som visas i den här videon.
 
@@ -189,8 +188,7 @@ Kontrollera `classic` på fliken Maven-profil när du använder en IDE.
 * 00:53 - Skapa och distribuera källkod med Maven
 * 04:03 - Skjut upp kodändringar med kommandoradsverktyget Repo
 * 08:29 - Dra in kodändringar med kommandoradsverktyget Repo
-* 10:40 - Skjut upp kodändringar med det inmatade verktyget
-* 14:24 - Felsökning, Återskapa klientbibliotek
+* 10:32 - Felsökning, Återskapa klientbibliotek
 
 ### [!DNL CRXDE Lite]
 

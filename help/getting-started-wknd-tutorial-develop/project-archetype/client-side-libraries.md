@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 8d3026e9-a7e2-4a76-8a16-a8197a5e04e3
 recommendations: noDisplay, noCatalog
 duration: 557
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
 workflow-type: tm+mt
-source-wordcount: '2554'
+source-wordcount: '2432'
 ht-degree: 0%
 
 ---
@@ -394,14 +394,6 @@ Den här tekniken är användbar om de flesta format och frontkodningar utförs 
    > Bildsrc för den statiska markeringen pekar på en aktiv bildkomponent i en lokal AEM-instans. Bilder visas som brutna om sökvägen till bilden ändras, om AEM inte startas eller om webbläsaren inte har loggat in på den lokala AEM-instansen. Om du lämnar över till en extern resurs är det också möjligt att ersätta bilderna med statiska referenser.
 
 1. Du kan **stoppa** webbpaketservern från kommandoraden genom att skriva `CTRL+C`.
-
-### aemfed {#develop-aemfed}
-
-**[aemfed](https://aemfed.io/)** är ett kommandoradsverktyg med öppen källkod som kan användas för att snabba upp frontendutvecklingen. Den drivs av [aemsync](https://www.npmjs.com/package/aemsync), [Browsersync](https://browsersync.io/) och [Sling Log Tracer](https://sling.apache.org/documentation/bundles/log-tracers.html).
-
-På en hög nivå är `aemfed` utformad för att lyssna på filändringar i modulen **ui.apps** och automatiskt synkronisera dem direkt till en AEM-instans som körs. Baserat på ändringarna uppdateras en lokal webbläsare automatiskt, vilket snabbar upp utvecklingen på frontend. Den är även utformad för att fungera med Sling Log Tracer för att automatiskt visa fel på serversidan direkt i terminalen.
-
-Om du arbetar mycket med modulen **ui.apps**, ändrar HTML-skript och skapar anpassade komponenter kan **emfed** vara ett kraftfullt verktyg som du kan använda. [Fullständig dokumentation finns här](https://github.com/abmaonline/aemfed).
 
 ### Felsöka bibliotek på klientsidan {#debugging-clientlibs}
 

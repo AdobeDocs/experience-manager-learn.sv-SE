@@ -11,9 +11,9 @@ level: Beginner
 last-substantial-update: 2022-09-03T00:00:00Z
 exl-id: 6fb3199a-02c9-48bc-a6fa-1f767cfd2f2a
 duration: 3508
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 3ad201aad77e71b42d46d69fdda50bcc77316151
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1302'
 ht-degree: 0%
 
 ---
@@ -250,7 +250,6 @@ Visual Studio Code är det idealiska alternativet för gränssnittsutvecklare so
 
 + [Hämta Visual Studio-kod](https://code.visualstudio.com/Download)
 + [Ladda ned Repo-verktyget](https://github.com/Adobe-Marketing-Cloud/tools/tree/master/repo#integration-into-visual-studio-code)
-+ [Ladda ned VS-kodtillägg som stöds](https://aemfed.io/)
 + [Hämta tillägget AEM Sync VS-kod](https://marketplace.visualstudio.com/items?itemName=Yinkai15.aemsync)
 
 ### Eclipse
