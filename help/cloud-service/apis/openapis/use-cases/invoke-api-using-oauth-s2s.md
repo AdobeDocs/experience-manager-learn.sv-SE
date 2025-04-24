@@ -12,7 +12,7 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '1687'
 ht-degree: 0%
@@ -50,7 +50,7 @@ För att kunna genomföra den här självstudiekursen behöver du:
 
 - Exempelprojektet [WKND Sites](https://github.com/adobe/aem-guides-wknd?#aem-wknd-sites-project) måste distribueras till det.
 
-- Åtkomst till [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/).
+- Åtkomst till [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started).
 
 - Installera [Node.js](https://nodejs.org/en/) på den lokala datorn för att köra exempelprogrammet NodeJS.
 
@@ -117,7 +117,7 @@ I testsyfte kan du använda [Postman](https://www.postman.com/), [curl](https://
 
 ### Granska API
 
-Innan vi utvecklar programmet ska vi granska [den angivna resursens metadata](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/../assets/author/#operation/getAssetMetadata)-slutpunkt från _Assets Author API_. API-syntaxen är:
+Innan vi utvecklar programmet ska vi granska [den angivna resursens metadata](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/#operation/getAssetMetadata)-slutpunkt från _Assets Author API_. API-syntaxen är:
 
 ```http
 GET https://{bucket}.adobeaemcloud.com/adobe/../assets/{assetId}/metadata
@@ -471,4 +471,4 @@ I ADC-projektet lade du till AEM API:er, konfigurerade autentiseringstypen och k
 
 ## Ytterligare resurser
 
-- [Implementeringshandbok för autentiseringsuppgifter för OAuth Server-till-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+- [Implementeringshandbok för autentiseringsuppgifter för OAuth Server-till-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)

@@ -12,7 +12,7 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 182d7b76411ab885ab93b7724b97bf75cc52323c
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '1002'
 ht-degree: 0%
@@ -51,9 +51,9 @@ OpenAPI-baserade AEM-API:er stöder OAuth 2.0-autentisering, inklusive följande
 
 - **Autentiseringsuppgifter för OAuth Server-till-Server**: Perfekt för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Den använder anslagstypen _client_credentials_, vilket möjliggör säker åtkomsthantering på servernivå. Mer information finns i [Autentiseringsuppgifter för OAuth Server-till-server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/#oauth-server-to-server-credential).
 
-- **Autentiseringsuppgifter för OAuth-webbprogram**: Passar för webbprogram med klientkomponenter och _backend_-komponenter som har åtkomst till AEM API:er för användare. Den använder anslagstypen _permission_code_, där serverdelsservern hanterar hemligheter och token på ett säkert sätt. Mer information finns i [Autentiseringsuppgifter för OAuth-webbprogram](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-web-app-credential).
+- **Autentiseringsuppgifter för OAuth-webbprogram**: Passar för webbprogram med klientkomponenter och _backend_-komponenter som har åtkomst till AEM API:er för användare. Den använder anslagstypen _permission_code_, där serverdelsservern hanterar hemligheter och token på ett säkert sätt. Mer information finns i [Autentiseringsuppgifter för OAuth-webbprogram](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential).
 
-- **Autentiseringsuppgifter för fristående program för OAuth**: Avsett för SPA som körs i webbläsaren, som behöver komma åt API:er för en användare utan serverdel. Den använder anslagstypen _permission_code_ och förlitar sig på säkerhetsmekanismer på klientsidan med PKCE (Proof Key for Code Exchange) för att skydda auktoriseringskodflödet. Mer information finns i [Autentiseringsuppgifter för fristående program för OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation/#oauth-single-page-app-credential).
+- **Autentiseringsuppgifter för fristående program för OAuth**: Avsett för SPA som körs i webbläsaren, som behöver komma åt API:er för en användare utan serverdel. Den använder anslagstypen _permission_code_ och förlitar sig på säkerhetsmekanismer på klientsidan med PKCE (Proof Key for Code Exchange) för att skydda auktoriseringskodflödet. Mer information finns i [Autentiseringsuppgifter för fristående program för OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential).
 
 ## Skillnad mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App jämfört med Single Page App{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 

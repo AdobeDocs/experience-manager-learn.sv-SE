@@ -12,7 +12,7 @@ last-substantial-update: 2023-01-12T00:00:00Z
 doc-type: Tutorial
 exl-id: e2922278-4d0b-4f28-a999-90551ed65fb4
 duration: 881
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
 workflow-type: tm+mt
 source-wordcount: '1963'
 ht-degree: 0%
@@ -149,7 +149,7 @@ function getCommandLineParams() {
 
 När tjänstens autentiseringsuppgifter läses används de för att generera en JWT som sedan byts ut mot Adobe IMS API:er för en åtkomsttoken. Denna åtkomsttoken kan sedan användas för åtkomst till AEM as a Cloud Service.
 
-Exempelprogrammet är Node.js-baserat, så det är bäst att använda modulen [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm för att underlätta (1) JWT-generering och (20) utbyte med Adobe IMS. Om ditt program har utvecklats på ett annat språk kan du läsa [de lämpliga kodexemplen](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples/) om hur du konstruerar HTTP-begäran för Adobe IMS med andra programmeringsspråk.
+Exempelprogrammet är Node.js-baserat, så det är bäst att använda modulen [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) npm för att underlätta (1) JWT-generering och (20) utbyte med Adobe IMS. Om ditt program har utvecklats på ett annat språk kan du läsa [de lämpliga kodexemplen](https://developer.adobe.com/developer-console/docs/guides/authentication/JWT/samples) om hur du konstruerar HTTP-begäran för Adobe IMS med andra programmeringsspråk.
 
 1. Uppdatera `getAccessToken(..)` för att inspektera JSON-filens innehåll och avgöra om den representerar en lokal utvecklingsåtkomsttoken eller tjänstautentiseringsuppgifter. Detta kan enkelt uppnås genom att kontrollera om egenskapen `.accessToken` finns, vilket bara finns för Local Development Access Token JSON.
 
