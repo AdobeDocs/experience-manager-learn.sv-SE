@@ -11,9 +11,9 @@ jira: KT-11603
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 2e37165d-c003-4206-8133-54e37ca35b8e
 duration: 166
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 1049f605eb1c3b68e70e34d4cdad31858b076858
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '847'
 ht-degree: 0%
 
 ---
@@ -94,6 +94,22 @@ Om du vill distribuera en ny version av ett tillägg måste det först återkall
 1. Logga in på [Adobe Exchange](https://exchange.adobe.com/)
 1. Navigera till __Hantera__ > __App Builder-appar__
 1. __Återkalla__ det tillägg som ska uppdateras
+
+När du har återkallat tillägget visas det fortfarande med återkallad status i Extension Manager. Om du vill ta bort den helt måste du ta bort projektet.
+
+Knappen för att ta bort projektet finns längst upp till höger:
+
+![Ta bort-knapp](./assets/deploy/extension-delete-button.png){align="center"}
+
+Det går inte att ta bort projektet förrän tillägget inte har återkallats:
+
+![Projektet kan inte tas bort](./assets/deploy/extension-can-not-delete-project.png){align="center"}
+
+När tillägget återkallas kan projektet tas bort:
+
+![Projektet kan inte tas bort](./assets/deploy/extension-delete-procject.png){align="center"}
+
+När du har tagit bort projektet visas inte tillägget längre i Extension Manager.
 
 ### Distribuera tillägget
 
