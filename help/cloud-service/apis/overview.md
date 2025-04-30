@@ -12,9 +12,9 @@ thumbnail: KT-17425.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 23b2be0d-a8d4-4521-96ba-78b70f4e9cba
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 7cd9efb62d1afdcc089e1e6260d6cf2fc5495afe
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '999'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ AEM erbjuder följande API:er för interaktion med författare och publiceringst
 
 | AEM API-typ | Beskrivning | Tillgänglighet | Användningsfall | API-exempel |
 | --- | --- | --- | --- | --- |
-| OpenAPI-baserade AEM API:er | Standardiserade, maskinläsbara API:er för Assets, Sites och Forms. | **Endast AEM as a Cloud Service** | API-utveckling först, moderna program | [Assets Author API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/), [Mappar API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/), [AEM Sites API](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/), [Forms Acrobat Services](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) med flera |
+| OpenAPI-baserade AEM API:er | Standardiserade, maskinläsbara API:er för Assets, Sites och Forms. | **Endast AEM as a Cloud Service** | API-utveckling först, moderna program | [API:t för Assets-författare](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/), [API:t för mappar](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/folders/), [API:t för AEM Sites](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/sites/), [API:t för Forms Document Services](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/document/) med flera |
 | RESTful API:er | Traditionella REST-slutpunkter för interaktion med AEM-resurser. | AEM 6.X, AEM as a Cloud Service | CRUD-åtgärder, moderna program | [Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets), [REST API för arbetsflöde](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-program-interaction#using-the-workflow-rest-api), [JSON Exporter för innehållstjänster](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/components-templates/json-exporter) med flera |
 | GraphQL API:er | Optimerad för att effektivt hämta strukturerat innehåll med flexibla frågor. | AEM 6.X, AEM as a Cloud Service | Headless CMS, SPA, mobile apps | [GraphQL API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments) |
 | Traditionella (icke-RESTful) API:er | Äldre API:er som JCR, Sling Models, Query Builder med flera. | AEM 6.X, AEM as a Cloud Service | Äldre integreringar, bakåtkompatibilitet | [API:t för frågebyggaren](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api) med flera |
