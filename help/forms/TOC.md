@@ -8,9 +8,9 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: Experience Manager 6.4, Experience Manager 6.5
 index: y
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: c4b5a015f1c0d5e3877886052476871548ec9b0e
 workflow-type: tm+mt
-source-wordcount: '2101'
+source-wordcount: '2104'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 + [Ökning](overview.md)
 + [Bästa tillvägagångssätt att följa](adaptive-forms/best-practices-adaptive-forms.md)
 + [Ställa in OKTA-autentisering med AEM Author](adaptive-forms/single-sign-on-with-okta.md)
-+ Skapar ditt första adaptiva formulär {#creating-your-first-adaptive-form}
++ Skapa ditt första adaptiva formulär {#creating-your-first-adaptive-form}
    + [1 - Introduktion och installation](creating-your-first-adaptive-form/introduction-and-setup.md)
    + [2 - Skapa adaptiv formulärmall](creating-your-first-adaptive-form/create-adaptive-form-template.md)
    + [3 - Skapa formulärfragment](creating-your-first-adaptive-form/create-form-fragment.md)
@@ -31,7 +31,7 @@ ht-degree: 1%
    + [7 - Lägg till tabell i resultatpanelen](creating-your-first-adaptive-form/adding-table-to-income-panel.md)
    + [8 - Konfigurera resurspanelen](creating-your-first-adaptive-form/configuring-assets-panel.md)
    + [9 - Använda anpassade funktioner och kodredigerare](creating-your-first-adaptive-form/using-custom-functions-and-code-editor.md)
-+ Hanterar formuläröverföringar {#handling-af-form-submissions}
++ Hantera inskickning av formulär {#handling-af-form-submissions}
    + [Skapa ett granskningsarbetsflöde](handling-form-submissions/creating-a-review-workflow.md)
    + [Konfigurera anpassat formulär för att starta arbetsflödet](handling-form-submissions/configuring-adaptive-form-to-trigger-workflow.md)
    + [Visar sidan Tack](handling-form-submissions/submitting-adaptive-forms-thank-you-page-article-use.md)
@@ -41,7 +41,7 @@ ht-degree: 1%
    + [Betalningstid för begärandearbetsflöde](handling-form-submissions/paid-time-off-request-workflow.md)
    + [Konfigurera anpassat formulär som ska utlösa AEM Workflow - video](handling-form-submissions/configure-af-to-trigger-aem-workflow.md)
    + [Anpassa meddelande om tilldelning av uppgift](handling-form-submissions/customize-assign-task-notification.md)
-+ Användbara integreringar {#some-useful-integrations}
++ Användbara integreringar{#some-useful-integrations}
    + [Autentisering med två faktorer](some-useful-integrations/two-factor-authentication.md)
    + [OCR-dataextrahering](some-useful-integrations/ocr-data-extraction.md)
    + [Listrutor för överlappande](some-useful-integrations/geonames-org.md)
@@ -49,7 +49,7 @@ ht-degree: 1%
    + [Skicka e-post med SendGrid](some-useful-integrations/send-grid.md)
    + [Lagra formulärdata i Azure Storage](some-useful-integrations/store-form-data-in-azure-storage.md)
    + [Fyll i formulär med Azure Blob](some-useful-integrations/fetch-form-data-from-azure-storage.md)
-+ Skapar OSGi-paketet {#creating-your-first-osgi-bundle}
++ Skapa OSGi-paket {#creating-your-first-osgi-bundle}
    + [1 - Konfigurera miljön](creating-your-first-osgi-bundle/create-your-first-osgi-bundle.md)
    + [2 - Skapa OSGi-tjänst](creating-your-first-osgi-bundle/create-osgi-service.md)
    + [3 - Skapa Sling Servlet](creating-your-first-osgi-bundle/create-servlet.md)
@@ -106,18 +106,18 @@ ht-degree: 1%
    + [Förifyll HTML5 Forms](adaptive-forms/prepopulating-html5-forms-in-aem-forms-article.md)
    + [Formulärdatamodell med Salesforce](adaptive-forms/using-adaptive-forms-with-sales-force-integration-tutorial.md)
    + [Lägga till objekt dynamiskt i urvalskomponenten](adaptive-forms/choice-group-items-adding-dynamically-article.md)
-+ Fyll ett PDF-formulär med ChatBot{#chatbot-and-aem-forms}
++ Fylla i ett PDF-formulär med ChatBot{#chatbot-and-aem-forms}
    + [1 - Introduktion](chatbot-and-aem-forms/introduction.md)
    + [2 - Tolka ChatBot-data](chatbot-and-aem-forms/parse-chat-bot-data.md)
    + [3 - Skapa PDF](chatbot-and-aem-forms/merge-data-with-template.md)
-+ Core-Components-baserade formulär {#core-component-based-forms}
++ Core-Components-baserade formulär{#core-component-based-forms}
    + [Få åtkomst till formulärdata med GuideBridge API](core-components/submit-data-using-guidebridge-api.md)
-+ Markera och samla ihop innehåll i DAM-mappen {#select-dam-folder-content}
++ Välja och samla ihop innehåll i DAM-mappen{#select-dam-folder-content}
    + [1 - Introduktion](display-and-assemble-dam-folder-contents/introduction.md)
    + [2 - Fyll i alternativgrupp](display-and-assemble-dam-folder-contents/populating-choice-group-with-dam-folder-content.md)
    + [3 - Sammanställa valda resurser](display-and-assemble-dam-folder-contents/assemble-selected-newsletters.md)
    + [4 - Distribuera resurserna lokalt](display-and-assemble-dam-folder-contents/deploy-on-your-system.md)
-+ Fylla i anpassat formulär i förväg med formulärdatamodell {#prefill-fdm-db}
++ Fylla i anpassat formulär i förväg med hjälp av formulärdatamodell{#prefill-fdm-db}
    + [1 - Introduktion](prefill-fdm-db/introduction.md)
    + [2 - Skapa databastabeller](prefill-fdm-db/create-database-tables.md)
    + [3 - Konfigurera formulärdatamodell](prefill-fdm-db/configuring-form-data-model.md)
@@ -129,21 +129,21 @@ ht-degree: 1%
    + [Navigera mellan flikar med kapslade paneler](ui-tips-tricks/nested-panels.md)
    + [Lägg till ikoner på navigeringsflikar](ui-tips-tricks/active-complete.md)
    + [Fyll i fält automatiskt](ui-tips-tricks/auto-complete.md)
-+ Anpassar inkorg{#inbox-customization}
++ Anpassa inkorg{#inbox-customization}
    + [1 - Introduktion](inbox-customization/introduction.md)
    + [2 - Lägg till anpassad kolumn](inbox-customization/add-married-column.md)
    + [3 - Använda enkel mall](inbox-customization/use-sightly-template.md)
-+ E-postformulärbilagor{#zipping-form-attachments}
++ Bifogade e-postformulär{#zipping-form-attachments}
    + [1 - Introduktion](zipping-form-attachments/introduction.md)
    + [2 - Bifogade postformulär](zipping-form-attachments/custom-process-step.md)
    + [3 - Bifogade e-postformulär](zipping-form-attachments/populating-list-of-documents.md)
    + [4 - Testa lösningen](zipping-form-attachments/test.md)
-+ Fylla i formulär med data och bilagor i förväg {#prefill-form-with-data-attachments}
++ Fylla i formulär med data och bilagor i förväg{#prefill-form-with-data-attachments}
    + [1 - Introduktion](prefill-form-with-data-attachments/introduction.md)
    + [2 - Skapa anpassad sändning](prefill-form-with-data-attachments/create-custom-submit.md)
    + [3 - Skapa OSGi-konfiguration](prefill-form-with-data-attachments/create-osgi-configuration.md)
    + [4 - Skapa förifyllningstjänst](prefill-form-with-data-attachments/create-prefill-service.md)
-+ Lagrar och hämtar anpassat formulär {#store-and-retrieve-af-with-2fa}
++ Lagra och hämta adaptiv form{#store-and-retrieve-af-with-2fa}
    + [1 - Introduktion](store-and-retrieve-af-with-2fa/introduction.md)
    + [2 - Konfigurera Source](store-and-retrieve-af-with-2fa/configure-data-source.md)
    + [3 - Lagra bifogade formulär](store-and-retrieve-af-with-2fa/store-form-attachments.md)
@@ -155,13 +155,13 @@ ht-degree: 1%
    + [9 - Skapa huvudformuläret](store-and-retrieve-af-with-2fa/create-the-main-adaptive-form.md)
    + [10 - Skapa formuläret Mitt konto](store-and-retrieve-af-with-2fa/create-the-myaccount-form.md)
    + [11 - Distribuera exemplet](store-and-retrieve-af-with-2fa/deploy-this-sample.md)
-+ Importera data från PDF-filen {#import-data-from-pdf-form}
++ Importera data från PDF-fil{#import-data-from-pdf-form}
    + [1 - Introduktion](import-data-from-pdf-form/introduction.md)
    + [2 - Skapa adaptiv form](import-data-from-pdf-form/create-adaptive-form.md)
    + [3 - Skapa OSGi-tjänst](import-data-from-pdf-form/create-osgi-service.md)
    + [4 - Fyll i adaptiv form](import-data-from-pdf-form/populate-adaptive-form.md)
    + [5 - Testa lösningen](import-data-from-pdf-form/test-the-solution.md)
-+ Exporterar skickade data i CSV-format {#export-submitted-data-csv-format}
++ Exporterar skickade data i CSV-format{#export-submitted-data-csv-format}
    + [Exportera skickade data](export-submitted-data-csv-format/export-submitted-data-csv.md)
 + HTML5 Forms{#html5-forms}
    + [Skapa HTML5-formulär](html5-forms/create-html5-form.md)
@@ -192,12 +192,12 @@ ht-degree: 1%
    + [9 - Skapa ursprungligt formulär](sign-multiple-documents/create-initial-form.md)
    + [10 - Skapa formulär för signering](sign-multiple-documents/create-forms-for-signing.md)
    + [11 - Testa lösningen](sign-multiple-documents/testing-and-trouble-shooting.md)
-+ Anpassade arbetsflödessteg {#custom-workflow-steps}
++ Anpassade arbetsflödessteg{#custom-workflow-steps}
    + [Extrahera nod från XML-dokument](custom-workflow-steps/extract-xml-node.md)
    + [Spara dokumentet i filsystemet](custom-workflow-steps/write-payload-document.md)
    + [Spara skickade data i strängvariabel](custom-workflow-steps/save-submitted-data-in-string-variable.md)
    + [Extrahera dokument från listan med dokument](custom-workflow-steps/extract-document-from-list.md)
-+ Anpassad arbetsflödeskomponent {#custom-workflow-component}
++ Anpassad arbetsflödeskomponent{#custom-workflow-component}
    + [1-Introduktion](custom-workflow-component/introduction.md)
    + [2-Skriv java-kod](custom-workflow-component/custom-process-step-aem-workflow.md)
    + [Komponent för 3-Skapa arbetsflöde](custom-workflow-component/custom-workflow-component.md)
@@ -210,11 +210,11 @@ ht-degree: 1%
    + [Formulärdatamodellvariabel](variables-aem-workflow/form-data-model.md)
    + [Regelredigeraren i AEM Workflow](variables-aem-workflow/part5.md)
    + [Logga arbetsflödesvariabler](variables-aem-workflow/part6.md)
-+ Granska formulärdata {#review-form-data}
++ Granska formulärdata{#review-form-data}
    + [1 - Introduktion](review-form-data/introduction.md)
    + [2 - Skapa komponent](review-form-data/create-component.md)
    + [3 - Distribuera resurser](review-form-data/deploy-on-your-system.md)
-+ Lagrar och hämtar formulärdata i MySQL DB{#storing-and-retrieving-form-data}
++ Lagra och hämta formulärdata i MySQL DB{#storing-and-retrieving-form-data}
    + [Introduktion](storing-retrieving-form-data/introduction.md)
    + [Konfigurera Source](storing-retrieving-form-data/part1.md)
    + [Tjänst för att lagra data](storing-retrieving-form-data/part3.md)
@@ -222,27 +222,27 @@ ht-degree: 1%
    + [Klientbibliotek](storing-retrieving-form-data/part4.md)
    + [Adaptiv formulärmall](storing-retrieving-form-data/part5.md)
    + [Distribuera exempelresurser](storing-retrieving-form-data/part6.md)
-+ Utlöser AEM-arbetsflöde vid inskickning av PDF-formulär{#offline-mobile-form-submission}
++ Starta AEM-arbetsflöde när PDF-formulär skickas in{#offline-mobile-form-submission}
    + [Del - 1](offline-mobile-form-submission/introduction.md)
    + [Del - 2](offline-mobile-form-submission/custom-profile.md)
    + [Del - 3](offline-mobile-form-submission/handle-form-submission.md)
    + [Del - 4](offline-mobile-form-submission/author-servlet.md)
    + [Del - 5](offline-mobile-form-submission/review-workflow.md)
    + [Del - 6](offline-mobile-form-submission/deploy-assets.md)
-+ Utlös AEM-arbetsflöde vid inskickning av mobilformulär{#trigger-aem-workflow-on-mobile-form-submission}
++ Utlösa AEM-arbetsflöde vid inskickning av mobilformulär{#trigger-aem-workflow-on-mobile-form-submission}
    + [Del - 1](trigger-aem-workflow-on-mobile-form-submission/introduction.md)
    + [Del - 2](trigger-aem-workflow-on-mobile-form-submission/handle-form-submission.md)
    + [Del - 3](trigger-aem-workflow-on-mobile-form-submission/author-servlet.md)
    + [Del - 4](trigger-aem-workflow-on-mobile-form-submission/review-workflow.md)
    + [Del - 5](trigger-aem-workflow-on-mobile-form-submission/deploy-assets.md)
-+ Frågar efter formuläröverföringar {#query-form-submissions}
++ Frågar efter formulärinskickat material{#query-form-submissions}
    + [Introduktion](query-form-submissions/introduction.md)
    + [Skapa sökbara fält](query-form-submissions/part1.md)
    + [Skapa anpassad sändning](query-form-submissions/part2.md)
    + [Skapa frågegränssnitt](query-form-submissions/part3.md)
    + [Skriva förifyllningstjänst](query-form-submissions/part4.md)
    + [Distribuera exemplet](query-form-submissions/part5.md)
-+ Visar anpassade resurstyper i Forms Portal{#listing-custom-asset-types}
++ Visar anpassade tillgångstyper i Forms Portal{#listing-custom-asset-types}
    + [Del1-Registrera anpassade tillgångstyper](listing-custom-asset-types/part1.md)
    + [Del2 - Skapa anpassad mall](listing-custom-asset-types/part2.md)
 + AEM Forms med Marketo{#aem-forms-with-marketo}
@@ -316,7 +316,7 @@ ht-degree: 1%
    + [Introduktion till Workbench](aem-forms-workbench/workbench-introduction.md)
    + [Skapa formulärprocess](aem-forms-workbench/workbench-creating-a-process.md)
    + [Felsökningsprocess](aem-forms-workbench/workbench-recording-and-testing-process.md)
-+ Interaktiv kommunikation för tryckkanaler
++ Interaktiv kommunikation för tryckkanaler 
 {#ic-print-channel-tutorial}
    + [1 - Introduktion](ic-print-channel-tutorial/introduction.md)
    + [2 - Konfigurera Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
@@ -343,8 +343,9 @@ ht-degree: 1%
    + [Använda tabellkomponent i AEM Forms Print Channel-dokument](interactive-communications/table-in-print-channel-documents-video-use.md)
    + [Generera interaktivt kommunikationsdokument för utskriftskanal med bevakade mappar](interactive-communications/generating-interactive-communications-print-document-using-api-tutorial-use.md)
    + [Anpassa textredigeraren](interactive-communications/customize-text-editor.md)
-
-+ Interaktiv kommunikation för webbkanalen {#ic-web-channel-tutorial}
++ ExL NewsLetters{#exl-newsletters}
+   + [Arkiv](./newsletters/archives.md)
++ Interaktiv kommunikation för webbkanal {#ic-web-channel-tutorial}
    + [1 - Introduktion](ic-web-channel-tutorial/introduction.md)
    + [2 - Konfigurera Tomcat](ic-web-channel-tutorial/partone.md)
    + [3 - Skapa data Source](ic-web-channel-tutorial/parttwo.md)
