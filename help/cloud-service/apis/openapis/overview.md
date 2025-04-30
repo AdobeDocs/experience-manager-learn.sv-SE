@@ -12,9 +12,9 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 58ae9e503bd278479d78d4df6ffe39356d5ec59b
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1100'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,15 @@ OpenAPI-baserade AEM-API:er stöder OAuth 2.0-autentisering, inklusive följande
 - **Autentiseringsuppgifter för OAuth-webbprogram**: Passar för webbprogram med klientkomponenter och _backend_-komponenter som har åtkomst till AEM API:er för användare. Den använder anslagstypen _permission_code_, där serverdelsservern hanterar hemligheter och token på ett säkert sätt. Mer information finns i [Autentiseringsuppgifter för OAuth-webbprogram](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential).
 
 - **Autentiseringsuppgifter för fristående program för OAuth**: Avsett för SPA som körs i webbläsaren, som behöver komma åt API:er för en användare utan serverdel. Den använder anslagstypen _permission_code_ och förlitar sig på säkerhetsmekanismer på klientsidan med PKCE (Proof Key for Code Exchange) för att skydda auktoriseringskodflödet. Mer information finns i [Autentiseringsuppgifter för fristående program för OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential).
+
+## Vilken autentiseringsmetod som ska användas{#auth-method-decision}
+
+När du bestämmer vilken autentiseringsmetod som ska användas bör du tänka på följande:
+
+![Vilken autentiseringsmetod ska användas?](./assets/overview/which-authentication-method-to-use.png)
+
+Användarautentisering (Web App eller Single Page App) ska vara standardvalet när AEM-användarkontext används. Detta garanterar att alla åtgärder i databasen tilldelas den autentiserade användaren och att användaren endast har de behörigheter som han/hon är berättigad till.
+Använda Server-till-server-kontot (eller det tekniska systemkontot) för att utföra åtgärder för en enskild användares räkning, vilket åsidosätter säkerhetsmodellen och medför risker som eskalering av behörigheter och felaktig granskning.
 
 ## Skillnad mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App jämfört med Single Page App{#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials}
 
