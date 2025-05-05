@@ -55,7 +55,7 @@ Adobe Asset Link har stöd för InDesign direktlänkar mellan Adobe Asset Link o
 
 >[!NOTE]
 >
->Använd endast Adobe Creative Cloud Enterprise ID eller Federated ID. Kontrollera att du [konfigurerar AEM för Adobe Asset Link](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html).
+>Använd endast Adobe Creative Cloud Enterprise ID eller Federated ID. Kontrollera att du [konfigurerar AEM för Adobe Asset Link](https://helpx.adobe.com/se/enterprise/admin-guide.html/enterprise/using/adobe-asset-link.ug.html).
 
 Du kan montera en resurs i din InDesign-layout med något av följande alternativ:
 

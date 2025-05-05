@@ -202,8 +202,8 @@ Uppdatera mobilappen efter varje steg och bekräfta uppdateringen av mobilupplev
 
 Läs mer om AEM Content Services och AEM som Headless CMS på Adobe i annan dokumentation och annat material:
 
-* [Använda innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html)
-* [AEM Användarhandbok för WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+* [Använda innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE)
+* [AEM Användarhandbok för WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE)
 * [AEM WCM Core Components Component Library](https://opensource.adobe.com/aem-core-wcm-components/library.html)
 * [AEM WCM Core Components GitHub Project](https://github.com/adobe/aem-core-wcm-components)
 * [Kodexempel för komponentexport](https://github.com/Adobe-Consulting-Services/acs-aem-samples/blob/master/core/src/main/java/com/adobe/acs/samples/models/SampleComponentExporter.java)

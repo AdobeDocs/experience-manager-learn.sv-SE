@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Du kan använda batch-API:t för att skapa flera interaktiva dokument från en mall. Mallen är en interaktiv kommunikation utan data. Batch-API:t kombinerar data med en mall för att skapa en interaktiv kommunikation. API:t är användbart vid massproduktion av interaktiv kommunikation. Till exempel telefonräkningar, kreditkortsutdrag för flera kunder.
 
-[Läs mer om API för gruppgenerering](https://experienceleague.adobe.com/docs/experience-manager-65/forms/interactive-communications/generate-multiple-interactive-communication-using-batch-api.html)
+[Läs mer om API för gruppgenerering](https://experienceleague.adobe.com/docs/experience-manager-65/forms/interactive-communications/generate-multiple-interactive-communication-using-batch-api.html?lang=sv-SE)
 
 I den här artikeln finns exempelresurser för att generera interaktiva kommunikationsdokument med hjälp av batch-API:t.
 
@@ -45,7 +45,7 @@ I den här artikeln finns exempelresurser för att generera interaktiva kommunik
 
 ## Batchgenerering med REST-begäranden
 
-Du kan anropa [batch-API:t](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html) via REST-begäranden. Du kan visa REST-slutpunkter för andra program för att anropa API:t för att generera dokument.
+Du kan anropa [batch-API:t](https://helpx.adobe.com/se/experience-manager/6-5/forms/javadocs/index.html) via REST-begäranden. Du kan visa REST-slutpunkter för andra program för att anropa API:t för att generera dokument.
 De exempelresurser som tillhandahålls visar REST-slutpunkten för generering av interaktiva kommunikationsdokument. Servern accepterar följande parametrar:
 
 * fileName - Sökväg till datafilen i filsystemet.

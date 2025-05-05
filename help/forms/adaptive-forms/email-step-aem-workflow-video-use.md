@@ -43,7 +43,7 @@ Så här kör du exemplet på datorn:
 1. [Distribuera Developing with service user bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 
 1. [Hämta och installera setvalue-paketet](/help/forms/assets/common-osgi-bundles/SetValueApp.core-1.0-SNAPSHOT.jar)Det här paketet innehåller koden för att skapa metadataegenskaperna som en del av arbetsflödets processsteg.
-1. [Konfigurera daglig CQ-e-posttjänst](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html)
+1. [Konfigurera daglig CQ-e-posttjänst](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/notification.html)
 1. [Importera och installera resurser som är associerade med den här artikeln med hjälp av pakethanteraren i CRX](assets/emaildoraemformskt.zip)
 1. Starta det [adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled). Fyll i de obligatoriska fälten och skicka.
 1. Du bör få ett e-postmeddelande med DocumentOfRecord som en bilaga

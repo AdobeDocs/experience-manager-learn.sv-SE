@@ -79,7 +79,7 @@ Vi använder AEM bästa praxis och använder:
 
 ## Enhetstestning och Adobe Cloud Manager {#unit-testing-and-adobe-cloud-manager}
 
-[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html) integrerar körning av enhetstest och [rapportering av kodtäckning](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html) i sin CI/CD-pipeline för att uppmuntra och främja bästa sättet att testa AEM-kod.
+[Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=sv-SE) integrerar körning av enhetstest och [rapportering av kodtäckning](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html?lang=sv-SE) i sin CI/CD-pipeline för att uppmuntra och främja bästa sättet att testa AEM-kod.
 
 Även om kod för enhetstestning är en bra vana för alla kodbaser är det viktigt att kunna dra nytta av kodkvalitetstestningen och rapporteringsmöjligheterna genom att tillhandahålla enhetstester som Cloud Manager kan köra när man använder Cloud Manager.
 

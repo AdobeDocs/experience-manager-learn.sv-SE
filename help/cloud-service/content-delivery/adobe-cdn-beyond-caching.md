@@ -65,7 +65,7 @@ Implementeringen av dessa avancerade funktioner omfattar två steg:
 
 1. **Uppdatera CDN-konfigurationsfilen**: Uppdatera `cdn.yaml`-filen i ditt AEM-projekt med de nödvändiga konfigurationerna. Konfigurationerna läggs till som regler och de följer en regelsyntax. Regeln innehåller tre huvudkomponenter: `name`, `when` och `action`.
 
-2. **Distribuera CDN-konfigurationsfilen**: Distribuera den uppdaterade `cdn.yaml` filen med hjälp av Cloud Manager konfigurationsflöde. Mer information finns i [Distribuera regler via Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager).
+2. **Distribuera CDN-konfigurationsfilen**: Distribuera den uppdaterade `cdn.yaml` filen med hjälp av Cloud Manager konfigurationsflöde. Mer information finns i [Distribuera regler via Cloud Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager).
 
 ### Exempel
 
@@ -89,15 +89,15 @@ data:
 
 ## Relaterade självstudier
 
-[Skydda webbplatser med trafikfilterregler](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
+[Skydda webbplatser med trafikfilterregler](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
 
-[Konfigurera och distribuera CDN-regel för HTTP Header-validering](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule)
+[Konfigurera och distribuera CDN-regel för HTTP Header-validering](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule)
 
-[Töm CDN-cachen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
+[Töm CDN-cachen](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
 
-[Konfigurera CDN-felsidor](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
+[Konfigurera CDN-felsidor](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
 
-[Konfigurera trafik vid CDN](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
+[Konfigurera trafik vid CDN](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
 
-[Konfigurerar CDN-autentiseringsuppgifter och autentisering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
+[Konfigurerar CDN-autentiseringsuppgifter och autentisering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 

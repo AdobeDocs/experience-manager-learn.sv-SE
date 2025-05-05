@@ -26,7 +26,7 @@ Du kan använda en liten mall för att formatera de data som ska visas i inkorgs
 
 ## Liten mall
 
-Här följer en enkel mall. Koden i mallen visas med ikonen beroende på inkomsten. Ikonerna är tillgängliga som en del av [URI-ikonbiblioteket ](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) som medföljer AEM.
+Här följer en enkel mall. Koden i mallen visas med ikonen beroende på inkomsten. Ikonerna är tillgängliga som en del av [URI-ikonbiblioteket ](https://helpx.adobe.com/se/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) som medföljer AEM.
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">
@@ -80,7 +80,7 @@ return val;
 
 >[!NOTE]
 >
->I den här artikeln förutsätts att du har installerat [exempelarbetsflödet](assets/review-workflow.zip) och [exempelformuläret](assets/snap-form.zip) från [föregående artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html) i den här serien.
+>I den här artikeln förutsätts att du har installerat [exempelarbetsflödet](assets/review-workflow.zip) och [exempelformuläret](assets/snap-form.zip) från [föregående artikel](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/inbox-customization/add-married-column.html?lang=sv-SE) i den här serien.
 
 * [Logga in för att krascha som administratörsanvändare](http://localhost:4502/crx/de/index.jsp)
 * [importera enkel mall](assets/sightly-template.zip)

@@ -21,7 +21,7 @@ ht-degree: 0%
 
 I den här guiden får du hjälp med att skapa ett anpassat steg för att fylla i listvariabler av typen Array List med bilagor och bilagenamn i Adobe Experience Manager. Dessa variabler är viktiga för arbetsflödeskomponenten Skicka e-post.
 
-Om du inte är van vid att skapa ett OSGi-paket följer du dessa [instruktioner](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en).
+Om du inte är van vid att skapa ett OSGi-paket följer du dessa [instruktioner](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=sv-SE).
 
 Koden i det anpassade processsteget utför följande åtgärder:
 

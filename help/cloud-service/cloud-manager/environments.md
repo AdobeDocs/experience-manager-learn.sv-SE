@@ -20,6 +20,6 @@ ht-degree: 0%
 
 # Använda Adobe Cloud Manager - miljöer
 
-[Cloud Manager-miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html) består av AEM Author, AEM Publish och Dispatcher. Olika miljöer har stöd för roller och kan användas med olika CI/CD-pipeline. Cloud Manager-miljöer har vanligtvis en produktionsmiljö, en scenmiljö och en utvecklingsmiljö.
+[Cloud Manager-miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/manage-your-environment.html?lang=sv-SE) består av AEM Author, AEM Publish och Dispatcher. Olika miljöer har stöd för roller och kan användas med olika CI/CD-pipeline. Cloud Manager-miljöer har vanligtvis en produktionsmiljö, en scenmiljö och en utvecklingsmiljö.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318?quality=12&learn=on)

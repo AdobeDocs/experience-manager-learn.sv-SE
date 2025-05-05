@@ -44,4 +44,4 @@ Adresskomponenten kan nu användas i ett adaptivt formulär
 
 ## Distribuera projektet till molnmiljön
 
-Om allt ser bra ut i den lokala utvecklingsmiljön är nästa steg att distribuera till [molninstansen med hjälp av molnhanteraren.](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git)
+Om allt ser bra ut i den lokala utvecklingsmiljön är nästa steg att distribuera till [molninstansen med hjälp av molnhanteraren.](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git)

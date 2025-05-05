@@ -24,7 +24,7 @@ Detta är en djupdykning i hur du får åtkomst till loggar i AEM as a Cloud Ser
 
 ## Innehåll som behandlas i den här videon
 
-+ Loggfiler [Översikt](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html)
++ Loggfiler [Översikt](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html?lang=sv-SE)
 + Åtkomst till loggfiler via användargränssnittet
 + Använda Adobe CLI
    + [Adobe I/O Extensible CLI](https://github.com/adobe/aio-cli)

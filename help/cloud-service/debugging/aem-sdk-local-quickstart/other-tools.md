@@ -83,7 +83,7 @@ Förklara frågan finns på:
 
 ![QueryBuilder-felsökning](./assets/other-tools/query-debugger.png)
 
-QueryBuilder-felsökningsverktyget är ett webbaserat verktyg som hjälper dig att felsöka och förstå sökfrågor med AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html) -syntax.
+QueryBuilder-felsökningsverktyget är ett webbaserat verktyg som hjälper dig att felsöka och förstå sökfrågor med AEM [QueryBuilder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=sv-SE) -syntax.
 
 Felsökaren för QueryBuilder finns på:
 

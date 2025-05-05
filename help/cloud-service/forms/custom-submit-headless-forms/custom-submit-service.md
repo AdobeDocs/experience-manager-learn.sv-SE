@@ -118,7 +118,7 @@ Detta distribuerar koden som ett enda paket till författarinstansen
 ## Skicka koden till molnhanteraren och distribuera koden
 
 När du har verifierat koden på din lokala instans skickar du koden till din molninstans.
-Skicka ändringarna till din lokala Git-databas och sedan till molnhanterardatabasen. Du kan läsa artiklarna [Git-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html), [push AEM project into cloud manager database](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html) och [deploying to the development environment](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html) .
+Skicka ändringarna till din lokala Git-databas och sedan till molnhanterardatabasen. Du kan läsa artiklarna [Git-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git.html?lang=sv-SE), [push AEM project into cloud manager database](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/push-project-to-cloud-manager-git.html?lang=sv-SE) och [deploying to the development environment](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/deploy-to-dev-environment.html?lang=sv-SE) .
 
 När piplexin har körts korrekt bör du kunna koppla formulärskickaåtgärden till den anpassade överföringshanteraren, som visas på skärmbilden nedan
 ![submit-action](./assets/configure-submit-action.png)

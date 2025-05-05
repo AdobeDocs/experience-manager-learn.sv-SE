@@ -41,4 +41,4 @@ Vi älskar bidrag från vår community! Om du vill gå ett steg längre än medv
 
 ## Säkerhetsproblem
 
-Säkerhetsproblem ska inte rapporteras i den här felspåraren. Skicka istället [in ett ärende till våra säkerhetsexperter](https://helpx.adobe.com/security/alertus.html)
+Säkerhetsproblem ska inte rapporteras i den här felspåraren. Skicka istället [in ett ärende till våra säkerhetsexperter](https://helpx.adobe.com/se/security/alertus.html)

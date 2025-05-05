@@ -100,7 +100,7 @@ Nedan visas de steg på hög nivå som utförs i videon ovan.
 
 ## HTML (HTML Template Language) och dialogrutor {#htl-dialogs}
 
-HTML mallspråk eller **[HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html)** är ett lättviktsmallspråk på serversidan som används av AEM-komponenter för att återge innehåll.
+HTML mallspråk eller **[HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/getting-started.html?lang=sv-SE)** är ett lättviktsmallspråk på serversidan som används av AEM-komponenter för att återge innehåll.
 
 **Dialogrutor** definierar de konfigurationer som är tillgängliga för en komponent.
 
@@ -262,7 +262,7 @@ Sedan gör vi några uppdateringar av `HelloWorldModel`-delningsmodellen för at
 
    Modellinstansen `HelloWorld` är nu tillgänglig i HTML via variabeln `model` med hjälp av `HelloWord`. De här metoderna kan använda förkortad metodsyntax: `${model.getTitle()}` kan förkortas till `${model.title}`.
 
-   På samma sätt injiceras alla HTML-skript med [globala objekt](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html) som du kan komma åt med samma syntax som för Sling Model-objekt.
+   På samma sätt injiceras alla HTML-skript med [globala objekt](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html?lang=sv-SE) som du kan komma åt med samma syntax som för Sling Model-objekt.
 
    ```html
    <div class="cmp-helloworld" data-cmp-is="helloworld" 
@@ -285,7 +285,7 @@ Sedan gör vi några uppdateringar av `HelloWorldModel`-delningsmodellen för at
 
 Klientbibliotek, `clientlibs` för kort, innehåller en mekanism för att organisera och hantera CSS- och JavaScript-filer som krävs för en AEM Sites-implementering. Bibliotek på klientsidan är standardsättet att inkludera CSS och JavaScript på en sida i AEM.
 
-Modulen [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html) är ett frikopplat [webpack](https://webpack.js.org/) -projekt som är integrerat i byggprocessen. Detta gör att du kan använda populära front-end-bibliotek som Sass, LESS och TypeScript. Modulen `ui.frontend` har utforskats mer ingående i kapitlet [Bibliotek på klientsidan](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
+Modulen [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=sv-SE) är ett frikopplat [webpack](https://webpack.js.org/) -projekt som är integrerat i byggprocessen. Detta gör att du kan använda populära front-end-bibliotek som Sass, LESS och TypeScript. Modulen `ui.frontend` har utforskats mer ingående i kapitlet [Bibliotek på klientsidan](/help/getting-started-wknd-tutorial-develop/project-archetype/client-side-libraries.md).
 
 Uppdatera sedan CSS-formaten för komponenten `HelloWorld`.
 

@@ -80,7 +80,7 @@ Följande alternativ är tillgängliga för att anpassa felsidor:
 
 I den här självstudiekursen får du lära dig hur du anpassar felsidor med direktivet _ErrorDocument_, _ACS AEM Commons felsidhanterare_ och alternativen _CDN-felsidor_ . Om du vill följa den här självstudiekursen behöver du:
 
-- Den [lokala AEM-utvecklingsmiljön](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview) eller AEM as a Cloud Service-miljön. Alternativet _CDN-felsidor_ kan användas i AEM as a Cloud Service-miljön.
+- Den [lokala AEM-utvecklingsmiljön](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview) eller AEM as a Cloud Service-miljön. Alternativet _CDN-felsidor_ kan användas i AEM as a Cloud Service-miljön.
 
 - [AEM WKND-projektet](https://github.com/adobe/aem-guides-wknd) för att anpassa felsidor.
 
@@ -95,7 +95,7 @@ I den här självstudiekursen får du lära dig hur du anpassar felsidor med dir
   $ mvn clean install -PautoInstallSinglePackage -PautoInstallSinglePackagePublish
   ```
 
-- I AEM as a Cloud Service-miljö ska du distribuera AEM WKND-projektet genom att köra [pipelinen i full stack](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline). Se exemplet med [icke-produktionspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-non-production-pipeline).
+- I AEM as a Cloud Service-miljö ska du distribuera AEM WKND-projektet genom att köra [pipelinen i full stack](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline). Se exemplet med [icke-produktionspipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-non-production-pipeline).
 
 - Kontrollera att WKND-webbplatssidorna återges korrekt.
 
@@ -375,7 +375,7 @@ Distribuera slutligen den konfigurerade CDN-regeln till AEM as a Cloud Service-m
 
 1. I Cloud Manager går du till avsnittet **Pipelines**.
 
-1. Skapa en ny pipeline eller välj den befintliga pipeline som endast distribuerar **Config**-filerna. Detaljerade steg finns i [Skapa en konfigurationspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager).
+1. Skapa en ny pipeline eller välj den befintliga pipeline som endast distribuerar **Config**-filerna. Detaljerade steg finns i [Skapa en konfigurationspipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager).
 
 1. Klicka på knappen **Kör** för att distribuera CDN-regeln.
 
@@ -401,6 +401,6 @@ I den här självstudiekursen lärde du dig om standardfelsidor, varifrån felsi
 
 ## Ytterligare resurser
 
-- [Konfigurera CDN-felsidor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
+- [Konfigurera CDN-felsidor](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-error-pages)
 
-- [Cloud Manager - Konfigurera pipelines](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)
+- [Cloud Manager - Konfigurera pipelines](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline)

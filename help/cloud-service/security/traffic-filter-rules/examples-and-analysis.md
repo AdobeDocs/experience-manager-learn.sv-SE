@@ -163,7 +163,7 @@ Den här gången ska du dock se **Blockerade begäranden** och motsvarande värd
 
 Låt oss **förhindra DoS-attacker** genom att blockera begäranden från en IP-adress som gör 100 förfrågningar per sekund, så att den blockeras i 5 minuter.
 
-- Lägg till följande trafikfilterregel [för hastighetsbegränsning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#ratelimit-structure) i WKND-projektets `/config/cdn.yaml`-fil.
+- Lägg till följande trafikfilterregel [för hastighetsbegränsning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=sv-SE#ratelimit-structure) i WKND-projektets `/config/cdn.yaml`-fil.
 
 ```yaml
 kind: CDN
@@ -227,7 +227,7 @@ Trafikfilterregelexemplen hittills kan konfigureras av alla Sites- och Forms-kun
 
 Sedan ska vi utforska upplevelsen för en kund som har köpt en licens för Förbättrat skydd eller WAF-DDoS-skydd, som låter dem konfigurera avancerade regler för att skydda webbplatser från mer sofistikerade attacker.
 
-Aktivera WAF-DDoS-skyddet för ditt program innan du fortsätter, enligt beskrivningen i dokumentationen för [installationsstegen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en#setup) för trafikfilterreglerna.
+Aktivera WAF-DDoS-skyddet för ditt program innan du fortsätter, enligt beskrivningen i dokumentationen för [installationsstegen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=sv-SE#setup) för trafikfilterreglerna.
 
 #### Utan WAFFlags
 
@@ -264,7 +264,7 @@ Observera hur panelerna **WAF Flags distribution** och **Top-attacker** visar yt
 
 Nu ska vi lägga till en WAF-regel som innehåller egenskapen `wafFlags` som en del av egenskapen `action` och **blockera simulerade attackförfrågningar**.
 
-Ur syntaxperspektiv liknar WAF-reglerna dem som tidigare sågs, men egenskapen `action` refererar till ett eller flera `wafFlags`-värden. Mer information om `wafFlags` finns i avsnittet [WAF-flagglista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#waf-flags-list).
+Ur syntaxperspektiv liknar WAF-reglerna dem som tidigare sågs, men egenskapen `action` refererar till ett eller flera `wafFlags`-värden. Mer information om `wafFlags` finns i avsnittet [WAF-flagglista](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=sv-SE#waf-flags-list).
 
 - Lägg till följande regel i WKND-projektets `/config/cdn.yaml`-fil. Observera att regeln `block-waf-flags` innehåller några av de wafFlags som hade funnits i instrumentpanelsverktyget när den attackerades med simulerad skadlig trafik. Det är god praxis att över tiden analysera loggar för att avgöra vilka nya regler som ska deklareras, allt eftersom hotelselandskapet utvecklas.
 
@@ -352,7 +352,7 @@ Bekanta dig med [bästa praxis](./best-practices.md) som rekommenderas för att 
 
 ## Ytterligare resurser
 
-[Regelsyntax för trafikfilter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#rules-syntax)
+[Regelsyntax för trafikfilter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=sv-SE#rules-syntax)
 
-[CDN-loggformat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html#cdn-log-format)
+[CDN-loggformat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=sv-SE#cdn-log-format)
 

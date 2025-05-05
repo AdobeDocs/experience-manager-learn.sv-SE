@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Lär dig hur man konfigurerar dokumentredigering så att AEM författare kan redigera och publicera dokument med Microsoft Word eller Google Docs.
 
-Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html) om du vill ha fullständig information om hur du konfigurerar dokumentredigering.
+Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/edge-delivery/overview.html?lang=sv-SE) om du vill ha fullständig information om hur du konfigurerar dokumentredigering.
 
 ## Komma igång med dokumentutveckling
 

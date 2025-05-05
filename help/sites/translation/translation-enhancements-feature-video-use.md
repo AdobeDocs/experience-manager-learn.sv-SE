@@ -42,6 +42,6 @@ Nu kan man snabbt och enkelt skapa flerspråkiga översättningsprojekt direkt f
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Översätter innehåll för flerspråkiga webbplatser](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/translation.html)
-* [https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html)
-* [Bästa praxis för översättning](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-bp.html)
+* [Översätter innehåll för flerspråkiga webbplatser](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/translation.html)
+* [https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/tc-manage.html)
+* [Bästa praxis för översättning](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/tc-bp.html)

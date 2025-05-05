@@ -39,31 +39,31 @@ Det finns flera saker du måste övervaka för att säkerställa problemfri drif
 
 ### Rutinunderhåll
 
-#### [indexunderhåll](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html?lang=en)
+#### [indexunderhåll](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/practices/best-practices-for-queries-and-indexing.html?lang=sv-SE)
 
 Med index kan frågor köras så snabbt de kan, vilket frigör resurser för andra åtgärder. Se till att indexen är i toppform! AEM avbryter frågor som rör sig i stället för att använda ett index för att förhindra att en felaktig fråga påverkar AEM övergripande prestanda.
 
-#### [Tjärkompakation-/revideringsrensning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html?lang=en)
+#### [Tjärkompakation-/revideringsrensning](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/revision-cleanup.html?lang=sv-SE)
 
 Varje uppdatering av databasen skapar en ny innehållsrevision. Det innebär att databasstorleken ökar för varje uppdatering. För att undvika okontrollerad databastillväxt måste gamla versioner rensas bort för att frigöra diskutrymme.
 
-#### [Rensa Lucene-binärfiler](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-dashboard.html#automated-maintenance-tasks)
+#### [Rensa Lucene-binärfiler](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-dashboard.html?lang=sv-SE#automated-maintenance-tasks)
 
 Rensa lucene-binärfiler och minska storlekskraven för det datalager som körs.
 
-#### [Skräpinslag för datalager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html)
+#### [Skräpinslag för datalager](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/data-store-garbage-collection.html?lang=sv-SE)
 
 När en resurs i AEM tas bort kan referensen till den underliggande datalagreposten tas bort från nodhierarkin, men själva datalagreposten finns kvar. Den här dataarkivposten utan referenser blir&quot;skräp&quot; som inte behöver behållas. Om det finns ett antal resurser som inte refereras är det bra att ta bort dem, bevara utrymme, optimera säkerhetskopieringen och prestanda för filsystemsunderhåll.
 
-#### [Rensa arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/workflows-administering.html)
+#### [Rensa arbetsflöde](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/workflows-administering.html?lang=sv-SE)
 
 Om du minimerar antalet arbetsflödesinstanser ökas arbetsflödesmotorns prestanda, så att du regelbundet kan rensa avslutade eller pågående arbetsflödesinstanser från databasen.
 
-#### [Underhåll av granskningslogg](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html)
+#### [Underhåll av granskningslogg](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/operations-audit-log.html?lang=sv-SE)
 
 AEM som är kvalificerade för granskningsloggning genererar mycket arkiverade data. Dessa data kan snabbt växa med tiden på grund av replikeringar, överföringar av resurser och andra systemaktiviteter.
 
-#### [Säkerhet](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=en)
+#### [Säkerhet](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=sv-SE)
 
 Se till att god praxis för checklistan för säkerhet följs noga för att säkerställa den säkraste instansen av AEM.
 
@@ -75,19 +75,19 @@ Se till att god praxis för checklistan för säkerhet följs noga för att säk
 
 Försök att inte använda anpassade komponenter - använd [kärnkomponenter](https://www.aemcomponents.dev/). Målet bör vara att endast använda kärnkomponenterna 80-90 % av tiden och anpassade komponenter sparsamt. Detta kräver ofta ett nytt sätt att se på komponenterna på en sida - du måste inse att komponenterna enkelt kan återskapas av en frontutvecklare som använder CSS. Tänk också på att dessa kärnkomponenter kan bäddas in i varandra för att uppnå ganska komplexa resultat. Bli kreativ!
 
-### [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=en)
+### [Formatsystem](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=sv-SE)
 
 Med formatsystem kan de centrala komponenterna, och även de anpassade komponenterna, få en ny look och känsla som författaren bestämmer sig för att skapa helt nya snygga komponenter. De här stilistiska ändringarna gäller vanligtvis endast för en frontenddesigner och en kunnig författare (kallas ofta&quot;superförfattare&quot;)
 
-### [Startar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/launches/overview.html?lang=en)
+### [Startar](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/launches/overview.html?lang=sv-SE)
 
 Med lanseringar kan du slutföra arbetet för att lansera en ny kampanj, försäljning eller webbplats utan att påverka de distribuerade sidorna. Dessutom kan man schemalägga att publicera dem automatiskt utan närvaro eller övervakning, så att författarna kan göra nästa veckas (eller nästa kvarts) arbete idag och inte skynda sig in i sidutvecklingen dagen innan det ska publiceras - det är verkligen TIME-presenten!)
 
-### [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html)
+### [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/fragments/content-fragments.html?lang=sv-SE)
 
 Innehållsfragment är anpassningsbara informationsdelar som enkelt kan återanvändas på hela webbplatsen. Om du behöver ändra något ändrar du bara det ursprungliga segmentet så visas uppdateringen var den än används - omedelbart!
 
-### [Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=en)
+### [Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=sv-SE)
 
 Medan du låter nästan identiskt med innehållsfragment är Experience Fragments små, synliga delar av en sida. Dessa kan också återanvändas i stor omfattning på hela webbplatsen och underhållas på en central plats inom AEM för att underlätta uppgiften att göra potentiellt globala ändringar på webbplatsen på några sekunder, inte dagar eller veckor.
 
@@ -95,7 +95,7 @@ Tänk framåt och se vad som kan återanvändas. En sidfot? Ansvarsfriskrivning?
 
 ## Allmänt
 
-Håll dig à jour med förändringar AEM genom fortsatt lärande - fastna inte i det förflutna. Använd [Experience League](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=en) och [Adobe Digital Learning Services (ADLS)](https://learning.adobe.com/) för att finslipa dina kunskaper.
+Håll dig à jour med förändringar AEM genom fortsatt lärande - fastna inte i det förflutna. Använd [Experience League](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/overview.html?lang=sv-SE) och [Adobe Digital Learning Services (ADLS)](https://learning.adobe.com/) för att finslipa dina kunskaper.
 
 ## Slutsats
 

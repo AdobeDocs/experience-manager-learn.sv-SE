@@ -40,7 +40,7 @@ Följande verktyg bör installeras lokalt:
 
 Android fungerar med följande distributionsalternativ för AEM. Alla distributioner kräver att [WKND-platsen v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) är installerad.
 
-+ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=sv-SE)
 
 Android-programmet är utformat för att ansluta till en __AEM Publish__ -miljö, men det kan hämta innehåll från AEM Author om autentisering anges i Android-programmets konfiguration.
 
@@ -75,7 +75,7 @@ Android-programmet är utformat för att ansluta till en __AEM Publish__ -miljö
 
 ### Ansluta till AEM-miljöer
 
-Om du ansluter till en AEM-redigeringsmiljö krävs [behörighet](https://github.com/adobe/aem-headless-client-java#using-authorization). [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java) ger möjlighet att använda [tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html). Så här använder du tokenbaserad klientbyggare för uppdatering av autentisering i `AdventureLoader.java` och `AdventuresLoader.java`:
+Om du ansluter till en AEM-redigeringsmiljö krävs [behörighet](https://github.com/adobe/aem-headless-client-java#using-authorization). [AEMHeadlessClientBuilder](https://github.com/adobe/aem-headless-client-java/blob/main/client/src/main/java/com/adobe/aem/graphql/client/AEMHeadlessClientBuilder.java) ger möjlighet att använda [tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=sv-SE). Så här använder du tokenbaserad klientbyggare för uppdatering av autentisering i `AdventureLoader.java` och `AdventuresLoader.java`:
 
 ```java
 /* Comment out basicAuth
@@ -229,5 +229,5 @@ Android-programmet använder två vyer för att presentera äventyrsdata i mobil
 
 ## Ytterligare resurser
 
-+ [Komma igång med AEM Headless - självstudiekurs för GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html)
++ [Komma igång med AEM Headless - självstudiekurs för GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=sv-SE)
 + [AEM Headless Client för Java](https://github.com/adobe/aem-headless-client-java)

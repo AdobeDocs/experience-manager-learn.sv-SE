@@ -24,7 +24,7 @@ I två delar av säsongen utforskar vi några saker som du kan titta på och som
 
 ## Innehåll som behandlas i den här videon
 
-+ [Cachelagring och innehållsleverans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html)
++ [Cachelagring och innehållsleverans](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE)
 + [Google Lightroom](https://developers.google.com/web/tools/lighthouse)
 
 ## Ytterligare resurser

@@ -27,7 +27,7 @@ AEM GraphQL API har en robust funktion för att returnera fullödig text som HTM
 
 >[!VIDEO](https://video.tv.adobe.com/v/342104?quality=12&learn=on)
 
-I Content Fragment Editor ger menyraden för flerradiga textfält författare standardfunktioner för RTF-formatering, som **bold**, *italics* och underline. Om du öppnar flerradsfältet i helskärmsläge aktiveras [ytterligare formateringsverktyg som Stycketyp, sök och ersätt, stavningskontroll och mycket mer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html).
+I Content Fragment Editor ger menyraden för flerradiga textfält författare standardfunktioner för RTF-formatering, som **bold**, *italics* och underline. Om du öppnar flerradsfältet i helskärmsläge aktiveras [ytterligare formateringsverktyg som Stycketyp, sök och ersätt, stavningskontroll och mycket mer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html?lang=sv-SE).
 
 >[!NOTE]
 >
@@ -63,7 +63,7 @@ Markera rutan **Översättningsbar** om innehållet ska lokaliseras. Endast RTF 
 
 När du skapar en GraphQL-fråga kan utvecklare välja olika svarstyper från `html`, `plaintext`, `markdown` och `json` från ett flerradsfält.
 
-Utvecklare kan använda [JSON Preview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html) i redigeraren för innehållsfragment för att visa alla värden i det aktuella innehållsfragmentet som kan returneras med GraphQL API.
+Utvecklare kan använda [JSON Preview](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-json-preview.html?lang=sv-SE) i redigeraren för innehållsfragment för att visa alla värden i det aktuella innehållsfragmentet som kan returneras med GraphQL API.
 
 ## GraphQL beständig fråga
 

@@ -25,4 +25,4 @@ Lär dig hur du hämtar och konfigurerar en lokal utvecklingsmiljö med AEM as a
 
 _Det `license.properties` som visas i den här videon behövs inte längre för att köra AEM SDK._
 
-Granska de här instruktionerna för att [konfigurera en fullständig lokal utvecklingsmiljö med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+Granska de här instruktionerna för att [konfigurera en fullständig lokal utvecklingsmiljö med AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=sv-SE).

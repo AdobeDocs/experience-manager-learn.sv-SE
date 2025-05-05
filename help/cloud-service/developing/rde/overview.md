@@ -35,8 +35,8 @@ Lär dig [hur du konfigurerar](./how-to-setup.md) en RDE i AEM as a Cloud Servic
 
 ## Ytterligare resurser
 
-[Introduktion till RDE-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#introduction)
+[Introduktion till RDE-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=sv-SE#introduction)
 
-[Cloud Manager CI/CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html)
+[Cloud Manager CI/CD-pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=sv-SE)
 
-[Konfigurera utvecklings-IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html)
+[Konfigurera utvecklings-IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=sv-SE)

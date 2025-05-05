@@ -24,5 +24,5 @@ Med AEM 6.3 Create Language Copy Wizard kan man skapa en språkkopia av huvudspr
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Guidad dokumentation för språkkopiering](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-wizard.html)
-* [MSM Best Practices](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/msm-best-practices.html)
+* [Guidad dokumentation för språkkopiering](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/tc-wizard.html)
+* [MSM Best Practices](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/msm-best-practices.html)

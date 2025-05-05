@@ -31,12 +31,12 @@ Arbetsflödet i Dynamic Media Classic lösningar består av tre huvudsteg:
 
 Detta är början på arbetsflödet. I det här steget samlar du in eller skapar det källinnehåll som passar i arbetsflödet som du använder och överför det till Dynamic Media Classic. Systemet har stöd för flera filtyper för bilder, video och teckensnitt, men även för PDF, Adobe Illustrator och Adobe InDesign.
 
-Se den fullständiga listan med [Filtyper som stöds](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#supported-asset-file-formats).
+Se den fullständiga listan med [Filtyper som stöds](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=sv-SE#supported-asset-file-formats).
 
 Du kan överföra källinnehåll på flera olika sätt:
 
-- Direkt från ditt skrivbord eller lokala nätverk. [Lär dig hur](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-sps-desktop-application).
-- Från en Dynamic Media Classic FTP-server. [Lär dig hur](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-files-using-via-ftp).
+- Direkt från ditt skrivbord eller lokala nätverk. [Lär dig hur](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=sv-SE#upload-files-using-sps-desktop-application).
+- Från en Dynamic Media Classic FTP-server. [Lär dig hur](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=sv-SE#upload-files-using-via-ftp).
 
 Standardläget är Från skrivbord, där du bläddrar efter filer i det lokala nätverket och startar överföringen.
 
@@ -64,11 +64,11 @@ Kräver att ersättningsbilden har samma filnamnstillägg som den ursprungliga b
 - **Skriv över i valfri mapp, samma basresursnamn oavsett tillägg**.
 Det här alternativet är den mest omfattande ersättningsregeln. Du kan överföra en ersättningsbild till en annan mapp än den ursprungliga, överföra en fil med ett annat filnamnstillägg och ersätta den ursprungliga filen. Om originalfilen finns i en annan mapp finns ersättningsbilden i den nya mappen som den överfördes till.
 
-Läs mer om alternativet [Skriv över bilder](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#using-the-overwrite-images-option).
+Läs mer om alternativet [Skriv över bilder](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=sv-SE#using-the-overwrite-images-option).
 
 Även om det inte är nödvändigt kan du vid överföring med någon av de två metoderna ovan ange jobbalternativ för just den överföringen, till exempel för att schemalägga en återkommande överföring, ange beskärningsalternativ vid överföring och många andra. Dessa kan vara värdefulla för vissa arbetsflöden, så det är värt att fundera över om de kan vara till för dig.
 
-Läs mer om [jobbalternativ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#upload-options).
+Läs mer om [jobbalternativ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=sv-SE#upload-options).
 
 Överföring är det första nödvändiga steget i ett arbetsflöde eftersom Dynamic Media Classic inte kan arbeta med innehåll som inte redan finns i systemet. Bakom scenerna under överföringen registrerar systemet alla överförda resurser i den centraliserade Dynamic Media Classic-databasen, tilldelar ett ID och kopierar det till lagringsutrymmet. Dessutom konverterar systemet bildfiler till ett format som tillåter dynamisk storleksändring och zoomning och konverterar videofiler till MP4-format (webbvänligt format).
 
@@ -97,7 +97,7 @@ På samma sätt kan du överföra huvudkällvideon till Dynamic Media Classic, o
 
 **Även om det inte finns något minimum för bildstorlek rekommenderar vi inte att du överför jättematerial.** En enorm bild kan anses vara över 4 000 pixlar. Om du överför bilder i den här storleken kan det uppstå fel, t.ex. dammkorn eller hårkors i bilden. Sådana bilder tar upp mer utrymme på Dynamic Media Classic-servern, vilket kan göra att du överskrider de avtalade lagringsgränserna.
 
-Läs mer om [Överför filer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html#uploading-your-files).
+Läs mer om [Överför filer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/uploading-files.html?lang=sv-SE#uploading-your-files).
 
 ## Steg 2: Författare (och Publish)
 
@@ -139,14 +139,14 @@ Nyligen överförda och publicerade mediefiler visas direkt, medan uppdaterade m
 
 Detta är vanligtvis inget problem om det inte har inträffat ett fel och bilden/resursen har samma namn som den tidigare publicerade versionen, men det finns ett problem med bilden. Du kanske av misstag överförde en version med låg upplösning eller så godkändes bilden inte av art director. I det här fallet vill du återkalla originalbilden och ersätta den med en ny version med samma resurs-ID.
 
-Lär dig hur du [rensar cachen manuellt för URL:er som behöver uppdateras](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/invalidate-cdn-cache-dynamic-media.html?lang=en).
+Lär dig hur du [rensar cachen manuellt för URL:er som behöver uppdateras](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/invalidate-cdn-cache-dynamic-media.html?lang=sv-SE).
 
 >[!TIP]
 >
 >För att undvika problem med cachningsfördröjning ska du alltid arbeta i förväg - en kväll, en dag, två veckor osv. Bygg upp i tid för att interna parter ska godkänna eller godkänna frågor och svar innan de skickar ut materialet till allmänheten. Du kan till och med jobba en kväll innan och göra ändringar och publicera om kvällen. På morgonen har 10 timmar gått och cacheminnet uppdateras med rätt bild.
 
-- Läs mer om [Skapa ett publiceringsjobb](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html#creating-a-publish-job).
-- Läs mer om [Publicering](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html).
+- Läs mer om [Skapa ett publiceringsjobb](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html?lang=sv-SE#creating-a-publish-job).
+- Läs mer om [Publicering](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/upload-publish/publishing-files.html?lang=sv-SE).
 
 ## Steg 3: Leverera
 
@@ -184,4 +184,4 @@ Du kan förhandsvisa dina bilder i flera storlekar med förhandsvisningen av **s
 
 Du kan också använda alternativet **Zooma** för att förhandsvisa bilden i en av många fördefinierade zoomförinställningar, som baseras på olika inbyggda zoomningsvisningsprogram.
 
-Läs mer om [Förhandsgranska Assets](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/previewing-asset.html).
+Läs mer om [Förhandsgranska Assets](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/previewing-asset.html?lang=sv-SE).

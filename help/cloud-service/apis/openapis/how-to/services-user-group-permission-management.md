@@ -90,7 +90,7 @@ Så här uppdaterar du behörigheter för tjänstanvändargruppen (till exempel 
 
 - Verkställ och skicka ändringarna till databasen.
 
-- Distribuera ändringarna till AEM-instansen med [Cloud Manager-pipeline i full hög](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline).
+- Distribuera ändringarna till AEM-instansen med [Cloud Manager-pipeline i full hög](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline).
 
 - Du kan också verifiera användargruppens behörigheter i vyn **Behörigheter**. Navigera till **Verktyg** > **Säkerhet** > **Behörigheter** i AEM-instansen.
 

@@ -24,7 +24,7 @@ I den tidigare versionen av AEM Form(6.5) behövde man skriva egen kod för att 
 
 I den här artikeln beskrivs stegen som krävs för att förifylla/förifylla anpassningsbara formulär med data som hämtats från SharePoint lista med hjälp av förifyllningstjänsten för formulärdatamodellen.
 
-I den här artikeln förutsätts att du har [konfigurerat adaptivt formulär för att skicka data till SharePoint-listan.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=en#connect-af-sharepoint-list)
+I den här artikeln förutsätts att du har [konfigurerat adaptivt formulär för att skicka data till SharePoint-listan.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/configure-submit-actions-core-components.html?lang=sv-SE#connect-af-sharepoint-list)
 
 Följande data finns i listan över SharePoint
 ![sharepoint-list](assets/list-data.png)

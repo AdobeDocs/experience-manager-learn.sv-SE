@@ -65,7 +65,7 @@ En GraphQL-slutpunkt måste konfigureras för att aktivera GraphQL API-frågor f
 
 ## Använda GraphiQL IDE
 
-Med verktyget [GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html) kan utvecklare skapa och testa frågor mot innehåll i den aktuella AEM-miljön. Med GraphiQL-verktyget kan användare även **spara**-frågor som ska användas av klientprogram i en produktionsinställning.
+Med verktyget [GraphiQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=sv-SE) kan utvecklare skapa och testa frågor mot innehåll i den aktuella AEM-miljön. Med GraphiQL-verktyget kan användare även **spara**-frågor som ska användas av klientprogram i en produktionsinställning.
 
 Utforska sedan kraften i AEM GraphQL API med den inbyggda GraphiQL IDE.
 
@@ -216,7 +216,7 @@ Sedan ska vi titta på hur det går att filtrera resultatet till en delmängd av
 
    ![Använd frågevariabler för att filtrera](assets/explore-graphql-api/using-query-variables-filter.png)
 
-   Det finns många andra alternativ för att filtrera och skapa komplexa frågor, se [Lära dig att använda GraphQL med AEM - Exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
+   Det finns många andra alternativ för att filtrera och skapa komplexa frågor, se [Lära dig att använda GraphQL med AEM - Exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html?lang=sv-SE).
 
 1. Förbättra ovanstående fråga för att hämta profilbild
 
@@ -280,7 +280,7 @@ Det går också att ställa frågor direkt till ett enda innehållsfragment. Inn
 
 ## Beständiga frågor {#persist-queries}
 
-När en utvecklare är nöjd med de fråga- och resultatdata som returnerats från frågan är nästa steg att lagra eller behålla frågan till AEM. [Beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html) är den bästa metoden för att exponera GraphQL-API:t för klientprogram. När en fråga har sparats kan den begäras med hjälp av en GET-begäran och cachas i Dispatcher- och CDN-lagren. Prestandan för de beständiga frågorna är mycket bättre. Förutom prestandafördelar säkerställer beständiga frågor att extra data inte oavsiktligt exponeras för klientprogram. Mer information om [Beständiga frågor finns här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html).
+När en utvecklare är nöjd med de fråga- och resultatdata som returnerats från frågan är nästa steg att lagra eller behålla frågan till AEM. [Beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=sv-SE) är den bästa metoden för att exponera GraphQL-API:t för klientprogram. När en fråga har sparats kan den begäras med hjälp av en GET-begäran och cachas i Dispatcher- och CDN-lagren. Prestandan för de beständiga frågorna är mycket bättre. Förutom prestandafördelar säkerställer beständiga frågor att extra data inte oavsiktligt exponeras för klientprogram. Mer information om [Beständiga frågor finns här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=sv-SE).
 
 Behåll sedan två enkla frågor. De används i nästa kapitel.
 
@@ -396,7 +396,7 @@ Hämta innehåll, modeller och beständiga frågor som skapats i de tre senaste 
 
 ## Ytterligare resurser
 
-Läs mer om GraphQL-frågor på [Lär dig använda GraphQL med AEM - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html).
+Läs mer om GraphQL-frågor på [Lär dig använda GraphQL med AEM - exempelinnehåll och frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/sample-queries.html?lang=sv-SE).
 
 ## Grattis! {#congratulations}
 

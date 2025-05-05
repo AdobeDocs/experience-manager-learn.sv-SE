@@ -24,7 +24,7 @@ Följande steg krävs för att skriva java-klassen och distribuera klassen som e
 
 ## Create Maven Project
 
-Det första steget är att skapa ett maven-projekt med rätt Adobe Maven Archetype. De detaljerade stegen visas i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat ditt maven-projekt till förmörkning är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
+Det första steget är att skapa ett maven-projekt med rätt Adobe Maven Archetype. De detaljerade stegen visas i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=sv-SE). När du har importerat ditt maven-projekt till förmörkning är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
 
 
 ### Skapa klass som implementerar WorkflowProcess
@@ -143,7 +143,7 @@ Tjänsten QueryBuilder används för att fråga efter noder av typen nt:file i m
 
 #### Bygg och driftsätt
 
-[Bygg paketet enligt beskrivningen här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[Bygg paketet enligt beskrivningen här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=sv-SE)
 [Kontrollera att paketet är distribuerat och i aktivt läge ](http://localhost:4502/system/console/bundles)
 
 ## Nästa steg

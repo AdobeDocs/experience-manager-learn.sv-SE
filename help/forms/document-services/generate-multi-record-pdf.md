@@ -25,7 +25,7 @@ Nedan visas en skärmbild av XML-filen som innehåller flera poster.
 
 ![multi-record-xml](assets/multi-record-xml.PNG)
 
-Data-xml har 2 poster. Varje post representeras av elementet form1. Den här xml-filen skickas till OutputService-metoden [generatePDFOutputBatch](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html). Vi får en lista över PDF-dokument (en per post)
+Data-xml har 2 poster. Varje post representeras av elementet form1. Den här xml-filen skickas till OutputService-metoden [generatePDFOutputBatch](https://helpx.adobe.com/se/aem-forms/6/javadocs/com/adobe/fd/output/api/OutputService.html). Vi får en lista över PDF-dokument (en per post)
 Signaturen för metoden generatePDFOutputBatch har följande parametrar
 
 * mallar - Karta som innehåller mallen, identifierad med en nyckel

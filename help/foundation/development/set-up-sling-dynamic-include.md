@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Konfigurera [!DNL Sling Dynamic Include]
 
-En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Include] med [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html) som körs på [!DNL Apache HTTP Web Server].
+En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Include] med [AEM Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE) som körs på [!DNL Apache HTTP Web Server].
 
 >[!VIDEO](https://video.tv.adobe.com/v/17040?quality=12&learn=on)
 
@@ -54,7 +54,7 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
    -->
    ```
 
-1. (Valfritt) Upprepa det sista steget för att även tillåta att komponenter i [låst (ursprungligt) innehåll i redigerbara mallar](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/page-templates-editable.html) kan hanteras via [!DNL SDI]. Orsaken till den extra konfigurationen är att låst innehåll i redigerbara mallar hanteras från `/conf` i stället för `/content`.
+1. (Valfritt) Upprepa det sista steget för att även tillåta att komponenter i [låst (ursprungligt) innehåll i redigerbara mallar](https://helpx.adobe.com/se/experience-manager/6-5/sites/developing/using/page-templates-editable.html) kan hanteras via [!DNL SDI]. Orsaken till den extra konfigurationen är att låst innehåll i redigerbara mallar hanteras från `/conf` i stället för `/content`.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -148,7 +148,7 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
 
 >[!NOTE]
 >
->Om du använder [!DNL Sling Dynamic Includes] för att hantera SSI (edge-side includes) måste du cachelagra relevanta [svarshuvuden i dispatcher-cachen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#CachingHTTPResponseHeaders). Följande rubriker är möjliga:
+>Om du använder [!DNL Sling Dynamic Includes] för att hantera SSI (edge-side includes) måste du cachelagra relevanta [svarshuvuden i dispatcher-cachen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#CachingHTTPResponseHeaders). Följande rubriker är möjliga:
 >
 >* &quot;Cache-Control&quot;
 >* &quot;Content-Disposition&quot;

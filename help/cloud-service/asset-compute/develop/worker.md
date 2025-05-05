@@ -43,7 +43,7 @@ Asset Compute-arbetare implementerar Asset Compute SDK-arbets-API-kontraktet i f
 1. Asset Compute-arbetaren sparar den nya återgivningens binära data till `rendition.path`.
 1. Binära data som skrivs till `rendition.path` överförs via Asset Compute SDK till AEM Author Service och visas som __(4a)__ en textåtergivning och __(4b)__ beständig till objektets metadatanod.
 
-Diagrammet ovan beskriver Asset Compute utvecklarrelaterade problem och det logiska flödet till Asset Compute arbetaranrop. På grund av nyfikenheten finns de [interna detaljerna för körning av Asset Compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html), men endast de offentliga API-kontrakten för Asset Compute SDK kan vara beroende av.
+Diagrammet ovan beskriver Asset Compute utvecklarrelaterade problem och det logiska flödet till Asset Compute arbetaranrop. På grund av nyfikenheten finns de [interna detaljerna för körning av Asset Compute](https://experienceleague.adobe.com/docs/asset-compute/using/extend/custom-application-internals.html?lang=sv-SE), men endast de offentliga API-kontrakten för Asset Compute SDK kan vara beroende av.
 
 ## Anatomi för en arbetare
 

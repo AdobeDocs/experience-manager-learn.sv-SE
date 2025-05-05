@@ -306,11 +306,11 @@ async function main (params) {
 
 Följande HTTP-API:er från AEM används ofta för interaktion med AEM från tillägg:
 
-+ [AEM GraphQL API:er](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html)
-+ [AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html)
-   + [Stöd för Content Fragments i AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html)
-+ [AEM QueryBuilder API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html)
-+ [Fullständig API-referens för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html)
++ [AEM GraphQL API:er](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE)
++ [AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets.html?lang=sv-SE)
+   + [Stöd för Content Fragments i AEM Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/assets-api-content-fragments.html?lang=sv-SE)
++ [AEM QueryBuilder API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api.html?lang=sv-SE)
++ [Fullständig API-referens för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/reference-materials.html?lang=sv-SE)
 
 
 ## Adobe npm-moduler

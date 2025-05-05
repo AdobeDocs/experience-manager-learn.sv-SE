@@ -51,6 +51,6 @@ Följande krävs när du integrerar taggar för Experience Platform-datainsamlin
 
 ## Ytterligare resurser {#additional-resources}
 
-+ [Integrering med Experience Platform med Experience Cloud-program](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html)
-+ [Översikt över taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
-+ [Implementera Experience Cloud på webbplatser med taggar](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html)
++ [Integrering med Experience Platform med Experience Cloud-program](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/integrations-with-experience-cloud-applications.html?lang=sv-SE)
++ [Översikt över taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE)
++ [Implementera Experience Cloud på webbplatser med taggar](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html?lang=sv-SE)

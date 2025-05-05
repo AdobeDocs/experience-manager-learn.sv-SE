@@ -116,7 +116,7 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
    /**
    * Returns a list of Assets HTTP API asset URLs that reference the assets in the specified folder.
    * 
-   * https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=en#retrieve-a-folder-listing
+   * https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=sv-SE#retrieve-a-folder-listing
    * 
    * @param {*} folder the Assets HTTP API folder path (less the /content/dam path prefix)
    */
@@ -145,7 +145,7 @@ Nyckelelementet för programmatisk autentisering till AEM med åtkomsttoken är 
    /**
    * Update the metadata of an asset in AEM
    * 
-   * https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=en#update-asset-metadata
+   * https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=sv-SE#update-asset-metadata
    * 
    * @param {*} asset the Assets HTTP API asset URL to update
    * @param {*} metadata the metadata to update the asset with

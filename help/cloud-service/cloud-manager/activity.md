@@ -22,6 +22,6 @@ ht-degree: 0%
 
 Cloud Manager ger en samlad bild av programmets verksamhet, med en lista över alla CI/CD Pipeline-exekveringar, både produktion och icke-produktion. Detta gör att användarna kan se alla rörledningar som är under utveckling och granska tidigare distributioner.
 
-Cloud Manager kan även integreras per användare med [Adobe Experience Cloud Notifications](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/notifications.html), vilket ger en helhetsbild av händelser och intressanta åtgärder.
+Cloud Manager kan även integreras per användare med [Adobe Experience Cloud Notifications](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/notifications.html?lang=sv-SE), vilket ger en helhetsbild av händelser och intressanta åtgärder.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26319?quality=12&learn=on)

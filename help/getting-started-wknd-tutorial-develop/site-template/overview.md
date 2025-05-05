@@ -31,7 +31,7 @@ Lär dig hur du använder en lågkodsmetod för att skapa din första webbplats 
 
 ## AEM as a Cloud Service Environment {#environment}
 
-Stegen i den här självstudiekursen äger rum i en Adobe Experience Manager as a Cloud Service-miljö. Kontrollera att du har administratörsbehörighet för AEM-miljön. Vi rekommenderar att du använder ett [Sandbox-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) och [Utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) när du slutför den här självstudiekursen.
+Stegen i den här självstudiekursen äger rum i en Adobe Experience Manager as a Cloud Service-miljö. Kontrollera att du har administratörsbehörighet för AEM-miljön. Vi rekommenderar att du använder ett [Sandbox-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html?lang=sv-SE) och [Utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE) när du slutför den här självstudiekursen.
 
 ## Nästa steg {#next-steps}
 

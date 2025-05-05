@@ -33,7 +33,7 @@ Anpassade namnutrymmen är den valfria delen av en JCR-egenskap som föregår `:
 
 Namnutrymmen kan användas för att ange en egenskaps omfång och avsikt. Genom att skapa ett anpassat namnutrymme, ofta ditt företagsnamn, kan du tydligt identifiera noder eller egenskaper som är specifika för din AEM-implementering och innehålla data som är specifika för din verksamhet.
 
-Anpassade namnutrymmen hanteras i [Sling Repoinit (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html) -skript och distribueras till AEM as a Cloud Service som OSGi-konfigurationer - och läggs till i [AEM-projektets](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) `ui.config` -projekt.
+Anpassade namnutrymmen hanteras i [Sling Repoinit (repoinit)](https://sling.apache.org/documentation/bundles/repository-initialization.html) -skript och distribueras till AEM as a Cloud Service som OSGi-konfigurationer - och läggs till i [AEM-projektets](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE) `ui.config` -projekt.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3412319?quality=12&learn=on)
 

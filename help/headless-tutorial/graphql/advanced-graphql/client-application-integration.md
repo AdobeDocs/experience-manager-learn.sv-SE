@@ -117,11 +117,11 @@ För att snabba upp självstudiekursen finns en React JS-app med startfunktion.
 
 ## Granska koden
 
-I [den grundläggande självstudiekursen - Bygg en React-app där AEM GraphQL API:er används](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object) har vi granskat och förbättrat några viktiga filer så att vi får expertis. Granska nyckelfilerna innan du förbättrar WKND-appen.
+I [den grundläggande självstudiekursen - Bygg en React-app där AEM GraphQL API:er används](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html?lang=sv-SE#review-the-aemheadless-object) har vi granskat och förbättrat några viktiga filer så att vi får expertis. Granska nyckelfilerna innan du förbättrar WKND-appen.
 
-* [Granska objektet AEMHeadless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#review-the-aemheadless-object)
+* [Granska objektet AEMHeadless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html?lang=sv-SE#review-the-aemheadless-object)
 
-* [Implementera för att köra beständiga AEM GraphQL-frågor](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html#implement-to-run-aem-graphql-persisted-queries)
+* [Implementera för att köra beständiga AEM GraphQL-frågor](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/graphql-and-react-app.html?lang=sv-SE#implement-to-run-aem-graphql-persisted-queries)
 
 ### Granska `Adventures`-reaktionskomponent
 

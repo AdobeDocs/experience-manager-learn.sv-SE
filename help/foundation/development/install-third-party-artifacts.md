@@ -27,7 +27,7 @@ Lär dig hur du installerar artefakter från tredje part som *inte är tillgäng
 
 - [OSGi-paketet](https://www.osgi.org/resources/architecture/): Ett OSGi-paket är en Java™-arkivfil som innehåller Java-klasser, resurser och ett manifest som beskriver paketet och dess beroenden.
 - [Java jar](https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html): En Java™-arkivfil som innehåller Java-klasser och -resurser.
-- [Paket](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager#what-are-packages): Ett paket är en ZIP-fil som innehåller databasinnehåll i filsystemets serialiseringsformat.
+- [Paket](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager#what-are-packages): Ett paket är en ZIP-fil som innehåller databasinnehåll i filsystemets serialiseringsformat.
 
 ## Standardscenario
 
@@ -57,7 +57,7 @@ Orsaken kan vara:
 
 Om du vill följa den här självstudiekursen behöver du:
 
-- Installationen av den [lokala AEM-utvecklingsmiljön](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview) eller [Rapid Development Environment(RDE)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview).
+- Installationen av den [lokala AEM-utvecklingsmiljön](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview) eller [Rapid Development Environment(RDE)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/overview).
 
 - [AEM WKND-projektet](https://github.com/adobe/aem-guides-wknd) _som lägger till paketet eller behållaren eller paketet från tredje part_ och verifierar ändringarna.
 

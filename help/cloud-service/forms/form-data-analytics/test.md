@@ -55,7 +55,7 @@ Interagera med formuläret och håll konsolfönstret öppet. Du borde se något 
 
 ## Använd Adobe Experience Platform Debugger
 
-Lägg till [AEP-felsökningstillägget](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) i webbläsaren (du måste logga in) för att få mer felsökningsinformation
+Lägg till [AEP-felsökningstillägget](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=sv-SE) i webbläsaren (du måste logga in) för att få mer felsökningsinformation
 
 ![platform-debugger](assets/platform-debugger.png)
 

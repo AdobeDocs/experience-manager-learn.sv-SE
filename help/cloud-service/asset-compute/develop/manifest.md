@@ -28,7 +28,7 @@ ht-degree: 0%
 
 Arbetare definieras som Adobe I/O Runtime åtgärdsposter under `actions` och består av en uppsättning konfigurationer.
 
-Arbetare som använder andra Adobe I/O-integreringar måste ange egenskapen `annotations -> require-adobe-auth` till `true` eftersom [visar arbetarens Adobe I/O-autentiseringsuppgifter](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) via objektet `params.auth`. Detta krävs vanligtvis när arbetaren anropar Adobe I/O API:er som Adobe Photoshop, Lightroom eller Sensei API:er och kan växlas per arbetare.
+Arbetare som använder andra Adobe I/O-integreringar måste ange egenskapen `annotations -> require-adobe-auth` till `true` eftersom [visar arbetarens Adobe I/O-autentiseringsuppgifter](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=sv-SE#access-adobe-apis) via objektet `params.auth`. Detta krävs vanligtvis när arbetaren anropar Adobe I/O API:er som Adobe Photoshop, Lightroom eller Sensei API:er och kan växlas per arbetare.
 
 1. Öppna och granska den automatiskt genererade arbetaren `manifest.yml`. Projekt som innehåller flera Asset Compute-arbetare måste definiera en post för varje arbetare under arrayen `actions`.
 
@@ -51,7 +51,7 @@ packages:
 
 Varje arbetare kan konfigurera [limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) för sin körningskontext i Adobe I/O Runtime. Dessa värden bör justeras för att ge optimal storlek för arbetaren, baserat på volymen, hastigheten och typen av resurser som den beräknar samt vilken typ av arbete den utför.
 
-Granska [Adobe vägledning om storleksändring](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers) innan du anger gränser. Asset Compute-arbetare kan få slut på minne när de bearbetar resurser, vilket kan leda till att körningen av Adobe I/O Runtime avbryts, så att arbetaren har rätt storlek för att hantera alla kandidatresurser.
+Granska [Adobe vägledning om storleksändring](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=sv-SE#sizing-workers) innan du anger gränser. Asset Compute-arbetare kan få slut på minne när de bearbetar resurser, vilket kan leda till att körningen av Adobe I/O Runtime avbryts, så att arbetaren har rätt storlek för att hantera alla kandidatresurser.
 
 1. Lägg till ett `inputs`-avsnitt i den nya `wknd-asset-compute`-åtgärdsposten. Detta gör att Asset Compute-arbetarens totala prestanda och resurstilldelning kan justeras.
 

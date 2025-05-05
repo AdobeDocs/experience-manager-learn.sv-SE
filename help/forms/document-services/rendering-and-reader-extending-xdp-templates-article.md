@@ -25,10 +25,10 @@ När en användare klickar på XDP i t.ex. AEM Forms formulärportal kan vi åte
 
 För att uppnå detta måste vi göra följande.
 
-* Lägg till certifikatet för Reader Extensions till användaren fd-service. Stegen för att lägga till autentiseringsuppgifter för Reader Extensions visas [här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=en)
+* Lägg till certifikatet för Reader Extensions till användaren fd-service. Stegen för att lägga till autentiseringsuppgifter för Reader Extensions visas [här](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/install-configure-document-services.html?lang=sv-SE)
 
 
-* Du kan också titta på videon om att [konfigurera inloggningsuppgifter för Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html)
+* Du kan också titta på videon om att [konfigurera inloggningsuppgifter för Reader Extensions](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=sv-SE)
 
 
 * Skapa en anpassad OSGi-tjänst som återger och tillämpar användarrättigheter. Koden för att uppnå detta visas nedan

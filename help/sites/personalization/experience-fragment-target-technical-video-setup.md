@@ -33,5 +33,5 @@ Adobe Experience Manager 6.4 förnyar personaliseringsarbetsflödet mellan AEM o
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Dokumentation för Experience Fragments](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/experience-fragments.html)
+* [Dokumentation för Experience Fragments](https://helpx.adobe.com/se/experience-manager/6-5/sites/authoring/using/experience-fragments.html)
 * [Använda upplevelsefragment](/help/sites/experience-fragments/experience-fragments-feature-video-use.md)

@@ -27,12 +27,12 @@ Läs om hur AEM Assets as a Cloud Service resurshanteringsmikrotjänster gör at
 
 ![Resursarbetsflödesmigreringsverktyg](./assets/asset-workflow-migration.png)
 
-Som en del av omfaktoriseringen av din kodbas använder du verktyget [Resursarbetsflödesmigrering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html) för att migrera befintliga arbetsflöden och använda Asset Compute mikrotjänster i AEM as a Cloud Service.
+Som en del av omfaktoriseringen av din kodbas använder du verktyget [Resursarbetsflödesmigrering](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/asset-workflow-migration-tool.html?lang=sv-SE) för att migrera befintliga arbetsflöden och använda Asset Compute mikrotjänster i AEM as a Cloud Service.
 
 ## Viktiga aktiviteter
 
 + Använd verktyget [Adobe I/O Workflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationworkflow-migrator) för att migrera arbetsflöden för resursbearbetning och använda Asset Compute mikrotjänster.
-+ Konfigurera en [lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) och distribuera de uppdaterade arbetsflödena. Manuell justering kan behövas för komplexa arbetsflöden.
++ Konfigurera en [lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=sv-SE) och distribuera de uppdaterade arbetsflödena. Manuell justering kan behövas för komplexa arbetsflöden.
 + Fortsätt att iterera i en lokal utvecklingsmiljö med AEM SDK tills det uppdaterade arbetsflödet matchar funktionsparitet.
 + Distribuera den uppdaterade kodbasen till en AEM as a Cloud Service-utvecklingsmiljö och fortsätt att validera.
 

@@ -51,13 +51,13 @@ Modulen `ui.frontend` är ett [webpack](https://webpack.js.org/)-projekt som inn
 
 *En högnivåbild av SPA-integreringen.*
 
-Ytterligare information om Front-end-bygget finns [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
+Ytterligare information om Front-end-bygget finns [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=sv-SE).
 
 ## Inspektera SPA-integreringen {#inspect-spa-integration}
 
-Granska sedan modulen `ui.frontend` för att förstå SPA-filen som har genererats automatiskt av [AEM Project-arkivtypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
+Granska sedan modulen `ui.frontend` för att förstå SPA-filen som har genererats automatiskt av [AEM Project-arkivtypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=sv-SE).
 
-1. Öppna AEM Project i den utvecklingsmiljö du väljer. I den här självstudien används [Visual Studio-kod-IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
+1. Öppna AEM Project i den utvecklingsmiljö du väljer. I den här självstudien används [Visual Studio-kod-IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=sv-SE#microsoft-visual-studio-code).
 
    ![VSCode - AEM WKND SPA-projekt](./assets/integrate-spa/vscode-ide-openproject.png)
 
@@ -77,7 +77,7 @@ Granska sedan modulen `ui.frontend` för att förstå SPA-filen som har generera
    "@adobe/aem-core-components-react-spa": "1.1.7",
    ```
 
-   Ovanstående moduler utgör [AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html) och tillhandahåller funktioner som gör det möjligt att mappa SPA-komponenter till AEM-komponenter.
+   Ovanstående moduler utgör [AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html?lang=sv-SE) och tillhandahåller funktioner som gör det möjligt att mappa SPA-komponenter till AEM-komponenter.
 
    Innehåller också [AEM WCM-komponenter - React Core-implementering](https://github.com/adobe/aem-react-core-wcm-components-base) och [AEM WCM-komponenter - Spa editor - React Core-implementering](https://github.com/adobe/aem-react-core-wcm-components-spa). Detta är en uppsättning återanvändbara gränssnittskomponenter som mappar till AEM-komponenter som finns i kartongen. Dessa är utformade för att användas i befintligt skick och med den utformning som passar ditt projekt.
 

@@ -39,7 +39,7 @@ while ((line = reader.readLine()) != null) {
 System.out.println("The submitted form data is " + stringBuffer.toString());
 ```
 
-Kontrollera att du har konfigurerat [Adobe LiveCycle Client SDK Configuration](https://helpx.adobe.com/aem-forms/6/submit-form-data-livecycle-process.html) om du tänker använda koden för att anropa en J2EE-process.
+Kontrollera att du har konfigurerat [Adobe LiveCycle Client SDK Configuration](https://helpx.adobe.com/se/aem-forms/6/submit-form-data-livecycle-process.html) om du tänker använda koden för att anropa en J2EE-process.
 
 ## Konfigurera Skicka-URL:en för HTML5-formuläret
 
@@ -65,5 +65,5 @@ Kontrollera att du har konfigurerat [Adobe LiveCycle Client SDK Configuration](h
 
 ### Ytterligare läsning
 
-Mer information om hur du genererar PDF-filer från inskickade HTML5-formulär finns i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html).
+Mer information om hur du genererar PDF-filer från inskickade HTML5-formulär finns i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/generate-pdf-from-mobile-form-submission-article.html?lang=sv-SE).
 

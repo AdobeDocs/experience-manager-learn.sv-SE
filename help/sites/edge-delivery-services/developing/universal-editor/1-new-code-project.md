@@ -21,11 +21,11 @@ ht-degree: 0%
 
 Om du vill skapa AEM-webbplatser för Edge Delivery Services och Universal Editor använder du Adobe [AEM Boilerplate XWalk-projektmall](https://github.com/adobe-rnd/aem-boilerplate-xwalk). Den här mallen skapar ett nytt kodprojekt som innehåller CSS och JavaScript som används för att skapa webbplatsupplevelsen. Den här mallen skapar en ny GitHub-databas och läser in den med Adobe standardkod och -konfiguration, vilket ger en stabil grund för AEM webbplatsprojekt.
 
-Kom ihåg att [AEM-webbplatser som levereras av Edge Delivery Services](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/edge-delivery-services/overview) bara har kod för klientsidan (webbläsare). Webbplatskoden körs inte i AEM Author eller Publish Services.
+Kom ihåg att [AEM-webbplatser som levereras av Edge Delivery Services](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/sites/edge-delivery-services/overview) bara har kod för klientsidan (webbläsare). Webbplatskoden körs inte i AEM Author eller Publish Services.
 
 ![Nytt Edge Delivery Services-projekt](./assets/1-new-project/new-project.png)
 
-Följ de [detaljerade stegen som beskrivs i dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) för att skapa ett Edge Delivery Services-kodprojekt vars innehåll kan redigeras i Universell redigerare.  Nedan finns en sammanfattande lista över stegen, inklusive värdena som används i den här självstudiekursen.
+Följ de [detaljerade stegen som beskrivs i dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) för att skapa ett Edge Delivery Services-kodprojekt vars innehåll kan redigeras i Universell redigerare.  Nedan finns en sammanfattande lista över stegen, inklusive värdena som används i den här självstudiekursen.
 
 1. **Konfigurera ett GitHub-konto.** Om du skapar ett projekt för din organisation ska du kontrollera att organisationen har ett GitHub-konto och att du är medlem.
 2. **Skapa ett nytt kodprojekt** med projektmallen [AEM Boilerplate XWalk](https://github.com/adobe-rnd/aem-boilerplate-xwalk).
@@ -36,4 +36,4 @@ Följ de [detaljerade stegen som beskrivs i dokumentationen](https://experiencel
 
 5. **Redigera det nya projektets`paths.json`** för att mappa sökvägen till AEM Author-tjänsten till webbplatsens rot.
 
-Den här Git-databasen klonas i kapitlet [lokal utvecklingsmiljö](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/edge-delivery-services/developing/universal-editor/3-local-development-environment) och där kod utvecklas.
+Den här Git-databasen klonas i kapitlet [lokal utvecklingsmiljö](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/sites/edge-delivery-services/developing/universal-editor/3-local-development-environment) och där kod utvecklas.

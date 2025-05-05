@@ -22,7 +22,7 @@ Ett certifierat dokument ger PDF-dokument och -formulärmottagare extra garantie
 
 Om du vill certifiera ett dokument kan du använda Acrobat DC på skrivbordet eller AEM Forms Document Services som en del av en automatiserad process på en server.
 
-Den här artikeln innehåller exempel på OSGI-paket för att certifiera PDF-dokument med AEM Forms Document Services. Koden som används i exemplet är [tillgänglig här](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+Den här artikeln innehåller exempel på OSGI-paket för att certifiera PDF-dokument med AEM Forms Document Services. Koden som används i exemplet är [tillgänglig här](https://helpx.adobe.com/se/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 För att certifiera dokument med AEM Forms måste följande steg följas
 
@@ -43,7 +43,7 @@ Följ stegen nedan för att lägga till certifikatet i nyckelbehållaren i AEM
 Du kan skriva ett eget OSGi-paket och använda AEM Forms Client SDK för att implementera en tjänst för att certifiera PDF-dokument. Följande länkar kan vara användbara för att skriva ett eget OSGi-paket
 
 * [Skapar ditt första OSGi-paket](https://helpx.adobe.com/experience-manager/using/maven_arch13.html)
-* [Använd API:t för dokumenttjänsten](https://helpx.adobe.com/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
+* [Använd API:t för dokumenttjänsten](https://helpx.adobe.com/se/experience-manager/6-4/forms/using/aem-document-services-programmatically.html)
 
 Du kan också använda exempelpaketet som ingår i den här självstudiekursen.
 

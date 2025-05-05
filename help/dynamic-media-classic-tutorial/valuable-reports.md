@@ -43,5 +43,5 @@ Läs mer om Dynamic Media Classic här:
 
 - [Dynamic Media Classic på Experience League - Gå till värde](https://guided.adobe.com/?launch=AEM-5a#recommended/solutions/experience-manager)
 - [Dynamic Media Classic på Experience League - Gör mer](https://guided.adobe.com/?launch=AEM-6a#recommended/solutions/experience-manager)
-- [Dynamic Media nyhetsbrev arkiveras](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html)
-- [Dynamic Media Classic-dokumentation](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html)
+- [Dynamic Media nyhetsbrev arkiveras](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/dynamic-media-newsletter.html?lang=sv-SE)
+- [Dynamic Media Classic-dokumentation](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/home.html?lang=sv-SE)

@@ -74,7 +74,7 @@ Det grundläggande konceptet är att mappa en SPA-komponent till en AEM-komponen
 
 ## Inspektera textkomponenten
 
-[AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en `Text`-komponent som är mappad till AEM [Text-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html). Det här är ett exempel på en **content** -komponent, eftersom den återger *innehåll* från AEM.
+[AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en `Text`-komponent som är mappad till AEM [Text-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=sv-SE). Det här är ett exempel på en **content** -komponent, eftersom den återger *innehåll* från AEM.
 
 Låt oss se hur komponenten fungerar.
 
@@ -198,7 +198,7 @@ Låt oss se hur komponenten fungerar.
 
 ## Skapa bildkomponenten
 
-Skapa sedan en `Image` Angular-komponent som är mappad till AEM [Image-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html). Komponenten `Image` är ett annat exempel på en **content**-komponent.
+Skapa sedan en `Image` Angular-komponent som är mappad till AEM [Image-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=sv-SE). Komponenten `Image` är ett annat exempel på en **content**-komponent.
 
 ### Inspektera JSON
 
@@ -434,7 +434,7 @@ Låt oss inspektera layoutbehållaren ytterligare.
 
    Komponenten **Layoutbehållare** har `sling:resourceType` `wcm/foundation/components/responsivegrid` och känns igen av SPA-redigeraren med egenskapen `:type`, precis som komponenterna `Text` och `Image`.
 
-   Samma funktioner för att ändra storlek på en komponent med [Layoutläge](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) finns i SPA-redigeraren.
+   Samma funktioner för att ändra storlek på en komponent med [Layoutläge](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=sv-SE#defining-layouts-layout-mode) finns i SPA-redigeraren.
 
 3. Gå tillbaka till [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html). Lägg till ytterligare **Bild**-komponenter och försök ändra storlek på dem med alternativet **Layout** :
 

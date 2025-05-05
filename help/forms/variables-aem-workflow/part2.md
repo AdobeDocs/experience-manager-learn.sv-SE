@@ -36,6 +36,6 @@ Följ de här stegen för att få resurserna att fungera i ditt system:
 
 * [Hämta och importera mediefiler till AEM med pakethanteraren](assets/jsonandstringvariable.zip)
 * [Utforska arbetsflödesmodellen](http://localhost:4502/editor.html/conf/global/settings/workflow/models/jsonvariable.html) för att förstå variablerna som används i arbetsflödet
-* [Konfigurera e-posttjänsten](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
+* [Konfigurera e-posttjänsten](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/notification.html#ConfiguringtheMailService)
 * [Öppna det adaptiva formuläret](http://localhost:4502/content/dam/formsanddocuments/afbasedonjson/jcr:content?wcmmode=disabled)
 * Fyll i uppgifterna och skicka in formuläret

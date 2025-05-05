@@ -28,7 +28,7 @@ Du behöver följande:
 
 * En fungerande instans av AEM med Forms Add-on-paket installerat.
 
-* [Utvecklingsmiljö som konfigurerats enligt det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+* [Utvecklingsmiljö som konfigurerats enligt det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=sv-SE)
 
 * AEM Forms Designer
 

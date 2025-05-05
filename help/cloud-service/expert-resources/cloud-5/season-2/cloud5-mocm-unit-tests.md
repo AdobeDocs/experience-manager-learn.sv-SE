@@ -25,7 +25,7 @@ Enhetstester är ett ofta förbisett steg i utvecklingen av programvara och är 
 ## Innehåll som behandlas i den här videon
 
 + Översikt över automatiska kontroller
-+ [Anpassade regler för kodkvalitet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html)
++ [Anpassade regler för kodkvalitet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html?lang=sv-SE)
 
 ## Ytterligare resurser
 

@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Klientbibliotek och arbetsflöde {#client-side-libraries}
 
-Lär dig hur bibliotek och klientbibliotek används för att distribuera och hantera CSS och JavaScript för en implementering av Adobe Experience Manager (AEM) Sites. I den här självstudiekursen beskrivs även hur modulen [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html), ett frikopplat [webpack](https://webpack.js.org/) -projekt, kan integreras i hela byggprocessen.
+Lär dig hur bibliotek och klientbibliotek används för att distribuera och hantera CSS och JavaScript för en implementering av Adobe Experience Manager (AEM) Sites. I den här självstudiekursen beskrivs även hur modulen [ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=sv-SE), ett frikopplat [webpack](https://webpack.js.org/) -projekt, kan integreras i hela byggprocessen.
 
 ## Förutsättningar {#prerequisites}
 
@@ -82,7 +82,7 @@ Med bibliotek på klientsidan kan du ordna och hantera CSS- och JavaScript-filer
 1. Hantera beroenden av ramverk från tredje part på ett organiserat sätt
 1. Minimera antalet klientförfrågningar genom att sammanfoga CSS/JS till en eller två förfrågningar.
 
-Mer information om hur du använder [klientbibliotek finns här.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html)
+Mer information om hur du använder [klientbibliotek finns här.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=sv-SE)
 
 Bibliotek på klientsidan har vissa begränsningar. Det viktigaste är ett begränsat stöd för populära språk som Sass, LESS och TypeScript. I självstudiekursen ska vi titta på hur modulen **ui.front** kan hjälpa till att lösa det här.
 
@@ -90,7 +90,7 @@ Distribuera startkodsbasen till en lokal AEM-instans och navigera till [http://l
 
 ## Biblioteksorganisation på klientsidan {#organization}
 
-Nu ska vi utforska organisationen av klienter som genereras av [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
+Nu ska vi utforska organisationen av klienter som genereras av [AEM Project Archetype](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE).
 
 ![Klientbiblioteksorganisation på hög nivå](./assets/client-side-libraries/high-level-clientlib-organization.png)
 
@@ -107,12 +107,12 @@ Nu ska vi utforska organisationen av klienter som genereras av [AEM Project Arch
 
    I avsnittet nedan finns mer information om dessa klientlibs.
 
-1. I följande tabell sammanfattas klientbiblioteken. Mer information om [inklusive klientbibliotek finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/including-clientlibs.html?lang=en#developing).
+1. I följande tabell sammanfattas klientbiblioteken. Mer information om [inklusive klientbibliotek finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/including-clientlibs.html?lang=sv-SE#developing).
 
    | Namn | Beskrivning | Anteckningar |
    |-------------------| ------------| ------|
    | `clientlib-base` | Grundnivån för CSS och JavaScript krävs för att WKND-webbplatsen ska fungera | inbäddar klientlibs för kärnkomponenten |
-   | `clientlib-grid` | Genererar den CSS som krävs för att [Layoutläge](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html) ska fungera. | Brytpunkter för mobiler/surfplattor kan konfigureras här |
+   | `clientlib-grid` | Genererar den CSS som krävs för att [Layoutläge](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=sv-SE) ska fungera. | Brytpunkter för mobiler/surfplattor kan konfigureras här |
    | `clientlib-site` | Innehåller platsspecifikt tema för WKND-webbplatsen | Genereras av modulen `ui.frontend` |
    | `clientlib-dependencies` | Bäddar in eventuella beroenden från tredje part | Genereras av modulen `ui.frontend` |
 
@@ -120,7 +120,7 @@ Nu ska vi utforska organisationen av klienter som genereras av [AEM Project Arch
 
 ## Uppdatera basformat {#base-styles}
 
-Uppdatera sedan basformaten som definierats i modulen **[ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html)**. Filerna i modulen `ui.frontend` genererar de `clientlib-site` - och `clientlib-dependecies`-bibliotek som innehåller platstemat och eventuella tredjepartsberoenden.
+Uppdatera sedan basformaten som definierats i modulen **[ui.front](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=sv-SE)**. Filerna i modulen `ui.frontend` genererar de `clientlib-site` - och `clientlib-dependecies`-bibliotek som innehåller platstemat och eventuella tredjepartsberoenden.
 
 Klientbibliotek stöder inte mer avancerade språk som [Sass](https://sass-lang.com/) eller [TypeScript](https://www.typescriptlang.org/). Det finns flera verktyg med öppen källkod som [NPM](https://www.npmjs.com/) och [webpack](https://webpack.js.org/) som snabbar upp och optimerar frontendutvecklingen. Målet med modulen **ui.front** är att kunna använda dessa verktyg för att hantera de flesta källfiler i gränssnittet.
 
@@ -143,7 +143,7 @@ Klientbibliotek stöder inte mer avancerade språk som [Sass](https://sass-lang.
 
    ![Komponentens Sass-filer](assets/client-side-libraries/component-sass-files.png)
 
-   Varje fil mappar till en kärnkomponent som [dragspelskomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/accordion.html?lang=en). Varje kärnkomponent byggs med [Blockelementsmodifierare](https://getbem.com/) eller BEM-notation för att göra det enklare att rikta in specifika CSS-klasser med formatregler. Filerna under `/components` har delats ut av AEM Project Archetype med olika BEM-regler för varje komponent.
+   Varje fil mappar till en kärnkomponent som [dragspelskomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/accordion.html?lang=sv-SE). Varje kärnkomponent byggs med [Blockelementsmodifierare](https://getbem.com/) eller BEM-notation för att göra det enklare att rikta in specifika CSS-klasser med formatregler. Filerna under `/components` har delats ut av AEM Project Archetype med olika BEM-regler för varje komponent.
 
 1. Hämta WKND-basformat **[wknd-base-styles-src-v3.zip](/help/getting-started-wknd-tutorial-develop/project-archetype/assets/client-side-libraries/wknd-base-styles-src-v3.zip)** och **zip** filen.
 
@@ -220,7 +220,7 @@ AEM Project Archetype konfigurerar automatiskt den här integreringen. Utforska 
 
    >[!NOTE]
    >
-   >Det finns också en `npm run prod`-profil som miniatyriserar JS och CSS. Detta är standardkompileringen när webbpaketsbygget utlöses via Maven. Mer information om modulen [ui.front finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html).
+   >Det finns också en `npm run prod`-profil som miniatyriserar JS och CSS. Detta är standardkompileringen när webbpaketsbygget utlöses via Maven. Mer information om modulen [ui.front finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend.html?lang=sv-SE).
 
 1. Granska filen `site.css` under `ui.frontend/dist/clientlib-site/site.css`. Detta är den kompilerade CSS-koden som baseras på Sass-källfilerna.
 
@@ -324,11 +324,11 @@ Sedan tittar vi på hur du refererar till klienten på AEM Page. Ett vanligt til
 
    >[!NOTE]
    >
-   > För AEM 6.5/6.4 är inte klientbiblioteken automatiskt minifierade. Se dokumentationen för [HTML Library Manager för att aktivera miniatyrbilder (rekommenderas)](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors).
+   > För AEM 6.5/6.4 är inte klientbiblioteken automatiskt minifierade. Se dokumentationen för [HTML Library Manager för att aktivera miniatyrbilder (rekommenderas)](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=sv-SE#using-preprocessors).
 
    >[!WARNING]
    >
-   >På publiceringssidan är det viktigt att klientbiblioteken **inte** hanteras från **/appar** eftersom sökvägen bör begränsas av säkerhetsskäl med filteravsnittet [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#example-filter-section). Egenskapen [allowProxy](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) i klientbiblioteket ser till att CSS och JS hanteras från **/etc.clientlibs**.
+   >På publiceringssidan är det viktigt att klientbiblioteken **inte** hanteras från **/appar** eftersom sökvägen bör begränsas av säkerhetsskäl med filteravsnittet [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#example-filter-section). Egenskapen [allowProxy](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=sv-SE#locating-a-client-library-folder-and-using-the-proxy-client-libraries-servlet) i klientbiblioteket ser till att CSS och JS hanteras från **/etc.clientlibs**.
 
 ### Nästa steg {#next-steps}
 

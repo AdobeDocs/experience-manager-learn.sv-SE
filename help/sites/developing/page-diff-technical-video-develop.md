@@ -122,5 +122,5 @@ Slutresultatet av en annan d-sida där formaten ovan användes skulle se ut så 
 ## Ytterligare resurser {#additional-resources}
 
 * [Hämta exempelwebbplatsen för web.Retail](https://github.com/Adobe-Marketing-Cloud/aem-sample-we-retail/releases)
-* [Använda AEM Client Libraries](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [Använda AEM Client Libraries](https://helpx.adobe.com/se/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [Mindre CSS-dokumentation](https://lesscss.org/)

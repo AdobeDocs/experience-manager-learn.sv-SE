@@ -48,11 +48,11 @@ Använd [swagger-redigeraren](https://editor.swagger.io/) för att skapa en swag
 
 ## Skapa data-Source
 
-Om du vill integrera AEM/AEM Forms med program från tredje part måste vi [skapa datakälla](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) i konfigurationen för molntjänster.
+Om du vill integrera AEM/AEM Forms med program från tredje part måste vi [skapa datakälla](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=sv-SE) i konfigurationen för molntjänster.
 
 ## Skapa formulärdatamodell
 
-AEM Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa och arbeta med [formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). En formulärdatamodell bygger på datakällor för datautbyte.
+AEM Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa och arbeta med [formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=sv-SE). En formulärdatamodell bygger på datakällor för datautbyte.
 Den färdiga formulärdatamodellen kan [hämtas härifrån](assets/sms-2fa-fdm.zip)
 
 ![fdm](assets/2FA-fdm.PNG)

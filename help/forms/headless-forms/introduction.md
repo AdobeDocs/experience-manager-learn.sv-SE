@@ -34,7 +34,7 @@ På följande skärmbild visas ett kontaktformulär som är inbäddat i SPA
 
 * Körningsinstans av AEM Forms 6.5.16
 
-* [Aktivera headless-formulär på författaren och publicera instansen](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=en)
+* [Aktivera headless-formulär på författaren och publicera instansen](https://experienceleague.adobe.com/docs/experience-manager-headless-adaptive-forms/using/quick-setup/enable-headless-adaptive-forms-and-core-components.html?lang=sv-SE)
 
 ## Nästa steg
 

@@ -162,7 +162,7 @@ String params = arg2.get("PROCESS_ARGS","string").toString();
 
 Så här testar du detta på servern:
 
-* [Konfigurera daglig CQ-e-posttjänst.](https://helpx.adobe.com/experience-manager/6-5/communities/using/email.html) Detta behövs för att skicka e-post med dokumentet som har genererats som en bifogad fil.
+* [Konfigurera daglig CQ-e-posttjänst.](https://helpx.adobe.com/se/experience-manager/6-5/communities/using/email.html) Detta behövs för att skicka e-post med dokumentet som har genererats som en bifogad fil.
 * [Distribuera paketet Utveckla med tjänster](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * Kontrollera att du har lagt till följande post i konfigurationen för användarmappningstjänsten för Apache Sling
 * **DevelopingWithServiceUser.core:getformsresourceServer=fd-service**

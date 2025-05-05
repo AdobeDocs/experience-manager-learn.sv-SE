@@ -30,7 +30,7 @@ Ett Cloud Manager-program kan bara ha en __enskild__ nätverksinfrastrukturtyp. 
 
 >[!MORELIKETHIS]
 >
-> Läs AEM as a Cloud Service [dokumentation om avancerad nätverkskonfiguration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) om du vill ha mer information om flexibel portutgång.
+> Läs AEM as a Cloud Service [dokumentation om avancerad nätverkskonfiguration](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) om du vill ha mer information om flexibel portutgång.
 
 
 ## Förutsättningar
@@ -45,7 +45,7 @@ Följande krävs när du ställer in eller konfigurerar flexibel portutgångar m
 + Cloud Manager program-ID
 + Cloud Manager miljö-ID:n
 
-Mer information finns i [Konfigurera och hämta API-autentiseringsuppgifter för Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth) så att du kan använda dem för att göra ett Cloud Manager API-anrop.
+Mer information finns i [Konfigurera och hämta API-autentiseringsuppgifter för Cloud Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth) så att du kan använda dem för att göra ett Cloud Manager API-anrop.
 
 I den här självstudien används `curl` för att skapa Cloud Manager API-konfigurationer. De `curl`-kommandon som tillhandahålls förutsätter en Linux/macOS-syntax. Om du använder kommandotolken i Windows ersätter du radbrytningstecknet `\` med `^`.
 
@@ -87,7 +87,7 @@ Flexibel portutgång kan aktiveras med Cloud Manager API:er. I följande steg be
 
 1. Kontrollera först att regionen Advanced Networking har konfigurerats i med Cloud Manager API-åtgärden [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/). `region name` krävs för efterföljande Cloud Manager API-anrop. Normalt används regionen där produktionsmiljön finns.
 
-   Hitta AEM as a Cloud Service-miljöns region i [Cloud Manager](https://my.cloudmanager.adobe.com) under [miljöns information](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments). Regionnamnet som visas i Cloud Manager kan [mappas till regionkoden](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) som används i Cloud Manager API.
+   Hitta AEM as a Cloud Service-miljöns region i [Cloud Manager](https://my.cloudmanager.adobe.com) under [miljöns information](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments). Regionnamnet som visas i Cloud Manager kan [mappas till regionkoden](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) som används i Cloud Manager API.
 
    __listRegions HTTP request__
 
@@ -221,7 +221,7 @@ När du gör HTTP/HTTPS-anrop till externa tjänster på icke-standardportar, be
 
 >[!TIP]
 >
-> I AEM as a Cloud Service dokumentation för flexibel portutgång finns [en fullständig uppsättning routningsregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
+> I AEM as a Cloud Service dokumentation för flexibel portutgång finns [en fullständig uppsättning routningsregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
 
 #### Exempel på koder
 

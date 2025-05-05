@@ -23,7 +23,7 @@ ht-degree: 0%
 Det inbäddade adaptiva formuläret fungerar fullt ut och användarna kan fylla i och skicka formuläret utan att behöva lämna sidan. Det hjälper användaren att stanna kvar i sitt sammanhang för andra element på webbsidan och interagera med formuläret samtidigt.
 
 I följande video förklaras stegen som krävs för att bädda in ett adaptivt eller HTML5-formulär på en webbsida.
-Läs [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html) för bästa möjliga förutsättningar, bästa praxis osv.
+Läs [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/embed-adaptive-form-external-web-page.html?lang=sv-SE) för bästa möjliga förutsättningar, bästa praxis osv.
 >[!VIDEO](https://video.tv.adobe.com/v/335893?quality=12&learn=on)
 
 Du kan hämta exempelfilerna som används i videon [härifrån](assets/embedding-af-web-page.zip)

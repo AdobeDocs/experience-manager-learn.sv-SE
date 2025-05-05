@@ -27,7 +27,7 @@ https://forms.enablementadobe.com/content/forms/af/testingxml.html?FirstName=Joh
 
 För att uppnå detta skapades en ny adaptiv formulärmall som är kopplad till en sidkomponent. I den här sidkomponenten har vi en jsp som kan hämta information om frågeparametrarna och skapa en XML-struktur som kan användas för att fylla i det adaptiva formuläret.
 
-Information om hur du skapar en ny mall och sidkomponent för adaptiva formulär [förklaras i den här videon.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=en)
+Information om hur du skapar en ny mall och sidkomponent för adaptiva formulär [förklaras i den här videon.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/storing-and-retrieving-form-data/part5.html?lang=sv-SE)
 
 Följande kod används på jsp-sidan
 

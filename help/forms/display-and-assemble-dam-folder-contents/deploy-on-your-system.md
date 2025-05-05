@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Följ stegen nedan för att få det här användningsexemplet att fungera på din lokala AEM-instans.
 
-* [Distribuera DevelopingWithServiceUser-paketet](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) som finns i zip-filen.
+* [Distribuera DevelopingWithServiceUser-paketet](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=sv-SE) som finns i zip-filen.
 
 * Lägg till följande post i användarmappningstjänsten för Apache Sling Service **DevelopingWithServiceUser.core:getformsresourceServer=fd-service** med [configMgr](http://localhost:4502/system/console/configMgr).
 

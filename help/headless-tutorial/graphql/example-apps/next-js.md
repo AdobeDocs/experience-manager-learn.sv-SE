@@ -73,7 +73,7 @@ Next.js är utformad för att ansluta till __AEM Publish__-tjänsten och få åt
    AEM_AUTH_PASSWORD=password-for-the-aem-user-account
    ```
 
-   Om du vill använda en [lokal utvecklingstoken från AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#generating-the-access-token) anger du `AEM_AUTH_METHOD=dev-token` och anger det fullständiga dev-tokenvärdet i egenskapen `AEM_AUTH_DEV_TOKEN`.
+   Om du vill använda en [lokal utvecklingstoken från AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=sv-SE#generating-the-access-token) anger du `AEM_AUTH_METHOD=dev-token` och anger det fullständiga dev-tokenvärdet i egenskapen `AEM_AUTH_DEV_TOKEN`.
 
    ```plain
    ...

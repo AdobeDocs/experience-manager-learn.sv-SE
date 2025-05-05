@@ -34,4 +34,4 @@ De format som visas tillhandahålls av [WKND-programmet](https://github.com/adob
 
 Vill du lära dig hur du utvecklar med Style System? Titta på följande självstudiekurser:
 
-* [Utveckla med formatsystemet](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html)
+* [Utveckla med formatsystemet](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/style-system.html?lang=sv-SE)

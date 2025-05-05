@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Anpassat processsteg
 
-Ett anpassat processsteg implementerades för att skapa ZIP-filen som innehåller de bifogade formulären. [Följ de här instruktionerna](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=en) om du inte är van vid att skapa ett OSGi-paket.
+Ett anpassat processsteg implementerades för att skapa ZIP-filen som innehåller de bifogade formulären. [Följ de här instruktionerna](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=sv-SE) om du inte är van vid att skapa ett OSGi-paket.
 
 Koden i det anpassade processsteget gör följande:
 

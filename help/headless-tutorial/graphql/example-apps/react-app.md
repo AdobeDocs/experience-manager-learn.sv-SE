@@ -28,7 +28,7 @@ Exempelprogram är ett bra sätt att utforska de headless-funktionerna i Adobe E
 
 Visa [källkoden på GitHub](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app)
 
-En [fullständig stegvis självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html) som beskriver hur React-appen skapades är tillgänglig.
+En [fullständig stegvis självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=sv-SE) som beskriver hur React-appen skapades är tillgänglig.
 
 ## Förutsättningar {#prerequisites}
 
@@ -41,8 +41,8 @@ Följande verktyg bör installeras lokalt:
 
 Programmet React fungerar med följande driftsättningsalternativ för AEM. Alla distributioner kräver att [WKND-platsen v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) är installerad.
 
-+ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ Lokal konfiguration med [SDK för AEM Cloud-tjänsten](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=sv-SE)
++ Lokal konfiguration med [SDK för AEM Cloud-tjänsten](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=sv-SE)
    + Kräver [JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr cr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
 
 Reaktionsprogrammet är utformat för att ansluta till en __AEM Publish__ -miljö, men det kan hämta innehåll från AEM Author om autentisering anges i React-programmets konfiguration.
@@ -314,4 +314,4 @@ Om du ansluter till en AEM-redigeringsmiljö måste motsvarande [autentiseringsm
 
 ### Cross-origin resource sharing (CORS)
 
-Det här React-programmet är beroende av en AEM-baserad CORS-konfiguration som körs i AEM-målmiljön och förutsätter att React-appen körs på `http://localhost:3000` i utvecklingsläge.  Mer information om hur du konfigurerar och konfigurerar CORS finns i [AEM Headless-distributionsdokumentationen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa.html).
+Det här React-programmet är beroende av en AEM-baserad CORS-konfiguration som körs i AEM-målmiljön och förutsätter att React-appen körs på `http://localhost:3000` i utvecklingsläge.  Mer information om hur du konfigurerar och konfigurerar CORS finns i [AEM Headless-distributionsdokumentationen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa.html?lang=sv-SE).

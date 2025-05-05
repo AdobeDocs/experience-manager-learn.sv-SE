@@ -23,7 +23,7 @@ ht-degree: 0%
 
 # Integrera AEM Headless och Target
 
-Lär dig integrera AEM Headless med Adobe Target genom att exportera AEM Content Fragments till Adobe Target och använda dem för att personalisera headless-upplevelser med Adobe Experience Platform Web SDK alloy.js. [React WKND-appen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html) används för att utforska hur en anpassad Target-aktivitet med hjälp av Content Fragments Offers kan läggas till i upplevelsen för att marknadsföra ett WKND-äventyr.
+Lär dig integrera AEM Headless med Adobe Target genom att exportera AEM Content Fragments till Adobe Target och använda dem för att personalisera headless-upplevelser med Adobe Experience Platform Web SDK alloy.js. [React WKND-appen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html?lang=sv-SE) används för att utforska hur en anpassad Target-aktivitet med hjälp av Content Fragments Offers kan läggas till i upplevelsen för att marknadsföra ett WKND-äventyr.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416585/?quality=12&learn=on)
 
@@ -42,13 +42,13 @@ Självstudiekursen beskriver de steg som krävs för att konfigurera AEM och Ado
 
 En Adobe IMS-konfiguration som underlättar autentiseringen mellan AEM och Adobe Target.
 
-Granska [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/integrations/target#adobe-target-cloud-service) om du vill ha stegvisa instruktioner om hur du skapar en Adobe IMS-konfiguration.
+Granska [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/integrations/target#adobe-target-cloud-service) om du vill ha stegvisa instruktioner om hur du skapar en Adobe IMS-konfiguration.
 
 ## Adobe Target Cloud Service{#adobe-target-cloud-service}
 
 En Adobe Target Cloud Service skapas i AEM för att underlätta exporten av innehållsfragment till Adobe Target.
 
-Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html) om du vill ha stegvisa instruktioner om hur du skapar en Adobe Target Cloud Service.
+Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=sv-SE) om du vill ha stegvisa instruktioner om hur du skapar en Adobe Target Cloud Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416499/?quality=12&learn=on)
 
@@ -164,7 +164,7 @@ Adobe Target-aktiviteten som riktar sig till platsen `wknd-adventure-promo` kan 
 
 ## Experience Platform Datastream ID{#datastream-id}
 
-Ett [Adobe Experience Platform Datastream](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html)-ID krävs för att AEM Headless-appar ska kunna interagera med Adobe Target med [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html).
+Ett [Adobe Experience Platform Datastream](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html?lang=sv-SE)-ID krävs för att AEM Headless-appar ska kunna interagera med Adobe Target med [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=sv-SE).
 
 +++Expandera för steg-för-steg-instruktioner
 
@@ -184,7 +184,7 @@ Ett [Adobe Experience Platform Datastream](https://experienceleague.adobe.com/do
       + Målmiljön kan anges i Adobe Target på __Administration > Värdar__.
    + Tredjeparts-ID-målnamnområde: __Lämna tomt__
 1. Välj __Spara__
-1. Till höger kopierar du __Datastream ID__ för användning i konfigurationsanropet för [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html).
+1. Till höger kopierar du __Datastream ID__ för användning i konfigurationsanropet för [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=sv-SE).
 
 +++
 
@@ -194,7 +194,7 @@ Ett [Adobe Experience Platform Datastream](https://experienceleague.adobe.com/do
 
 ## Lägg till personalisering i en AEM Headless-app{#code}
 
-I den här självstudiekursen utforskas hur du anpassar en enkel React-app med Content Fragment-erbjudanden i Adobe Target via [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html). Den här metoden kan användas för att personalisera alla JavaScript-baserade webbupplevelser.
+I den här självstudiekursen utforskas hur du anpassar en enkel React-app med Content Fragment-erbjudanden i Adobe Target via [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=sv-SE). Den här metoden kan användas för att personalisera alla JavaScript-baserade webbupplevelser.
 
 Android™- och iOS-mobilupplevelser kan anpassas efter liknande mönster med [Adobe Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
@@ -230,7 +230,7 @@ Android™- och iOS-mobilupplevelser kan anpassas efter liknande mönster med [A
    $ npm run start
    ```
 
-1. Installera [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html#option-3%3A-using-the-npm-package) som ett NPM-paket.
+1. Installera [Adobe Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=sv-SE#option-3%3A-using-the-npm-package) som ett NPM-paket.
 
    ```shell
    $ cd ~/Code/aem-guides-wknd-graphql/personalization-tutorial

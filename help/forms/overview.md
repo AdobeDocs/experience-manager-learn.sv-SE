@@ -78,10 +78,10 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 
 ## Ytterligare resurser
 
-* [AEM Sites redigeringsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
-* [AEM Sites Developing documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-* [AEM Sites Administering-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [AEM Sites distributionsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [AEM Sites redigeringsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=sv-SE)
+* [AEM Sites Developing documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html?lang=sv-SE)
+* [AEM Sites Administering-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html?lang=sv-SE)
+* [AEM Sites distributionsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html?lang=sv-SE)
 * [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
 * [AEM Assets självstudiekurser](/help/assets/overview.md)
 * [AEM Forms självstudiekurser](/help/forms/overview.md)

@@ -21,7 +21,7 @@ ht-degree: 0%
 Med Reader Extensions kan du ändra användningsrättigheter för PDF-dokument. Användningsrättigheterna gäller funktioner som är tillgängliga i Acrobat men inte i Adobe Reader. Funktionerna som styrs av Reader Extensions inkluderar möjligheten att lägga till kommentarer i ett dokument, fylla i formulär och spara dokumentet. PDF-dokument som har användarrättigheter tillagda kallas rättighetsaktiverade dokument. En användare som öppnar ett rättighetsaktiverat PDF-dokument i Adobe Reader kan utföra de åtgärder som är aktiverade för det dokumentet.
 
 För att uppnå detta måste vi göra följande:
-* [Lägg till Reader Extensions-certifikatet ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html) till `fd-service`-användaren.
+* [Lägg till Reader Extensions-certifikatet ](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/configuring-reader-extension-osgi.html?lang=sv-SE) till `fd-service`-användaren.
 
 ## Skapa en anpassad OSGi-tjänst
 

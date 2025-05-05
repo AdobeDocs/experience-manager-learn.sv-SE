@@ -134,4 +134,4 @@ Nedan följer några exempel på roller för ett lätt och tungt kundscenario:
 
 Om du vill ha en mer ingående diskussion om styrnings- och personalmodeller och arkitekttyper kan du lyssna på den här entimmars paneldiskussionen: [Rollarkityper och Skapa ett användningsramverk för [!DNL AEM Assets] och [!DNL Sites]](https://adobecustomersuccess.adobeconnect.com/p8ml5nmy0758mp4/)
 
-Läs mer om strategi och tankeledarskap på navet [Nöjda kunder](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html).
+Läs mer om strategi och tankeledarskap på navet [Nöjda kunder](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html?lang=sv-SE).

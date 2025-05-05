@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Spåra klickade komponenter med Adobe Analytics
 
-Använd det händelsestyrda [Adobe Client Data Layer med AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html) för att spåra klickningar på specifika komponenter på en Adobe Experience Manager-webbplats. Lär dig hur du använder regler i taggegenskapen för att lyssna efter klickhändelser, filtrera efter komponent och skicka data till en Adobe Analytics med en spårlänkssignal.
+Använd det händelsestyrda [Adobe Client Data Layer med AEM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=sv-SE) för att spåra klickningar på specifika komponenter på en Adobe Experience Manager-webbplats. Lär dig hur du använder regler i taggegenskapen för att lyssna efter klickhändelser, filtrera efter komponent och skicka data till en Adobe Analytics med en spårlänkssignal.
 
 ## Vad du ska bygga {#what-build}
 
@@ -39,13 +39,13 @@ WKND:s marknadsföringsteam är intresserade av att veta vilka `Call to Action (
 
 Den här självstudien är en fortsättning på [Samla in siddata med Adobe Analytics](./collect-data-analytics.md) och förutsätter att du har:
 
-* En **taggegenskap** med [Adobe Analytics-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html) aktiverat
-* **Adobe Analytics** test-/dev-rapportsprogram-ID och spårningsserver. I följande dokumentation finns information om hur du [skapar en rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html).
-* Webbläsartillägget [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) har konfigurerats med taggegenskapen inläst på [WKND-webbplatsen](https://wknd.site/us/en.html) eller en AEM-webbplats där Adobe Data Layer är aktiverat.
+* En **taggegenskap** med [Adobe Analytics-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=sv-SE) aktiverat
+* **Adobe Analytics** test-/dev-rapportsprogram-ID och spårningsserver. I följande dokumentation finns information om hur du [skapar en rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html?lang=sv-SE).
+* Webbläsartillägget [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=sv-SE) har konfigurerats med taggegenskapen inläst på [WKND-webbplatsen](https://wknd.site/us/en.html) eller en AEM-webbplats där Adobe Data Layer är aktiverat.
 
 ## Inspektera schema för knappar och Teaser
 
-Innan du skapar regler i taggegenskapen är det praktiskt att granska [schemat för Button och Teaser](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item) och inspektera dem i datalagrets implementering.
+Innan du skapar regler i taggegenskapen är det praktiskt att granska [schemat för Button och Teaser](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=sv-SE#item) och inspektera dem i datalagrets implementering.
 
 1. Navigera till [WKND-startsida](https://wknd.site/us/en.html)
 1. Öppna webbläsarens utvecklarverktyg och gå till **konsolen**. Kör följande kommando:
@@ -81,7 +81,7 @@ Innan du skapar regler i taggegenskapen är det praktiskt att granska [schemat f
        xdm:linkURL: "/content/wknd/us/en/magazine/san-diego-surf.html"
    ```
 
-   Ovanstående datainformation baseras på schemat [Component/Container Item](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#item). Den nya taggregeln använder det här schemat.
+   Ovanstående datainformation baseras på schemat [Component/Container Item](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=sv-SE#item). Den nya taggregeln använder det här schemat.
 
 ## Skapa en regel som CTA klickat på
 
@@ -147,11 +147,11 @@ Adobe-klientdatalagret är ett **händelsestyrt** datalager. När någon Core Co
 
    Objektet `event` skickas från metoden `trigger()` som anropas i den anpassade händelsen. Objektet `component` är det aktuella läget för komponenten som härleds från datalagrets `getState()`-metod och är det element som utlöste klickningen.
 
-1. Spara ändringarna och kör en [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html) i taggegenskapen för att marknadsföra koden till den [miljö](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) som används på din AEM-webbplats.
+1. Spara ändringarna och kör en [build](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/builds.html?lang=sv-SE) i taggegenskapen för att marknadsföra koden till den [miljö](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=sv-SE) som används på din AEM-webbplats.
 
    >[!NOTE]
    >
-   > Det kan vara användbart att använda [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) för att växla inbäddningskoden till en **Development** -miljö.
+   > Det kan vara användbart att använda [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=sv-SE) för att växla inbäddningskoden till en **Development** -miljö.
 
 1. Navigera till [WKND-platsen](https://wknd.site/us/en.html) och öppna utvecklarverktygen för att visa konsolen. Markera kryssrutan **Bevara logg**.
 

@@ -230,7 +230,7 @@ Så här testar du detta på den lokala servern:
 
 1. [Hämta och installera det inbäddade PDF-paketet](assets/embedpdf.core-1.0-SNAPSHOT.jar).
 Detta har serverleten för att sammanfoga data med XDP-mallen och strömma tillbaka PDF-filen.
-1. Lägg till sökvägen /bin/getPDFToEmbed i avsnittet Undantagna sökvägar i Adobe Granite CSRF-filtret med [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). I din produktionsmiljö bör du använda [CSRF-skyddsramverket](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=en)
+1. Lägg till sökvägen /bin/getPDFToEmbed i avsnittet Undantagna sökvägar i Adobe Granite CSRF-filtret med [AEM ConfigMgr](http://localhost:4502/system/console/configMgr). I din produktionsmiljö bör du använda [CSRF-skyddsramverket](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=sv-SE)
 1. [Importera klientbiblioteket och den anpassade komponenten](assets/embed-pdf.zip)
 1. [Importera det adaptiva formuläret och mallen](assets/embed-pdf-form-and-xdp.zip)
 1. [Förhandsgranska anpassat formulär](http://localhost:4502/content/dam/formsanddocuments/from1040/jcr:content?wcmmode=disabled)

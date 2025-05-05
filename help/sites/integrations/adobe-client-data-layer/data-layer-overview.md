@@ -26,7 +26,7 @@ Adobe-klientdatalagret innehåller en standardmetod för att samla in och lagra 
 
 >[!NOTE]
 >
-> Vill du aktivera Adobe-klientdatalagret på AEM? [Se instruktionerna här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html#installation-activation).
+> Vill du aktivera Adobe-klientdatalagret på AEM? [Se instruktionerna här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=sv-SE#installation-activation).
 
 ## Utforska datalagret
 
@@ -179,4 +179,4 @@ Det finns två alternativ för att fortsätta lära sig: först och främst kan 
 ## Ytterligare resurser {#additional-resources}
 
 * [Adobe-datalagerdokumentation](https://github.com/adobe/adobe-client-data-layer/wiki)
-* [Använda Adobe-klientdatalagret och dokumentationen för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Använda Adobe-klientdatalagret och dokumentationen för kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=sv-SE)

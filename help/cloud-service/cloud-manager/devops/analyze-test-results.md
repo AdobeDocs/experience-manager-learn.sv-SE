@@ -23,7 +23,7 @@ ht-degree: 0%
 >id="aemcloud_devops_testresult"
 >title="Analysera testresultat"
 >abstract="IEmma kompileringsfel i koden och se om koden följer vedertagna standarder för AEM as a Cloud Service"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use" text="Förstå testresultaten"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=sv-SE#how-to-use" text="Förstå testresultaten"
 
 Utforska eventuella kompileringsfel i koden och om koden följer vedertagna standarder för AEM as a Cloud Service eller inte
 

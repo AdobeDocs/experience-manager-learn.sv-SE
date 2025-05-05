@@ -49,4 +49,4 @@ När temaprojektet har byggts är du redo att testa ändringarna.
 
 ## Skjut ändringarna
 
-Om du är nöjd med ändringarna kan du överföra ändringarna till din molninstans med [front-end-pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline)
+Om du är nöjd med ändringarna kan du överföra ändringarna till din molninstans med [front-end-pipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/enable-frontend-pipeline-devops/create-frontend-pipeline)

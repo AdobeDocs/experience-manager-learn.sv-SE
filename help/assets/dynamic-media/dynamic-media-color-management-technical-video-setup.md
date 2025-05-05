@@ -24,7 +24,7 @@ I den här videon utforskar vi Dynamic Media Color Management och hur den kan an
 
 >[!NOTE]
 >
->[Aktivera Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html) i AEM för att använda den här funktionen.
+>[Aktivera Dynamic Media](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=sv-SE) i AEM för att använda den här funktionen.
 
 Den här funktionen finns för AEM 6.1 och 6.2 som funktionspaket.
 
@@ -125,4 +125,4 @@ Nedan följer XML-mallen för konfigurationsnoden Färghantering. Denna XML-mall
 
 ## Ytterligare resurser{#additional-resources}
 
-* [Konfigurerar dynamisk mediefärghantering](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)
+* [Konfigurerar dynamisk mediefärghantering](https://helpx.adobe.com/se/experience-manager/6-5/assets/using/config-dynamic.html#ConfiguringDynamicMediaColorManagement)

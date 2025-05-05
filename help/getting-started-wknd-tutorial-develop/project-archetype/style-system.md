@@ -69,7 +69,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Vad du ska bygga {#what-build}
 
-I det här kapitlet används funktionen [Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html) för att skapa varianter av komponenterna **Title** och **Text** som används på artikelsidan.
+I det här kapitlet används funktionen [Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/style-system-feature-video-use.html?lang=sv-SE) för att skapa varianter av komponenterna **Title** och **Text** som används på artikelsidan.
 
 ![Format tillgängliga för titel](assets/style-system/styles-added-title.png)
 
@@ -77,15 +77,15 @@ I det här kapitlet används funktionen [Style System](https://experienceleague.
 
 ## Bakgrund {#background}
 
-Med [Style System](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html) kan utvecklare och mallredigerare skapa flera visuella varianter av en komponent. Författare kan sedan i sin tur bestämma vilket format som ska användas när en sida disponeras. Style System används i resten av självstudiekursen för att uppnå flera unika format när du använder kärnkomponenter i en lågkodsstrategi.
+Med [Style System](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/style-system.html?lang=sv-SE) kan utvecklare och mallredigerare skapa flera visuella varianter av en komponent. Författare kan sedan i sin tur bestämma vilket format som ska användas när en sida disponeras. Style System används i resten av självstudiekursen för att uppnå flera unika format när du använder kärnkomponenter i en lågkodsstrategi.
 
 Den allmänna idén med Style System är att författare kan välja olika stilar för hur en komponent ska se ut. &quot;Styles&quot; backas upp av ytterligare CSS-klasser som injiceras i en komponents yttre div. I klientbiblioteken läggs CSS-regler till baserat på dessa formatklasser så att komponenten ändrar utseende.
 
-[Detaljerad dokumentation om Style System finns här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/features/style-system.html). Det finns också en fantastisk [teknisk video för att förstå Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html).
+[Detaljerad dokumentation om Style System finns här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/features/style-system.html?lang=sv-SE). Det finns också en fantastisk [teknisk video för att förstå Style System](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/developing/style-system-technical-video-understand.html?lang=sv-SE).
 
 ## Understrykningsformat - rubrik {#underline-style}
 
-[Titelkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/title.html) har proxynerats in i projektet under `/apps/wknd/components/title` som en del av modulen **ui.apps**. Standardformaten för rubrikelement (`H1`, `H2`, `H3`..) har redan implementerats i modulen **ui.front** .
+[Titelkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/title.html?lang=sv-SE) har proxynerats in i projektet under `/apps/wknd/components/title` som en del av modulen **ui.apps**. Standardformaten för rubrikelement (`H1`, `H2`, `H3`..) har redan implementerats i modulen **ui.front** .
 
 [WKND-artikeldesignen](assets/pages-templates/wknd-article-design.xd) innehåller ett unikt format för komponenten Title med en understrykning. I stället för att skapa två komponenter eller ändra komponentdialogrutan kan du använda Style System för att ge författarna möjlighet att lägga till ett understruket format.
 
@@ -195,7 +195,7 @@ Implementera sedan understrykningsformatet med modulen **ui.front** i AEM-projek
 
 ## Blockformat för citat - text {#text-component}
 
-Upprepa sedan liknande steg för att tillämpa ett unikt format på [textkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html). Textkomponenten har proxiderats in i projektet under `/apps/wknd/components/text` som en del av modulen **ui.apps**. Standardformaten för styckeelement har redan implementerats i **ui.front**.
+Upprepa sedan liknande steg för att tillämpa ett unikt format på [textkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/text.html?lang=sv-SE). Textkomponenten har proxiderats in i projektet under `/apps/wknd/components/text` som en del av modulen **ui.apps**. Standardformaten för styckeelement har redan implementerats i **ui.front**.
 
 [WKND-artikeldesignen](assets/pages-templates/wknd-article-design.xd) innehåller ett unikt format för Text-komponenten med ett citattecken:
 

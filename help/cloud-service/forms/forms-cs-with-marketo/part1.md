@@ -24,7 +24,7 @@ Marketo, som ingår i Adobe, tillhandahåller Marketing Automation-programvara s
 
 Med hjälp av AEM Forms Form Data Model kan vi nu integrera AEM Form med Marketo.
 
-[Läs mer om formulärdatamodellen](https://helpx.adobe.com/experience-manager/6-5/forms/using/data-integration.html)
+[Läs mer om formulärdatamodellen](https://helpx.adobe.com/se/experience-manager/6-5/forms/using/data-integration.html)
 
 Marketo visar ett REST API som tillåter fjärrexekvering av många av systemets funktioner. Det finns många alternativ, från att skapa program till att importera leads, som ger detaljerad kontroll av en Marketo-instans. Med hjälp av formulärdatamodellen är det mycket enkelt att integrera AEM Forms med Marketo.
 

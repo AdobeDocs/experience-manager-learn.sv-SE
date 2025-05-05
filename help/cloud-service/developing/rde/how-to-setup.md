@@ -169,7 +169,7 @@ Lär dig [hur du använder](./how-to-use.md) en RDE för att distribuera kod och
 
 ## Ytterligare resurser
 
-[Aktivera RDE i en programdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#enabling-rde-in-a-program)
+[Aktivera RDE i en programdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=sv-SE#enabling-rde-in-a-program)
 
 Inställning av [Adobe I/O Runtime Extensible CLI](https://developer.adobe.com/runtime/docs/guides/tools/cli_install/) kallas även `aio CLI`
 

@@ -24,7 +24,7 @@ AEM as a Cloud Service slutför många funktionstester som standard med programm
 
 ## Innehåll som behandlas i den här videon
 
-+ [Funktionstestning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/functional-testing.html)
++ [Funktionstestning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/functional-testing.html?lang=sv-SE)
 + [AEM röktester](https://github.com/adobe/aem-test-samples/)
 + [AEM testklienter](https://github.com/adobe/aem-testing-clients/)
 

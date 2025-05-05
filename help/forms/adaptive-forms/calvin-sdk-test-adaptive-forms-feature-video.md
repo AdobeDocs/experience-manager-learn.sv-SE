@@ -30,5 +30,5 @@ Med AEM 6.3 Forms kan man skapa testfall i AEM for Adaptive Forms med Calvin SDK
 >
 >**Användbara länkar**
 >
->* [Calvin SDK Namespace](https://helpx.adobe.com/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
->* [Hobbes.js-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
+>* [Calvin SDK Namespace](https://helpx.adobe.com/se/aem-forms/6-3/calvin-sdk-javascript-api/calvin.html)
+>* [Hobbes.js-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=sv-SE)

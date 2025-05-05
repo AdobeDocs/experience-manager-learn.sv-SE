@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Optimerade bilder med AEM Headless {#images-with-aem-headless}
 
-Bilder är en viktig aspekt när det gäller att [utveckla engagerande AEM headless-upplevelser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html). AEM Headless har stöd för hantering av bildresurser och optimerad leverans.
+Bilder är en viktig aspekt när det gäller att [utveckla engagerande AEM headless-upplevelser](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=sv-SE). AEM Headless har stöd för hantering av bildresurser och optimerad leverans.
 
 Content Fragments used in AEM Headless content modeling, ofta reference image assets intended for display in the headless experience. AEM GraphQL-frågor kan skrivas för att ange URL:er till bilder baserat på varifrån bilden refereras.
 
@@ -30,9 +30,9 @@ Typen `ImageRef` har fyra URL-alternativ för innehållsreferenser:
 + `_dynamicUrl` är URL:en till för webboptimerad leverans av bildresurser.
    + `_dynamicUrl` innehåller inte något AEM-ursprung, så domänen (AEM Author eller AEM Publish Service) måste anges av klientprogrammet.
 + `_authorUrl` är den fullständiga URL:en till bildresursen på AEM Author
-   + [AEM Author](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) kan användas för att skapa en förhandsgranskning av det headless-programmet.
+   + [AEM Author](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=sv-SE) kan användas för att skapa en förhandsgranskning av det headless-programmet.
 + `_publishUrl` är den fullständiga URL:en till bildresursen i AEM Publish
-   + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html) är vanligtvis där produktionsdistributionen av det headless-programmet visar bilder från.
+   + [AEM Publish](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/underlying-technology/introduction-author-publish.html?lang=sv-SE) är vanligtvis där produktionsdistributionen av det headless-programmet visar bilder från.
 
 `_dynamicUrl` är den rekommenderade URL-adressen som ska användas för leverans av bildresurser och bör ersätta användningen av `_path`, `_authorUrl` och `_publishUrl` när det är möjligt.
 
@@ -50,7 +50,7 @@ Typen `ImageRef` har fyra URL-alternativ för innehållsreferenser:
 
 Kontrollera att fältet Innehållsfragment som innehåller bildreferensen har datatypen __content reference__.
 
-Fälttyperna granskas i [Content Fragment Model](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html) genom att markera fältet och kontrollera fliken __Properties__ till höger.
+Fälttyperna granskas i [Content Fragment Model](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html?lang=sv-SE) genom att markera fältet och kontrollera fliken __Properties__ till höger.
 
 ![Modell för innehållsfragment med innehållsreferens till en bild](./assets/images/content-fragment-model.jpeg)
 

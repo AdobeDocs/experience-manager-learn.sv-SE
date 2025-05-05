@@ -30,5 +30,5 @@ Dynamic Media Snapshot är ett visuellt demonstrationsverktyg som är utformat f
 
 ## Ytterligare resurser
 
-* [HTTP-protokollkommandon](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html)
-* [Smart bildbehandling](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/imaging-faq.html)
+* [HTTP-protokollkommandon](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=sv-SE)
+* [Smart bildbehandling](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/dynamicmedia/imaging-faq.html?lang=sv-SE)

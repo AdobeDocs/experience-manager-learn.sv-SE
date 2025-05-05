@@ -136,7 +136,7 @@ Detta är ofta problematiskt om jobbet ansvarar för att ändra tillstånd, till
 
 Om du vill att jobbet bara ska köras en gång på AEM Author-tjänsten lägger du till konfigurationen [jobbkö](#how-to-run-a-job-on-the-leader-instance) som beskrivs nedan.
 
-Du kan verifiera den genom att granska loggarna för AEM Author-tjänsten i [Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#cloud-manager).
+Du kan verifiera den genom att granska loggarna för AEM Author-tjänsten i [Cloud Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#cloud-manager).
 
 ![Jobbet har bearbetats av alla instanser](./assets/run-job-once/job-processed-by-all-instances.png)
 

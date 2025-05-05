@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Du kan förifylla fälten i ett adaptivt formulär med befintliga data. När en användare öppnar ett formulär är värdena för dessa fält förifyllda. Det finns flera sätt att förifylla adaptiva formulärfält. I den här artikeln ska vi titta närmare på hur man fyller i anpassningsbara formulär med AEM Forms förifyllningstjänst.
 
-[Följ den här dokumentationen](https://helpx.adobe.com/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice) om du vill veta mer om olika metoder för att förifylla adaptiva formulär.
+[Följ den här dokumentationen](https://helpx.adobe.com/se/experience-manager/6-4/forms/using/prepopulate-adaptive-form-fields.html#AEMFormsprefillservice) om du vill veta mer om olika metoder för att förifylla adaptiva formulär.
 
 Om du vill förifylla ett anpassat formulär med förifyllningstjänsten måste du skapa en klass som implementerar gränssnittet `com.adobe.forms.common.service.DataXMLProvider`. Metoden `getDataXMLForDataRef` har logiken för att skapa och returnera data som det adaptiva formuläret använder för att fylla i fälten i förväg. I den här metoden kan du hämta data från valfri källa och returnera indataströmmen för ett datadokument. Följande exempelkod hämtar användarprofilinformationen för den inloggade användaren och konstruerar ett XML-dokument vars indataström returneras för att förbrukas av de adaptiva formulären.
 

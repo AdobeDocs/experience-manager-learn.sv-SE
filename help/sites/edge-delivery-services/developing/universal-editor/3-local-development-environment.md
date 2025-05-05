@@ -127,7 +127,7 @@ info: Enabled reverse proxy to https://main--aem-wknd-eds-ue--<YOUR_ORG>.aem.pag
 
 AEM CLI öppnar webbplatsen i webbläsaren på `http://localhost:3000/`. Ändringar i projektet läses automatiskt in på nytt i webbläsaren, medan innehållsändringar i [kräver publicering i förhandsvisningsmiljön](./6-author-block.md) och uppdatering av webbläsaren.
 
-Om webbplatsen öppnas med en 404-sida är det sannolikt att [fstab.yaml eller paths.json](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) som uppdaterats i [nytt kodprojekt](./1-new-code-project.md) är felaktigt konfigurerade eller att ändringarna inte har implementerats i `main`-grenen.
+Om webbplatsen öppnas med en 404-sida är det sannolikt att [fstab.yaml eller paths.json](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-github-project) som uppdaterats i [nytt kodprojekt](./1-new-code-project.md) är felaktigt konfigurerade eller att ändringarna inte har implementerats i `main`-grenen.
 
 ## Bygg JSON-fragment
 

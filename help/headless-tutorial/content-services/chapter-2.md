@@ -28,7 +28,7 @@ I det här kapitlet beskrivs hur du aktiverar och definierar Content Fragment-mo
 
 ## Aktivera modeller för innehållsfragment
 
-Modellerna för innehållsfragment **måste** aktiveras via **[AEM [!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html)**.
+Modellerna för innehållsfragment **måste** aktiveras via **[AEM [!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=sv-SE)**.
 
 Om Content Fragment Models **inte** är aktiverat för en konfiguration visas inte knappen **[!UICONTROL Create]>[!UICONTROL Content Fragment]** för den aktuella AEM.
 
@@ -40,7 +40,7 @@ Om Content Fragment Models **inte** är aktiverat för en konfiguration visas in
 >
 >När konfigurationen `global` används gäller konfigurationen allt innehåll och `cq:conf` behöver inte anges.
 >
->Mer information finns i [[!UICONTROL Configuration Browser]-dokumentationen ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html).
+>Mer information finns i [[!UICONTROL Configuration Browser]-dokumentationen ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=sv-SE).
 
 1. Logga in på AEM författare som en användare med tillräcklig behörighet för att ändra den relevanta konfigurationen.
    * I den här självstudiekursen kan användaren **admin** användas.

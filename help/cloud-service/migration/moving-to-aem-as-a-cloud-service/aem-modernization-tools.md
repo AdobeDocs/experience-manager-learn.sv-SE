@@ -71,7 +71,7 @@ Innan du provar övningen bör du kontrollera att du har tittat på och förstå
 + [Tänk annorlunda om AEM as a Cloud Service](./introduction.md)
 + [Databasmodernisering](./repository-modernization.md)
 + [Muterbart och oföränderligt innehåll](../../developing/basics/mutable-immutable.md)
-+ [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html)
++ [AEM projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE)
 
 Se även till att du har fullföljt tidigare övningar:
 
@@ -103,7 +103,7 @@ Se även till att du har fullföljt tidigare övningar:
 
 + [Ladda ned verktyg för AEM-modernisering](https://github.com/adobe/aem-modernize-tools/releases/latest)
 + [Dokumentation för AEM Modernization Tools](https://opensource.adobe.com/aem-modernize-tools/)
-+ [AEM Gems - Nu kommer AEM Modernization Suite](https://helpx.adobe.com/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
++ [AEM Gems - Nu kommer AEM Modernization Suite](https://helpx.adobe.com/se/experience-manager/kt/eseminars/gems/Introducing-the-AEM-Modernization-Suite.html)
 
 1. Distribuera den nymoderniserade äldre webbplatsen på AEM SDK. AEM ASK finns att ladda ned här:
    + [Programdistributionsportal](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html).

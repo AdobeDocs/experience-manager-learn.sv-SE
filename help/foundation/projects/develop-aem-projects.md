@@ -26,9 +26,9 @@ Det här är en självstudiekurs om utveckling som visar hur du utvecklar för [
 
 ## Introduktion {#introduction}
 
-[[!DNL AEM Projects]](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) är en funktion i AEM som gör det enklare att hantera och gruppera alla arbetsflöden och uppgifter som är kopplade till innehållsskapande som en del av en AEM Sites- eller Assets-implementering.
+[[!DNL AEM Projects]](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/sites/authoring/projects/projects) är en funktion i AEM som gör det enklare att hantera och gruppera alla arbetsflöden och uppgifter som är kopplade till innehållsskapande som en del av en AEM Sites- eller Assets-implementering.
 
-AEM Projects innehåller flera [OOTB-projektmallar](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects). När du skapar ett projekt kan författarna välja bland dessa tillgängliga mallar. Stora AEM-implementeringar med unika affärskrav vill skapa skräddarsydda projektmallar. Genom att skapa en anpassad projektmall kan utvecklare konfigurera projektkontrollpanelen, ansluta till anpassade arbetsflöden och skapa ytterligare affärsroller för ett projekt. Vi tittar på strukturen för en projektmall och skapar ett exempel.
+AEM Projects innehåller flera [OOTB-projektmallar](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/sites/authoring/projects/projects). När du skapar ett projekt kan författarna välja bland dessa tillgängliga mallar. Stora AEM-implementeringar med unika affärskrav vill skapa skräddarsydda projektmallar. Genom att skapa en anpassad projektmall kan utvecklare konfigurera projektkontrollpanelen, ansluta till anpassade arbetsflöden och skapa ytterligare affärsroller för ett projekt. Vi tittar på strukturen för en projektmall och skapar ett exempel.
 
 ![Anpassat projektkort](./assets/develop-aem-projects/custom-project-card.png)
 
@@ -39,7 +39,7 @@ Den här självstudiekursen stegar igenom koden som behövs för att skapa en an
 * [Självstudiepaketet har slutförts](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Fullständig koddatabas på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
 
-I den här självstudien förutsätts vissa grundläggande kunskaper i [AEM utvecklingsmetoder](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) och viss vana vid [AEM Maven-projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html). All kod som anges är avsedd att användas som referens och ska endast distribueras till en [lokal utvecklingsinstans i AEM](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/deploy).
+I den här självstudien förutsätts vissa grundläggande kunskaper i [AEM utvecklingsmetoder](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/developing/introduction/the-basics) och viss vana vid [AEM Maven-projektinställningar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=sv-SE). All kod som anges är avsedd att användas som referens och ska endast distribueras till en [lokal utvecklingsinstans i AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/deploying/deploy).
 
 ## Struktur för en projektmall
 
@@ -69,11 +69,11 @@ Ett exempel på en anpassad guide finns för översättningsprojektmallen: **/li
 
 ### Gadgets {#gadgets}
 
-Det finns inga ytterligare egenskaper på den här noden, men de underordnade objekten för gadgetnoden kontrollerar vilka projektpaneler som fyller i projektkontrollpanelen när ett nytt projekt skapas. [Projektplattorna](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) (kallas även gadgets eller pods) är enkla kort som fyller i en arbetsplats för ett projekt. En fullständig lista över objektrutor finns under: **/libs/cq/gui/components/projects/admin/pod. &#x200B;** Projektägare kan alltid lägga till/ta bort paneler när ett projekt har skapats.
+Det finns inga ytterligare egenskaper på den här noden, men de underordnade objekten för gadgetnoden kontrollerar vilka projektpaneler som fyller i projektkontrollpanelen när ett nytt projekt skapas. [Projektplattorna](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/sites/authoring/projects/projects) (kallas även gadgets eller pods) är enkla kort som fyller i en arbetsplats för ett projekt. En fullständig lista över objektrutor finns under: **/libs/cq/gui/components/projects/admin/pod. &#x200B;** Projektägare kan alltid lägga till/ta bort paneler när ett projekt har skapats.
 
 ### Roller {#roles}
 
-Det finns tre [standardroller](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) för varje projekt: **Observrar**, **Redigerare** och **Ägare**. Genom att lägga till underordnade noder under noden Roller kan du lägga till ytterligare affärsspecifika projektroller för mallen. Du kan sedan koppla de här rollerna till specifika arbetsflöden som är kopplade till projektet.
+Det finns tre [standardroller](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/sites/authoring/projects/projects) för varje projekt: **Observrar**, **Redigerare** och **Ägare**. Genom att lägga till underordnade noder under noden Roller kan du lägga till ytterligare affärsspecifika projektroller för mallen. Du kan sedan koppla de här rollerna till specifika arbetsflöden som är kopplade till projektet.
 
 ### Arbetsflöden {#workflows}
 
@@ -129,7 +129,7 @@ Eftersom vi huvudsakligen kopierar/konfigurerar noder kommer vi att använda CRX
    1. Lägg till en ny **nt:undefined**-nod under authoring-project/gadgets som kallas **tasks**.
    1. Lägg till String-egenskaper i aktivitetsnoden för **cardWeight** = &quot;100&quot;, **jcr:title**=&quot;Tasks&quot; och **sling:resourceType**=&quot;cq/gui/components/projects/admin/pod/taskpod&quot;.
 
-   Nu visas [aktivitetspanelen](https://experienceleague.adobe.com/en/docs) som standard när ett nytt projekt skapas.
+   Nu visas [aktivitetspanelen](https://experienceleague.adobe.com/sv/docs) som standard när ett nytt projekt skapas.
 
    ```shell
    ../projects/templates/authoring-project
@@ -152,7 +152,7 @@ Eftersom vi huvudsakligen kopierar/konfigurerar noder kommer vi att använda CRX
    1. Lägg till en annan **nt:undefined**-nod med namnet Godkännare som underordnad till rollnoden.
    1. Lägg till strängegenskaper **jcr:title** = &quot;**Godkännare**&quot;, **rollklass** =&quot;**ägare**&quot;, **roleid**=&quot;**godkännare**&quot;.
       1. Namnet på godkännarnoden, samt jcr:title och roleid, kan vara vilket strängvärde som helst (så länge som roleid är unikt).
-      1. **rollklass** styr behörigheterna som används för den rollen baserat på [tre OTB-roller](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects): **ägare**, **redigerare** och **observatör**.
+      1. **rollklass** styr behörigheterna som används för den rollen baserat på [tre OTB-roller](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/sites/authoring/projects/projects): **ägare**, **redigerare** och **observatör**.
       1. Om den anpassade rollen är mer av en ledarroll kan rollklassen vara **owner;** om den är en mer specifik redigeringsroll som fotograf eller Designer bör rollklassen **editor** vara tillräcklig. Den stora skillnaden mellan **ägare** och **redigerare** är att projektägare kan uppdatera projektegenskaperna och lägga till nya användare i projektet.
 
    ```shell
@@ -308,7 +308,7 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
 
    ![Dialogrutan Skapa arbetsflöde](./assets/develop-aem-projects/workflow-create-dialog.png)
 
-   [Mer information om hur du skapar arbetsflöden finns här](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-models).
+   [Mer information om hur du skapar arbetsflöden finns här](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-models).
 
 1. Som en god vana bör anpassade arbetsflöden grupperas i sin egen mapp under /etc/workflow/models. I CRXDE Lite skapar du en **&#39;nt:folder&#39;** under /etc/workflow/models med namnet **&quot;aem-guides&quot;**. Genom att lägga till en undermapp säkerställer du att anpassade arbetsflöden inte skrivs över av misstag vid uppgraderingar eller Service Pack-installationer.
 
@@ -320,7 +320,7 @@ I det sista steget i arbetsflödet används steget Aktivera sida/resurs och nytt
 
    >[!NOTE]
    >
-   >Om du använder AEM 6.4+ har arbetsflödets plats ändrats. Mer information finns i [här.](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
+   >Om du använder AEM 6.4+ har arbetsflödets plats ändrats. Mer information finns i [här.](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
 
    Om du använder AEM 6.4+ skapas arbetsflödesmodellen under `/conf/global/settings/workflow/models`. Upprepa stegen ovan med katalogen /conf och lägg till en undermapp med namnet `aem-guides` och flytta `content-approval-workflow` under den.
 
@@ -629,13 +629,13 @@ Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in 
 
 1. I CRXDE-Lite skapar vi en undermapp under mappen `/apps/aem-guides/projects-tasks/projects` med namnet&quot;guider&quot;. Kopiera standardguiden från `/libs/cq/core/content/projects/workflowwizards/default_workflow` under den nya guidemappen och byt namn på den till **content-approval-start**. Den fullständiga sökvägen bör nu vara: `/apps/aem-guides/projects-tasks/projects/wizards/content-approval-start`.
 
-   Standardguiden är en guide med två kolumner där den första kolumnen med rubrik, beskrivning och miniatyrbild för arbetsflödesmodellen är vald. Den andra kolumnen innehåller fält för arbetsflödets titel, Start Comment och Payload Path. Guiden är ett standardformulär för Touch-gränssnitt och använder standardkomponenter för användargränssnittet i [Granite](https://experienceleague.adobe.com/en/docs) för att fylla i fälten.
+   Standardguiden är en guide med två kolumner där den första kolumnen med rubrik, beskrivning och miniatyrbild för arbetsflödesmodellen är vald. Den andra kolumnen innehåller fält för arbetsflödets titel, Start Comment och Payload Path. Guiden är ett standardformulär för Touch-gränssnitt och använder standardkomponenter för användargränssnittet i [Granite](https://experienceleague.adobe.com/sv/docs) för att fylla i fälten.
 
    ![Guiden för arbetsflöde för godkännande av innehåll](./assets/develop-aem-projects/content-approval-start-wizard.png)
 
 1. Vi ska lägga till ytterligare ett fält i guiden som används för att ange den som ska tilldelas den första uppgiften i arbetsflödet (se [Skapa arbetsflödesmodellen](#create-workflow-model): Steg 5).
 
-   Under `../content-approval-start/jcr:content/items/column2/items` skapar du en ny nod av typen `nt:unstructured` med namnet **&quot;assign&quot;**. Vi kommer att använda projektanvändarväljarkomponenten (som är baserad på [Granite-användarväljarkomponenten](https://experienceleague.adobe.com/en/docs)). Det här formulärfältet gör det enkelt att begränsa användar- och gruppmarkeringen till endast de som tillhör det aktuella projektet.
+   Under `../content-approval-start/jcr:content/items/column2/items` skapar du en ny nod av typen `nt:unstructured` med namnet **&quot;assign&quot;**. Vi kommer att använda projektanvändarväljarkomponenten (som är baserad på [Granite-användarväljarkomponenten](https://experienceleague.adobe.com/sv/docs)). Det här formulärfältet gör det enkelt att begränsa användar- och gruppmarkeringen till endast de som tillhör det aktuella projektet.
 
    Nedan visas XML-representationen av noden **assign**:
 
@@ -655,7 +655,7 @@ Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in 
 
 1. Vi lägger också till ett prioritetsurvalsfält som avgör prioriteten för den första aktiviteten i arbetsflödet (se [Skapa arbetsflödesmodellen](#create-workflow-model): Steg 5).
 
-   Under `/content-approval-start/jcr:content/items/column2/items` skapar du en ny nod av typen `nt:unstructured` med namnet **priority**. Vi kommer att använda [Begränsa gränssnittsmarkeringskomponenten](https://experienceleague.adobe.com/en/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions) för att fylla i formulärfältet.
+   Under `/content-approval-start/jcr:content/items/column2/items` skapar du en ny nod av typen `nt:unstructured` med namnet **priority**. Vi kommer att använda [Begränsa gränssnittsmarkeringskomponenten](https://experienceleague.adobe.com/sv/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions) för att fylla i formulärfältet.
 
    Under noden **priority** lägger vi till en **items**-nod av **nt:undefined**. Under noden **items** lägger du till ytterligare 3 noder för att fylla i markeringsalternativen Hög, Medium och Låg. Varje nod är av typen **not:unStructed** och ska ha en **text**- och **value**-egenskap. Både texten och värdet ska ha samma värde:
 
@@ -691,7 +691,7 @@ Att skapa en anpassad guide kan vara mycket kraftfullt eftersom du kan samla in 
    </priority>
    ```
 
-1. Vi tillåter att arbetsflödesinitieraren anger förfallodatumet för den första uppgiften. Vi använder formulärfältet [Granite UI DatePicker](https://experienceleague.adobe.com/en/docs) för att hämta indata. Vi lägger också till ett dolt fält med [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) för att se till att indata lagras som en Date-typegenskap i JCR.
+1. Vi tillåter att arbetsflödesinitieraren anger förfallodatumet för den första uppgiften. Vi använder formulärfältet [Granite UI DatePicker](https://experienceleague.adobe.com/sv/docs) för att hämta indata. Vi lägger också till ett dolt fält med [TypeHint](https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html#typehint) för att se till att indata lagras som en Date-typegenskap i JCR.
 
    Lägg till två **nt:ostrukturerade**-noder med följande egenskaper som finns representerade nedan i XML:
 
@@ -738,7 +738,7 @@ Arbetsflödeskonfigurationen är ett område i en projektmall som anger vilka ar
    >Om du använder AEM 6.4 har platsen för arbetsflödet ändrats. Peka egenskapen `modelId` på platsen för arbetsflödesmodellen för körning under `/var/workflow/models/aem-guides/content-approval-workflow`
    >
    >
-   >Mer information om förändringen av arbetsflödets plats finns i [här.](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
+   >Mer information om förändringen av arbetsflödets plats finns i [här.](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/developing/extending-aem/extending-workflows/workflows-best-practices)
 
    ```xml
    <contentapproval
@@ -754,4 +754,4 @@ Arbetsflödeskonfigurationen är ett område i en projektmall som anger vilka ar
 
 * [Ladda ned det färdiga självstudiekurspaketet](./assets/develop-aem-projects/projects-tasks-guide.ui.apps-0.0.1-SNAPSHOT.zip)
 * [Fullständig koddatabas på GitHub](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/feature/projects-tasks-guide)
-* [AEM-projektdokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects)
+* [AEM-projektdokumentation](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/sites/authoring/projects/projects)

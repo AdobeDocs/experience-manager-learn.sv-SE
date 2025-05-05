@@ -55,7 +55,7 @@ ht-degree: 0%
 
 * Klicka på ikonen Assets och använd filtret för att visa resurser av typen &quot;Dokumentfragment&quot;. Dra och släpp dokumentfragmentet RetirementIncomeOutlook på målområdet för den vänstra panelen.
 
-* Du kan referera [till den här sidan](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html) när du lägger till dokumentfragment i innehållsområden.
+* Du kan referera [till den här sidan](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/partseven.html?lang=sv-SE) när du lägger till dokumentfragment i innehållsområden.
 
 ## Ökning av uppskattad månadsinkomst {#adding-estimated-monthly-income-chart}
 

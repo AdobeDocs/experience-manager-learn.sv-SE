@@ -54,6 +54,6 @@ Adobe tillhandahåller [Chrome-tillägget ](https://chrome.google.com/webstore/d
 
 ## Ytterligare resurser {#additional-resources}
 
-+ [Introduktion till Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
++ [Introduktion till Adobe Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=sv-SE)
 
-+ [Satellitobjektreferens](https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/satellite-object.html)
++ [Satellitobjektreferens](https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/satellite-object.html?lang=sv-SE)

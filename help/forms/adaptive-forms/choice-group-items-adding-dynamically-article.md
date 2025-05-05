@@ -89,7 +89,7 @@ Så här provar du det på datorn:
 **Använda den visuella redigeraren för att lägga till objekt**
 
 * [Hämta resurserna](assets/usingthevisualeditor.zip)
-* Installera Tomcat om du inte redan har det. [Instruktioner för att installera tomcat finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html)
+* Installera Tomcat om du inte redan har det. [Instruktioner för att installera tomcat finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=sv-SE)
 * [Distribuera filen SampleRest.war som finns i zip-filen i din Tomcat](assets/sample-rest.zip)
 * [Öppna Forms och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 * Klicka på Skapa | Filöverföring och överföring av filen du laddade ned i föregående steg

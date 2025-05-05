@@ -40,5 +40,5 @@ URL för redigerbara mallar (lokal AEM-instans): [http://localhost:4502/libs/wcm
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Redigerbara sidmallar - dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html)
-* [Skapar sidmallar - dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html)
+* [Redigerbara sidmallar - dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=sv-SE)
+* [Skapar sidmallar - dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/templates.html?lang=sv-SE)

@@ -38,7 +38,7 @@ Den här videoserien handlar om redigeringscykeln för innehållsfragment i AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/22452?quality=12&learn=on)
 
-AEM Content Fragments Models, datascheman för Content Fragments, måste aktiveras via AEM [[!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html), som gör att Content Fragment Models kan definieras per konfiguration.
+AEM Content Fragments Models, datascheman för Content Fragments, måste aktiveras via AEM [[!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=sv-SE), som gör att Content Fragment Models kan definieras per konfiguration.
 
 ## Skapa innehållsfragment {#creating-content-fragments}
 
@@ -66,7 +66,7 @@ AEM Content Fragments kan laddas ned från AEM Author som en ZIP-fil som innehå
 
 >[!NOTE]
 >
-> Anteckningar och versionsjämförelser för innehållsfragment introducerades i [AEM 6.4 Service Pack 2](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) och [AEM 6.3 Service Pack 3](https://helpx.adobe.com/experience-manager/6-3/release-notes/sp3-release-notes.html).
+> Anteckningar och versionsjämförelser för innehållsfragment introducerades i [AEM 6.4 Service Pack 2](https://helpx.adobe.com/se/experience-manager/aem-releases-updates.html) och [AEM 6.3 Service Pack 3](https://helpx.adobe.com/se/experience-manager/6-3/release-notes/sp3-release-notes.html).
 
 ## Nästa steg
 
@@ -75,8 +75,8 @@ Lär dig mer om att [leverera innehållsfragment](content-fragments-delivery-fea
 ## Ytterligare resurser {#additional-resources}
 
 * [Leverera innehållsfragment](content-fragments-delivery-feature-video-use.md)
-* [AEM WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
-* [AEM WCM Core Content Fragment Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html)
+* [AEM WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE)
+* [AEM WCM Core Content Fragment Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=sv-SE)
 
 Så här hämtar och installerar du paketet nedan på en AEM 6.4+-instans för det slutliga läget från videoserien:
 

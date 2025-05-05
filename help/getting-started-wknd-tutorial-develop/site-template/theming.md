@@ -60,7 +60,7 @@ Distribuera uppdateringar av ett tema till en AEM-miljö med Cloud Manager Front
 
 Stegen på hög nivå för videon:
 
-1. Skapa en ny Git [-databas i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html)
+1. Skapa en ny Git [-databas i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/cloud-manager-repositories.html?lang=sv-SE)
 1. Lägg till ditt temakällprojekt i Cloud Manager Git-databasen:
 
    ```shell
@@ -71,7 +71,7 @@ Stegen på hög nivå för videon:
    $ git remote add origin <CLOUD_MANAGER_GIT_REPOSITORY_URL>
    ```
 
-1. Konfigurera en [frontpipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html) i Cloud Manager för att distribuera frontslutskoden.
+1. Konfigurera en [frontpipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=sv-SE) i Cloud Manager för att distribuera frontslutskoden.
 1. Kör Front End Pipeline för att distribuera uppdateringar till AEM-målmiljön.
 
 ### Exempelrapporter

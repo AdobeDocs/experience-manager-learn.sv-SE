@@ -85,20 +85,20 @@ Nya abstraktioner som [!DNL Content Fragments] och [!DNL Experience Fragments] �
 
 ### Fråga API:er
 
-AEM stöder flera frågespråk. De tre huvudspråken är [JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html), XPath och [AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html).
+AEM stöder flera frågespråk. De tre huvudspråken är [JCR-SQL2](https://docs.jboss.org/jbossdna/0.7/manuals/reference/html/jcr-query-and-search.html), XPath och [AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=sv-SE).
 
 Det viktigaste problemet är att ha ett konsekvent frågespråk i hela kodbasen, vilket minskar komplexiteten och gör att du lättare kan förstå kostnaderna.
 
 Alla frågespråk har i princip samma prestandaprofiler, eftersom [!DNL Apache Oak] kopplar dem till JCR-SQL2 för slutlig frågekörning, och konverteringstiden till JCR-SQL2 är försumbar jämfört med själva frågetiden.
 
-Det önskade API:t är [AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html), som är den högsta nivån för abstraktion och som tillhandahåller ett robust API för att skapa, köra och hämta resultat för frågor, och som ger följande:
+Det önskade API:t är [AEM Query Builder](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=sv-SE), som är den högsta nivån för abstraktion och som tillhandahåller ett robust API för att skapa, köra och hämta resultat för frågor, och som ger följande:
 
 * Enkel, parametriserad frågekonstruktion (frågeparametrar som modelleras som en karta)
-* Inbyggt [Java™ API och HTTP API:er](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
-* [AEM Query Debugger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html)
-* [AEM förutsäger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-predicate-reference.html) som stöder gemensamma frågekrav
+* Inbyggt [Java™ API och HTTP API:er](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=sv-SE)
+* [AEM Query Debugger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-api.html?lang=sv-SE)
+* [AEM förutsäger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/query-builder/querybuilder-predicate-reference.html?lang=sv-SE) som stöder gemensamma frågekrav
 
-* Utbyggbart API, som möjliggör utveckling av anpassade [frågepredikat](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html)
+* Utbyggbart API, som möjliggör utveckling av anpassade [frågepredikat](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=sv-SE)
 * JCR-SQL2 och XPath kan köras direkt via [[!DNL Sling]](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ResourceResolver.html#findResources-java.lang.String-java.lang.String-) och [JCR API:er](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/index.html), vilket returnerar resultatet [[!DNL Sling] Resources](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/Resource.html) respektive [JCR Nodes](https://developer.adobe.com/experience-manager/reference-materials/spec/javax.jcr/javadocs/jcr-2.0/javax/jcr/Node.html).
 
 >[!CAUTION]
@@ -132,7 +132,7 @@ Det önskade API:t är [AEM Query Builder](https://experienceleague.adobe.com/do
    * [Schemaläggaren](https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html)
    * [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
 
-* [Tjänstanvändare](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
+* [Tjänstanvändare](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html?lang=sv-SE)
 
 ## JCR-API:er
 
@@ -154,7 +154,7 @@ Använd alltid JCR-API:erna framför API:erna i Apache Jackrabbit Oak. JCR-API:e
 
 ### Vanliga användningsområden för JCR-API:er
 
-* [Hantering av åtkomstkontroll](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html)
+* [Hantering av åtkomstkontroll](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-service-users.html?lang=sv-SE)
 * [Auktoriserbar hantering (användare/grupper)](https://jackrabbit.apache.org/api/2.12/org/apache/jackrabbit/api/security/user/package-summary.html)
 * JCR-observation (lyssnar efter JCR-händelser)
 * Skapa djupnodsstrukturer

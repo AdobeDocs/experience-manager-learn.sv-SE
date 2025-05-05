@@ -24,8 +24,8 @@ ht-degree: 0%
 >id="aemcloud_localdev_devtools"
 >title="Installationsutvecklingsverktyg"
 >abstract="Utvecklingsverktyg för Adobe Experience Manager (AEM) kräver att det finns en liten uppsättning utvecklingsverktyg installerade och installerade på utvecklingsdatorn. Bland dessa verktyg finns Java, Maven, Adobe I/O CLI, Development IDE med flera."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines" text="Utvecklingsriktlinjer"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk" text="Grundläggande om utveckling"
+>additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/development-guidelines" text="Utvecklingsriktlinjer"
+>additional-url="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/basics/aem-sdk" text="Grundläggande om utveckling"
 
 Utvecklingsverktyg för Adobe Experience Manager (AEM) kräver att det finns en liten uppsättning utvecklingsverktyg installerade och installerade på utvecklingsdatorn. Dessa verktyg har stöd för utveckling och byggande av AEM-projekt.
 
@@ -100,7 +100,7 @@ Om du använder Homebrew följer du instruktionerna för __Installera med Homebr
 
 ## Installera Git
 
-[Git](https://git-scm.com/) är det källkontrollshanteringssystem som används av [Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html) och krävs därför för utveckling.
+[Git](https://git-scm.com/) är det källkontrollshanteringssystem som används av [Adobe Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/source-code-repository.html?lang=sv-SE) och krävs därför för utveckling.
 
 >[!BEGINTABS]
 
@@ -180,7 +180,7 @@ Apache Maven är ett kommandoradsverktyg för Java med öppen källkod som anvä
 
 + Loggar från AEM som molntjänster
 + Hantera Cloud Manager-rörledningar från CLI
-+ Distribuera till [AEM Rapid Development Environment](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html)
++ Distribuera till [AEM Rapid Development Environment](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=sv-SE)
 
 ### Installera Adobe I/O CLI
 
@@ -217,7 +217,7 @@ Börja [köra kommandon](https://github.com/adobe/aio-cli-plugin-cloudmanager#co
 
 ### Konfigurera plugin-programmet AEM Rapid Development Environment{#rde}
 
-Med plugin-programmet AEM Rapid Development Environment kan AIO CLI interagera med AEM as a Cloud Service [Rapid Development Environment](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html) via kommandot `aio aem:rde`.
+Med plugin-programmet AEM Rapid Development Environment kan AIO CLI interagera med AEM as a Cloud Service [Rapid Development Environment](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=sv-SE) via kommandot `aio aem:rde`.
 
 1. Kör `aio plugins:install @adobe/aio-cli-plugin-aem-rde` för att installera [AEM Rapid Development Environment-plugin](https://github.com/adobe/aio-cli-plugin-aem-rde).
 
@@ -254,9 +254,9 @@ Visual Studio Code är det idealiska alternativet för gränssnittsutvecklare so
 
 ### Eclipse
 
-__[Eclipse IDE](https://www.eclipse.org/ide/)__ är en populär IDE för Java-utveckling och stöder plugin-programmet __[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)__ från Adobe, som tillhandahåller ett in-IDE-gränssnitt för redigering och synkronisering av JCR-innehåll med en lokal AEM-instans.
+__[Eclipse IDE](https://www.eclipse.org/ide/)__ är en populär IDE för Java-utveckling och stöder plugin-programmet __[AEM Developer Tools](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=sv-SE)__ från Adobe, som tillhandahåller ett in-IDE-gränssnitt för redigering och synkronisering av JCR-innehåll med en lokal AEM-instans.
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
 + [Hämta Eclipse](https://www.eclipse.org/ide/)
-+ [Hämta Eclipse Dev-verktyg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
++ [Hämta Eclipse Dev-verktyg](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=sv-SE)

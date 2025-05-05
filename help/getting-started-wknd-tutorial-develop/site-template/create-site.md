@@ -25,13 +25,13 @@ Som en del av guiden Skapa webbplats i Adobe Experience Manager, AEM, använder 
 
 ## Förutsättningar {#prerequisites}
 
-Stegen i det här kapitlet kommer att utföras i en Adobe Experience Manager as a Cloud Service-miljö. Kontrollera att du har administratörsbehörighet för AEM-miljön. Vi rekommenderar att du använder ett [Sandbox-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html) och [Utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html) när du slutför den här självstudiekursen.
+Stegen i det här kapitlet kommer att utföras i en Adobe Experience Manager as a Cloud Service-miljö. Kontrollera att du har administratörsbehörighet för AEM-miljön. Vi rekommenderar att du använder ett [Sandbox-program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/sandbox-programs/introduction-sandbox-programs.html?lang=sv-SE) och [Utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE) när du slutför den här självstudiekursen.
 
-[Produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) -miljöer kan även användas för den här självstudiekursen. Se dock till att aktiviteterna i den här självstudiekursen inte påverkar det arbete som utförs i målmiljöerna, eftersom den här självstudiekursen distribuerar innehåll och kod till AEM-målmiljön.
+[Produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html?lang=sv-SE) -miljöer kan även användas för den här självstudiekursen. Se dock till att aktiviteterna i den här självstudiekursen inte påverkar det arbete som utförs i målmiljöerna, eftersom den här självstudiekursen distribuerar innehåll och kod till AEM-målmiljön.
 
-[AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html) kan användas för delar av den här självstudien. De aspekter av den här självstudiekursen som är beroende av molntjänster, till exempel [distribuera teman med Cloud Manager frontendpipeline](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html), kan inte utföras på AEM SDK.
+[AEM SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=sv-SE) kan användas för delar av den här självstudien. De aspekter av den här självstudiekursen som är beroende av molntjänster, till exempel [distribuera teman med Cloud Manager frontendpipeline](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html?lang=sv-SE), kan inte utföras på AEM SDK.
 
-Mer information finns i [introduktionsdokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html).
+Mer information finns i [introduktionsdokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=sv-SE).
 
 ## Syfte {#objective}
 
@@ -76,7 +76,7 @@ Huvuddelen av självstudiekursen kommer att äga rum med **författartjänsten**
 
 >[!NOTE]
 >
-> Har du problem med att få åtkomst till Experience Manager? Granska [startdokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html)
+> Har du problem med att få åtkomst till Experience Manager? Granska [startdokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/home.html?lang=sv-SE)
 
 ## Ladda ned mallen för grundläggande webbplats
 

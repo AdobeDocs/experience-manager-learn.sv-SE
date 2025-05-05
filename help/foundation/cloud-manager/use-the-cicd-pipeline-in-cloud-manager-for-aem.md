@@ -54,7 +54,7 @@ Den här videon rör även konsolen [!UICONTROL Activity] i Cloud Manager, som g
 
 ## Stödmaterial
 
-* [Cloud Manager Användarhandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html)
-* [Hämta kodskanning [!DNL SonarQube] regler](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html)
+* [Cloud Manager Användarhandbok](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/introduction.html?lang=sv-SE)
+* [Hämta kodskanning [!DNL SonarQube] regler](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-quality-testing.html?lang=sv-SE)
    * *XLSX finns längst ned i det länkade avsnittet*
 * [[!DNL SonarQube] Java™-regelindex](https://rules.sonarsource.com/java/)

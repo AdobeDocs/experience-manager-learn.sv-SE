@@ -37,6 +37,6 @@ Adobe Dynamic Media Classic-datorprogrammet är kompatibelt med följande operat
 
 ## Stödmaterial
 
-* [Adobe Dynamic Media Classic-dokumentation för skrivbordsprogram](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html)
-* [Adobe Dynamic Media - frågor och svar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
-* [Hämta Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html)
+* [Adobe Dynamic Media Classic-dokumentation för skrivbordsprogram](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/dynamic-media-classic-desktop-app.html?lang=sv-SE)
+* [Adobe Dynamic Media - frågor och svar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html?lang=sv-SE)
+* [Hämta Dynamic Media Classic-datorprogrammet](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/new-ui-2020.html?lang=sv-SE)

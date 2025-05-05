@@ -45,7 +45,7 @@ public class HandleFormSubmissison extends SlingAllMethodsServlet {
 
 ## Skapa anpassad överföringshanterare
 
-Skapa en anpassad sändningsåtgärd i mappen `apps/bankingapplication` på samma sätt som du skapar i de [tidigare versionerna av AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=en). I den här självstudien skapar jag en mapp med namnet SubmitToAEMServlet under noden `apps/bankingapplication` i CRX-databasen.
+Skapa en anpassad sändningsåtgärd i mappen `apps/bankingapplication` på samma sätt som du skapar i de [tidigare versionerna av AEM Forms](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/adaptive-forms/custom-submit-aem-forms-article.html?lang=sv-SE). I den här självstudien skapar jag en mapp med namnet SubmitToAEMServlet under noden `apps/bankingapplication` i CRX-databasen.
 
 Följande kod i post.POST.jsp vidarebefordrar helt enkelt begäran till den server som är monterad på /bin/formstutorial. Det här är samma server som skapades i det tidigare steget
 

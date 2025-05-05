@@ -21,13 +21,13 @@ ht-degree: 0%
 
 # Anpassa Adobe Client Data Layer med AEM Components {#customize-data-layer}
 
-Lär dig hur du anpassar Adobe Client Data Layer med innehåll från anpassade AEM-komponenter. Lär dig hur du använder API:er från [AEM Core Components för att utöka](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html) och anpassa datalagret.
+Lär dig hur du anpassar Adobe Client Data Layer med innehåll från anpassade AEM-komponenter. Lär dig hur du använder API:er från [AEM Core Components för att utöka](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html?lang=sv-SE) och anpassa datalagret.
 
 ## Vad du ska bygga
 
 ![Byline Data Layer](assets/adobe-client-data-layer/byline-data-layer-html.png)
 
-I den här självstudiekursen ska vi utforska olika alternativ för att utöka Adobe Client Data Layer genom att uppdatera WKND-komponenten [Byline](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html). Komponenten _Byline_ är en **anpassad komponent** och lektioner som du lär dig i den här självstudiekursen kan användas i andra anpassade komponenter.
+I den här självstudiekursen ska vi utforska olika alternativ för att utöka Adobe Client Data Layer genom att uppdatera WKND-komponenten [Byline](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html?lang=sv-SE). Komponenten _Byline_ är en **anpassad komponent** och lektioner som du lär dig i den här självstudiekursen kan användas i andra anpassade komponenter.
 
 ### Mål {#objective}
 
@@ -39,9 +39,9 @@ I den här självstudiekursen ska vi utforska olika alternativ för att utöka A
 
 En **lokal utvecklingsmiljö** krävs för att slutföra den här självstudien. Skärmbilder och video spelas in med AEM as a Cloud Service SDK som körs på en macOS. Kommandon och kod är oberoende av det lokala operativsystemet om inget annat anges.
 
-**Ny på AEM as a Cloud Service?** Titta i [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
+**Ny på AEM as a Cloud Service?** Titta i [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=sv-SE).
 
-**Har du inte använt AEM 6.5 tidigare?** Titta i [följande guide för att konfigurera en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html).
+**Har du inte använt AEM 6.5 tidigare?** Titta i [följande guide för att konfigurera en lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/set-up-a-local-aem-development-environment.html?lang=sv-SE).
 
 ## Hämta och distribuera WKND Reference-webbplatsen {#set-up-wknd-site}
 
@@ -173,7 +173,7 @@ Om du vill mata in data om komponenten i datalagret uppdaterar vi först kompone
 
 ## Uppdatera Byline-HTML {#htl}
 
-Uppdatera sedan `Byline` [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=en). HTML (HTML Template Language) är den mall som används för att återge komponentens HTML.
+Uppdatera sedan `Byline` [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/specification.html?lang=sv-SE). HTML (HTML Template Language) är den mall som används för att återge komponentens HTML.
 
 Ett särskilt dataattribut `data-cmp-data-layer` på varje AEM-komponent används för att visa dess datalager. JavaScript som tillhandahålls av AEM Core Components letar efter det här dataattributet. Värdet för det här dataattributet fylls i med JSON-strängen som returneras av Byline Sling-modellens `getData()`-metod och injiceras i Adobe-klientdatalagret.
 
@@ -434,4 +434,4 @@ Du har utforskat några sätt att utöka och anpassa Adobe Client Data Layer med
 
 * [Adobe Client Data Layer Documentation](https://github.com/adobe/adobe-client-data-layer/wiki)
 * [Datalagerintegrering med kärnkomponenterna](https://github.com/adobe/aem-core-wcm-components/blob/main/DATA_LAYER_INTEGRATION.md)
-* [Använda Adobe Client Data Layer och Core Components Documentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html)
+* [Använda Adobe Client Data Layer och Core Components Documentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/overview.html?lang=sv-SE)

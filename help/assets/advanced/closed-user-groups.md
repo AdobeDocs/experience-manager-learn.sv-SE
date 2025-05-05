@@ -45,6 +45,6 @@ Både stängda användargrupper (CUG) och åtkomstkontrollistor (ACL) används f
 
 ## Stödlänkar {#supporting-links}
 
-* [Hantera Assets och stängda användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=en#closed-user-group)
-* [Skapar en stängd användargrupp](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html)
+* [Hantera Assets och stängda användargrupper](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/manage-assets.html?lang=sv-SE#closed-user-group)
+* [Skapar en stängd användargrupp](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/cug.html?lang=sv-SE)
 * [Dokumentation för Oak stängd användargrupp](https://jackrabbit.apache.org/oak/docs/security/authorization/cug.html)

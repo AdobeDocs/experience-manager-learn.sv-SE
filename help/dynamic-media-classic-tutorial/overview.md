@@ -42,7 +42,7 @@ I den här guiden diskuterar vi följande kärnfunktioner i Dynamic Media Classi
 - **Video.** Överför färdiga videoklipp, publicera dem och ladda sedan ned dem progressivt till konfigurerbara videovisningsprogram.
 - **Smart bildbehandling.**-teknik som utnyttjar Adobe Sensei AI-funktioner och fungerar med befintliga &quot;Image Presets&quot; för att förbättra bildleveransprestanda genom att automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens kapacitet.
 
-Om du vill ha mer information om lösningen går du till [Dokumentation för Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html).
+Om du vill ha mer information om lösningen går du till [Dokumentation för Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html?lang=sv-SE).
 
 ## Dynamic Media Classic användargränssnitt
 
@@ -72,4 +72,4 @@ _Dynamic Media Classic UI_
 >
 >Markera kryssrutan **Publish efter överföring** i dialogrutan Överför för att automatiskt publicera resurser vid överföring.
 
-Läs mer om [Navigera i användargränssnittet i Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html).
+Läs mer om [Navigera i användargränssnittet i Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html?lang=sv-SE).

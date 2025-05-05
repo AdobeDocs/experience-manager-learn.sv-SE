@@ -32,4 +32,4 @@ Ta en titt på de här tipsen från din tekniska chef, Rakesh Pasupuleti. Rakesh
 
 ## Ytterligare resurser {#additional-resources}
 
-* [AEM as a Cloud Service Onboarding Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html) - En stegvis guide för en ny systemadministratör som initialt kan tillhandahålla molnresurser och tilldela användare till roller baserat på deras arbetsuppgifter, så att alla medlemmar i teamet kan logga in och komma åt sina nya AEM as a Cloud Service-resurser
+* [AEM as a Cloud Service Onboarding Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/overview.html?lang=sv-SE) - En stegvis guide för en ny systemadministratör som initialt kan tillhandahålla molnresurser och tilldela användare till roller baserat på deras arbetsuppgifter, så att alla medlemmar i teamet kan logga in och komma åt sina nya AEM as a Cloud Service-resurser

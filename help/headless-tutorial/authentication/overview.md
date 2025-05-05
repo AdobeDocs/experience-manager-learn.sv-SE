@@ -37,7 +37,7 @@ Se till att följande finns på plats innan du följer med i den här självstud
 
 ## Översikt över externt program
 
-I den här självstudien används ett [enkelt Node.js-program](./assets/aem-guides_token-authentication-external-application.zip) som körs från kommandoraden för att uppdatera metadata för resurser på AEM as a Cloud Service med [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html).
+I den här självstudien används ett [enkelt Node.js-program](./assets/aem-guides_token-authentication-external-application.zip) som körs från kommandoraden för att uppdatera metadata för resurser på AEM as a Cloud Service med [Assets HTTP API](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/mac-api-assets.html?lang=sv-SE).
 
 Körningsflödet för programmet Node.js är följande:
 

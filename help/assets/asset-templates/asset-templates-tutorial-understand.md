@@ -39,7 +39,7 @@ I den här videosjälvstudiekursen går du igenom hur du definierar en InDesign-
 
    * **Högerklicka** och välj **Passning > Passningsalternativ för ram.. > Innehållspassning > Fyll ram proportionellt**
 
-   [Läs mer om rampassningsalternativ](https://helpx.adobe.com/indesign/using/frames-objects.html#fitting_objects_to_frames) och vilket som passar dig bäst.
+   [Läs mer om rampassningsalternativ](https://helpx.adobe.com/se/indesign/using/frames-objects.html#fitting_objects_to_frames) och vilket som passar dig bäst.
 
 5. Kopiera rubriken (logotyp och företagsnamn) från mallmallen på sidan och sidan via Klistra in på plats.
 

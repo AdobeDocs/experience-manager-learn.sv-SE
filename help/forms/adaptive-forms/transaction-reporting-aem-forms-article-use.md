@@ -49,4 +49,4 @@ En transaktion finns kvar i bufferten under en angiven period (Tömningstid för
 
 Om du visar transaktionsrapporten för författarinstansen kontrollerar du att omvänd replikering har konfigurerats för alla publiceringsinstanser.
 
-Om du vill veta mer om transaktionsrapportering [klickar du här](https://helpx.adobe.com/experience-manager/6-4/forms/using/transaction-reports-overview.html)
+Om du vill veta mer om transaktionsrapportering [klickar du här](https://helpx.adobe.com/se/experience-manager/6-4/forms/using/transaction-reports-overview.html)

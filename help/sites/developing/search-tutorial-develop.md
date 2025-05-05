@@ -77,7 +77,7 @@ Den enkla sökimplementeringen är material från **Adobe Summit labb AEM Search
 * [Github-databas](https://github.com/Adobe-Marketing-Cloud/aem-guides/tree/master/simple-search-guide)
 * [Sling Models](https://sling.apache.org/documentation/bundles/models.html)
 * [Sling Model Exporter](https://sling.apache.org/documentation/bundles/models.html#exporter-framework-since-130)
-* [QueryBuilder API](https://experienceleague.adobe.com/docs/)
+* [QueryBuilder API](https://experienceleague.adobe.com/docs/?lang=sv-SE)
 * [AEM Chrome Plug-in](https://chrome.google.com/webstore/detail/aem-chrome-plug-in/ejdcnikffjleeffpigekhccpepplaode) ([Dokumentationssida](https://adobe-consulting-services.github.io/acs-aem-tools/aem-chrome-plugin/))
 
 ## Korrigeringar och uppföljning {#corrections-and-follow-up}

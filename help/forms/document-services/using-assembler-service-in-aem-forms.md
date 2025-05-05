@@ -115,7 +115,7 @@ För att få den här funktionen att fungera på din AEM-server
 >
 >Kontrollera att AEM Forms-installationen är klar. Alla paket måste vara i aktivt läge.
 >
->Kontrollera att du har lagt till - Boot delegate RSA- och BouncyCastle-bibliotek som nämns i denna [Installera AEM Forms](https://helpx.adobe.com/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
+>Kontrollera att du har lagt till - Boot delegate RSA- och BouncyCastle-bibliotek som nämns i denna [Installera AEM Forms](https://helpx.adobe.com/se/aem-forms/6-3/installing-configuring-aem-forms-osgi.html)
 >
 >**Caveats for this Demo**
 >

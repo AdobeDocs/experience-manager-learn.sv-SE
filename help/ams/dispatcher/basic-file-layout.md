@@ -145,13 +145,13 @@ Det finns ytterligare delar som är underavsnitt i Dispatcher servergruppskonfig
 
 #### Cachekatalog
 
-Den här katalogen innehåller alla `_cache.any`, `_invalidate.any` filer som du skapar och som innehåller dina regler om hur du vill att modulen ska hantera cachelagrade element från AEM samt syntax för ogiltighetsregler.  Mer information finns här [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+Den här katalogen innehåller alla `_cache.any`, `_invalidate.any` filer som du skapar och som innehåller dina regler om hur du vill att modulen ska hantera cachelagrade element från AEM samt syntax för ogiltighetsregler.  Mer information finns här [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#configuring-the-dispatcher-cache-cache)
 
 - `/etc/httpd/conf.dispatcher.d/cache/`
 
 #### Katalog för klientrubriker
 
-Den här katalogen kan innehålla alla `_clientheaders.any` filer som du skapar och som innehåller listor med klienthuvuden som du vill skicka till AEM när en begäran kommer in.  Mer information om det här avsnittet finns [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en)
+Den här katalogen kan innehålla alla `_clientheaders.any` filer som du skapar och som innehåller listor med klienthuvuden som du vill skicka till AEM när en begäran kommer in.  Mer information om det här avsnittet finns [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE)
 
 - `/etc/httpd/conf.dispatcher.d/clientheaders/`
 

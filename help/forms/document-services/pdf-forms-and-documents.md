@@ -61,7 +61,7 @@ Dynamiska XFA-PDF-filer kan ändra sin layout vid körning, så kommenterings- o
 * Dynamiska formulär har stöd för klientskript som ändrar formulärets layout och sidnumrering. Exempelvis kommer Purchase Order.xdp att expandera och paginera för att rymma en oändlig mängd data om du sparar den som ett dynamiskt formulär
 * Dynamiska formulär har stöd för alla egenskaper i formuläret vid körning, medan statiska formulär bara har stöd för en delmängd
 
-* [Mer information om skillnaderna mellan statiska och dynamiska PDF-formulär finns i det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
+* [Mer information om skillnaderna mellan statiska och dynamiska PDF-formulär finns i det här dokumentet](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/document-services/pdf-forms-and-documents.html?lang=sv-SE#:~:text=Dynamic%20forms%20support%20all%20the,forms%20support%20only%20a%20subset)
 
 >[!NOTE]
 >

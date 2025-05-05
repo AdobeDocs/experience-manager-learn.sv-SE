@@ -34,4 +34,4 @@ URL för komponentkonsolen (lokal AEM-författare): [http://localhost:4502/libs/
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Komponentkonsolens dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/default-components-console.html)
+* [Komponentkonsolens dokumentation](https://helpx.adobe.com/se/experience-manager/6-5/sites/authoring/using/default-components-console.html)

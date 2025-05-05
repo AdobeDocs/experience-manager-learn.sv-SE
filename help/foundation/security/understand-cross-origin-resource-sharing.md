@@ -26,7 +26,7 @@ OSGI-konfigurationen som beskrivs i det här dokumentet räcker för att:
 1. Resursdelning från en källa i AEM Publish
 2. CORS-åtkomst till AEM Author
 
-Om CORS-åtkomst med flera ursprung krävs för AEM Publish finns mer information i [den här dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=en#dispatcher-configuration).
+Om CORS-åtkomst med flera ursprung krävs för AEM Publish finns mer information i [den här dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=sv-SE#dispatcher-configuration).
 
 ## Adobe Granite Cross-Origin Resource Sharing Policy OSGi configuration
 
@@ -187,7 +187,7 @@ I allmänhet kan samma aspekter för cachelagring av innehåll i Dispatcher anv�
 
 ### Tillåt CORS-begäranderubriker
 
-Om du vill tillåta de [HTTP-begäranrubriker som krävs att gå igenom till AEM för bearbetning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#specifying-the-http-headers-to-pass-through-clientheaders) måste de tillåtas i Dispatcher `/clientheaders`-konfigurationen.
+Om du vill tillåta de [HTTP-begäranrubriker som krävs att gå igenom till AEM för bearbetning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#specifying-the-http-headers-to-pass-through-clientheaders) måste de tillåtas i Dispatcher `/clientheaders`-konfigurationen.
 
 ```
 /clientheaders {
@@ -200,7 +200,7 @@ Om du vill tillåta de [HTTP-begäranrubriker som krävs att gå igenom till AEM
 
 ### Cachelagra CORS-svarshuvuden
 
-Om du vill tillåta cachelagring och visning av CORS-huvuden i cachelagrat innehåll lägger du till följande [/cache /headers-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#caching-http-response-headers) i AEM Publish `dispatcher.any`-filen.
+Om du vill tillåta cachelagring och visning av CORS-huvuden i cachelagrat innehåll lägger du till följande [/cache /headers-konfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#caching-http-response-headers) i AEM Publish `dispatcher.any`-filen.
 
 ```
 /publishfarm {

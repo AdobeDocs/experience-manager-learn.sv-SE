@@ -83,7 +83,7 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE">
       <img alt= "Hämta i AEM Forms" src="./assets/captcha1.png" />
     </a>
     <div>
@@ -175,11 +175,11 @@ Adobe Experience Manager (AEM) är en lättanvänd lösning för att skapa, hant
 
 ## Ytterligare resurser
 
-* [Experience League - Utforska AEM](https://experienceleague.adobe.com/#recommended/solutions/experience-manager)
-* [AEM Sites redigeringsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html)
-* [AEM Sites Developing Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html)
-* [AEM Sites Administering Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html)
-* [AEM Sites distributionsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html)
+* [Experience League - Utforska AEM](https://experienceleague.adobe.com/sv#recommended/solutions/experience-manager)
+* [AEM Sites redigeringsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/home.html?lang=sv-SE)
+* [AEM Sites Developing Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/home.html?lang=sv-SE)
+* [AEM Sites Administering Documentation](https://experienceleague.adobe.com/docs/experience-manager-65/administering/home.html?lang=sv-SE)
+* [AEM Sites distributionsdokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/home.html?lang=sv-SE)
 * [Självstudiekurser om AEM as a Cloud Service](/help/cloud-service/overview.md)
 * [Självstudiekurser om AEM Assets](/help/assets/overview.md)
 * [Självstudiekurser om AEM Forms](/help/forms/overview.md)

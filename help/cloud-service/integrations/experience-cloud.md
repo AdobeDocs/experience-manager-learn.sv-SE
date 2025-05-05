@@ -52,8 +52,8 @@ Adobe Acrobat Sign (tidigare Acrobat Sign) möjliggör e-signaturarbetsflöden f
 
 ### AEM Forms
 
-+ [Konfigurera Adobe Acrobat Sign-integreringen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adobe-sign-integration-adaptive-forms.html)
-+ [AEM Forms och Adobe Acrobat Sign, genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/forms-and-sign/introduction.html)
++ [Konfigurera Adobe Acrobat Sign-integreringen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/adobe-sign-integration-adaptive-forms.html?lang=sv-SE)
++ [AEM Forms och Adobe Acrobat Sign, genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/forms-and-sign/introduction.html?lang=sv-SE)
 
 ## Adobe Analytics
 
@@ -61,29 +61,29 @@ Tack vare Adobe Analytics integrering med AEM as a Cloud Service kan ni spåra i
 
 ### AEM Sites
 
-+ [Konfigurera Adobe Analytics-integreringen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-analytics.html)
-+ [AEM Sites och Analytics, genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/analytics/collect-data-analytics.html)
++ [Konfigurera Adobe Analytics-integreringen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-analytics.html?lang=sv-SE)
++ [AEM Sites och Analytics, genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/analytics/collect-data-analytics.html?lang=sv-SE)
 + Adobe Client Data Layer (ACDL)
 
-   + [Utöka ACDL i AEM WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html)
-   + [Integrera ACDL med AEM WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/integrations.html)
-   + [Händelsedriven datahantering med ACDL](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/adobe-client-data-layer.html)
-   + [Adobe Client Data Layer (ACDL), genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
+   + [Utöka ACDL i AEM WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/extending.html?lang=sv-SE)
+   + [Integrera ACDL med AEM WCM Core Components](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/data-layer/integrations.html?lang=sv-SE)
+   + [Händelsedriven datahantering med ACDL](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/adobe-client-data-layer.html?lang=sv-SE)
+   + [Adobe Client Data Layer (ACDL), genomgång](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=sv-SE)
 
 ### AEM Assets
 
-+ [Assets Insights - översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/assets-insights.html)
-+ [Konfigurera Assets Insights](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/assets-insights.html#configure-asset-insights)
-+ [Självstudiekurs om Assets Insights](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html)
++ [Assets Insights - översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/assets-insights.html?lang=sv-SE)
++ [Konfigurera Assets Insights](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/assets-insights.html?lang=sv-SE#configure-asset-insights)
++ [Självstudiekurs om Assets Insights](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/advanced/asset-insights-launch-tutorial.html?lang=sv-SE)
 
 ### AEM Forms
 
-+ [Konfigurera Adobe Analytics-integreringen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate-aem-forms-with-adobe-analytics.html)
++ [Konfigurera Adobe Analytics-integreringen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/forms/integrate-aem-forms-with-adobe-analytics.html?lang=sv-SE)
 
 ### AEM Sites
 
-+ [Integrera med Adobe Campaign Classic](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-campaign-classic.html#configure-user)
-+ [Skapa ett Adobe Experience Manager-nyhetsbrev](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/creating-newsletter.html)
++ [Integrera med Adobe Campaign Classic](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-campaign-classic.html?lang=sv-SE#configure-user)
++ [Skapa ett Adobe Experience Manager-nyhetsbrev](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/creating-newsletter.html?lang=sv-SE)
 + [AEM-dokumentation om kärnkomponenter för e-post](https://github.com/adobe/aem-core-email-components#aem-email-core-components)
 
 ## Adobe Commerce
@@ -92,7 +92,7 @@ Tack vare Adobe Commerce integrering med AEM as a Cloud Service kan varumärken 
 
 ### AEM Sites
 
-+ [Användarhandbok för AEM Content och Commerce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
++ [Användarhandbok för AEM Content och Commerce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html?lang=sv-SE)
 
 
 ## Taggar i Adobe Experience Platform
@@ -101,13 +101,13 @@ Taggar i Adobe Experience Platform integreras smidigt med AEM, vilket är ett en
 
 ### AEM Sites
 
-+ [Användarhandbok för Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
-+ [Självstudiekurs om Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
++ [Användarhandbok för Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE)
++ [Självstudiekurs om Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=sv-SE)
 
 ### AEM Forms
 
-+ [Användarhandbok för Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html)
-+ [Självstudiekurs om Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
++ [Användarhandbok för Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE)
++ [Självstudiekurs om Experience Platform-taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=sv-SE)
 
 ## Adobe Journey Optimizer
 
@@ -115,7 +115,7 @@ Adobe Journey Optimizer hjälper er att schemalägga flerkanalskampanjer och en-
 
 ### AEM Assets
 
-+ [Integrera AEM Assets Essentials med Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html)
++ [Integrera AEM Assets Essentials med Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=sv-SE)
 
 ## Adobe Learning Manager
 
@@ -123,7 +123,7 @@ Adobe Learning Manager (tidigare Adobe Captivate Prime) ger skräddarsydd inlär
 
 ### AEM Sites
 
-+ [Integrera AEM Sites med Adobe Learning Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-learning-manager.html)
++ [Integrera AEM Sites med Adobe Learning Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-learning-manager.html?lang=sv-SE)
 
 ## Adobe Sensei
 
@@ -132,19 +132,19 @@ Beskär, visuell sökning med mera!
 
 ### AEM Sites
 
-+ [Sammanfatta text i innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-variations.html#summarizing-text)
++ [Sammanfatta text i innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-variations.html?lang=sv-SE#summarizing-text)
 
 ### AEM Assets
 
-+ [Smarta taggar för bilder](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html)
-+ [Anpassade smarta taggar för bilder](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/custom-smart-tags.html)
-+ [Smarta taggar för videoklipp](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/video-smart-tags.html)
-+ [Smart beskärning](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html)
-+ [Visuell sökning](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search.html)
++ [Smarta taggar för bilder](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/image-smart-tags.html?lang=sv-SE)
++ [Anpassade smarta taggar för bilder](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/custom-smart-tags.html?lang=sv-SE)
++ [Smarta taggar för videoklipp](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/metadata/video-smart-tags.html?lang=sv-SE)
++ [Smart beskärning](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/smart-crop-feature-video-use.html?lang=sv-SE)
++ [Visuell sökning](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/search-and-discovery/search.html?lang=sv-SE)
 
 ### AEM Forms
 
-+ [Automatiserad formulärkonverteringstjänst](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html)
++ [Automatiserad formulärkonverteringstjänst](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/configure-service.html?lang=sv-SE)
 
 
 ## Adobe Target
@@ -153,14 +153,14 @@ Adobe Target kan integreras med AEM as a Cloud Service för att ge optimerad web
 
 ### AEM Sites
 
-+ [Konfigurera Adobe Target-integreringen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
++ [Konfigurera Adobe Target-integreringen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=sv-SE)
 + Upplev fragment till mål
 
-   + [Publicera Experience Fragments till Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
-   + [Publicera upplevelsefragment som JSON till mål](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html)
+   + [Publicera Experience Fragments till Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=sv-SE)
+   + [Publicera upplevelsefragment som JSON till mål](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=sv-SE)
 
-+ [Använd AEM Context Hub med Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/audiences.html#creating-an-adobe-target-audience-using-the-audience-console)
-+ [AEM Sites och Target, självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/target/overview.html)
++ [Använd AEM Context Hub med Target](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/audiences.html?lang=sv-SE#creating-an-adobe-target-audience-using-the-audience-console)
++ [AEM Sites och Target, självstudiekurs](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/target/overview.html?lang=sv-SE)
 
 ## Adobe Workfront
 
@@ -168,9 +168,9 @@ Adobe Workfront integreringar med AEM som Cloud Service effektiviserar arbetet m
 
 ### AEM Assets
 
-+ [Konfigurera den utökade Workfront-anslutningen](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
-+ [Workfront förbättrade anslutningsvideor](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html)
++ [Konfigurera den utökade Workfront-anslutningen](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html?lang=sv-SE)
++ [Workfront förbättrade anslutningsvideor](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/workfront/enhanced-connector/basics.html?lang=sv-SE)
 + AEM Assets Essentials
 
    + [Användarhandbok för Adobe Workfront for Assets Essentials](https://one.workfront.com/s/document-item?bundleId=the-new-workfront-experience&amp;topicId=Content%2FDocuments%2FAdobe_Workfront_for_Experience_Manager_Assets_Essentials%2F_workfront-for-aem-asset-essentials.htm)
-   + [Videofilmer om Adobe Workfront och Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html)
+   + [Videofilmer om Adobe Workfront och Assets Essentials](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/workfront/configure.html?lang=sv-SE)

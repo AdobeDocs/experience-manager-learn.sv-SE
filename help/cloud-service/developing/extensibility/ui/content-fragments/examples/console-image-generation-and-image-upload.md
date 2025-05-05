@@ -223,7 +223,7 @@ I den här exempelappen finns en modal React-komponent (`GenerateImageModal.js`)
 Viktigt är att all interaktion med AEM från tillägget delegeras till en [AppBuilder Adobe I/O Runtime-åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), som är en separat serverlös process som körs i [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
 Användning av Adobe I/O Runtime-åtgärder för att kommunicera med AEM, och för att undvika anslutningsproblem med korsdomänsdelning (CORS).
 
-När formuläret _Generera bild_ skickas anropar en anpassad `onSubmitHandler()` Adobe I/O Runtime-åtgärd och skickar bildbeskrivningen, aktuell AEM-värd (domän) och användarens AEM-åtkomsttoken. Åtgärden anropar sedan OpenAI:s [Image generation](https://beta.openai.com/docs/guides/images/image-generation-beta) -API för att generera en bild med den inskickade bildbeskrivningen. Sedan använder du [AEM Upload](https://github.com/adobe/aem-upload) -nodmodulens `DirectBinaryUpload` -klass för att överföra genererad bild till AEM och använder slutligen [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) för att uppdatera innehållsfragmenten.
+När formuläret _Generera bild_ skickas anropar en anpassad `onSubmitHandler()` Adobe I/O Runtime-åtgärd och skickar bildbeskrivningen, aktuell AEM-värd (domän) och användarens AEM-åtkomsttoken. Åtgärden anropar sedan OpenAI:s [Image generation](https://beta.openai.com/docs/guides/images/image-generation-beta) -API för att generera en bild med den inskickade bildbeskrivningen. Sedan använder du [AEM Upload](https://github.com/adobe/aem-upload) -nodmodulens `DirectBinaryUpload` -klass för att överföra genererad bild till AEM och använder slutligen [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=sv-SE) för att uppdatera innehållsfragmenten.
 
 När svaret från Adobe I/O Runtime-åtgärden tas emot uppdateras modalen så att resultatet av bildgenereringen visas.
 
@@ -482,7 +482,7 @@ export default function GenerateImageModal() {
 
 >[!NOTE]
 >
->I funktionen `buildAssetDetailsURL()` antar variabelvärdet `aemAssetdetailsURL` att [Unified Shell](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview) är aktiverat. Om du har inaktiverat det enhetliga skalet måste du ta bort `/ui#/aem` från variabelvärdet.
+>I funktionen `buildAssetDetailsURL()` antar variabelvärdet `aemAssetdetailsURL` att [Unified Shell](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=sv-SE#overview) är aktiverat. Om du har inaktiverat det enhetliga skalet måste du ta bort `/ui#/aem` från variabelvärdet.
 
 
 ### Adobe I/O Runtime action

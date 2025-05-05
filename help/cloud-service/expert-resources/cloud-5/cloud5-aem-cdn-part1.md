@@ -26,7 +26,7 @@ Detta är en djupdykning i det CDN som ingår i AEM as a Cloud Service, inklusiv
 
 ## Innehåll som omfattas av del ett av denna serie
 
-+ AEM CDN [Översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html)
++ AEM CDN [Översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=sv-SE)
 + Brandväggsfunktioner för webbaserade program (WAF)
 + IP-begränsningar
 + DDOS-skydd

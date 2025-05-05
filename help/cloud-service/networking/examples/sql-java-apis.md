@@ -35,7 +35,7 @@ Kontrollera att den [lämpliga](../advanced-networking.md#advanced-networking) a
 
 ## OSGi-konfiguration
 
-Eftersom hemligheter inte får lagras i kod bör SQL-anslutningens användarnamn och lösenord anges med [hemliga OSGi-konfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values), som anges med AIO CLI eller Cloud Manager API:er.
+Eftersom hemligheter inte får lagras i kod bör SQL-anslutningens användarnamn och lösenord anges med [hemliga OSGi-konfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#secret-configuration-values), som anges med AIO CLI eller Cloud Manager API:er.
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/com.adobe.aem.wknd.examples.core.connections.impl.MySqlExternalServiceImpl.cfg.json`
 

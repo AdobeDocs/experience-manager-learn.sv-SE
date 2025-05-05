@@ -178,7 +178,7 @@ export default App;
 
 ## Instrument för React-komponenterna
 
-Om du vill redigera innehållet i WKND Teams React-appen, t.ex. _teamets titel och teambeskrivning_, måste du mäta React-komponenterna. Instrumentationen innebär att relevanta dataattribut (`data-aue-*`) läggs till i de HTML-element som du vill göra ändringsbara med den universella redigeraren. Mer information om dataattribut finns i [Attribut och typer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types).
+Om du vill redigera innehållet i WKND Teams React-appen, t.ex. _teamets titel och teambeskrivning_, måste du mäta React-komponenterna. Instrumentationen innebär att relevanta dataattribut (`data-aue-*`) läggs till i de HTML-element som du vill göra ändringsbara med den universella redigeraren. Mer information om dataattribut finns i [Attribut och typer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types).
 
 ### Definiera redigerbara element
 

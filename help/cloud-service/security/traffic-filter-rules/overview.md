@@ -29,11 +29,11 @@ Lär dig mer om **trafikfilterregler**, inklusive underkategorin för **WAF-regl
 
 Minska risken för säkerhetsintrång är en högsta prioritet för alla organisationer. AEMCS erbjuder trafikfilterregelfunktionen, inklusive WAF regler, för att skydda webbplatser och tillämpningar.
 
-Trafikfilterregler distribueras till det [inbyggda CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html) och utvärderas innan begäran når AEM-infrastrukturen. Med den här funktionen kan du förbättra säkerheten på din webbplats avsevärt och säkerställa att endast berättigade förfrågningar får tillgång till AEM infrastruktur.
+Trafikfilterregler distribueras till det [inbyggda CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=sv-SE) och utvärderas innan begäran når AEM-infrastrukturen. Med den här funktionen kan du förbättra säkerheten på din webbplats avsevärt och säkerställa att endast berättigade förfrågningar får tillgång till AEM infrastruktur.
 
 Den här självstudiekursen vägleder dig genom processen att skapa, distribuera, testa och analysera resultaten av trafikfilterregler, inklusive WAF regler.
 
-Du kan läsa mer om trafikfilterregler i [den här artikeln](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=en).
+Du kan läsa mer om trafikfilterregler i [den här artikeln](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf.html?lang=sv-SE).
 
 >[!IMPORTANT]
 >

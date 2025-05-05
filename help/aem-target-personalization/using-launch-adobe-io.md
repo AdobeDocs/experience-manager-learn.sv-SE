@@ -30,7 +30,7 @@ ht-degree: 0%
       * [Adobe Developer Console](https://developer.adobe.com/console/)
 
      >[!NOTE]
-     >Du bör ha behörighet att utveckla, godkänna, Publish, hantera tillägg och hantera miljöer i datainsamling. Om du inte kan slutföra något av dessa steg eftersom du inte har tillgång till gränssnittsalternativen ber du Experience Cloud-administratören att få åtkomst. Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
+     >Du bör ha behörighet att utveckla, godkänna, Publish, hantera tillägg och hantera miljöer i datainsamling. Om du inte kan slutföra något av dessa steg eftersom du inte har tillgång till gränssnittsalternativen ber du Experience Cloud-administratören att få åtkomst. Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=sv-SE).
 
 * **Chrome webbläsartillägg**
    * Adobe Experience Cloud Debugger(https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
@@ -75,7 +75,7 @@ En egenskap är en behållare som du fyller med tillägg, regler, dataelement oc
 1. Se till att du är i rätt organisation och fortsätt sedan att skapa en taggegenskap.
    ![Experience Cloud - taggar](assets/using-launch-adobe-io/launch-create-property.png)
 
-   *Mer information om hur du skapar egenskaper finns i [Skapa en egenskap](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#create-or-configure-a-property) i produktdokumentationen.*
+   *Mer information om hur du skapar egenskaper finns i [Skapa en egenskap](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=sv-SE#create-or-configure-a-property) i produktdokumentationen.*
 1. Klicka på knappen **Ny egenskap**
 1. Ange ett namn för egenskapen (till exempel *AEM mållokurs*)
 1. Som domän anger du *localhost.com* eftersom det är den domän där WKND-demowebbplatsen körs. Trots att fältet *Domän* krävs fungerar taggegenskapen på alla domäner där det implementeras. Det främsta syftet med det här fältet är att förifylla menyalternativ i regelbyggaren.
@@ -87,7 +87,7 @@ En egenskap är en behållare som du fyller med tillägg, regler, dataelement oc
 
 #### Lägger till måltillägg
 
-Adobe Target-tillägget stöder implementeringar på klientsidan med Target JavaScript SDK för den moderna webben, `at.js`. Kunder som fortfarande använder det äldre målbiblioteket, `mbox.js`, [bör uppgradera till at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html) för att använda taggar.
+Adobe Target-tillägget stöder implementeringar på klientsidan med Target JavaScript SDK för den moderna webben, `at.js`. Kunder som fortfarande använder det äldre målbiblioteket, `mbox.js`, [bör uppgradera till at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/upgrading-from-atjs-1x-to-atjs-20.html?lang=sv-SE) för att använda taggar.
 
 Tillägget Mål består av två huvuddelar:
 
@@ -137,7 +137,7 @@ Tillägget Mål består av två huvuddelar:
 
 >[!NOTE]
 >
-> Ge Adobe Developer-integreringen åtkomst till utvalda arbetsytor med rätt [roll så att ett centralt team kan göra API-drivna ändringar på bara några få arbetsytor](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html).
+> Ge Adobe Developer-integreringen åtkomst till utvalda arbetsytor med rätt [roll så att ett centralt team kan göra API-drivna ändringar på bara några få arbetsytor](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/configure-adobe-io-integration.html?lang=sv-SE).
 
 1. Skapa IMS-integrering i AEM med inloggningsuppgifter från Adobe Developer. (01:12 till 03:55)
 2. Skapa en egenskap i Datainsamling. (täckt [över](#create-launch-property))

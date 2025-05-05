@@ -101,11 +101,11 @@ Varje fält i arrayen `fields` har ett JSON-objekt som innehåller följande obl
 
 | JSON-egenskap | Beskrivning |
 |---------------|-----------------------------------------------------------------------------------------------------------------------|
-| `component` | Fälttypen [&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#component-types), till exempel `text`, `reference` eller `aem-content`. |
+| `component` | Fälttypen [&#128279;](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#component-types), till exempel `text`, `reference` eller `aem-content`. |
 | `name` | Fältets namn, mappning till JCR-egenskapen där värdet lagras i AEM. |
 | `label` | Den etikett som visas för författare i Universell redigerare. |
 
-En omfattande lista med egenskaper, inklusive valfria, finns i dokumentationen för [fält i den universella redigeraren](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#fields).
+En omfattande lista med egenskaper, inklusive valfria, finns i dokumentationen för [fält i den universella redigeraren](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#fields).
 
 #### Blockdesign
 
@@ -132,16 +132,16 @@ Definiera de fält som krävs för blocket: bild, bildalternativ text, text, CTA
 
 Teaser består av två logiska områden: bild och text. För att förenkla koden som behövs för att visa Edge Delivery Services HTML som önskad webbupplevelse bör blockmodellen återspegla den här strukturen.
 
-- Gruppera **bilden** och **bilden alt text** med [fältkomprimering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse).
-- Gruppera textinnehållsfälten med [elementgruppering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) och [fältkomprimering för CTA](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse).
+- Gruppera **bilden** och **bilden alt text** med [fältkomprimering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse).
+- Gruppera textinnehållsfälten med [elementgruppering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) och [fältkomprimering för CTA](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse).
 
-Om du inte är bekant med [fältkomprimering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse), [elementgruppering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) eller [typhärledning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) granskar du den länkade dokumentationen innan du fortsätter, eftersom de är nödvändiga för att skapa en välstrukturerad blockmodell.
+Om du inte är bekant med [fältkomprimering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse), [elementgruppering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) eller [typhärledning](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) granskar du den länkade dokumentationen innan du fortsätter, eftersom de är nödvändiga för att skapa en välstrukturerad blockmodell.
 
 I exemplet nedan:
 
-- [Typhärledning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) används för att automatiskt skapa ett `<img>` HTML-element från fältet `image`. Fältkomprimering används med fälten `image` och `imageAlt` för att skapa ett `<img>` HTML-element. Attributet `src` är inställt på värdet för fältet `image`, medan attributet `alt` är inställt på värdet för fältet `imageAlt`.
+- [Typhärledning](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference) används för att automatiskt skapa ett `<img>` HTML-element från fältet `image`. Fältkomprimering används med fälten `image` och `imageAlt` för att skapa ett `<img>` HTML-element. Attributet `src` är inställt på värdet för fältet `image`, medan attributet `alt` är inställt på värdet för fältet `imageAlt`.
 - `textContent` är ett gruppnamn som används för att kategorisera fält. Den ska vara semantisk, men kan vara allt som är unikt för det här blocket. Detta informerar den universella redigeraren om att återge alla fält med det här prefixet i samma `<div>`-element i den slutliga HTML-utdatafilen.
-- Komprimering av fält används också i gruppen `textContent` för anropet till åtgärd (CTA). CTA skapas som en `<a>` via [typhärledning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference). Fältet `cta` används för att ange attributet `href` för elementet `<a>` och fältet `ctaText` innehåller textinnehållet för länken inuti `<a ...>` -taggarna.
+- Komprimering av fält används också i gruppen `textContent` för anropet till åtgärd (CTA). CTA skapas som en `<a>` via [typhärledning](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#type-inference). Fältet `cta` används för att ange attributet `href` för elementet `<a>` och fältet `ctaText` innehåller textinnehållet för länken inuti `<a ...>` -taggarna.
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="Filnamn på kodexemplet nedan."}
 
@@ -223,7 +223,7 @@ Om du vill förstå konsekvenserna av att inte använda fältkomprimering och el
 
 **På den här fliken visas ett suboptimalt sätt att modellera teaserblocket, och det är bara ett juxposition åt höger.**
 
-Det kan verka frestande att definiera varje fält som ett fristående fält i blockmodellen utan att använda [fältkomprimering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse) och [elementgruppering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping). Denna tillsyn komplicerar dock att formatera blocket som en sammanhängande enhet.
+Det kan verka frestande att definiera varje fält som ett fristående fält i blockmodellen utan att använda [fältkomprimering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse) och [elementgruppering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping). Denna tillsyn komplicerar dock att formatera blocket som en sammanhängande enhet.
 
 Teaser-modellen kan till exempel definieras som **utan**-fältkomprimering eller elementgruppering enligt följande:
 
@@ -304,7 +304,7 @@ Edge Delivery Services HTML för blocket återger varje fälts värde i en separ
 </div>        
 ```
 
-Varje fält isoleras i sin egen `div`, vilket gör det svårt att formatera bilden och textinnehållet som sammanhängande enheter. Det går att uppnå önskad design med ansträngning och kreativitet, men det är enklare, enklare och semantiskt att använda [elementgruppering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) för att gruppera textinnehållsfält och [fältkomprimering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse) för att lägga till redigerade värden som elementattribut.
+Varje fält isoleras i sin egen `div`, vilket gör det svårt att formatera bilden och textinnehållet som sammanhängande enheter. Det går att uppnå önskad design med ansträngning och kreativitet, men det är enklare, enklare och semantiskt att använda [elementgruppering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#element-grouping) för att gruppera textinnehållsfält och [fältkomprimering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#field-collapse) för att lägga till redigerade värden som elementattribut.
 
 Se **Skrivvägs-fliken** ovan för mer information om hur du modellerar teaserblocket bättre.
 
@@ -322,7 +322,7 @@ Blockdefinitionen registrerar blocket i Universell redigerare. Här är en beskr
 | `definition.plugins.xwalk.page.resourceType` | Definierar Sling-resurstypen för återgivning av komponenten i den universella redigeraren. Använd alltid resurstypen `core/franklin/components/block/v#/block`. |
 | `definition.plugins.xwalk.page.template.name` | Blockets namn. Den ska vara i gemener och avstavad så att den matchar blockets mappnamn. Det här värdet används också för att etikettera blockinstansen i Universella redigerare. |
 | `definition.plugins.xwalk.page.template.model` | Länkar den här definitionen till dess `model`-definition, som styr de redigeringsfält som visas för blocket i den universella redigeraren. Värdet här måste matcha ett `model.id`-värde. |
-| `definition.plugins.xwalk.page.template.classes` | Valfri egenskap, vars värde läggs till i HTML-blockelementets `class`-attribut. Detta tillåter varianter av samma block. Värdet `classes` kan göras redigerbart genom att [lägga till ett klassfält](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options) i blockets [modell](#block-model). |
+| `definition.plugins.xwalk.page.template.classes` | Valfri egenskap, vars värde läggs till i HTML-blockelementets `class`-attribut. Detta tillåter varianter av samma block. Värdet `classes` kan göras redigerbart genom att [lägga till ett klassfält](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options) i blockets [modell](#block-model). |
 
 
 Här är ett exempel på JSON för blockdefinitionen:
@@ -363,7 +363,7 @@ Den här strukturen ser till att blocket är konfigurerat i den universella redi
 
 ### Blockfilter
 
-Blockets `filters`-array definierar, för [ behållarblock](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container), vilka andra block som kan läggas till i behållaren. Filter definierar en lista med block-ID (`model.id`) som kan läggas till i behållaren.
+Blockets `filters`-array definierar, för [ behållarblock](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container), vilka andra block som kan läggas till i behållaren. Filter definierar en lista med block-ID (`model.id`) som kan läggas till i behållaren.
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="Filnamn på kodexemplet nedan."}
 
@@ -375,7 +375,7 @@ Blockets `filters`-array definierar, för [ behållarblock](https://experiencele
 }
 ```
 
-Teaser-komponenten är inte ett [behållarblock](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container), vilket innebär att du inte kan lägga till andra block i den. Därför är `filters`-arrayen tom. Lägg i stället till teaser-ID:t i avsnittsblockets filterlista så att teaser kan läggas till i ett avsnitt.
+Teaser-komponenten är inte ett [behållarblock](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container), vilket innebär att du inte kan lägga till andra block i den. Därför är `filters`-arrayen tom. Lägg i stället till teaser-ID:t i avsnittsblockets filterlista så att teaser kan läggas till i ett avsnitt.
 
 ![Blockfilter](./assets/5-new-block/filters.png)
 

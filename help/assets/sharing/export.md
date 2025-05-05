@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Exportera resurser
 
-Lär dig hur du exporterar resurser till din lokala dator med ett anpassningsbart Node.js-skript. Det här exportskriptet innehåller ett exempel på hur du programmässigt hämtar resurser från AEM med [AEM Assets HTTP API:er](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets), särskilt med fokus på de ursprungliga återgivningarna för att säkerställa högsta kvalitet. Den är utformad för att replikera mappstrukturen för AEM Assets på den lokala hårddisken, vilket gör det enkelt att säkerhetskopiera eller migrera resurser.
+Lär dig hur du exporterar resurser till din lokala dator med ett anpassningsbart Node.js-skript. Det här exportskriptet innehåller ett exempel på hur du programmässigt hämtar resurser från AEM med [AEM Assets HTTP API:er](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets), särskilt med fokus på de ursprungliga återgivningarna för att säkerställa högsta kvalitet. Den är utformad för att replikera mappstrukturen för AEM Assets på den lokala hårddisken, vilket gör det enkelt att säkerhetskopiera eller migrera resurser.
 
 Skriptet hämtar bara resursens ursprungliga återgivningar, utan tillhörande metadata, såvida inte dessa metadata har bäddats in i resursen som XMP. Detta innebär att beskrivande information, kategoriseringar eller taggar som lagras i AEM men inte är integrerade i resursfilerna inte inkluderas i hämtningen. Andra återgivningar kan också laddas ned genom att skriptet ändras så att de inkluderas. Se till att du har tillräckligt med utrymme för att lagra de exporterade resurserna.
 
@@ -33,7 +33,7 @@ Innan du kör skriptet måste du konfigurera det med din AEM instans-URL, inlogg
 
 Skriptet, skrivet som en JavaScript-modul, är en del av ett Node.js-projekt eftersom det är beroende av `node-fetch`. Du kan [hämta projektet som en zip-fil](./assets/export/export-aem-assets-script.zip), eller kopiera skriptet nedan till ett tomt Node.js-projekt av typen `module`, och köra `npm install node-fetch` för att installera beroendet.
 
-Skriptet leder mappträdet för AEM Assets och hämtar resurser och mappar till en lokal mapp på datorn. Den använder [AEM Assets HTTP API](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) för att hämta mapp- och resursdata och hämtar de ursprungliga återgivningarna av resurserna.
+Skriptet leder mappträdet för AEM Assets och hämtar resurser och mappar till en lokal mapp på datorn. Den använder [AEM Assets HTTP API](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/admin/mac-api-assets) för att hämta mapp- och resursdata och hämtar de ursprungliga återgivningarna av resurserna.
 
 ```javascript
 // export-assets.js
@@ -243,7 +243,7 @@ console.timeEnd('Download AEM assets');
 
 När skriptet har laddats ned uppdaterar du konfigurationsvariablerna längst ned i skriptet.
 
-`AEM_ACCESS_TOKEN` kan hämtas med hjälp av stegen i självstudiekursen [Tokenbaserad autentisering till AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview). Ofta räcker det med en utvecklartoken på 24 timmar, så länge det tar mindre än 24 timmar att slutföra exporten och den användare som genererar token har läsåtkomst till resurserna som ska exporteras.
+`AEM_ACCESS_TOKEN` kan hämtas med hjälp av stegen i självstudiekursen [Tokenbaserad autentisering till AEM as a Cloud Service](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview). Ofta räcker det med en utvecklartoken på 24 timmar, så länge det tar mindre än 24 timmar att slutföra exporten och den användare som genererar token har läsåtkomst till resurserna som ska exporteras.
 
 ```javascript
 ...
@@ -294,6 +294,6 @@ Downloaded asset: exported-assets/wknd-shared/en/magazine/western-australia/adob
 Download AEM assets: 24.770s
 ```
 
-De exporterade resurserna finns i den lokala mappen som anges i konfigurationen `LOCAL_DOWNLOAD_FOLDER`. Mappstrukturen speglar mappstrukturen i AEM Assets, med resurserna hämtade till rätt undermappar. Dessa filer kan överföras till [molnlagringsleverantörer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view) som stöds, för [bulkimport](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/migration/bulk-import) till andra AEM-instanser eller för säkerhetskopiering.
+De exporterade resurserna finns i den lokala mappen som anges i konfigurationen `LOCAL_DOWNLOAD_FOLDER`. Mappstrukturen speglar mappstrukturen i AEM Assets, med resurserna hämtade till rätt undermappar. Dessa filer kan överföras till [molnlagringsleverantörer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view) som stöds, för [bulkimport](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/migration/bulk-import) till andra AEM-instanser eller för säkerhetskopiering.
 
 ![Exporterade resurser](./assets/export/exported-assets.png)

@@ -42,7 +42,7 @@ Du har slutfört konfigurationsstegen från självstudiekursen **[Integrera Expe
 
 I **AEM som Cloud Service**:
 
-+ [AEM Administratörsåtkomst till AEM as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html)
++ [AEM Administratörsåtkomst till AEM as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=sv-SE)
 + Tillgång till Cloud Manager för Distributionshanteraren
 + Klona och distribuera [WKND - exempelprojektet för Adobe Experience Manager](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) till din AEM as a Cloud Service-miljö.
 
@@ -76,7 +76,7 @@ SDR-dokumentet ger en omfattande översikt över implementeringsplanen och säke
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
 
-Mer information om koncept och olika element som ska inkluderas i SDR-dokumentet finns i [Skapa och underhåll ett SDR-dokument](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). Du kan också hämta en Excel-exempelmall, men den WKND-specifika versionen är också tillgänglig [här](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
+Mer information om koncept och olika element som ska inkluderas i SDR-dokumentet finns i [Skapa och underhåll ett SDR-dokument](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html?lang=sv-SE). Du kan också hämta en Excel-exempelmall, men den WKND-specifika versionen är också tillgänglig [här](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
 
 ## Ställ in Analytics - report suite, Analysis Workspace
 
@@ -90,10 +90,10 @@ För att analysera, samla in insikter och dela dessa insikter med andra från in
 
 Om du vill veta mer om konfiguration och koncept för Analytics rekommenderar vi följande resurser:
 
-+ [Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html)
-+ [Konverteringsvariabler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)
-+ [Slutförda händelser](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)
-+ [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)
++ [Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html?lang=sv-SE)
++ [Konverteringsvariabler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=sv-SE)
++ [Slutförda händelser](https://experienceleague.adobe.com/sv/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)
++ [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=sv-SE)
 
 ## Uppdatera dataström - lägg till analystjänst
 
@@ -214,7 +214,7 @@ I den [tidigare självstudiekursen](./web-sdk.md) skapas en taggegenskap med dat
 
 +++
 
-Mer information om hur du integrerar AEM Core Components med Adobe Client Data Layer finns i [Using the Adobe Client Data Layer with AEM Core Components guide](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html).
+Mer information om hur du integrerar AEM Core Components med Adobe Client Data Layer finns i [Using the Adobe Client Data Layer with AEM Core Components guide](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=sv-SE).
 
 
 >[!INFO]
@@ -273,9 +273,9 @@ Genom att implementera de rekommenderade stegen och använda de tillhandahållna
 
 ## Ytterligare resurser
 
-+ [Integrera Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html)
-+ [Använda Adobe-klientdatalagret med kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
-+ [Integrerar Experience Platform-datainsamlingstaggar och AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
-+ [Adobe Experience Platform Web SDK och Edge Network - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
-+ [Självstudiekurser för datainsamling](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
-+ [Adobe Experience Platform Debugger - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)
++ [Integrera Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html?lang=sv-SE)
++ [Använda Adobe-klientdatalagret med kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=sv-SE)
++ [Integrerar Experience Platform-datainsamlingstaggar och AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=sv-SE)
++ [Adobe Experience Platform Web SDK och Edge Network - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html?lang=sv-SE)
++ [Självstudiekurser för datainsamling](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html?lang=sv-SE)
++ [Adobe Experience Platform Debugger - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=sv-SE)

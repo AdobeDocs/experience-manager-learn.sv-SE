@@ -29,5 +29,5 @@ Lär dig hur du utför grundläggande sidhanteringsåtgärder för en Adobe Expe
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Redigerar dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html)
-* [Snabbstartsguide till redigering av sidor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+* [Redigerar dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/editing-content.html?lang=sv-SE)
+* [Snabbstartsguide till redigering av sidor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=sv-SE)

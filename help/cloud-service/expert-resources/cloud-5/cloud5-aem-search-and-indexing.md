@@ -25,8 +25,8 @@ En snabbdykning i djupa vatten med sökning och indexering. Ett utmanande ämne 
 
 ## Innehåll som behandlas i den här videon
 
-+ Sök och indexera [Översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html)
-+ AEM [Indexkonverterare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html)
++ Sök och indexera [Översikt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=sv-SE)
++ AEM [Indexkonverterare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html?lang=sv-SE)
 + Expertserien [Djupdykning](../../../cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.md)
 
 

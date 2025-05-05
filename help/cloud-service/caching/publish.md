@@ -51,7 +51,7 @@ AEM as a Cloud Service CDN cachelagrar följande:
 + HTTP-svarsbrödtext
 + HTTP-svarsrubriker
 
-Vanligtvis cachelagras en HTTP-begäran/ett HTTP-svar för en enskild URL som ett enskilt objekt. CDN kan emellertid hantera cachelagring av flera objekt för en enda URL när rubriken `Vary` anges för HTTP-svaret. Undvik att ange `Vary` för rubriker vars värden inte har en tätt kontrollerad uppsättning värden, eftersom detta kan leda till många cachemissar, vilket minskar träffkvoten för cachen. Om du vill ha stöd för cachelagring av olika begäranden på AEM Dispatcher [läser du dokumentationen för cachelagring av varianter](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/variant-caching.html).
+Vanligtvis cachelagras en HTTP-begäran/ett HTTP-svar för en enskild URL som ett enskilt objekt. CDN kan emellertid hantera cachelagring av flera objekt för en enda URL när rubriken `Vary` anges för HTTP-svaret. Undvik att ange `Vary` för rubriker vars värden inte har en tätt kontrollerad uppsättning värden, eftersom detta kan leda till många cachemissar, vilket minskar träffkvoten för cachen. Om du vill ha stöd för cachelagring av olika begäranden på AEM Dispatcher [läser du dokumentationen för cachelagring av varianter](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/variant-caching.html?lang=sv-SE).
 
 ### Cachelagring{#cdn-cache-life}
 
@@ -71,15 +71,15 @@ Om ett HTTP-svar kvalificerar sig för AEM Dispatcher-cachelagring [per ovan-kva
 
 | Innehållstyp | Standardcachetid för CDN |
 |:------------ |:---------- |
-| [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#html-text) | 5 minuter |
-| [Assets (bilder, videoklipp, dokument och så vidare)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#images) | 10 minuter |
-| [Beständiga frågor (JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?publish-instances) | 2 timmar |
-| [Klientbibliotek (JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 dagar |
-| [Annan](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | Inte cachelagrad |
+| [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE#html-text) | 5 minuter |
+| [Assets (bilder, videoklipp, dokument och så vidare)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE#images) | 10 minuter |
+| [Beständiga frågor (JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=sv-SE&publish-instances) | 2 timmar |
+| [Klientbibliotek (JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE#client-side-libraries) | 30 dagar |
+| [Annan](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE#other-content) | Inte cachelagrad |
 
 ### Anpassa cacheregler
 
-[Konfigurationen av hur CDN cachelagrar innehåll ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#disp) begränsas till att ange cacherubriker för HTTP-svar. Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher `vhost`-konfigurationer med `mod_headers`, men kan även ställas in i anpassad Java™-kod som körs i AEM Publish.
+[Konfigurationen av hur CDN cachelagrar innehåll ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE#disp) begränsas till att ange cacherubriker för HTTP-svar. Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher `vhost`-konfigurationer med `mod_headers`, men kan även ställas in i anpassad Java™-kod som körs i AEM Publish.
 
 ## AEM Dispatcher
 
@@ -95,10 +95,10 @@ HTTP-svar för motsvarande HTTP-begäranden cachelagras när alla följande vill
 + HTTP-svaret är INTE för en binär fil.
 + URL-sökvägen för HTTP-begäran avslutas med ett tillägg, till exempel: `.html`, `.json`, `.css`, `.js` osv.
 + HTTP-begäran innehåller ingen behörighet och autentiseras inte av AEM.
-   + Cachelagring av autentiserade begäranden [kan dock aktiveras globalt](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used) eller selektivt via [behörighetskänslig cachning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html).
+   + Cachelagring av autentiserade begäranden [kan dock aktiveras globalt](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#caching-when-authentication-is-used) eller selektivt via [behörighetskänslig cachning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html?lang=sv-SE).
 + HTTP-begäran innehåller inga frågeparametrar.
-   + Om du konfigurerar [ignorerade frågeparametrar](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters) kan HTTP-begäranden med de ignorerade frågeparametrarna cachelagras/hanteras från cachen.
-+ HTTP-begärans sökväg [ matchar en Tillåt-Dispatcher-regel och matchar inte en Neka-regel ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache).
+   + Om du konfigurerar [ignorerade frågeparametrar](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#ignoring-url-parameters) kan HTTP-begäranden med de ignorerade frågeparametrarna cachelagras/hanteras från cachen.
++ HTTP-begärans sökväg [ matchar en Tillåt-Dispatcher-regel och matchar inte en Neka-regel ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#specifying-the-documents-to-cache).
 + HTTP-svar har inte någon av följande HTTP-svarshuvuden inställda av AEM Publish:
 
    + `no-cache`
@@ -110,7 +110,7 @@ HTTP-svar för motsvarande HTTP-begäranden cachelagras när alla följande vill
 AEM Dispatcher cachelagrar följande:
 
 + HTTP-svarsbrödtext
-+ HTTP-svarshuvuden har angetts i Dispatcher [cacherubrikskonfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-http-response-headers). Se standardkonfigurationen som levereras med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L106-L113).
++ HTTP-svarshuvuden har angetts i Dispatcher [cacherubrikskonfiguration](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#caching-http-response-headers). Se standardkonfigurationen som levereras med [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L106-L113).
    + `Cache-Control`
    + `Content-Disposition`
    + `Content-Type`
@@ -123,7 +123,7 @@ AEM Dispatcher cachelagrar följande:
 AEM Dispatcher cachelagrar HTTP-svar med följande metoder:
 
 + Till dess att ogiltigförklaringen utlöses via funktioner som publicering eller avpublicering av innehållet.
-+ TTL (time-to-live) när [har konfigurerats explicit i Dispatcher-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-time-based-cache-invalidation-enablettl). Se standardkonfigurationen i [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L122-L127) genom att granska `enableTTL`-konfigurationen.
++ TTL (time-to-live) när [har konfigurerats explicit i Dispatcher-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#configuring-time-based-cache-invalidation-enablettl). Se standardkonfigurationen i [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/blob/develop/src/main/archetype/dispatcher.cloud/src/conf.dispatcher.d/available_farms/default.farm#L122-L127) genom att granska `enableTTL`-konfigurationen.
 
 #### Standardcachetid
 
@@ -131,15 +131,15 @@ Om ett HTTP-svar kvalificerar sig för AEM Dispatcher-cachelagring [per ovan-kva
 
 | Innehållstyp | Standardcachetid för CDN |
 |:------------ |:---------- |
-| [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#html-text) | Till ogiltigförklaring |
-| [Assets (bilder, videoklipp, dokument och så vidare)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#images) | Aldrig |
-| [Beständiga frågor (JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?publish-instances) | 1 minut |
-| [Klientbibliotek (JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 dagar |
-| [Annan](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | Till ogiltigförklaring |
+| [HTML/JSON/XML](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE#html-text) | Till ogiltigförklaring |
+| [Assets (bilder, videoklipp, dokument och så vidare)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE#images) | Aldrig |
+| [Beständiga frågor (JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=sv-SE&publish-instances) | 1 minut |
+| [Klientbibliotek (JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE#client-side-libraries) | 30 dagar |
+| [Annan](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE#other-content) | Till ogiltigförklaring |
 
 ### Anpassa cacheregler
 
-AEM Dispatcher-cachen kan konfigureras via [Dispatcher-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache), inklusive:
+AEM Dispatcher-cachen kan konfigureras via [Dispatcher-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#configuring-the-dispatcher-cache-cache), inklusive:
 
 + Vad som cachelagras
 + Vilka delar av cachen som blir ogiltiga vid publicering/avpublicering

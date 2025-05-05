@@ -122,7 +122,7 @@ Så här importerar du AEM-certifikat:
 
    ![Privat nyckel och certifikat för AEM har importerats](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
 
-Om API-providern använder ett självsignerat CA-certifikat importerar du det mottagna certifikatet till AEM TrustStore, följer du stegen från [här](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html#httpclient-and-load-aem-truststore-material).
+Om API-providern använder ett självsignerat CA-certifikat importerar du det mottagna certifikatet till AEM TrustStore, följer du stegen från [här](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html?lang=sv-SE#httpclient-and-load-aem-truststore-material).
 
 Om AEM använder ett självsignerat CA-certifikat ber du API-providern att importera det.
 
@@ -217,7 +217,7 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 - Om API-providern använder ett självsignerat CA-certifikat hämtar du det globala AEM TrustStore, gör metoden `getAEMTrustStore(...)` det.
 - Skapa ett objekt av `SSLContextBuilder`, se Java™ [API-information](https://javadoc.io/static/org.apache.httpcomponents/httpcore/4.4.8/index.html?org/apache/http/ssl/SSLContextBuilder.html).
 - Läs in användarens AEM KeyStore till `SSLContextBuilder` med metoden `loadKeyMaterial(final KeyStore keystore,final char[] keyPassword)`.
-- Nyckellösenordet är det lösenord som angavs när nyckelbehållaren skapades. Det bör lagras i OSGi-konfigurationen, se [Hemliga konfigurationsvärden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values).
+- Nyckellösenordet är det lösenord som angavs när nyckelbehållaren skapades. Det bör lagras i OSGi-konfigurationen, se [Hemliga konfigurationsvärden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#secret-configuration-values).
 
 ## Undvik JVM-nyckelbehållarändringar
 

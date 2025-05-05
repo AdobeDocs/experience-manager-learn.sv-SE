@@ -25,7 +25,7 @@ HTML5-formulär är en ny funktion i Adobe Experience Manager som erbjuder åter
 
 ## Förutsättning
 
-Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationsguiden](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) för att installera och konfigurera AEM Forms
+Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationsguiden](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html?lang=sv-SE) för att installera och konfigurera AEM Forms
 
 ## Skapa ditt första HTML5-formulär
 
@@ -57,6 +57,6 @@ Med de avancerade egenskaperna för xdp-mallen kan du ange publiceringsdatum, sk
 
 **Skicka-URL** - Det här är den URL som kommer att hantera din inskickning av HTML5-formulär. Vi ska ta upp det här i nästa lektion. Om ingen sändnings-URL anges här anropas standardhanteraren som returnerar formulärdata till webbläsaren.
 
-**HTML-återgivningsprofil** - HTML5-formulär fungerar som profiler som exponeras som REST-slutpunkter för att aktivera mobil återgivning av formulärmallar. En majoritet gånger standardåtergivningsprofilen bör räcka för att återge formuläret. Om standardåtergivningsprofilen inte uppfyller dina behov kan en [anpassad profil](https://experienceleague.adobe.com/docs/experience-manager-65/forms/html5-forms/custom-profile.html) skapas och kopplas till formuläret.
+**HTML-återgivningsprofil** - HTML5-formulär fungerar som profiler som exponeras som REST-slutpunkter för att aktivera mobil återgivning av formulärmallar. En majoritet gånger standardåtergivningsprofilen bör räcka för att återge formuläret. Om standardåtergivningsprofilen inte uppfyller dina behov kan en [anpassad profil](https://experienceleague.adobe.com/docs/experience-manager-65/forms/html5-forms/custom-profile.html?lang=sv-SE) skapas och kopplas till formuläret.
 
 **förifyllningstjänst** - förifyllningstjänsten används vanligtvis för att fylla i formuläret med data som hämtats från en backend-datakälla.

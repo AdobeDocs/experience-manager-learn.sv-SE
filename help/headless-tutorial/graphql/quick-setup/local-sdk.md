@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Snabbinstallation av AEM Headless med AEM SDK {#setup}
 
-Med snabbinstallationen AEM Headless får du tillgång till AEM Headless med hjälp av innehåll från exempelprojektet WKND Site, och ett exempel på en React App (SPA) som förbrukar innehållet i AEM Headless GraphQL API:er. Den här guiden använder [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html).
+Med snabbinstallationen AEM Headless får du tillgång till AEM Headless med hjälp av innehåll från exempelprojektet WKND Site, och ett exempel på en React App (SPA) som förbrukar innehållet i AEM Headless GraphQL API:er. Den här guiden använder [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=sv-SE).
 
 ## Förutsättningar {#prerequisites}
 
@@ -32,7 +32,7 @@ Följande verktyg bör installeras lokalt:
 
 ## 1. Installera AEM SDK {#aem-sdk}
 
-I den här konfigurationen används [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?#aem-as-a-cloud-service-sdk) för att utforska AEM GraphQL API:er. I det här avsnittet finns en snabbguide till hur du installerar AEM SDK och kör det i redigeringsläge. En mer detaljerad guide för hur du konfigurerar en lokal utvecklingsmiljö [finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html#local-development-environment-set-up).
+I den här konfigurationen används [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=sv-SE&#aem-as-a-cloud-service-sdk) för att utforska AEM GraphQL API:er. I det här avsnittet finns en snabbguide till hur du installerar AEM SDK och kör det i redigeringsläge. En mer detaljerad guide för hur du konfigurerar en lokal utvecklingsmiljö [finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=sv-SE#local-development-environment-set-up).
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ I den här konfigurationen används [AEM as a Cloud Service SDK](https://experie
 
 Exempelinnehåll från **WKND-referenswebbplatsen** används för att snabba upp självstudiekursen. WKND är ett fiktivt vardagsmärke som ofta används med AEM utbildning.
 
-WKND-webbplatsen innehåller konfigurationer som krävs för att visa en [GraphQL-slutpunkt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html). I en implementering i verkligheten följer du de dokumenterade stegen för att [inkludera GraphQL-slutpunkterna](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html) i ditt kundprojekt. En [CORS](#cors-config) har också paketerats som en del av WKND-platsen. En CORS-konfiguration krävs för att ge åtkomst till ett externt program. Mer information om [CORS](#cors-config) finns nedan.
+WKND-webbplatsen innehåller konfigurationer som krävs för att visa en [GraphQL-slutpunkt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html?lang=sv-SE). I en implementering i verkligheten följer du de dokumenterade stegen för att [inkludera GraphQL-slutpunkterna](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/content-fragments.html?lang=sv-SE) i ditt kundprojekt. En [CORS](#cors-config) har också paketerats som en del av WKND-platsen. En CORS-konfiguration krävs för att ge åtkomst till ett externt program. Mer information om [CORS](#cors-config) finns nedan.
 
 1. Hämta det senaste kompilerade AEM-paketet för WKND-webbplatsen: [aem-guides-wknd.all-x.x.zip](https://github.com/adobe/aem-guides-wknd/releases/latest).
 
@@ -98,7 +98,7 @@ WKND-webbplatsen innehåller konfigurationer som krävs för att visa en [GraphQ
 
 >[!NOTE]
 >
-> Om du använder en Cloud Service-miljö kan du läsa i dokumentationen om hur du [distribuerar en kodbas som WKND Reference-webbplatsen till en Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#coding-against-the-right-aem-version).
+> Om du använder en Cloud Service-miljö kan du läsa i dokumentationen om hur du [distribuerar en kodbas som WKND Reference-webbplatsen till en Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=sv-SE#coding-against-the-right-aem-version).
 
 ## 3. Ladda ned och kör appen WKND React {#sample-app}
 

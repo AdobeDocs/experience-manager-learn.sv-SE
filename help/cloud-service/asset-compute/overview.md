@@ -147,7 +147,7 @@ Nedan följer olika Adobe-resurser som innehåller ytterligare information och a
 
 ### Dokumentation
 
-+ [Asset Compute tjänstdokumentation](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html)
++ [Asset Compute tjänstdokumentation](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=sv-SE)
 + [Viktigt om Asset Compute Development Tool](https://github.com/adobe/asset-compute-devtool)
 + [Asset Compute exempelarbetare](https://github.com/adobe/asset-compute-example-workers)
 

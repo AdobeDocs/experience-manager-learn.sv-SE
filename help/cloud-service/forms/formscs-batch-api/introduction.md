@@ -29,4 +29,4 @@ Om du vill använda API:t för gruppåtgärd i AEM Forms CS krävs följande kon
 1. Skapa konfiguration för batchdatalager
 1. Kör batch-API:t
 
-Vi rekommenderar att du lär dig mer om [API-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/batch-api.yaml?lang=en) innan du fortsätter att använda den här självstudiekursen.
+Vi rekommenderar att du lär dig mer om [API-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/batch-api.yaml?lang=sv-SE) innan du fortsätter att använda den här självstudiekursen.

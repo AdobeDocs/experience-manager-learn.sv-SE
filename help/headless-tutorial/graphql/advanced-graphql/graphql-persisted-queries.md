@@ -207,9 +207,9 @@ Genom att köra `getAllAdventureDetailsBySlug`-frågan från kommandoradstermina
 
 >[!TIP]
 >
->    Om du kör frågan ovan mot AEM Author-miljön måste du skicka inloggningsuppgifterna. Mer information finns i [Åtkomsttoken för lokal utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html) och i [Anropa API:t för AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html#calling-the-aem-api).
+>    Om du kör frågan ovan mot AEM Author-miljön måste du skicka inloggningsuppgifterna. Mer information finns i [Åtkomsttoken för lokal utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token.html?lang=sv-SE) och i [Anropa API:t för AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=sv-SE#calling-the-aem-api).
 
-Granska även [Så här kör du en beständig fråga](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#execute-persisted-query), [Använda frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#query-variables) och [Kodar fråge-URL:en för användning av ett program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#encoding-query-url) för att lära dig beständig frågekörning av klientprogram.
+Granska även [Så här kör du en beständig fråga](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=sv-SE#execute-persisted-query), [Använda frågevariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=sv-SE#query-variables) och [Kodar fråge-URL:en för användning av ett program](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=sv-SE#encoding-query-url) för att lära dig beständig frågekörning av klientprogram.
 
 ## Uppdatera parametrar för cachekontroll i beständiga frågor {#cache-control-all-adventures}
 
@@ -231,7 +231,7 @@ Använd frågan `adventures-all` för att uppdatera parametrarna för cachekontr
    ![Behåll GraphQL-cachekonfiguration](assets/graphql-persisted-queries/persist-graphql-cache-config.png)
 
 
-Granska [Cachelagra dina beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html#caching-persisted-queries) om du vill ha mer information om standardparametrar för cachekontroll.
+Granska [Cachelagra dina beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=sv-SE#caching-persisted-queries) om du vill ha mer information om standardparametrar för cachekontroll.
 
 
 ## Grattis!

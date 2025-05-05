@@ -24,7 +24,7 @@ Förbättringarna i Dynamic Media Viewer i AEM 6.4 innefattar även Panoramic Im
 
 >[!NOTE]
 >
->I videon antas att din AEM-instans körs i läget Dynamic Media S7. [Instruktioner för hur du konfigurerar AEM med Dynamic Media finns här.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>I videon antas att din AEM-instans körs i läget Dynamic Media S7. [Instruktioner för hur du konfigurerar AEM med Dynamic Media finns här.](https://helpx.adobe.com/se/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## VR-visningsprogram för panoramor och panoramor
 
@@ -65,7 +65,7 @@ Med vågräta färgrutor, beroende på konsumentens skärmstorlek, kan det händ
  </tbody>
 </table>
 
-[Konfigurera dynamiska media i Scene7-läge](https://helpx.adobe.com/experience-manager/6-5/assets/using/config-dms7.html)
+[Konfigurera dynamiska media i Scene7-läge](https://helpx.adobe.com/se/experience-manager/6-5/assets/using/config-dms7.html)
 
 [Konfigurera dynamiska media i hybridläge](https://helpx.adobe.com/se/experience-manager/6-5/assets/using/config-dynamic.html)
 

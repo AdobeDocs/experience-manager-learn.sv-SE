@@ -24,16 +24,16 @@ AEM 6.3 innehåller flera nya funktioner och förbättringar i den här versione
 
 **Några av de största förbättringarna för Adaptiv formulärredigerare omfattar:**
 
-* [Förbättrad användarupplevelse](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
+* [Förbättrad användarupplevelse](https://helpx.adobe.com/se/aem-forms/6-3/introduction-forms-authoring.html)
 
 * Fyll i formulärfält automatiskt
 * RTF för en textrutekomponent
 * Specialiserade indatatyper för formulärfält
 
-* [Inline-redigering av komponentens titel](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
-* [Standardvalidering i komponenter](https://helpx.adobe.com/aem-forms/6-3/introduction-forms-authoring.html)
-* [Kortkommandon för snabbare innehållsredigering](https://helpx.adobe.com/aem-forms/6-3/keyboard-shortcuts.html#AdaptiveFormEditor)
-* [Stöd för JSON-schema för att skapa anpassningsbara formulär](https://helpx.adobe.com/aem-forms/6-3/adaptive-form-json-schema-form-model.html)
-* [CAPTCHA i adaptiva formulär](https://helpx.adobe.com/aem-forms/6-3/captcha-adaptive-forms.html)
-* [Förbättrad Acrobat Sign-integrering](https://helpx.adobe.com/aem-forms/6-3/working-with-adobe-sign.html)
-* [Asynkrona formuläröverföringar](https://helpx.adobe.com/aem-forms/6-3/asynchronous-submissions-adaptive-forms.html)
+* [Inline-redigering av komponentens titel](https://helpx.adobe.com/se/aem-forms/6-3/introduction-forms-authoring.html)
+* [Standardvalidering i komponenter](https://helpx.adobe.com/se/aem-forms/6-3/introduction-forms-authoring.html)
+* [Kortkommandon för snabbare innehållsredigering](https://helpx.adobe.com/se/aem-forms/6-3/keyboard-shortcuts.html#AdaptiveFormEditor)
+* [Stöd för JSON-schema för att skapa anpassningsbara formulär](https://helpx.adobe.com/se/aem-forms/6-3/adaptive-form-json-schema-form-model.html)
+* [CAPTCHA i adaptiva formulär](https://helpx.adobe.com/se/aem-forms/6-3/captcha-adaptive-forms.html)
+* [Förbättrad Acrobat Sign-integrering](https://helpx.adobe.com/se/aem-forms/6-3/working-with-adobe-sign.html)
+* [Asynkrona formuläröverföringar](https://helpx.adobe.com/se/aem-forms/6-3/asynchronous-submissions-adaptive-forms.html)

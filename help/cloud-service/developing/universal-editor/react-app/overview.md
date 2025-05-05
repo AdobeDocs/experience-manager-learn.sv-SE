@@ -56,7 +56,7 @@ Teaminformation som titel, beskrivning och teammedlemmar lagras som _Team_-inneh
 
 Innehållet för React-appen tillhandahålls av AEM med GraphQL API:er och användargränssnittet byggs med två React-komponenter, `Teams` och `Person`.
 
-Det finns en motsvarande självstudiekurs som lär dig hur du bygger appen **WKND Teams**. Självstudiekursen [finns här](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview).
+Det finns en motsvarande självstudiekurs som lär dig hur du bygger appen **WKND Teams**. Självstudiekursen [finns här](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview).
 
 ## Nästa steg
 

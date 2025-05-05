@@ -55,7 +55,7 @@ I AMS baslinjekonfigurationsgrupper hittar du våra inkluderingar enligt nedan:
 ```
 
 
-När du skapar regler för vad som ska cachelagras eller inte, se dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+När du skapar regler för vad som ska cachelagras eller inte, se dokumentationen [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#configuring-the-dispatcher-cache-cache)
 
 
 ## Cacheförfattare
@@ -336,6 +336,6 @@ Här är ett exempel på en baslinjekonfiguration för vilken element ska cachel
 
 Vi vill göra vår publicerade webbplats så girig som möjligt och cachelagra allt.
 
-Om det finns element som bryter upplevelsen vid cachelagring kan du lägga till regler som tar bort alternativet att cachelagra det objektet. Som du ser i exemplet ovan bör csrf-tokens aldrig cachelagras och har uteslutits. Mer information om hur du skriver dessa regler finns [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#configuring-the-dispatcher-cache-cache)
+Om det finns element som bryter upplevelsen vid cachelagring kan du lägga till regler som tar bort alternativet att cachelagra det objektet. Som du ser i exemplet ovan bör csrf-tokens aldrig cachelagras och har uteslutits. Mer information om hur du skriver dessa regler finns [här](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#configuring-the-dispatcher-cache-cache)
 
 [Nästa -> Använda och förstå variabler](./variables.md)

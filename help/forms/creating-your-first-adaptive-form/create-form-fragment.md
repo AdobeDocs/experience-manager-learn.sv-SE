@@ -25,7 +25,7 @@ Ett fragment är en återanvändbar del av ett formulär. Ett fragment kan t.ex.
 
 
 
-Mer information finns i [dokumentationen för adaptiv formulärmall](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html)
+Mer information finns i [dokumentationen för adaptiv formulärmall](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-basic-authoring/adaptive-form-fragments.html?lang=sv-SE)
 
 Om det behövs kan du hämta [Spouse-details-fragment](assets/spouse-details-fragment.zip) och importera till AEM med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 

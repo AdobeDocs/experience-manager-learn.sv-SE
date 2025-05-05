@@ -23,8 +23,8 @@ ht-degree: 0%
 >id="aemcloud_devops_deploycode"
 >title="Distribuera kod"
 >abstract="Integrera molnhanterarens Git-databas med en extern Git-databas och distribuera ett projekt till AEM as a Cloud Service"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/merge-projects.html?lang=en#cloud-manager" text="Sammanfoga projekt"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=en" text="Distribuera kod med Cloud Manager"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/merge-projects.html?lang=sv-SE#cloud-manager" text="Sammanfoga projekt"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/using/code-deployment.html?lang=sv-SE" text="Distribuera kod med Cloud Manager"
 
 Integrera molnhanterarens Git-databas med en extern Git-databas och distribuera ett projekt till AEM as a Cloud Service
 

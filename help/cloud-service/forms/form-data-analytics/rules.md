@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # Definiera regeln
 
-I taggegenskapen skapade vi två nya [regler](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html) (**Fältvalideringsfel och FormSubmit**).
+I taggegenskapen skapade vi två nya [regler](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html?lang=sv-SE) (**Fältvalideringsfel och FormSubmit**).
 
 ![adaptiv form](assets/rules.png)
 
@@ -54,7 +54,7 @@ I regeln Skicka formulär mappas värdet för dataelementet _&#x200B;**Applicant
 Adobe Analytics - Ange variabler konfigureras enligt följande.
 ![form-submit-rule-set-variables](assets/form-submit-set-variable.png)
 
-När du är redo att testa din taggkod [publicerar du dina ändringar av taggarna](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html) med hjälp av publiceringsflödet.
+När du är redo att testa din taggkod [publicerar du dina ändringar av taggarna](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/publishing-flow.html?lang=sv-SE) med hjälp av publiceringsflödet.
 
 ## Nästa steg
 

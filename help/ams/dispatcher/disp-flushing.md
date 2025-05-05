@@ -175,7 +175,7 @@ Som du kan se i det här exemplet är filen äldre än filen `.stat` och kommer 
 
 ## Inställningar för servergruppsfil
 
-Dokumentation finns här för alla konfigurationsalternativ: [https://docs.adobe.com/content/help/en/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-dispatcher_configuring-the-dispatcher-cache-cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en)
+Dokumentation finns här för alla konfigurationsalternativ: [https://docs.adobe.com/content/help/sv-SE/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#configuring-dispatcher_configuring-the-dispatcher-cache-cache](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE)
 
 Vi vill framhäva några av dem som rör cachetömning
 

@@ -38,8 +38,8 @@ Följande verktyg bör installeras lokalt:
 
 Programmet Node.js fungerar med följande AEM-distributionsalternativ. Alla distributioner kräver att [WKND-platsen v3.0.0+](https://github.com/adobe/aem-guides-wknd/releases/latest) är installerad.
 
-+ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ Du kan också [ange inloggningsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html) om du auktoriserar begäranden (till exempel om du ansluter till AEM Author-tjänsten).
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=sv-SE)
++ Du kan också [ange inloggningsuppgifter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis.html?lang=sv-SE) om du auktoriserar begäranden (till exempel om du ansluter till AEM Author-tjänsten).
 
 Det här Node.js-programmet kan ansluta till AEM Author eller AEM Publish baserat på kommandoradsparametrarna.
 

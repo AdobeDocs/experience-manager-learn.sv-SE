@@ -24,8 +24,8 @@ Skapa och visa incidenter i [!DNL ServiceNow] med hjälp av formulärdatamodelle
 ## Förutsättningar
 
 * [!DNL ServiceNow]-konto.
-* Välbekant med [att skapa datakällor](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html)
-* Välbekant med [formulärdatamodellen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html)
+* Välbekant med [att skapa datakällor](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=sv-SE)
+* Välbekant med [formulärdatamodellen](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=sv-SE)
 
 ## Exempel på Assets
 

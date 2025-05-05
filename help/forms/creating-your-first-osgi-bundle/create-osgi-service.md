@@ -80,7 +80,7 @@ public class MyfirstInterfaceImpl implements MyfirstInterface {
 
 Anteckningen `@Component(...)` på rad 10 markerar den här Java-klassen som en OSGi-komponent samt registrerar den som en OSGi-tjänst.
 
-Anteckningen `@Reference` ingår i OSGi-deklarativa tjänster och används för att mata in en referens för [ OutputService ](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) i variabeln `outputService`.
+Anteckningen `@Reference` ingår i OSGi-deklarativa tjänster och används för att mata in en referens för [ OutputService ](https://helpx.adobe.com/se/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) i variabeln `outputService`.
 
 
 ## Bygg och distribuera paketet

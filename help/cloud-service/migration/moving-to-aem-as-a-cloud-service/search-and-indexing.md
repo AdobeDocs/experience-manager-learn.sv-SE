@@ -29,12 +29,12 @@ Lär dig mer om AEM as a Cloud Service sökindex, hur du konverterar indexdefini
 
 Som en del av omfaktoriseringen av kodbasen använder du [indexkonverteringsverktyget](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter) för att konvertera anpassade Oak-indexdefinitioner till AEM as a Cloud Service-kompatibla indexdefinitioner.
 
-Granska [dokumentationen för indexkonverteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html) för att se om det finns en komplett och aktuell uppsättning funktioner för indexkonverteraren.
+Granska [dokumentationen för indexkonverteraren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/migration-journey/refactoring-tools/index-converter.html?lang=sv-SE) för att se om det finns en komplett och aktuell uppsättning funktioner för indexkonverteraren.
 
 ## Viktiga aktiviteter
 
 + Använd verktyget [Adobe I/O Workflow Migrator](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#command-aio-aem-migrationindex-converter) för att migrera arbetsflöden för resursbearbetning och använda Asset Compute mikrotjänster.
-+ Konfigurera en [lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html) och distribuera anpassade index. Se till att de uppdaterade indexen är uppdaterade.
++ Konfigurera en [lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=sv-SE) och distribuera anpassade index. Se till att de uppdaterade indexen är uppdaterade.
 + Distribuera den uppdaterade kodbasen till en AEM as a Cloud Service-utvecklingsmiljö och fortsätt att validera.
 + Om du ändrar ett utanför rutans index **kopierar** alltid den senaste indexdefinitionen från en AEM as a Cloud Service-miljö som körs i den senaste versionen. Ändra den kopierade indexdefinitionen efter dina behov.
 

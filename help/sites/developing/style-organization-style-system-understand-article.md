@@ -272,8 +272,8 @@ CSS för att färglägga texten i layoutstilen **Hero** med den primära (gröna
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Systemdokumentation för format](https://helpx.adobe.com/experience-manager/6-5/sites/authoring/using/style-system.html)
-* [Skapar AEM-klientbibliotek](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/clientlibs.html)
+* [Systemdokumentation för format](https://helpx.adobe.com/se/experience-manager/6-5/sites/authoring/using/style-system.html)
+* [Skapar AEM-klientbibliotek](https://helpx.adobe.com/se/experience-manager/6-5/sites/developing/using/clientlibs.html)
 * [BEM-dokumentationswebbplats (Block Element Modifier)](https://getbem.com/)
 * [LESS Documentation website](https://lesscss.org/)
 * [jQuery-webbplats](https://jquery.com/)

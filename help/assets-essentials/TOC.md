@@ -45,6 +45,6 @@ ht-degree: 1%
    + [Skicka dokument och länka resurser](./integrations/workfront/link-send.md)
    + [Versionshantering](./integrations/workfront/versions.md)
 
-+ [Integrering med Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html){target=_blank}
++ [Integrering med Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=sv-SE){target=_blank}
 
-+ [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html){target=_blank}
++ [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=sv-SE){target=_blank}

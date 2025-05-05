@@ -23,7 +23,7 @@ I den här artikeln visas hur du gör REST-anrop för att lagra skickade AEM For
 För att kunna lagra skickade formulärdata i Azure Storage måste följande steg följas.
 
 >[!NOTE]
->Koden i den här artikeln fungerar inte med grundläggande komponentbaserade adaptiva formulär. [Motsvarande artikel för grundläggande komponentbaserad adaptiv form finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+>Koden i den här artikeln fungerar inte med grundläggande komponentbaserade adaptiva formulär. [Motsvarande artikel för grundläggande komponentbaserad adaptiv form finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=sv-SE)
 
 
 ## Skapa Azure Storage-konto
@@ -104,7 +104,7 @@ Följande funktion har skrivits för att lagra skickade formulärdata i Azure St
 
 * [Importera det adaptiva exempelformuläret](./assets/bank-account-sample-form.zip)
 
-* [Ange lämpliga värden i Azure Portal Configuration med OSGi-konfigurationskonsolen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
+* [Ange lämpliga värden i Azure Portal Configuration med OSGi-konfigurationskonsolen](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=sv-SE#provide-the-blob-sas-token-and-storage-uri)
 
 * [Förhandsgranska och skicka formuläret BankAccount](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 

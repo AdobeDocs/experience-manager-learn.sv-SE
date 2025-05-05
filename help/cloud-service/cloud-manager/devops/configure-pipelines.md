@@ -23,7 +23,7 @@ ht-degree: 0%
 >id="aemcloud_devops_configurepipeline"
 >title="Konfigurera pipelines"
 >abstract="Utforska olika typer av rörledningar i Cloud Manager och hur du konfigurerar dem för ett framgångsrikt projekt."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#config-pipeline-video" text="Konfigurera pipeline i Cloud Manager"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=sv-SE#config-pipeline-video" text="Konfigurera pipeline i Cloud Manager"
 
 Utforska olika typer av rörledningar i Cloud Manager och hur du konfigurerar dem för ett framgångsrikt projekt.
 

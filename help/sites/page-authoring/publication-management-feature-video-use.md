@@ -39,4 +39,4 @@ I AEM Sites finns flera metoder för publicerat och opublicerat innehåll, baser
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Publicerar siddokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html)
+* [Publicerar siddokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/publishing-pages.html?lang=sv-SE)

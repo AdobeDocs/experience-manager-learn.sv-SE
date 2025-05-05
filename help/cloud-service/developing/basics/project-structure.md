@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # AEM projektstruktur
 
-Upptäck de bästa sätten att strukturera ett [AEM Maven-projekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#developing) för AEM as a Cloud Service.
+Upptäck de bästa sätten att strukturera ett [AEM Maven-projekt](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE#developing) för AEM as a Cloud Service.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330557?quality=12&learn=on)

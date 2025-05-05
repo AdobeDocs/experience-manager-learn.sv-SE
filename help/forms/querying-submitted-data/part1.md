@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Skapa anpassat formulär baserat på JSON-schema
 
-Möjligheten att skapa Adaptiv Forms baserat på JSON-schema introducerades i AEM Forms 6.3. Detaljerad information om hur du skapar Adaptiv Forms med JSON-schema finns i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-json-schema-form-model.html).
+Möjligheten att skapa Adaptiv Forms baserat på JSON-schema introducerades i AEM Forms 6.3. Detaljerad information om hur du skapar Adaptiv Forms med JSON-schema finns i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/adaptive-form-json-schema-form-model.html?lang=sv-SE).
 
 När du har skapat ett adaptivt formulär baserat på JSON-schema är nästa steg att lagra skickade data i databasen. I detta syfte kommer vi att använda den nya JSON-datatypen som introducerats av olika databasleverantörer. För den här artikeln använder vi MySQL 8-databasen för att lagra inskickade data.
 

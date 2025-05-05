@@ -36,4 +36,4 @@ Använd AEM datorprogram för att förenkla åtkomsten till alla resurser som ha
 
 ## Ytterligare resurser
 
-+ [Hämta den senaste AEM-datorappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html)
++ [Hämta den senaste AEM-datorappen](https://experienceleague.adobe.com/docs/experience-manager-desktop-app/using/release-notes.html?lang=sv-SE)

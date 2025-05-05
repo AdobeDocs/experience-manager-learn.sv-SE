@@ -32,7 +32,7 @@ Genom att följa den här artikeln bör du kunna placera ikonerna så som visas 
 
 ## Förutsättningar
 
-Om du vill följa den här artikeln måste du känna till Git, skapa och driftsätta ett AEM-projekt med hjälp av molnhanteraren, konfigurera en frontendpipeline i AEM molnhanterare och lite CSS. Om du inte känner till de ovannämnda ämnena kan du följa artikeln [med teman för att utforma kärnkomponenter](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components#rename-env-file-theme-folder) .
+Om du vill följa den här artikeln måste du känna till Git, skapa och driftsätta ett AEM-projekt med hjälp av molnhanteraren, konfigurera en frontendpipeline i AEM molnhanterare och lite CSS. Om du inte känner till de ovannämnda ämnena kan du följa artikeln [med teman för att utforma kärnkomponenter](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/forms/adaptive-forms-authoring/authoring-adaptive-forms-core-components/create-an-adaptive-form-on-forms-cs/using-themes-in-core-components#rename-env-file-theme-folder) .
 
 ## Lägg till ikoner i temat
 

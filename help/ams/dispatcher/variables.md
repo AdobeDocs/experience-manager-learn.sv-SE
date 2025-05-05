@@ -178,7 +178,7 @@ Define WERETAIL_DOMAIN www.weretail.com
 Define WERETAIL_ALT_DOMAIN www..weretail.net
 ```
 
-När du skapar dina egna variabelfiler namnger de efter deras innehåll och följer namngivningsstandarderna i handboken [här](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html#naming-convention).  I exemplet ovan ser du att variabelfilen är värd för de olika DNS-posterna som variabler som ska användas i konfigurationsfilerna.
+När du skapar dina egna variabelfiler namnger de efter deras innehåll och följer namngivningsstandarderna i handboken [här](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17477.html?lang=sv-SE#naming-convention).  I exemplet ovan ser du att variabelfilen är värd för de olika DNS-posterna som variabler som ska användas i konfigurationsfilerna.
 
 ## Använda variabler
 

@@ -34,7 +34,7 @@ Acrobat är formulär som skapats med Acrobat. Du kan skapa ett nytt formulär f
 >
 >Om du skickar ett XFA-baserat dokument måste du förenkla dokumentet och Acrobat Sign-signaturtaggarna måste finnas som statisk text i dokumentet.
 
-[Acrobat Sign-texttaggdokument](https://helpx.adobe.com/sign/using/text-tag.html)
+[Acrobat Sign-texttaggdokument](https://helpx.adobe.com/se/sign/using/text-tag.html)
 
 >[!NOTE]
 >

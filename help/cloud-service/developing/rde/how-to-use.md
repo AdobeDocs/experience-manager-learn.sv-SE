@@ -49,7 +49,7 @@ $ mvn clean package
 
 ## Distribuera AEM-felaktigheter med pluginprogrammet AEM-RDE
 
-Kontrollera först att du har den [senaste `aio` CLI-modulen installerad](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli).
+Kontrollera först att du har den [senaste `aio` CLI-modulen installerad](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools#aio-cli).
 
 Använd sedan kommandot `aio aem:rde:install` för att distribuera olika AEM-artefakter. Nu när du måste
 
@@ -191,7 +191,7 @@ Apache- eller Dispatcher-konfigurationsfilerna **kan inte distribueras individue
    ...
    ```
 
-1. Kontrollera ändringarna lokalt, se [Kör Dispatcher lokalt](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools) för mer information.
+1. Kontrollera ändringarna lokalt, se [Kör Dispatcher lokalt](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools) för mer information.
 1. Distribuera ändringarna i RDE genom att köra följande kommando:
 
    ```shell
@@ -204,7 +204,7 @@ Apache- eller Dispatcher-konfigurationsfilerna **kan inte distribueras individue
 
 ### Distribuera konfigurationsfiler (YAML)
 
-CDN, underhållsaktiviteter, loggvidarebefordran och konfigurationsfiler för AEM API-autentisering kan distribueras till RDE med kommandot `install`. Dessa konfigurationer hanteras som YAML-filer i mappen `config` i AEM-projektet. Mer information finns i [Konfigurationer som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations).
+CDN, underhållsaktiviteter, loggvidarebefordran och konfigurationsfiler för AEM API-autentisering kan distribueras till RDE med kommandot `install`. Dessa konfigurationer hanteras som YAML-filer i mappen `config` i AEM-projektet. Mer information finns i [Konfigurationer som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/config-pipeline#configurations).
 
 Om du vill lära dig hur du distribuerar konfigurationsfilerna kan du förbättra konfigurationsfilen för `cdn` och distribuera den till RDE.
 
@@ -273,8 +273,8 @@ Lär dig mer om [livscykeln för utveckling/distribution med RDE](./development-
 
 ## Ytterligare resurser
 
-[Dokumentation för RDE-kommandon](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
+[Dokumentation för RDE-kommandon](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments)
 
 [Adobe I/O Runtime CLI-plugin för interaktion med AEM Rapid Development Environment](https://github.com/adobe/aio-cli-plugin-aem-rde#aio-cli-plugin-aem-rde)
 
-[Projektinställningar för AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)
+[Projektinställningar för AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/project-setup)

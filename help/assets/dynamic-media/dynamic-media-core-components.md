@@ -26,5 +26,5 @@ Bildkomponenten, som ingår i Experience Manager Core Components, har inbyggt st
 
 ## Ytterligare resurser
 
-* [Komponentdokumentation för Image Core ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=en#dynamic-media)
-* [Referens för dynamiskt mediakommando](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=en#image-serving-api)
+* [Komponentdokumentation för Image Core ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=sv-SE#dynamic-media)
+* [Referens för dynamiskt mediakommando](https://experienceleague.adobe.com/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/command-reference/c-command-reference.html?lang=sv-SE#image-serving-api)

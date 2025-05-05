@@ -60,7 +60,7 @@ En webbplats delas vanligtvis upp i sidor för att skapa en flersidig upplevelse
 
 AEM-komponenter kan ses som små modulära byggstenar på en webbsida. Genom att dela upp användargränssnittet i logiska segment eller komponenter blir det mycket enklare att hantera. För att återanvända komponenter måste komponenterna vara konfigurerbara. Detta sker via författardialogrutan.
 
-AEM tillhandahåller en uppsättning [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) som är färdiga att använda. **Kärnkomponenterna** sträcker sig från grundläggande element som [Text](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html) och [Bild](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) till mer komplexa gränssnittselement som [Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html).
+AEM tillhandahåller en uppsättning [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) som är färdiga att använda. **Kärnkomponenterna** sträcker sig från grundläggande element som [Text](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=sv-SE) och [Bild](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=sv-SE) till mer komplexa gränssnittselement som [Carousel](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/carousel.html?lang=sv-SE).
 
 Skapa sedan några komponenter med AEM Page Editor.
 
@@ -90,7 +90,7 @@ Skapa sedan några komponenter med AEM Page Editor.
 
 1. Observera att det finns komponenter på sidan, till exempel **Rubrik**, **Navigering** och **Sök**, som är åtgärdade. De här områdena är konfigurerade som en del av sidmallen och kan inte ändras på en enskild sida. Detta beskrivs mer i nästa kapitel.
 
-Experimentera fritt med några andra komponenter. Dokumentation om varje [kärnkomponent finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html). En detaljerad videoserie om [Sidredigering finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html).
+Experimentera fritt med några andra komponenter. Dokumentation om varje [kärnkomponent finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE). En detaljerad videoserie om [Sidredigering finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/aem-sites-authoring-overview.html?lang=sv-SE).
 
 ## Publicera uppdateringar {#publish-updates}
 
@@ -156,9 +156,9 @@ Navigera sedan till Publicera-tjänsten för att visa ändringarna.
 
    ![publicera direkt](assets/author-content-publish/page-editor-publish.png)
 
-1. Gå tillbaka till **AEM Publish Service** om du vill visa ändringarna. Troligen kommer du **inte** omedelbart att se uppdateringarna. Detta beror på att **AEM Publiceringstjänst** inkluderar [cachelagring via en Apache-webbserver och CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html). Som standard cachelagras HTML-innehåll i cirka 5 minuter.
+1. Gå tillbaka till **AEM Publish Service** om du vill visa ändringarna. Troligen kommer du **inte** omedelbart att se uppdateringarna. Detta beror på att **AEM Publiceringstjänst** inkluderar [cachelagring via en Apache-webbserver och CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/caching.html?lang=sv-SE). Som standard cachelagras HTML-innehåll i cirka 5 minuter.
 
-1. Om du vill kringgå cachen för testnings-/felsökningssyften lägger du bara till en frågeparameter som `?nocache=true`. URL:en skulle se ut som `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`. Mer information om cachningsstrategi och konfigurationer som är tillgängliga [finns här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html).
+1. Om du vill kringgå cachen för testnings-/felsökningssyften lägger du bara till en frågeparameter som `?nocache=true`. URL:en skulle se ut som `https://publish-pYYYY-eXXXX.adobeaemcloud.com/content/wknd/en/article/hello-world.html?nocache=true`. Mer information om cachningsstrategi och konfigurationer som är tillgängliga [finns här](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/content-delivery/overview.html?lang=sv-SE).
 
 1. Du kan också hitta URL:en till publiceringstjänsten i Cloud Manager. Navigera till **Cloud Manager-programmet** > **Miljö** > **Miljö**.
 

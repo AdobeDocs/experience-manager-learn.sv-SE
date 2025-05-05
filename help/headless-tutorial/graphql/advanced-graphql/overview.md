@@ -27,7 +27,7 @@ Vi rekommenderar att du slutför de tidigare [grundläggande självstudiekursern
 
 >[!CAUTION]
 >
->Om du inte har tillgång till AEM as a Cloud Service-miljön kan du slutföra snabbinstallationen av [AEM Headless med det lokala SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html). Det är dock viktigt att notera att vissa användargränssnittssidor, som navigering för innehållsfragment, är olika.
+>Om du inte har tillgång till AEM as a Cloud Service-miljön kan du slutföra snabbinstallationen av [AEM Headless med det lokala SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/quick-setup/local-sdk.html?lang=sv-SE). Det är dock viktigt att notera att vissa användargränssnittssidor, som navigering för innehållsfragment, är olika.
 
 
 
@@ -49,7 +49,7 @@ I följande video visas en översikt på hög nivå över de koncept som beskriv
 
 >[!CAUTION]
 >
->I den här videon (kl. 2:25) omnämns hur du installerar frågeredigeraren GraphiQL via Package Manager för att utforska GraphQL-frågor. I nyare versioner av AEM som Cloud Service finns dock en inbyggd **GraphiQL Explorer**, vilket innebär att paketinstallation inte krävs. Mer information finns i [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html).
+>I den här videon (kl. 2:25) omnämns hur du installerar frågeredigeraren GraphiQL via Package Manager för att utforska GraphQL-frågor. I nyare versioner av AEM som Cloud Service finns dock en inbyggd **GraphiQL Explorer**, vilket innebär att paketinstallation inte krävs. Mer information finns i [Använda GraphiQL IDE](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/graphiql-ide.html?lang=sv-SE).
 
 
 ## Projektinställningar
@@ -79,7 +79,7 @@ Observera att `WKND Shared Endpoint` redan har skapats. Om du vill skapa en slut
 
 >[!NOTE]
 >
-> När du har sparat slutpunkten visas ett modalt besök på säkerhetskonsolen där du kan justera skyddsinställningarna om du vill konfigurera åtkomst till slutpunkten. Själva säkerhetsbehörigheterna ligger dock utanför den här självstudiekursen. Mer information finns i [AEM-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html).
+> När du har sparat slutpunkten visas ett modalt besök på säkerhetskonsolen där du kan justera skyddsinställningarna om du vill konfigurera åtkomst till slutpunkten. Själva säkerhetsbehörigheterna ligger dock utanför den här självstudiekursen. Mer information finns i [AEM-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=sv-SE).
 
 ### Granska WKND-innehållets struktur och språkets rotmapp
 

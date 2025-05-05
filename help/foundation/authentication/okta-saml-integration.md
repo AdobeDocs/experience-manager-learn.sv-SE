@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Autentisera till AEM Author med OKTA
 
-> Se [SAML 2.0-autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html) för instruktioner om hur du konfigurerar OKTA med AEM as a Cloud Service.
+> Se [SAML 2.0-autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/authentication/saml-2-0.html?lang=sv-SE) för instruktioner om hur du konfigurerar OKTA med AEM as a Cloud Service.
 
 Det första steget är att konfigurera appen på OKTA-portalen. När appen har godkänts av din OKTA-administratör har du tillgång till IdP-certifikatet och URL:en för enkel inloggning. Följande inställningar används vanligtvis för att registrera nya program.
 

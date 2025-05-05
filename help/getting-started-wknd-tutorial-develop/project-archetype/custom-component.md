@@ -103,7 +103,7 @@ Dialogrutan visar gränssnittet som innehållsförfattare kan använda. För den
        sling:resourceSuperType="core/wcm/components/image/v2/image"/>
    ```
 
-   Ovanstående XML-fil innehåller definitionen för komponenten, inklusive rubrik, beskrivning och grupp. `sling:resourceSuperType` pekar på `core/wcm/components/image/v2/image`, som är [kärnbildkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html).
+   Ovanstående XML-fil innehåller definitionen för komponenten, inklusive rubrik, beskrivning och grupp. `sling:resourceSuperType` pekar på `core/wcm/components/image/v2/image`, som är [kärnbildkomponenten](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/image.html?lang=sv-SE).
 
 ### Skapa HTML-skriptet {#create-the-htl-script}
 
@@ -358,7 +358,7 @@ Byline Sling Model bygger på flera Java™-API:er från AEM. Dessa API:er är t
    </dependency>
    ```
 
-   [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=en) innehåller alla offentliga Java™-API:er som exponeras av AEM. `aem-sdk-api` används som standard när det här projektet skapas. Versionen finns kvar i den överordnade reaktorversionen från projektets rot vid `aem-guides-wknd/pom.xml`.
+   [aem-sdk-api](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=sv-SE) innehåller alla offentliga Java™-API:er som exponeras av AEM. `aem-sdk-api` används som standard när det här projektet skapas. Versionen finns kvar i den överordnade reaktorversionen från projektets rot vid `aem-guides-wknd/pom.xml`.
 
 1. Hitta beroendet för `uber-jar` - **endast AEM 6.5/6.4**
 
@@ -374,7 +374,7 @@ Byline Sling Model bygger på flera Java™-API:er från AEM. Dessa API:er är t
 
    `uber-jar` inkluderas bara när profilen `classic` anropas, dvs. `mvn clean install -PautoInstallSinglePackage -Pclassic`. Detta är unikt för det här projektet. I ett verkligt projekt som genererats från AEM Project Archetype är `uber-jar` standardvärdet om den version av AEM som anges är 6.5 eller 6.4.
 
-   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html#experience-manager-api-dependencies) innehåller alla Java™-API:er som exponeras av AEM 6.x. Versionen bibehålls i den överordnade reaktorversionen från projektets rot `aem-guides-wknd/pom.xml` .
+   [uber-jar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/ht-projects-maven.html?lang=sv-SE#experience-manager-api-dependencies) innehåller alla Java™-API:er som exponeras av AEM 6.x. Versionen bibehålls i den överordnade reaktorversionen från projektets rot `aem-guides-wknd/pom.xml` .
 
 1. Hitta beroendet för `core.wcm.components.core`:
 

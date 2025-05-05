@@ -130,7 +130,7 @@ Exempel på loggpost:
 Fri Jul 20 23:00:19 2018 I pid 16004 (tid 140134145820416) Current cache hit ratio: 87.94 %
 ```
 
-Det innebär att hämtningen från renderingsnivån kontra från cacheminnet mäts. Du vill uppnå 80+ procent från cacheminnet och du bör följa hjälpen [här](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html):
+Det innebär att hämtningen från renderingsnivån kontra från cacheminnet mäts. Du vill uppnå 80+ procent från cacheminnet och du bör följa hjälpen [här](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17458.html?lang=sv-SE):
 
 För att få så många siffror som möjligt.
 
@@ -169,7 +169,7 @@ Thu Sep 27 17:35:11 2018 W pid 18936 Unable to fetch vanity URLs from 10.43.0.42
 
 Det här felet inträffar när du har konfigurerat din Dispatcher att använda det dynamiska autofiltret för att tillåta URL:er för innehållshantering, men inte slutfört installationen genom att installera paketet på AEM-renderaren.
 
-Du åtgärdar detta genom att installera funktionsmakropaketet för vanity-URL på AEM-instansen och tillåta att det är klart av den anonyma användaren. Information [här](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html)
+Du åtgärdar detta genom att installera funktionsmakropaketet för vanity-URL på AEM-instansen och tillåta att det är klart av den anonyma användaren. Information [här](https://experienceleague.adobe.com/docs/experience-cloud-kcs/kbarticles/KA-17463.html?lang=sv-SE)
 
 En fungerande URL-adress ser ut så här:
 

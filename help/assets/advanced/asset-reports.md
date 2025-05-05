@@ -28,4 +28,4 @@ AEM Assets har ett ramverk för rapportering på företagsnivå som kan skalas f
 
 >[!IMPORTANT]
 >
->I AEM 6.5 kan du konfigurera [resursrapporter](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html#prerequisite-for-reporting) så att administratörer kan definiera vad som ska spåras och inkluderas i rapporterna.
+>I AEM 6.5 kan du konfigurera [resursrapporter](https://experienceleague.adobe.com/docs/experience-manager-65/assets/administer/asset-reports.html?lang=sv-SE#prerequisite-for-reporting) så att administratörer kan definiera vad som ska spåras och inkluderas i rapporterna.

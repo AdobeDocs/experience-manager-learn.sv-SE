@@ -31,7 +31,7 @@ Nedan följer mappstrukturen för exempelkoden xdp som använder 2 fragment
 ![formulär&amp;dokument](assets/fragment-folder-structure-ui.png)
 
 
-* Utdatatjänst - Vanligtvis används den här tjänsten för att sammanfoga XML-data med xdp-mall eller pdf för att generera sammanlagd pdf. Mer information finns i [javadoc](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) för utdatatjänsten. I det här exemplet använder vi fragment som finns i crx-databasen.
+* Utdatatjänst - Vanligtvis används den här tjänsten för att sammanfoga XML-data med xdp-mall eller pdf för att generera sammanlagd pdf. Mer information finns i [javadoc](https://helpx.adobe.com/se/experience-manager/6-5/forms/javadocs/index.html?com/adobe/fd/output/api/OutputService.html) för utdatatjänsten. I det här exemplet använder vi fragment som finns i crx-databasen.
 
 
 Följande kod användes för att inkludera fragment i PDF-filen

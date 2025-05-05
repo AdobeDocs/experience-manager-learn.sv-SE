@@ -24,8 +24,8 @@ Har du någonsin undrat varför respektive artikel gör i AEM-sammanhang i Admin
 
 ## Innehåll som behandlas i den här videon
 
-+ [Förstå Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html)
-+ [Admin Console - översikt](https://helpx.adobe.com/enterprise/using/admin-console.html)
++ [Förstå Admin Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/onboarding-concepts/admin-console.html?lang=sv-SE)
++ [Admin Console - översikt](https://helpx.adobe.com/se/enterprise/using/admin-console.html)
 
 ## Ytterligare resurser
 

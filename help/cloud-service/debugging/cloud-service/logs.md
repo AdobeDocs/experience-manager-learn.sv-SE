@@ -176,9 +176,9 @@ Adobe allmänna riktlinjer för loggnivåer per AEM as a Cloud Service-miljö ä
 
 ### Miljöspecifika variabler för att ställa in Java-loggnivåer
 
-Ett alternativ till att ställa in statiska, välkända Java-loggnivåer för varje miljö är att använda AEM som Cloud Service [miljöspecifika variabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values) för att parametrisera loggnivåer så att värdena kan ändras dynamiskt via [Adobe I/O CLI med Cloud Manager plugin](#aio-cli) .
+Ett alternativ till att ställa in statiska, välkända Java-loggnivåer för varje miljö är att använda AEM som Cloud Service [miljöspecifika variabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#environment-specific-configuration-values) för att parametrisera loggnivåer så att värdena kan ändras dynamiskt via [Adobe I/O CLI med Cloud Manager plugin](#aio-cli) .
 
-Detta kräver att OSGi-konfigurationerna för loggning uppdateras för att använda miljöspecifika variabelplatshållare. [Standardvärden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#default-values) för loggnivåer måste anges enligt [Adobe-rekommendationer](#log-levels). Till exempel:
+Detta kräver att OSGi-konfigurationerna för loggning uppdateras för att använda miljöspecifika variabelplatshållare. [Standardvärden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#default-values) för loggnivåer måste anges enligt [Adobe-rekommendationer](#log-levels). Till exempel:
 
 `/apps/example/config/org.apache.sling.commons.log.LogManager.factory.config~example.cfg.json`
 
@@ -193,8 +193,8 @@ Detta kräver att OSGi-konfigurationerna för loggning uppdateras för att anvä
 
 Detta tillvägagångssätt har nackdelar som måste beaktas:
 
-+ [Ett begränsat antal miljövariabler tillåts](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#number-of-variables), och om du skapar en variabel som hanterar loggnivån används en.
-+ Miljövariabler kan hanteras programmatiskt via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html), [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) och [Cloud Manager HTTP API:er](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#cloud-manager-api-format-for-setting-properties).
++ [Ett begränsat antal miljövariabler tillåts](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#number-of-variables), och om du skapar en variabel som hanterar loggnivån används en.
++ Miljövariabler kan hanteras programmatiskt via [Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables.html?lang=sv-SE), [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager#aio-cloudmanagerset-environment-variables-environmentid) och [Cloud Manager HTTP API:er](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#cloud-manager-api-format-for-setting-properties).
 + Ändringar av miljövariabler måste återställas manuellt av ett verktyg som stöds. Om du glömmer att återställa en hög trafikmiljö, till exempel Production, till en mindre detaljerad loggnivå kan loggarna flöda och AEM prestanda påverkas.
 
 _Miljöspecifika variabler fungerar inte för webbservern Apache eller Dispatcher-loggkonfigurationer eftersom dessa inte har konfigurerats via OSGi-konfigurationen._

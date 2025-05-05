@@ -61,7 +61,7 @@ Slutligen körs tre lokala servrar:
 
 Vi har för närvarande en instans av SDK som körs i läget **Författare**. SDK kan också startas i **publiceringsläget** för att simulera en AEM-publiceringsmiljö.
 
-En mer detaljerad guide för hur du konfigurerar en lokal utvecklingsmiljö [finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=en#local-development-environment-set-up).
+En mer detaljerad guide för hur du konfigurerar en lokal utvecklingsmiljö [finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=sv-SE#local-development-environment-set-up).
 
 1. Skapa en dedikerad mapp på det lokala filsystemet för att installera Publish-instansen, d.v.s. `~/aem-sdk/publish`.
 1. Kopiera Quickstart jar-filen som används för Author-instansen i tidigare kapitel och klistra in den i katalogen `publish`. Du kan även navigera till [Software Distribution Portal](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html) och hämta den senaste SDK-filen och extrahera Quickstart jar-filen.
@@ -312,7 +312,7 @@ Sedan kan du simulera innehållspublicering mellan de lokala författarinstanser
 1. Starta Author-instansen (om den inte redan har startats) och navigera till Package Manager på [http://localhost:4502/crx/packmgr/index.jsp](http://localhost:4502/crx/packmgr/index.jsp)
 1. Hämta paketet [EnableReplicationAgent.zip](./assets/publish-deployment/EnableReplicationAgent.zip) och installera det med Package Manager.
 
-   Det här paketet installerar en konfiguration som gör att författarinstansen kan publicera innehåll till publiceringsinstansen. Manuella steg för [den här konfigurationen finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en#content-distribution).
+   Det här paketet installerar en konfiguration som gör att författarinstansen kan publicera innehåll till publiceringsinstansen. Manuella steg för [den här konfigurationen finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=sv-SE#content-distribution).
 
    >[!NOTE]
    >
@@ -408,7 +408,7 @@ Grattis! Du har nu simulerat en fullständig produktionsdistribution i en AEM Pu
 
 Mer information om innehållsfragment och GraphQL finns i följande resurser:
 
-* [Headless Content Delivery using Content Fragments with GraphQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html)
-* [AEM GraphQL API för användning med innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html)
-* [Tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=en#authentication)
-* [Distribuerar kod till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html?lang=en#cloud-manager)
+* [Headless Content Delivery using Content Fragments with GraphQL](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/content-fragments/content-fragments-graphql.html?lang=sv-SE)
+* [AEM GraphQL API för användning med innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/admin/graphql-api-content-fragments.html?lang=sv-SE)
+* [Tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=sv-SE#authentication)
+* [Distribuerar kod till AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/devops/deploy-code.html?lang=sv-SE#cloud-manager)

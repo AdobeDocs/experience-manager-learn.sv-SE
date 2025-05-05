@@ -71,14 +71,14 @@ Innehållsfragment lagras i mappar i AEM Assets. Om du vill skapa innehållsfrag
    * Titel*: **Engelska**
    * Namn: **en**
 
-   Ett tips är att skapa projekt för flerspråkigt stöd. Se [följande dokumentsida för mer information](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
+   Ett tips är att skapa projekt för flerspråkigt stöd. Se [följande dokumentsida för mer information](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html?lang=sv-SE).
 
 
 ## Skapa ett innehållsfragment {#create-content-fragment}
 
 >[!TIP]
 >
->För användare av AEM SDK lokalt: använd AEM Assets-gränssnittet för att skapa och redigera innehållsfragment i stället för det användargränssnitt för innehållsfragment som beskrivs nedan. Detaljerade instruktioner finns i [AEM-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html).
+>För användare av AEM SDK lokalt: använd AEM Assets-gränssnittet för att skapa och redigera innehållsfragment i stället för det användargränssnitt för innehållsfragment som beskrivs nedan. Detaljerade instruktioner finns i [AEM-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=sv-SE).
 
 Därefter skapas flera innehållsfragment baserat på modellerna **Team** och **Person** .
 
@@ -152,7 +152,7 @@ Fyll sedan i de nyligen skapade fragmenten med data.
 
 >[!TIP]
 >
->För användare av AEM SDK lokalt: Använd AEM Assets-gränssnittet för att publicera innehållsfragment i stället för det användargränssnitt för innehållsfragment som beskrivs nedan. Detaljerade instruktioner finns i [AEM-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html#publishing-and-referencing-a-fragment).
+>För användare av AEM SDK lokalt: Använd AEM Assets-gränssnittet för att publicera innehållsfragment i stället för det användargränssnitt för innehållsfragment som beskrivs nedan. Detaljerade instruktioner finns i [AEM-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=sv-SE#publishing-and-referencing-a-fragment).
 
 Publicera den skapade `Content Fragments` vid granskning och verifiering
 
@@ -173,5 +173,5 @@ I nästa kapitel, [Utforska GraphQL API:er](explore-graphql-api.md), kommer du a
 
 ## Relaterad dokumentation
 
-* [Hantera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html)
-* [Variationer – redigera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html)
+* [Hantera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-managing.html?lang=sv-SE)
+* [Variationer – redigera innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-variations.html?lang=sv-SE)

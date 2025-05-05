@@ -53,13 +53,13 @@ Använd [swagger-redigeraren](https://editor.swagger.io/) för att skapa en swag
 
 ## Skapa datakällor
 
-Om du vill integrera AEM/AEM Forms med program från tredje part måste vi [skapa datakälla](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) i konfigurationen för molntjänster. Använd [swagger-filerna](assets/geonames-swagger-files.zip) för att skapa datakällor.
+Om du vill integrera AEM/AEM Forms med program från tredje part måste vi [skapa datakälla](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=sv-SE) i konfigurationen för molntjänster. Använd [swagger-filerna](assets/geonames-swagger-files.zip) för att skapa datakällor.
 Du måste skapa två datakällor (en för att hämta alla länder och andra för att få underordnade element)
 
 
 ## Skapa formulärdatamodell
 
-AEM Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa och arbeta med [formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). Basera formulärdatamodellen på datakällorna som skapades i det tidigare steget. Formulärdatamodell med 2 datakällor
+AEM Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa och arbeta med [formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=sv-SE). Basera formulärdatamodellen på datakällorna som skapades i det tidigare steget. Formulärdatamodell med 2 datakällor
 
 ![fdm](assets/geonames-fdm.png)
 

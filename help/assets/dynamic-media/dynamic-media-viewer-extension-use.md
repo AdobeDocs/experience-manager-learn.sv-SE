@@ -25,7 +25,7 @@ För kunder med Dynamic Media och Adobe Analytics kan du nu spåra användningen
 
 >[!NOTE]
 >
-> Kör Adobe Experience Manager i Dynamic Media Scene7-läge för den här funktionen. Du måste också [integrera taggar med din AEM-instans](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html).
+> Kör Adobe Experience Manager i Dynamic Media Scene7-läge för den här funktionen. Du måste också [integrera taggar med din AEM-instans](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=sv-SE).
 
 I och med lanseringen av tillägget Dynamic Media Viewer har Adobe Experience Manager nu avancerade analysstöd för material som levereras med Dynamic Media Viewer (5.13), vilket ger mer detaljkontroll över händelsespårningen när en Dynamic Media Viewer används på en Sites-sida.
 
@@ -166,6 +166,6 @@ I följande tabell visas Dynamic Media Viewer-händelser och deras argument som 
 
 ## Ytterligare resurser{#additional-resources}
 
-* [Integrera AEM med taggar i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html)
-* [Kör Adobe Experience Manager i läget Dynamic Media Scene7](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=en)
-* [Integrera dynamiska medievisningsprogram med Adobe Analytics med hjälp av taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-extension-use.html)
+* [Integrera AEM med taggar i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/overview.html?lang=sv-SE)
+* [Kör Adobe Experience Manager i läget Dynamic Media Scene7](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/config-dms7.html?lang=sv-SE)
+* [Integrera dynamiska medievisningsprogram med Adobe Analytics med hjälp av taggar](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/dynamic-media/dynamic-media-viewer-extension-use.html?lang=sv-SE)

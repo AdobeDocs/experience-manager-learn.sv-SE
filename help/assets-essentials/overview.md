@@ -38,11 +38,11 @@ Kolla in de här videofilmerna om hur du använder Assets Essentials för att ha
    </p>
 </td>
 <td>
-   <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
+   <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=sv-SE">
    <img alt="Assets Essentials dokumentation" src="./assets/overview/assets-essentials-docs.png"/>
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-assets-essentials/help/introduction.html?lang=sv-SE">
       <strong>Assets Essentials dokumentation</strong>
       </a>
    </div>
@@ -51,11 +51,11 @@ Kolla in de här videofilmerna om hur du använder Assets Essentials för att ha
    <p>
 </td>
 <td>
-   <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
+   <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=sv-SE">
    <img alt="Adobe Journey Optimizer och Assets Essentials" src="./assets/overview/adobe-journey-optimizer.png" />
    </a>
    <div>
-      <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html">
+      <a href="https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-messages/create-email-content-with-the-message-editor.html?lang=sv-SE">
       <strong> Integrering med Adobe Journey Optimizer </strong>
       </a>
    </div>

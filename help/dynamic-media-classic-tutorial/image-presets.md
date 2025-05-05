@@ -37,8 +37,8 @@ En bildförinställning har ett dollartecken ($) på båda sidor om namnet och f
 >
 >Skapa en bildförinställning per unik bildstorlek på webbplatsen. Om du till exempel behöver en bild på 350 x 350 för produktinformationssidan, en bild på 120 x 120 för bläddrings-/söksidorna och en bild på 90 x 90 för korsförsäljning/aktuellt objekt behöver du tre förinställningar, oavsett om du har 500 bilder eller 500 000.
 
-- Läs mer om [Bildförinställningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html).
-- Lär dig hur du [skapar en bildförinställning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html#creating-an-image-preset).
+- Läs mer om [Bildförinställningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html?lang=sv-SE).
+- Lär dig hur du [skapar en bildförinställning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/image-sizing/setting-image-presets.html?lang=sv-SE#creating-an-image-preset).
 
 ## Bildförinställningar och skärpa
 
@@ -60,7 +60,7 @@ I följande bild visas tre nivåer av skärpa. Från höger till vänster har du
 
 I Dynamic Media Classic finns det tre typer av skärpa: Enkel skärpa, Omsamplingsläge och Oskarp mask.
 
-Läs mer om [Dynamic Media Classic skärpealternativ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html#sharpening_an_image).
+Läs mer om [Dynamic Media Classic skärpealternativ](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/sharpening-image.html?lang=sv-SE#sharpening_an_image).
 
 ## Ytterligare resurser
 

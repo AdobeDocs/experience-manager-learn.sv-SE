@@ -32,5 +32,5 @@ ht-degree: 0%
    + [Ny redigerare](editor/new-editor-toggle.md)
    + [Innehållsreferenser som inte är resurser](editor/non-asset-content-references.md)
    + [Jämför RTE-variant](editor/rte-variant-compare.md)
-+ [Utbyggbarhet](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/extensibility/content-fragments/overview.html)
-+ [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html){target=_blank}
++ [Utbyggbarhet](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/extensibility/content-fragments/overview.html?lang=sv-SE)
++ [Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=sv-SE){target=_blank}

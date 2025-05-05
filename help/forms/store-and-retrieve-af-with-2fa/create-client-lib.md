@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Skapa klientbibliotek
 
-Skapa [klientlib](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html) som innehåller koden som anropar metoden `doAjaxSubmitWithFileAttachment` för `guideBridge` API:t för click-händelsen för knappen som identifieras av CSS-klassen **save button**.  Vi skickar de adaptiva formulärdata, `fileMap`, och `mobileNumber` till slutpunkten som lyssnar på `**/bin/storeafdatawithattachments`
+Skapa [klientlib](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=sv-SE) som innehåller koden som anropar metoden `doAjaxSubmitWithFileAttachment` för `guideBridge` API:t för click-händelsen för knappen som identifieras av CSS-klassen **save button**.  Vi skickar de adaptiva formulärdata, `fileMap`, och `mobileNumber` till slutpunkten som lyssnar på `**/bin/storeafdatawithattachments`
 
 När formulärdata har sparats genereras ett unikt program-ID som visas för användaren i en dialogruta. När dialogrutan stängs dirigeras användaren till formuläret som gör att användaren kan hämta det sparade adaptiva formuläret med det unika program-ID:t.
 

@@ -87,7 +87,7 @@ Det finns flera alternativ för att skapa ett projekt med flera moduler i Maven 
 
    >[!NOTE]
    >
-   > Observera egenskapen `frontendModule=angular`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [Angular ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) som ska användas med AEM SPA Editor.
+   > Observera egenskapen `frontendModule=angular`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [Angular ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=sv-SE) som ska användas med AEM SPA Editor.
 
 ## Bygg projektet
 
@@ -146,7 +146,7 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
 
    All anpassad kod som krävs för projektet paketeras i dessa paket och installeras på AEM-miljön.
 
-6. Du bör också se flera paket för `spa.project.core` och `core.wcm.components`. Detta är beroenden som automatiskt inkluderas av arketypen. Mer information om [AEM Core Components finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
+6. Du bör också se flera paket för `spa.project.core` och `core.wcm.components`. Detta är beroenden som automatiskt inkluderas av arketypen. Mer information om [AEM Core Components finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE).
 
 ## Författarinnehåll
 

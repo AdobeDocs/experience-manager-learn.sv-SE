@@ -23,7 +23,7 @@ ht-degree: 0%
 
 {{edge-delivery-services-and-page-editor}}
 
-I det här kapitlet tittar vi på förhållandet mellan en bassidkomponent och redigerbara mallar. Lär dig att skapa en oformaterad artikelmall baserad på vissa modeller från [Adobe XD](https://helpx.adobe.com/support/xd.html). Under processen att skapa mallen beskrivs kärnkomponenter och avancerade principkonfigurationer för redigerbara mallar.
+I det här kapitlet tittar vi på förhållandet mellan en bassidkomponent och redigerbara mallar. Lär dig att skapa en oformaterad artikelmall baserad på vissa modeller från [Adobe XD](https://helpx.adobe.com/se/support/xd.html). Under processen att skapa mallen beskrivs kärnkomponenter och avancerade principkonfigurationer för redigerbara mallar.
 
 ## Förutsättningar {#prerequisites}
 
@@ -74,7 +74,7 @@ I den här delen av självstudiekursen skapar du en ny artikelsidmall som kan an
 
 ## UI Planning with Adobe XD {#adobexd}
 
-Vanligtvis börjar planering för en ny webbplats med dummies och statisk design. [Adobe XD](https://helpx.adobe.com/support/xd.html) är ett designverktyg som bygger upp användarupplevelsen. Sedan undersöker vi ett gränssnittspaket och dummies för att planera strukturen för artikelsidmallen.
+Vanligtvis börjar planering för en ny webbplats med dummies och statisk design. [Adobe XD](https://helpx.adobe.com/se/support/xd.html) är ett designverktyg som bygger upp användarupplevelsen. Sedan undersöker vi ett gränssnittspaket och dummies för att planera strukturen för artikelsidmallen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30214?quality=12&learn=on)
 
@@ -82,13 +82,13 @@ Vanligtvis börjar planering för en ny webbplats med dummies och statisk design
 
 >[!NOTE]
 >
-> En allmän [AEM Core Components UI Kit finns också tillgänglig](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd) som startpunkt för anpassade projekt.
+> En allmän [AEM Core Components UI Kit finns också tillgänglig](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/AEM-CoreComponents-UI-Kit.xd?lang=sv-SE) som startpunkt för anpassade projekt.
 
 ## Skapa artikelsidmall
 
 När du skapar en sida måste du välja en mall som används som bas för att skapa sidan. Mallen definierar strukturen för den resulterande sidan, det inledande innehållet och de tillåtna komponenterna.
 
-Det finns tre huvudområden för [Redigerbara mallar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html):
+Det finns tre huvudområden för [Redigerbara mallar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=sv-SE):
 
 1. **Struktur** - definierar komponenter som är en del av mallen. Dessa kan inte redigeras av innehållsförfattare.
 1. **Ursprungligt innehåll** - definierar komponenter som mallen börjar med, som kan redigeras och/eller tas bort av innehållsförfattare
@@ -160,7 +160,7 @@ Steg på hög nivå för videon ovan:
 
 ## Uppdatera sidhuvud och sidfot med Experience Fragments {#experience-fragments}
 
-Ett vanligt tillvägagångssätt när du skapar globalt innehåll, till exempel ett sidhuvud eller en sidfot, är att använda ett [Experience Fragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html). Med Experience Fragments kan användare kombinera flera komponenter för att skapa en enda referensbar komponent. Experience Fragments har fördelen att det stöder hantering av flera webbplatser och [lokalisering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=en).
+Ett vanligt tillvägagångssätt när du skapar globalt innehåll, till exempel ett sidhuvud eller en sidfot, är att använda ett [Experience Fragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=sv-SE). Med Experience Fragments kan användare kombinera flera komponenter för att skapa en enda referensbar komponent. Experience Fragments har fördelen att det stöder hantering av flera webbplatser och [lokalisering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/experience-fragment.html?lang=sv-SE).
 
 Den AEM projekttypen genererade ett sidhuvud och en sidfot. Uppdatera sedan Experience Fragments så att de matchar dummyerna. Följ stegen i videon nedan:
 
@@ -262,7 +262,7 @@ Använd verktyget CRXDE-Lite på en lokal AEM för att visa den underliggande no
 
    Det finns bara två HTML-skript, `customfooterlibs.html` och `customheaderlibs.html`, under sidkomponenten. *Så hur återger den här komponenten sidan?*
 
-   Egenskapen `sling:resourceSuperType` pekar på `core/wcm/components/page/v2/page`. Den här egenskapen gör att WKND:s sidkomponent kan ärva **alla** funktionaliteten för kärnkomponentsidkomponenten. Detta är det första exemplet på något som kallas [Proxy-komponentmönster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#ProxyComponentPattern). Mer information finns [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html).
+   Egenskapen `sling:resourceSuperType` pekar på `core/wcm/components/page/v2/page`. Den här egenskapen gör att WKND:s sidkomponent kan ärva **alla** funktionaliteten för kärnkomponentsidkomponenten. Detta är det första exemplet på något som kallas [Proxy-komponentmönster](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html?lang=sv-SE#ProxyComponentPattern). Mer information finns [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html?lang=sv-SE).
 
 1. Inspect är en annan komponent i WKND-komponenterna, `Breadcrumb`-komponenten från: `/apps/wknd/components/breadcrumb`. Observera att samma `sling:resourceSuperType`-egenskap kan hittas, men den här gången pekar den på `core/wcm/components/breadcrumb/v2/breadcrumb`. Detta är ett annat exempel på hur du använder komponentmönstret Proxy för att inkludera en Core-komponent. Faktum är att alla komponenter i WKND-kodbasen är proxies av AEM Core Components (förutom den anpassade demo-komponenten HelloWorld). Det är en god vana att återanvända så mycket av funktionerna i kärnkomponenterna som möjligt *innan* skriver egen kod.
 
@@ -312,7 +312,7 @@ Använd verktyget CRXDE-Lite på en lokal AEM för att visa den underliggande no
 
    Den andra anledningen till att HTML delas upp i flera skript är att tillåta proxykomponenterna att åsidosätta enskilda skript för att implementera anpassad affärslogik. HTML-skripten `customfooterlibs.html` och `customheaderlibs.html` skapas för det uttryckliga syftet som ska åsidosättas genom att projekt implementeras.
 
-   Du kan lära dig mer om hur faktorer för redigerbar mall påverkar återgivningen av [innehållssidan genom att läsa den här artikeln](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html).
+   Du kan lära dig mer om hur faktorer för redigerbar mall påverkar återgivningen av [innehållssidan genom att läsa den här artikeln](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=sv-SE).
 
 1. Inspect är en annan Core-komponent, som Breadcrumb på `/libs/core/wcm/components/breadcrumb/v2/breadcrumb`. Visa skriptet `breadcrumb.html` om du vill veta hur koden för Breadcrumb-komponenten genereras.
 

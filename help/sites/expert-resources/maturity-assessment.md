@@ -26,9 +26,9 @@ Löptidsbedömningar gör det möjligt att utvärdera och följa AEM standarder 
 
 Mer information om hur du administrerar, utvecklar och redigerar finns i följande resurser:
 
-* [Administrera bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-65/administering/bestpractices/administer-best-practices.html?lang=en)
-* [Utveckla bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=en)
-* [Bästa tillvägagångssätt vid redigering](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/best-practices.html?lang=en)
+* [Administrera bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-65/administering/bestpractices/administer-best-practices.html?lang=sv-SE)
+* [Utveckla bästa praxis](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=sv-SE)
+* [Bästa tillvägagångssätt vid redigering](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/best-practices.html?lang=sv-SE)
 
 Vart och ett av dessa områden för bästa praxis ovan omfattar även ytterligare bästa metoder för att skapa, utveckla och driftsätta AEM.
 

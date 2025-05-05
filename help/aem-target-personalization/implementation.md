@@ -22,7 +22,7 @@ ht-degree: 0%
 I det här avsnittet ska vi diskutera hur du konfigurerar Adobe Experience Manager Sites med Adobe Target för olika scenarier. Baserat på ditt scenario och organisationens krav.
 
 * **Lägg till Adobe Target JavaScript-bibliotek (krävs för alla scenarier)**
-För webbplatser som finns på AEM kan du lägga till målbibliotek på din webbplats med [taggar i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) . Taggar är ett enkelt sätt att driftsätta och hantera alla taggar som behövs för att skapa relevanta kundupplevelser.
+För webbplatser som finns på AEM kan du lägga till målbibliotek på din webbplats med [taggar i Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE) . Taggar är ett enkelt sätt att driftsätta och hantera alla taggar som behövs för att skapa relevanta kundupplevelser.
 * **Lägg till Adobe Target-Cloud Service (krävs för scenariot Experience Fragments)**
 För AEM kunder som vill använda Experience Fragment-erbjudanden för att skapa en aktivitet i Adobe Target måste ni integrera Adobe Target med AEM med de äldre Cloud Servicen. Den här integreringen krävs för att överföra Experience Fragments från AEM till Target som HTML/JSON-erbjudanden och för att hålla erbjudandena synkroniserade med AEM. *Den här integreringen krävs för att implementera scenario 1.*
 
@@ -58,7 +58,7 @@ AEM författare och publiceringsinstans krävs för att slutföra kursen. Förfa
 
 #### Konfigurera AEM Author och Publish Instances
 
-1. Hämta en kopia av [AEM QuickStart Jar och en licens.](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#GettingtheSoftware)
+1. Hämta en kopia av [AEM QuickStart Jar och en licens.](https://helpx.adobe.com/se/experience-manager/6-5/sites/deploying/using/deploy.html#GettingtheSoftware)
 2. Skapa en mappstruktur på datorn enligt följande:
    ![Mappstruktur](assets/implementation/aem-setup-1.png)
 3. Byt namn på Quickstart-burken till `aem-author-p4502.jar` och placera den under katalogen `/author`. Lägg till filen `license.properties` under katalogen `/author`.

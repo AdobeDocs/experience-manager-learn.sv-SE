@@ -24,7 +24,7 @@ När **Administratören** klickar på ViewLink i sökresultattabellen fylls form
 
 En förifyllningstjänst användes för att hämta data som är associerade med BlobId från Azure-portalen.
 
-[Det finns en separat artikel om att förifylla formulär med data och bifogade filer här.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html)
+[Det finns en separat artikel om att förifylla formulär med data och bifogade filer här.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=sv-SE)
 
 ## Nästa steg
 

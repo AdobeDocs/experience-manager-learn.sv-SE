@@ -21,7 +21,7 @@ I den här artikeln beskrivs hur du skapar en tjänstanvändare i AEM Forms
 
 I tidigare versioner av Adobe Experience Manager (AEM) användes den administrativa resurslösaren för backend-bearbetning som krävde åtkomst till databasen. Användningen av den administrativa resurslösaren har tagits bort i AEM 6.3. I stället används en systemanvändare med specifik behörighet i databasen.
 
-Läs mer om hur du [skapar och använder tjänstanvändare i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html).
+Läs mer om hur du [skapar och använder tjänstanvändare i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/advanced/service-users.html?lang=sv-SE).
 
 I den här artikeln beskrivs hur du skapar en systemanvändare och konfigurerar egenskaperna för användarmappningen.
 

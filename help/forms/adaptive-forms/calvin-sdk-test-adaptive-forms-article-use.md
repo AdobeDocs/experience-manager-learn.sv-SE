@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Automatiserad testning av Adaptive Forms med Calvin SDK
 
-Calvin SDK är ett program-API för att testa adaptiva Forms-utvecklare. Calvin SDK är byggt ovanpå testramverket [Hobbes.js](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html). Calvin SDK finns med AEM Forms 6.3 och senare.
+Calvin SDK är ett program-API för att testa adaptiva Forms-utvecklare. Calvin SDK är byggt ovanpå testramverket [Hobbes.js](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/previous-updates/aem-previous-versions.html?lang=sv-SE). Calvin SDK finns med AEM Forms 6.3 och senare.
 
 I den här självstudiekursen skapar du följande:
 

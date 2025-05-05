@@ -22,14 +22,14 @@ ht-degree: 0%
 # Anpassa meddelande om tilldelning av uppgift
 
 Tilldela Task-komponent används för att tilldela uppgifter till arbetsflödesdeltagare. När en uppgift tilldelas en användare eller grupp skickas ett e-postmeddelande till den angivna användaren eller gruppmedlemmarna.
-Det här e-postmeddelandet innehåller vanligtvis dynamiska data som är relaterade till uppgiften. Dynamiska data hämtas med hjälp av systemgenererade [metadataegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html#using-system-generated-metadata-in-an-email-notification).
+Det här e-postmeddelandet innehåller vanligtvis dynamiska data som är relaterade till uppgiften. Dynamiska data hämtas med hjälp av systemgenererade [metadataegenskaper](https://experienceleague.adobe.com/docs/experience-manager-65/forms/publish-process-aem-forms/use-metadata-in-email-notifications.html?lang=sv-SE#using-system-generated-metadata-in-an-email-notification).
 Om du vill inkludera värden från skickade formulärdata i e-postmeddelandet måste vi skapa en anpassad metadataegenskap och sedan använda dessa anpassade metadataegenskaper i e-postmallen
 
 
 
 ## Skapa anpassad metadataegenskap
 
-Rekommenderad metod är att skapa en OSGI-komponent som implementerar metoden getUserMetadata för [WorkitemUserMetadataService](https://helpx.adobe.com/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)
+Rekommenderad metod är att skapa en OSGI-komponent som implementerar metoden getUserMetadata för [WorkitemUserMetadataService](https://helpx.adobe.com/se/experience-manager/6-5/forms/javadocs/com/adobe/fd/workspace/service/external/WorkitemUserMetadataService.html#getUserMetadataMap--)
 
 I följande kod skapas fyra metadataegenskaper (_firstName_,_lastName_,_reason_ och _amountRequested_) och dess värde ställs in från skickade data. Metadataegenskapen _firstName_ har till exempel värdet för elementet firstName från skickade data. I följande kod antas att det adaptiva formulärets skickade data är i xml-format. Adaptiv Forms baserad på JSON-schema eller formulärdatamodell genererar data i JSON-format.
 
@@ -128,7 +128,7 @@ När OSGi-komponenten har byggts och distribuerats till AEM-servern konfigurerar
 
 ## Gör så här på servern
 
-* [Konfigurera daglig CQ-e-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html#configuring-the-mail-service)
+* [Konfigurera daglig CQ-e-posttjänst](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=sv-SE#configuring-the-mail-service)
 * Associera ett giltigt e-post-ID med [administratörsanvändare](http://localhost:4502/security/users.html)
 * Hämta och installera mallen [Workflow-and-notification-template](assets/workflow-and-task-notification-template.zip) med [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
 * Hämta [anpassat formulär](assets/request-travel-authorization.zip) och importera till AEM från gränssnittet för [formulär och dokument](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments).

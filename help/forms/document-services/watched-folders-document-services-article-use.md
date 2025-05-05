@@ -20,7 +20,7 @@ ht-degree: 0%
 
 En administratör kan konfigurera en nätverksmapp, en så kallad bevakad mapp, så att när en användare monterar en fil (till exempel en PDF-fil) i den bevakade mappen så startas ett förkonfigurerat arbetsflöde, en tjänst eller en skriptåtgärd för att bearbeta den tillagda filen. När tjänsten har utfört den angivna åtgärden sparas resultatfilen i en angiven utdatamapp. Mer information om arbetsflöde, tjänst och skript.
 
-[Klicka här](https://helpx.adobe.com/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html) om du vill veta mer om hur du skapar en bevakad mapp
+[Klicka här](https://helpx.adobe.com/se/experience-manager/6-4/forms/using/Creating-Configure-watched-folder.html) om du vill veta mer om hur du skapar en bevakad mapp
 
 Bevakade mappar används för att generera dokument i gruppläge. Med bevakad mappfunktion kan du generera interaktiv kommunikation för utskriftskanalen eller använda utdatatjänsten för att sammanfoga data med mallen.
 
@@ -28,7 +28,7 @@ I den här artikeln beskrivs hur du sammanfogar data med en mall med hjälp av u
 
 Output service är en OSGi-tjänst som ingår i AEM Document Services. Utdatatjänsten stöder olika utformat och utformningsfunktioner i AEM Forms Designer. Output Service kan konvertera XFA-mallar och XML-data för att generera utskriftsdokument i olika format.
 
-[Klicka här](https://helpx.adobe.com/aem-forms/6/output-service.html) om du vill veta mer om utdatatjänsten.
+[Klicka här](https://helpx.adobe.com/se/aem-forms/6/output-service.html) om du vill veta mer om utdatatjänsten.
 Följ stegen nedan för att konfigurera bevakade mappar på datorn:
 * [Hämta och extrahera innehållet i zip-filen](assets/outputservicewatchedfolderkt.zip).Den här zip-filen innehåller paket för att skapa bevakad mapp och exempelfiler för att testa utdatatjänsten med hjälp av bevakad mappfunktion
    * Windows-system

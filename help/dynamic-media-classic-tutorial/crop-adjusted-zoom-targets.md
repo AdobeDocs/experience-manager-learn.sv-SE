@@ -21,9 +21,9 @@ En av de främsta fördelarna med Dynamic Media Classic master image-koncept är
 
 I slutet av kursen får du lära dig att:
 
-- Beskär bilder i Dynamic Media Classic och spara som nya huvudfiler eller som virtuella bilder. [Läs mer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html).
-- Spara virtuella justerade bilder och använd dem i stället för huvudresurserna. [Läs mer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html).
-- Skapa zoommål för bilderna för att visa upp deras högdagrar. [Läs mer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html).
+- Beskär bilder i Dynamic Media Classic och spara som nya huvudfiler eller som virtuella bilder. [Läs mer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html?lang=sv-SE).
+- Spara virtuella justerade bilder och använd dem i stället för huvudresurserna. [Läs mer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/adjusting-image.html?lang=sv-SE).
+- Skapa zoommål för bilderna för att visa upp deras högdagrar. [Läs mer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html?lang=sv-SE).
 
 ## Beskärning
 
@@ -42,8 +42,8 @@ Dynamic Media Classic har ett antal lättanvända bildredigeringsverktyg i anvä
 
 Du kommer åt beskärningsverktyget i Dynamic Media Classic från detaljsidan för en resurs eller genom att klicka på knappen **Redigera** . Du kan beskära på två sätt med verktyget:
 
-- Standardbeskärningsläget där du drar handtagen för beskärningsfönstret eller skriver värden i rutan Storlek. Lär dig hur du [beskär](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#select-an-area-to-crop) manuellt.
-- Trimma. Använd det här alternativet om du vill ta bort extra tomt utrymme runt bilden genom att beräkna antalet pixlar som inte matchar bilden. Lär dig hur du [Beskär efter trimning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html#crop-to-remove-white-space-around-an-image).
+- Standardbeskärningsläget där du drar handtagen för beskärningsfönstret eller skriver värden i rutan Storlek. Lär dig hur du [beskär](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html?lang=sv-SE#select-an-area-to-crop) manuellt.
+- Trimma. Använd det här alternativet om du vill ta bort extra tomt utrymme runt bilden genom att beräkna antalet pixlar som inte matchar bilden. Lär dig hur du [Beskär efter trimning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/master-files/cropping-image.html?lang=sv-SE#crop-to-remove-white-space-around-an-image).
 
 ### _Manuell beskärning_
 
@@ -134,7 +134,7 @@ Processen är mycket enkel - klicka på funktionen, ge den ett beskrivande namn 
 
 Ett annat sätt att avgöra om du ska använda zoommål är att välja visningsprogram. Alla visningsprogramtyper kan inte visa zoommål (t.ex. saknar visningsprogrammet stöd för dem).
 
-Lär dig hur du [skapar zoommål](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html#creating-and-editing-zoom-targets).
+Lär dig hur du [skapar zoommål](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/zoom/creating-zoom-targets-guided-zoom.html?lang=sv-SE#creating-and-editing-zoom-targets).
 
 ![bild](assets/crop-adjusted-zoom-targets/zoom-targets.jpg)
 

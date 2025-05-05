@@ -30,7 +30,7 @@ Läs om hur flera vyer i SPA kan användas genom att mappa till AEM Pages med SP
 
 ## Vad du ska bygga
 
-I det här kapitlet läggs navigering till i en SPA i AEM. Navigeringsmenyn styrs av AEM sidhierarki och använder JSON-modellen som tillhandahålls av [kärnkomponenten för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html).
+I det här kapitlet läggs navigering till i en SPA i AEM. Navigeringsmenyn styrs av AEM sidhierarki och använder JSON-modellen som tillhandahålls av [kärnkomponenten för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html?lang=sv-SE).
 
 ![Navigering har lagts till](assets/navigation-routing/navigation-added.png)
 

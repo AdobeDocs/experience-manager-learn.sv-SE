@@ -792,4 +792,4 @@ $ git push origin block-options
 
 Nu har du utforskat blockalternativ i Edge Delivery Services och Universal Editor, som ger dig verktyg för att anpassa och effektivisera redigering av innehåll med större flexibilitet. Börja använda dessa alternativ i dina projekt för att förbättra effektiviteten och bevara enhetligheten.
 
-Mer metodtips och avancerade tekniker finns i [dokumentationen för den universella redigeraren](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options).
+Mer metodtips och avancerade tekniker finns i [dokumentationen för den universella redigeraren](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options).

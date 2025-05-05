@@ -26,7 +26,7 @@ AEM tillhandahåller [AEM React Editable Components v2](https://www.npmjs.com/pa
 
 + [npm-modul](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
 + [Github-projekt](https://github.com/adobe/aem-react-editable-components)
-+ [Adobe-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html)
++ [Adobe-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html?lang=sv-SE)
 
 
 Mer information och kodexempel för AEM React Editable Components v2 finns i den tekniska dokumentationen:
@@ -37,7 +37,7 @@ Mer information och kodexempel för AEM React Editable Components v2 finns i den
 
 ## AEM sidor
 
-AEM React Editable Components fungerar med både SPA Editor och Remote SPA React. Innehåll som fyller i de redigerbara React-komponenterna måste visas via AEM-sidor som utökar [SPA Page-komponenten](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html). AEM-komponenter, som mappar till redigerbara React-komponenter, måste implementera AEM [Component Exporter-ramverket](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html) - till exempel [AEM Core WCM-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
+AEM React Editable Components fungerar med både SPA Editor och Remote SPA React. Innehåll som fyller i de redigerbara React-komponenterna måste visas via AEM-sidor som utökar [SPA Page-komponenten](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html?lang=sv-SE). AEM-komponenter, som mappar till redigerbara React-komponenter, måste implementera AEM [Component Exporter-ramverket](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html?lang=sv-SE) - till exempel [AEM Core WCM-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE).
 
 
 ## Beroenden

@@ -108,7 +108,7 @@ Du kan åtgärda genomgångsvarningar i tre enkla steg: analysera, justera och v
 
 ## 1. Analysera{#analyze}
 
-För det första, identifiera vilka AEM Publish-tjänster som har resvägsvarningar. Det gör du genom att [hämta Publish-tjänster `aemerror` loggar](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html#cloud-manager){target="_blank"} från alla miljöer (Dev, Stage och Production) de senaste __tre dagarna__.
+För det första, identifiera vilka AEM Publish-tjänster som har resvägsvarningar. Det gör du genom att [hämta Publish-tjänster `aemerror` loggar](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs.html?lang=sv-SE#cloud-manager){target="_blank"} från alla miljöer (Dev, Stage och Production) de senaste __tre dagarna__.
 
 ![Hämta AEM as a Cloud Service-loggar](./assets/traversals/download-logs.jpg)
 
@@ -159,14 +159,14 @@ När de felaktiga frågorna och deras anropande kod har identifierats måste jus
 
 __Ändra frågan__ om du vill lägga till nya frågebegränsningar som kan tolkas som befintliga indexbegränsningar. Om det är möjligt bör du helst ändra frågan till att ändra index.
 
-+ [Lär dig hur du justerar frågeprestanda](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
++ [Lär dig hur du justerar frågeprestanda](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html?lang=sv-SE#query-performance-tuning){target="_blank"}
 
 ### Justera indexvärdet
 
 __Ändra (eller skapa) ett AEM index__ så att befintliga frågebegränsningar kan matchas mot indexuppdateringarna.
 
-+ [Lär dig hur du trimmar befintliga index](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#query-performance-tuning){target="_blank"}
-+ [Lär dig skapa index](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html#create-a-new-index){target="_blank"}
++ [Lär dig hur du trimmar befintliga index](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html?lang=sv-SE#query-performance-tuning){target="_blank"}
++ [Lär dig skapa index](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/troubleshooting-slow-queries.html?lang=sv-SE#create-a-new-index){target="_blank"}
 
 ## 3. Verifiera{#verify}
 
@@ -174,9 +174,9 @@ Justeringar av frågor, index eller båda måste verifieras för att säkerstäl
 
 ![Förklara fråga](./assets/traversals/verify.gif)
 
-Om bara [justeringar av frågan](#adjust-the-query) görs kan frågan testas direkt på AEM as a Cloud Service via Developer Console [Förklara fråga](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"}. Förklara fråga körs mot AEM författartjänst, men eftersom indexdefinitionerna är desamma i alla författartjänster och Publish-tjänster räcker det att validera frågor mot AEM författartjänst.
+Om bara [justeringar av frågan](#adjust-the-query) görs kan frågan testas direkt på AEM as a Cloud Service via Developer Console [Förklara fråga](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=sv-SE#queries){target="_blank"}. Förklara fråga körs mot AEM författartjänst, men eftersom indexdefinitionerna är desamma i alla författartjänster och Publish-tjänster räcker det att validera frågor mot AEM författartjänst.
 
-Om [ändringar görs i index](#adjust-the-index) måste indexet distribueras till AEM as a Cloud Service. När indexjusteringarna har distribuerats kan Developer Console [Förklara fråga](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html#queries){target="_blank"} användas för att köra och finjustera frågan ytterligare.
+Om [ändringar görs i index](#adjust-the-index) måste indexet distribueras till AEM as a Cloud Service. När indexjusteringarna har distribuerats kan Developer Console [Förklara fråga](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/developer-console.html?lang=sv-SE#queries){target="_blank"} användas för att köra och finjustera frågan ytterligare.
 
 I slutänden genomförs alla ändringar (fråga och kod) i Git och distribueras till AEM as a Cloud Service med Cloud Manager. Testa kodsökvägarna som är kopplade till de ursprungliga genomgångsvarningarna och kontrollera att genomgångsvarningarna inte längre visas i `aemerror`-loggen när du distribuerat dem.
 
@@ -191,14 +191,14 @@ Läs om de här andra användbara resurserna för att förstå AEM, söka och bl
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 - sökning och indexering" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="Cloud 5 - sökning och indexering"></a>
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html?lang=sv-SE" title="Cloud 5 - sökning och indexering" tabindex="-1"><img class="is-bordered-r-small" src="../../../expert-resources/cloud-5/imgs/009-thumb.png" alt="Cloud 5 - sökning och indexering"></a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" title="Cloud 5 - sökning och indexering">Cloud 5 - sökning och indexering</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html?lang=sv-SE" title="Cloud 5 - sökning och indexering">Cloud 5 - sökning och indexering</a></p>
                <p class="is-size-6">I Cloud 5-teamet utforskas allt om sökning och indexering i AEM as a Cloud Service.</p>
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/expert-resources/cloud-5/cloud5-aem-search-and-indexing.html?lang=sv-SE" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                </a>
            </div>
@@ -212,16 +212,16 @@ Läs om de här andra användbara resurserna för att förstå AEM, söka och bl
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="Innehållssökning och indexering" tabindex="-1">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=sv-SE" title="Innehållssökning och indexering" tabindex="-1">
                    <img class="is-bordered-r-small" src="./assets/traversals/resources--docs.png" alt="Innehållssökning och indexering">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" title="Innehållssökning och indexering">Dokumentation för innehållssökning och indexering</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=sv-SE" title="Innehållssökning och indexering">Dokumentation för innehållssökning och indexering</a></p>
                <p class="is-size-6">Lär dig skapa och hantera index i AEM as a Cloud Service.</p>
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=sv-SE" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                </a>
            </div>
@@ -234,16 +234,16 @@ Läs om de här andra användbara resurserna för att förstå AEM, söka och bl
    <div class="card">
        <div class="card-image">
            <figure class="image is-16by9">
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="Modernisera dina Oak-index" tabindex="-1">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html?lang=sv-SE" title="Modernisera dina Oak-index" tabindex="-1">
                    <img class="is-bordered-r-small" src="./assets/traversals/resources--aem-experts-series.png" alt="Modernisera dina Oak-index">
                </a>
            </figure>
        </div>
        <div class="card-content is-padded-small">
            <div class="content">
-               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" title="Modernisera dina Oak-index">Modernisera dina Oak-index</a></p>
+               <p class="headline is-size-6 has-text-weight-bold"><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html?lang=sv-SE" title="Modernisera dina Oak-index">Modernisera dina Oak-index</a></p>
                <p class="is-size-6">Lär dig hur du konverterar AEM 6 Oak indexdefinitioner till AEM as a Cloud Service-kompatibla och behåller index som fortsätter framåt.</p>
-               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
+               <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/search-and-indexing.html?lang=sv-SE" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM">
                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                </a>
            </div>

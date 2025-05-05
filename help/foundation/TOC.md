@@ -51,7 +51,7 @@ ht-degree: 11%
    + [ModSecurity CRS DoS Attack Protection](./security/modsecurity-crs-dos-attack-protection.md)
    + [HTTPS-anslutningar till API:er med privata certifikat](./security/call-internal-apis-having-private-certificate.md)
    + [mTLS-autentisering (Mutual TLS) från AEM](./security/mutual-tls-authentication.md)
-   + [Migrering av JWT-To-OAuth-autentiseringsuppgifter](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
+   + [Migrering av JWT-To-OAuth-autentiseringsuppgifter](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration){target=_blank}
 + Arbetsflöde {#workflow}
    + [Använda arbetsflödesredigeraren](./workflow/use-the-workflow-editor.md)
    + [Använd arbetsflöde](./workflow/use-workflow.md)

@@ -22,7 +22,7 @@ ht-degree: 0%
 I den här artikeln visas hur du fyller i ett adaptivt formulär med data som lagras i Azure-lagringen.
 Du förutsätts ha lagrat de adaptiva formulärdata i Azure-lagringsplatsen och nu vill förifylla ditt adaptiva formulär med dessa data.
 >[!NOTE]
->Koden i den här artikeln fungerar inte med grundläggande komponentbaserade adaptiva formulär.[Motsvarande artikel för grundläggande komponentbaserad adaptiv form finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=en)
+>Koden i den här artikeln fungerar inte med grundläggande komponentbaserade adaptiva formulär.[Motsvarande artikel för grundläggande komponentbaserad adaptiv form finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/prefill-form-with-data-attachments/introduction.html?lang=sv-SE)
 
 
 ## Skapa GET-förfrågan
@@ -86,7 +86,7 @@ if(guid!=null&&!guid.isEmpty())
 
 * [Importera det adaptiva exempelformuläret](./assets/bank-account-sample-form.zip)
 
-* [Ange lämpliga värden i Azure Portal Configuration med hjälp av OSGi-konfigurationskonsolen.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=en#provide-the-blob-sas-token-and-storage-uri)
+* [Ange lämpliga värden i Azure Portal Configuration med hjälp av OSGi-konfigurationskonsolen.](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/some-useful-integrations/store-form-data-in-azure-storage.html?lang=sv-SE#provide-the-blob-sas-token-and-storage-uri)
 
 * [Förhandsgranska och skicka formuläret BankAccount](http://localhost:4502/content/dam/formsanddocuments/azureportalstorage/bankaccount/jcr:content?wcmmode=disabled)
 

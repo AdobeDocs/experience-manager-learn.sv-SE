@@ -22,7 +22,7 @@ Ett snabbt och enkelt sätt att skapa en egen anpassad inskickningsåtgärd för
 
 >[!NOTE]
 >Koden i den här artikeln fungerar inte med grundläggande komponentbaserade adaptiva formulär.
->[Motsvarande artikel för grundläggande komponentbaserad adaptiv form finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=en)
+>[Motsvarande artikel för grundläggande komponentbaserad adaptiv form finns här](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/custom-submit-headless-forms/custom-submit-service.html?lang=sv-SE)
 
 
 I den här artikeln får du hjälp med att skapa en anpassad sändningsåtgärd för hantering av adaptiv inlämning av Forms.

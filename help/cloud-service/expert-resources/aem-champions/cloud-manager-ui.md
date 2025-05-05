@@ -26,4 +26,4 @@ Ta en titt på de här tipsen från din tekniska chef, Rakesh Pasupuleti. Rakesh
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Introduktion till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html) - Dokumentation om hur du använder Cloud Manager i AEM as a Cloud Service
+* [Introduktion till Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html?lang=sv-SE) - Dokumentation om hur du använder Cloud Manager i AEM as a Cloud Service

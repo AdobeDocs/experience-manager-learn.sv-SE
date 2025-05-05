@@ -127,7 +127,7 @@ public class GeneratePDFFromMobileFormData extends SlingAllMethodsServlet implem
 
 ### Återge interaktiv PDF
 
-Följande kod använder [Forms Service API](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) för att återge interaktiv PDF med data från mobilformuläret.
+Följande kod använder [Forms Service API](https://helpx.adobe.com/se/aem-forms/6/javadocs/com/adobe/fd/forms/api/FormsService.html) för att återge interaktiv PDF med data från mobilformuläret.
 
 ```java
 package com.aemforms.mobileforms.core.documentservices.impl;

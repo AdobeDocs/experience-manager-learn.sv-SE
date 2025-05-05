@@ -30,7 +30,7 @@ Databasläsaren är __ENDAST__ tillgänglig i AEM as a Cloud Service-miljöer (a
 
 Så här öppnar du Databasläsaren i AEM as a Cloud Service:
 
-1. Kontrollera att din användare har [den nödvändiga åtkomsten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#access-prerequisites)
+1. Kontrollera att din användare har [den nödvändiga åtkomsten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html?lang=sv-SE#access-prerequisites)
 1. Logga in på [Cloud Manager](https://my.cloudmanager.adobe.com)
 1. Välj det program som innehåller AEM as a Cloud Service-miljön som ska felsökas
 1. Öppna den [Developer Console](./developer-console.md) som motsvarar AEM as a Cloud Service-miljön som ska felsökas
@@ -45,4 +45,4 @@ Databasläsaren öppnas för den valda tjänstnivån (Författare, Publicera ell
 
 ## Åtkomst till publicera och förhandsgranska
 
-Som standard är åtkomsten till Publicera eller Förhandsgranska begränsad, vilket minskar antalet tillgängliga resurser i Databasläsaren. [Om du vill visa alla resurser för Publicera (eller Förhandsgranska) lägger du till användare i en administratörsroll för Publicera (eller Förhandsgranska).](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html#navigate-the-hierarchy)
+Som standard är åtkomsten till Publicera eller Förhandsgranska begränsad, vilket minskar antalet tillgängliga resurser i Databasläsaren. [Om du vill visa alla resurser för Publicera (eller Förhandsgranska) lägger du till användare i en administratörsroll för Publicera (eller Förhandsgranska).](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/repository-browser.html?lang=sv-SE#navigate-the-hierarchy)

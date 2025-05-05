@@ -22,7 +22,7 @@ Tilldela AEM Forms-arbetsflödesuppgift till den som skickar in formuläret.
 
 När du använder Adaptivt formulär i AEM-arbetsflödet vill du dynamiskt tilldela en uppgift till den som skickar formuläret. För att uppnå detta måste vi konfigurera AEM med Ldap.
 
-De steg som krävs för att konfigurera AEM med LDAP beskrivs i [detalj här.](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/ldap-config.html)
+De steg som krävs för att konfigurera AEM med LDAP beskrivs i [detalj här.](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/ldap-config.html)
 
 I den här artikeln bifogas konfigurationsfiler som används för att konfigurera AEM med Adobe Ldap. Dessa filer ingår i paketet som kan importeras med hjälp av pakethanteraren.
 

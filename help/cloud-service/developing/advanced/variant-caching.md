@@ -49,7 +49,7 @@ Lär dig hur du konfigurerar och använder AEM som en molntjänst för att stöd
 
 ## Användning
 
-1. För att demonstrera funktionen kommer vi att använda [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)s implementering som exempel.
+1. För att demonstrera funktionen kommer vi att använda [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE)s implementering som exempel.
 
 1. Implementera en [SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) i AEM för att ange `x-aem-variant` cookie för HTTP-svaret, med ett variantvärde.
 

@@ -73,7 +73,7 @@ Integreringen sker på samma sätt som alla tittare via en enda Dynamic Media Cl
 
 En sista kommentar om Dynamic Media Classic-video som kan gälla vissa kunder: alla företag kanske inte har automatisk konvertering, strömning eller videoförinställningar aktiverade för sitt konto. Om du av någon anledning inte kan komma åt URL:er för direktuppspelad video kan det bero på detta. Du kan överföra och publicera progressivt nedladdad video och ha tillgång till alla videovisningsprogram. Om du vill utnyttja Dynamic Media Classic alla videofunktioner kontaktar du din Account Manager eller Sales Manager för att aktivera de här funktionerna.
 
-Läs mer om [Video i Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html).
+Läs mer om [Video i Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/quick-start-video.html?lang=sv-SE).
 
 ## Video 101
 
@@ -135,8 +135,8 @@ När du arbetar med video i Dynamic Media Classic följer du ett grundläggande 
 
 ![bild](assets/video-overview/video-overview-2.png)
 
-1. Börja med att ladda upp videofiler till Dynamic Media Classic. Det gör du genom att öppna **Verktygsmenyn** längst ned på panelen för Dynamic Media Classic-tillägg och välja **Överför till Dynamic Media Classic > Filer till mappnamn** eller **Överför till Dynamic Media Classic > Mappar till mappnamn**. &quot;Mappnamn&quot; är den mapp som du just nu bläddrar i med tillägget. Videofiler kan vara stora, så vi rekommenderar att du använder FTP för att överföra stora filer. Som en del av överföringen väljer du en eller flera videoförinställningar för kodning av videoklipp. Video kan konverteras till MP4-video vid överföring. Mer information om hur du använder och skapar kodningsförinställningar finns i avsnittet Videoförinställningar nedan. Lär dig mer om [Överföra och koda videor](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html).
-2. Markera eller markera och ändra en förinställning för visningsprogrammet för video och förhandsgranska videon. Du kan antingen välja en färdig visningsförinställning eller anpassa en egen. Om ni riktar er till mobilanvändare behöver ni inte göra något här, eftersom mobilplattformarna inte kräver ett visningsprogram eller en förinställning. Lär dig mer om [Förhandsgranska videoklipp i en videovisningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html) och [Lägga till eller redigera en förinställning för videovisningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html#adding-or-editing-a-video-viewer-preset).
+1. Börja med att ladda upp videofiler till Dynamic Media Classic. Det gör du genom att öppna **Verktygsmenyn** längst ned på panelen för Dynamic Media Classic-tillägg och välja **Överför till Dynamic Media Classic > Filer till mappnamn** eller **Överför till Dynamic Media Classic > Mappar till mappnamn**. &quot;Mappnamn&quot; är den mapp som du just nu bläddrar i med tillägget. Videofiler kan vara stora, så vi rekommenderar att du använder FTP för att överföra stora filer. Som en del av överföringen väljer du en eller flera videoförinställningar för kodning av videoklipp. Video kan konverteras till MP4-video vid överföring. Mer information om hur du använder och skapar kodningsförinställningar finns i avsnittet Videoförinställningar nedan. Lär dig mer om [Överföra och koda videor](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html?lang=sv-SE).
+2. Markera eller markera och ändra en förinställning för visningsprogrammet för video och förhandsgranska videon. Du kan antingen välja en färdig visningsförinställning eller anpassa en egen. Om ni riktar er till mobilanvändare behöver ni inte göra något här, eftersom mobilplattformarna inte kräver ett visningsprogram eller en förinställning. Lär dig mer om [Förhandsgranska videoklipp i en videovisningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html?lang=sv-SE) och [Lägga till eller redigera en förinställning för videovisningsprogram](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/previewing-videos-video-viewer.html?lang=sv-SE#adding-or-editing-a-video-viewer-preset).
 3. Kör en Video Publish, hämta URL:en och integrera. Den största skillnaden mellan det här steget för videoarbetsflödet jämfört med bildarbetsflödet är att du kör ett särskilt Video Publish istället för (eller kanske) standardpubliceringen för Image Serving. Videovisningsprogramintegrationen på datorn fungerar precis som bildvisningsprogramintegrationen, men för mobila enheter är det ännu enklare - allt du behöver är URL:en till själva videon.
 
 ### Om omkodning
@@ -171,11 +171,11 @@ Slutligen, om du är orolig för att skydda dina medier för immateriell egendom
 
 När du överför videon väljer du bland en eller flera förinställningar som innehåller inställningarna för konvertering av huvudvideon till ett webbvänligt format via kodning. Videoförinställningar finns i två versioner, Adaptiva videoförinställningar och Encoding Presets.
 
-Se [Tillgängliga videoförinställningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html#video-presets-for-encoding-video-files).
+Se [Tillgängliga videoförinställningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/application-setup.html?lang=sv-SE#video-presets-for-encoding-video-files).
 
 Anpassade videoförinställningar aktiveras som standard, vilket betyder att de är tillgängliga för kodning. Om du vill använda en enskild kodningsförinställning måste administratören aktivera den för att den ska visas i listan med videoförinställningar.
 
-Lär dig hur du [aktiverar eller inaktiverar videoförinställningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html#activating-or-deactivating-video-encoding-presets).
+Lär dig hur du [aktiverar eller inaktiverar videoförinställningar](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html?lang=sv-SE#activating-or-deactivating-video-encoding-presets).
 
 Du kan välja någon av många färdiga förinställningar som medföljer Dynamic Media Classic eller skapa egna, men inga förinställningar väljs för överföring som standard. **Om du inte väljer en videoförinställning vid överföring kommer videon alltså inte att konverteras och kan vara opublicerbar**. Men du kan konvertera videon själv offline och överföra och publicera precis som du vill. Videoförinställningar krävs bara om du vill att Dynamic Media Classic ska göra konverteringen åt dig.
 
@@ -238,19 +238,19 @@ Ibland kanske du behöver en speciell videoförinställning som inte matchar ins
 11. Klicka på **Spara** om du vill spara förinställningen. Till skillnad från alla andra förinställningar behöver du inte publicera just nu, eftersom förinställningarna bara är till för att överföra filer. Senare måste du publicera de kodade videoklippen, men förinställningarna gäller endast för intern Dynamic Media Classic-användning.
 12. Gå till **Överför** om du vill verifiera din förinställning för video i överföringslistan. Välj **Jobbalternativ** och expandera **Videoalternativ**. Din förinställning visas i kategorin för den uppspelningsenhet som du väljer (Dator, Mobil eller Surfplatta).
 
-Läs mer om [Lägga till eller redigera en videoförinställning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html#adding-or-editing-a-video-encoding-preset).
+Läs mer om [Lägga till eller redigera en videoförinställning](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/uploading-encoding-videos.html?lang=sv-SE#adding-or-editing-a-video-encoding-preset).
 
 ## Lägg till bildtexter i videon
 
 Ibland kan det vara praktiskt att lägga till beskrivningar i videon, t.ex. när du behöver visa videon på flera språk, men inte vill duplicera ljudet på ett annat språk eller spela in videon igen på olika språk. Om du lägger till bildtexter blir de som har hörselnedsättning mer tillgängliga och använder undertextning. Dynamic Media Classic gör det enkelt att lägga till bildtexter i videoklipp.
 
-Lär dig hur du [lägger till bildtexter i videon](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-captions-video.html).
+Lär dig hur du [lägger till bildtexter i videon](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-captions-video.html?lang=sv-SE).
 
 ## Lägg till kapitelmarkörer i videon
 
 För videor med långa format uppskattar de som tittar på videon troligen den bekvämlighet och smidighet som finns genom att navigera i videon med kapitelmarkörer. Med Dynamic Media Classic kan du enkelt lägga till kapitelmarkörer i videon.
 
-Lär dig hur du [lägger till kapitelmarkörer i video](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-chapter-markers-video.html).
+Lär dig hur du [lägger till kapitelmarkörer i video](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/adding-chapter-markers-video.html?lang=sv-SE).
 
 ## Videoimplementeringsämnen
 
@@ -260,20 +260,20 @@ Det sista steget i Dynamic Media Classic arbetsflöde är att publicera videoinn
 
 ![bild](assets/video-overview/video-overview-6.jpg)
 
-Lär dig hur du [Publish din video](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#publishing-video).
+Lär dig hur du [Publish din video](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html?lang=sv-SE#publishing-video).
 
 När du har kört en videopublicering kan du få en URL-adress för att komma åt dina videor och eventuella förinställningar för Dynamic Media Classic Viewer i en webbläsare. Men om du anpassar eller skapar en egen förinställning för Video Viewer måste du köra en separat Image Server-publicering.
 
-- Lär dig hur du [länkar en URL till en mobilwebbplats eller en webbplats](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#linking-a-video-url-to-a-mobile-site-or-a-website).
-- Lär dig hur du [bäddar in visningsprogrammet på en webbsida](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#embedding-the-video-viewer-on-a-web-page).
+- Lär dig hur du [länkar en URL till en mobilwebbplats eller en webbplats](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html?lang=sv-SE#linking-a-video-url-to-a-mobile-site-or-a-website).
+- Lär dig hur du [bäddar in visningsprogrammet på en webbsida](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html?lang=sv-SE#embedding-the-video-viewer-on-a-web-page).
 
 Du kan också distribuera videon med en videospelare från tredje part eller med en anpassad videospelare.
 
-Lär dig hur du [distribuerar video med en tredjepartsvideospelare](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#deploying-video-using-a-third-party-video-player).
+Lär dig hur du [distribuerar video med en tredjepartsvideospelare](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html?lang=sv-SE#deploying-video-using-a-third-party-video-player).
 
 Om du också vill använda videominiatyrbilderna - den bild som extraheras från videon - måste du köra en Image Server-publicering. Det beror på att videons miniatyrbild finns på bildservern, medan videon finns på videoservern. Videominiatyrbilder kan användas i videosökresultat, videouppspelningslistor och kan användas som den inledande&quot;affischbildrutan&quot; som visas i videobildrutan innan videon spelas upp.
 
-Läs mer om [Arbeta med videominiatyrer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html#working-with-video-thumbnails).
+Läs mer om [Arbeta med videominiatyrer](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/video/deploying-video-websites-mobile-sites.html?lang=sv-SE#working-with-video-thumbnails).
 
 ### Välja och anpassa en visningsförinställning
 
@@ -308,15 +308,15 @@ Det rekommenderade arbetsflödet är att bädda in dessa data i videoklipp innan
 
 Om du använder den här metoden behöver du inte ange dessa data manuellt med Dynamic Media Classic. Du kan också använda metadataförinställningar i Dynamic Media Classic som ett snabbt sätt att ange samma data varje gång.
 
-Mer information om det ämnet finns i [Visa, lägga till och exportera metadata](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html).
+Mer information om det ämnet finns i [Visa, lägga till och exportera metadata](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html?lang=sv-SE).
 
 ![bild](assets/video-overview/video-overview-7.jpg)
 
 När metadata har fyllts i kan du se dem i detaljvyn för videomaterialet. Nyckelord kan också finnas, men de finns under fliken Nyckelord.
 
-- Läs mer om [Lägga till nyckelord](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html#add-or-edit-keywords).
-- Läs mer om [Video-SEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html).
-- Läs mer om [Inställningar för Video SEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html#choosing-video-seo-settings).
+- Läs mer om [Lägga till nyckelord](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/managing-assets/viewing-adding-exporting-metadata.html?lang=sv-SE#add-or-edit-keywords).
+- Läs mer om [Video-SEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html?lang=sv-SE).
+- Läs mer om [Inställningar för Video SEO](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/setup/video-seo-search-engine-optimization.html?lang=sv-SE#choosing-video-seo-settings).
 
 #### Konfigurera video-SEO
 

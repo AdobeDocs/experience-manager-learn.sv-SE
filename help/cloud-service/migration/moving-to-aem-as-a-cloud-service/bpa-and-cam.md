@@ -43,10 +43,10 @@ Prova det du lärt dig med övningen.
 Innan du provar övningen bör du kontrollera att du har tittat på och förstått videon ovan och följande material:
 
 + [Tänk annorlunda om AEM as a Cloud Service](./introduction.md)
-+ [Vad är AEM as a Cloud Service?](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=en)
-+ [Arkitekturen för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=en)
-+ [Innehåll som kan ändras och inte kan ändras](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/mutable-immutable.html?lang=en)
-+ [Skillnader i utveckling för AEM as a Cloud Service och AEM 6.x](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html#developing)
++ [Vad är AEM as a Cloud Service?](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/what-is-aem-as-a-cloud-service.html?lang=sv-SE)
++ [Arkitekturen för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/introduction/architecture.html?lang=sv-SE)
++ [Innehåll som kan ändras och inte kan ändras](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/basics/mutable-immutable.html?lang=sv-SE)
++ [Skillnader i utveckling för AEM as a Cloud Service och AEM 6.x](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=sv-SE#developing)
 
 <table style="border-width:0">
     <tr>

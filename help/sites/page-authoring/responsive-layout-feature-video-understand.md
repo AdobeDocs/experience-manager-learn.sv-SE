@@ -28,4 +28,4 @@ Med Adobe Experience Manager Sites kan en författare hantera bredden på en kom
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Dokumentation för responsiv layout](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html)
+* [Dokumentation för responsiv layout](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=sv-SE)

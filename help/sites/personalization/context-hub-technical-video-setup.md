@@ -39,7 +39,7 @@ Om du vill aktivera ContextHub-funktionerna och länka till ContextHub JavaScrip
 
 ## Platskonfiguration och ContextHub-segment {#site-configuration-and-contexthub-segments}
 
-ContextHub innehåller en segmenteringsmotor som hanterar segment och fastställer vilka segment som matchas för den aktuella kontexten. Flera segment är definierade. Du kan använda Javascript-API:t för att [identifiera lösta segment](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments). Aktivera ContextHub-segmenten för din webbplats under [[!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html).
+ContextHub innehåller en segmenteringsmotor som hanterar segment och fastställer vilka segment som matchas för den aktuella kontexten. Flera segment är definierade. Du kan använda Javascript-API:t för att [identifiera lösta segment](https://helpx.adobe.com/se/experience-manager/6-5/sites/developing/using/ch-adding.html#DeterminingResolvedContextHubSegments). Aktivera ContextHub-segmenten för din webbplats under [[!UICONTROL Configuration Browser]](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=sv-SE).
 
 ## Skapa segment {#create-segments}
 
@@ -53,7 +53,7 @@ Tilldela konfigurationssökvägen, segmenteringssökvägen och ContextHub-sökv�
 
 Du kan läsa mer om ContextHub och segmentering nedan:
 
-* [ContextHub](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/contexthub.html)
-* [Lägger till kontextnav på sidan och använder butiker](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/ch-adding.html)
-* [Förstå segmentering](https://helpx.adobe.com/experience-manager/6-5/sites/classic-ui-authoring/using/classic-personalization-campaigns-segmentation.html)
-* [Konfigurerar segmentering med ContextHub](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/segmentation.html)
+* [ContextHub](https://helpx.adobe.com/se/experience-manager/6-5/sites/developing/using/contexthub.html)
+* [Lägger till kontextnav på sidan och använder butiker](https://helpx.adobe.com/se/experience-manager/6-5/sites/developing/using/ch-adding.html)
+* [Förstå segmentering](https://helpx.adobe.com/se/experience-manager/6-5/sites/classic-ui-authoring/using/classic-personalization-campaigns-segmentation.html)
+* [Konfigurerar segmentering med ContextHub](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/segmentation.html)

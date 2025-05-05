@@ -25,7 +25,7 @@ Arbetsflöden används vanligtvis för att skicka inskickade data för gransknin
 
 ## Förutsättning
 
-Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationsguiden](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html) för att installera och konfigurera AEM Forms
+Kontrollera att du har en fungerande instans av AEM Forms. Följ [installationsguiden](https://experienceleague.adobe.com/docs/experience-manager-65/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi.html?lang=sv-SE) för att installera och konfigurera AEM Forms
 
 I följande video förklaras hur du skapar arbetsflöden för granskning och godkännande med AEM Forms Components
 >[!VIDEO](https://video.tv.adobe.com/v/40242?quality=12&learn=on)

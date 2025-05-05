@@ -471,4 +471,4 @@ Nu har du utforskat hur sidhuvuden och sidfötter hanteras och utvecklas i Edge 
 
 Det här mönstret är ett flexibelt och enkelt sätt att implementera webbplatsomfattande navigeringskomponenter.
 
-Mer metodtips och avancerade tekniker finns i [dokumentationen för den universella redigeraren](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options).
+Mer metodtips och avancerade tekniker finns i [dokumentationen för den universella redigeraren](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/create-block#block-options).

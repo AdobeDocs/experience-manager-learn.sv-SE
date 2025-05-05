@@ -42,9 +42,9 @@ För att få åtkomst till och använda Developer Console måste följande behö
 
 1. Se till att du i Adobe Org-växlaren kan se Adobe Org för de miljöer du vill inspektera i Developer Console.
 1. För att kunna logga in på Developer Console måste utvecklaren vara medlem i någon av följande roller:
-   + [Cloud Manager Product&#39;s __Developer - Cloud Service__ Product Profile](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer): I det här fallet ser utvecklaren hela listan över miljöer som är tillgängliga under den valda Developer Console-URL:en. Om en utvecklingsmiljö eller RDE har valts i Cloud Manager kan andra utvecklingsmiljöer eller RDE:er i samma program visas.
-   + [__AEM-administratörer__ Produktprofil på __AEM-författare__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles): I det här fallet begränsas listan med miljöer som beskrivs i den föregående punkten till de relaterade produktprofiler där rollen tilldelas.
-1. Utvecklaren måste vara medlem i produktprofilen [__AEM Users__ eller __AEM Administrators__ i AEM Author och/eller Publish](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles).
+   + [Cloud Manager Product&#39;s __Developer - Cloud Service__ Product Profile](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html?lang=sv-SE#assign-developer): I det här fallet ser utvecklaren hela listan över miljöer som är tillgängliga under den valda Developer Console-URL:en. Om en utvecklingsmiljö eller RDE har valts i Cloud Manager kan andra utvecklingsmiljöer eller RDE:er i samma program visas.
+   + [__AEM-administratörer__ Produktprofil på __AEM-författare__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html?lang=sv-SE#aem-product-profiles): I det här fallet begränsas listan med miljöer som beskrivs i den föregående punkten till de relaterade produktprofiler där rollen tilldelas.
+1. Utvecklaren måste vara medlem i produktprofilen [__AEM Users__ eller __AEM Administrators__ i AEM Author och/eller Publish](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html?lang=sv-SE#aem-product-profiles).
    + Om det här medlemskapet inte finns, kommer [status](#status)-dumparna att timeout med ett 401 oauktoriserat fel.
 
 ### Felsökning av åtkomst till Developer Console
@@ -54,7 +54,7 @@ För att få åtkomst till och använda Developer Console måste följande behö
 Kontrollera följande:
 
 + Du har valt rätt Developer Console-URL genom att klicka på de tre punkterna för den valda miljön via Cloud Manager och välja Developer Console.
-+ Du har antingen [Cloud Manager Product&#39;s __Developer - Cloud Service__ Product Profile](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html#assign-developer) för att se hela listan över miljöer eller så ingår du i [__AEM Administrators__ Product Profile på __AEM Author__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html#aem-product-profiles) för den miljö du inte hittar.
++ Du har antingen [Cloud Manager Product&#39;s __Developer - Cloud Service__ Product Profile](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-cloud-manager.html?lang=sv-SE#assign-developer) för att se hela listan över miljöer eller så ingår du i [__AEM Administrators__ Product Profile på __AEM Author__](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/journey/assign-profiles-aem.html?lang=sv-SE#aem-product-profiles) för den miljö du inte hittar.
 
 #### 401 Otillåtet fel vid dumpningens status
 
@@ -110,7 +110,7 @@ Komponenterna hjälper till vid felsökning genom att:
 + Tillhandahålla varje OSGi-komponents tillstånd, inklusive om de är aktiva eller missnöjda
 + Om du anger information i ej tillfredsställande tjänstreferenser kan det leda till att OSGi-komponenter blir aktiva
 + En lista över OSGi-egenskaper och deras värden som är bundna till OSGi-komponenten.
-   + Detta visar faktiska värden som injicerats via [OSGi-miljökonfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values).
+   + Detta visar faktiska värden som injicerats via [OSGi-miljökonfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#environment-specific-configuration-values).
 
 ### Konfigurationer
 
@@ -119,7 +119,7 @@ Konfigurationer visar alla OSGi-komponentens konfigurationer (OSGi-egenskaper oc
 Konfigurationer hjälper dig att felsöka genom att:
 
 + Lista OSGi-egenskaper och deras värden med OSGi-komponenten
-   + Detta visar INTE faktiska värden som injicerats via [OSGi-miljökonfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#environment-specific-configuration-values). Se [Komponenter](#components) ovan för de inmatade värdena.
+   + Detta visar INTE faktiska värden som injicerats via [OSGi-miljökonfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#environment-specific-configuration-values). Se [Komponenter](#components) ovan för de inmatade värdena.
 + Hitta och identifiera felkonfigurerade egenskaper
 
 ### Oak Index

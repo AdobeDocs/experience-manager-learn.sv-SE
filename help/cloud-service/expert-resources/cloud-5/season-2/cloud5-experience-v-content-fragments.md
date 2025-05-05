@@ -24,9 +24,9 @@ En&quot;versus&quot; utgår från skillnaden mellan ett upplevelsefragment och e
 
 ## Innehåll som behandlas i den här videon
 
-+ [Arbeta med innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments.html)
-+ [Använda Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html)
-+ [Upplev fragmentdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/experience-fragments.html)
++ [Arbeta med innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments.html?lang=sv-SE)
++ [Använda Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use.html?lang=sv-SE)
++ [Upplev fragmentdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/fundamentals/experience-fragments.html?lang=sv-SE)
 
 ## Ytterligare resurser
 

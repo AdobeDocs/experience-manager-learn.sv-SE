@@ -28,13 +28,13 @@ Läs om AEM Dispatcher for AEM as a Cloud Service, som fokuserar på betydande f
 
 ![Dispatcher Converter](./assets/dispatcher-converter-diagram.png)
 
-Som en del av omfaktoriseringen av din kodbas använder du [AEM Dispatcher Converter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/dispatcher-transformation-utility-tools.html) för att omfaktorisera befintliga konfigurationer på plats eller Adobe Managed Services Dispatcher till AEM as a Cloud Service-kompatibel Dispatcher-konfiguration.
+Som en del av omfaktoriseringen av din kodbas använder du [AEM Dispatcher Converter](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/refactoring-tools/dispatcher-transformation-utility-tools.html?lang=sv-SE) för att omfaktorisera befintliga konfigurationer på plats eller Adobe Managed Services Dispatcher till AEM as a Cloud Service-kompatibel Dispatcher-konfiguration.
 
 ## Viktiga aktiviteter
 
 + Använd [Adobe I/O Dispatcher Converter-verktyget](https://github.com/adobe/aio-cli-plugin-aem-cloud-service-migration#aio-aem-migrationdispatcher-converter) för att migrera en befintlig Dispatcher-konfiguration.
 + Använd Dispatcher-modulen från [AEM Project Archetype](https://github.com/adobe/aem-project-archetype/tree/develop/src/main/archetype/dispatcher.cloud) som bästa praxis.
-+ [Konfigurera lokala Dispatcher-verktyg](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) för att validera dispatchern innan du testar i en Cloud Service-miljö.
++ [Konfigurera lokala Dispatcher-verktyg](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=sv-SE) för att validera dispatchern innan du testar i en Cloud Service-miljö.
 
 ## Handövning
 

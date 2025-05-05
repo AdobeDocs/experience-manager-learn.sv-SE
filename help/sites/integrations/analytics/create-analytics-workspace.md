@@ -45,17 +45,17 @@ Nedan följer Analytics-variablerna som för närvarande spåras:
 ### Mål {#objective}
 
 1. Skapa en rapportsvit eller använd en befintlig.
-1. Konfigurera [konverteringsvariabler (eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html) och [lyckade händelser (händelser)](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event) i rapportsviten.
-1. Skapa ett [Analysis Workspace-projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html) för att analysera data med hjälp av verktyg som gör att du kan skapa, analysera och dela insikter snabbt.
+1. Konfigurera [konverteringsvariabler (eVars)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=sv-SE) och [lyckade händelser (händelser)](https://experienceleague.adobe.com/sv/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event) i rapportsviten.
+1. Skapa ett [Analysis Workspace-projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=sv-SE) för att analysera data med hjälp av verktyg som gör att du kan skapa, analysera och dela insikter snabbt.
 1. Dela Analysis Workspace-projektet med andra teammedlemmar.
 
 ## Förutsättningar
 
 Den här självstudiekursen är en fortsättning på komponenten [Spåra klickade med Adobe Analytics](./track-clicked-component.md) och förutsätter att du har:
 
-* En **taggegenskap** med [Adobe Analytics-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html) aktiverat
-* **Adobe Analytics** test-/dev-rapportsprogram-ID och spårningsserver. I följande dokumentation finns information om hur du [skapar en rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html).
-* Webbläsartillägget [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html) har konfigurerats med en taggegenskap inläst på [WKND-platsen](https://wknd.site/us/en.html) eller en AEM-webbplats där Adobe Data Layer är aktiverat.
+* En **taggegenskap** med [Adobe Analytics-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/analytics/overview.html?lang=sv-SE) aktiverat
+* **Adobe Analytics** test-/dev-rapportsprogram-ID och spårningsserver. I följande dokumentation finns information om hur du [skapar en rapportsvit](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/new-report-suite.html?lang=sv-SE).
+* Webbläsartillägget [Experience Platform Debugger](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=sv-SE) har konfigurerats med en taggegenskap inläst på [WKND-platsen](https://wknd.site/us/en.html) eller en AEM-webbplats där Adobe Data Layer är aktiverat.
 
 ## Konverteringsvariabler (eVars) och lyckade händelser (Event)
 
@@ -116,19 +116,19 @@ Låt oss sedan skapa en händelse för att spåra CTA Button-klickningen.
 
 Analysis Workspace är ett flexibelt webbläsarverktyg som gör att du snabbt kan skapa analyser och dela insikter. Med dra-och-släpp-gränssnittet kan ni utforma analyser, lägga till visualiseringar för att ge liv åt data, strukturera en datauppsättning, dela och schemalägga projekt med vem som helst i organisationen.
 
-Skapa sedan ett [projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html#analysis-workspace) för att skapa en instrumentpanel som analyserar prestanda för CTA-knapparna på hela webbplatsen.
+Skapa sedan ett [projekt](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/freeform-overview.html?lang=sv-SE#analysis-workspace) för att skapa en instrumentpanel som analyserar prestanda för CTA-knapparna på hela webbplatsen.
 
 1. Välj **Workspace** i verktygsfältet Analyser och klicka på **Skapa ett nytt projekt**.
 
    ![Workspace](assets/create-analytics-workspace/create-workspace.png)
 
-1. Välj om du vill börja i ett **tomt projekt** eller välja någon av de fördefinierade mallarna, antingen från Adobe eller från anpassade mallar som skapats av din organisation. Det finns flera tillgängliga mallar, beroende på vilken analys eller vilket användningsfall du har tänkt dig. [Läs mer](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html) om de olika mallalternativen.
+1. Välj om du vill börja i ett **tomt projekt** eller välja någon av de fördefinierade mallarna, antingen från Adobe eller från anpassade mallar som skapats av din organisation. Det finns flera tillgängliga mallar, beroende på vilken analys eller vilket användningsfall du har tänkt dig. [Läs mer](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/build-workspace-project/starter-projects.html?lang=sv-SE) om de olika mallalternativen.
 
    I ditt Workspace-projekt nås paneler, tabeller, visualiseringar och komponenter från den vänstra listen. De skapar byggstenar för ditt projekt.
 
-   * **[Komponenter](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html)** - Komponenter är dimensioner, mått, segment eller datumintervall, som alla kan kombineras i en Freeform-tabell för att du ska kunna besvara din företagsfråga. Kom ihåg att bekanta dig med varje komponenttyp innan du går in i analysen. När du har mastered component terminology kan du börja dra och släppa för att skapa en analys i en Freeform-tabell.
-   * **[Visualiseringar](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)** - Visualiseringar, t.ex. en stapel eller ett linjediagram, läggs sedan till ovanpå data för att ge dem liv visuellt. På den vänstra listen väljer du ikonen för mellanvisualisering för att se en fullständig lista över tillgängliga visualiseringar.
-   * **[Paneler](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/panels.html)** - En panel är en samling tabeller och visualiseringar. Du kommer åt panelerna från den övre vänstra ikonen i Workspace. Paneler är användbara när du vill ordna dina projekt efter tidsperioder, rapportsviter eller användningsexempel för analyser. Följande paneltyper är tillgängliga i Analysis Workspace:
+   * **[Komponenter](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/components/analysis-workspace-components.html?lang=sv-SE)** - Komponenter är dimensioner, mått, segment eller datumintervall, som alla kan kombineras i en Freeform-tabell för att du ska kunna besvara din företagsfråga. Kom ihåg att bekanta dig med varje komponenttyp innan du går in i analysen. När du har mastered component terminology kan du börja dra och släppa för att skapa en analys i en Freeform-tabell.
+   * **[Visualiseringar](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html?lang=sv-SE)** - Visualiseringar, t.ex. en stapel eller ett linjediagram, läggs sedan till ovanpå data för att ge dem liv visuellt. På den vänstra listen väljer du ikonen för mellanvisualisering för att se en fullständig lista över tillgängliga visualiseringar.
+   * **[Paneler](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/panels.html?lang=sv-SE)** - En panel är en samling tabeller och visualiseringar. Du kommer åt panelerna från den övre vänstra ikonen i Workspace. Paneler är användbara när du vill ordna dina projekt efter tidsperioder, rapportsviter eller användningsexempel för analyser. Följande paneltyper är tillgängliga i Analysis Workspace:
 
    ![Mallval](assets/create-analytics-workspace/workspace-tools.png)
 
@@ -170,7 +170,7 @@ Skapa sedan en tabell för att skapa en visuell representation av hur användare
 
    ![eVar8](assets/create-analytics-workspace/evar8-metric.png)
 
-1. Du kan ersätta värdet för Knapp-ID med ett användarvänligare namn med hjälp av Adobe Analytics Classifications. Du kan läsa mer om hur du skapar en klassificering för ett specifikt mått [här](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html). I det här fallet har vi en inställning för klassificeringsmåttet `Button Section (Button ID)` för `eVar8` som mappar knapp-ID till ett användarvänligt namn.
+1. Du kan ersätta värdet för Knapp-ID med ett användarvänligare namn med hjälp av Adobe Analytics Classifications. Du kan läsa mer om hur du skapar en klassificering för ett specifikt mått [här](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=sv-SE). I det här fallet har vi en inställning för klassificeringsmåttet `Button Section (Button ID)` för `eVar8` som mappar knapp-ID till ett användarvänligt namn.
 
    ![Knappavsnitt](assets/create-analytics-workspace/button-section.png)
 

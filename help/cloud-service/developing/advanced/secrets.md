@@ -29,7 +29,7 @@ I AEM as a Cloud Service ger hanteringen av hemligheter via OSGi-tjänster en sk
 
 ### OSGi-tjänstimplementering
 
-Vi går igenom utvecklingen av en anpassad OSGi-tjänst som [exponerar hemligheter för OSGi-konfigurationer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#secret-configuration-values).
+Vi går igenom utvecklingen av en anpassad OSGi-tjänst som [exponerar hemligheter för OSGi-konfigurationer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#secret-configuration-values).
 
 Implementeringen läser hemligheter från OSGi-konfigurationen via metoden `@Activate` och exponerar dem via metoden `getSecret(String secretName)`. Du kan också skapa diskreta metoder som `getApiKey()` för varje hemlighet, men den här metoden kräver mer underhåll när hemligheter läggs till eller tas bort.
 
@@ -80,7 +80,7 @@ public interface SecretsManager {
 
 ## Mappa hemligheter till OSGi-konfiguration
 
-Visa hemliga värden i OSGi-tjänsten genom att mappa dem till OSGi-konfigurationer med hjälp av [OSGi-hemliga konfigurationsvärden](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#secret-configuration-values). Definiera OSGi-egenskapsnamnet som nyckel för att hämta det hemliga värdet från metoden `SecretsManager.getSecret()`.
+Visa hemliga värden i OSGi-tjänsten genom att mappa dem till OSGi-konfigurationer med hjälp av [OSGi-hemliga konfigurationsvärden](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#secret-configuration-values). Definiera OSGi-egenskapsnamnet som nyckel för att hämta det hemliga värdet från metoden `SecretsManager.getSecret()`.
 
 Definiera hemligheterna i OSGi-konfigurationsfilen `/apps/example/osgiconfig/config/com.example.core.util.impl.SecretsManagerImpl.cfg.json` i ditt AEM Maven-projekt. Varje egenskap representerar en hemlighet som exponeras i AEM, där värdet anges via Cloud Manager. Nyckeln är OSGi-egenskapsnamnet som används för att hämta det hemliga värdet från tjänsten `SecretsManager`.
 
@@ -151,7 +151,7 @@ public class ExampleSecretConsumerImpl implements ExampleSecretConsumer {
 
 Med OSGi-tjänsten och -konfigurationen på plats är det sista steget att ange de hemliga värdena i Cloud Manager.
 
-Värden för hemligheter kan anges via [Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Variables) eller, mer allmänt, via [Cloud Manager-gränssnittet](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables#overview). Så här använder du en hemlig variabel via Cloud Manager-gränssnittet:
+Värden för hemligheter kan anges via [Cloud Manager API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Variables) eller, mer allmänt, via [Cloud Manager-gränssnittet](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/environment-variables#overview). Så här använder du en hemlig variabel via Cloud Manager-gränssnittet:
 
 ![Konfiguration av Cloud Manager Secrets](./assets/secrets/cloudmanager-configuration.png)
 

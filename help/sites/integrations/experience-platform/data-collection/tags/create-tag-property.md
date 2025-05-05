@@ -42,7 +42,7 @@ Om du vill skapa en taggegenskap följer du de här stegen.
 
 ## Skapa en ny regel
 
-Öppna den nyligen skapade taggegenskapen genom att klicka på dess namn i vyn **Taggegenskaper** . Under rubriken _Min senaste aktivitet_ kan du även se att Core-tillägget har lagts till i det. Core-taggtillägget är standardtillägg och innehåller händelsetyper som sidinläsning, webbläsare, formulär och andra händelsetyper. Mer information finns i [Översikt över kärntillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html).
+Öppna den nyligen skapade taggegenskapen genom att klicka på dess namn i vyn **Taggegenskaper** . Under rubriken _Min senaste aktivitet_ kan du även se att Core-tillägget har lagts till i det. Core-taggtillägget är standardtillägg och innehåller händelsetyper som sidinläsning, webbläsare, formulär och andra händelsetyper. Mer information finns i [Översikt över kärntillägg](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html?lang=sv-SE).
 
 Med regler kan du ange vad som ska hända när besökaren interagerar med AEM. För att förenkla saker och ting loggar vi två meddelanden till webbläsarkonsolen för att visa hur integrering av datainsamling och taggar kan mata in JavaScript-kod i AEM utan att uppdatera AEM projektkod.
 
@@ -93,4 +93,4 @@ Ovanför steg slutförs den enkla taggegenskap som har en regel för att logga e
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Skapa en taggegenskap](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html)
+* [Skapa en taggegenskap](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=sv-SE)

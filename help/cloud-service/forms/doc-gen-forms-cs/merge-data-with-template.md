@@ -21,7 +21,7 @@ ht-degree: 0%
 # Ring POST
 
 
-Nästa steg är att göra ett HTTP POST-anrop till slutpunkten med de nödvändiga parametrarna. Mallen och datafilerna tillhandahålls som resursfiler. Egenskaperna för den genererade PDF-filen anges via alternativets parameter i begäran. Egenskapen embedFonts används för att bädda in anpassade teckensnitt i den genererade PDF-filen.[Följ den här dokumentationen för att distribuera anpassade teckensnitt till din Forms-molninstans.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=en) Egenskaperna anges i resursfilen options.json. Eftersom slutpunkten har tokenbaserad autentisering skickas åtkomsttoken i begärandehuvudet.
+Nästa steg är att göra ett HTTP POST-anrop till slutpunkten med de nödvändiga parametrarna. Mallen och datafilerna tillhandahålls som resursfiler. Egenskaperna för den genererade PDF-filen anges via alternativets parameter i begäran. Egenskapen embedFonts används för att bädda in anpassade teckensnitt i den genererade PDF-filen.[Följ den här dokumentationen för att distribuera anpassade teckensnitt till din Forms-molninstans.](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up.html?lang=sv-SE) Egenskaperna anges i resursfilen options.json. Eftersom slutpunkten har tokenbaserad autentisering skickas åtkomsttoken i begärandehuvudet.
 
 Följande kod användes för att skapa PDF-filen genom att sammanfoga data med mallen
 

@@ -34,7 +34,7 @@ Här följer ett flöde för användningsfallet
 Du måste ha följande för att användningsexemplet ska fungera:
 
 * En AEM-server med Forms-tillägg i paket
-* En [integreringsnyckel för ett Acrobat Sign-program](https://helpx.adobe.com/sign/kb/how-to-create-an-integration-key.html)
+* En [integreringsnyckel för ett Acrobat Sign-program](https://helpx.adobe.com/se/sign/kb/how-to-create-an-integration-key.html)
 
 ## Nästa steg
 

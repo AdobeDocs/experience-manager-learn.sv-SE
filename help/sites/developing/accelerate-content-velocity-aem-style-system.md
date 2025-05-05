@@ -93,4 +93,4 @@ Slutligen är användningen av Style Systems mer konst än vetenskapen. Som vi h
 
 Mer information finns på vårt [Customer Success Webinar](https://adobecustomersuccess.adobeconnect.com/pob610c9mffjmp4/) med Will Brisbane och Joseph Van Buskirk.
 
-Läs mer om strategi och tankeledarskap på navet [Nöjda kunder](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html).
+Läs mer om strategi och tankeledarskap på navet [Nöjda kunder](https://experienceleague.adobe.com/docs/customer-success/customer-success/overview.html?lang=sv-SE).

@@ -24,7 +24,7 @@ Följande resurser/konfigurationer har distribuerats på en AEM Forms-publicerin
 * [Paket med Adobe Sign-wrapper](assets/AcrobatSign.core-1.0.0-SNAPSHOT.jar)
 
 * [Exempel på mall för interaktiv kommunikation](assets/waiver-interactive-communication.zip)
-* [Distribuera DevelopingWithServiceUser-paketet](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip)
+* [Distribuera DevelopingWithServiceUser-paketet](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=sv-SE)
 * Lägg till följande post i användarmappningstjänsten för Apache Sling med OSGi configMgr
   **DevelopingWithServiceUser.core:getformsresourceServer=fd-service**
 
@@ -61,4 +61,4 @@ Om du vill aktivera POST-anrop till AEM-slutpunkten från REACT-appen måste du 
 
 ![Cors-setting](assets/cors-settings.png)
 
-Mer information om CORS-konfigurationsalternativ finns i [Förstå CORS med AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html).
+Mer information om CORS-konfigurationsalternativ finns i [Förstå CORS med AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=sv-SE).

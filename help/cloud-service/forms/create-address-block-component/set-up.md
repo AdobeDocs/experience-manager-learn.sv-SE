@@ -20,13 +20,13 @@ ht-degree: 0%
 
 Om du redan har konfigurerat utvecklingsmiljön kan du hoppa över den här delen av självstudiekursen.
 
-[Skapa Maven-projekt](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/getting-started)
+[Skapa Maven-projekt](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/getting-started)
 
-[Installera IntelliJ](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up) - Du kan hoppa över att lägga till teckensnittsmodulen för den här självstudiekursen.
+[Installera IntelliJ](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-set-up) - Du kan hoppa över att lägga till teckensnittsmodulen för den här självstudiekursen.
 
-[Initiera Git](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git)
+[Initiera Git](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/setup-git)
 
-[Synkronisera IntelliJ med en lokal molnklar instans av AEM Forms](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync)
+[Synkronisera IntelliJ med en lokal molnklar instans av AEM Forms](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/intellij-and-aem-sync)
 
 ## Nästa steg
 

@@ -33,7 +33,7 @@ slingRequest.setAttribute(&quot;data&quot;, innehåll);
 
 I det här exemplet ställer vi in data-attributet med innehållet. Innehållet representerar de data som du vill fylla i formuläret i förväg. Vanligtvis hämtar du innehållet genom att göra ett REST-anrop till en intern tjänst.
 
-För att uppnå detta måste du skapa en anpassad profil. Information om hur du skapar en anpassad profil finns tydligt dokumenterad i [AEM Forms-dokumentationen här](https://helpx.adobe.com/aem-forms/6/html5-forms/custom-profile.html).
+För att uppnå detta måste du skapa en anpassad profil. Information om hur du skapar en anpassad profil finns tydligt dokumenterad i [AEM Forms-dokumentationen här](https://helpx.adobe.com/se/aem-forms/6/html5-forms/custom-profile.html).
 
 När du har skapat din anpassade profil skapar du sedan en JSP-fil som hämtar data genom att anropa ditt serverdelssystem. När data har hämtats använder du slingRequest.setAttribute(&quot;data&quot;, innehåll); för att fylla i formuläret i förväg
 

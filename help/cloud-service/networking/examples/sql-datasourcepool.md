@@ -35,7 +35,7 @@ Kontrollera att den [lämpliga](../advanced-networking.md#advanced-networking) a
 
 OSGi-konfigurationens anslutningssträng använder:
 
-+ `AEM_PROXY_HOST`-värde via konfigurationsmiljövariabeln [ OSGi ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` som anslutningsvärd
++ `AEM_PROXY_HOST`-värde via konfigurationsmiljövariabeln [ OSGi ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` som anslutningsvärd
 + `30001` som är `portOrig`-värdet för framåtmappning för Cloud Manager-port `30001` → `mysql.example.com:3306`
 
 Eftersom hemligheter inte får lagras i kod bör SQL-anslutningens användarnamn och lösenord anges via OSGi-konfigurationsvariabler som anges med AIO CLI eller Cloud Manager API:er.

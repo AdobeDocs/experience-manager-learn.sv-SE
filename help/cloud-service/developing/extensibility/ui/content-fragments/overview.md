@@ -29,7 +29,7 @@ Content Fragment Console i AEM (Adobe Experience Manager) är ett användargrän
 
 ![Konsolen för innehållsfragment](./assets/overview/cfc.png)
 
-[AEM Content Fragments Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) är ett utbyggbart gränssnitt för att visa och hantera innehållsfragment. [AEM Content Fragment Console-tillägg skapas](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) med App Builder-mallen `@adobe/aem-cf-admin-ui-ext-tpl`.
+[AEM Content Fragments Console](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=sv-SE) är ett utbyggbart gränssnitt för att visa och hantera innehållsfragment. [AEM Content Fragment Console-tillägg skapas](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/code-generation) med App Builder-mallen `@adobe/aem-cf-admin-ui-ext-tpl`.
 
 Följande utökningspunkter för Content Fragments Console är tillgängliga:
 

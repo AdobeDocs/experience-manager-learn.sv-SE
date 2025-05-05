@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Generera DOR (Document Of Record) programmatiskt
 
-I den här artikeln visas hur `com.adobe.aemds.guide.addon.dor.DoRService API` används för att generera **dokument med post** programmatiskt. [Dokument för post](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html) är en PDF-version av data som har samlats in i adaptiv form.
+I den här artikeln visas hur `com.adobe.aemds.guide.addon.dor.DoRService API` används för att generera **dokument med post** programmatiskt. [Dokument för post](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/generate-document-of-record-for-non-xfa-based-adaptive-forms.html?lang=sv-SE) är en PDF-version av data som har samlats in i adaptiv form.
 
 1. Här följer kodfragmentet. Den första raden hämtar DOR-tjänsten.
 1. Ange DoROptions.

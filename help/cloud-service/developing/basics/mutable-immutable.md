@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Muterbart och oföränderligt innehåll
 
-Lär dig om vikten och skillnaderna mellan [muterbart och oföränderligt innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) i AEM som ett moln, och hur det påverkar hur du utvecklar.
+Lär dig om vikten och skillnaderna mellan [muterbart och oföränderligt innehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE) i AEM som ett moln, och hur det påverkar hur du utvecklar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330555?quality=12&learn=on)

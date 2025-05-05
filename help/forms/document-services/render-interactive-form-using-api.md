@@ -24,7 +24,7 @@ I den här artikeln ska vi ta en titt på följande tjänst
 
 * FormsService - Det här är en mycket mångsidig tjänst som gör att du kan exportera/importera data från och till PDF-filer och även generera interaktiv PDF genom att sammanfoga XML-data i xdp-mallen
 
-Tjänstemannen [javadoc för AEM Forms API visas här](https://helpx.adobe.com/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
+Tjänstemannen [javadoc för AEM Forms API visas här](https://helpx.adobe.com/se/aem-forms/6/javadocs/com/adobe/fd/output/api/package-summary.html)
 
 Följande kodfragment återger interaktiv pdf med hjälp av åtgärden renderPDFForm i FormsService. Schishing.xdp är en mall som används för att sammanfoga xml-data.
 

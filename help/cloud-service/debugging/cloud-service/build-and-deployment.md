@@ -70,11 +70,11 @@ Fel som upptäcks i den här fasen bör kunna reproduceras lokalt, med följande
 
 Kodskanning utför statisk kodanalys med en blandning av Java- och AEM-specifika metodtips.
 
-Kodskanning resulterar i ett byggfel om det finns en allvarlig säkerhetslucka i koden. Mindre överträdelser kan åsidosättas, men vi rekommenderar att de åtgärdas. Observera att kodskanningen inte är perfekt och kan resultera i [falskt positiva ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html#dealing-with-false-positives).
+Kodskanning resulterar i ett byggfel om det finns en allvarlig säkerhetslucka i koden. Mindre överträdelser kan åsidosättas, men vi rekommenderar att de åtgärdas. Observera att kodskanningen inte är perfekt och kan resultera i [falskt positiva ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html?lang=sv-SE#dealing-with-false-positives).
 
 Lös problem med kodskanning genom att hämta den CSV-formaterade rapporten från Cloud Manager via knappen **Hämta information** och granska eventuella poster.
 
-Mer information finns i AEM-specifika regler i Cloud Manager-dokumentations [anpassade AEM-specifika regler för kodskanning](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html).
+Mer information finns i AEM-specifika regler i Cloud Manager-dokumentations [anpassade AEM-specifika regler för kodskanning](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=sv-SE).
 
 ## Skapa bilder
 
@@ -102,7 +102,7 @@ set the 'mergeConfigurations' flag to 'true' if you want to merge multiple confi
 #### Orsak 2
 
 + __Orsak:__ AEM-projektets kod innehåller felaktigt samma kodpaket två gånger, vilket resulterar i duplicering av alla OSGi-konfigurationer som ingår i det paketet.
-+ __Upplösning:__ Granska alla pom.xml-paket som är inbäddade i hela projektet och kontrollera att de har `filevault-package-maven-plugin` [configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#cloud-manager-target) inställd på `<cloudManagerTarget>none</cloudManagerTarget>`.
++ __Upplösning:__ Granska alla pom.xml-paket som är inbäddade i hela projektet och kontrollera att de har `filevault-package-maven-plugin` [configuration](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE#cloud-manager-target) inställd på `<cloudManagerTarget>none</cloudManagerTarget>`.
 
 ### Felformaterat ompekningsskript
 
@@ -230,8 +230,8 @@ Så här validerar du problemet:
 + __Orsak:__ Den användare av AEM replikeringstjänst som används för att distribuera innehållspaket till tjänsten AEM Publish kan inte skriva till `/var` i AEM Publish. Detta leder till att distributionen av innehållspaketet till AEM Publish-tjänsten misslyckas.
 + __Lösning:__ Följande sätt att lösa problemet visas i prioritetsordning:
    1. Om resurserna för `/var` inte behövs tar du bort resurser under `/var` från innehållspaket som distribueras som en del av programmet.
-   2. Om `/var`-resurserna är nödvändiga definierar du nodstrukturerna med [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit). Repoinit-skript kan riktas mot AEM Author, AEM Publish eller båda, via OSGi-runmodes.
-   3. Om `/var`-resurserna bara krävs av AEM-författaren och inte kan modelleras med [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html#repoinit) kan du flytta dem till ett diskret innehållspaket, som bara installeras på AEM Author genom att [bädda in](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html#embeddeds) det i `all`-paketet i en AEM Author-körningsmapp (`<target>/apps/example-packages/content/install.author</target>`).
+   2. Om `/var`-resurserna är nödvändiga definierar du nodstrukturerna med [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=sv-SE#repoinit). Repoinit-skript kan riktas mot AEM Author, AEM Publish eller båda, via OSGi-runmodes.
+   3. Om `/var`-resurserna bara krävs av AEM-författaren och inte kan modelleras med [repoinit](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=sv-SE#repoinit) kan du flytta dem till ett diskret innehållspaket, som bara installeras på AEM Author genom att [bädda in](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html?lang=sv-SE#embeddeds) det i `all`-paketet i en AEM Author-körningsmapp (`<target>/apps/example-packages/content/install.author</target>`).
    4. Ange lämpliga åtkomstkontrollistor till tjänstanvändaren `sling-distribution-importer` enligt beskrivningen i denna [Adobe KB](https://helpx.adobe.com/in/experience-manager/kb/cm/cloudmanager-deploy-fails-due-to-sling-distribution-aem.html).
 
 ### Skapa ett Adobe Support-ärende

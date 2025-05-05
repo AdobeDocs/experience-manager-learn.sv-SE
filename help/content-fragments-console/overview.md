@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Adobe Experience Manager Content Fragments Console gör det enkelt att hantera och skapa innehållsfragment! Lär dig hur du får ut så mycket som möjligt av Content Fragments Console med dessa videor.
 
-Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html) om du vill ha fullständig information om Content Fragments Console och dess funktioner.
+Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/content-fragments/content-fragments-console.html?lang=sv-SE) om du vill ha fullständig information om Content Fragments Console och dess funktioner.
 
 ## Videor
 

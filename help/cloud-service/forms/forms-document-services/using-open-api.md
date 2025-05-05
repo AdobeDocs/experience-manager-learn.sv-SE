@@ -22,7 +22,7 @@ ht-degree: 0%
 ## Förutsättningar
 
 * Senaste instansen av AEM Forms as a Cloud Service.
-* Alla nödvändiga [produktprofiler läggs till i miljön.](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis)
+* Alla nödvändiga [produktprofiler läggs till i miljön.](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis)
 
 * Ge AEM API åtkomst till produktprofilen enligt nedan
   ![product_profile1](assets/product-profiles1.png)
@@ -53,9 +53,9 @@ Kopiera klient-ID, klienthemlighet och omfång
 
 ## Konfigurera AEM-instans för att aktivera ADC-projektkommunikation
 
-Om du redan har ett AEM Forms-projekt [följer du de här instruktionerna](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) för att aktivera Adobe Developer Console Projects autentiseringscertifikat OAuth Server-to-Server ClientID för kommunikation med AEM-instansen
+Om du redan har ett AEM Forms-projekt [följer du de här instruktionerna](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) för att aktivera Adobe Developer Console Projects autentiseringscertifikat OAuth Server-to-Server ClientID för kommunikation med AEM-instansen
 
-Om du inte har något AEM Forms-projekt skapar du ett [AEM Forms-projekt genom att följa den här dokumentationen.](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/getting-started) och aktivera sedan klientens-ID:t för OAuth Server-till-Server-autentiseringsuppgifter för Adobe Developer Console Project för att kommunicera med AEM-instansen [med hjälp av den här dokumentationen.](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis)
+Om du inte har något AEM Forms-projekt skapar du ett [AEM Forms-projekt genom att följa den här dokumentationen.](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/forms/developing-for-cloud-service/getting-started) och aktivera sedan klientens-ID:t för OAuth Server-till-Server-autentiseringsuppgifter för Adobe Developer Console Project för att kommunicera med AEM-instansen [med hjälp av den här dokumentationen.](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis)
 
 
 ## Nästa steg

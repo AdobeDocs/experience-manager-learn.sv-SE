@@ -32,8 +32,8 @@ Följ de stegvisa instruktionerna i det här dokumentet för att utnyttja de kra
 Innan du fortsätter med att skicka e-postmeddelanden med dynamiska mallar för SendGrid från AEM Forms måste du kontrollera att du har uppfyllt följande krav:
 
 1. **SendGrid-konto**: Registrera ett SendGrid-konto på [https://sendgrid.com](https://sendgrid.com) för att få tillgång till deras e-postleveranstjänster. Du behöver kontoinloggningsuppgifterna för att kunna integrera SendGrid med AEM Forms.
-1. **Bekanta dig med att skapa datakällor**: Lär dig att skapa datakällor i AEM Forms. Om det behövs finns detaljerade anvisningar i dokumentationen om [att skapa datakällor](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html).
-1. **Bekanta dig med formulärdatamodellen**: Förstå begreppet formulärdatamodell i AEM Forms. Om det behövs kan du läsa dokumentationen om [att skapa formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html) för att kontrollera att du har den förståelse som krävs.
+1. **Bekanta dig med att skapa datakällor**: Lär dig att skapa datakällor i AEM Forms. Om det behövs finns detaljerade anvisningar i dokumentationen om [att skapa datakällor](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=sv-SE).
+1. **Bekanta dig med formulärdatamodellen**: Förstå begreppet formulärdatamodell i AEM Forms. Om det behövs kan du läsa dokumentationen om [att skapa formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=sv-SE) för att kontrollera att du har den förståelse som krävs.
 
 Genom att uppfylla dessa krav får du de kunskaper och resurser du behöver för att effektivt skicka e-postmeddelanden med dynamiska mallar för SendGrid från AEM Forms.
 

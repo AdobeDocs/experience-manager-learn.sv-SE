@@ -25,12 +25,12 @@ På AEM webbplats lagras och redigeras webbplatsens innehåll. Den slutliga uppl
 
 ![Ny AEM-webbplats för Edge Delivery Services och Universal Editor](./assets/2-new-aem-site/new-site.png)
 
-Följ de [detaljerade stegen som beskrivs i dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site) för att skapa en ny AEM-webbplats.  Nedan finns en sammanfattande lista över stegen, inklusive värdena som används i den här självstudiekursen.
+Följ de [detaljerade stegen som beskrivs i dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/edge-dev-getting-started#create-aem-site) för att skapa en ny AEM-webbplats.  Nedan finns en sammanfattande lista över stegen, inklusive värdena som används i den här självstudiekursen.
 1. **Skapa en ny webbplats** i AEM Author. I den här självstudien används följande webbplatsnamn:
    * Platstitel: `WKND (Universal Editor)`
    * Platsnamn: `aem-wknd-eds-ue`
 
-      * Värdet för platsnamnet måste matcha webbplatsens sökvägsnamn [ som lagts till i `paths.json`](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/path-mapping).
+      * Värdet för platsnamnet måste matcha webbplatsens sökvägsnamn [ som lagts till i `paths.json`](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/path-mapping).
 
 2. **Importera den senaste mallen** från [Edge Delivery Services med AEM redigeringswebbplatsmall](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases).
 3. **Ge platsen** ett namn som matchar GitHub-databasnamnet och ange GitHub-URL:en som databasens URL.

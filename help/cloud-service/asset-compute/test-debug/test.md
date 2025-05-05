@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Testa en Asset Compute-arbetare
 
-Asset Compute-projektet definierar ett mönster för att enkelt skapa och köra [test av Asset Compute-arbetare](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html).
+Asset Compute-projektet definierar ett mönster för att enkelt skapa och köra [test av Asset Compute-arbetare](https://experienceleague.adobe.com/docs/asset-compute/using/extend/test-custom-application.html?lang=sv-SE).
 
 ## Anatomi i ett arbetartest
 

@@ -83,11 +83,11 @@ Följande stöds med en referens till definitionen requestBody
 
 ## Skapa data-Source
 
-Om du vill integrera AEM/AEM Forms med program från tredje part måste vi [skapa datakälla](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html) i konfigurationen för molntjänster. Använd [swagger-filen](assets/drivers-license-swagger.zip) för att skapa datakällan.
+Om du vill integrera AEM/AEM Forms med program från tredje part måste vi [skapa datakälla](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-web-channel-tutorial/parttwo.html?lang=sv-SE) i konfigurationen för molntjänster. Använd [swagger-filen](assets/drivers-license-swagger.zip) för att skapa datakällan.
 
 ## Skapa formulärdatamodell
 
-AEM Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa och arbeta med [formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html). Basera formulärdatamodellen på datakällan som skapades i det tidigare steget.
+AEM Forms dataintegrering ger ett intuitivt användargränssnitt för att skapa och arbeta med [formulärdatamodeller](https://experienceleague.adobe.com/docs/experience-manager-65/forms/form-data-model/create-form-data-models.html?lang=sv-SE). Basera formulärdatamodellen på datakällan som skapades i det tidigare steget.
 
 ![fdm](assets/test-dl-fdm.PNG)
 

@@ -493,7 +493,7 @@ Följ instruktionerna i artikeln [Konfigurera OpenAPI-baserade AEM API:er](../se
 
 Som standard har WKND Sites-projektet inte det nödvändiga metadata-schemat för resurser för att visa produktattributen. Låt oss skapa och använda metadatamatchemat för resurser i AEM-instansen.
 
-1. Logga in på instansen AEM as a Cloud Service Asset. Navigera med [resursvyn](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views) till mappen `/content/dam/wknd-shared/en`.
+1. Logga in på instansen AEM as a Cloud Service Asset. Navigera med [resursvyn](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/authoring/switch-views) till mappen `/content/dam/wknd-shared/en`.
 
    ![Navigera till mappen](../assets/web-app/navigate-to-folder.png)
 

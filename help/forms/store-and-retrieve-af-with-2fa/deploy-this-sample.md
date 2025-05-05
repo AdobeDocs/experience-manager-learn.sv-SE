@@ -45,7 +45,7 @@ Skapa ett utvecklarkonto med [Nexmo](https://dashboard.nexmo.com/) för att skic
 ## Distribuera följande OSGi-paket
 
 Distribuera det paket som innehåller [koden för att lagra och hämta data från databasen ](assets/SaveAndResume.core-1.0.0-SNAPSHOT.jar)
-Ladda ned och zippa upp [developingwith serviceUser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip) .
+Ladda ned och zippa upp [developingwith serviceUser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=sv-SE) .
 Distribuera filen DevelopingWithServiceUser.jar med Felix webbkonsol.
 
 ## Distribuera klientbiblioteket

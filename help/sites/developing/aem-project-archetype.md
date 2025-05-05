@@ -27,4 +27,4 @@ AEM Project innehåller all kod och alla konfigurationer för en implementering.
 ## Ytterligare resurser {#additional-resources}
 
 * [GitHub-projekt](https://github.com/adobe/aem-project-archetype)
-* [AEM Project Archetype Documentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html)
+* [AEM Project Archetype Documentation](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE)

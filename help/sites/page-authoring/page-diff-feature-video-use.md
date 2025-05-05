@@ -47,4 +47,4 @@ Funktionen Sidskillnad kan även användas för att identifiera skillnaden mella
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Dokumentation för sidskillnader](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html)
+* [Dokumentation för sidskillnader](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/page-diff.html?lang=sv-SE)

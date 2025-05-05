@@ -56,14 +56,14 @@ Nedan visas en högnivårepresentation av __utvecklingen, distributionen och lev
 
 Under utvecklingsfasen utförs ändringar i gränssnittet, som formatering och omprofilering, genom att CSS-, JS-filer från mappen `ui.frontend/src/main/webpack` uppdateras. Under byggtiden förvandlar sedan pluginmodulen [webpack](https://webpack.js.org/) och maven dessa filer till optimerade AEM-klienter under modulen `ui.apps`.
 
-Front-end-ändringar distribueras till AEM as a Cloud Service-miljön när du kör pipelinen [__Full-stack__ i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html).
+Front-end-ändringar distribueras till AEM as a Cloud Service-miljön när du kör pipelinen [__Full-stack__ i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=sv-SE).
 
 Framsidesresurserna levereras till webbläsarna via URI-sökvägar som börjar med `/etc.clientlibs/`, och cachas vanligtvis i AEM Dispatcher och CDN.
 
 
 >[!NOTE]
 >
-> På samma sätt distribueras [ändringarna i gränssnittet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html) i __AEM snabbplatsresa__ till AEM as a Cloud Service-miljön genom att pipeline __Front-End__ körs. Se [Konfigurera pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html).
+> På samma sätt distribueras [ändringarna i gränssnittet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html?lang=sv-SE) i __AEM snabbplatsresa__ till AEM as a Cloud Service-miljön genom att pipeline __Front-End__ körs. Se [Konfigurera pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html?lang=sv-SE).
 
 ### Granska webbpaketskonfigurationer i WKND Sites-projektet {#development-frontend-webpack-clientlib}
 
@@ -134,7 +134,7 @@ Framsidesresurserna levereras till webbläsarna via URI-sökvägar som börjar m
 
 ### Distribution till AEM as a Cloud Service {#deployment-frontend-aemaacs}
 
-[__Fullhög__ pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#full-stack-pipeline) distribuerar dessa ändringar till en AEM as a Cloud Service-miljö.
+[__Fullhög__ pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=sv-SE&#full-stack-pipeline) distribuerar dessa ändringar till en AEM as a Cloud Service-miljö.
 
 
 ### Leverans från AEM as a Cloud Service {#delivery-frontend-aemaacs}

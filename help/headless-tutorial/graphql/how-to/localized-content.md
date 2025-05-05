@@ -19,11 +19,11 @@ ht-degree: 0%
 
 # Lokaliserat innehåll med AEM Headless
 
-AEM tillhandahåller ett [Översättningsintegreringsramverk](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html) för headless-innehåll, vilket gör att innehållsfragment och stödresurser enkelt kan översättas för användning i olika språkområden. Det är samma ramverk som används för att översätta annat AEM-innehåll, till exempel Sidor, Upplevelsefragment, Assets och Forms. När [headless-innehåll har översatts](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html) och publicerats är det klart för användning av headless-program.
+AEM tillhandahåller ett [Översättningsintegreringsramverk](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/translation/integration-framework.html?lang=sv-SE) för headless-innehåll, vilket gör att innehållsfragment och stödresurser enkelt kan översättas för användning i olika språkområden. Det är samma ramverk som används för att översätta annat AEM-innehåll, till exempel Sidor, Upplevelsefragment, Assets och Forms. När [headless-innehåll har översatts](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/overview.html?lang=sv-SE) och publicerats är det klart för användning av headless-program.
 
 ## Assets mappstruktur{#assets-folder-structure}
 
-Kontrollera att de lokaliserade innehållsfragmenten i AEM följer den [rekommenderade lokaliseringsstrukturen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html#recommended-structure).
+Kontrollera att de lokaliserade innehållsfragmenten i AEM följer den [rekommenderade lokaliseringsstrukturen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/translation/getting-started.html?lang=sv-SE#recommended-structure).
 
 ![Lokaliserade AEM-resursmappar](./assets/localized-content/asset-folders.jpg)
 

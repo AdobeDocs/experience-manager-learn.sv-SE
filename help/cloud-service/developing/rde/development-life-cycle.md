@@ -41,8 +41,8 @@ De viktigaste fördelarna med RDE för att hålla takten i utvecklingen.
 
 ## Ytterligare resurser
 
-[Samarbetsscenario för flera utvecklare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html#multiple-developers-collaborating-on-the-same-rde)
+[Samarbetsscenario för flera utvecklare](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=sv-SE#multiple-developers-collaborating-on-the-same-rde)
 
-[Installation av lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
+[Installation av lokal utvecklingsmiljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=sv-SE)
 
-[Använda Adobe Cloud Manager - CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html)
+[Använda Adobe Cloud Manager - CI/CD Production Pipeline](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/cicd-production-pipeline.html?lang=sv-SE)

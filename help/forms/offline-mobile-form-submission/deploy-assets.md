@@ -32,7 +32,7 @@ Följ de här stegen för att få det här användningsexemplet att fungera på 
 
 * [Importera den anpassade profilen](assets/customprofile.zip) som sammanfogar data från HTML5-formuläret med XDP-filen och returnerar en interaktiv PDF-fil.
 
-* [Distribuera Developing with Service User bundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=en)
+* [Distribuera Developing with Service User bundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=sv-SE)
 Lägg till följande post i användarmappningstjänsten för Apache Sling med configMgr
 
 ```
@@ -52,7 +52,7 @@ DevelopingWithServiceUser.core:getformsresourceresolver=fd-service
 * Ange användarnamn/lösenord för författarinstansen och en **befintlig plats i din AEM-databas** för att lagra skickade data i AEM Server-autentiseringsuppgifterna med [configMgr](http://localhost:4503/system/console/configMgr). Du kan lämna URL:en för slutpunkten på AEM Workflow Server som den är. Detta är slutpunkten som extraherar och lagrar data från överföringen i den angivna noden.
   ![publish-config](assets/publish-config.png)
 
-* [Distribuera Developing with Service User bundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=en)
+* [Distribuera Developing with Service User bundle](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=sv-SE)
 * [Öppna SGB-konfigurationen](http://localhost:4503/system/console/configMgr).
 * Sök efter **Referensfilter för Apache Sling**. Kontrollera att kryssrutan Tillåt tomt är markerad.
 * [Importera den anpassade profilen](assets/customprofile.zip) som sammanfogar data från HTML5-formuläret med XDP-filen och returnerar en interaktiv PDF-fil.

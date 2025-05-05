@@ -38,4 +38,4 @@ Lär dig hur du konfigurerar utbildningsmaterialet för smarta taggar i AEM Asse
 
 ## Ytterligare resurser
 
-* AEM 6.4 kräver det [senaste Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html#aem-64).
+* AEM 6.4 kräver det [senaste Service Pack](https://experienceleague.adobe.com/docs/experience-manager-release-information/aem-release-updates/aem-releases-updates.html?lang=sv-SE#aem-64).

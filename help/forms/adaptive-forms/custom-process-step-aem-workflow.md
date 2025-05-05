@@ -29,7 +29,7 @@ För att uppnå ovanstående användningsfall skriver du vanligtvis en OSGi-tjä
 
 ## Create Maven Project
 
-Det första steget är att skapa ett maven-projekt med rätt Adobe Maven Archetype. De detaljerade stegen visas i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html). När du har importerat Maven-projektet till Eclipse är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
+Det första steget är att skapa ett maven-projekt med rätt Adobe Maven Archetype. De detaljerade stegen visas i den här [artikeln](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=sv-SE). När du har importerat Maven-projektet till Eclipse är du redo att börja skriva din första OSGi-komponent som kan användas i ditt steg i processen.
 
 
 ### Skapa klass som implementerar WorkflowProcess
@@ -42,9 +42,9 @@ public void execute(WorkItem workItem, WorkflowSession workflowSession, MetaData
 
 Körningsmetoden ger åtkomst till följande tre variabler:
 
-**WorkItem**: Variabeln workItem ger åtkomst till data relaterade till arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här.](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
+**WorkItem**: Variabeln workItem ger åtkomst till data relaterade till arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här.](https://helpx.adobe.com/se/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html)
 
-**WorkflowSession**: Den här variabeln workflowSession ger dig möjlighet att styra arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här](https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html).
+**WorkflowSession**: Den här variabeln workflowSession ger dig möjlighet att styra arbetsflödet. Den offentliga API-dokumentationen är tillgänglig [här](https://helpx.adobe.com/se/experience-manager/6-3/sites/developing/using/reference-materials/diff-previous/changes/com.adobe.granite.workflow.WorkflowSession.html).
 
 **MetaDataMap**: Alla metadata som är associerade med arbetsflödet. Alla processargument som skickas till processsteget är tillgängliga med MetaDataMap-objektet.[API-dokumentation](https://helpx.adobe.com/experience-manager/6-5/sites/developing/using/reference-materials/javadoc/com/adobe/granite/workflow/metadata/MetaDataMap.html)
 
@@ -154,7 +154,7 @@ Tjänsten QueryBuilder används för att fråga efter noder av typen `nt:file` u
 
 #### Bygg och driftsätt
 
-[Bygg paketet enligt beskrivningen här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html)
+[Bygg paketet enligt beskrivningen här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=sv-SE)
 [Kontrollera att paketet är distribuerat och i aktivt läge ](http://localhost:4502/system/console/bundles)
 
 Skapa en arbetsflödesmodell. Dra och släpp processsteg i arbetsflödesmodellen. Associera processteget med&quot;Spara adaptiva formulärbilagor i filsystemet&quot;.

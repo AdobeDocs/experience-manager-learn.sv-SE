@@ -30,7 +30,7 @@ Ett Cloud Manager-program kan bara ha en __enskild__ nätverksinfrastrukturtyp. 
 
 >[!MORELIKETHIS]
 >
-> Läs AEM as a Cloud Service [dokumentation om avancerad nätverkskonfiguration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) om du vill ha mer information om dedikerad IP-adress för utgångar.
+> Läs AEM as a Cloud Service [dokumentation om avancerad nätverkskonfiguration](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) om du vill ha mer information om dedikerad IP-adress för utgångar.
 
 ## Förutsättningar
 
@@ -44,7 +44,7 @@ Följande krävs när du konfigurerar en dedikerad IP-adress för utgångar med 
 + Cloud Manager program-ID
 + Cloud Manager miljö-ID:n
 
-Mer information finns i [Konfigurera och hämta API-autentiseringsuppgifter för Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth) så att du kan använda dem för att göra ett Cloud Manager API-anrop.
+Mer information finns i [Konfigurera och hämta API-autentiseringsuppgifter för Cloud Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth) så att du kan använda dem för att göra ett Cloud Manager API-anrop.
 
 I den här självstudien används `curl` för att skapa Cloud Manager API-konfigurationer. De `curl`-kommandon som tillhandahålls förutsätter en Linux/macOS-syntax. Om du använder kommandotolken i Windows ersätter du radbrytningstecknet `\` med `^`.
 
@@ -86,7 +86,7 @@ Dedikerad IP-adress för utgångar kan aktiveras med Cloud Manager API:er. I fö
 
 1. Ta först reda på i vilken region det avancerade nätverket behövs genom att använda Cloud Manager API-åtgärden [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/). `region name` krävs för efterföljande Cloud Manager API-anrop. Normalt används regionen där produktionsmiljön finns.
 
-   Hitta AEM as a Cloud Service-miljöns region i [Cloud Manager](https://my.cloudmanager.adobe.com) under [miljöns information](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments). Regionnamnet som visas i Cloud Manager kan [mappas till regionkoden](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) som används i Cloud Manager API.
+   Hitta AEM as a Cloud Service-miljöns region i [Cloud Manager](https://my.cloudmanager.adobe.com) under [miljöns information](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments). Regionnamnet som visas i Cloud Manager kan [mappas till regionkoden](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) som används i Cloud Manager API.
 
    __listRegions HTTP request__
 
@@ -221,7 +221,7 @@ HTTP/HTTPS-begäranden från AEM på standardportar (80/443) tillåts som standa
 
 >[!TIP]
 >
-> I dokumentationen för AEM as a Cloud Service dedikerade IP-adresser finns [en fullständig uppsättning routningsregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
+> I dokumentationen för AEM as a Cloud Service dedikerade IP-adresser finns [en fullständig uppsättning routningsregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
 
 
 ### HTTP/HTTPS

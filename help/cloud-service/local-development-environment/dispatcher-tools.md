@@ -24,8 +24,8 @@ ht-degree: 0%
 >id="aemcloud_localdev_dispatcher"
 >title="Dispatcher verktyg lokalt"
 >abstract="Dispatcher är en integrerad del av Experience Manager övergripande arkitektur och bör ingå i den lokala utvecklingsmiljön. AEM as a Cloud Service SDK innehåller den rekommenderade Dispatcher Tools-versionen som underlättar konfigurering av validering och simulering av Dispatcher lokalt."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html" text="Dispatcher i molnet"
->additional-url="https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html" text="Hämta AEM as a Cloud Service SDK"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/disp-overview.html?lang=sv-SE" text="Dispatcher i molnet"
+>additional-url="https://experienceleague.adobe.com/docs/experience-cloud/software-distribution/home.html?lang=sv-SE" text="Hämta AEM as a Cloud Service SDK"
 
 Adobe Experience Manager (AEM) Dispatcher är en Apache HTTP-webbservermodul som tillhandahåller ett säkerhets- och prestandalager mellan CDN och AEM Publish-nivån. Dispatcher är en integrerad del av Experience Manager övergripande arkitektur och bör ingå i den lokala utvecklingsmiljön.
 
@@ -115,7 +115,7 @@ En fullständig beskrivning av konfigurationsfilerna finns i de opackade Dispatc
 
 ## Validera konfigurationer
 
-Dispatcher- och Apache-webbserverkonfigurationerna (via `httpd -t`) kan valideras med skriptet `validate` (ska inte blandas ihop med den körbara filen `validator`). Skriptet `validate` är ett praktiskt sätt att köra [ tre faser ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=en) i `validator`.
+Dispatcher- och Apache-webbserverkonfigurationerna (via `httpd -t`) kan valideras med skriptet `validate` (ska inte blandas ihop med den körbara filen `validator`). Skriptet `validate` är ett praktiskt sätt att köra [ tre faser ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=sv-SE) i `validator`.
 
 
 >[!BEGINTABS]
@@ -396,4 +396,4 @@ Waiting until host.docker.internal is available
 + [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [Hämta Docker](https://www.docker.com/)
 + [Hämta AEM referenswebbplats (WKND)](https://github.com/adobe/aem-guides-wknd/releases)
-+ [Experience Manager Dispatcher Documentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience Manager Dispatcher Documentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE)

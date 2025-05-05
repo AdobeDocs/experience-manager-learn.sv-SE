@@ -35,7 +35,7 @@ Att konfigurera en lokal utvecklingsmiljö är första steget i utvecklingen fö
 
 När vi syftar på en lokal AEM-instans talar vi om en kopia av Adobe Experience Manager som körs på en utvecklares personliga maskin. ***All*** AEM-utveckling ska börja med att skriva och köra kod mot en lokal AEM-instans.
 
-Om du inte har använt AEM tidigare kan du installera två grundläggande körningslägen: ***Författare*** och ***Publicera***. ***Författaren*** [runmode](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=en) är den miljö som digitala marknadsförare använder för att skapa och hantera innehåll. När du oftast utvecklar kod distribuerar du kod till en Author-instans. På så sätt kan du skapa sidor och lägga till och konfigurera komponenter. AEM Sites är en CMS för WYSIWYG-redigering och därför kan de flesta CSS- och JavaScript-filer testas mot en redigeringsförekomst.
+Om du inte har använt AEM tidigare kan du installera två grundläggande körningslägen: ***Författare*** och ***Publicera***. ***Författaren*** [runmode](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configure-runmodes.html?lang=sv-SE) är den miljö som digitala marknadsförare använder för att skapa och hantera innehåll. När du oftast utvecklar kod distribuerar du kod till en Author-instans. På så sätt kan du skapa sidor och lägga till och konfigurera komponenter. AEM Sites är en CMS för WYSIWYG-redigering och därför kan de flesta CSS- och JavaScript-filer testas mot en redigeringsförekomst.
 
 Det är också *kritisk* testkod mot en lokal ***Publish***-instans. Instansen ***Publish*** är den AEM-miljö som besökare på webbplatsen interagerar med. Även om ***Publish***-instansen är samma teknologihög som ***Author*** -instansen finns det viktiga skillnader med konfigurationer och behörigheter. Koden måste testas mot en lokal ***Publish***-instans innan den befordras till miljöer på högre nivå.
 
@@ -44,7 +44,7 @@ Det är också *kritisk* testkod mot en lokal ***Publish***-instans. Instansen *
 1. Kontrollera att Java™ är installerat.
    * Föredra [Java™ JDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&amp;order.sort=desc&amp;layout=list&amp;list p.offset=0&amp;p.limit=14) för AEM 6.5+
    * [Java™ JDK 8](https://www.oracle.com/java/technologies/downloads/) för AEM-versioner före AEM 6.5
-1. Hämta en kopia av [AEM QuickStart Jar och en [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html).
+1. Hämta en kopia av [AEM QuickStart Jar och en [!DNL license.properties]](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=sv-SE).
 1. Skapa en mappstruktur på datorn enligt följande:
 
 ```plain
@@ -83,7 +83,7 @@ Ett alternativ till att dubbelklicka på JAR-filen är att starta AEM från komm
 $ java -Xmx2048M -Xdebug -Xnoagent -Djava.compiler=NONE -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=30303 -jar aem-author-p4502.jar -gui -r"author,localdev"
 ```
 
-Här är `-X` JVM-alternativ och `-D` är ytterligare ramverksegenskaper. Mer information finns i [Distribuera och underhålla en AEM-instans](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html) och [Fler alternativ finns i QuickStart-filen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/custom-standalone-install.html#further-options-available-from-the-quickstart-file).
+Här är `-X` JVM-alternativ och `-D` är ytterligare ramverksegenskaper. Mer information finns i [Distribuera och underhålla en AEM-instans](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=sv-SE) och [Fler alternativ finns i QuickStart-filen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/custom-standalone-install.html?lang=sv-SE#further-options-available-from-the-quickstart-file).
 
 ## Installera Apache Maven
 
@@ -137,12 +137,12 @@ Kontrollera `classic` på fliken Maven-profil när du använder en IDE.
 
 ### [!DNL Eclipse] IDE
 
-**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** är en av de populäraste IDE:erna för Java™-utveckling, till stor del eftersom den har öppen källkod och ***gratis***! Adobe tillhandahåller ett plugin-program, **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)**, för [!DNL Eclipse] så att det blir enklare att utveckla med ett bra användargränssnitt att synkronisera kod med en lokal AEM-instans. Den integrerade utvecklingsmiljön [!DNL Eclipse] rekommenderas för utvecklare som är nybörjare i AEM till stor del på grund av det grafiska användargränssnittet i [!DNL AEM Developer Tools].
+**[[!DNL Eclipse] IDE](https://www.eclipse.org/ide/)** är en av de populäraste IDE:erna för Java™-utveckling, till stor del eftersom den har öppen källkod och ***gratis***! Adobe tillhandahåller ett plugin-program, **[[!DNL AEM Developer Tools]](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=sv-SE)**, för [!DNL Eclipse] så att det blir enklare att utveckla med ett bra användargränssnitt att synkronisera kod med en lokal AEM-instans. Den integrerade utvecklingsmiljön [!DNL Eclipse] rekommenderas för utvecklare som är nybörjare i AEM till stor del på grund av det grafiska användargränssnittet i [!DNL AEM Developer Tools].
 
 #### Installation och installation
 
 1. Hämta och installera [!DNL Eclipse] IDE för [!DNL Java™ EE Developers]: [https://www.eclipse.org](https://www.eclipse.org/)
-1. Följ instruktionerna för att installera plugin-programmet [!DNL AEM Developer Tools]: [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html)
+1. Följ instruktionerna för att installera plugin-programmet [!DNL AEM Developer Tools]: [https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=sv-SE](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/aem-eclipse.html?lang=sv-SE)
 
 >[!VIDEO](https://video.tv.adobe.com/v/25906?quality=12&learn=on)
 
@@ -192,7 +192,7 @@ Kontrollera `classic` på fliken Maven-profil när du använder en IDE.
 
 ### [!DNL CRXDE Lite]
 
-[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/developing-with-crxde-lite.html) är en webbläsarbaserad vy av AEM-databasen. [!DNL CRXDE Lite] är inbäddad i AEM och gör att en utvecklare kan utföra standardutvecklingsuppgifter som att redigera filer, definiera komponenter, dialogrutor och mallar. [!DNL CRXDE Lite] är ***inte*** avsedd som en fullständig utvecklingsmiljö, men är effektivt som felsökningsverktyg. [!DNL CRXDE Lite] är användbart när du vill utöka eller helt enkelt förstå produktkod utanför kodbasen. [!DNL CRXDE Lite] ger en kraftfull vy över databasen och ett sätt att effektivt testa och hantera behörigheter.
+[CRXDE Lite](https://experienceleague.adobe.com/docs/experience-manager-65/developing/devtools/developing-with-crxde-lite.html?lang=sv-SE) är en webbläsarbaserad vy av AEM-databasen. [!DNL CRXDE Lite] är inbäddad i AEM och gör att en utvecklare kan utföra standardutvecklingsuppgifter som att redigera filer, definiera komponenter, dialogrutor och mallar. [!DNL CRXDE Lite] är ***inte*** avsedd som en fullständig utvecklingsmiljö, men är effektivt som felsökningsverktyg. [!DNL CRXDE Lite] är användbart när du vill utöka eller helt enkelt förstå produktkod utanför kodbasen. [!DNL CRXDE Lite] ger en kraftfull vy över databasen och ett sätt att effektivt testa och hantera behörigheter.
 
 [!DNL CRXDE Lite] ska användas med andra IDE:er för att testa och felsöka kod, men aldrig som det primära utvecklingsverktyget. Den har begränsat syntaxstöd, inga funktioner för automatisk komplettering och begränsad integrering med system för källkodshantering.
 

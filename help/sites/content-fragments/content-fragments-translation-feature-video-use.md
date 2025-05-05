@@ -28,7 +28,7 @@ Lär dig hur innehållsfragment kan lokaliseras och översättas med Adobe Exper
 
 Innehållsfragment är en känd innehållstyp som AEM extraherar och skickar till en extern översättningstjänst. Flera användningsområden stöds inte:
 
-1. Ett innehållsfragment kan [väljas direkt i Assets-konsolen för språkkopiering och översättning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
+1. Ett innehållsfragment kan [väljas direkt i Assets-konsolen för språkkopiering och översättning](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html?lang=sv-SE).
 2. Content Fragments referenced on a Sites page are copied to the appropriate language folder and extract for translation when the Sites page is selected for language copy.
 3. Material för textbundna media som är inbäddade i ett innehållsfragment kan extraheras och översättas.
 4. Resurssamlingar som är kopplade till ett innehållsfragment kan extraheras och översättas.

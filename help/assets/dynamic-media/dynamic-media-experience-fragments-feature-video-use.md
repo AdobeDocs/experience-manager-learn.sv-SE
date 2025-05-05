@@ -25,7 +25,7 @@ AEM Assets Dynamic Media integrerar aktiveringspunkter för resurser med Experie
 
 >[!NOTE]
 >
->Om du använder AEM Experience Fragments med AEM Assets Dynamic Media Hotspot-områden måste [AEM köras i läget Dynamic Media](https://experienceleague.adobe.com/docs/).
+>Om du använder AEM Experience Fragments med AEM Assets Dynamic Media Hotspot-områden måste [AEM köras i läget Dynamic Media](https://experienceleague.adobe.com/docs/?lang=sv-SE).
 
 Varianten för snabbmeny Experience Fragment som visas i videon är tillgänglig som ett AEM-paket nedan.
 

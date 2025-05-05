@@ -28,5 +28,5 @@ I följande videofilm visas grundläggande redigeringsbegrepp i en AEM-redigerin
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Redigerar dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html)
-* [Snabbstartsguide till redigering av sidor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html)
+* [Redigerar dokumentation för sidinnehåll](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/fundamentals/editing-content.html?lang=sv-SE)
+* [Snabbstartsguide till redigering av sidor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/sites/authoring/getting-started/quick-start.html?lang=sv-SE)

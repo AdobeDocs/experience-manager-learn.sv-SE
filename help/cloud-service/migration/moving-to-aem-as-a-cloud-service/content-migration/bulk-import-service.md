@@ -33,7 +33,7 @@ Tjänsten för massimport används för att överföra filer som lagras i Azure 
 
 >[!TIP]
 >
-> Indatakällorna i den här videon visar bara Azure Blob Storage och Amazon S3, men de tillgängliga källorna fortsätter att växa med tiden. En fullständig lista över indatakällor som stöds finns i tillgängliga alternativ i produkten eller i [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#bulk-upload).
+> Indatakällorna i den här videon visar bara Azure Blob Storage och Amazon S3, men de tillgängliga källorna fortsätter att växa med tiden. En fullständig lista över indatakällor som stöds finns i tillgängliga alternativ i produkten eller i [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=sv-SE#bulk-upload).
 
 ## Viktiga aktiviteter
 
@@ -43,6 +43,6 @@ Tjänsten för massimport används för att överföra filer som lagras i Azure 
 
 ## Andra resurser
 
-+ [Konfigurationsalternativ för bulkimporttjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html#configure-bulk-ingestor-tool)
-+ [Adobe Developers Live-session på tillgångsintag](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html)
++ [Konfigurationsalternativ för bulkimporttjänst](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/manage/add-assets.html?lang=sv-SE#configure-bulk-ingestor-tool)
++ [Adobe Developers Live-session på tillgångsintag](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/asset-bulk-ingestion.html?lang=sv-SE)
 

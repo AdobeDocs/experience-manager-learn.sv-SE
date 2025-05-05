@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Steg som krävs för att testa de två metoderna
 
-* Konfigurera [Day CQ Mail Service](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=en#configuring-the-mail-service) för att skicka e-post från AEM Forms-servern
+* Konfigurera [Day CQ Mail Service](https://experienceleague.adobe.com/docs/experience-manager-65/administering/operations/notification.html?lang=sv-SE#configuring-the-mail-service) för att skicka e-post från AEM Forms-servern
 * Distribuera paketet [formulärbilagor](assets/formattachments.formattachments.core-1.0-SNAPSHOT.jar) med webbkonsolen [felix](http://localhost:4502/system/console/bundles)
 
 ## Skicka zip-fil som e-postbilaga

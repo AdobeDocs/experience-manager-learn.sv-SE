@@ -28,4 +28,4 @@ Med AEM Assets anpassade videominiatyrbilder kan författare välja en lämplig 
 
 >[!NOTE]
 >
->Du bör köra din [AEM-instans i läget Dynamic Media](https://experienceleague.adobe.com/docs/)
+>Du bör köra din [AEM-instans i läget Dynamic Media](https://experienceleague.adobe.com/docs/?lang=sv-SE)

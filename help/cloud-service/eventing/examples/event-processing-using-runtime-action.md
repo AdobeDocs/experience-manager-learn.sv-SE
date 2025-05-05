@@ -162,7 +162,7 @@ För att utföra de uppgifter som nämns ovan ska vi utveckla följande JavaScri
   ...
   ```
 
-  Se självstudiekursen [AEM Service Credentials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en) om du vill veta mer om den. [App Builder konfigurationsfiler](https://developer.adobe.com/app-builder/docs/guides/configuration/) för hantering av hemligheter och åtgärdsparametrar.
+  Se självstudiekursen [AEM Service Credentials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE) om du vill veta mer om den. [App Builder konfigurationsfiler](https://developer.adobe.com/app-builder/docs/guides/configuration/) för hantering av hemligheter och åtgärdsparametrar.
 
 - Modulen `src/dx-excshell-1/actions/aem-event-processor/storeEventData.js` lagrar ursprungliga händelsedata, aktivitetsmeddelanden och ändringsinformation (om sådan finns) i Adobe I/O Runtime-lagringsutrymme.
 

@@ -22,7 +22,7 @@ Med översättningskonfigurationens gränssnitt kan en användare hantera regler
 
 >[!NOTE]
 >
-> Videon nedan spelades in på AEM 6.3. I AEM 6.4+ introduceras en ny databasstruktur för lagring av XML-filen för översättningsregler. När du använder användargränssnittet för översättningskonfiguration i AEM 6.4 sparas reglerna på platsen `/conf/global/settings/translation/rules/translation_rules.xml`. Mer information finns i [Identifiera innehåll som ska översättas](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html).
+> Videon nedan spelades in på AEM 6.3. I AEM 6.4+ introduceras en ny databasstruktur för lagring av XML-filen för översättningsregler. När du använder användargränssnittet för översättningskonfiguration i AEM 6.4 sparas reglerna på platsen `/conf/global/settings/translation/rules/translation_rules.xml`. Mer information finns i [Identifiera innehåll som ska översättas](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/tc-rules.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/18135?quality=12&learn=on)
 
@@ -44,7 +44,7 @@ Gå till gränssnittet för översättningskonfiguration:
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Identifierar innehåll som ska översättas](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-rules.html)
-* [Översätter innehåll för flerspråkiga webbplatser](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/translation.html)
-* [https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-manage.html)
-* [Bästa praxis för översättning](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/tc-bp.html)
+* [Identifierar innehåll som ska översättas](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/tc-rules.html)
+* [Översätter innehåll för flerspråkiga webbplatser](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/translation.html)
+* [https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/tc-manage.html](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/tc-manage.html)
+* [Bästa praxis för översättning](https://helpx.adobe.com/se/experience-manager/6-5/sites/administering/using/tc-bp.html)

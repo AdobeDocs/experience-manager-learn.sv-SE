@@ -46,6 +46,6 @@ ht-degree: 0%
 
 
 >[!NOTE]
-> Första gången du kör java-programmet får du ett HTTP 403-fel. För att komma förbi detta måste du ge [lämplig behörighet till den tekniska kontoanvändaren i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en#configure-access-in-aem).
+> Första gången du kör java-programmet får du ett HTTP 403-fel. För att komma förbi detta måste du ge [lämplig behörighet till den tekniska kontoanvändaren i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE#configure-access-in-aem).
 
 **AEM Forms-användare** är den roll jag har använt för kursen.
