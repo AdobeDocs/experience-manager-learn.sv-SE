@@ -22,13 +22,13 @@ Adobe Experience Manager (AEM) Assets är ett verktyg för hantering av digitala
 >id="aemcloud_assets_overview"
 >title="AEM Assets"
 >abstract="Lär dig att snabbt hitta och redigera de resurser du behöver."
->additional-url="https://video.tv.adobe.com/v/3427944" text="AEM Assets genomgång"
+>additional-url="https://video.tv.adobe.com/v/3454808?captions=swe" text="AEM Assets genomgång"
 
 ## AEM Assets genomgång
 
 Lär dig vad AEM Assets är och hur ni kan använda det för att uppnå era affärsmål.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427944?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454808?learn=on&captions=swe)
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
