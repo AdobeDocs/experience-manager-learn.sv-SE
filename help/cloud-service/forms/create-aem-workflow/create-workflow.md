@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Skapa arbetsflödesmodell med AEM Forms komponenter för arbetsflöde. Använd eller-dela-komponenten för att förgrena arbetsflödet baserat på värdet för lägesvariabeln.
 
->[!VIDEO](https://video.tv.adobe.com/v/332434?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453195?quality=12&learn=on&captions=swe)

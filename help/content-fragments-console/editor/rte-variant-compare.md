@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Lär dig hur du enkelt kan jämföra och synkronisera RTE-fält i Content Fragment-varianter med AEM. Genom att jämföra och synkronisera dessa variationer kan ni säkerställa enhetliga meddelanden i alla kanaler som använder innehållsfragmentet.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419314/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437550/?learn=on&captions=swe)

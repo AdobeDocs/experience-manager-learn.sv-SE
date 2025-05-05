@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Lär dig hur du hanterar din taggningstaxonomi i vyn AEM Assets Assets.
 
->[!VIDEO](https://video.tv.adobe.com/v/3431081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447370/?learn=on&captions=swe)

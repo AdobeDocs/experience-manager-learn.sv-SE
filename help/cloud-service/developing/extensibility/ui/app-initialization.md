@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Initiera ett App Builder-program för AEM UI-tillägg som definierar var tillägget visas och hur det fungerar.
 
->[!VIDEO](https://video.tv.adobe.com/v/3412876?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447080?quality=12&learn=on&captions=swe)
 
 >[!IMPORTANT]
 >

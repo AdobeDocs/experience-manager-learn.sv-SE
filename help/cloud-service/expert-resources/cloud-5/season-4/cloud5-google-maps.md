@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Talar från alla håll - Upptäck hur du kan integrera edge delivery services med Google Maps och hur du optimerar prestanda med integreringar.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440977/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3440993/?learn=on&enablevpops&captions=swe)

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Lär dig hur du lägger till alternativ text i bilder på sidor som har skapats med AEM dokumentredigering.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425721/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438679/?learn=on&captions=swe)

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Lär dig hur du ger behörigheter till dokument med AEM dokumentredigering.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425724/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438105/?learn=on&captions=swe)

@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Utforska Dynamic Media Templates, en sammansättningsbar bildresurs, de bästa sätten att använda och hur man kan möta efterfrågan på skräddarsytt material. Lär dig hur du skapar och hanterar mallar och hur du använder dem för att leverera personaliserat innehåll i stor skala.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451727/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3451731/?learn=on&enablevpops&captions=swe)

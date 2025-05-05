@@ -36,7 +36,7 @@ Standardbeteendet för det här formuläret är att visa alla paneler till väns
 
 Om du vill ändra standardbeteendet måste du göra följande
 
->[!VIDEO](https://video.tv.adobe.com/v/338369?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438635?quality=12&learn=on&captions=swe)
 
 
 Lägg till följande kod i click-händelsen för knappen **Nästa** med kodredigeraren
@@ -57,7 +57,7 @@ Koden ovan hjälper dig att navigera mellan flikarna och de underordnade paneler
 
 Använd formatredigeraren för att dölja titeln på flikarnas underordnade paneler.
 
->[!VIDEO](https://video.tv.adobe.com/v/338370?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439130?quality=12&learn=on&captions=swe)
 
 >[!NOTE]
 >

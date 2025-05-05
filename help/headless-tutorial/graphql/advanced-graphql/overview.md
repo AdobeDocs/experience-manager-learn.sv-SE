@@ -45,7 +45,7 @@ Den här självstudiekursen handlar om följande ämnen:
 
 I följande video visas en översikt på hög nivå över de koncept som beskrivs i den här självstudiekursen. Självstudiekursen innehåller definition av modeller för innehållsfragment med mer avancerade datatyper, kapsling av innehållsfragment och beständiga GraphQL-frågor i AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/340035?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446131?quality=12&learn=on&captions=swe)
 
 >[!CAUTION]
 >

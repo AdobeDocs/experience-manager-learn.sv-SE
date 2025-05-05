@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Upptäck hur ni använder Adobe Target målgrupper för att nå rätt målgrupp med relevant innehåll i Edge Delivery Services dokumentframställning.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428792/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437759/?learn=on&captions=swe)

@@ -23,13 +23,13 @@ ht-degree: 0%
 
 Del 1 - Lägga till titlar, bilder, textfält och datumfält
 
->[!VIDEO](https://video.tv.adobe.com/v/3427620/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439730/?learn=on&captions=swe)
 
 Del 2 - Lägga till och skapa anpassade objekt och formulärfragment
 
->[!VIDEO](https://video.tv.adobe.com/v/3427621/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439585/?learn=on&captions=swe)
 
 Få tillgång till hjälpinnehåll
 
->[!VIDEO](https://video.tv.adobe.com/v/3427622/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437236/?learn=on&captions=swe)
 

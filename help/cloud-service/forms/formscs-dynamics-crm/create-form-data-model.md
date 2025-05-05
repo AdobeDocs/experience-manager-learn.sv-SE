@@ -22,4 +22,4 @@ ht-degree: 0%
 
 I följande video får du hjälp med att skapa och konfigurera formulärdatamodellen.
 
->[!VIDEO](https://video.tv.adobe.com/v/340790?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444796?quality=12&learn=on&captions=swe)

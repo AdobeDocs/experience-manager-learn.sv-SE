@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Läs om hur AEM Content Fragment Console och Editor gör det enkelt att förstå och hantera refererat innehåll.
 
->[!VIDEO](https://video.tv.adobe.com/v/3420950/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3432464/?learn=on&captions=swe)

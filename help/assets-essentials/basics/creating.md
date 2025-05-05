@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lär dig hur du överför resurser, skapar versioner och till och med redigerar resurser med Adobe Photoshop Express.
 
->[!VIDEO](https://video.tv.adobe.com/v/335746?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444004?quality=12&learn=on&captions=swe)

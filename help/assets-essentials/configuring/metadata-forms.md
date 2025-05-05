@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Läs om hur Metadata Forms snabbt och enkelt kan konfigureras för att skräddarsy metadata för resurser som finns i AEM Assets.
 
->[!VIDEO](https://video.tv.adobe.com/v/3431686?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452051?quality=12&learn=on&captions=swe)

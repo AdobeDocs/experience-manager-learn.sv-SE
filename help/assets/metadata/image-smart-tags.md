@@ -23,14 +23,14 @@ ht-degree: 20%
 
 AEM Assets smarta taggar för bilder förbättrar AEM Assets sökning genom att automatiskt lägga till härledda metadatataggar till bildresurser, vilket förbättrar redigeringsarbetet genom att göra det enklare och snabbare att hitta rätt bild.
 
->[!VIDEO](https://video.tv.adobe.com/v/17019?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444058?quality=12&learn=on&captions=swe)
 
 ## Konfigurera AEM 6.x{#set-up}
 
 >[!NOTE]
 > Smarta taggar för bilder etableras automatiskt för AEM as a Cloud Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/17023?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444169?quality=12&learn=on&captions=swe)
 
 Innan du kan använda Smart Content Service måste du ha/se till/göra följande för att kunna integrera med Adobe I/O:
 

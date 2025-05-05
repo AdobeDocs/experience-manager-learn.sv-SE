@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Granska och förstå de viktigaste implementeringsfaserna eller gå över till AEM as a Cloud Service med Cloud Acceleration Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/336691?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438283?quality=12&learn=on&captions=swe)

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Med fragment blir det enklare och snabbare att skapa och underhålla stora mängder formulär. När du skapar ett formulär infogar du en referens till det önskade fragmentet och fragmentet visas i formuläret.
 
->[!VIDEO](https://video.tv.adobe.com/v/332231?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438420?quality=12&learn=on&captions=swe)

@@ -27,7 +27,7 @@ Utvecklingsverktygen och processerna för ett Edge Delivery Services webbplatspr
 
 I den här videon finns en översikt över utvecklingstopologin för ett Edge Delivery Services-webbplatsprojekt som kan redigeras med Universal Editor.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443978/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3443982/?learn=on&enablevpops&captions=swe)
 
 +++Se ytterligare information om utvecklingstopologi
 

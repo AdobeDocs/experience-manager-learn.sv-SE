@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Konfigurera en lokal utvecklingsmiljö för utveckling av Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425717/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434735/?learn=on&captions=swe)
 
 
 ## Steg som beskrivs i videon

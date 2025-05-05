@@ -29,7 +29,7 @@ Med verktyget för massimport i AEM as a Cloud Service kan administratörer impo
 
 Lär dig hur du importerar flera filer till AEM Assets med [resursvyn](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/assets-view-introduction.html?lang=sv-SE) [Massimport](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/assets-view/bulk-import-assets-view.html?lang=sv-SE), där Dropbox fungerar som exempelleverantör av molnlagring för en tydlig och lättanvänd integrationsprocess.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426857/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451963/?learn=on&captions=swe)
 
 >[!TAB Administratörsvy]
 

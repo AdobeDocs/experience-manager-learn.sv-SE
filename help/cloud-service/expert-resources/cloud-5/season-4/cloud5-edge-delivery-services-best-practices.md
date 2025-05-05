@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Upptäck tekniker för utveckling i Edge Delivery Services med en erfaren arkitekt. Kiran kommer att hjälpa dig igenom många av de frågor han har stött på i projekt och hur han ska lösa dem.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440978/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441004/?learn=on&enablevpops&captions=swe)

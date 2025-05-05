@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Se hur tredjepartssökning bäst kan integreras i Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427040?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452605?quality=12&learn=on&captions=swe)
 
 ## Ytterligare resurser
 

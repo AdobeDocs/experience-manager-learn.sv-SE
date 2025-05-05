@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Lär dig hur du visar eller hanterar arv på en webbplats eller utför utrullningsåtgärder med hjälp av konsolen Live Copy Overview.
 
->[!VIDEO](https://video.tv.adobe.com/v/36680?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3432386?quality=12&learn=on&captions=swe)

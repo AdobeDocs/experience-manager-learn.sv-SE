@@ -26,7 +26,7 @@ I den här artikeln används MySQL-databasen för att lagra metadata för boksta
 
 I följande videofilm visas hur du använder gemener/VERSALER:
 
->[!VIDEO](https://video.tv.adobe.com/v/342129?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441444?quality=12&learn=on&captions=swe)
 
 ## Krav
 

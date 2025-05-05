@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *I den här videon går vi igenom processen att öka antalet &quot;aries.transaction.timeout&quot; för att åtgärda problem som rör konvertering av stora filer.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335502?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437825?quality=12&learn=on&captions=swe)

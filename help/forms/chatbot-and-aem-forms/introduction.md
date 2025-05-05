@@ -26,7 +26,7 @@ I den här självstudiekursen sammanfogar vi data som samlats in i ChatBot med e
 
 I följande video visas användningsfallet.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428432?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441796?learn=on&captions=swe)
 
 ## Förutsättning
 

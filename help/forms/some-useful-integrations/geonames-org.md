@@ -23,7 +23,7 @@ En överlappande nedrullningsbar lista är en serie beroende DropDownList-kontro
 
 ## Demonstration av användningsfallet
 
->[!VIDEO](https://video.tv.adobe.com/v/340344?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437311?quality=12&learn=on&captions=swe)
 
 I den här självstudiekursen har jag använt [Geonames REST API](https://www.geonames.org/export/web-services.html) för att demonstrera den här funktionen.
 Det finns ett antal organisationer som erbjuder den här typen av tjänster och så länge de har väldokumenterade REST API:er kan du enkelt integrera med AEM Forms med hjälp av dataintegreringsfunktionen

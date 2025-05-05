@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Introduktion till att generera variationer i Edge Delivery Services och förstå hur det kan vara användbart för marknadsförare.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428304/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438558/?learn=on&captions=swe)

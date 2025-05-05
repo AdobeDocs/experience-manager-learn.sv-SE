@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Upptäck vikten av kvalificerade medarbetare i AEM Sites och Edge Delivery Services och hur ni kan integrera dem med era back end-system.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427589?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448123?learn=on&captions=swe)
 
 ## Ytterligare resurser
 

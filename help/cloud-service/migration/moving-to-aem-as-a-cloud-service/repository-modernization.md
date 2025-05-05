@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Lär dig mer om databasmodernisering, ändringsbart och oföränderligt innehåll, paketstruktur och CLI-verktyget för databasmodernisering.
 
->[!VIDEO](https://video.tv.adobe.com/v/336958?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454796?quality=12&learn=on&captions=swe)
 
 ## Verktyget Databasmodernisering
 

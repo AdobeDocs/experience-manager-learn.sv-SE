@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Experimentera med metadata i Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428796/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440109/?learn=on&captions=swe)

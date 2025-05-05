@@ -43,7 +43,7 @@ Det här är en avancerad självstudiekurs. Kontrollera att du har slutfört [sn
 
 I följande video ges en kort introduktion till modeller för innehållsfragment och hur de används i den här självstudiekursen.
 
->[!VIDEO](https://video.tv.adobe.com/v/340037?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449523?quality=12&learn=on&captions=swe)
 
 ## Skapa modeller för innehållsfragment {#create-models}
 

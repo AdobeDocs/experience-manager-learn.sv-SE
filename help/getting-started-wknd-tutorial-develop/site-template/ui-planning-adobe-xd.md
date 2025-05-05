@@ -41,7 +41,7 @@ I det här kapitlet inspekteras två Adobe XD-filer, en för [standardwebbplatsm
 
 ## Användargränssnittspaket för standardplatsmall {#standard-site-template-uikit}
 
->[!VIDEO](https://video.tv.adobe.com/v/338680?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448434?quality=12&learn=on&captions=swe)
 
 Steg på hög nivå:
 

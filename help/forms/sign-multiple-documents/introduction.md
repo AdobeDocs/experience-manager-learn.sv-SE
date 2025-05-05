@@ -22,7 +22,7 @@ ht-degree: 1%
 Oavsett om du ansöker om en inteckning eller öppnar ett nytt bankkonto måste du fylla i och signera flera formulär. Integrationen mellan AEM Forms och Acrobat Sign gör det enkelt att fylla i och signera flera formulär.
 I följande video får du hjälp med att signera flera formulär.
 
->[!VIDEO](https://video.tv.adobe.com/v/330165?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444972?quality=12&learn=on&captions=swe)
 
 ## Förutsättningar
 

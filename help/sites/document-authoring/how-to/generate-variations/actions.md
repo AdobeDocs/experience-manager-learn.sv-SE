@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Utforska de åtgärder som kan användas för en genererad variant av innehållet, som att spara, kopiera, betygsätta och mycket mer i Edge Delivery Services dokumentframställning.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428795/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437282/?learn=on&captions=swe)

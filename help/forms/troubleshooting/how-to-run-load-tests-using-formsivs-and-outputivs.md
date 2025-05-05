@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *Den här videon går igenom stegen för att köra inläsningstester från användargränssnittet med FormsIVS- och OutputIVS-exempel.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335507?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441476?quality=12&learn=on&captions=swe)

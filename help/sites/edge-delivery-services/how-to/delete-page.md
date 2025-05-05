@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lär dig hur du tar bort en sida i Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425973/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438094/?learn=on&captions=swe)

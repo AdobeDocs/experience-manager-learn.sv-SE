@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *Den här videon går igenom processen för att aktivera prestandaloggning i AEM Forms för att felsöka problem som rör Forms &amp; utdatatjänsten.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335499?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439719?quality=12&learn=on&captions=swe)

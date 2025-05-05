@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Kort video som går igenom AEM Forms Workbench-användargränssnittet
 
->[!VIDEO](https://video.tv.adobe.com/v/3429493/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439804/?learn=on&captions=swe)

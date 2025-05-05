@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *Den här videon går igenom stegen för att rensa processposter från jobbhanteraren.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335577?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437671?quality=12&learn=on&captions=swe)

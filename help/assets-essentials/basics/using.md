@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lär dig filtrera, söka efter och hämta resurser i AEM Assets.
 
->[!VIDEO](https://video.tv.adobe.com/v/335861?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443998?quality=12&learn=on&captions=swe)

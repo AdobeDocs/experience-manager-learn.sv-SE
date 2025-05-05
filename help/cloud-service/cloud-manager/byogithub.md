@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Lär dig hur du ansluter en privat GitHub-databas till AEM Cloud Manager för smidig hantering av kodkvalitet och automatiserade arbetsflöden. Förbättra utvecklingsprocessen med integrerade kontroller och smidigt samarbete.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429302/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452419/?learn=on&captions=swe)

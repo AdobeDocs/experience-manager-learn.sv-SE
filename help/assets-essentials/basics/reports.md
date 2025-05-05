@@ -22,4 +22,4 @@ ht-degree: 2%
 
 Lär dig hur du använder resursrapporter i AEM Assets för att få insikter i din DAM-aktivitet.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432496/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445759/?learn=on&captions=swe)

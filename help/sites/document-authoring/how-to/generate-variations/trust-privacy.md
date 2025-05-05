@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Läs om hur Adobe hanterar tillförlitlighet och sekretess för Generate Variations vid framtagning av Edge Delivery Services-dokument.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429060/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440018/?learn=on&captions=swe)

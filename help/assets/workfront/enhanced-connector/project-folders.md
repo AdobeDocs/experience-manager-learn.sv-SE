@@ -29,4 +29,4 @@ Läs mer om projektmappar när du använder den förbättrade kopplingen för Ad
 + Mappning av mappmetadata
 + Arv av mappmetadata
 
->[!VIDEO](https://video.tv.adobe.com/v/337586?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454763?quality=12&learn=on&captions=swe)

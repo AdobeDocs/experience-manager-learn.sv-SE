@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *I den här videon går vi igenom processen med att hämta in material för att felsöka teckensnittsrelaterade problem med Forms- och Output-tjänstkonverteringar.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335487?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439908?quality=12&learn=on&captions=swe)

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Kort video om designvyn i AEM Forms Designer
 
->[!VIDEO](https://video.tv.adobe.com/v/3427615/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436821/?learn=on&captions=swe)

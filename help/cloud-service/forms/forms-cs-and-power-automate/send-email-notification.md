@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Skicka e-postmeddelanden till en formuläravsändare med Microsoft Power Automate genom att extrahera fältvärden från formulärinlämningen.
 
->[!VIDEO](https://video.tv.adobe.com/v/345957?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431484?quality=12&learn=on&captions=swe)

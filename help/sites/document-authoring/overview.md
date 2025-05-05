@@ -36,7 +36,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="set-up.md" title="Inställningar för dokumentredigering"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425699/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438866/?format=jpeg&captions=swe"
                 alt="Dokumentredigering - översikt">
             </a>
           </figure>
@@ -100,7 +100,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="document-structure.md" title="Dokumentstruktur"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425701/?format=jpeg" alt="Dokumentstruktur">
+                src="https://video.tv.adobe.com/v/3438814/?format=jpeg&captions=swe" alt="Dokumentstruktur">
             </a>
           </figure>
         </div>
@@ -131,7 +131,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="default-content-and-sections.md" title="Standardinnehåll och avsnitt"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425702/?format=jpeg" alt="Standardinnehåll och avsnitt">
+                src="https://video.tv.adobe.com/v/3437979/?format=jpeg&captions=swe" alt="Standardinnehåll och avsnitt">
             </a>
           </figure>
         </div>
@@ -161,7 +161,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
           <figure class="image is-16by9">
             <a href="blocks-and-autoblocks.md" title="Block och automatiska lås" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425703/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3439507/?format=jpeg&captions=swe"
                 alt="Block och automatiska lås">
             </a>
           </figure>
@@ -194,7 +194,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="redirects.md" title="Omdirigeringar"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425704/?format=jpeg" alt="Omdirigeringar">
+                src="https://video.tv.adobe.com/v/3438547/?format=jpeg&captions=swe" alt="Omdirigeringar">
             </a>
           </figure>
         </div>
@@ -225,7 +225,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="bulk-metadata.md" title="Massmetadata"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425705/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438414/?format=jpeg&captions=swe"
                 alt="Massmetadata">
             </a>
           </figure>
@@ -258,7 +258,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="page-metadata.md" title="Sidmetadata"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425706/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438070/?format=jpeg&captions=swe"
                 alt="Sidmetadata">
             </a>
           </figure>
@@ -290,7 +290,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="author-authentication.md" title="Autentisering av författare"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429594/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438182/?format=jpeg&captions=swe"
                 alt="Autentisering av författare">
             </a>
           </figure>
@@ -327,7 +327,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/responsive-navigation.md" title="Responsiv navigering"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425707/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438169/?format=jpeg&captions=swe"
                 alt="Responsiv navigering">
             </a>
           </figure>
@@ -359,7 +359,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/document-audit.md" title="Dokumentgranskning"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425722/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437715/?format=jpeg&captions=swe"
                 alt="Dokumentgranskning">
             </a>
           </figure>
@@ -391,7 +391,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/document-permissions.md" title="Dokumentbehörigheter"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425724/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438105/?format=jpeg&captions=swe"
                 alt="Dokumentbehörigheter">
             </a>
           </figure>
@@ -423,7 +423,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/document-versions.md" title="Dokumentversioner"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425728/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438800/?format=jpeg&captions=swe"
                 alt="Dokumentversioner">
             </a>
           </figure>
@@ -455,7 +455,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/document-workflows.md" title="Dokumentarbetsflöden"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425720/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438294/?format=jpeg&captions=swe"
                 alt="Dokumentarbetsflöden">
             </a>
           </figure>
@@ -487,7 +487,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/iframes.md" title="Använda iFrames"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425719/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438393/?format=jpeg&captions=swe"
                 alt="Använda iFrames">
             </a>
           </figure>
@@ -519,7 +519,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/image-alt-text.md" title="Använda Alt-text"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425721/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438679/?format=jpeg&captions=swe"
                 alt="Använda Alt-text">
             </a>
           </figure>
@@ -551,7 +551,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/no-index.md" title="Förhindra indexering"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425726/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438117/?format=jpeg&captions=swe"
                 alt="Förhindra indexering">
             </a>
           </figure>
@@ -583,7 +583,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/using-dynamic-media.md" title="Dynamiska medier"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429593/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438904/?format=jpeg&captions=swe"
                 alt="Dynamiska medier">
             </a>
           </figure>
@@ -615,7 +615,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/migration-using-importer.md" title="Platsmigrering med importverktyget"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429595/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3443700/?format=jpeg&captions=swe"
                 alt="Platsmigrering med importverktyget">
             </a>
           </figure>
@@ -647,7 +647,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/customizing-importer.md" title="Anpassa importeraren"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429596/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3444249/?format=jpeg&captions=swe"
                 alt="Anpassa importeraren">
             </a>
           </figure>
@@ -679,7 +679,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/bulk-importing-using-importer.md" title="Massimport med hjälp av importverktyget"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429597/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3445889/?format=jpeg&captions=swe"
                 alt="Massimport med hjälp av importverktyget">
             </a>
           </figure>
@@ -748,7 +748,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/generate-variations/configure-sidekick.md" title="Generera variationer - Konfigurera Sidekick"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428306/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436992/?format=jpeg&captions=swe"
                 alt="Generera variationer - Konfigurera Sidekick">
             </a>
           </figure>
@@ -812,7 +812,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Generera variationer - egna mallar för uppmaningar"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428316/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438503/?format=jpeg&captions=swe"
                 alt="Generera variationer - egna mallar för uppmaningar">
             </a>
           </figure>
@@ -844,7 +844,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/generate-variations/custom-prompt-templates.md" title="Generera variationer - spara egna promptmallar"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428317/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437507/?format=jpeg&captions=swe"
                 alt="Generera variationer - spara egna promptmallar">
             </a>
           </figure>
@@ -876,7 +876,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/generate-variations/using-target-audiences.md" title="Generera variationer - Använda Adobe Target-målgrupper"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428792/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437759/?format=jpeg&captions=swe"
                 alt="Generera variationer - Använda Adobe Target-målgrupper">
             </a>
           </figure>
@@ -908,7 +908,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/generate-variations/using-csv-file-audiences.md" title="Generera variationer - Använda CSV-filmålgrupper"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428793/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436891/?format=jpeg&captions=swe"
                 alt="Generera variationer - Använda CSV-filmålgrupper">
             </a>
           </figure>
@@ -940,7 +940,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/generate-variations/using-adobe-firefly-for-images.md" title="Generera variationer - använd Adobe Firefly"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428794/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438360/?format=jpeg&captions=swe"
                 alt="Generera variationer - använd Adobe Firefly">
             </a>
           </figure>
@@ -972,7 +972,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/generate-variations/actions.md" title="Generera variationer - Åtgärder för en genererad variant"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428795/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437282/?format=jpeg&captions=swe"
                 alt="Generera variationer - Åtgärder för en genererad variant">
             </a>
           </figure>
@@ -1004,7 +1004,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/generate-variations/trust-privacy.md" title="Generera variationer - pålitlighet och sekretess"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429060/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3440018/?format=jpeg&captions=swe"
                 alt="Generera variationer - pålitlighet och sekretess">
             </a>
           </figure>
@@ -1036,7 +1036,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/experimentation-framework.md" title="Översikt över experimentella ramverk"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429061/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3437858/?format=jpeg&captions=swe"
                 alt="Översikt över experimentella ramverk">
             </a>
           </figure>
@@ -1068,7 +1068,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/setup-experimentation-framework.md" title="Konfigurera experimentella ramverk"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3429062/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438932/?format=jpeg&captions=swe"
                 alt="Konfigurera experimentella ramverk">
             </a>
           </figure>
@@ -1100,7 +1100,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./how-to/experimentation-add-metadata.md" title="Lägga till metadata för experiment"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3428796/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3440109/?format=jpeg&captions=swe"
                 alt="Lägga till metadata för experiment">
             </a>
           </figure>

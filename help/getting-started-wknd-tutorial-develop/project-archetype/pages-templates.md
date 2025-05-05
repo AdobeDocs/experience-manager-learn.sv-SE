@@ -164,7 +164,7 @@ Ett vanligt tillvägagångssätt när du skapar globalt innehåll, till exempel 
 
 Den AEM projekttypen genererade ett sidhuvud och en sidfot. Uppdatera sedan Experience Fragments så att de matchar dummyerna. Följ stegen i videon nedan:
 
->[!VIDEO](https://video.tv.adobe.com/v/330992?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447493?quality=12&learn=on&captions=swe)
 
 Steg på hög nivå för videon ovan:
 
@@ -210,7 +210,7 @@ Steg på hög nivå för videon ovan:
 
 Skapa sedan en sida med hjälp av mallen Artikelsida. Skriv innehållet på sidan så att det matchar webbplatsens modeller. Följ stegen i videon nedan:
 
->[!VIDEO](https://video.tv.adobe.com/v/330993?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446446?quality=12&learn=on&captions=swe)
 
 Steg på hög nivå för videon ovan:
 

@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Darin och James diskuterar Dispatcher i AEM Cloud, inklusive några bästa metoder och skillnader från AMS/On-Prem. De rör också vid migrering till molnet.
 
->[!VIDEO](https://video.tv.adobe.com/v/342067?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448379?quality=12&learn=on&captions=swe)
 
 ## Innehåll som behandlas i den här videon
 

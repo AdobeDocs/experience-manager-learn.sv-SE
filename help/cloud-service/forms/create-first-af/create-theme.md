@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Ett tema innehåller formatinformation för komponenter och paneler, och du kan återanvända ett tema i olika formulär. Format innehåller egenskaper som bakgrundsfärger, lägesfärger, genomskinlighet, justering och storlek. När du använder temat i formuläret återspeglas det angivna formatet i motsvarande komponenter i formuläret.
 
->[!VIDEO](https://video.tv.adobe.com/v/332229?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424882?quality=12&learn=on&captions=swe)

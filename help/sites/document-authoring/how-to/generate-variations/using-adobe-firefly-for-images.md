@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Upptäck hur du använder Adobe Firefly för att skapa bilder som används i olika innehållsvarianter för att nå rätt målgrupp i Edge Delivery Services dokumentframställning.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428794/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438360/?learn=on&captions=swe)

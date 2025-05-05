@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Lär dig hur du granskar dokument som skapats med AEM dokumentredigering.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425722/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437715/?learn=on&captions=swe)

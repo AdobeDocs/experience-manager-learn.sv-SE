@@ -533,7 +533,7 @@ Ett fullständigt exempel på hur du skriver en anpassad referensrenderare finns
 
 ## Exempel från början till slut
 
->[!VIDEO](https://video.tv.adobe.com/v/342105?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449704?quality=12&learn=on&captions=swe)
 
 >[!NOTE]
 >

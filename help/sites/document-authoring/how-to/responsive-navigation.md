@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Lär dig hur du utför responsiv navigering vid dokumentredigering.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425707/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438169/?learn=on&captions=swe)

@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Skapa ett Adobe Developer Console-projekt som definierar åtkomst till andra Adobe-tjänster och hanterar driftsättningen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3412875?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3442018?quality=12&learn=on&captions=swe)
 
 >[!IMPORTANT]
 >

@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Lär dig hur du använder [Adobe Express](https://www.adobe.com/express/)-integreringen med AEM Assets för att optimera innehållsleveranskedjor och förbättra produktiviteten och tillgängligheten för alla teammedlemmar.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425193/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453136/?learn=on&captions=swe)

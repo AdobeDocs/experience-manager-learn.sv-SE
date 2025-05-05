@@ -31,7 +31,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
     <tr>
         <td>
             <a href="./season-3/cloud5-3rd-party-search.md">
-                <img alt="Sökning från tredje part" src="https://video.tv.adobe.com/v/3427040?format=jpeg"/>
+                <img alt="Sökning från tredje part" src="https://video.tv.adobe.com/v/3452605?format=jpeg&captions=swe"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-3rd-party-search.md">
@@ -45,7 +45,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
         </td>   
         <td>
             <a href="./season-3/cloud5-edge-workers.md">
-                <img alt="Edge arbetare" src="https://video.tv.adobe.com/v/3427589?format=jpeg"/>
+                <img alt="Edge arbetare" src="https://video.tv.adobe.com/v/3448123?format=jpeg&captions=swe"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-edge-workers.md">
@@ -59,7 +59,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
         </td>   
         <td>
             <a href="./season-3/cloud5-publish-events.md">
-                <img alt="Publish, avpublicera evenemang i Edge Delivery Services" src="https://video.tv.adobe.com/v/3427681?format=jpeg"/>
+                <img alt="Publish, avpublicera evenemang i Edge Delivery Services" src="https://video.tv.adobe.com/v/3446660?format=jpeg&captions=swe"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-publish-events.md">
@@ -75,7 +75,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
     <tr>
         <td>
             <a href="./season-3/cloud5-query-indexes.md">
-                <img alt="Frågeindex och Excel-formler i Edge Delivery Services" src="https://video.tv.adobe.com/v/3427787?format=jpeg"/>
+                <img alt="Frågeindex och Excel-formler i Edge Delivery Services" src="https://video.tv.adobe.com/v/3453767?format=jpeg&captions=swe"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-query-indexes.md">
@@ -89,7 +89,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
         </td>  
         <td>
             <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
-                <img alt="Använd ditt eget CloudFlex CDN" src="https://video.tv.adobe.com/v/3428100?format=jpeg"/>
+                <img alt="Använd ditt eget CloudFlex CDN" src="https://video.tv.adobe.com/v/3452540?format=jpeg&captions=swe"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-byo-cloudflare-cdn.md">
@@ -103,7 +103,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
         </td>           
         <td>
             <a href="./season-3/cloud5-integrate-assets.md">
-                <img alt="Integrera AEM Assets med dokumentframställning" src="https://video.tv.adobe.com/v/3428302?format=jpeg"/>
+                <img alt="Integrera AEM Assets med dokumentframställning" src="https://video.tv.adobe.com/v/3448944?format=jpeg&captions=swe"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-integrate-assets.md">
@@ -119,7 +119,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Ämnen som h
     <tr>
         <td>
             <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">
-                <img alt="Generativ AI i AEM Sites" src="https://video.tv.adobe.com/v/3428436?format=jpeg"/>
+                <img alt="Generativ AI i AEM Sites" src="https://video.tv.adobe.com/v/3451119?format=jpeg&captions=swe"/>
             </a>
             <div>
                 <a href="./season-3/cloud5-generative-ai-for-aem-sites.md">

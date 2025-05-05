@@ -25,7 +25,7 @@ ht-degree: 0%
 
 Lär dig integrera AEM Headless med Adobe Target genom att exportera AEM Content Fragments till Adobe Target och använda dem för att personalisera headless-upplevelser med Adobe Experience Platform Web SDK alloy.js. [React WKND-appen](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/how-to/example-apps/react-app.html?lang=sv-SE) används för att utforska hur en anpassad Target-aktivitet med hjälp av Content Fragments Offers kan läggas till i upplevelsen för att marknadsföra ett WKND-äventyr.
 
->[!VIDEO](https://video.tv.adobe.com/v/3416585/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428900/?quality=12&learn=on&captions=swe)
 
 Självstudiekursen beskriver de steg som krävs för att konfigurera AEM och Adobe Target:
 
@@ -50,7 +50,7 @@ En Adobe Target Cloud Service skapas i AEM för att underlätta exporten av inne
 
 Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/integrations/integrating-adobe-target.html?lang=sv-SE) om du vill ha stegvisa instruktioner om hur du skapar en Adobe Target Cloud Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/3416499/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428905/?quality=12&learn=on&captions=swe)
 
 
 ## Konfigurera resursmappar{#configure-asset-folders}
@@ -71,7 +71,7 @@ Adobe Target Cloud Service, som konfigurerats i en kontextmedveten konfiguration
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416504/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428908/?quality=12&learn=on&captions=swe)
 
 ## Behörighet för integrering av AEM Target{#permission}
 
@@ -90,7 +90,7 @@ Adobe Target-integreringen, som visas som ett developer.adobe.com-projekt, måst
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416505/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441977/?quality=12&learn=on&captions=swe)
 
 ## Exportera innehållsfragment till mål{#export-content-fragments}
 
@@ -121,7 +121,7 @@ Innehållsfragment som finns under den [konfigurerade AEM Assets-mapphierarkin](
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416506/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428914/?quality=12&learn=on&captions=swe)
 
 ## Målaktivitet med Content Fragment Offers{#activity}
 
@@ -160,7 +160,7 @@ Adobe Target-aktiviteten som riktar sig till platsen `wknd-adventure-promo` kan 
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416507/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444785/?quality=12&learn=on&captions=swe)
 
 ## Experience Platform Datastream ID{#datastream-id}
 
@@ -190,7 +190,7 @@ Ett [Adobe Experience Platform Datastream](https://experienceleague.adobe.com/do
 
 <br/>
 
->[!VIDEO](https://video.tv.adobe.com/v/3416500/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428903/?quality=12&learn=on&captions=swe)
 
 ## Lägg till personalisering i en AEM Headless-app{#code}
 

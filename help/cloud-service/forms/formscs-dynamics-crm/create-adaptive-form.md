@@ -22,4 +22,4 @@ ht-degree: 0%
 
 I följande video får du hjälp med att skapa och konfigurera adaptiva formulär för att skapa och visa lead-objekt.
 
->[!VIDEO](https://video.tv.adobe.com/v/340791?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449312?quality=12&learn=on&captions=swe)

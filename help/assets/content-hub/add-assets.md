@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lär dig hur du överför resurser, lägger till taggar och förstår arbetsflödet för godkännande i Adobe Experience Manager Assets Content Hub.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432980/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3450286/?learn=on&captions=swe)

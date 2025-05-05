@@ -20,4 +20,4 @@ ht-degree: 0%
 
 *Den här videon går igenom stegen för att ändra värdet för entropi.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335494?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437682?quality=12&learn=on&captions=swe)

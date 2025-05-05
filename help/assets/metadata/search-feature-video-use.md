@@ -18,7 +18,7 @@ I de här videofilmerna tittar vi på några förbättringar i Assets-sökningar
 
 ## Sök efter förstärkning med tillgångsmetadata {#search-boost-asset}
 
->[!VIDEO](https://video.tv.adobe.com/v/16766?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444066?quality=12&learn=on&captions=swe)
 
 ## Avancerad konfiguration av predikat för sökning i flera värden och taggar {#multi-value-tag-predicates}
 

@@ -26,7 +26,7 @@ Välkommen till flerdelssjälvstudiekursen för utvecklare som vill utöka en be
 
 Den här självstudiekursen bygger på [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE), en React-app som förbrukar AEM Content Fragment-innehåll framför AEM GraphQL-API:er, men har ingen sammanhangsberoende redigering av SPA.
 
->[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444851?quality=12&learn=on&captions=swe)
 
 ## Om självstudiekursen
 

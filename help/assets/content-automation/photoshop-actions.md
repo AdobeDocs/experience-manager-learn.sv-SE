@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lär dig hur innehållsförfattare kan utföra Photoshop-åtgärder i AEM Assets med Creative Cloud API:er med tillägget för innehållsautomatisering.
 
->[!VIDEO](https://video.tv.adobe.com/v/336539?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444072?quality=12&learn=on&captions=swe)

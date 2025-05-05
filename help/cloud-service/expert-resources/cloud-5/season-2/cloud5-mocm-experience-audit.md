@@ -20,7 +20,7 @@ ht-degree: 0%
 
 I en del av en tredelsserie utforskar vi grunderna i Cloud Manager och tonar ned på Experience Audit-funktionerna.
 
->[!VIDEO](https://video.tv.adobe.com/v/343620?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449181?quality=12&learn=on&captions=swe)
 
 ## Innehåll som behandlas i den här videon
 

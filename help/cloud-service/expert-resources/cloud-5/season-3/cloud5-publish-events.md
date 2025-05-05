@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Utforska händelser som utlöses vid publicering och avpublicering i Edge Delivery Services samt användningsexempel och exempel för hur du använder dessa händelser.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427681?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446660?learn=on&captions=swe)
 
 ## Ytterligare resurser
 

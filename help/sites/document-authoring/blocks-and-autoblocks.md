@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Ta reda på hur block och autoblocks används vid dokumentframställning och hur dessa kan förbättra webbplatsen och redigeringsupplevelsen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425703/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439507/?learn=on&captions=swe)

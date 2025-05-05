@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *Den här videon går igenom stegen för att hämta felsökningsloggar för mobilformulär.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335516?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438591?quality=12&learn=on&captions=swe)

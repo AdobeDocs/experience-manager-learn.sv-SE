@@ -23,7 +23,7 @@ Lär dig hur AEM som en molntjänst för massimport kan användas för att impor
 
 
 
->[!VIDEO](https://video.tv.adobe.com/v/336969?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453283?quality=12&learn=on&captions=swe)
 
 ## Använda tjänsten för massimport
 

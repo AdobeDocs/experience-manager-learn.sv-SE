@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Läs om hur AEM Assets Hitta liknande bilder gör det enkelt att hitta den bild som passar dina behov bäst.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426796/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438481/?learn=on&captions=swe)

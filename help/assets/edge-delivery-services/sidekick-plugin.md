@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Lär dig hur [AEM Assets Sidekick-pluginprogrammet](https://www.hlx.live/developer/configuring-aem-assets-sidekick-plugin) kan användas för att införliva hanterade resurser i slagkraftiga upplevelser som levereras via Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424615/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3435826/?learn=on&captions=swe)

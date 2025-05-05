@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lär dig hur du kan hantera digitala resurser effektivt i AEM Assets med vår informativa video och visa upp funktionen Extract ZIP för att enkelt ordna och överföra dina resurshierarkier direkt till DAM.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426368/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447146/?learn=on&captions=swe)

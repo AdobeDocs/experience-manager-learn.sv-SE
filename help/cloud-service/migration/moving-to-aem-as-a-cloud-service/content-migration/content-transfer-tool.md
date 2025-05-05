@@ -22,7 +22,7 @@ ht-degree: 1%
 
 Läs om hur verktyget Innehållsöverföring hjälper dig att migrera innehåll till AEM as a Cloud Service från AEM 6.3+.
 
->[!VIDEO](https://video.tv.adobe.com/v/336970?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454751?quality=12&learn=on&captions=swe)
 
 ## Använda verktyget Innehållsöverföring
 

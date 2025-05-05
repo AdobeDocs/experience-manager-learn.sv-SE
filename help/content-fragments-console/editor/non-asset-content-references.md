@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Lär dig hur Content Fragment Content-fält kan referera till olika typer av AEM-innehåll, till exempel Experience Fragments och Pages.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419313/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436766/?learn=on&captions=swe)

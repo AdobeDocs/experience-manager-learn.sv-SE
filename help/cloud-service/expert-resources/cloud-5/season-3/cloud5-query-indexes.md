@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Utforska frågeindex och skriva Excel-formler för att hantera och sortera datauppsättningar med Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427787/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453767/?learn=on&captions=swe)
 
 ## Ytterligare resurser
 

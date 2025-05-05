@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Short Video (Kort video): Skapa och testa skript i AEM Forms Designer
 
->[!VIDEO](https://video.tv.adobe.com/v/3427627/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443711/?learn=on&captions=swe)

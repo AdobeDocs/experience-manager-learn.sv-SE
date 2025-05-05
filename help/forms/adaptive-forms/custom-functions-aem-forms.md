@@ -85,4 +85,4 @@ Om du har problem med att skapa anpassade funktioner kan du [hämta och installe
 ## Använda anpassade funktioner
 
 I följande video får du hjälp med att använda den anpassade funktionen i regelredigeraren för ett anpassat formulär
->[!VIDEO](https://video.tv.adobe.com/v/340305?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445845?quality=12&learn=on&captions=swe)

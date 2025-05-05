@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Lär dig hur du versionshanterar dokument som har skapats med AEM dokumentredigering.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425728/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438800/?learn=on&captions=swe)

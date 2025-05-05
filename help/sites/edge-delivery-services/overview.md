@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Lär dig hur du snabbt skapar webbplatser med Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453450/?learn=on&captions=swe)
 
 Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/overview) om du vill ha fullständig information om Edge Delivery Services och dess funktioner.
 
@@ -108,7 +108,7 @@ Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-man
             <a href="./developing/prerequisites.md" title="Förutsättningar"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425709/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3434588/?format=jpeg&captions=swe"
                 alt="Förutsättningar">
             </a>
           </figure>
@@ -140,7 +140,7 @@ Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-man
             <a href="./developing/aem-boilerplate.md" title="Använd mall för mallsida"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="Inställningar
+                src="https://video.tv.adobe.com/v/3434615/?format=jpeg&captions=swe" alt="Inställningar
                 Mallplatta">
             </a>
           </figure>
@@ -172,7 +172,7 @@ Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-man
             <a href="./developing/content-repository.md" title="Länka Google Drive"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425711/?format=jpeg" alt="Länka Google Drive">
+                src="https://video.tv.adobe.com/v/3434724/?format=jpeg&captions=swe" alt="Länka Google Drive">
             </a>
           </figure>
         </div>
@@ -202,7 +202,7 @@ Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-man
           <figure class="image is-16by9">
             <a href="./developing/content-repository.md" title="Länka SharePoint" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425712/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3446032/?format=jpeg&captions=swe"
                 alt="Länka SharePoint">
             </a>
           </figure>
@@ -234,7 +234,7 @@ Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-man
             <a href="./developing/preview-and-publish.md" title="Förhandsgranska och publicera innehåll"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="Förhandsgranska och publicera innehåll">
+                src="https://video.tv.adobe.com/v/3434713/?format=jpeg&captions=swe" alt="Förhandsgranska och publicera innehåll">
             </a>
           </figure>
         </div>
@@ -265,7 +265,7 @@ Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-man
             <a href="./developing/sidekick.md" title="Använda Sidekick"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425715/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441289/?format=jpeg&captions=swe"
                 alt="Använda Sidekick">
             </a>
           </figure>
@@ -329,7 +329,7 @@ Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-man
             <a href="./developing/local-development.md" title="Lokal utveckling"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425717/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3434735/?format=jpeg&captions=swe"
                 alt="Lokal utveckling">
             </a>
           </figure>
@@ -361,7 +361,7 @@ Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-man
             <a href="./developing/git.md" title="Integrera med Git"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425718/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441830/?format=jpeg&captions=swe"
                 alt="Integrera med Git">
             </a>
           </figure>
@@ -398,7 +398,7 @@ Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-man
             <a href="./how-to/rss.md" title="Skapa RSS-flöden"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425725/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438003/?format=jpeg&captions=swe"
                 alt="Skapa RSS-flöden">
             </a>
           </figure>
@@ -430,7 +430,7 @@ Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-man
             <a href="./how-to/social-media-sharing.md" title="Delning av sociala medier"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425974/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3439441/?format=jpeg&captions=swe"
                 alt="Delning av sociala medier">
             </a>
           </figure>
@@ -462,7 +462,7 @@ Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-man
             <a href="./how-to/delete-page.md" title="Tar bort sidor"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425973/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438094/?format=jpeg&captions=swe"
                 alt="Tar bort sidor">
             </a>
           </figure>

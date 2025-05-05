@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Kort video som beskriver hur du binder ett AEM-formulär till en MySQL-databas
 
->[!VIDEO](https://video.tv.adobe.com/v/3427624/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439563/?learn=on&captions=swe)

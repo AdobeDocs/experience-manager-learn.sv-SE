@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *Den här videon går igenom stegen för att aktivera utförlig ORB-spårning.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335526?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439075?quality=12&learn=on&captions=swe)

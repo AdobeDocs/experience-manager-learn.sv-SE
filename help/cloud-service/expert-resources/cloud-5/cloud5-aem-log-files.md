@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Detta är en djupdykning i hur du får åtkomst till loggar i AEM as a Cloud Service, inklusive hur du får åtkomst till dem via användargränssnittet och API:er.
 
->[!VIDEO](https://video.tv.adobe.com/v/341156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448482?quality=12&learn=on&captions=swe)
 
 ## Innehåll som behandlas i den här videon
 

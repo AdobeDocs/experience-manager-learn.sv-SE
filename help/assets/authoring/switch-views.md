@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lär dig hur du effektivt växlar mellan [Assets-vyn och administratörsvyn](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/overview.html?lang=sv-SE#persona-based-experiences) i AEM Assets as a Cloud Service för att säkerställa smidig resurshantering.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426806/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439032/?learn=on&captions=swe)

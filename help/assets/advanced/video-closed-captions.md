@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Undertexter genereras automatiskt när en videofil överförs till AEM Assets med Dynamic Media.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432627/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446391/?learn=on&captions=swe)

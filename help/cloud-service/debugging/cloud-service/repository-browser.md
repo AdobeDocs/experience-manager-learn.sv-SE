@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Databasläsaren är ett kraftfullt verktyg som ger synlighet i AEM underliggande datalager, vilket gör det enkelt att felsöka AEM as a Cloud Service-miljön. Databasläsaren har stöd för en skrivskyddad vy över resurserna och egenskaperna för AEM i produktions-, scen- och utvecklingsfasen samt författartjänsterna, publiceringstjänsterna och förhandsgranskningstjänsterna.
 
->[!VIDEO](https://video.tv.adobe.com/v/341464?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447058?quality=12&learn=on&captions=swe)
 
 Databasläsaren är __ENDAST__ tillgänglig i AEM as a Cloud Service-miljöer (använd [CRXDE Lite](../aem-sdk-local-quickstart/other-tools.md#crxde-lite) för att felsöka den lokala AEM SDK).
 

@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Lär dig mer om _AEM Cloud Service CDN Log Analysis Tooling_ som Adobe tillhandahåller och hur det hjälper dig att få insikter om både CDN-prestanda och AEM-implementering.
  
->[!VIDEO](https://video.tv.adobe.com/v/3429177?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446109?quality=12&learn=on&captions=swe)
 
 ## Ökning
 

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Läs mer om stöd för 3D-resurser i AEM Assets as a Cloud Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/3420690/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3432472/?learn=on&captions=swe)

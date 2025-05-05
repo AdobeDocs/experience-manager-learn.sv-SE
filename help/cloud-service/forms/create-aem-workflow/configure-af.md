@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Konfigurera anpassat formulär som utlöser granskningsarbetsflödet
 
->[!VIDEO](https://video.tv.adobe.com/v/332435?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446506?quality=12&learn=on&captions=swe)

@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Skapa en REST-baserad datakälla med swagger-filen som skapades i det tidigare steget.
 
->[!VIDEO](https://video.tv.adobe.com/v/331755?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447272?quality=12&learn=on&captions=swe)
 
 | Inställning | Värde |
 |---------------------|-----------------------------------------------------------------|

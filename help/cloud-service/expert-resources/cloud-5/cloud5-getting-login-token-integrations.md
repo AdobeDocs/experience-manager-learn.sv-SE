@@ -20,7 +20,7 @@ ht-degree: 0%
 
 En djupguide om hur du får en inloggningstoken för Cloud Service-integreringar och vissa användningsexempel för att göra det.
 
->[!VIDEO](https://video.tv.adobe.com/v/341277?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448641?quality=12&learn=on&captions=swe)
 
 ## Innehåll som behandlas i den här videon
 

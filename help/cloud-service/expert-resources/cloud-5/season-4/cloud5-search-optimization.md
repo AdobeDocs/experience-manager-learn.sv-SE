@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Få 100 poäng i dina fyr med hjälp av optimering av frågor och sökningar när du arbetar med ett stort antal arkiv. Arbeta med tekniker för att optimera frågeindexet, förbättra sökfunktionerna och dela frågeindex för optimering av prestanda
 
->[!VIDEO](https://video.tv.adobe.com/v/3440976/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3440982/?learn=on&enablevpops&captions=swe)

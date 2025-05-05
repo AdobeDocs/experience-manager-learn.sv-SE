@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Läs om användningsexempel och funktioner som stöds av AEM Forms as a Cloud Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/336968?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443371?quality=12&learn=on&captions=swe)

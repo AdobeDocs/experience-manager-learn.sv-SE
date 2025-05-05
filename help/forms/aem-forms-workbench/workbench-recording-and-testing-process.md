@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Kort video som går igenom felsökningsprocessen i Workbench
 
->[!VIDEO](https://video.tv.adobe.com/v/3429495/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439819/?learn=on&captions=swe)

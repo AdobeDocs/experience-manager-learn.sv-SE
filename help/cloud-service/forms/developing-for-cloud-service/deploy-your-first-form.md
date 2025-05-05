@@ -29,7 +29,7 @@ Skapa två mappar med namnet(FormTemplates och BankingApplication). Du kan lägg
 
 Om du vill synkronisera dessa resurser till ditt AEM-projekt med IntelliJ och Repo tittar du på följande video
 
->[!VIDEO](https://video.tv.adobe.com/v/336937?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448626?quality=12&learn=on&captions=swe)
 
 ## Nästa steg
 

@@ -24,5 +24,5 @@ ht-degree: 0%
 
 Lär dig hur du sparar de anpassade promptmallarna för Generera variationer i Edge Delivery Services dokumentredigering.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428317/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437507/?learn=on&captions=swe)
 

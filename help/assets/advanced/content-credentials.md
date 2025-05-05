@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Lär dig hur AEM Assets [innehållsautentiseringsuppgifter](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/assets-view/content-credentials) tillhandahåller verifierbara metadata för att säkerställa autenticiteten och integriteten hos digitala resurser, vilket skapar förtroende och transparens när innehåll skapas.
 
->[!VIDEO](https://video.tv.adobe.com/v/3441700/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441715/?learn=on&enablevpops&captions=swe)

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 En anpassad formulärmall är en specialiserad AEM-sidmall med vissa egenskaper och innehållsstruktur som används för att skapa anpassade formulär. Mallen innehåller förkonfigurerade layouter, format och grundläggande innehållsstruktur. Alla anpassningsbara formulär är baserade på en mall.
 
->[!VIDEO](https://video.tv.adobe.com/v/332223?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446153?quality=12&learn=on&captions=swe)

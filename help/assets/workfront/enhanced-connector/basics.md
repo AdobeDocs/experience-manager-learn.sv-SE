@@ -31,4 +31,4 @@ Lär dig grunderna i Adobe Workfront och Experience Manager AssetEnhanced Connec
 + Versionsresurser
 + Publicera resurser automatiskt
 
->[!VIDEO](https://video.tv.adobe.com/v/337575?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454299?quality=12&learn=on&captions=swe)

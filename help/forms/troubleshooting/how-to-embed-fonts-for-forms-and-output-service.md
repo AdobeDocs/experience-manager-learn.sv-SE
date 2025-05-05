@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *Den här videon går igenom stegen för att bädda in teckensnitt för Forms och konverteringar av utdatatjänster.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335496?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436478?quality=12&learn=on&captions=swe)

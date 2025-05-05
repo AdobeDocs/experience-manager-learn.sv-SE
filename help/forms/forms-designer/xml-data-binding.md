@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Short Video (Kort video) som beskriver hur du binder ett AEM-formulär till en XML-datafil (Source)
 
->[!VIDEO](https://video.tv.adobe.com/v/3427625/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439830/?learn=on&captions=swe)

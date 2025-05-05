@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Short Video (Kort video) som beskriver hur du lägger till digitala signaturer i AEM Forms
 
->[!VIDEO](https://video.tv.adobe.com/v/3427623/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439530/?learn=on&captions=swe)

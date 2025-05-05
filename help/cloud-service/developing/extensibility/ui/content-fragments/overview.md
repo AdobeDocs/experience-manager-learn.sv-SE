@@ -341,7 +341,7 @@ Välkommen till en samling av kodexempel för AEM UI-utökningsmöjligheter! Res
       <div class="card-image">
         <figure class="image is-16by9">
           <a href="./examples/editor-custom-field.md" title="Anpassade fält" tabindex="-1">
-            <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3427585?format=jpeg" alt="Anpassade fält">
+            <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3437638?format=jpeg&captions=swe" alt="Anpassade fält">
           </a>
         </figure>
       </div>

@@ -27,7 +27,7 @@ Lär dig hur du integrerar taggar i Adobe Experience Platform med Adobe Experien
 
 Taggar är Adobe Experience Platform nästa generation av tagghanteringsteknik. Taggar är det enklaste sättet att driftsätta Adobe Analytics, Target, Audience Manager och många andra lösningar. Få en översikt över taggar och den rekommenderade integreringen med Adobe Experience Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/3417061?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445204?quality=12&learn=on&captions=swe)
 
 ## Förutsättningar
 

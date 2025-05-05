@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Förhandsgranska och publicera innehåll med Edge Delivery Services med [AEM Sidekick](./sidekick.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/3425714/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434713/?learn=on&captions=swe)

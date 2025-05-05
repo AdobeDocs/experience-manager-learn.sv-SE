@@ -33,12 +33,12 @@ Det finns två innehållsdatabaser som stöds för [dokumentredigering](../../do
 
 Konfigurera SharePoint som innehållsdatabas för Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425712/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446032/?learn=on&captions=swe)
 
 >[!TAB Google Drive]
 
 Konfigurera Google Drive som innehållsdatabas för Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425711/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434724/?learn=on&captions=swe)
 
 >[!ENDTABS]

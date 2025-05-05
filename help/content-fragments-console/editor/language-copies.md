@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Läs om hur AEM Content Fragment Editor gör det enkelt att hitta innehållsfragment med snabb filtrering. Med den här funktionen går det snabbt och enkelt att hitta specifika innehållsfragment.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419311/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436960/?learn=on&captions=swe)

@@ -37,11 +37,11 @@ Adobe Asset Link visas inte i videon ovan och kan läggas till via alternativet 
 
 Lär dig hur du konfigurerar Adobe Asset Link för AEM 6 som körs i Adobe Managed Services eller på plats, konfigurerar användarrättigheter och AEM as a Cloud Service samt hur du installerar och använder Adobe Asset Link.
 
->[!VIDEO](https://video.tv.adobe.com/v/338823?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3434113?quality=12&learn=on&captions=swe)
 
 
 ## Inställning av tillgångslänk för domänförtroende
 
 Lär dig vad Domain Trust är, vad det innebär att använda Adobe Asset Link med Experience Manager Assets och hur du konfigurerar Domain Trust.
 
->[!VIDEO](https://video.tv.adobe.com/v/338825?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454148?quality=12&learn=on&captions=swe)

@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Se hur massvis med metadata hanteras vid dokumentframställning och hur författare kan uppdatera massmetadata utan tekniska kunskaper.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425705/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438414/?learn=on&captions=swe)

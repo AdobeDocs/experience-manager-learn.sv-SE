@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Läs om hur AEM Assets as a Cloud Service resurshanteringsmikrotjänster gör att du automatiskt och effektivt kan generera vilken rendering som helst för dina resurser och ersätta den här rollen som det traditionella AEM Workflow har.
 
->[!VIDEO](https://video.tv.adobe.com/v/336990?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454288?quality=12&learn=on&captions=swe)
 
 ## Arbetsflödesmigreringsverktyg
 

@@ -28,7 +28,7 @@ Ett modernt API för innehållsleverans är avgörande för effektiviteten och p
 
 För att övervinna dessa problem tillhandahåller GraphQL ett frågebaserat API som gör det möjligt för kunder att fråga AEM efter endast det innehåll som de behöver och att ta emot via ett enda API-anrop.
 
->[!VIDEO](https://video.tv.adobe.com/v/328618?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452883?quality=12&learn=on&captions=swe)
 
 Den här videon är en översikt över GraphQL API som implementerats i AEM. GraphQL-API:t i AEM är främst utformat för att leverera AEM Content Fragment-program till program längre fram i kedjan som en del av en headless-driftsättning.
 
@@ -36,7 +36,7 @@ Den här videon är en översikt över GraphQL API som implementerats i AEM. Gra
 >id="aemcloud_learn_headless_graphql_overview"
 >title="Komma igång med AEM Headless - GraphQL"
 >abstract="Lär dig hur du levererar innehållsfragment med GraphQL."
->additional-url="https://video.tv.adobe.com/v/328618" text="Översikt över GraphQL i AEM"
+>additional-url="https://video.tv.adobe.com/v/3452883?captions=swe" text="Översikt över GraphQL i AEM"
 
 ## AEM Headless GraphQL Video Series
 

@@ -28,5 +28,5 @@ I den här videon kommer du att:
 + Lär dig hur variationer kan användas i ett verkligt scenario
 + Granska GraphQL-syntaxen för att begära en viss ändring
 
->[!VIDEO](https://video.tv.adobe.com/v/333295?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449324?quality=12&learn=on&captions=swe)
 

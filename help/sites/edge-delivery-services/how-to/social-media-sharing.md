@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lär dig hur du optimerar innehåll för delning via sociala medier med Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425974/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439441/?learn=on&captions=swe)

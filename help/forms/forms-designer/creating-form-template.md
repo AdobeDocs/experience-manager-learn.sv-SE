@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Det finns ett antal mallar som du kan använda som de är eller anpassa efter behov. Mallar kan också skapas och hanteras i AEM Forms Designer. Du kan börja med en tom sida, mall, kalkylblad, PDF eller Microsoft Word-fil. Den här videon innehåller alla dessa alternativ och det som finns tillgängligt direkt
 
->[!VIDEO](https://video.tv.adobe.com/v/3427678/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439152/?learn=on&captions=swe)

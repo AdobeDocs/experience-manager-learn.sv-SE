@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Verktygsfältet läggs vanligtvis till på formulärbehållarnivå. Verktygsfältet kan innehålla knappar för att navigera till nästa och föregående paneler i formuläret, skicka formuläret, spara formulärdata osv.
 
->[!VIDEO](https://video.tv.adobe.com/v/332236?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424952?quality=12&learn=on&captions=swe)

@@ -38,7 +38,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./basics/content-fragments-console.md" title="Konsolöversikt"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3409492?format=jpeg"
+                src="https://video.tv.adobe.com/v/3449335?format=jpeg&captions=swe"
                 alt="Konsolöversikt">
             </a>
           </figure>
@@ -104,7 +104,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./search/fast-filtering.md" title="Snabb filtrering"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419310?format=jpeg" alt="Snabb
+                src="https://video.tv.adobe.com/v/3436700?format=jpeg&captions=swe" alt="Snabb
                 filtrering">
             </a>
           </figure>
@@ -172,7 +172,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./editor/non-asset-content-references.md" title="Ej tillgång
               innehållreferenser" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419313?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436766?format=jpeg&captions=swe"
                 alt="Innehållsreferenser som inte är resurser">
             </a>
           </figure>
@@ -206,7 +206,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./editor/rte-variant-compare.md" title="Jämför RTE-variant"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419314?format=jpeg" alt="RTE
+                src="https://video.tv.adobe.com/v/3437550?format=jpeg&captions=swe" alt="RTE
                 variantjämförelse">
             </a>
           </figure>
@@ -240,7 +240,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./editor/language-copies.md" title="Språkversioner"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419311?format=jpeg"
+                src="https://video.tv.adobe.com/v/3436960?format=jpeg&captions=swe"
                 alt="Språkversioner">
             </a>
           </figure>
@@ -274,7 +274,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./search/references.md" title="Referenser"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3420950?format=jpeg"
+                src="https://video.tv.adobe.com/v/3432464?format=jpeg&captions=swe"
                 alt="Referenser">
             </a>
           </figure>

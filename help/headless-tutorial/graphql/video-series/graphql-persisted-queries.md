@@ -28,4 +28,4 @@ I den här videon kommer du att:
 + Lär dig skapa, uppdatera och köra GraphQL-frågor
 + Förstå fördelarna med beständiga frågor framför frågor på klientsidan
 
->[!VIDEO](https://video.tv.adobe.com/v/333429?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447381?quality=12&learn=on&captions=swe)

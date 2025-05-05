@@ -24,5 +24,5 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar sidindelad redigering för att generera variationer i Edge Delivery Services dokumentredigering.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428306/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436992/?learn=on&captions=swe)
 

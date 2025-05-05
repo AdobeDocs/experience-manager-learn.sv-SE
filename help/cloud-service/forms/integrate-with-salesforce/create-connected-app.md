@@ -24,7 +24,7 @@ ht-degree: 0%
 Ett anslutet program är ett ramverk som gör att ett externt program kan integreras med Salesforce via API:er och standardprotokoll, som SAML, OAuth och OpenID Connect. Anslutna appar använder dessa protokoll för att autentisera, auktorisera och tillhandahålla enkel inloggning (SSO) för externa appar.
 <!--- 331757 was the old video -->
 
->[!VIDEO](https://video.tv.adobe.com/v/3447257?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447261?quality=12&learn=on&captions=swe)
 
 >[!NOTE]
 >Se till att du skapar ett konto i [Salesforce Developer Edition](https://developer.salesforce.com/signup) eftersom REST-API:erna är aktiverade som standard i utvecklarversionen.

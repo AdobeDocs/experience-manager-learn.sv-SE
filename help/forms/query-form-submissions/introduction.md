@@ -22,7 +22,7 @@ ht-degree: 0%
 
 I följande video beskrivs användningsfallet
 
->[!VIDEO](https://video.tv.adobe.com/v/3427096?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443500?learn=on&captions=swe)
 
 
 Om du vill följa den här självstudiekursen rekommenderar vi att du har tillgång till följande

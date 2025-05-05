@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *I den här videon går du igenom stegen för att uppdatera anpassade XDP-filer och datafiler i FormsIVS och OutputIVS i testsyfte.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335513?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439741?quality=12&learn=on&captions=swe)

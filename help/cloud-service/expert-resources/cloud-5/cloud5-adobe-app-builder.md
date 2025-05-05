@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Amol Anand släpper in oss för att minska integreringen med Adobe App Builder och var och när vi ska använda den.
 
->[!VIDEO](https://video.tv.adobe.com/v/342375?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448754?quality=12&learn=on&captions=swe)
 
 ## Innehåll som behandlas i den här videon
 

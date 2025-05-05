@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Lär dig hur du skapar och använder samlingar i AEM Assets Content Hub för att effektivisera resursåtkomsten och främja resursdelning i samarbete, vilket ger ett effektivt och organiserat teamarbete i olika projekt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3435687/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445304/?learn=on&captions=swe)

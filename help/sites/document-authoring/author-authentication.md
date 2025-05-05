@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar författarautentisering via AEM Sidekick vid dokumentredigering med Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429594/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438182/?learn=on&captions=swe)

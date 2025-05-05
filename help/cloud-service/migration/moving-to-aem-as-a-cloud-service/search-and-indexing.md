@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Lär dig mer om AEM as a Cloud Service sökindex, hur du konverterar indexdefinitioner från AEM 6 till AEM as a Cloud Service-kompatibla samt hur du distribuerar index till AEM as a Cloud Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/336963?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454718?quality=12&learn=on&captions=swe)
 
 ## Indexkonverterare
 

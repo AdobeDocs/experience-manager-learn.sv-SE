@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Upptäck hur du konfigurerar experimenteringsramverket i Edge Delivery Services Document Authoring.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429062/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438932/?learn=on&captions=swe)

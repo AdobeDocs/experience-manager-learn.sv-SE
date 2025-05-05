@@ -24,6 +24,6 @@ ht-degree: 0%
 
 Lär dig hur du skapar anpassade promptmallar för att generera variationer i Edge Delivery Services dokumentredigering.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428316/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438503/?learn=on&captions=swe)
 
 

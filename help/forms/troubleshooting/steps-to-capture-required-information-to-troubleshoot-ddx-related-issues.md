@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *I den här videon går du igenom stegen för att hämta den information som krävs för att felsöka DDX-relaterade problem i tjänsten Forms Assembler.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335517?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439185?quality=12&learn=on&captions=swe)

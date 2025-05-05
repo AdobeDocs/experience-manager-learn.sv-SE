@@ -22,4 +22,4 @@ ht-degree: 0%
 
 I följande videofilm får du hjälp med att skapa en konfiguration för molntjänster för att ansluta till Microsoft Dynamics.
 
->[!VIDEO](https://video.tv.adobe.com/v/340758?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448302?quality=12&learn=on&captions=swe)

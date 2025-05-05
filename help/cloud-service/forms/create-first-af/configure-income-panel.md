@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lägg till en tabellkomponent på resultatpanelen för att hämta sökandens inkomstkällor.
 
->[!VIDEO](https://video.tv.adobe.com/v/332233?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3425127?quality=12&learn=on&captions=swe)

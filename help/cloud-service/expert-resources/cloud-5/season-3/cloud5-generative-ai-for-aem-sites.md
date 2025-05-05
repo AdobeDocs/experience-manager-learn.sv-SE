@@ -24,7 +24,7 @@ ht-degree: 0%
 
 Upptäck de nya generativa AI-funktionerna i AEM Sites dokumentredigering. Vi beskriver funktionaliteten, integrationen med Adobe Firefly och Adobe Express samt tekniken som används i backend-systemet, de datamodeller som används och hur dessa modeller har utbildats.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428436/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451119/?learn=on&captions=swe)
 
 ## Ytterligare resurser
 

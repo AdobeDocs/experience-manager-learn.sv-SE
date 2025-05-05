@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Lär dig hur du gör HTTPS-anrop från AEM till webb-API:er som kräver mTLS-autentisering (Mutual Transport Layer Security).
 
->[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447863?quality=12&learn=on&captions=swe)
 
 mTLS- eller tvåvägs TLS-autentisering förbättrar TLS-protokollets säkerhet genom att kräva att **både klienten och servern autentiserar varandra**. Autentiseringen görs med digitala certifikat. Det används ofta i scenarier där stark säkerhet och identitetsverifiering är avgörande.
 

@@ -22,4 +22,4 @@ ht-degree: 0%
 
 *Den här videon går igenom stegen för att justera parametrar på JMX-konsolen.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335554?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438404?quality=12&learn=on&captions=swe)

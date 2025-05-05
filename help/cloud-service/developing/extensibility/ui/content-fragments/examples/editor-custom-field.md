@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Lär dig skapa anpassade fält i AEM Content Fragment Editor.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437638?learn=on&captions=swe)
 
 AEM UI-tillägg bör utvecklas med ramverket [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) eftersom det bibehåller ett konsekvent utseende och en enhetlig känsla med resten av AEM och har ett omfattande bibliotek med fördefinierade funktioner, vilket minskar utvecklingstiden.
 

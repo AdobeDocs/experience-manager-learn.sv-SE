@@ -37,7 +37,7 @@ Autentiseringsuppgifterna för läsartillägg är kopplade till användaren av f
 
 Följ videon för att lägga till inloggningsuppgifterna till användaren av fd-tjänsten
 
->[!VIDEO](https://video.tv.adobe.com/v/335849?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447291?quality=12&learn=on&captions=swe)
 
 
 Kommandot som listar information om pfx-filen är. Följande kommando förutsätter att du finns i samma katalog som pfx-filen.

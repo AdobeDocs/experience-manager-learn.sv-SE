@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Lär dig hur du tar emot AEM-händelser på en webbkrok och granskar händelseinformation som nyttolast, sidhuvuden och metadata.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449752?quality=12&learn=on&captions=swe)
 
 I det här exemplet kan du använda en _webbkrok_ som tillhandahålls av Adobe för att ta emot AEM-händelser utan att behöva konfigurera en egen webbkrok. Den här webbkroken som tillhandahålls av Adobe ligger på [Glitch](https://glitch.com/), en plattform som är känd för att erbjuda en webbaserad miljö som underlättar skapandet och distributionen av webbprogram. Alternativet att använda din egen webkrok är dock också tillgängligt om du vill.
 

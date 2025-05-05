@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Gör en djupdykning i hur man skapar standardinnehåll och -avsnitt och hur dessa hjälper dig att skapa en bättre webbplats.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425702/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437979/?learn=on&captions=swe)

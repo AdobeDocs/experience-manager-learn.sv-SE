@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Lär dig navigera på de tillgängliga flikarna och anpassa konfigurationsalternativen efter organisationens behov. I den här videon får administratörer hjälp med att förstå de olika inställningarna och få instruktioner på hög nivå om hur de ska skräddarsys för optimala prestanda och anpassning till organisatoriska mål.
 
->[!VIDEO](https://video.tv.adobe.com/v/3439311/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3439315/?learn=on&enablevpops&captions=swe)

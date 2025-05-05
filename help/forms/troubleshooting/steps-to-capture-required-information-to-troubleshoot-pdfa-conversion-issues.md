@@ -21,4 +21,4 @@ ht-degree: 0%
 
 *I den här videon går du igenom stegen för att hämta den information som krävs för att felsöka PDF/A-konverterings- och valideringsproblem i tjänsten Forms Assembler.*
 
->[!VIDEO](https://video.tv.adobe.com/v/335518?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439196?quality=12&learn=on&captions=swe)

@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Lär dig hur du får meddelanden när en bevakad resurs, mapp eller samling ändras i AEM Assets.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427646/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439629/?learn=on&captions=swe)
 
 >[!TIP]
 >

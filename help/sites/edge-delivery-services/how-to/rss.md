@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lär dig hur du anpassar Edge Delivery Services Sidekick.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425725/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438003/?learn=on&captions=swe)

@@ -30,7 +30,7 @@ I det här kapitlet gör vi konfigurationsändringar i __WKND Sites-projektet__ 
 
 ## Översikt över konfigurationsändringar i AEM-projekt i fullhög
 
->[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453613?quality=12&learn=on&captions=swe)
 
 ## Förutsättningar {#prerequisites}
 

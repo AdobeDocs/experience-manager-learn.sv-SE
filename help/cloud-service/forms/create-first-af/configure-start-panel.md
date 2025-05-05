@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Formatera texten i den statiska textkomponenten med RTF-redigeraren.
 
->[!VIDEO](https://video.tv.adobe.com/v/332235?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440117?quality=12&learn=on&captions=swe)

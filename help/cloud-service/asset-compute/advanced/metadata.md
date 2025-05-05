@@ -30,7 +30,7 @@ Exempel på vanliga användningsområden:
 
 ## Vad du ska göra
 
->[!VIDEO](https://video.tv.adobe.com/v/327313?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437015?quality=12&learn=on&captions=swe)
 
 I den här självstudiekursen skapar vi en metadataarbetare från Asset Compute som hämtar de vanligaste färgerna i en bildresurs och skriver tillbaka namnen på färgerna till resursens metadata i AEM. Även om arbetaren själv är grundläggande används den här självstudien för att utforska hur Asset Compute-arbetare kan användas för att skriva tillbaka metadata till resurser i AEM as a Cloud Service.
 

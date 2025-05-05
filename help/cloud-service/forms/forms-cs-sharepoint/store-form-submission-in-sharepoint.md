@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar och lagrar adaptiva formulärdata i Microsoft Sharepoint.
 
->[!VIDEO](https://video.tv.adobe.com/v/3415793/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452528/?quality=12&learn=on&captions=swe)

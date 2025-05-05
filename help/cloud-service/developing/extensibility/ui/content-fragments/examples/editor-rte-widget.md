@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Lär dig hur du lägger till widgetar i RTF-redigeraren i AEM Content Fragment Editor.
 
->[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447436?quality=12&learn=on&captions=swe)
 
 Om du vill lägga till det dynamiska innehållet i RTF-redigeraren kan du använda **widgetfunktionen**. Widgetarna hjälper dig att integrera det enkla eller komplexa användargränssnittet i RTE och användargränssnittet kan skapas med valfritt JS-ramverk. De kan betraktas som dialogrutor som öppnas genom att trycka på `{`-specialtangenten i textredigeraren.
 

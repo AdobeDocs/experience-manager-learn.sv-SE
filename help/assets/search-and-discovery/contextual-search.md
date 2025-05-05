@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Lär dig hur du använder kontextuell sökning i Adobe Experience Manager Assets för att effektivt hitta resurser med naturtrogna språkfrågor.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428667/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438955/?learn=on&captions=swe)
 
 ## Växla sammanhangsbaserad sökning
 

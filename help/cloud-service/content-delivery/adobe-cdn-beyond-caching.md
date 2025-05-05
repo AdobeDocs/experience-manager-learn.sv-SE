@@ -31,7 +31,7 @@ Förutom att cache-lagra innehåll har Adobe CDN flera avancerade funktioner som
 
 De här funktionerna är **självbetjäningsfunktioner**. Konfigureras i filen `cdn.yaml` i ditt AEM-projekt och distribueras med Cloud Manager konfigurationsflöde.
 
->[!VIDEO](https://video.tv.adobe.com/v/3433104?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3440274?quality=12&learn=on&captions=swe)
 
 ## Konfigurera trafik vid leveransnätverket
 

@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Lär dig felsöka och felsöka AEM SDK, AEM as a Cloud Service och bygg- och driftsättningsprocessen.
 
->[!VIDEO](https://video.tv.adobe.com/v/336964?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454663?quality=12&learn=on&captions=swe)

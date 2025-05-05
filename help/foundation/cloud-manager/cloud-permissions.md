@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lär dig hur du använder Cloud Manager [anpassade behörigheter](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/custom-permissions.html?lang=sv-SE) i AEM för att hantera åtkomsten för olika team på ett strategiskt sätt, vilket säkerställer effektiv och säker projekthantering och driftsättning.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425892/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449808/?learn=on&captions=swe)

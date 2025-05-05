@@ -22,4 +22,4 @@ ht-degree: 0%
 
 *Den här videon går igenom stegen för att justera bmc-poolstorleken för XMLFormService(2 av 2).*
 
->[!VIDEO](https://video.tv.adobe.com/v/335553?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3439053?quality=12&learn=on&captions=swe)

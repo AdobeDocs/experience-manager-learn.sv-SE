@@ -66,7 +66,7 @@ Ett vanligt tillvägagångssätt när du skapar globalt innehåll, till exempel 
 
 Webbplatsmallen genererade ett sidhuvud och en sidfot. Uppdatera sedan Experience Fragments så att de matchar dummyerna. Följ stegen i videon nedan:
 
->[!VIDEO](https://video.tv.adobe.com/v/332916?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447803?quality=12&learn=on&captions=swe)
 
 Steg på hög nivå för videon nedan:
 

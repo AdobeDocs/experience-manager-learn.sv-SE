@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lär dig hur du aktiverar webboptimerad bildleverans på AEM as a Cloud Service webbplatser med AEM Core Components.
 
->[!VIDEO](https://video.tv.adobe.com/v/346064?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449996?quality=12&learn=on&captions=swe)

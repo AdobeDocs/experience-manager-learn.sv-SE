@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Upptäck hur man integrerar AEM Assets med dokumentframställning för att leverera enastående upplevelser med Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428302/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448944/?quality=12&learn=on&captions=swe)
 
 
 ## Ytterligare resurser

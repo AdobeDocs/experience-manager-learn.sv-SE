@@ -47,7 +47,7 @@ Om du inte har tillgång till tredjepartstjänster kan du _samarbeta med ditt s�
 
 ## Generera SSL-certifikat
 
->[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441481?quality=12&learn=on&captions=swe)
 
 Du har två alternativ:
 
@@ -222,7 +222,7 @@ Så här konfigurerar och distribuerar du CDN-regeln för HTTP-huvudvalidering:
 
 ## Skicka hemlighet i HTTP-huvudet X-AEM-Edge-Key
 
->[!VIDEO](https://video.tv.adobe.com/v/3432567?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445049?quality=12&learn=on&captions=swe)
 
 Uppdatera kundens CDN så att hemligheten skickas i HTTP-huvudet `X-AEM-Edge-Key`. Hemligheten används av Adobe CDN för att validera att begäran kommer från kundens CDN och transformera rubrikvärdet `Host` till värdet för `X-Forwarded-Host` som tas emot från kundens CDN.
 

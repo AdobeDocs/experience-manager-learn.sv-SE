@@ -39,7 +39,7 @@ Det här är en självstudiekurs i flera delar och det antas att stegen som besk
 
 Gör sedan ändringar i temakällorna så att webbplatsen matchar utseendet och känslan hos WKND-varumärket.
 
->[!VIDEO](https://video.tv.adobe.com/v/332918?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453624?quality=12&learn=on&captions=swe)
 
 Stegen på hög nivå för videon:
 

@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lär dig samarbeta om resurshantering med hjälp av kommentarer, anteckningar och uppgifter.
 
->[!VIDEO](https://video.tv.adobe.com/v/335856?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443992?quality=12&learn=on&captions=swe)

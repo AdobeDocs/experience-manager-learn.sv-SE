@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lär dig hur du förbättrar resurshanteringen i AEM as a Cloud Service genom att använda blockerade taggar för att förhindra att kulturellt känsliga, irrelevanta eller kontroversiella smarta taggar används.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426839/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448504/?learn=on&captions=swe)

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Del två av AEM CDN och många olika alternativ.
 
->[!VIDEO](https://video.tv.adobe.com/v/340994?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3448412?quality=12&learn=on&captions=swe)
 
 ## Innehåll som omfattas av del 2 av denna serie
 

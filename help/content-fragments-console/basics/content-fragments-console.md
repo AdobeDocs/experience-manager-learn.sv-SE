@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Läs om de grundläggande funktionerna i redigeringskonsolen för AEM as a Cloud Service Content Fragments.
 
->[!VIDEO](https://video.tv.adobe.com/v/3409492?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449335?quality=12&learn=on&captions=swe)

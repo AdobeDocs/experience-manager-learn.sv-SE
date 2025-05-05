@@ -21,7 +21,7 @@ ht-degree: 5%
 
 Läs om hur du kommer igång med AEM as a Cloud Service från avtalsfasen hela vägen genom att konfigurera miljöerna med Cloud Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/336959?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431505?quality=12&learn=on&captions=swe)
 
 ## Cloud Manager och Admin Console
 

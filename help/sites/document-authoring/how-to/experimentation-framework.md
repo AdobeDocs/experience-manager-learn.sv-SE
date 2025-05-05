@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Utforska det experimentella ramverk som gör det möjligt för marknadsförare att testa vilka innehållsvariationer som är mest effektiva vid framtagning av Edge Delivery Services-dokument.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429061/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3437858/?learn=on&captions=swe)

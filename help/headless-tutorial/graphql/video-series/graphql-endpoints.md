@@ -28,4 +28,4 @@ I den här videon kommer du att:
 + Lär dig hur du kör GraphQL-frågor mot slutpunkter
 + Förstå hur man publicerar GraphQL-slutpunkter
 
->[!VIDEO](https://video.tv.adobe.com/v/333339?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445027?quality=12&learn=on&captions=swe)

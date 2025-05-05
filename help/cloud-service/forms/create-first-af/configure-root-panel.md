@@ -23,4 +23,4 @@ ht-degree: 0%
 
 Lägg till underordnade paneler i rotpanelen och konfigurera layouten för de underordnade panelerna.
 
->[!VIDEO](https://video.tv.adobe.com/v/332238?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447280?quality=12&learn=on&captions=swe)

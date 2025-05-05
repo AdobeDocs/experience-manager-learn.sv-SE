@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Lär dig att tänka annorlunda när det gäller AEM as a Cloud Service implementeringar.
 
->[!VIDEO](https://video.tv.adobe.com/v/336956?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454310?quality=12&learn=on&captions=swe)

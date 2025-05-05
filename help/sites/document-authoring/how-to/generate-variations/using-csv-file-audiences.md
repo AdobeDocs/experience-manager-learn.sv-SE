@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Upptäck hur ni kan använda CSV-filerna för att nå rätt målgrupp med relevant innehåll i Edge Delivery Services dokumentframställning.
 
->[!VIDEO](https://video.tv.adobe.com/v/3428793/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436891/?learn=on&captions=swe)
