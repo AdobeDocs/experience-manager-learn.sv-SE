@@ -87,7 +87,7 @@ Lär dig vad AEM Assets är och hur ni kan använda det för att uppnå era aff�
 
 ## Ytterligare resurser
 
-* [AEM Assets-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=en)
+* [AEM Assets-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=sv-SE)
 * [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
 * [AEM Sites självstudiekurser](/help/sites/overview.md)
 * [AEM Forms självstudiekurser](/help/forms/overview.md)
