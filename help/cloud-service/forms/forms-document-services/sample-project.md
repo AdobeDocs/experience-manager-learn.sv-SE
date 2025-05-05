@@ -28,6 +28,7 @@ ht-degree: 0%
    * Hitta filen `resources/credentials/server_credentials.json`
    * Öppna den och **uppdatera autentiseringsuppgifterna** som är specifika för din miljö.
    * Kontrollera att den innehåller giltiga värden för:
+
      `clientId`, `clientSecret`,`adobeIMSV3TokenEndpointURL` och
      `scopes`
 

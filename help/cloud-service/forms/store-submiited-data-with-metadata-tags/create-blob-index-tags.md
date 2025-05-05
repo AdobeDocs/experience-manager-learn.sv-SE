@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Lägga till indexmärkord för blob
 
-När datauppsättningar blir större kan det vara svårt att hitta ett specifikt objekt i en mängd data. Blobindexmärkord ger datahanterings- och identifieringsfunktioner genom att använda indexmärkordsattribut för nyckelvärden. Du kan kategorisera och söka efter objekt i en enda behållare eller i alla behållare på ditt lagringskonto. BLOB-indextaggen _**CustomerType=Platinum**_, där Platinum är värdet för fältet CustomerType.
+När datauppsättningar blir större kan det vara svårt att hitta ett specifikt objekt i en mängd data. Blobindexmärkord ger datahanterings- och identifieringsfunktioner genom att använda indexmärkordsattribut för nyckelvärden. Du kan kategorisera och söka efter objekt i en enda behållare eller i alla behållare på ditt lagringskonto. BLOB-indextaggen _&#x200B;**CustomerType=Platinum**&#x200B;_, där Platinum är värdet för fältet CustomerType.
 
 ![index-tags](assets/blob-with-index-tags1.png)
 Följande kod skapar blobbindexets datataggsträng med motsvarande värden från skickade data

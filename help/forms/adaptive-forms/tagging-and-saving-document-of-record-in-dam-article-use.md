@@ -28,7 +28,7 @@ Användningsexemplet är följande:
 * När formulär skickas aktiveras ett AEM-arbetsflöde. I det här arbetsflödet taggas dokumentet med civilstånd (Single) och anställningsstatus (pensionerad) och dokumentet sparas i DAM.
 * När dokumentet har lagrats i DAM bör administratören kunna söka efter dokumentet med dessa taggar. Om du till exempel söker på En eller Återkallad hämtas rätt DoR-svar.
 
-Ett anpassat processsteg skrevs för att uppfylla detta användningsfall. I det här steget hämtar vi värdena för lämpliga dataelement från skickade data. Sedan konstruerar vi taggplattan med det här värdet. Om värdet för elementet för civilstånd till exempel är &quot;Enskilt&quot; blir taggtiteln **Peak:EmploymentStatus/Single. **Med hjälp av TagManager API hittar vi taggen och använder den på DoR-taggen.
+Ett anpassat processsteg skrevs för att uppfylla detta användningsfall. I det här steget hämtar vi värdena för lämpliga dataelement från skickade data. Sedan konstruerar vi taggplattan med det här värdet. Om värdet för elementet för civilstånd till exempel är &quot;Enskilt&quot; blir taggtiteln **Peak:EmploymentStatus/Single. &#x200B;** Med hjälp av TagManager API hittar vi taggen och använder den på DoR-taggen.
 
 Här följer den fullständiga koden för att tagga och lagra arkiveringsdokumentet i AEM DAM.
 

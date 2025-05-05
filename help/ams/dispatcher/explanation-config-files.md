@@ -249,7 +249,7 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 ### AMS-servergruppen innehåller
 
-![<FILENAME>_farm.any innehåller underordnade .any-filer för att slutföra en servergruppskonfiguration.  I den här bilden ser du att en servergrupp kommer att innehålla varje cache för avsnittsfiler på den översta nivån, klientheaders, filters, renders och vhosts.any-filer](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Includes")
+![&lt;FILENAME>_farm.any innehåller underordnade .any-filer för att slutföra en servergruppskonfiguration.  I den här bilden ser du att en servergrupp kommer att innehålla varje cache för avsnittsfiler på den översta nivån, klientheaders, filters, renders och vhosts.any-filer](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Includes")
 
 När en FILENAME_farm.any-fil från katalogen `/etc/httpd/conf.dispatcher.d/available_farms/` får en länk till katalogen `/etc/httpd/conf.dispatcher.d/enabled_farms/` används de i den konfiguration som körs.
 

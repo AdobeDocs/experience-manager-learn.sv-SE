@@ -31,7 +31,7 @@ I taggegenskapen skapade vi två nya [regler](https://experienceleague.adobe.com
 
 Regeln **Fältvalideringsfel** aktiveras varje gång det finns ett valideringsfel i anpassat formulärfält. I vårt formulär visas till exempel ett valideringsfelmeddelande om telefonnumret eller e-postadressen inte har det förväntade formatet.
 
-Regeln för fältverifieringsfel konfigureras genom att händelsen ställs in på _**Adobe Experience Manager Forms-Error**_ så som visas på skärmbilden
+Regeln för fältverifieringsfel konfigureras genom att händelsen ställs in på _&#x200B;**Adobe Experience Manager Forms-Error**&#x200B;_ så som visas på skärmbilden
 
 
 
@@ -45,11 +45,11 @@ Adobe Analytics - Ange variabler är konfigurerat enligt följande
 
 Regeln Skicka formulär aktiveras varje gång ett anpassat formulär skickas.
 
-Regeln för att skicka formulär har konfigurerats med händelsen _**Adobe Experience Manager Forms - Submit**_
+Regeln för att skicka formulär har konfigurerats med händelsen _&#x200B;**Adobe Experience Manager Forms - Submit**&#x200B;_
 
 ![form-submit-rule](assets/form-submit-rule.png)
 
-I regeln Skicka formulär mappas värdet för dataelementet _**ApplicantsStateOfResidence**_ till prop5 och värdet för dataelementet FormTitle mappas till prop8.
+I regeln Skicka formulär mappas värdet för dataelementet _&#x200B;**ApplicantsStateOfResidence**&#x200B;_ till prop5 och värdet för dataelementet FormTitle mappas till prop8.
 
 Adobe Analytics - Ange variabler konfigureras enligt följande.
 ![form-submit-rule-set-variables](assets/form-submit-set-variable.png)

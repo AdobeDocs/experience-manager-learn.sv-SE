@@ -218,7 +218,7 @@ Exempel på CSS-väljarstruktur ska vara följande:
    <td valign="middle"><span class="code">.cmp-list</span></td> 
    <td valign="middle"><span class="code">.cmp-list_item</span></td> 
    <td valign="middle">→</td> 
-   <td><p><span class="code">.cmp-list—dark</span></p> <p><span class="code"> .cmp-list</span></p> <p><span class="code"> </span><strong><span class="code"> .cmp-list_item </span></strong></p> <p><strong> färg: blå,</strong></p> <p><strong> }</strong></p> </td> 
+   <td><p><span class="code">.cmp-list—dark</span></p> <p><span class="code"> .cmp-list</span></p> <p><span class="code"> </span><strong><span class="code"> .cmp-list_item </span></strong></p> <p><strong> färg: blå,</strong></p> <p><strong> &rbrace;</strong></p> </td> 
   </tr> 
   <tr> 
    <td valign="middle"><span class="code">.cmp-image—hero</span></td> 

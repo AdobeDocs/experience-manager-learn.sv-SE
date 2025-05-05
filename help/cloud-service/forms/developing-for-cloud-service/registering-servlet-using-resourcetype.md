@@ -35,7 +35,7 @@ Starta aem-Banking-projektet i IntelliJ. Skapa en servlet med namnet GetFieldCho
 
 ## Exempel på serverdel
 
-Följande servertjänst är bunden till Sling-resurstypen: _**azure/fetchoptions**_
+Följande servertjänst är bunden till Sling-resurstypen: _&#x200B;**azure/fetchoptions**&#x200B;_
 
 
 

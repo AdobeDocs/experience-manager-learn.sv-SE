@@ -33,7 +33,7 @@ I den här videon finns en översikt över utvecklingstopologin för ett Edge De
 
 - **GitHub-databas**:
    - **Syfte**: Värdar för webbplatsens kod (CSS och JavaScript).
-   - **Struktur**: Huvudgrenen **** innehåller produktionsklar kod, medan andra grenar innehåller arbetskod.
+   - **Struktur**: Huvudgrenen **&#x200B;**&#x200B;innehåller produktionsklar kod, medan andra grenar innehåller arbetskod.
    - **Funktionalitet**: Kod från vilken gren som helst kan köras mot miljöerna **production** eller **preview** utan att den aktiva webbplatsen påverkas.
 
 - **AEM Author service**:

@@ -37,7 +37,7 @@ Krav för den här självstudiekursen:
 
    * Om du använder **AEM Forms 6.3** är återanrops-URL:en https://gbedekar-w7-1:6443/etc/cloudservices/fdm/createlead.html. I den här URL:en är creatlead namnet på min formulärdatamodell.
 
-   * Om du använder** AEM Forms 6.4** är återanrops-URL:en https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
+   * Om du använder **&#x200B; AEM Forms 6.4** är återanrops-URL:en https://gbedekar-w7-:6443/libs/fd/fdm/gui/components/admin/fdmcloudservice/createcloudconfigwizard/cloudservices.html
 
 I det här exemplet är gbedekar -w7-1:6443 namnet på min server och den port där AEM körs.
 
@@ -61,7 +61,7 @@ Nästa steg är att skapa Data Source i AEM Forms. Följ de här stegen enligt d
 
 * Klicka på&quot;Skapa&quot;
 
-**På nästa skärm **
+**På nästa skärm &#x200B;**
 
 * Välj &quot;Arkiv&quot; som alternativ för swagger-källfilen. Bläddra till filen som du hämtade tidigare
 * Välj autentiseringstyp som OAuth2.0
@@ -69,7 +69,7 @@ Nästa steg är att skapa Data Source i AEM Forms. Följ de här stegen enligt d
 * OAuth Url är - **https://login.salesforce.com/services/oauth2/authorize**
 * Uppdatera token-URL - **https://na5.salesforce.com/services/oauth2/token**
 * **Åtkomsttagg-URL - https://na5.salesforce.com/services/oauth2/token**
-* Auktoriseringsområde: ** api   chatter_api, fullständigt id   open   refresh_token visualforce web**
+* Auktoriseringsområde: **&#x200B; api   chatter_api, fullständigt id   open   refresh_token visualforce web**
 * Autentiseringshanterare: auktoriseringsgranskare
 * Klicka på &quot;Anslut till OAUTH&quot;.Om allt fungerar bra bör du inte se några fel
 
@@ -102,7 +102,7 @@ När du har skapat formulärdatamodellen kan du skapa adaptiv Forms baserat på 
    * OAuth Url är - **https://login.salesforce.com/services/oauth2/authorize**
    * Uppdatera token-URL - **https://na5.salesforce.com/services/oauth2/token**
    * Åtkomsttoken Ur **l - https://na5.salesforce.com/services/oauth2/token**
-   * Auktoriseringsomfång: ** api chatter_api full id openid refresh_token visualforce web**
+   * Auktoriseringsomfång: **&#x200B; api chatter_api full id openid refresh_token visualforce web**
    * Autentiseringshanterare: auktoriseringsgranskare
    * Klicka på knappen &quot;Anslut till OAuth&quot;. Om du skulle få se några fel bör du gå igenom de föregående stegen för att säkerställa att all information har angetts korrekt.
 

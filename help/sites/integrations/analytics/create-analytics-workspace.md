@@ -155,9 +155,11 @@ Skapa sedan en tabell för att skapa en visuell representation av hur användare
 1. Låt oss dela upp sidan efter dess malltyp. Välj sidmallsmått från komponenter och dra och släpp måttet för sidmall till dimensionen Sidnamn. Nu kan du visa sidnamnet som är uppdelat efter malltyp.
 
    * **Före**
+
      ![eVar5](assets/create-analytics-workspace/evar5.png)
 
    * **Efter**
+
      ![eVar5 Metrics](assets/create-analytics-workspace/evar5-metrics.png)
 
 1. För att förstå hur användare interagerar med CTA Buttons när de finns på WKND-webbplatssidorna krävs ytterligare uppdelning genom att lägga till mätvärden för Button ID (eVar8).
@@ -245,8 +247,10 @@ Sedan hämtar vi klassificeringsmallen för variabeln Button ID (eVar8)
 1. I komponentsökaren söker du efter **WKND CTA Buttons** och drar och släpper dimensionen **WKND CTA Buttons (Knapp-ID)** till måttet för Knapp-ID och ersätter den.
 
    * **Före**
+
      ![Workspace-knapp före](assets/create-analytics-workspace/wknd-button-before.png)
    * **Efter**
+
      ![Workspace-knapp efter](assets/create-analytics-workspace/wknd-button-after.png)
 
 1. Du kan lägga märke till att värdet för Knapp-ID som innehåller knapp-ID:t för en Call to Action-knapp (CTA) nu har ersatts med ett motsvarande namn som finns i Klassificeringsmallen.

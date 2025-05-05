@@ -518,7 +518,7 @@ Nu när `NavigationComponent` har implementerats måste `HeaderComponent` uppdat
 
 2. Öppna en webbläsarflik och gå till [http://localhost:4200/](http://localhost:4200/).
 
-   Webbpaketets dev-server **** ska konfigureras att proxyansluta JSON-modellen från en lokal instans av AEM (`ui.frontend/proxy.conf.json`). På så sätt kan vi koda direkt mot innehåll som skapats i AEM tidigare i kursen.
+   Webbpaketets dev-server **&#x200B;**&#x200B;ska konfigureras att proxyansluta JSON-modellen från en lokal instans av AEM (`ui.frontend/proxy.conf.json`). På så sätt kan vi koda direkt mot innehåll som skapats i AEM tidigare i kursen.
 
    ![menyväxling som fungerar](./assets/navigation-routing/nav-toggle-static.gif)
 

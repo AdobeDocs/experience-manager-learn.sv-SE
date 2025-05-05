@@ -37,10 +37,10 @@ I det här kapitlet vill vi bredda vår syn på cachelagring ytterligare och utv
 
 Du måste göra kompromisser inom dessa områden,
 
-* Prestanda och fördröjning
-* Resursförbrukning/CPU-belastning/diskanvändning
-* Noggrannhet/valuta/aktualitet/säkerhet
-* Enkelhet/komplexitet/kostnad/underhållbarhet/Feltydlighet
+&#x200B;* Prestanda och fördröjning
+&#x200B;* Resursförbrukning/CPU-belastning/diskanvändning
+&#x200B;* Noggrannhet/valuta/aktualitet/säkerhet
+&#x200B;* Enkelhet/komplexitet/kostnad/underhållbarhet/Feltydlighet
 
 De här dimensionerna är sammanlänkade i ett relativt komplext system. Det finns ingen enkel if-this-then-that. Ett enklare system kan göra det snabbare eller långsammare. Det kan sänka utvecklingskostnaderna, men öka kostnaderna för helpdesk, t.ex. om kunderna ser gammalt innehåll eller klagar på en långsam webbplats. Alla dessa faktorer måste beaktas och vägas mot varandra. Men nu bör du redan ha en bra idé, att det inte finns någon silverkula eller en enda bästa metod - bara en massa dåliga rutiner och några bra.
 
@@ -124,9 +124,9 @@ Var och en av lagren som introducerades i det sista kapitlet innehåller ett vis
 
 Det finns tre grundläggande strategier för ogiltigförklaring:
 
-* **TTL, Live-tid:** Ett objekt förfaller efter en fast tidsperiod (t.ex. &quot;2 timmar från nu&quot;)
-* **Förfallodatum:** Objektet förfaller vid en definierad tidpunkt i framtiden (t.ex. &quot;10 juni 2019 kl. 5:00)
-* **Händelsebaserad:** Objektet ogiltigförklaras uttryckligen av en händelse som inträffar på plattformen (t.ex. när en sida ändras och aktiveras)
+&#x200B;* **TTL, Live-tid:** Ett objekt förfaller efter en fast tidsperiod (t.ex. &quot;2 timmar från nu&quot;)
+&#x200B;* **Förfallodatum:** Objektet förfaller vid en definierad tidpunkt i framtiden (t.ex. &quot;10 juni 2019 kl. 5:00)
+&#x200B;* **Händelsebaserad:** Objektet ogiltigförklaras uttryckligen av en händelse som inträffar på plattformen (t.ex. när en sida ändras och aktiveras)
 
 Nu kan du använda olika strategier på olika cachelager, men det finns några &quot;giftiga&quot; lager.
 
@@ -268,8 +268,8 @@ I vissa enkla fall kanske du också är med på att använda samtidiga hash-kart
 
 #### Referenser
 
-* [ACS-kommandon http-cache](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
-* [Cache-cachelagringsramverket](https://www.ehcache.org)
+&#x200B;* [ACS-kommandon http-cache](https://adobe-consulting-services.github.io/acs-aem-commons/features/http-cache/index.html)
+&#x200B;* [Cache-cachelagringsramverket](https://www.ehcache.org)
 
 ### Grundläggande villkor
 
@@ -400,10 +400,10 @@ Vi rekommenderar att du noggrant studerar SDI-dokumentationen. Det finns några 
 
 #### Referenser
 
-* [docs.oracle.com - Skriva egna JSP-taggar](https://docs.oracle.com/cd/E11035_01/wls100/taglib/quickstart.html)
-* [Dominik Süß - Skapa och använda komponentfilter](https://www.slideshare.net/connectwebex/prsentation-dominik-suess)
-* [sling.apache.org - Sling Dynamic Includes](https://sling.apache.org/documentation/bundles/dynamic-includes.html)
-* [helpx.adobe.com - Konfigurera Dynamiska Sling-inkluderingar i AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-dynamic-include-technical-video-setup.html)
+&#x200B;* [docs.oracle.com - Skriva egna JSP-taggar](https://docs.oracle.com/cd/E11035_01/wls100/taglib/quickstart.html)
+&#x200B;* [Dominik Süß - Skapa och använda komponentfilter](https://www.slideshare.net/connectwebex/prsentation-dominik-suess)
+&#x200B;* [sling.apache.org - Sling Dynamic Includes](https://sling.apache.org/documentation/bundles/dynamic-includes.html)
+&#x200B;* [helpx.adobe.com - Konfigurera Dynamiska Sling-inkluderingar i AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/sling-dynamic-include-technical-video-setup.html)
 
 
 #### Modellcachelagring

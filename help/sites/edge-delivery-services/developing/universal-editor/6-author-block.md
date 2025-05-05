@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Skapa ett block
 
-När JSON ](./5-new-block.md) för [teaser-blocket har placerats i `teaser`-grenen kan blocket redigeras i AEM Universal Editor.
+När JSON [&#128279;](./5-new-block.md) för teaser-blocket har placerats i `teaser`-grenen kan blocket redigeras i AEM Universal Editor.
 
 Det finns flera skäl till att det är viktigt att skapa ett block under utveckling:
 

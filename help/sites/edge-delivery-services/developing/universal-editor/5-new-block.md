@@ -101,7 +101,7 @@ Varje fält i arrayen `fields` har ett JSON-objekt som innehåller följande obl
 
 | JSON-egenskap | Beskrivning |
 |---------------|-----------------------------------------------------------------------------------------------------------------------|
-| `component` | Fälttypen [](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#component-types), till exempel `text`, `reference` eller `aem-content`. |
+| `component` | Fälttypen [&#128279;](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/field-types#component-types), till exempel `text`, `reference` eller `aem-content`. |
 | `name` | Fältets namn, mappning till JCR-egenskapen där värdet lagras i AEM. |
 | `label` | Den etikett som visas för författare i Universell redigerare. |
 

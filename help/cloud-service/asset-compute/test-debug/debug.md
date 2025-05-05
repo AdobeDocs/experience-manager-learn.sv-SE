@@ -98,6 +98,7 @@ _Klicka igenom felsökningen av en Asset Compute-arbetare med wskdebug (inget lj
 1. Kontrollera att de [arbetsytespecifika miljövariablerna](../deploy/runtime.md) har angetts via `AIO_runtime_namespace` och `AIO_runtime_auth`, baserat på arbetsytan som kräver felsökning.
 1. Kör `aio app logs` från kommandoraden
    + Om arbetsytan har stor trafik kan du utöka antalet aktiveringsloggar via flaggan `--limit`:
+
      `$ aio app logs --limit=25`
 1. De senaste (upp till `--limit`) aktiveringsloggarna returneras som utdata för kommandot som ska granskas.
 

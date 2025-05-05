@@ -86,7 +86,7 @@ Kontrollpanelsverktygen **Elasticsearch, Logstash och Kibana (ELK)** från Adobe
 - Klona GitHub-databasen [AEMCS-CDN-Log-Analysis-Tooling](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling).
 - Konfigurera verktyget genom att följa stegen [Så här konfigurerar du ELK Docker-behållaren](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md#how-to-set-up-the-elk-docker-containerhow-to-setup-the-elk-docker-container).
 - Som en del av konfigurationen importerar du filen `traffic-filter-rules-analysis-dashboard.ndjson` för att visualisera data. Kontrollpanelen _CDN-trafik_ innehåller visualiseringar som visar det maximala antalet begäranden per IP/POP på CDN Edge och origin.
-- Hämta CDN-loggarna för AEMCS Publish-tjänsten från _Cloud Manager_](https://my.cloudmanager.adobe.com/)s-kortet [för miljöer.
+- Hämta CDN-loggarna för AEMCS Publish-tjänsten från _Cloud Manager_[&#128279;](https://my.cloudmanager.adobe.com/)s-kortet för miljöer.
 
   ![Cloud Manager CDN-logghämtningar](./assets/cloud-manager-cdn-log-downloads.png)
 

@@ -346,7 +346,7 @@ Konfigurera sedan CDN-regeln (errorPages) och referera till de statiska filerna 
 
 Låt oss konfigurera `errorPages` CDN-regeln som använder de statiska filerna ovan för att återge innehållet på CDN-felsidan.
 
-1. Öppna filen `cdn.yaml` från huvudmappen `config` i ditt AEM-projekt. Exempel: filen cdn.yaml](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml) för [WKND-projektet.
+1. Öppna filen `cdn.yaml` från huvudmappen `config` i ditt AEM-projekt. Exempel: filen cdn.yaml[&#128279;](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml) för WKND-projektet.
 
 1. Lägg till följande CDN-regel i filen `cdn.yaml`:
 

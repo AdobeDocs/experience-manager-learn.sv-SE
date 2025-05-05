@@ -69,7 +69,7 @@ Ett exempel på en anpassad guide finns för översättningsprojektmallen: **/li
 
 ### Gadgets {#gadgets}
 
-Det finns inga ytterligare egenskaper på den här noden, men de underordnade objekten för gadgetnoden kontrollerar vilka projektpaneler som fyller i projektkontrollpanelen när ett nytt projekt skapas. [Projektplattorna](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) (kallas även gadgets eller pods) är enkla kort som fyller i en arbetsplats för ett projekt. En fullständig lista över objektrutor finns under: **/libs/cq/gui/components/projects/admin/pod. **Projektägare kan alltid lägga till/ta bort paneler när ett projekt har skapats.
+Det finns inga ytterligare egenskaper på den här noden, men de underordnade objekten för gadgetnoden kontrollerar vilka projektpaneler som fyller i projektkontrollpanelen när ett nytt projekt skapas. [Projektplattorna](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/projects/projects) (kallas även gadgets eller pods) är enkla kort som fyller i en arbetsplats för ett projekt. En fullständig lista över objektrutor finns under: **/libs/cq/gui/components/projects/admin/pod. &#x200B;** Projektägare kan alltid lägga till/ta bort paneler när ett projekt har skapats.
 
 ### Roller {#roles}
 
@@ -77,7 +77,7 @@ Det finns tre [standardroller](https://experienceleague.adobe.com/en/docs/experi
 
 ### Arbetsflöden {#workflows}
 
-Ett av de mest lockande skälen till att du skapar en anpassad projektmall är att du kan konfigurera tillgängliga arbetsflöden för projektet. Dessa kan vara OTB-arbetsflöden eller anpassade arbetsflöden. Under noden **workflows** måste det finnas en **models**-nod (även `nt:unstructured`) och underordnade noder under de tillgängliga arbetsflödesmodellerna. Egenskapen **modelId **pekar på arbetsflödesmodellen under /etc/workflow och egenskapen **wizard** pekar på den dialogruta som användes när arbetsflödet startades. En stor fördel med Projects är möjligheten att lägga till en anpassad dialogruta (guide) för att hämta företagsspecifika metadata i början av arbetsflödet som kan leda till ytterligare åtgärder i arbetsflödet.
+Ett av de mest lockande skälen till att du skapar en anpassad projektmall är att du kan konfigurera tillgängliga arbetsflöden för projektet. Dessa kan vara OTB-arbetsflöden eller anpassade arbetsflöden. Under noden **workflows** måste det finnas en **models**-nod (även `nt:unstructured`) och underordnade noder under de tillgängliga arbetsflödesmodellerna. Egenskapen **modelId &#x200B;** pekar på arbetsflödesmodellen under /etc/workflow och egenskapen **wizard** pekar på den dialogruta som användes när arbetsflödet startades. En stor fördel med Projects är möjligheten att lägga till en anpassad dialogruta (guide) för att hämta företagsspecifika metadata i början av arbetsflödet som kan leda till ytterligare åtgärder i arbetsflödet.
 
 ```shell
 <projects-template-root> (cq:Template)
@@ -290,7 +290,7 @@ Det första steget är att skapa en uppgift för att slutföra redigeringen av e
 
 När den första uppgiften är klar har den som tilldelats tre alternativ för att dirigera arbetsflödet:
 
-**Normal **- normal routning skapar en uppgift som tilldelats projektets godkännargrupp för granskning och godkännande. Aktivitetens prioritet är Normal och förfallodatumet är fem dagar från den dag den skapades.
+**Normal &#x200B;**- normal routning skapar en uppgift som tilldelats projektets godkännargrupp för granskning och godkännande. Aktivitetens prioritet är Normal och förfallodatumet är fem dagar från den dag den skapades.
 
 **Rush** - Push-routning skapar också en uppgift som är tilldelad projektets godkännargrupp. Aktivitetens prioritet är Hög och förfallodatumet är bara en dag.
 
@@ -391,7 +391,7 @@ Placering av arbetsflödesmodell i 6.4+
       Pre-Create Task Script = "/apps/aem-guides/projects/scripts/start-task-config.ecma"
    ```
 
-1. I föregående steg refererade vi till ett Pre-Create Task Script. Skriptet skapas nu där vi ställer in Tilldelning av uppgiften baserat på värdet för arbetsflödets metadatavärde **tilldelad**. Värdet **&quot;tilldelad&quot;** anges när arbetsflödet startas. Vi läser också arbetsflödets metadata för att dynamiskt välja uppgiftens prioritet genom att läsa värdet **taskPriority** för arbetsflödets metadata samt **&quot;taskdueDate&quot; **som dynamiskt ställs in när den första uppgiften förfaller.
+1. I föregående steg refererade vi till ett Pre-Create Task Script. Skriptet skapas nu där vi ställer in Tilldelning av uppgiften baserat på värdet för arbetsflödets metadatavärde **tilldelad**. Värdet **&quot;tilldelad&quot;** anges när arbetsflödet startas. Vi läser också arbetsflödets metadata för att dynamiskt välja uppgiftens prioritet genom att läsa värdet **taskPriority** för arbetsflödets metadata samt **&quot;taskdueDate&quot; &#x200B;** som dynamiskt ställs in när den första uppgiften förfaller.
 
    För organisatoriska syften har vi skapat en mapp under vår appmapp för alla våra projektrelaterade skript: **/apps/aem-guides/projects-tasks/projects/scripts**. Skapa en fil under den här mappen med namnet **&quot;start-task-config.ecma&quot;**. &#42;Observera att sökvägen till filen start-task-config.ecma matchar sökvägen som angetts på fliken Avancerade inställningar i steg 4.
 
@@ -482,7 +482,7 @@ Placering av arbetsflödesmodell i 6.4+
 
 Tidigare i den här självstudiekursen skapade vi en projektmall som innehöll en godkännarroll. Varje gång ett nytt projekt skapas från den här mallen skapas en projektspecifik grupp för rollen Godkännare. På samma sätt som ett deltagarsteg kan en uppgift bara tilldelas till en användare eller grupp. Vi vill tilldela den här uppgiften till den projektgrupp som motsvarar gruppen Godkännare. Alla arbetsflöden som startas från ett projekt har metadata som mappar projektrollerna till den projektspecifika gruppen.
 
-Kopiera+Klistra in följande kod i textområdet **Skript** på fliken **Avancerade inställningar **tfliken. Den här koden läser arbetsflödets metadata och tilldelar uppgiften till gruppen Godkännare för projektet. Om det inte går att hitta värdet för gruppen godkännare återgår det till att tilldela uppgiften till gruppen Administratörer.
+Kopiera+Klistra in följande kod i textområdet **Skript** på fliken **Avancerade inställningar &#x200B;** tfliken. Den här koden läser arbetsflödets metadata och tilldelar uppgiften till gruppen Godkännare för projektet. Om det inte går att hitta värdet för gruppen godkännare återgår det till att tilldela uppgiften till gruppen Administratörer.
 
 ```
 var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approvers","administrators");
@@ -514,7 +514,7 @@ task.setCurrentAssignee(projectApproverGrp);
 
    Eftersom det här är vägen för Rush-godkännande är aktivitetens prioritet inställd på Hög. Dessutom ger vi gruppen Godkännare endast en dag för att slutföra uppgiften. Den som ska tilldelas är tom på fliken Aktivitet eftersom den tilldelas dynamiskt på fliken Avancerade inställningar.
 
-   Vi kan återanvända samma skriptfragment som i steg 7 för att fylla i textområdet **Script** på fliken** Avancerade inställningar **. Kopiera+Klistra in nedanstående kod:
+   Vi kan återanvända samma skriptfragment som i steg 7 för att fylla i textområdet **Script** på fliken **&#x200B; Avancerade inställningar &#x200B;**. Kopiera+Klistra in nedanstående kod:
 
    ```
    var projectApproverGrp = workflowData.getMetaDataMap().get("project.group.approvers","administrators");
@@ -522,7 +522,7 @@ task.setCurrentAssignee(projectApproverGrp);
    task.setCurrentAssignee(projectApproverGrp);
    ```
 
-1. Dra och släpp en** Ingen åtgärd**-komponent längst till höger (grenen 3). Komponenten Ingen åtgärd utför ingen åtgärd och kommer att fortsätta omedelbart, vilket motsvarar den ursprungliga redigerarens önskan att kringgå godkännandesteget. Tekniskt sett kan vi lämna den här grenen utan några arbetsflödessteg, men som en bra rutin lägger vi till steget Ingen åtgärd. Detta gör det klart för andra utvecklare vad syftet med gren 3 är.
+1. Dra och släpp en **&#x200B; Ingen åtgärd**-komponent längst till höger (grenen 3). Komponenten Ingen åtgärd utför ingen åtgärd och kommer att fortsätta omedelbart, vilket motsvarar den ursprungliga redigerarens önskan att kringgå godkännandesteget. Tekniskt sett kan vi lämna den här grenen utan några arbetsflödessteg, men som en bra rutin lägger vi till steget Ingen åtgärd. Detta gör det klart för andra utvecklare vad syftet med gren 3 är.
 
    Dubbelklicka på arbetsflödessteget och konfigurera rubriken och beskrivningen:
 

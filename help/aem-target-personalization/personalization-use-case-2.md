@@ -59,28 +59,38 @@ För den här övningen måste följande användare vara involverade och för at
 1. Marknadsföraren skapar en A/B-målaktivitet med omdirigeringserbjudandet som en upplevelse och 100 % webbplatstrafik som tilldelats den nya startsidan med framgångsmål och mätvärden tillagda.
    1. Gå till fliken **Aktiviteter** i ditt Adobe Target-fönster.
    2. Klicka på knappen **Skapa aktivitet** och välj aktivitetstypen som **A/B-test**
+
       ![Adobe Target - Skapa aktivitet](assets/personalization-use-case-2/create-ab-activity.png)
    3. Markera **webbkanalen** och välj **Visual Experience Composer**.
    4. Ange **aktivitets-URL** och klicka på **Nästa** för att öppna Visual Experience Composer.
+
       ![Adobe Target - Skapa aktivitet](assets/personalization-use-case-2/create-activity-ab-name.png)
    5. Aktivera **Tillåt inläsning av osäkra skript** i webbläsaren och läs in sidan igen om du vill att **Visual Experience Composer** ska läsas in.
+
       ![Aktivitet för målinriktning](assets/personalization-use-case-1/load-unsafe-scripts.png)
    6. Observera att WKND-webbplatsens hemsida är öppen i Visual Experience Composer-redigeraren.
+
       ![VEC](assets/personalization-use-case-2/vec.png)
    7. Hovra över **upplevelse B** och välj Visa andra alternativ.
+
       ![Upplevelse B](assets/personalization-use-case-2/redirect-url.png)
    8. Välj alternativet **Omdirigera till URL** och ange URL:en till den nya WKND-startsidan. (http://localhost:4503/content/wknd/en1.html)
+
       ![Upplevelse B](assets/personalization-use-case-2/redirect-url-2.png)
    9. **Spara** dina ändringar och fortsätt med nästa steg i Skapa aktivitet.
    10. Välj **Trafikallokeringsmetod** som manuell och tilldela 100 % trafik till **upplevelse B**.
-      ![Upplev B-trafik](assets/personalization-use-case-2/traffic.png)
+
+       ![Upplev B-trafik](assets/personalization-use-case-2/traffic.png)
    11. Klicka på **Nästa**.
    12. Ange **målvärden** för aktiviteten och spara och stäng A/B-testet.
-      ![Mätvärde för A/B-testmål](assets/personalization-use-case-2/goal-metric.png)
+
+       ![Mätvärde för A/B-testmål](assets/personalization-use-case-2/goal-metric.png)
    13. Ange ett namn (**WKND Home Page Redesign**) för aktiviteten och spara ändringarna.
    14. På skärmen Aktivitetsinformation ser du till att **Aktivera** din aktivitet.
-      ![Aktivera aktivitet](assets/personalization-use-case-2/ab-activate.png)
+
+       ![Aktivera aktivitet](assets/personalization-use-case-2/ab-activate.png)
    15. Navigera till WKND-startsidan (http://localhost:4503/content/wknd/en.html) så dirigeras du till den omdesignade startsidan för WKND-webbplatsen (http://localhost:4503/content/wknd/en1.html).
+
       ![WKND-hemsida har gjorts om](assets/personalization-use-case-2/WKND-home-page-redesign.png)
 
 ## Sammanfattning

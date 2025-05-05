@@ -207,6 +207,7 @@ Så här validerar du problemet:
 1. Kontrollerar att minst ett innehållspaket som ingår i distributionen skriver till `/var`.
 1. Kontrollera att den primära (fetstilta) distributionskön är blockerad på:
    + AEM Author > Tools > Deployment > Distribution
+
      ![Spärrad distributionskö](./assets/build-and-deployment/deploy-to__var--distribution.png)
 1. Om efterföljande distribution misslyckas hämtar du Cloud Manager Distribuera till-loggar med knappen Hämtningslogg:
 

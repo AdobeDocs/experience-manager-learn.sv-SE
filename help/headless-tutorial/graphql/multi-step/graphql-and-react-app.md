@@ -99,11 +99,11 @@ Så här skaffar du React-appen:
 >   Den här React-appen är delvis implementerad. Följ stegen i den här självstudiekursen för att slutföra implementeringen. De JavaScript-filer som behöver implementeras har följande kommentar, se till att du lägger till/uppdaterar koden i de filerna med koden som anges i den här självstudiekursen.
 >
 >
-> //**********************************
+> //**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**
 >
 >  // TODO Implementera detta genom att följa stegen från AEM Headless Tutorial
 >
->  //**********************************
+>  //**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**
 >
 
 ## Anatomi i React-appen

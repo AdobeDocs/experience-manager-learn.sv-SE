@@ -305,7 +305,7 @@ Om du vill granska färgmetadata mappar du två nya fält i bildens metadataram 
 1. Navigera till mappen, eller undermappen, som Bearbetningsprofilen tillämpas på
 1. Överför en ny bild (JPEG, PNG, GIF eller SVG) till mappen eller bearbeta om befintliga bilder med den uppdaterade [Bearbetningsprofilen](#processing-profile)
 1. När bearbetningen är klar markerar du resursen och trycker på __egenskaper__ i det övre åtgärdsfältet för att visa dess metadata
-1. Granska metadatafälten `Colors Family` och `Colors` [](#metadata-schema) för metadata som skrivits tillbaka från den anpassade metadataarbetaren i Asset Compute.
+1. Granska metadatafälten `Colors Family` och `Colors` [&#128279;](#metadata-schema) för metadata som skrivits tillbaka från den anpassade metadataarbetaren i Asset Compute.
 
 När färgmetadata skrivs till resursens metadata på `[dam:Asset]/jcr:content/metadata`-resursen indexeras den här metadata, vilket gör det möjligt att identifiera resurser med dessa termer via sökning. De kan även skrivas tillbaka till resursens binärfil om __DAM Metadata Writeback__ -arbetsflödet anropas.
 

@@ -45,7 +45,7 @@ Låt oss lära oss hur du ställer in rensnings-API-token för att rensa CDN-cac
 
 Token för rensnings-API skapas genom att CDN-regeln konfigureras i AEM-projektkoden.
 
-1. Öppna filen `cdn.yaml` från huvudmappen `config` i ditt AEM-projekt. Exempel: filen cdn.yaml](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml) för [WKND-projektet.
+1. Öppna filen `cdn.yaml` från huvudmappen `config` i ditt AEM-projekt. Exempel: filen cdn.yaml[&#128279;](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml) för WKND-projektet.
 
 1. Lägg till följande CDN-regel i filen `cdn.yaml`:
 

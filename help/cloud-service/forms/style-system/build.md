@@ -29,7 +29,7 @@ Standardformatet används för den tredje knappen.
 
 ## Bygg temaprojektet
 
-Nästa steg är att skapa temaprojektet. Navigera till rotmappen för temaprojektet och kör kommandot _**npm, kör build**_ enligt skärmbilden nedan.
+Nästa steg är att skapa temaprojektet. Navigera till rotmappen för temaprojektet och kör kommandot _&#x200B;**npm, kör build**&#x200B;_ enligt skärmbilden nedan.
 
 ![build-theme](assets/build-theme.png)
 

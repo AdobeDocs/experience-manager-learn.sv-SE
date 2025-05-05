@@ -95,12 +95,12 @@ Så här aktiverar du den här funktionen på servern:
 
 * Installera och starta AEM Forms-servern.
 > Den här funktionen testades på AEM Forms 6.3 och senare
-* [Hämta Google API-nyckel](https://developers.google.com/maps/documentation/javascript/get-api-key).
-* [Importera resurser som hör till den här artikeln till AEM.](assets/geolocationapi.zip)
-* [Öppna det adaptiva formulärfragmentet i redigeringsläge.](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
-* Öppna regelredigeraren för komponenten Bildval.
-* Ersätt &lt;your_api_key> med Google API-nyckeln.
-* Spara ändringarna.
-* [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled).
-* Klicka på ikonen &quot;geolocation&quot; (geopositionering).
-* Formuläret ska fyllas i med den aktuella platsen.
+>* [Hämta Google API-nyckel](https://developers.google.com/maps/documentation/javascript/get-api-key).
+>* [Importera resurser som hör till den här artikeln till AEM.](assets/geolocationapi.zip)
+>* [Öppna det adaptiva formulärfragmentet i redigeringsläge.](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
+>* Öppna regelredigeraren för komponenten Bildval.
+>* Ersätt &lt;your_api_key> med Google API-nyckeln.
+>* Spara ändringarna.
+>* [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled).
+>* Klicka på ikonen &quot;geolocation&quot; (geopositionering).
+>* Formuläret ska fyllas i med den aktuella platsen.

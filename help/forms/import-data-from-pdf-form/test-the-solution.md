@@ -23,4 +23,4 @@ Du kan distribuera exempelresurserna för att få lösningen att fungera på din
 * Hämta och distribuera paketet med OSGi-webbkonsolen[Custom Document Services Bundle](/help/forms/assets/common-osgi-bundles/AEMFormsDocumentServices.core-1.0-SNAPSHOT.jar)
 * Hämta och distribuera paketet med OSGi-webbkonsolen [Developing with Service User Bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 * Hämta och distribuera paketet med OSGi-webbkonsolen[importera data från PDF-filen](./assets/onlineToOffline.core-1.0.0-SNAPSHOT.jar)
-* Lägg till posten _**DevelopingWithServiceUser.core:getresouresolver=data**_ i _**Användarmappningstjänsten för Apache Sling-tjänsten**_ OSGi-konfigurationskonsolen
+* Lägg till posten _&#x200B;**DevelopingWithServiceUser.core:getresouresolver=data**&#x200B;_ i _&#x200B;**Användarmappningstjänsten för Apache Sling-tjänsten**&#x200B;_ OSGi-konfigurationskonsolen

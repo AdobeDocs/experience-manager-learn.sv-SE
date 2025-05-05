@@ -220,6 +220,7 @@ Ibland kanske du behöver en speciell videoförinställning som inte matchar ins
 
    - Alla konton för direktuppspelad video har dussintals förinställningar, och om du skapar egna förinställningar kan du även se dem här.
    - Du kan filtrera efter typ med hjälp av den nedrullningsbara menyn. Förinställningarna är uppdelade i Dator, Mobil och Tablet.
+
      ![bild](assets/video-overview/video-overview-4.jpg)
 
 2. I kolumnen Aktiv kan du välja om du vill visa alla förinställningar vid överföring eller bara de du väljer. Om du är i USA kan du avmarkera de europeiska PAL-förinställningarna och avmarkera NTSC-förinställningarna om du är i Storbritannien/EMEA.

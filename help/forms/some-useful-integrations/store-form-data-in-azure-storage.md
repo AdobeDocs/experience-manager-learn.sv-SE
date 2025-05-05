@@ -48,7 +48,7 @@ Se till att du anger rätt behörigheter och lämpligt slutdatum enligt skärmbi
 
 ## Ange Blob SAS-token och lagrings-URI
 
-För att göra koden mer generisk kan de två egenskaperna konfigureras med OSGi-konfigurationen enligt nedan. _**aemformstutorial**_ är namnet på lagringskontot, _**formsending**_ är den behållare i vilken data ska lagras.
+För att göra koden mer generisk kan de två egenskaperna konfigureras med OSGi-konfigurationen enligt nedan. _&#x200B;**aemformstutorial**&#x200B;_ är namnet på lagringskontot, _&#x200B;**formsending**&#x200B;_ är den behållare i vilken data ska lagras.
 Kontrollera att du har / i slutet av lagringsURI:n och att SAS-token börjar med?
 ![osgi-configuration](./assets/azure-portal-osgi-configuration.png)
 

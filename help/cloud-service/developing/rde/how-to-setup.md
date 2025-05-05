@@ -40,7 +40,7 @@ Följande bör installeras lokalt:
 
 ## Lokal installation
 
-Utför följande steg om du vill distribuera ](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)-koden och innehållet för [WKND Sites Project på den lokala datorn.
+Utför följande steg om du vill distribuera [&#128279;](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project)-koden och innehållet för WKND Sites Project på den lokala datorn.
 
 ### Adobe I/O Runtime Extensible CLI
 

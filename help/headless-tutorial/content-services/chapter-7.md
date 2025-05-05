@@ -27,7 +27,7 @@ Användningen av [Android](https://developer.android.com/) är i stort sett ovik
 
 Android används som självstudiekurs eftersom det går att köra en Android Emulator i Windows, macOs och Linux, dess popularitet och att det kan skrivas som Java, ett språk som utvecklarna förstår väl AEM.
 
-*Självstudiekursens Android-mobilapp är **inte**avsedd att instruera dig att skapa Android-mobilappar eller förmedla bästa praxis för Android-utveckling, utan snarare att illustrera hur AEM innehållstjänster kan användas från ett mobilprogram.*
+*Självstudiekursens Android-mobilapp är **inte**&#x200B;avsedd att instruera dig att skapa Android-mobilappar eller förmedla bästa praxis för Android-utveckling, utan snarare att illustrera hur AEM innehållstjänster kan användas från ett mobilprogram.*
 
 ### Hur AEM innehållstjänster driver mobilappsupplevelsen
 

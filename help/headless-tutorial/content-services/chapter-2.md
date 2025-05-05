@@ -45,7 +45,7 @@ Om Content Fragment Models **inte** är aktiverat för en konfiguration visas in
 1. Logga in på AEM författare som en användare med tillräcklig behörighet för att ändra den relevanta konfigurationen.
    * I den här självstudiekursen kan användaren **admin** användas.
 1. Navigera till **[!UICONTROL Tool]> [!UICONTROL General] >[!UICONTROL Configuration Browser]**
-1. Tryck på mappikonen **** bredvid **[!DNL WKND Mobile]** för att markera och tryck sedan på knappen **[!UICONTROL Edit]** i det övre vänstra hörnet.
+1. Tryck på mappikonen **&#x200B;**&#x200B;bredvid **[!DNL WKND Mobile]** för att markera och tryck sedan på knappen **[!UICONTROL Edit]** i det övre vänstra hörnet.
 1. Välj **[!UICONTROL Content Fragment Models]** och tryck på **[!UICONTROL Save & Close]** i det övre högra hörnet.
 
    Detta aktiverar innehållsfragmentsmodeller i innehållsträden i resursmappen där konfigurationen [!DNL WKND Mobile] används.

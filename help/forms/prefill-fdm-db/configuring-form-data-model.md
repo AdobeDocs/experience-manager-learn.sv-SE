@@ -58,8 +58,8 @@ Det första steget för att skapa en RDBMS-baserad formulärdatamodell är att k
 * ![get-service](assets/get-service.png)
 >[!NOTE]
 > get-tjänsten förväntar sig ett värde som mappas till empID-kolumnen för entiteten. Det finns flera sätt att skicka det här värdet och i den här självstudien skickas empID via frågeparametern empID.
-* Klicka på _Klar_ för att spara argumenten för tjänsten get
-* Klicka på _Klar_ om du vill spara ändringar i formulärdatamodellen
+>* Klicka på _Klar_ för att spara argumenten för tjänsten get
+>* Klicka på _Klar_ om du vill spara ändringar i formulärdatamodellen
 
 ## Lägg till association mellan två entiteter
 

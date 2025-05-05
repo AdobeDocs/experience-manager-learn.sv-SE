@@ -134,7 +134,7 @@ Distribuera den uppdaterade vertikaltabs-komponenten till din molninstans.
 Distribuera det uppdaterade temat med hjälp av frontend-pipeline.
 Skapa en formatvariant för de lodräta flikkomponenterna enligt nedan
 ![style-variation](assets/verticaltab-style-variation.png)
-Vi har skapat en stilvariation som kallas Marketing och som är kopplad till CSS-klassen _**cmp-verticaltabs—marketing**_ .
+Vi har skapat en stilvariation som kallas Marketing och som är kopplad till CSS-klassen _&#x200B;**cmp-verticaltabs—marketing**&#x200B;_ .
 Skapa ett anpassat formulär med en vertikal flikkomponent. Koppla den lodräta flikkomponenten till varianten av marknadsföringsformatet.
 Lägg till några flikar på de lodräta flikarna och ge dem ett namn som matchar bilderna som definieras i ikonkartan, till exempel home, family.
 ![home-icon](assets/tab-name.png)

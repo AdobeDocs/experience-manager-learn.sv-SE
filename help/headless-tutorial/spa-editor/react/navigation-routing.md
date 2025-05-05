@@ -160,7 +160,7 @@ Kontrollera sedan JSON-modellen som driver multivisningsupplevelsen av SPA.
 
 1. Mallen **SPA Root** har en extra flik för **Hierarisk struktur** som styr JSON-innehållet som samlas in. **Strukturdjupet** avgör hur djupt i platshierarkin underordnade sidor ska samlas under **rotmappen**. Du kan också använda fältet **Strukturmönster** för att filtrera bort ytterligare sidor baserat på ett reguljärt uttryck.
 
-   Uppdatera **strukturdjupet** till ****:
+   Uppdatera **strukturdjupet** till **&#x200B;**:
 
    ![Uppdatera strukturdjup](assets/navigation-routing/update-structure-depth.png)
 

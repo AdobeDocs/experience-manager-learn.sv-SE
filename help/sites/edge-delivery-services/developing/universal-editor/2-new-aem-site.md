@@ -21,7 +21,7 @@ ht-degree: 0%
 
 På AEM webbplats kan du redigera, hantera och publicera webbplatsens innehåll. Om du vill skapa en AEM-webbplats som levereras via Edge Delivery Services och har skapats med Universal Editor använder du [Edge Delivery Services med AEM-redigeringsmallen](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases) och skapar en ny webbplats på AEM Author.
 
-På AEM webbplats lagras och redigeras webbplatsens innehåll. Den slutliga upplevelsen är en kombination av AEM webbplatsinnehåll och koden ](./1-new-code-project.md) för webbplatsen [.
+På AEM webbplats lagras och redigeras webbplatsens innehåll. Den slutliga upplevelsen är en kombination av AEM webbplatsinnehåll och koden [&#128279;](./1-new-code-project.md) för webbplatsen .
 
 ![Ny AEM-webbplats för Edge Delivery Services och Universal Editor](./assets/2-new-aem-site/new-site.png)
 

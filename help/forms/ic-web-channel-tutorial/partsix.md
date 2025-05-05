@@ -37,7 +37,7 @@ I den här delen ska vi skapa interaktiv kommunikation för webbkanalen.
    1. Avmarkera kryssrutan Utskriftskanal. Vi skapar inte dokumentet för utskriftskanalen.
    1. Webb: Välj det här alternativet om du vill generera dokumentet för webbkanalen
    1. Interaktiv kommunikation: Mall: **global>RetirementAccount** t(Det här är mallen som skapades i det tidigare steget)
-   1. Tema:** Referenstema ->Canvas 2.0**
+   1. Tema:**&#x200B; Referenstema ->Canvas 2.0**
 
 1. Tryck på Skapa
 1. Du kan antingen klicka på Klar eller Redigera för att stänga dialogrutan.

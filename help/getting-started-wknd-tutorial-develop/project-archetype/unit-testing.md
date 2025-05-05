@@ -92,7 +92,7 @@ Det första steget är att undersöka Maven-beroenden för att stödja skrivande
 1. Apache Sling Mocks
 1. AEM Mocks Test Framework (av io.wcm)
 
-Testberoendena **JUnit5**, **Mockito och **AEM Mocks** läggs automatiskt till i projektet under installationen med [AEM Maven-arketypen](project-setup.md).
+Testberoendena **JUnit5**, **Mockito och &#x200B;** AEM Mocks** läggs automatiskt till i projektet under installationen med [AEM Maven-arketypen](project-setup.md).
 
 1. Om du vill visa dessa beroenden öppnar du den överordnade reaktorns POM på **aem-guides-wknd/pom.xml**, navigerar till `<dependencies>..</dependencies>` och visar beroendena för JUnit, Mockito, Apache Sling Mocks och AEM Mock Tests av io.wcm under `<!-- Testing -->`.
 1. Kontrollera att `io.wcm.testing.aem-mock.junit5` är inställt på **4.1.0**:

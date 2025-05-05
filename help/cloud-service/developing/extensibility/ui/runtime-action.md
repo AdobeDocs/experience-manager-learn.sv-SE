@@ -44,7 +44,7 @@ AEM UI-tillägget finns i vissa AEM-gränssnitt, tillägg och tillhörande åtg�
 
 Adobe I/O Runtime-åtgärder anropas huvudsakligen från två platser i ett AEM-användargränssnitt:
 
-1. ](./extension-registration.md) `onClick(..)`-hanteraren för [tilläggsregistreringen
+1. [&#128279;](./extension-registration.md) `onClick(..)`-hanteraren för tilläggsregistreringen
 1. Inom en [modal](./modal.md)
 
 ### Från tilläggsregistrering
