@@ -1,15 +1,15 @@
 ---
-title: AEM Sites videor och självstudiekurser
-description: Adobe Experience Manager (AEM) Sites är en ledande plattform för upplevelsehantering. Den här användarhandboken innehåller videor och självstudiekurser om de många funktionerna i AEM Sites.
+title: Videor och självstudiekurser om AEM Sites
+description: Bläddra bland videor och självstudiekurser om Adobe Experience Manager Sites funktioner. AEM Sites är en ledande plattform för upplevelsehantering.
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 topic: Content Management
 doc-type: Catalog
 exl-id: cde4ce7f-0afe-4632-8c1c-354586f296d5
-source-git-commit: 5bd752ec257763e6d5da99c3da4b44fa9a43fd25
+source-git-commit: 85472bce41e7d2911bcb15d1ec70be2b094012fc
 workflow-type: tm+mt
-source-wordcount: '517'
-ht-degree: 1%
+source-wordcount: '512'
+ht-degree: 2%
 
 ---
 
@@ -52,7 +52,7 @@ Lär dig mer om de tre vägar du kan bygga med AEM Sites med hjälp av följande
 
 <!-- CARDS
 
-* https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview
   {title = Traditional Sites - WKND Tutorial}
   {description = Learn how to build a sample AEM Sites project using the WKND tutorial. This guide walks you through project setup, Core Components, Editable Templates, client-side libraries, and component development.}
   {image = ./assets/aem-wknd-spa-editor-tutorial.png}
@@ -62,7 +62,7 @@ Lär dig mer om de tre vägar du kan bygga med AEM Sites med hjälp av följande
   {description = Explore Edge Delivery Services with comprehensive guides. The Build, Publish, and Launch guides cover everything you need to get started with EDS.}
   {image = ./assets/edge-delivery-services.png}
   {target = _blank}
-* https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/overview
+* https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview
   {title = Headless/API-First - Tutorials}
   {description = Learn how to build headless applications powered by AEM content. Tutorials cover frameworks like iOS, Android, and React—choose what fits your stack.}
   {image = ./assets/headless.png}
@@ -74,7 +74,7 @@ Lär dig mer om de tre vägar du kan bygga med AEM Sites med hjälp av följande
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" title="Traditionella webbplatser - WKND, självstudiekurs" target="_self" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" title="Traditionella webbplatser - WKND, självstudiekurs" target="_self" rel="referrer">
                         <img class="is-bordered-r-small" src="./assets/aem-wknd-spa-editor-tutorial.png" alt="Traditionella webbplatser - WKND, självstudiekurs"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -83,11 +83,11 @@ Lär dig mer om de tre vägar du kan bygga med AEM Sites med hjälp av följande
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" target="_self" rel="referrer" title="Traditionella webbplatser - WKND, självstudiekurs">Traditionella webbplatser - WKND-självstudiekurs</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" target="_self" rel="referrer" title="Traditionella webbplatser - WKND, självstudiekurs">Traditionella webbplatser - WKND-självstudiekurs</a>
                     </p>
                     <p class="is-size-6">Lär dig hur du bygger ett AEM Sites-projekt med WKND-självstudiekursen. I den här guiden får du hjälp med projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                 </a>
             </div>
@@ -120,7 +120,7 @@ Lär dig mer om de tre vägar du kan bygga med AEM Sites med hjälp av följande
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/overview" title="Headless/API-First - Tutorials" target="_self" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview" title="Headless/API-First - Tutorials" target="_self" rel="referrer">
                         <img class="is-bordered-r-small" src="./assets/headless.png" alt="Headless/API-First - Tutorials"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -129,11 +129,11 @@ Lär dig mer om de tre vägar du kan bygga med AEM Sites med hjälp av följande
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/overview" target="_self" rel="referrer" title="Headless/API-First - Tutorials">Headless/API-First - Tutorials</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview" target="_self" rel="referrer" title="Headless/API-First - Tutorials">Headless/API-First - Tutorials</a>
                     </p>
                     <p class="is-size-6">Lär dig hur du skapar headless-applikationer som bygger på AEM-material. Självstudiekurserna omfattar ramverk som iOS, Android™ och React - välj vad som passar er bäst.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/overview" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                 </a>
             </div>
@@ -145,10 +145,10 @@ Lär dig mer om de tre vägar du kan bygga med AEM Sites med hjälp av följande
 
 ## Ytterligare resurser
 
-* [AEM Sites redigeringsdokumentation](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/sites/authoring/essentials/first-steps)
-* [AEM Sites Developing documentation](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/developing/introduction/getting-started)
-* [AEM Sites Administering-dokumentation](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/sites/administering/home)
-* [AEM Sites distributionsdokumentation](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/introduction/platform)
+* [AEM Sites redigeringsdokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/authoring/essentials/first-steps)
+* [AEM Sites Developing documentation](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/developing/introduction/getting-started)
+* [AEM Sites Administering-dokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/home)
+* [AEM Sites distributionsdokumentation](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/introduction/platform)
 * [AEM as a Cloud Service självstudiekurser](/help/cloud-service/overview.md)
 * [AEM Assets självstudiekurser](/help/assets/overview.md)
 * [AEM Forms självstudiekurser](/help/forms/overview.md)
