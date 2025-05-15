@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 610fe6fc91a400baa9d7f5d40a6a5c2084f93ed0
+source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,8 @@ ht-degree: 0%
 # Konfigurera OpenAPI-baserade AEM API:er
 
 Lär dig hur du konfigurerar AEM as a Cloud Service-miljön för att ge åtkomst till OpenAPI-baserade AEM API:er.
+
+I det här exemplet används AEM Assets-API:t som använder autentiseringsmetoden Server-till-server för att demonstrera konfigurationsprocessen. Samma steg kan följas för andra OpenAPI-baserade AEM-API:er.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
@@ -78,13 +80,25 @@ Granska associationen genom att klicka på ikonen _Visa detaljer_ bredvid produk
 
 ![Granska tjänster som är kopplade till produktprofilen](./assets/setup/review-services-associated-with-product-profile.png)
 
-Som standard är **AEM Assets API-användartjänsten** inte kopplad till någon produktprofil. Låt oss associera det med den nya produktprofilen **AEM Assets Collaborator Users - författare - Program XXX - Environment XXX**. Efter den här associationen kan ADC-projektets _API för tillgångsförfattare_ konfigurera den önskade autentiseringen från server till server och associera autentiseringskontot från ADC-projektet (som skapas i nästa steg) med produktprofilen.
+### Aktivera åtkomst till AEM Assets API:er{#enable-aem-assets-apis-access}
+
+Som standard är **AEM Assets API-användartjänsten** inte kopplad till någon produktprofil. Låt oss associera det med den nya produktprofilen **AEM Assets Collaborator Users - författare - Program XXX - Miljö XXX** eller någon annan produktprofil som du vill använda för AEM Assets API-åtkomst.
 
 ![Koppla AEM Assets API-användartjänst till produktprofil](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
 
+### Aktivera autentisering från server till server
+
+Om du vill aktivera autentisering från server till server för de AEM-API:er du vill använda måste användaren som konfigurerar integrering med Adobe Developer Console (ADC) läggas till som utvecklare i den produktprofil där tjänsten är kopplad.
+
+Om du till exempel vill aktivera autentisering från server till server för AEM Assets API måste användaren läggas till som utvecklare i produktprofilen för **AEM Assets Collaborator Users - författare - Program XXX - Miljö XXX**.
+
+![Koppla utvecklare till produktprofil](./assets/setup/associate-developer-to-product-profile.png)
+
+Efter den här associationen kan ADC-projektets _API för tillgångsförfattare_ konfigurera den önskade autentiseringen från server till server och associera autentiseringskontot från ADC-projektet (som skapas i nästa steg) med produktprofilen.
+
 >[!IMPORTANT]
 >
->Ovanstående steg är viktigt för att aktivera autentisering från server till server för AEM Assets API. Utan den här associationen kan AEM Assets API inte användas med autentiseringsmetoden Server-till-server.
+>Ovanstående steg är viktigt för att aktivera autentisering från server till server för önskat AEM API. Utan den här associationen kan AEM API inte användas med autentiseringsmetoden Server-till-server.
 
 ## Skapa Adobe Developer Console-projekt (ADC){#adc-project}
 
@@ -125,6 +139,11 @@ När du har skapat ADC-projektet måste du lägga till de AEM-API:er du vill anv
    ![Välj autentisering](./assets/s2s/select-authentication.png)
 
    Server-till-server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Autentiseringsalternativen Web App och Single Page App är lämpliga för program som behöver API-åtkomst åt användarna. Mer information finns i [Skillnaden mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App respektive Single Page App ](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
+
+   >[!TIP]
+   >
+   >Om du inte ser autentiseringsalternativet Server-till-server betyder det att användaren som ställer in integreringen inte läggs till som utvecklare i den produktprofil där tjänsten är kopplad. Mer information finns i [Aktivera autentisering från server till server](#enable-server-to-server-authentication).
+
 
 1. Om det behövs kan du byta namn på API:t för enklare identifiering. I demosyfte används standardnamnet.
 

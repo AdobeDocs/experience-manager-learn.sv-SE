@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
 workflow-type: tm+mt
-source-wordcount: '1687'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -88,6 +88,10 @@ Konfigurationssteget för ADC-projekt är _upprepat_ från [Konfigurera OpenAPI-
 1. I dialogrutan _Konfigurera API_ väljer du autentiseringsalternativet **Server-till-server** och klickar på **Nästa**. Server-till-server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion.
 
    ![Välj autentisering](../assets/s2s/select-authentication.png)
+
+   >[!TIP]
+   >
+   >Om du inte ser autentiseringsalternativet Server-till-server betyder det att användaren som ställer in integreringen inte läggs till som utvecklare i den produktprofil där tjänsten är kopplad. Mer information finns i [Aktivera autentisering från server till server](../setup.md#enable-server-to-server-authentication).
 
 1. Byt namn på autentiseringsuppgifterna för enklare identifiering (om det behövs) och klicka på **Nästa**. I demosyfte används standardnamnet.
 
