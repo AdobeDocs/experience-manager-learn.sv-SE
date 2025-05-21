@@ -12,7 +12,7 @@ last-substantial-update: 2024-02-13T00:00:00Z
 jira: KT-14901
 thumbnail: KT-14901.jpeg
 exl-id: 070cbe54-2379-448b-bb7d-3756a60b65f0
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: ab499385a1df8c4b0ac58b6a382faa29b262e3ba
 workflow-type: tm+mt
 source-wordcount: '1518'
 ht-degree: 0%
@@ -57,8 +57,8 @@ För att kunna genomföra den här självstudiekursen behöver du:
 
 Utvecklingsstegen på hög nivå är följande:
 
-1. [Modernisering av AEM as a Cloud Service-miljön](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
-1. [Aktivera åtkomst till AEM API:er](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
+1. [Modernisering av AEM as a Cloud Service-miljön](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#modernization-of-aem-as-a-cloud-service-environment)
+1. [Aktivera åtkomst till AEM API:er](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis#enable-aem-apis-access)
 1. [Skapa ett projekt i Adobe Developer Console (ADC)](./runtime-action.md#Create-project-in-Adobe-Developer-Console)
 1. [Initiera projektet för lokal utveckling](./runtime-action.md#initialize-project-for-local-development)
 1. Konfigurera projektet i ADC
@@ -69,7 +69,7 @@ Utvecklingsstegen på hög nivå är följande:
 1. Skapa och tillämpa metadatamatchemat för resurser
 1. Verifiering av överföring av resurser och uppdatering av metadata
 
-Mer information om steg 1-2 finns i handboken [Invoke OpenAPI-baserade AEM API:er](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) och för steg 3-4 finns i exemplet [Adobe I/O Runtime Action och AEM Events](./runtime-action.md#) . För steg 5-9, se följande avsnitt.
+Mer information om steg 1-2 finns i handboken [Invoke OpenAPI-baserade AEM API:er](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/aem-apis/invoke-openapi-based-aem-apis) och för steg 3-4 finns i exemplet [Adobe I/O Runtime Action och AEM Events](./runtime-action.md#) . För steg 5-9, se följande avsnitt.
 
 ### Konfigurera projektet i Adobe Developer Console (ADC)
 
@@ -221,7 +221,7 @@ Se den bifogade filen [WKND-Assets-PIM-Integration.zip](../assets/examples/asset
         'Content-Type': 'application/json-patch+json',
         'If-Match': '*',
         'X-Adobe-Accept-Experimental': '1',
-        'X-Api-Key': 'aem-assets-management-api', // temporary value
+        'X-Api-Key': '12345676', // Use the `ClientID` value from the ADC Project's credentials section
         Authorization: `Bearer ${access_token}`,
       },
       body: JSON.stringify(transformedMetadata),
@@ -293,7 +293,7 @@ Se den bifogade filen [WKND-Assets-PIM-Integration.zip](../assets/examples/asset
 
 Som standard har WKND Sites-projektet inte objektets metadataram för att visa PIM-specifika metadata som SKU, leverantörsnamn osv. Låt oss skapa och använda metadatamatchemat för resurser i AEM-instansen.
 
-1. Logga in på instansen av AEM as a Cloud Service-resursen och var i [resursvyn](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/authoring/switch-views).
+1. Logga in på instansen av AEM as a Cloud Service-resursen och var i [resursvyn](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views).
 
    ![AEM Assets-vy](../assets/examples/assets-pim-integration/aem-assets-view.png)
 
