@@ -34,4 +34,4 @@ Tack vare den här integreringen kan AEM Author kommunicera direkt med Adobe Tar
 
 >[!CAUTION]
 >
->Det finns ett känt fel i konfigurationen av Adobe Target Cloud Services som visas i videon. Följ samma steg i videon tills problemet är löst, men använd den [gamla Adobe Target Cloud Services-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html).
+>Det finns ett känt fel i konfigurationen av Adobe Target Cloud Services som visas i videon. Följ samma steg i videon tills problemet är löst, men använd den [gamla Adobe Target Cloud Services-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html?lang=sv-SE).
