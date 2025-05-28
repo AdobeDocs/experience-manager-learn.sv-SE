@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: c4a961fb-e440-4f78-b40d-e8049078b3c0
 duration: 307
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: b395b3b84e63fe6c24e597d1628f4aed5ba47469
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 0%
@@ -30,7 +30,7 @@ I det här kapitlet gör vi konfigurationsändringar i __WKND Sites-projektet__ 
 
 ## Översikt över konfigurationsändringar i AEM-projekt i fullhög
 
->[!VIDEO](https://video.tv.adobe.com/v/3453613?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
 ## Förutsättningar {#prerequisites}
 
@@ -94,7 +94,7 @@ Det finns tre projektrelaterade konfigurationsändringar och en formatändring s
            }),
        new CopyWebpackPlugin({
            patterns: [
-               { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './clientlib-site' }
+               { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './theme' }
            ]
        })
    ...
@@ -195,7 +195,7 @@ Slutligen kan du överföra dessa ändringar till Adobe Git-databasen.
 
 ## Varning - _Aktivera frontslutspipeline_-knapp
 
-Alternativet [Plats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=sv-SE) för [spårningsväljaren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=sv-SE) visar knappen **Aktivera frontpipeline** när du väljer platsroten eller webbplatssidan. Om du klickar på knappen **Aktivera frontpipeline** åsidosätts de **Sling-konfigurationer** som anges ovan. Kontrollera att **du inte klickar på den här knappen** efter att du distribuerat de ovanstående ändringarna via Cloud Manager pipeline-körning.
+Alternativet [Plats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) för [spårningsväljaren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) visar knappen **Aktivera frontpipeline** när du väljer platsroten eller webbplatssidan. Om du klickar på knappen **Aktivera frontpipeline** åsidosätts de **Sling-konfigurationer** som anges ovan. Kontrollera att **du inte klickar på den här knappen** efter att du distribuerat de ovanstående ändringarna via Cloud Manager pipeline-körning.
 
 ![Aktivera knapp för frontslutspipeline](assets/enable-front-end-Pipeline-button.png)
 
