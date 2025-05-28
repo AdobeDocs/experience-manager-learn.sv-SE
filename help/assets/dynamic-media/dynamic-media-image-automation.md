@@ -60,5 +60,5 @@ Här följer exempel-URL:er för Dynamic Media Image Server som används i video
 
 ## API:er för Dynamic Media Image Server
 
-* [API för dynamisk mediabildserver och återgivning](https://experienceleague.adobe.com/en/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/c-http-protocol-reference)
+* [API för dynamisk mediabildserver och återgivning](https://experienceleague.adobe.com/sv/docs/dynamic-media-developer-resources/image-serving-api/image-serving-api/http-protocol-reference/c-http-protocol-reference)
 * [Förhandsvisning av dynamisk ögonblicksbild av media](https://snapshot.scene7.com/)
