@@ -6,9 +6,9 @@ feature-set: Experience Manager Sites, Experience Manager
 solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 17aa4aeb053a0bc0beca5e005185c49cf7a06a67
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '594'
 ht-degree: 5%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 5%
    + [Massmetadata](document-authoring/bulk-metadata.md)
    + [Sidmetadata](document-authoring/page-metadata.md)
    + [Autentisering av författare](document-authoring/author-authentication.md)
-   + Använda {#how-to}
+   + Så här gör du{#how-to}
       + [Dokumentgranskning](./document-authoring/how-to/document-audit.md)
       + [Dokumentbehörigheter](./document-authoring/how-to/document-permissions.md)
       + [Dokumentversioner](./document-authoring/how-to/document-versions.md)
@@ -41,7 +41,7 @@ ht-degree: 5%
       + [Platsmigrering med importverktyget](./document-authoring/how-to/migration-using-importer.md)
       + [Anpassa importeraren](./document-authoring/how-to/customizing-importer.md)
       + [Massimport med importverktyg](./document-authoring/how-to/bulk-importing-using-importer.md)
-      + Generera variationer {#generate-variations}
+      + Generera variationer{#generate-variations}
          + [Ökning](./document-authoring/how-to/generate-variations/overview.md)
          + [Konfigurera Sidekick](./document-authoring/how-to/generate-variations/configure-sidekick.md)
          + [Promptmallar](./document-authoring/how-to/generate-variations/prompt-templates.md)
@@ -73,12 +73,12 @@ ht-degree: 5%
    + [Formatsystem](page-authoring/style-system-feature-video-use.md)
    + [Timewarp](page-authoring/timewarp-feature-video-use.md)
    + [Launches](page-authoring/launches.md)
-   + Lär dig av dina kollegor {#expert-advice}
+   + Lär dig av andra {#expert-advice}
       + [Tips för webbplatshierarki](page-authoring/expert-advice/site-hierarchy.md)
 + Generativ AI {#generative-ai}
    + [Generera variationer](./generative-ai/generate-variations.md)
 + Innehållsfragment {#content-fragments}
-   + [Konsolen för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=sv-SE){target=_blank}
+   + [Konsolen för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
    + [Skapa innehållsfragment](content-fragments/content-fragments-feature-video-use.md)
    + [Leverera innehållsfragment](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [Översätta innehållsfragment](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -86,7 +86,7 @@ ht-degree: 5%
 + Upplevelsefragment {#experience-fragments}
    + [Använda upplevelsefragment](experience-fragments/experience-fragments-feature-video-use.md)
    + [Byggblock](experience-fragments/building-blocks.md)
-   + [Innehållsfragment kontra Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE){target=_blank}
+   + [Innehållsfragment kontra Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
    + [Ökning](./edge-delivery-services/overview.md)
    + Utvecklar{#developing}
@@ -98,7 +98,7 @@ ht-degree: 5%
       + [Dokumentstruktur](edge-delivery-services/developing/document-structure.md)
       + [Lokal utveckling](edge-delivery-services/developing/local-development.md)
       + [Git](edge-delivery-services/developing/git.md)
-      + Universell redigerare {#universal-editor}
+      + Universal Editor {#universal-editor}
          + [Ökning](./edge-delivery-services/developing/universal-editor/0-overview.md)
          + [Nytt kodprojekt](./edge-delivery-services/developing/universal-editor/1-new-code-project.md)
          + [Ny AEM-webbplats](./edge-delivery-services/developing/universal-editor/2-new-aem-site.md)
@@ -115,12 +115,12 @@ ht-degree: 5%
       + [RSS-flöden](edge-delivery-services/how-to/rss.md)
       + [Delning i sociala medier](edge-delivery-services/how-to/social-media-sharing.md)
       + [Tar bort sidor](edge-delivery-services/how-to/delete-page.md)
-+ Utveckling {#developing}
++ Utvecklar {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM Project Archetype](developing/aem-project-archetype.md)
-   + [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE){target=_blank}
-   + [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE){target=_blank}
-   + [Komma igång med AEM SPA Editor och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=sv-SE){target=_blank}
+   + [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
+   + [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
+   + [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
    + [Utöka sidegenskaper](developing/page-properties-technical-video-develop.md)
    + [Responsiva brytpunkter](developing/responsive-breakpoints.md)
    + [Utveckla med Style System](developing/style-system-technical-video-understand.md)
@@ -130,8 +130,8 @@ ht-degree: 5%
    + [Implementera enkel sökning](developing/search-tutorial-develop.md)
    + [Delning av sociala medier](developing/social-media-sharing-technical-video-use.md)
    + [Anpassa komponentikoner](developing/component-icons-technical-video-develop.md)
-+ Personanpassning {#personalization}
-   + [Integrering med Adobe Target](https://helpx.adobe.com/se/marketing-cloud/how-to/aem-target.html){target=_blank}
++ Personalization {#personalization}
+   + [Integrering med Adobe Target](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html){target=_blank}
    + [Konfigurera Experience Fragments och Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [Använda Experience Fragments med Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [Konfigurera ContextHub](personalization/context-hub-technical-video-setup.md)
@@ -144,8 +144,8 @@ ht-degree: 5%
    + [Webbplatskartor](./seo/sitemaps.md)
 + Enkelsidiga program {#spa-editor}
    + [Använda SPA-redigeraren](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [Komma igång med AEM SPA Editor och Reagera](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=sv-SE){target=_blank}
-+ Hantering av flera platser {#multi-site-management}
+   + [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
++ Hantering av flera webbplatser {#multi-site-management}
    + [Introduktion till språkkopia](./multi-site-management/language-copy-overview.md)
    + [Live Copy och Blueprint](./multi-site-management/live-copy-and-blueprint.md)
    + [Skapa en Live Copy](./multi-site-management/create-live-copy.md)
@@ -165,7 +165,7 @@ ht-degree: 5%
    + [Använda språkkopia](translation/language-copy-feature-video-use.md)
    + [Konfigurera översättningsregler](translation/translation-rules-editor-technical-video-setup.md)
    + [Översättningsförbättringar](translation/translation-enhancements-feature-video-use.md)
-+ Integrationer {#integrations}
++ Integreringar {#integrations}
    + Experience Platform {#experience-platform}
       + [Generera FPID](integrations/platform/fpid.md)
       + [Web SDK](integrations/platform/web-sdk.md)
@@ -192,8 +192,9 @@ ht-degree: 5%
       + [Skapa målaktivitet med Experience Fragment-erbjudanden](integrations/adobe-target/create-target-activity.md)
       + [Personalization med Visual Experience Composer](integrations/adobe-target/personalization-using-vec.md)
       + [Personalization med en komplett webbsida](integrations/adobe-target/personalization-web-page.md)
-+ Lär dig av dina kollegor {#expert-resources}
++ Lär dig av andra {#expert-resources}
    + [Ökning](expert-resources/learn-from-your-peers-overview.md)
+   + [Skapa redigeringshandbok i AEM Sites](expert-resources/authoring-guide-in-sites.md)
    + [AEM Sites - utvärdering av löptid](expert-resources/maturity-assessment.md)
    + [Platsunderhåll](expert-resources/site-maintenance.md)
    + [AEM Champion Tips and Tricks: Session 1](expert-resources/champion-tips-1.md)
