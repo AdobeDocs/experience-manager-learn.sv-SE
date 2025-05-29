@@ -78,7 +78,7 @@ ht-degree: 5%
 + Generativ AI {#generative-ai}
    + [Generera variationer](./generative-ai/generate-variations.md)
 + Innehållsfragment {#content-fragments}
-   + [Konsolen för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
+   + [Konsolen för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=sv-SE){target=_blank}
    + [Skapa innehållsfragment](content-fragments/content-fragments-feature-video-use.md)
    + [Leverera innehållsfragment](content-fragments/content-fragments-delivery-feature-video-use.md)
    + [Översätta innehållsfragment](content-fragments/content-fragments-translation-feature-video-use.md)
@@ -86,7 +86,7 @@ ht-degree: 5%
 + Upplevelsefragment {#experience-fragments}
    + [Använda upplevelsefragment](experience-fragments/experience-fragments-feature-video-use.md)
    + [Byggblock](experience-fragments/building-blocks.md)
-   + [Innehållsfragment kontra Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html){target=_blank}
+   + [Innehållsfragment kontra Upplevelsefragment](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/understand-content-fragments-and-experience-fragments.html?lang=sv-SE){target=_blank}
 + Edge Delivery Services{#edge-delivery-services}
    + [Ökning](./edge-delivery-services/overview.md)
    + Utvecklar{#developing}
@@ -118,9 +118,9 @@ ht-degree: 5%
 + Utvecklar {#developing}
    + [Edge Delivery Services](developing/edge-delivery-services.md)
    + [AEM Project Archetype](developing/aem-project-archetype.md)
-   + [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
-   + [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html){target=_blank}
-   + [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
+   + [Komma igång med AEM Sites](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE){target=_blank}
+   + [Komma igång med AEM Headless](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/overview.html?lang=sv-SE){target=_blank}
+   + [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=sv-SE){target=_blank}
    + [Utöka sidegenskaper](developing/page-properties-technical-video-develop.md)
    + [Responsiva brytpunkter](developing/responsive-breakpoints.md)
    + [Utveckla med Style System](developing/style-system-technical-video-understand.md)
@@ -131,7 +131,7 @@ ht-degree: 5%
    + [Delning av sociala medier](developing/social-media-sharing-technical-video-use.md)
    + [Anpassa komponentikoner](developing/component-icons-technical-video-develop.md)
 + Personalization {#personalization}
-   + [Integrering med Adobe Target](https://helpx.adobe.com/marketing-cloud/how-to/aem-target.html){target=_blank}
+   + [Integrering med Adobe Target](https://helpx.adobe.com/se/marketing-cloud/how-to/aem-target.html){target=_blank}
    + [Konfigurera Experience Fragments och Adobe Target](personalization/experience-fragment-target-technical-video-setup.md)
    + [Använda Experience Fragments med Adobe Target](personalization/experience-fragment-target-offer-feature-video-use.md)
    + [Konfigurera ContextHub](personalization/context-hub-technical-video-setup.md)
@@ -144,7 +144,7 @@ ht-degree: 5%
    + [Webbplatskartor](./seo/sitemaps.md)
 + Enkelsidiga program {#spa-editor}
    + [Använda SPA-redigeraren](spa-editor/spa-editor-framework-feature-video-use.md)
-   + [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html){target=_blank}
+   + [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=sv-SE){target=_blank}
 + Hantering av flera webbplatser {#multi-site-management}
    + [Introduktion till språkkopia](./multi-site-management/language-copy-overview.md)
    + [Live Copy och Blueprint](./multi-site-management/live-copy-and-blueprint.md)
