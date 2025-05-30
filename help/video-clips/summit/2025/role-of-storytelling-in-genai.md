@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Upptäck hur historieberättande principer inom landsismusik relaterar till designen av GenAI-verktyg för digitala upplevelser.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459229/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462013/?learn=on&enablevpops&captions=swe)

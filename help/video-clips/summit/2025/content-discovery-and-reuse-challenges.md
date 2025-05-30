@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Förstå svårigheterna för organisationer att hitta och återanvända innehåll och hur Experience Generation löser dessa problem.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459243/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3462387/?learn=on&enablevpops&captions=swe)

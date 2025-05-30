@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Läs om hur BambooHR använde AI för att identifiera och åtgärda trasiga bakterier, vilket ledde till en 4-procentig ökning av den organiska trafiken.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459238/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461991/?learn=on&enablevpops&captions=swe)

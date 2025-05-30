@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Läs om hur metadata driver arbetsflöden, sökningar och insikter och hur automatisering kan berika metadata för att passa varumärkesstandarder.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459218/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461969/?learn=on&enablevpops&captions=swe)

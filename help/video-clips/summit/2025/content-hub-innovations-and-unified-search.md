@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Utforska Content Hub nya funktioner, inklusive attributbaserad åtkomstkontroll, varumärkesanpassade landningssidor och enhetlig sökning på olika plattformar.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459223/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461814/?learn=on&enablevpops&captions=swe)

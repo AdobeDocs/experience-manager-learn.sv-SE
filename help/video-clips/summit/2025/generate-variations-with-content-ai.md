@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Se hur du med Content AI kan skapa engagerande innehållsvariationer snabbt och effektivt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459227/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461881/?learn=on&enablevpops&captions=swe)
