@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Lär dig hur du använder Dynamic Media i AEM för att skapa virtuella renderingar, hantera genomskinlighet och automatisera bildbearbetning för återanvändning av skalbart innehåll.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459589/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463049/?learn=on&enablevpops&captions=swe)
 
 
 ## Exempel på dynamiska medieresurser
