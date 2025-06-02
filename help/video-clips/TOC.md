@@ -3,7 +3,7 @@ user-guide-title: Adobe Experience Manager Video Shorts
 breadcrumb-title: Videokurser
 user-guide-description: Dold samling
 auto-video-transcripts: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
+source-git-commit: 57a207cc492912537be024315119d4a8d9dadebe
 workflow-type: tm+mt
 source-wordcount: '63'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 ---
 
 
-# Adobe Experience Manager Video Shorts {#video-shorts}
+# Adobe Experience Manager Video Shorts {#video-clips}
 
 + Adobe Summit {#summit}
    + 2025 {#2025}
