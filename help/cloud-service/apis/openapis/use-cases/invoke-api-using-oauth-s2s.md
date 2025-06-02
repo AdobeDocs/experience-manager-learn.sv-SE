@@ -12,7 +12,7 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
+source-git-commit: 9a5d811cf92a09da27057f99e1b6b2ed8df2a414
 workflow-type: tm+mt
 source-wordcount: '1727'
 ht-degree: 0%
@@ -139,9 +139,9 @@ Om du vill hämta metadata för en viss resurs behöver du värdena `bucket` och
 
 ### Anropa API:t med webbläsaren
 
-Innan vi utvecklar programmet måste vi anropa API:t med funktionen **Prova** i [API-dokumentationen](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/).
+Innan vi utvecklar programmet måste vi anropa API:t med funktionen **Prova** i [API-dokumentationen](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/).
 
-1. Öppna [Assets Author API-dokumentationen](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/experimental/assets/author/) i webbläsaren.
+1. Öppna [Assets Author API-dokumentationen](https://developer.adobe.com/experience-cloud/experience-manager-apis/api/stable/assets/author/) i webbläsaren.
 
 1. Expandera avsnittet _Metadata_ och klicka på alternativet **Levererar den angivna resursens metadata**.
 
