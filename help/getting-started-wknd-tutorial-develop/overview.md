@@ -13,7 +13,7 @@ level: Beginner
 doc-type: Catalog
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 # Kom igång med AEM Sites - WKND, genomgång {#introduction}
 
-{{edge-delivery-services}}
+{{traditional-aem}}
 
 Välkommen till en självstudiekurs i flera delar som utformats för utvecklare som inte använt Adobe Experience Manager (AEM). Den här självstudiekursen går igenom implementeringen av en AEM-sajt för ett påhittat livsstilsmärke, WKND. Självstudiekursen behandlar grundläggande ämnen som projektinställningar, kärnkomponenter, redigerbara mallar, klientbibliotek och komponentutveckling med Adobe Experience Manager Sites.
 
