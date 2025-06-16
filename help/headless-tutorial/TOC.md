@@ -8,10 +8,10 @@ sub-product: Experience Manager Sites
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-2963
 index: y
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 6425188da75f789b0661ec9bfb79624b5704c92b
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 7%
+source-wordcount: '317'
+ht-degree: 8%
 
 ---
 
@@ -20,9 +20,9 @@ ht-degree: 7%
 
 + [AEM Headless Overview](./overview.md)
 + GraphQL {#graphql}
-   + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE){target=_blank}
+   + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
    + [Ökning](./graphql/overview.md)
-   + Snabbkonfiguration {#quick-setup}
+   + Snabbinställningar {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)
       + [AEM SDK](./graphql/quick-setup/local-sdk.md)
    + Videoserie{#video-series}
@@ -51,13 +51,13 @@ ht-degree: 7%
       + [1 - Innehållsmodellering](./graphql/headless-first-tutorial/1-content-modeling.md)
       + [2 - AEM Headless API:er och React](./graphql/headless-first-tutorial/2-aem-headless-apis-and-react.md)
       + [3 - Komplexa komponenter](./graphql/headless-first-tutorial/3-complex-components.md)
-+ Distributioner {#deployments}
++ Distributioner{#deployments}
    + [Översikt](./graphql/deployment/overview.md)
    + [Enkelsidig app](./graphql/deployment/spa.md)
    + [Webbkomponent](./graphql/deployment/web-component.md)
    + [Mobil](./graphql/deployment/mobile.md)
    + [Server-till-server](./graphql/deployment/server-to-server.md)
-   + Konfigurationer {#configurations}
+   + Konfigurationer{#configurations}
       + [AEM-värdar](./graphql/deployment/configurations/aem-hosts.md)
       + [CORS](./graphql/deployment/configurations/cors.md)
       + [Dispatcher-filter](./graphql/deployment/configurations/dispatcher-filters.md)
@@ -72,20 +72,11 @@ ht-degree: 7%
    + [Installera GraphiQL på AEM 6.5](./graphql/how-to/install-graphiql-aem-6-5.md)
    + Exempel {#example-apps}
       + [Reagera](./graphql/example-apps/react-app.md)
-      + [Next.js](./graphql/example-apps/next-js.md)
       + [Webbkomponent](./graphql/example-apps/web-component.md)
       + [iOS](./graphql/example-apps/ios-swiftui-app.md)
       + [Android](./graphql/example-apps/android-app.md)
       + [Node.js](./graphql/example-apps/server-to-server-app.md)
-+ SPA-redigerare{#spa-editor}
-   + Reagera {#react}
-      + [Ökning](./spa-editor/react/overview.md)
-      + [1 - Skapa projekt](./spa-editor/react/create-project.md)
-      + [2 - Integrera SPA](./spa-editor/react/integrate-spa.md)
-      + [3 - Mappa SPA-komponenter](./spa-editor/react/map-components.md)
-      + [4 - Navigering och routning](./spa-editor/react/navigation-routing.md)
-      + [5 - Anpassad komponent](./spa-editor/react/custom-component.md)
-      + [6 - Utöka komponent](./spa-editor/react/extend-component.md)
++ SPA Editor{#spa-editor}
    + Angular{#angular}
       + [Ökning](./spa-editor/angular/overview.md)
       + [1 - SPA-redigeringsprojekt](./spa-editor/angular/create-project.md)
@@ -101,7 +92,7 @@ ht-degree: 7%
       + [3 - fasta komponenter](./spa-editor/remote-spa/spa-fixed-component.md)
       + [4 - Behållarkomponenter](./spa-editor/remote-spa/spa-container-component.md)
       + [5 - Dynamiska vägar](./spa-editor/remote-spa/spa-dynamic-routes.md)
-   + Använda {#how-to}
+   + Så här gör du{#how-to}
       + [AEM React Editable Components v2](./spa-editor/how-to/react-core-components-v2.md)
 + Tokenbaserad autentisering {#authentication}
    + [Ökning](./authentication/overview.md)
