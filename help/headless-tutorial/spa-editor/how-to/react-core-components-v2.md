@@ -11,7 +11,8 @@ thumbnail: kt-10900.jpeg
 doc-type: Tutorial
 exl-id: e055b356-dd26-4366-8608-5a0ccf5b4c49
 duration: 190
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 0%
@@ -20,24 +21,24 @@ ht-degree: 0%
 
 # Så här använder du AEM React Editable Components v2
 
-{{edge-delivery-services}}
+{{spa-editor-deprecation}}
 
 AEM tillhandahåller [AEM React Editable Components v2](https://www.npmjs.com/package/@adobe/aem-react-editable-components), en Node.js-baserad SDK som gör att du kan skapa React-komponenter som stöder kontextredigering med AEM SPA Editor.
 
-+ [npm-modul](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
-+ [Github-projekt](https://github.com/adobe/aem-react-editable-components)
-+ [Adobe-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html?lang=sv-SE)
+* [npm-modul](https://www.npmjs.com/package/@adobe/aem-react-editable-components)
+* [Github-projekt](https://github.com/adobe/aem-react-editable-components)
+* [Adobe-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-65/developing/spas/spa-reference-materials.html)
 
 
 Mer information och kodexempel för AEM React Editable Components v2 finns i den tekniska dokumentationen:
 
-+ [Integrering med AEM-dokumentation](https://github.com/adobe/aem-react-editable-components/tree/master/src/core)
-+ [Redigerbar komponentdokumentation](https://github.com/adobe/aem-react-editable-components/tree/master/src/components)
-+ [Hjälpdokumentation](https://github.com/adobe/aem-react-editable-components/tree/master/src/api)
+* [Integrering med AEM-dokumentation](https://github.com/adobe/aem-react-editable-components/tree/master/src/core)
+* [Redigerbar komponentdokumentation](https://github.com/adobe/aem-react-editable-components/tree/master/src/components)
+* [Hjälpdokumentation](https://github.com/adobe/aem-react-editable-components/tree/master/src/api)
 
 ## AEM sidor
 
-AEM React Editable Components fungerar med både SPA Editor och Remote SPA React. Innehåll som fyller i de redigerbara React-komponenterna måste visas via AEM-sidor som utökar [SPA Page-komponenten](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html?lang=sv-SE). AEM-komponenter, som mappar till redigerbara React-komponenter, måste implementera AEM [Component Exporter-ramverket](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html?lang=sv-SE) - till exempel [AEM Core WCM-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE).
+AEM React Editable Components fungerar med både SPA Editor och Remote SPA React. Innehåll som fyller i de redigerbara React-komponenterna måste visas via AEM-sidor som utökar [SPA Page-komponenten](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-page-component.html). AEM-komponenter, som mappar till redigerbara React-komponenter, måste implementera AEM [Component Exporter-ramverket](https://experienceleague.adobe.com/docs/experience-manager-65/developing/components/json-exporter-components.html) - till exempel [AEM Core WCM-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
 
 
 ## Beroenden
@@ -46,8 +47,7 @@ Kontrollera att React-appen körs på Node.js 14+.
 
 Den minsta uppsättningen beroenden för React-appen som använder AEM React Editable Components v2 är: `@adobe/aem-react-editable-components`, `@adobe/aem-spa-component-mapping` och `@adobe/aem-spa-page-model-manager`.
 
-
-+ `package.json`
+* `package.json`
 
 ```json
 {
@@ -75,7 +75,7 @@ När du använder AEM React Editable Components med en SPA Editor-baserad React-
 
 Lägg in React-appen med en initierad ModelManager och återge React-appen. Reaktionsappen ska innehålla en instans av komponenten `<Page>` som exporterats från `@adobe/aem-react-editable-components`. Komponenten `<Page>` har logik för att dynamiskt skapa React-komponenter baserat på `.model.json` från AEM.
 
-+ `src/index.js`
+* `src/index.js`
 
 ```javascript
 import { Constants, ModelManager } from '@adobe/aem-spa-page-model-manager';
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 `<Page>` skickas som JSON för AEM-sidans representation via `ModelManager`. Komponenten `<Page>` skapar sedan dynamiskt React-komponenter för varje objekt i JSON genom att matcha JS-objektets `resourceType`-värde med en React-komponent som registrerar sig för resurstypen via komponentens `MapTo(..)`-anrop. Följande skulle till exempel användas för att instansiera en instans
 
-+ `HTTP GET /content/.../home.model.json`
+* `HTTP GET /content/.../home.model.json`
 
 ```json
 ...
@@ -181,7 +181,7 @@ Redigerbara komponenter kan återanvändas och bäddas in i varandra. Det finns 
 1. JSON-innehållet från AEM för inbäddningskomponenten måste innehålla innehållet för att de inbäddade komponenterna ska uppfyllas. Det gör du genom att skapa en dialogruta för AEM-komponenten som samlar in nödvändiga data.
 1. Den icke-redigerbara instansen av React-komponenten måste bäddas in, i stället för den redigerbara instansen som omsluts av `<EditableComponent>`. Om den inbäddade komponenten har `<EditableComponent>`-omslutningen försöker SPA-redigeraren att klä den inre komponenten med redigeringsfärgen (blå hover-ruta) i stället för den yttre inbäddningskomponenten.
 
-+ `HTTP GET /content/.../home.model.json`
+* `HTTP GET /content/.../home.model.json`
 
 ```json
 ...

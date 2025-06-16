@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 44433595-08bc-4a82-9232-49d46c31b07b
 duration: 316
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # Utöka en kärnkomponent {#extend-component}
+
+{{spa-editor-deprecation}}
 
 Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SPA Editor. Att förstå hur man utökar en befintlig komponent är en kraftfull teknik för att anpassa och utöka funktionerna i en AEM SPA Editor-implementering.
 
@@ -174,7 +177,7 @@ Filen `_cq_editConfig.xml` styr dra och släpp-beteendet i AEM redigeringsgräns
 
 ## Utöka dialogrutan {#extend-dialog}
 
-Komponenten `Banner` kräver ett extra textfält i dialogrutan för att hämta `bannerText`. Eftersom vi använder ling-arv kan vi använda funktionerna i [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=sv-SE) för att åsidosätta eller utöka delar av dialogrutan. I det här exemplet har en ny flik lagts till i dialogrutan för att hämta ytterligare data från en författare som ska fylla i kortkomponenten.
+Komponenten `Banner` kräver ett extra textfält i dialogrutan för att hämta `bannerText`. Eftersom vi använder ling-arv kan vi använda funktionerna i [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html) för att åsidosätta eller utöka delar av dialogrutan. I det här exemplet har en ny flik lagts till i dialogrutan för att hämta ytterligare data från en författare som ska fylla i kortkomponenten.
 
 1. Skapa en mapp med namnet `_cq_dialog` i modulen `ui.apps` under mappen `banner`.
 1. Under `_cq_dialog` skapar du en dialogrutedefinitionsfil `.content.xml`. Fyll den med följande:

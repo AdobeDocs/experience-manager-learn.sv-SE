@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
 duration: 250
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '974'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # Skapa projekt {#spa-editor-project}
+
+{{spa-editor-deprecation}}
 
 Lär dig hur du skapar ett Adobe Experience Manager (AEM) Maven-projekt som utgångspunkt för ett React-program som är integrerat med AEM SPA Editor.
 
@@ -64,7 +67,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
    >
    > Ersätt `aemVersion="cloud"` med `aemVersion="6.5.5"` om du har AEM 6.5.5+ som mål. Använd `aemVersion="6.4.8"` om du har 6.4.8+ som mål.
 
-   Observera egenskapen `frontendModule=react`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [React code base](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=sv-SE) som ska användas med AEM SPA Editor. Egenskaper som `appTitle`, `appId`, `artifactId` och `groupId` används för att identifiera projektet och syftet.
+   Observera egenskapen `frontendModule=react`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [React code base](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html) som ska användas med AEM SPA Editor. Egenskaper som `appTitle`, `appId`, `artifactId` och `groupId` används för att identifiera projektet och syftet.
 
    En fullständig lista över tillgängliga egenskaper för konfigurering av projektet [finns här](https://github.com/adobe/aem-project-archetype#available-properties).
 
@@ -89,7 +92,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
        |--- .gitignore
    ```
 
-   Varje mapp representerar en enskild Maven-modul. I den här självstudiekursen arbetar vi primärt med modulen `ui.frontend`, som är React-appen. Mer information om enskilda moduler finns i [AEM Project Archetype-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE).
+   Varje mapp representerar en enskild Maven-modul. I den här självstudiekursen arbetar vi primärt med modulen `ui.frontend`, som är React-appen. Mer information om enskilda moduler finns i [AEM Project Archetype-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 
 ## Distribuera och skapa projektet
 

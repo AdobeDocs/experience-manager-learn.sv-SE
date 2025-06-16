@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 49fcd603-ab1a-4f1e-ae1f-49d3ff373439
 duration: 252
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '988'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # SPA Editor-projekt {#create-project}
+
+{{spa-editor-deprecation}}
 
 Lär dig hur du använder ett Adobe Experience Manager (AEM) Maven-projekt som utgångspunkt för ett Angular-program som är integrerat med AEM SPA Editor.
 
@@ -87,7 +90,7 @@ Det finns flera alternativ för att skapa ett projekt med flera moduler i Maven 
 
    >[!NOTE]
    >
-   > Observera egenskapen `frontendModule=angular`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [Angular ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=sv-SE) som ska användas med AEM SPA Editor.
+   > Observera egenskapen `frontendModule=angular`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [Angular ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) som ska användas med AEM SPA Editor.
 
 ## Bygg projektet
 
@@ -146,7 +149,7 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
 
    All anpassad kod som krävs för projektet paketeras i dessa paket och installeras på AEM-miljön.
 
-6. Du bör också se flera paket för `spa.project.core` och `core.wcm.components`. Detta är beroenden som automatiskt inkluderas av arketypen. Mer information om [AEM Core Components finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE).
+6. Du bör också se flera paket för `spa.project.core` och `core.wcm.components`. Detta är beroenden som automatiskt inkluderas av arketypen. Mer information om [AEM Core Components finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
 
 ## Författarinnehåll
 

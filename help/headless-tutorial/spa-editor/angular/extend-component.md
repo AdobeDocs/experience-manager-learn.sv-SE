@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 0265d3df-3de8-4a25-9611-ddf73d725f6e
 duration: 435
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1713'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # Utöka en kärnkomponent {#extend-component}
+
+{{spa-editor-deprecation}}
 
 Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SPA Editor. Att förstå hur man utökar en befintlig komponent är en kraftfull teknik för att anpassa och utöka funktionerna i en AEM SPA Editor-implementering.
 
@@ -30,13 +33,13 @@ Lär dig hur du utökar en befintlig Core Component som ska användas med AEM SP
 
 ## Vad du ska bygga
 
-I det här kapitlet skapas en ny `Card`-komponent. Komponenten `Card` utökar [Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=sv-SE) genom att lägga till ytterligare innehållsfält som en titel och en Call To Action-knapp för att utföra rollen som teaser för annat innehåll i SPA.
+I det här kapitlet skapas en ny `Card`-komponent. Komponenten `Card` utökar [Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) genom att lägga till ytterligare innehållsfält som en Title och en Call to action-knapp för att utföra rollen som teaser för annat innehåll i SPA.
 
 ![Slutlig redigering av kortkomponent](assets/extend-component/final-authoring-card.png)
 
 >[!NOTE]
 >
-> I en implementering i verkligheten kan det vara lämpligare att helt enkelt använda [Teaser Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html?lang=sv-SE) än att utöka [Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=sv-SE) för att skapa en `Card` -komponent beroende på projektkraven. Du bör alltid använda [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE) direkt när det är möjligt.
+> I en implementering i verkligheten kan det vara lämpligare att helt enkelt använda [Teaser Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/teaser.html) än att utöka [Image Core Component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html) för att skapa en `Card` -komponent beroende på projektkraven. Du bör alltid använda [kärnkomponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html) direkt när det är möjligt.
 
 ## Förutsättningar
 
@@ -103,13 +106,13 @@ En initial kortkomponent har tillhandahållits av kapitelstartkoden. Granska sta
 
    Observera att `sling:resourceSuperType` pekar på `core/wcm/components/image/v2/image`. Detta anger att WKND SPA Image-komponenten ärver funktionaliteten från Core Component Image.
 
-   Det kallas också [Proxymönstret](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html?lang=sv-SE#proxy-component-pattern) Att dela resursarv är ett kraftfullt designmönster som tillåter att underordnade komponenter ärver funktioner och utökar/åsidosätter beteenden när det behövs. Sling-arv har stöd för flera nivåer av arv, så i slutändan ärver den nya `Card`-komponenten funktionerna i Core Component Image.
+   Det kallas också [Proxymönstret](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/guidelines.html#proxy-component-pattern) Att dela resursarv är ett kraftfullt designmönster som tillåter att underordnade komponenter ärver funktioner och utökar/åsidosätter beteenden när det behövs. Sling-arv har stöd för flera nivåer av arv, så i slutändan ärver den nya `Card`-komponenten funktionerna i Core Component Image.
 
    Många utvecklingsteam strävar efter att bli D.R.Y. (upprepa inte dig själv). Sling arv gör detta möjligt med AEM.
 
 4. Öppna filen `_cq_dialog/.content.xml` under mappen `card`.
 
-   Den här filen är definitionen för komponentdialogrutan för komponenten `Card`. Om du använder Samling-arv är det möjligt att använda funktionerna i [Samling av resurser](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=sv-SE) för att åsidosätta eller utöka delar av dialogrutan. I det här exemplet har en ny flik lagts till i dialogrutan för att hämta ytterligare data från en författare som ska fylla i kortkomponenten.
+   Den här filen är definitionen för komponentdialogrutan för komponenten `Card`. Om du använder Samling-arv är det möjligt att använda funktionerna i [Samling av resurser](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html) för att åsidosätta eller utöka delar av dialogrutan. I det här exemplet har en ny flik lagts till i dialogrutan för att hämta ytterligare data från en författare som ska fylla i kortkomponenten.
 
    Egenskaper som `sling:orderBefore` låter en utvecklare välja var nya flikar eller formulärfält ska infogas. I det här fallet infogas fliken `Text` före fliken `asset`. Om du vill använda Sling Resource Merger fullt ut är det viktigt att du känner till den ursprungliga dialognodstrukturen för dialogrutan [Bildkomponent](https://github.com/adobe/aem-core-wcm-components/blob/master/content/src/content/jcr_root/apps/core/wcm/components/image/v2/image/_cq_dialog/.content.xml).
 
@@ -293,7 +296,7 @@ Gå tillbaka till den utvecklingsmiljö du valt och öppna modulen `core`.
    }
    ```
 
-   `@PostConstruct initModel()` anropas när delningsmodellen initieras och därför är det en bra möjlighet att initiera objekt som kan användas av andra metoder i modellen. `pageManager` är ett av flera [Java™-bakomliggande globala objekt](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html?lang=sv-SE) som är tillgängliga för Sling-modeller via anteckningen `@ScriptVariable`. Metoden [getPage](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) tar en sökväg och returnerar ett AEM [Page](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html)-objekt eller null om sökvägen inte pekar på en giltig sida.
+   `@PostConstruct initModel()` anropas när delningsmodellen initieras och därför är det en bra möjlighet att initiera objekt som kan användas av andra metoder i modellen. `pageManager` är ett av flera [Java™-bakomliggande globala objekt](https://experienceleague.adobe.com/docs/experience-manager-htl/content/global-objects.html) som är tillgängliga för Sling-modeller via anteckningen `@ScriptVariable`. Metoden [getPage](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/PageManager.html) tar en sökväg och returnerar ett AEM [Page](https://developer.adobe.com/experience-manager/reference-materials/cloud-service/javadoc/com/day/cq/wcm/api/Page.html)-objekt eller null om sökvägen inte pekar på en giltig sida.
 
    Detta initierar variabeln `cardPage`, som används av andra nya metoder för att returnera data om den underliggande länkade sidan.
 
@@ -404,7 +407,7 @@ Nu när JSON-modellen har fyllts i med nya egenskaper för `ctaLinkURL`, `ctaTex
    +    @Input() ctaText: string;
    ```
 
-3. Lägg till metoder för att kontrollera om Call to Action är klart och för att returnera en datum/tid-sträng baserat på `cardLastModified`-indata:
+3. Lägg till metoder för att kontrollera om Call to action är klart och för att returnera en datum/tid-sträng baserat på `cardLastModified`-indata:
 
    ```js
    export class CardComponent implements OnInit {
@@ -425,7 +428,7 @@ Nu när JSON-modellen har fyllts i med nya egenskaper för `ctaLinkURL`, `ctaTex
    }
    ```
 
-4. Öppna `card.component.html` och lägg till följande kod för att visa titeln, anropet till åtgärden och det senaste ändringsdatumet:
+4. Öppna `card.component.html` och lägg till följande kod för att visa titeln, call to action och det senaste ändringsdatumet:
 
    ```html
    <div class="card"  *ngIf="hasContent">
@@ -444,7 +447,7 @@ Nu när JSON-modellen har fyllts i med nya egenskaper för `ctaLinkURL`, `ctaTex
    </div>
    ```
 
-   Sass-regler har redan lagts till på `card.component.scss` för att formatera titeln, anropet till åtgärden och det senaste ändringsdatumet.
+   Sass-regler har redan lagts till `card.component.scss` för att formatera titeln, call to action och det senaste ändringsdatumet.
 
    >[!NOTE]
    >

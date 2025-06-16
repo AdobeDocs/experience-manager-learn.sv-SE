@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 6c1c7f2b-f574-458c-b744-b92419c46f23
 duration: 308
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # Skapa en anpassad komponent {#custom-component}
+
+{{spa-editor-deprecation}}
 
 Lär dig hur du skapar en anpassad komponent som ska användas med AEM SPA Editor. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent.
 
@@ -74,7 +77,7 @@ En AEM-komponent definieras som en nod och egenskaper. I projektet representeras
 
 >[!NOTE]
 >
-> En snabb uppdatering av [grunderna i AEM-komponenter kan vara användbar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=sv-SE).
+> En snabb uppdatering av [grunderna i AEM-komponenter kan vara användbar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html).
 
 1. Öppna mappen `ui.apps` i den utvecklingsmiljö du vill använda.
 2. Navigera till `ui.apps/src/main/content/jcr_root/apps/wknd-spa-angular/components` och skapa en mapp med namnet `custom-component`.
@@ -156,13 +159,13 @@ En AEM-komponent definieras som en nod och egenskaper. I projektet representeras
    >
    > Du kan visa fler [exempel på dialogrutor genom att visa Core Component Definition](https://github.com/adobe/aem-core-wcm-components/tree/master/content/src/content/jcr_root/apps/core/wcm/components). Du kan även visa ytterligare formulärfält, som `select`, `textarea`, `pathfield`, som är tillgängliga under `/libs/granite/ui/components/coral/foundation/form` i [CRXDE-Lite](http://localhost:4502/crx/de/index.jsp#/libs/granite/ui/components/coral/foundation/form).
 
-   I en traditionell AEM-komponent krävs vanligtvis ett [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html?lang=sv-SE)-skript. Eftersom SPA återger komponenten behövs inget HTML-skript.
+   I en traditionell AEM-komponent krävs vanligtvis ett [HTML](https://experienceleague.adobe.com/docs/experience-manager-htl/content/overview.html)-skript. Eftersom SPA återger komponenten behövs inget HTML-skript.
 
 ## Skapa segmentmodellen
 
-Sling Models är annoteringsdrivna Java™ &quot;POJOs&quot; (Plain Old Java™ Objects) som gör det enklare att mappa data från JCR till Java™-variabler. [Sling Models](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html?lang=sv-SE#sling-models) fungerar vanligtvis för att kapsla in komplex affärslogik på serversidan för AEM-komponenter.
+Sling Models är annoteringsdrivna Java™ &quot;POJOs&quot; (Plain Old Java™ Objects) som gör det enklare att mappa data från JCR till Java™-variabler. [Sling Models](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/component-basics.html#sling-models) fungerar vanligtvis för att kapsla in komplex affärslogik på serversidan för AEM-komponenter.
 
-I SPA-redigeraren visar Sling Models en komponents innehåll via JSON-modellen via en funktion som använder [Sling Model Exporter](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html?lang=sv-SE).
+I SPA-redigeraren visar Sling Models en komponents innehåll via JSON-modellen via en funktion som använder [Sling Model Exporter](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/development/develop-sling-model-exporter.html).
 
 1. Öppna modulen `core` i den IDE du väljer. `CustomComponent.java` och `CustomComponentImpl.java` har redan skapats och bäddats ut som en del av kapitelstartkoden.
 

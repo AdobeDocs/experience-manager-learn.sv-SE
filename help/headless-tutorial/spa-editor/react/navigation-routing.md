@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 9c3d47c7-1bb9-441c-a0e6-85887a32c817
 duration: 337
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '1481'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # Lägga till navigering och routning {#navigation-routing}
+
+{{spa-editor-deprecation}}
 
 Läs om hur flera vyer i SPA kan användas genom att mappa till AEM Pages med SPA Editor SDK. Dynamisk navigering implementeras med React Router och React Core Components.
 
@@ -30,7 +33,7 @@ Läs om hur flera vyer i SPA kan användas genom att mappa till AEM Pages med SP
 
 ## Vad du ska bygga
 
-I det här kapitlet läggs navigering till i en SPA i AEM. Navigeringsmenyn styrs av AEM sidhierarki och använder JSON-modellen som tillhandahålls av [kärnkomponenten för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html?lang=sv-SE).
+I det här kapitlet läggs navigering till i en SPA i AEM. Navigeringsmenyn styrs av AEM sidhierarki och använder JSON-modellen som tillhandahålls av [kärnkomponenten för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/wcm-components/navigation.html).
 
 ![Navigering har lagts till](assets/navigation-routing/navigation-added.png)
 
@@ -160,7 +163,7 @@ Kontrollera sedan JSON-modellen som driver multivisningsupplevelsen av SPA.
 
 1. Mallen **SPA Root** har en extra flik för **Hierarisk struktur** som styr JSON-innehållet som samlas in. **Strukturdjupet** avgör hur djupt i platshierarkin underordnade sidor ska samlas under **rotmappen**. Du kan också använda fältet **Strukturmönster** för att filtrera bort ytterligare sidor baserat på ett reguljärt uttryck.
 
-   Uppdatera **strukturdjupet** till **&#x200B;**:
+   Uppdatera **strukturdjupet** till ****:
 
    ![Uppdatera strukturdjup](assets/navigation-routing/update-structure-depth.png)
 

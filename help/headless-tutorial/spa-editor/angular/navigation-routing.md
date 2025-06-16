@@ -11,7 +11,8 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
 duration: 669
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+hide: true
+source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
 workflow-type: tm+mt
 source-wordcount: '2454'
 ht-degree: 0%
@@ -19,6 +20,8 @@ ht-degree: 0%
 ---
 
 # Lägga till navigering och routning {#navigation-routing}
+
+{{spa-editor-deprecation}}
 
 Lär dig hur flera vyer i SPA stöds med AEM Pages och SPA Editor SDK. Dynamisk navigering implementeras med Angular-vägar och läggs till i en befintlig Header-komponent.
 
@@ -30,7 +33,7 @@ Lär dig hur flera vyer i SPA stöds med AEM Pages och SPA Editor SDK. Dynamisk 
 
 ## Vad du ska bygga
 
-I det här kapitlet läggs en navigeringsmeny till i en befintlig `Header`-komponent. Navigeringsmenyn styrs av AEM sidhierarki och använder JSON-modellen som tillhandahålls av [kärnkomponenten för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=sv-SE).
+I det här kapitlet läggs en navigeringsmeny till i en befintlig `Header`-komponent. Navigeringsmenyn styrs av AEM sidhierarki och använder JSON-modellen som tillhandahålls av [kärnkomponenten för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html).
 
 ![Navigering implementerad](assets/navigation-routing/final-navigation-implemented.gif)
 
@@ -68,7 +71,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Granska uppdateringar av HeaderComponent {#inspect-header}
 
-I tidigare kapitel lades komponenten `HeaderComponent` till som en ren Angular-komponent som inkluderades via `app.component.html`. I det här kapitlet tas komponenten `HeaderComponent` bort från programmet och läggs till via [mallredigeraren](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=sv-SE). Detta gör att användare kan konfigurera navigeringsmenyn för `HeaderComponent` inifrån AEM.
+I tidigare kapitel lades komponenten `HeaderComponent` till som en ren Angular-komponent som inkluderades via `app.component.html`. I det här kapitlet tas komponenten `HeaderComponent` bort från programmet och läggs till via [mallredigeraren](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html). Detta gör att användare kan konfigurera navigeringsmenyn för `HeaderComponent` inifrån AEM.
 
 >[!NOTE]
 >
@@ -113,7 +116,7 @@ I tidigare kapitel lades komponenten `HeaderComponent` till som en ren Angular-k
        componentGroup="WKND SPA Angular - Structure"/>
    ```
 
-   AEM `Header`-komponenten ärver alla funktioner i [ Navigation Core Component ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=sv-SE) via egenskapen `sling:resourceSuperType` .
+   AEM `Header`-komponenten ärver alla funktioner i [ Navigation Core Component ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html) via egenskapen `sling:resourceSuperType` .
 
 ## Lägg till HeaderComponent i SPA-mallen {#add-header-template}
 
@@ -518,7 +521,7 @@ Nu när `NavigationComponent` har implementerats måste `HeaderComponent` uppdat
 
 2. Öppna en webbläsarflik och gå till [http://localhost:4200/](http://localhost:4200/).
 
-   Webbpaketets dev-server **&#x200B;**&#x200B;ska konfigureras att proxyansluta JSON-modellen från en lokal instans av AEM (`ui.frontend/proxy.conf.json`). På så sätt kan vi koda direkt mot innehåll som skapats i AEM tidigare i kursen.
+   Webbpaketets dev-server **** ska konfigureras att proxyansluta JSON-modellen från en lokal instans av AEM (`ui.frontend/proxy.conf.json`). På så sätt kan vi koda direkt mot innehåll som skapats i AEM tidigare i kursen.
 
    ![menyväxling som fungerar](./assets/navigation-routing/nav-toggle-static.gif)
 
