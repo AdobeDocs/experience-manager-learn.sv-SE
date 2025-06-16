@@ -43,4 +43,4 @@ Hämta och installera lämpligt [WKND SPA-paket](https://github.com/adobe/aem-gu
 
 En detaljerad självstudiekurs om hur du utvecklar med SPA-redigeraren finns i:
 
-* [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+* [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=sv-SE)

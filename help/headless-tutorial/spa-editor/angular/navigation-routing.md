@@ -33,7 +33,7 @@ Lär dig hur flera vyer i SPA stöds med AEM Pages och SPA Editor SDK. Dynamisk 
 
 ## Vad du ska bygga
 
-I det här kapitlet läggs en navigeringsmeny till i en befintlig `Header`-komponent. Navigeringsmenyn styrs av AEM sidhierarki och använder JSON-modellen som tillhandahålls av [kärnkomponenten för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html).
+I det här kapitlet läggs en navigeringsmeny till i en befintlig `Header`-komponent. Navigeringsmenyn styrs av AEM sidhierarki och använder JSON-modellen som tillhandahålls av [kärnkomponenten för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=sv-SE).
 
 ![Navigering implementerad](assets/navigation-routing/final-navigation-implemented.gif)
 
@@ -71,7 +71,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Granska uppdateringar av HeaderComponent {#inspect-header}
 
-I tidigare kapitel lades komponenten `HeaderComponent` till som en ren Angular-komponent som inkluderades via `app.component.html`. I det här kapitlet tas komponenten `HeaderComponent` bort från programmet och läggs till via [mallredigeraren](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html). Detta gör att användare kan konfigurera navigeringsmenyn för `HeaderComponent` inifrån AEM.
+I tidigare kapitel lades komponenten `HeaderComponent` till som en ren Angular-komponent som inkluderades via `app.component.html`. I det här kapitlet tas komponenten `HeaderComponent` bort från programmet och läggs till via [mallredigeraren](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=sv-SE). Detta gör att användare kan konfigurera navigeringsmenyn för `HeaderComponent` inifrån AEM.
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ I tidigare kapitel lades komponenten `HeaderComponent` till som en ren Angular-k
        componentGroup="WKND SPA Angular - Structure"/>
    ```
 
-   AEM `Header`-komponenten ärver alla funktioner i [ Navigation Core Component ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html) via egenskapen `sling:resourceSuperType` .
+   AEM `Header`-komponenten ärver alla funktioner i [ Navigation Core Component ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=sv-SE) via egenskapen `sling:resourceSuperType` .
 
 ## Lägg till HeaderComponent i SPA-mallen {#add-header-template}
 

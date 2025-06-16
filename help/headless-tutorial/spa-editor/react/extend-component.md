@@ -177,7 +177,7 @@ Filen `_cq_editConfig.xml` styr dra och släpp-beteendet i AEM redigeringsgräns
 
 ## Utöka dialogrutan {#extend-dialog}
 
-Komponenten `Banner` kräver ett extra textfält i dialogrutan för att hämta `bannerText`. Eftersom vi använder ling-arv kan vi använda funktionerna i [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html) för att åsidosätta eller utöka delar av dialogrutan. I det här exemplet har en ny flik lagts till i dialogrutan för att hämta ytterligare data från en författare som ska fylla i kortkomponenten.
+Komponenten `Banner` kräver ett extra textfält i dialogrutan för att hämta `bannerText`. Eftersom vi använder ling-arv kan vi använda funktionerna i [Sling Resource Merger](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/sling-resource-merger.html?lang=sv-SE) för att åsidosätta eller utöka delar av dialogrutan. I det här exemplet har en ny flik lagts till i dialogrutan för att hämta ytterligare data från en författare som ska fylla i kortkomponenten.
 
 1. Skapa en mapp med namnet `_cq_dialog` i modulen `ui.apps` under mappen `banner`.
 1. Under `_cq_dialog` skapar du en dialogrutedefinitionsfil `.content.xml`. Fyll den med följande:
