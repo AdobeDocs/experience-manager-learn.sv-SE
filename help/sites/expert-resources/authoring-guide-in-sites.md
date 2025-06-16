@@ -22,4 +22,4 @@ ht-degree: 0%
 
 AEM Champion Brett Birschbach visar hur man skapar en handbok för redigering i realtid i Adobe Experience Manager (AEM) Sites.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459572/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463137/?learn=on&enablevpops&captions=swe)
