@@ -49,7 +49,7 @@ WKND PIM-appen är ett exempelwebbprogram som är utformat för att hantera prod
 
 Adobe Developer Console-projektet (ADC) har konfigurerats för åtkomst till Assets Author API med hjälp av OAuth Web App-autentisering. Den tillhandahåller nödvändiga _client_id_ och _client_secrets_ till WKND-PIM-webbprogrammet för att initiera _permission_code_-anslagsflödet.
 
->[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3442761?quality=12&learn=on&captions=swe)
 
 
 Följande diagram visar det funktionella flödet för WKND-PIM-webbprogrammet _som hämtar användarspecifika åtkomsttoken för interaktion med Assets Author API_.
