@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 34a22580db6dc32b5c4c5945af83600be2e0a852
+source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
 workflow-type: tm+mt
-source-wordcount: '1440'
+source-wordcount: '1493'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ Om du till exempel vill aktivera autentisering från server till server för AEM
 
 ![Koppla utvecklare till produktprofil](./assets/setup/associate-developer-to-product-profile.png)
 
-Efter den här associationen kan ADC-projektets _API för tillgångsförfattare_ konfigurera den önskade autentiseringen från server till server och associera autentiseringskontot från ADC-projektet (som skapas i nästa steg) med produktprofilen.
+Efter den här associationen kan ADC-projektets _API för tillgångsförfattare_ ställa in önskad server-till-server-autentisering och associera autentiseringskontot från ADC-projektet (som skapades i nästa steg) med produktprofilen.
 
 >[!IMPORTANT]
 >
@@ -134,6 +134,10 @@ När du har skapat ADC-projektet måste du lägga till de AEM-API:er du vill anv
 
    ![Lägg till AEM API](./assets/s2s/add-aem-api.png)
 
+   >[!TIP]
+   >
+   >    Om **AEM API-kortet** är inaktiverat och _Varför är det inaktiverat?_ information visar meddelandet **Licens krävs**. En av orsakerna kan vara att du INTE har moderniserat din AEM as a Cloud Service-miljö. Mer information finns i [Modernisering av AEM as a Cloud Service-miljön](#modernization-of-aem-as-a-cloud-service-environment).
+
 1. I dialogrutan _Konfigurera API_ väljer du sedan önskat autentiseringsalternativ. I det här fallet är autentiseringsalternativet **Server-till-server** markerat.
 
    ![Välj autentisering](./assets/s2s/select-authentication.png)
@@ -159,7 +163,7 @@ När du har skapat ADC-projektet måste du lägga till de AEM-API:er du vill anv
 
    ![Autentiseringskonfiguration](./assets/s2s/authentication-configuration.png)
 
-Om du väljer autentiseringsmetoden **OAuth Web App** eller **OAuth Single Page App** uppmanas inte associationen för produktprofilen, men en omdirigerings-URI krävs. Omdirigerings-URI för programmet används för att dirigera om användaren till programmet efter autentisering med en auktoriseringskod. De relevanta självstudiekurserna för användningsfall visar sådana autentiseringsspecifika konfigurationer.
+Om du väljer autentiseringsmetoden **OAuth Web App** eller **OAuth Single Page App** uppmanas inte associationen för produktprofilen, men en omdirigerings-URI krävs. Omdirigerings-URI för programmet används för att dirigera om användaren till programmet efter autentisering med en auktoriseringskod. De relevanta självstudiekurserna för användningsfall beskriver sådana autentiseringsspecifika konfigurationer.
 
 ## Konfigurera AEM-instansen för att aktivera ADC-projektkommunikation{#configure-aem-instance}
 

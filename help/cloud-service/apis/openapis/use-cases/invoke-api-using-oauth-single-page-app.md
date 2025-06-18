@@ -12,9 +12,9 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
 workflow-type: tm+mt
-source-wordcount: '2081'
+source-wordcount: '2130'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Adobe Developer Console-projektet (ADC) är konfigurerat för att aktivera auten
 >ADC-projektet tillhandahåller INTE någon _client_secrets_. I stället genererar SPA en _code_verifier_ och _code_enge_ för att på ett säkert sätt utbyta auktoriseringskoden för en _åtkomsttoken_. Det eliminerar behovet av att lagra en klienthemlighet på klientsidan, vilket förbättrar säkerheten.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456968?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
 
 
 
@@ -384,6 +384,10 @@ Konfigurationssteget för ADC-projekt är _upprepat_ från [Konfigurera OpenAPI-
 1. I dialogrutan _Lägg till API_ kan du filtrera efter _Experience Cloud_, markera **AEM CS Sites Content Management**-kortet och klicka på **Nästa**.
 
    ![Lägg till AEM API](../assets/spa/add-aem-sites-api.png)
+
+   >[!TIP]
+   >
+   >Om **AEM API-kortet** är inaktiverat och _Varför är det inaktiverat?_ information visar meddelandet **Licens krävs**. En av orsakerna kan vara att du INTE har moderniserat din AEM as a Cloud Service-miljö. Mer information finns i [Modernisering av AEM as a Cloud Service-miljön](../setup.md#modernization-of-aem-as-a-cloud-service-environment).
 
 1. I dialogrutan _Konfigurera API_ väljer du autentiseringsalternativet **Användarautentisering** och klickar på **Nästa**.
 

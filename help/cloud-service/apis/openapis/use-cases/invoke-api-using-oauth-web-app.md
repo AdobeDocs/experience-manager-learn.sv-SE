@@ -12,9 +12,9 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
 workflow-type: tm+mt
-source-wordcount: '2213'
+source-wordcount: '2262'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ WKND PIM-appen är ett exempelwebbprogram som är utformat för att hantera prod
 
 Adobe Developer Console-projektet (ADC) har konfigurerats för åtkomst till Assets Author API med hjälp av OAuth Web App-autentisering. Den tillhandahåller nödvändiga _client_id_ och _client_secrets_ till WKND-PIM-webbprogrammet för att initiera _permission_code_-anslagsflödet.
 
->[!VIDEO](https://video.tv.adobe.com/v/3442761?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
 
 
 Följande diagram visar det funktionella flödet för WKND-PIM-webbprogrammet _som hämtar användarspecifika åtkomsttoken för interaktion med Assets Author API_.
@@ -461,6 +461,10 @@ Konfigurationssteget för ADC-projekt är _upprepat_ från [Konfigurera OpenAPI-
 
    ![Lägg till AEM API](../assets/s2s/add-aem-api.png)
 
+   >[!TIP]
+   >
+   >Om **AEM API-kortet** är inaktiverat och _Varför är det inaktiverat?_ information visar meddelandet **Licens krävs**. En av orsakerna kan vara att du INTE har moderniserat din AEM as a Cloud Service-miljö. Mer information finns i [Modernisering av AEM as a Cloud Service-miljön](../setup.md#modernization-of-aem-as-a-cloud-service-environment).
+
 1. I dialogrutan _Konfigurera API_ väljer du autentiseringsalternativet **Användarautentisering** och klickar på **Nästa**.
 
    ![Konfigurera AEM API](../assets/web-app/configure-aem-api.png)
@@ -493,7 +497,7 @@ Följ instruktionerna i artikeln [Konfigurera OpenAPI-baserade AEM API:er](../se
 
 Som standard har WKND Sites-projektet inte det nödvändiga metadata-schemat för resurser för att visa produktattributen. Låt oss skapa och använda metadatamatchemat för resurser i AEM-instansen.
 
-1. Logga in på instansen AEM as a Cloud Service Asset. Navigera med [resursvyn](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/authoring/switch-views) till mappen `/content/dam/wknd-shared/en`.
+1. Logga in på instansen AEM as a Cloud Service Asset. Navigera med [resursvyn](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views) till mappen `/content/dam/wknd-shared/en`.
 
    ![Navigera till mappen](../assets/web-app/navigate-to-folder.png)
 
