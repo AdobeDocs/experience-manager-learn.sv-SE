@@ -27,11 +27,11 @@ Tack vare den här integreringen kan AEM Author kommunicera direkt med Adobe Tar
 
 >[!WARNING]
 >
->I videon visas en föråldrad JWT-autentiseringsmetod för att ansluta AEM till Adobe Target. Den rekommenderade metoden är dock att använda autentiseringsmetoden OAuth Server-till-server. Mer information finns i [Migrering av JWT-To-OAuth-autentiseringsuppgifter för AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration). Vi arbetar med att uppdatera videon för att återspegla den här ändringen.
+>I videon visas en föråldrad JWT-autentiseringsmetod för att ansluta AEM till Adobe Target. Den rekommenderade metoden är dock att använda autentiseringsmetoden OAuth Server-till-server. Mer information finns i [Migrering av JWT-To-OAuth-autentiseringsuppgifter för AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/authentication/jwt-to-oauth-migration). Vi arbetar med att uppdatera videon för att återspegla den här ändringen.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/41244?quality=12&learn=on)
 
 >[!CAUTION]
 >
->Det finns ett känt fel i konfigurationen av Adobe Target Cloud Services som visas i videon. Följ samma steg i videon tills problemet är löst, men använd den [gamla Adobe Target Cloud Services-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html).
+>Det finns ett känt fel i konfigurationen av Adobe Target Cloud Services som visas i videon. Följ samma steg i videon tills problemet är löst, men använd den [gamla Adobe Target Cloud Services-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/aem-target-implementation/using-aem-cloud-services.html?lang=sv-SE).
