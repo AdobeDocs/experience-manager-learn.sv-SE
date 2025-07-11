@@ -13,7 +13,7 @@ last-substantial-update: 2024-01-04T00:00:00Z
 jira: KT-14745
 thumbnail: KT-14745.jpeg
 exl-id: 3fd4c404-18e9-44e5-958f-15235a3091d5
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 7ada3c2e7deb414b924077a5d2988db16f28712c
 workflow-type: tm+mt
 source-wordcount: '1693'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Läs om hur du indexerar metodtips i Adobe Experience Manager (AEM). Apache [Jac
 - AEM as a Cloud Service stöder endast Oak Lucene-index.
 - Indexkonfigurationen bör hanteras i AEM projektkodbas och distribueras med Cloud Manager CI/CD-pipelines.
 - Om det finns flera tillgängliga index för en given fråga används **index med den lägsta uppskattade kostnaden**.
-- Om det inte finns något index tillgängligt för en given fråga, gås innehållsträdet igenom för att hitta det matchande innehållet. Standardgränsen via `org.apache.jackrabbit.oak.query.QueryEngineSettingsService` är dock att bara gå igenom 10 000 noder.
+- Om det inte finns något index tillgängligt för en given fråga, gås innehållsträdet igenom för att hitta det matchande innehållet. Standardgränsen via `org.apache.jackrabbit.oak.query.QueryEngineSettingsService` är dock att bara gå igenom 100 000 noder.
 - Resultatet av en fråga **filtreras senast** för att säkerställa att den aktuella användaren har läsåtkomst. Det innebär att frågeresultaten kan vara mindre än antalet indexerade noder.
 - Omindexeringen av databasen efter ändringar av indexdefinitionen kräver tid och beror på databasens storlek.
 
@@ -41,21 +41,21 @@ Ibland måste du skapa anpassade index som passar dina sökbehov. Följ dock rik
 
 - Förstå sökkraven och kontrollera om OTB-indexen stöder sökkraven. Använd **frågeprestandaverktyget** som finns på [lokal SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) och AEMCS via Developer Console eller `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell`.
 
-- Definiera en optimal fråga genom att använda flödesdiagrammet [optimera frågor](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) och [JCR-frågechebladet](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=sv-SE) för referens.
+- Definiera en optimal fråga genom att använda flödesdiagrammet [optimera frågor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices) och [JCR-frågechebladet](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf) för referens.
 
-- Om OTB-indexen inte stöder sökkraven finns det två alternativ. Granska dock [Tipsen för hur du skapar effektiva index](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
+- Om OTB-indexen inte stöder sökkraven finns det två alternativ. Granska dock [Tipsen för hur du skapar effektiva index](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
    - Anpassa OOTB-indexet: Det bästa alternativet eftersom det är enkelt att underhålla och uppgradera.
    - Helt anpassat index: Endast om alternativet ovan inte fungerar.
 
 ### Anpassa OTB-indexet
 
-- I **AEMCS** använder du namnkonventionen **\&lt;OOTBIndexName>-\&lt;productVersion>-custom-\&lt;customVersion>** när du anpassar OOTB-indexet. Till exempel `cqPageLucene-custom-1` eller `damAssetLucene-8-custom-1`. Det gör att du kan sammanfoga den anpassade indexdefinitionen när OTB-indexet uppdateras. Mer information finns i [Förändringar av index som inte finns i kartongen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/indexing).
+- I **AEMCS** använder du namnkonventionen **\&lt;OOTBIndexName>-\&lt;productVersion>-custom-\&lt;customVersion>** när du anpassar OOTB-indexet. Till exempel `cqPageLucene-custom-1` eller `damAssetLucene-8-custom-1`. Det gör att du kan sammanfoga den anpassade indexdefinitionen när OTB-indexet uppdateras. Mer information finns i [Förändringar av index som inte finns i kartongen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing).
 
 - I **AEM 6.X** fungerar inte namngivningen __, men du behöver bara uppdatera OTB-indexet med nödvändiga egenskaper i noden `indexRules`.
 
 - Kopiera alltid den senaste OTB-indexdefinitionen från AEM-instansen med CRX DE Package Manager (/crx/packmgr/), byt namn på den och lägg till anpassningar i XML-filen.
 
-- Lagra indexdefinitionen i AEM-projektet på `ui.apps/src/main/content/jcr_root/_oak_index` och distribuera den med Cloud Manager CI/CD-pipelines. Mer information finns i [Distribuera anpassade indexdefinitioner](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/indexing).
+- Lagra indexdefinitionen i AEM-projektet på `ui.apps/src/main/content/jcr_root/_oak_index` och distribuera den med Cloud Manager CI/CD-pipelines. Mer information finns i [Distribuera anpassade indexdefinitioner](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing).
 
 ### Helt anpassat index
 
@@ -63,13 +63,13 @@ Det sista alternativet måste vara att skapa ett helt anpassat index och endast 
 
 - Använd **\&lt;prefix> när du skapar ett helt anpassat index.\&lt;customIndexName>-\&lt;version>-custom-\&lt;customVersion>**-namnkonvention. Exempel: `wknd.adventures-1-custom-1`. Detta hjälper till att undvika namnkonflikter. Här är `wknd` prefixet och `adventures` är det anpassade indexnamnet. Denna konvention gäller för både AEM 6.X och AEMCS och bidrar till att förbereda för framtida övergång till AEMCS.
 
-- AEMCS stöder bara Lucene-index, så för att förbereda för framtida migrering till AEMCS bör du alltid använda Lucene-index. Mer information finns i [Lucene-index jämfört med egenskapsindex](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing).
+- AEMCS stöder bara Lucene-index, så för att förbereda för framtida migrering till AEMCS bör du alltid använda Lucene-index. Mer information finns i [Lucene-index jämfört med egenskapsindex](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing).
 
 - Undvik att skapa ett anpassat index för samma nodtyp som OTB-indexet. Anpassa i stället OTB-indexet med nödvändiga egenskaper i noden `indexRules`. Skapa till exempel inte ett anpassat index för nodtypen `dam:Asset` utan anpassa indexet OTB `damAssetLucene`. _Det har varit en vanlig grundorsak till prestandaproblem och funktionsproblem_.
 
 - Undvik också att lägga till flera nodtyper, till exempel `cq:Page` och `cq:Tag`, under indexeringsregelnoden (`indexRules`). Skapa i stället separata index för varje nodtyp.
 
-- Som vi nämnt ovan ska du lagra indexdefinitionen i AEM-projektet på `ui.apps/src/main/content/jcr_root/_oak_index` och distribuera den med Cloud Manager CI/CD-pipelines. Mer information finns i [Distribuera anpassade indexdefinitioner](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/indexing).
+- Som vi nämnt ovan ska du lagra indexdefinitionen i AEM-projektet på `ui.apps/src/main/content/jcr_root/_oak_index` och distribuera den med Cloud Manager CI/CD-pipelines. Mer information finns i [Distribuera anpassade indexdefinitioner](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/indexing).
 
 - Riktlinjerna för indexdefinitioner är:
    - Nodtypen (`jcr:primaryType`) ska vara `oak:QueryIndexDefinition`
@@ -253,7 +253,7 @@ Verktyget [Indexdefinitionsanalys](https://oakutils.appspot.com/analyze/index) h
 
 ### Verktyg för frågeprestanda
 
-OTB _frågeprestandaverktyget_ som finns på [lokal SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) och AEMCS via Developer Console eller `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` hjälper **att analysera frågeprestanda** och [JCR-frågecheblad](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=sv-SE) för att definiera den optimala frågan.
+OTB _frågeprestandaverktyget_ som finns på [lokal SDK](http://localhost:4502/libs/granite/operations/content/diagnosistools/queryPerformance.html) och AEMCS via Developer Console eller `https://author-pXXXX-eYYYY.adobeaemcloud.com/ui#/aem/libs/granite/operations/content/diagnosistools/queryPerformance.html?appId=aemshell` hjälper **att analysera frågeprestanda** och [JCR-frågecheblad](https://experienceleague.adobe.com/docs/experience-manager-65/assets/JCR_query_cheatsheet-v1.1.pdf?lang=en) för att definiera den optimala frågan.
 
 ### Felsökningsverktyg och tips
 
@@ -273,7 +273,7 @@ De flesta av nedanstående gäller för AEM 6.X och lokal felsökning.
 
 Mer information finns i följande dokumentation:
 
-- [Oak-frågor och indexering](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing)
-- [Bästa praxis för frågor och indexering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
-- [Bästa tillvägagångssätt för frågor och indexering](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
+- [Oak-frågor och indexering](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/deploying/queries-and-indexing)
+- [Bästa praxis för frågor och indexering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/query-and-indexing-best-practices)
+- [Bästa tillvägagångssätt för frågor och indexering](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/practices/best-practices-for-queries-and-indexing)
 
