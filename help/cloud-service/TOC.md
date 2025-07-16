@@ -6,9 +6,9 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 380bd2b3121db5810e4d295a5f7f9d1139d22402
+source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
 workflow-type: tm+mt
-source-wordcount: '1385'
+source-wordcount: '1400'
 ht-degree: 4%
 
 ---
@@ -38,7 +38,7 @@ ht-degree: 4%
    + [Författare och publiceringstjänster](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge Delivery Services {#edge-delivery-services}
-   + [AEM Assets Sidekick-plugin](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html?lang=sv-SE){target=_blank}
+   + [AEM Assets Sidekick-plugin](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [Program](./cloud-manager/programs.md)
    + [Miljö](./cloud-manager/environments.md)
@@ -46,7 +46,7 @@ ht-degree: 4%
    + [CI/CD Production Pipeline](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD icke-produktionsförlopp](./cloud-manager/cicd-non-production-pipeline.md)
    + [Aktivitet](./cloud-manager/activity.md)
-   + [Anpassade domännamn](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
+   + [Anpassade domännamn](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
    + [Innehållsåterställning](./cloud-manager/content-restore.md)
    + Dev Ops{#devops}
       + [Distribuera kod](./cloud-manager/devops/deploy-code.md)
@@ -156,10 +156,10 @@ ht-degree: 4%
    + [Anpassat domännamn](./content-delivery/custom-domain-names.md)
    + [Anpassat domännamn med Adobe hanterat CDN](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
    + [Anpassat domännamn med kundens CDN](./content-delivery/custom-domain-names-with-customer-managed-cdn.md)
-   + [Cachelagring](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
+   + [Cachelagring](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
    + [Adobe CDN - bortom cachelagring](./content-delivery/adobe-cdn-beyond-caching.md)
    + [Anpassade felsidor](./content-delivery/custom-error-pages.md)
-   + [URL-omdirigeringar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=sv-SE){target=_blank}
+   + [URL-omdirigeringar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + Cachning{#caching}
    + [Ökning](./caching/overview.md)
    + [AEM Publish Service](./caching/publish.md)
@@ -192,11 +192,16 @@ ht-degree: 4%
       + [E-posttjänst](./networking/examples/email-service.md)
 + Dokumentskydd {#security}
    + [Blockera DoS/DDoS-attacker med trafikfilterregler](./security/blocking-dos-attack-using-traffic-filter-rules.md)
-   + Trafikfilterregler inklusive WAF-regler{#traffic-filter-and-waf-rules}
-      + [Ökning](./security/traffic-filter-rules/overview.md)
-      + [Så här konfigurerar du](./security/traffic-filter-rules/how-to-setup.md)
-      + [Exempel och resultatanalys](./security/traffic-filter-rules/examples-and-analysis.md)
-      + [God praxis](./security/traffic-filter-rules/best-practices.md)
+   + Trafikfilterregler inklusive WAF-regler {#traffic-filter-and-waf-rules}
+      + [Skydda AEM webbplatser](./security/traffic-filter-and-waf-rules/overview.md)
+      + [Så här konfigurerar du](./security/traffic-filter-and-waf-rules/setup.md)
+      + [Använda trafikfilterregler](./security/traffic-filter-and-waf-rules/use-cases/using-traffic-filter-rules.md)
+      + [Använda WAF-regler](./security/traffic-filter-and-waf-rules/use-cases/using-waf-rules.md)
+      + [God praxis](./security/traffic-filter-and-waf-rules/best-practices.md)
+      + Så här gör du{#how-to}
+         + [Övervaka känsliga begäranden](./security/traffic-filter-and-waf-rules/how-to/request-logging.md)
+         + [Begränsa åtkomst](./security/traffic-filter-and-waf-rules/how-to/request-blocking.md)
+         + [Normalisera begäranden](./security/traffic-filter-and-waf-rules/how-to/request-transformation.md)
 + AEM Eventing{#aem-eventing}
    + [Ökning](./eventing/overview.md)
    + Exempel{#examples}
@@ -238,7 +243,7 @@ ht-degree: 4%
       + [Verktyg för resursarbetsflödesmigrering](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [Navigera i Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [Använda Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
-+ [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=sv-SE){target=_blank}
++ [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
 + Forms{#forms}
    + Utveckla för Forms as a Cloud Service{#developing-for-cloud-service}
       + [1 - Komma igång](./forms/developing-for-cloud-service/getting-started.md)
@@ -296,10 +301,10 @@ ht-degree: 4%
       + [Definiera variationer](./forms/style-system/create-variations.md)
       + [Testvariationer](./forms/style-system/build.md)
    + Använda lodräta tabbar{#using-vertical-tabs}
-      + [1. Inledning](./forms/using-vertical-tabs/introduction.md)
-      + [2. Skapa formulär](./forms/using-vertical-tabs/create-af.md)
-      + [3. Navigera](./forms/using-vertical-tabs/navigation.md)
-      + [4. Lägga till ikoner](./forms/using-vertical-tabs/icons.md)
+      + [&#x200B;1. Inledning](./forms/using-vertical-tabs/introduction.md)
+      + [&#x200B;2. Skapa formulär](./forms/using-vertical-tabs/create-af.md)
+      + [&#x200B;3. Navigera](./forms/using-vertical-tabs/navigation.md)
+      + [&#x200B;4. Lägga till ikoner](./forms/using-vertical-tabs/icons.md)
    + Använda utdata och blanketttjänster{#forms-cs-output-and-forms-service}
       + [Generera PDF](./forms/forms-cs-output-and-forms-service/outputservice.md)
    + Skapa dokument i AEM Forms CS{#doc-gen-formscs}
@@ -416,11 +421,11 @@ ht-degree: 4%
    + [Felsökning](./asset-compute/troubleshooting.md)
 
 + Självstudiekurser i flera steg{#multi-step-tutorials}
-   + [AEM Sites-utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE){target=_blank}
-   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE){target=_blank}
-   + [SPA Editor (React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html?lang=sv-SE){target=_blank}
-   + [AEM Sites och Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=sv-SE){target=_blank}
-   + [Tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=sv-SE){target=_blank}
+   + [AEM Sites-utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
+   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html){target=_blank}
+   + [SPA Editor (React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html){target=_blank}
+   + [AEM Sites och Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html){target=_blank}
+   + [Tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html){target=_blank}
 + Expertresurser {#expert-resources}
    + AEM Champions {#aem-champions}
       + [Cloud Manager Onboarding Playbook](./expert-resources/aem-champions/onboarding-playbook.md)

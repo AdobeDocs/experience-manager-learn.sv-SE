@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: d6da05e4-bd65-4625-b9a4-cad8eae3c9d7
 duration: 225
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 0%
@@ -38,7 +38,7 @@ I det här kapitlet skapar och kör vi en frontpipeline i Adobe Cloud Manager. D
 
 Det här är en självstudiekurs i flera delar och det antas att de steg som beskrivs i [Uppdatera AEM-standardprojekt](./update-project.md) har slutförts.
 
-Kontrollera att du har [behörighet att skapa och distribuera pipelines i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=sv-SE#role-definitions) och [åtkomst till en AEM as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE).
+Kontrollera att du har [behörighet att skapa och distribuera pipelines i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions) och [åtkomst till en AEM as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html).
 
 ## Byt namn på befintlig pipeline
 
@@ -49,7 +49,7 @@ Byt namn på den befintliga pipelinen från __Distribuera till Dev__ till __Full
 
 Se även till att fälten Databas och Git Branch är korrekta på fliken __Source-kod__ och att grenen har sina front end-pipeline-kontrakt ändrade.
 
-![Source Code Configuration Pipeline](assets/fullstack-wknd-source-code-config.png)
+![Source Code Config Pipeline](assets/fullstack-wknd-source-code-config.png)
 
 
 ## Skapa en pipeline för säljprojektet
