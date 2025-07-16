@@ -38,7 +38,7 @@ Lär dig rekommenderade metoder för att konfigurera trafikfilterregler, inklusi
 
 ## Bästa tillvägagångssätt för trafikfilterregler
 
-- Använd de [rekommenderade standardtrafikfilterreglerna](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules) som baslinje, som innehåller regler för kant, ursprungsskydd och OFAC-baserade begränsningar.
+- Använd de [rekommenderade standardtrafikfilterreglerna](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules) som baslinje, som innehåller regler för kant, ursprungsskydd och OFAC-baserade begränsningar.
 - Granska varningar och loggar regelbundet för att identifiera mönster för missbruk eller felkonfigurering.
 - Justera tröskelvärden för hastighetsbegränsningar baserat på programmets trafikmönster och användarbeteende.
 
@@ -55,9 +55,9 @@ Lär dig rekommenderade metoder för att konfigurera trafikfilterregler, inklusi
 
 ## God praxis för WAF regler
 
-- Börja med Adobe [rekommenderade WAF-regler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules), som innehåller regler för att blockera kända felaktiga IP-adresser, identifiera DDoS-attacker och minska robotmissbruk.
+- Börja med Adobe [rekommenderade WAF-regler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules), som innehåller regler för att blockera kända felaktiga IP-adresser, identifiera DDoS-attacker och minska robotmissbruk.
 - WAF-flaggan `ATTACK` bör varna dig för potentiella hot. Kontrollera att det inte finns några falska positiva inställningar innan du går till `block`.
-- Om rekommenderade WAF-regler inte täcker specifika hot bör du skapa anpassade regler som baseras på programmets unika krav. Se en fullständig lista över [WAF-flaggor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) i dokumentationen.
+- Om rekommenderade WAF-regler inte täcker specifika hot bör du skapa anpassade regler som baseras på programmets unika krav. Se en fullständig lista över [WAF-flaggor](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) i dokumentationen.
 
 ## Genomförandebestämmelser
 
@@ -131,7 +131,7 @@ Lär dig hur du implementerar trafikfilterregler och WAF-regler i AEM as a Cloud
 
 ## Ytterligare resurser
 
-- [Trafikfilterregler inklusive WAF-regler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
-- [Förstå DoS/DDoS-skydd i AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/foundation/security/understanding-dos-and-prevention-approaches)
-- [Blockera DoS- och DDoS-attacker med trafikfilterregler](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/blocking-dos-attack-using-traffic-filter-rules)
+- [Trafikfilterregler inklusive WAF-regler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
+- [Förstå DoS/DDoS-skydd i AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/foundation/security/understanding-dos-and-prevention-approaches)
+- [Blockera DoS- och DDoS-attacker med trafikfilterregler](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/blocking-dos-attack-using-traffic-filter-rules)
 

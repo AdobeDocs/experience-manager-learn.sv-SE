@@ -225,7 +225,7 @@ Du kan också använda andra paneler i CDN Traffic Dashboard för att analysera 
 
 ### Splunk-integrering
 
-Kunder som har [Splunk Log-vidarebefordran aktiverad](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) kan skapa nya instrumentpaneler för att analysera trafikmönstren.
+Kunder som har [Splunk Log-vidarebefordran aktiverad](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) kan skapa nya instrumentpaneler för att analysera trafikmönstren.
 
 Om du vill skapa kontrollpaneler i Splunk följer du stegen [Splunk dashboards för AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis).
 
@@ -388,6 +388,6 @@ För mer avancerade scenarier kan du utforska följande exempel som visar hur du
 
 ## Ytterligare resurser
 
-- [Rekommenderade startregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)
+- [Rekommenderade startregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)
 
 
