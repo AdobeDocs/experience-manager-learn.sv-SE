@@ -55,7 +55,7 @@ Regeluppsättningarna hjälper kunderna att förhindra vanliga och sofistikerade
 
 Standardreglerna för trafikfilter är användbara för att tillämpa affärsspecifika principer, som hastighetsbegränsningar eller blockera specifika regioner, samt för att blockera trafik baserat på begäranegenskaper och rubriker som IP-adress, sökväg eller användaragent.
 WAF trafikfilterregler ger å andra sidan ett omfattande förebyggande skydd för kända webbexplosioner och attackvektorer och har avancerad intelligens för att begränsa falska positiva effekter (dvs. blockera legitim trafik).
-Om du vill definiera båda typerna av regler använder du YAML-syntaxen. Mer information finns i [Syntax för trafikfilterregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax).
+Om du vill definiera båda typerna av regler använder du YAML-syntaxen. Mer information finns i [Syntax för trafikfilterregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax).
 
 ## När och varför ska de användas
 
@@ -291,4 +291,4 @@ För mer avancerade scenarier kan du utforska följande exempel som visar hur du
 
 ## Ytterligare resurser
 
-- [Trafikfilterregler inklusive WAF-regler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
+- [Trafikfilterregler inklusive WAF-regler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
