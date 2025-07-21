@@ -11,7 +11,8 @@ last-substantial-update: 2025-06-04T00:00:00Z
 badgeLicense: label="Kräver licens" type="positive" before-title="true"
 jira: KT-18308
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+exl-id: b87c27e9-b6ab-4530-b25c-a98c55075aef
+source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
 workflow-type: tm+mt
 source-wordcount: '1376'
 ht-degree: 0%
@@ -27,6 +28,9 @@ De sofistikerade attackerna kännetecknas av hög begärandefrekvens, komplexa m
 >[!IMPORTANT]
 >
 > WAF trafikfilterregler kräver ytterligare en licens för **WAF-DDoS-skydd** eller **Förbättrat skydd**. Standardregler för trafikfilter är som standard tillgängliga för Sites- och Forms-kunder.
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
 
 ## Utbildningsmål
 
@@ -59,7 +63,7 @@ Vi ska granska tre rekommenderade WAF-regler som ska läggas till i filen `cdn.y
 
 Den här regeln **blockerar** begäranden som båda ser misstänkt *och* härstammar från IP-adresser som har flaggats som skadliga. Eftersom båda dessa kriterier är uppfyllda kan vi vara säkra på att risken för falska positiva faktorer (blockera legitim trafik) är mycket låg. Kända dåliga IP-adresser identifieras utifrån hotunderrättelsefeeds och andra källor.
 
-WAF-flaggan `ATTACK-FROM-BAD-IP` används för att identifiera dessa begäranden. Den samlar flera av WAF-flaggorna [som listas här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list).
+WAF-flaggan `ATTACK-FROM-BAD-IP` används för att identifiera dessa begäranden. Den samlar flera av WAF-flaggorna [som listas här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list).
 
 ```yaml
 kind: "CDN"
@@ -208,7 +212,7 @@ På panelerna **WAF Flags distribution** och **Top-attacker** visas även ytterl
 
 ### Splunk-integrering
 
-Kunder som har [Splunk Log-vidarebefordran aktiverad](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) kan skapa nya instrumentpaneler för att analysera trafikmönstren.
+Kunder som har [Splunk Log-vidarebefordran aktiverad](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) kan skapa nya instrumentpaneler för att analysera trafikmönstren.
 
 Om du vill skapa kontrollpaneler i Splunk följer du stegen [Splunk dashboards för AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis).
 
@@ -220,7 +224,7 @@ Om du vill förfina reglerna gör du så här:
 
 - **Övervaka trafikmönster**: Använd CDN-loggarna och ELK-kontrollpanelen för att övervaka trafikmönster och identifiera eventuella avvikelser eller toppar i trafiken. Var uppmärksam på panelerna _WAF flaggar distribution_ och _Top attack_ på ELK-kontrollpanelen för att förstå vilka typer av attacker som identifieras.
 - **Justera wafFlags**: Om `ATTACK` flaggor aktiveras för ofta eller
-Om du behöver finjustera attackvektorn kan du skapa anpassade regler med specifika WAF-flaggor. Se en fullständig lista över [WAF-flaggor](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) i dokumentationen. Överväg att först testa nya anpassade regler i `log`-läge.
+Om du behöver finjustera attackvektorn kan du skapa anpassade regler med specifika WAF-flaggor. Se en fullständig lista över [WAF-flaggor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list) i dokumentationen. Överväg att först testa nya anpassade regler i `log`-läge.
 - **Flytta till blockeringsregler**: När du har verifierat trafikmönstren och justerat WAF-flaggorna kan du överväga att gå över till blockeringsregler.
 
 ## Sammanfattning
@@ -316,5 +320,5 @@ För mer avancerade scenarier kan du utforska följande exempel som visar hur du
 
 ## Ytterligare resurser
 
-- [Rekommenderade startregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules)
-- [WAF-flagglista](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)
+- [Rekommenderade startregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-nonwaf-starter-rules)
+- [WAF-flagglista](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#waf-flags-list)

@@ -10,7 +10,8 @@ doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18306
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+exl-id: 0a738af8-666b-48dc-8187-9b7e6a8d7e1b
+source-git-commit: 22a35b008de380bf2f2ef5dfde6743261346df89
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 0%
@@ -22,6 +23,8 @@ ht-degree: 0%
 Lär dig **hur du konfigurerar** trafikfilterregler, inklusive WAF-regler (Web Application Firewall). I den här självstudiekursen skapar vi grunden för efterföljande självstudiekurser, där du konfigurerar och distribuerar regler, följt av testning och analys av resultaten.
 
 I självstudiekursen används [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd) för att demonstrera konfigurationsprocessen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3469396/?quality=12&learn=on)
 
 ## Installationsöversikt
 
@@ -332,4 +335,4 @@ Utöver Adobe rekommenderade standardtrafikfilter och WAF regler kan ni implemen
 
 ## Ytterligare resurser
 
-- [Trafikfilterregler inklusive WAF-regler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
+- [Trafikfilterregler inklusive WAF-regler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
