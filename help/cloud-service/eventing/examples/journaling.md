@@ -12,9 +12,9 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
 exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,13 @@ Journalföring är ett sätt att förbruka AEM Events, och en journal är en ord
 
 Inom Adobe Developer Console-projektet aktiveras automatiskt alla händelseregistreringar för journalföring, vilket möjliggör smidig integrering.
 
-I det här exemplet kan du använda ett _webbprogram_ som tillhandahålls av Adobe för att hämta den första gruppen med AEM Events från journalen utan att behöva konfigurera ditt program. Det här webbprogrammet som tillhandahålls av Adobe ligger på [Glitch](https://glitch.com/), en plattform som är känd för att erbjuda en webbaserad miljö som underlättar skapandet och distributionen av webbprogram. Alternativet att använda ditt eget program är dock tillgängligt om du vill.
+>[!IMPORTANT]
+>
+>Slutpunkterna för live-demo i den här självstudiekursen fanns tidigare på [Glitch](https://glitch.com/). Från juli 2025 har Glitch upphört med sin värdtjänst och slutpunkterna är inte längre tillgängliga.
+>>Vi arbetar aktivt med att migrera demos till en alternativ plattform. Självstudieinnehållet är korrekt och uppdaterade länkar kommer snart.
+>>Tack för din förståelse och ditt tålamod.
+
+Använd ditt eget program tills live-demonstrationsslutpunkterna blir tillgängliga igen.
 
 ## Förutsättningar
 
@@ -82,7 +88,5 @@ För att förenkla allt hämtar det här webbprogrammet bara den första gruppen
   ![Slutför AEM-händelsenyttolast](../assets/examples/journaling/complete-journal-data.png)
 
 ## Ytterligare resurser
-
-- [Källkoden för Glitch-webkrok](https://glitch.com/edit/#!/indigo-speckle-antler) är tillgänglig för referens. Det är ett enkelt React-program som använder [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) -komponenter för att återge användargränssnittet.
 
 - [API för Adobe I/O Events-journalföring](https://developer.adobe.com/events/docs/guides/api/journaling_api/) innehåller detaljerad information om API:t, till exempel första, nästa och sista gruppbearbetning av händelser, sidnumrering och annat.

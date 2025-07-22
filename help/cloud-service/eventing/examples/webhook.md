@@ -12,9 +12,9 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14732
 thumbnail: KT-14732.jpeg
 exl-id: 00954d74-c4c7-4dac-8d23-7140c49ae31f
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,17 @@ ht-degree: 0%
 
 Lär dig hur du tar emot AEM-händelser på en webbkrok och granskar händelseinformation som nyttolast, sidhuvuden och metadata.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449752?quality=12&learn=on&captions=swe)
 
-I det här exemplet kan du använda en _webbkrok_ som tillhandahålls av Adobe för att ta emot AEM-händelser utan att behöva konfigurera en egen webbkrok. Den här webbkroken som tillhandahålls av Adobe ligger på [Glitch](https://glitch.com/), en plattform som är känd för att erbjuda en webbaserad miljö som underlättar skapandet och distributionen av webbprogram. Alternativet att använda din egen webkrok är dock också tillgängligt om du vill.
+>[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
+
+
+>[!IMPORTANT]
+>
+>Slutpunkterna för live-demo i den här självstudiekursen fanns tidigare på [Glitch](https://glitch.com/). Från juli 2025 har Glitch upphört med sin värdtjänst och slutpunkterna är inte längre tillgängliga.
+>>Vi arbetar aktivt med att migrera demos till en alternativ plattform. Självstudieinnehållet är korrekt och uppdaterade länkar kommer snart.
+>>Tack för din förståelse och ditt tålamod.
+
+Använd din egen webkrok tills live-demonstrationsslutpunkterna blir tillgängliga igen.
 
 ## Förutsättningar
 
@@ -155,4 +163,4 @@ Du ser att informationen om AEM-händelsen innehåller all information som kräv
 
 ## Ytterligare resurser
 
-- [Källkoden för Glitch-webkrok](https://glitch.com/edit/#!/bedårande-antika-coaster) är tillgänglig för referens.
+- [AEM-Eventing Webkroks](../assets/examples/webhook/aemeventing-webhook.tgz)-källkoden finns tillgänglig för referens.
