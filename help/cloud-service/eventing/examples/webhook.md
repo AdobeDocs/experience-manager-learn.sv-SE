@@ -30,8 +30,8 @@ Lär dig hur du tar emot AEM-händelser på en webbkrok och granskar händelsein
 >[!IMPORTANT]
 >
 >Slutpunkterna för live-demo i den här självstudiekursen fanns tidigare på [Glitch](https://glitch.com/). Från juli 2025 har Glitch upphört med sin värdtjänst och slutpunkterna är inte längre tillgängliga.
->>Vi arbetar aktivt med att migrera demos till en alternativ plattform. Självstudieinnehållet är korrekt och uppdaterade länkar kommer snart.
->>Tack för din förståelse och ditt tålamod.
+>&#x200B;>Vi arbetar aktivt med att migrera demos till en alternativ plattform. Självstudieinnehållet är korrekt och uppdaterade länkar kommer snart.
+>&#x200B;>Tack för din förståelse och ditt tålamod.
 
 Använd din egen webkrok tills live-demonstrationsslutpunkterna blir tillgängliga igen.
 
