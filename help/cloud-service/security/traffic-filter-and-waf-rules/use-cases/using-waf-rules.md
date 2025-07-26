@@ -30,7 +30,7 @@ De sofistikerade attackerna kännetecknas av hög begärandefrekvens, komplexa m
 > WAF trafikfilterregler kräver ytterligare en licens för **WAF-DDoS-skydd** eller **Förbättrat skydd**. Standardregler för trafikfilter är som standard tillgängliga för Sites- och Forms-kunder.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469434/?quality=12&learn=on&captions=swe)
 
 ## Utbildningsmål
 
