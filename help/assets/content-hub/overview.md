@@ -92,7 +92,7 @@ Videorna handlar om AEM Assets Content Hub nyckelfunktioner - från hantering av
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/content-hub/add-assets" title="Lägga till resurser" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3432980/?format=jpeg&nocache=1744751769952" alt="Lägga till resurser"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3450286/?format=jpeg&nocache=1744751769952&captions=swe" alt="Lägga till resurser"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
