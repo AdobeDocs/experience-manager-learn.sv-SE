@@ -250,7 +250,7 @@ Om du vill se hur A/B-testet fungerar går du till webbplatsen [WKND-aktivering]
 
 ## Ytterligare resurser
 
-- [Översikt över A/B-test](https://experienceleague.adobe.com/en/docs/target/using/activities/abtest/test-ab)
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
-- [Översikt över dataströmmar](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
-- [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
+- [Översikt över A/B-test](https://experienceleague.adobe.com/sv/docs/target/using/activities/abtest/test-ab)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/home)
+- [Översikt över dataströmmar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/overview)
+- [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/sv/docs/target/using/experiences/vec/visual-experience-composer)

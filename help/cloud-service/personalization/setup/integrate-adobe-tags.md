@@ -127,5 +127,5 @@ För att bekräfta att taggkonfigurationen fungerar som den ska kan du:
 
 ## Ytterligare resurser
 
-- [Adobe Experience Platform Debugger - översikt](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
-- [Översikt över taggar](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home)
+- [Adobe Experience Platform Debugger - översikt](https://experienceleague.adobe.com/sv/docs/experience-platform/debugger/home)
+- [Översikt över taggar](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/home)
