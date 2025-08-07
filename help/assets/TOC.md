@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 2ffe4706856f0dbf63f2916af010f23bdb7b0045
+source-git-commit: 82437ad5d395c5261b3a913b168e4068abb55206
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '458'
 ht-degree: 7%
 
 ---
@@ -93,7 +93,7 @@ ht-degree: 7%
    + [Sidekick plugin](./edge-delivery-services/sidekick-plugin.md)
 
 + Adobe GenStudio{#adobe-genstudio}
-   + [AEM Assets och GenStudio for Performance Marketing](https://experienceleague.adobe.com/sv/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
+   + [AEM Assets och GenStudio for Performance Marketing](https://experienceleague.adobe.com/en/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
 
 + Delning och distribution{#sharing}
    + [Hämta resurser](./sharing/download.md)
@@ -147,6 +147,7 @@ ht-degree: 7%
       + [Skärpa](dynamic-media/dynamic-media-image-sharpening-feature-video-use.md)
       + [Färghantering](dynamic-media/dynamic-media-color-management-technical-video-setup.md)
    + Video {#video}
+      + [God praxis](dynamic-media/dynamic-media-video-best-practices.md)
       + [360-video](dynamic-media/dynamic-media-360-video-custom-thumbnail-feature-video-use.md)
       + [Egna videominiatyrer](dynamic-media/dynamic-media-video-thumbnails-feature-video-use.md)
       + [DASH adaptive streaming](dynamic-media/dynamic-media-dash.md)
@@ -201,4 +202,4 @@ ht-degree: 7%
 + Distribution{#deployment}
    + [Multi-tenancy och samtidig utveckling](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Grundläggande om resurser](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=sv-SE){target=_blank}
++ [Grundläggande om resurser](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}
