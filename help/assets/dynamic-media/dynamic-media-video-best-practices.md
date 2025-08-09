@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Läs om de bästa sätten att publicera och optimera video i AEM Dynamic Media, inklusive adaptiv strömning, smart beskärning för olika skärmstorlekar, anpassade visningsinställningar samt stöd för bildtexter, ljudspår och kapitelmarkörer. Det betonar hur man förbättrar tittarupplevelsen, tillgängligheten och marknadsföringseffekten på olika enheter.
 
->[!VIDEO](https://video.tv.adobe.com/v/3470634/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3470682/?learn=on&enablevpops&captions=swe)
 
 ## Stödresurser
 

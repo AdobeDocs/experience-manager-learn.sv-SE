@@ -69,7 +69,7 @@ Videorna handlar om AEM Assets Content Hub nyckelfunktioner - från hantering av
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/content-hub/configure" title="Konfigurera" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3439311/?format=jpeg&nocache=1744751768916" alt="Konfigurera"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3439315/?format=jpeg&nocache=1744751768916&captions=swe" alt="Konfigurera"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -161,7 +161,7 @@ Videorna handlar om AEM Assets Content Hub nyckelfunktioner - från hantering av
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/content-hub/collections" title="Samlingar" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435687/?format=jpeg&nocache=1744751769136" alt="Samlingar"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3445304/?format=jpeg&nocache=1744751769136&captions=swe" alt="Samlingar"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -184,7 +184,7 @@ Videorna handlar om AEM Assets Content Hub nyckelfunktioner - från hantering av
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/content-hub/share" title="Delning" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435685/?format=jpeg&nocache=1744751769933" alt="Delning"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3445359/?format=jpeg&nocache=1744751769933&captions=swe" alt="Delning"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -221,7 +221,7 @@ Utforska användningsexempel och scenarier som visar hur AEM Assets Content Hub 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./use-cases/manage-assets.md" title="Hantera mediefiler med AEM Assets Content Hub" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3457638/?format=jpeg&nocache=1744751770120" alt="Hantera mediefiler med AEM Assets Content Hub"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3463060/?format=jpeg&nocache=1744751770120&captions=swe" alt="Hantera mediefiler med AEM Assets Content Hub"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
