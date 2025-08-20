@@ -1,7 +1,7 @@
 ---
 title: Anropa OpenAPI-baserade AEM-API:er med OAuth Single Page App
 description: Lär dig hur du anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service med användarbaserad autentisering från en anpassad Single Page App (SPA) via OAuth 2.0 PKCE-flöde.
-version: Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
 role: Architect, Developer, Leader
@@ -12,7 +12,7 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
 workflow-type: tm+mt
 source-wordcount: '2130'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Adobe Developer Console-projektet (ADC) är konfigurerat för att aktivera auten
 >ADC-projektet tillhandahåller INTE någon _client_secrets_. I stället genererar SPA en _code_verifier_ och _code_enge_ för att på ett säkert sätt utbyta auktoriseringskoden för en _åtkomsttoken_. Det eliminerar behovet av att lagra en klienthemlighet på klientsidan, vilket förbättrar säkerheten.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456968?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
 
 
 
@@ -529,7 +529,7 @@ AEM as a Cloud Service Cross-Origin Resource Sharing (CORS) underlättar för an
 
    ![WKND SPA Anropar AEM API:er](../assets/spa/wknd-spa-invoke-aem-apis.png)
 
-1. Klicka på knappen **Hämta innehållsfragmentmodeller** i `https://localhost:3001/invoke-aem-apis`-vägen för att anropa API:t för innehållsfragmentmodeller. I SPA visas en lista med innehållsfragmentmodeller.
+1. Klicka på knappen `https://localhost:3001/invoke-aem-apis`Hämta innehållsfragmentmodeller **i**-vägen för att anropa API:t för innehållsfragmentmodeller. I SPA visas en lista med innehållsfragmentmodeller.
 
    ![WKND SPA - Hämta CF-modeller](../assets/spa/wknd-spa-fetch-cf-models.png)
 
