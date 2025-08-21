@@ -12,9 +12,9 @@ thumbnail: KT-16516.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 8338a905-c4a2-4454-9e6f-e257cb0db97c
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+source-git-commit: 57da04874cfb37dcccbf605c65fbcba8f12849fb
 workflow-type: tm+mt
-source-wordcount: '1776'
+source-wordcount: '1811'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,9 @@ Konfigurationssteget för ADC-projekt är _upprepat_ från [Konfigurera OpenAPI-
    ![Lägg till API](../assets/s2s/add-api.png)
 
 1. I dialogrutan _Lägg till API_ filtrerar du efter _Experience Cloud_, markerar **AEM Assets Author API**-kortet och klickar på **Nästa**.
+Om du behöver ett annat OpenAPI-baserat AEM-API kan du läsa [Adobe Developer Documentation](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis) för att hitta den som matchar ditt användningsexempel.
+
+   Exemplet nedan går igenom hur du lägger till **AEM Assets Author API**.
 
    ![Lägg till AEM API](../assets/s2s/add-aem-api.png)
 
@@ -480,3 +483,4 @@ I ADC-projektet lade du till AEM API:er, konfigurerade autentiseringstypen och k
 ## Ytterligare resurser
 
 - [Implementeringshandbok för autentiseringsuppgifter för OAuth Server-till-Server](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation)
+
