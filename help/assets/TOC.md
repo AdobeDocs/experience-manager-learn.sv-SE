@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 82437ad5d395c5261b3a913b168e4068abb55206
+source-git-commit: 4a4334047f600cd64a6f6be82974f280b786d0c1
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '459'
 ht-degree: 7%
 
 ---
@@ -93,7 +93,7 @@ ht-degree: 7%
    + [Sidekick plugin](./edge-delivery-services/sidekick-plugin.md)
 
 + Adobe GenStudio{#adobe-genstudio}
-   + [AEM Assets och GenStudio for Performance Marketing](https://experienceleague.adobe.com/sv/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
+   + [AEM Assets och GenStudio for Performance Marketing](https://experienceleague.adobe.com/en/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
 
 + Delning och distribution{#sharing}
    + [Hämta resurser](./sharing/download.md)
@@ -117,6 +117,7 @@ ht-degree: 7%
    + [AEM-datorprogram](./creative-workflows/aem-desktop-app.md)
    + [Adobe Asset Link](./creative-workflows/adobe-asset-link.md)
    + [Adobe Stock](./creative-workflows/adobe-stock.md)
+   + [Figma](./creative-workflows/figma.md)
 
 + Adobe Asset Link{#adobe-asset-link}
    + [Konfigurera](./adobe-asset-link/setup.md)
@@ -202,4 +203,4 @@ ht-degree: 7%
 + Distribution{#deployment}
    + [Multi-tenancy och samtidig utveckling](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Grundläggande om resurser](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=sv-SE){target=_blank}
++ [Grundläggande om resurser](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}
