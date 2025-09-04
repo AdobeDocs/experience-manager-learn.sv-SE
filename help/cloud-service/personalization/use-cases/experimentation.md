@@ -10,13 +10,13 @@ doc-type: Tutorial
 last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18720
 thumbnail: null
-source-git-commit: 70665c019f63df1e736292ad24c47624a3a80d49
+exl-id: c8a4f0bf-1f80-4494-abe6-9fbc138e4039
+source-git-commit: d81c657daa0b572076a4dcc0813d204e4bea77b0
 workflow-type: tm+mt
-source-wordcount: '1467'
+source-wordcount: '1493'
 ht-degree: 0%
 
 ---
-
 
 # Experimentation (A/B-testning)
 
@@ -34,11 +34,17 @@ I den här självstudien konfigurerar du A/B-testning för **Camping i Western A
 
 Variationerna visas på WKND-hemsidan, vilket gör att du kan mäta prestanda och avgöra vilken version som ger bättre engagemang och konverteringar.
 
-Besök webbplatsen [WKND Enablement](https://wknd.enablementadobe.com/us/en.html) för att se hur A/B-testet fungerar.
+![A/B-test](../assets/use-cases/experiment/view-ab-test-variations.png)
+
+### Livedemo
+
+Besök webbplatsen [WKND Enablement](https://wknd.enablementadobe.com/us/en.html) för att se hur A/B-testet fungerar. I videon nedan visas alla tre variationerna av **Camping i Western Australia** på hemsidan via olika webbläsare.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3473005/?learn=on&enablevpops)
 
 ## Förutsättningar
 
-Innan du fortsätter med detta exempel på användning av experiment måste du kontrollera att du har slutfört följande:
+Kontrollera att du har slutfört följande innan du fortsätter med testet:
 
 - [Integrera Adobe Target](../setup/integrate-adobe-target.md): Gör att ditt team kan skapa och hantera personaliserat innehåll centralt i AEM och aktivera det som erbjudanden i Adobe Target.
 - [Integrera taggar i Adobe Experience Platform](../setup/integrate-adobe-tags.md): Gör att ditt team kan hantera och distribuera JavaScript för personalisering och datainsamling utan att behöva distribuera om AEM-kod.
@@ -250,7 +256,7 @@ Om du vill se hur A/B-testet fungerar går du till webbplatsen [WKND-aktivering]
 
 ## Ytterligare resurser
 
-- [Översikt över A/B-test](https://experienceleague.adobe.com/sv/docs/target/using/activities/abtest/test-ab)
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/home)
-- [Översikt över dataströmmar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/overview)
-- [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/sv/docs/target/using/experiences/vec/visual-experience-composer)
+- [Översikt över A/B-test](https://experienceleague.adobe.com/en/docs/target/using/activities/abtest/test-ab)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
+- [Översikt över dataströmmar](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
+- [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
