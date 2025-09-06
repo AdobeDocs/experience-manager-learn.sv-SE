@@ -22,6 +22,6 @@ ht-degree: 0%
 
 Lär dig hur du integrerar Experience Manager Assets med Figma för att effektivisera designarbetsflödena, säkerställa ett enhetligt varumärke och ge kreativa team direkt tillgång till godkänt material under designen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3472903/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3472908/?learn=on&enablevpops&captions=swe)
 
 * [Hämta exempelfilen WKND Figma](./assets/figma/WKND-Summer-Campaign.fig)
