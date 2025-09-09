@@ -21,18 +21,18 @@ Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-
 
 >[!TIP]
 >
->Den här samlingen självstudiekurser är utformade för dem som föredrar att **lära sig genom att göra**. Om du föredrar att lära dig koncept från grunden kan du ta en titt på [AEM Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html). Denna uppsättning självstudiekurser och resan kompletterar varandra.
+>Den här samlingen självstudiekurser är utformade för dem som föredrar att **lära sig genom att göra**. Om du föredrar att lära dig koncept från grunden kan du ta en titt på [AEM Headless Developer Journey](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/journeys/developer/overview.html?lang=sv-SE). Denna uppsättning självstudiekurser och resan kompletterar varandra.
 
 ## Självstudiekurser per API
 
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE">
       <img alt="GRAPHQL API" src="./assets/graphql-icon.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE">
     <strong> GraphQL API </strong>
     </a>
     </div>
@@ -54,11 +54,11 @@ Adobe Experience Manager (AEM) har flera alternativ för att definiera headless-
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=sv-SE">
     <img alt="Tokenbaserad autentisering" src="./assets/token-auth-icon.png" />
     </a>
     <div>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=sv-SE">
     <strong> Tokenautentisering </strong>
     </a>
     </div>
@@ -76,11 +76,11 @@ Exempelprogram är ett bra sätt att utforska de headless-funktionerna i Adobe E
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html?lang=sv-SE">
       <img alt="iOS-exempel" src="./assets/ios-example.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/ios-swiftui-app.html?lang=sv-SE">
     <strong> iOS SwiftUI-exempel </strong>
     </a>
     </div>
@@ -89,11 +89,11 @@ Exempelprogram är ett bra sätt att utforska de headless-funktionerna i Adobe E
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html?lang=sv-SE">
     <img alt="Android-exempel" src="./assets/android-example.png" />
     </a>
     <div>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/android-app.html?lang=sv-SE">
     <strong> Android™ Example</strong>
     </a>
     </div>
@@ -102,11 +102,11 @@ Exempelprogram är ett bra sätt att utforska de headless-funktionerna i Adobe E
     </p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html?lang=sv-SE">
       <img alt="Reaktionsexempel" src="./assets/react-example.png" />
     </a>
      <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/example-apps/react-app.html?lang=sv-SE">
         <strong> Reaktionsexempel </strong>
       </a>
     </div>
@@ -124,11 +124,11 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview.html?lang=sv-SE">
       <img alt="Reaktion - utan huvud" src="./assets/react-headless.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE">
     <strong>Reagera - Headless </strong>
     </a>
     </div>
@@ -137,11 +137,11 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
+    <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
       <img alt="Reagera - Redigera innehåll via Universal Editor" src="./assets/react-universal-editor.png" />
     </a>
      <div>
-      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
+      <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/universal-editor/react-app-editing/overview">
         <strong> Reagera - Redigera innehåll via universell redigerare </strong>
       </a>
     </div>
@@ -150,11 +150,11 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     <p>
   </td>  
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html?lang=sv-SE">
     <img alt="Reagera - fjärrredigerare" src="./assets/react-remote.png" />
     </a>
     <div>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/remote-spa/overview.html?lang=sv-SE">
     <strong>Reagera - fjärrredigerare</strong>
     </a>
     </div>
@@ -178,11 +178,11 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=sv-SE">
     <img alt="Android - Innehållstjänster" src="./assets/android.png" />
     </a>
     <div>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/content-services/overview.html?lang=sv-SE">
     <strong>Android - Innehållstjänster</strong>
     </a>
     </div>
@@ -191,11 +191,11 @@ Bläddra bland följande självstudiekurser baserat på vilken teknik som använ
     </p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+    <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=sv-SE">
       <img alt="Node.js - Autentisering" src="./assets/node-js.png" />
     </a>
      <div>
-      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html">
+      <a href="https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=sv-SE">
         <strong> Node.js - Autentisering </strong>
       </a>
     </div>

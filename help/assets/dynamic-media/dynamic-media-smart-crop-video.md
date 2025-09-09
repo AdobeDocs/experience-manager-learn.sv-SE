@@ -26,4 +26,4 @@ Dynamic Media Smart Crop för video spårar på ett intelligent sätt intressant
 
 >[!NOTE]
 >
->I videon ovan antas att AEM-tjänsten körs i läget Dynamic Media S7. [Instruktioner för hur du konfigurerar AEM med Dynamic Media finns här.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html)
+>I videon ovan antas att AEM-tjänsten körs i läget Dynamic Media S7. [Instruktioner för hur du konfigurerar AEM med Dynamic Media finns här.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/assets/dynamicmedia/config-dm.html?lang=sv-SE)

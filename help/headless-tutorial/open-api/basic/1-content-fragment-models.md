@@ -160,5 +160,5 @@ I nästa kapitel, [Skapa modeller för innehållsfragment](2-author-content-frag
 
 ## Relaterad dokumentation
 
-* [Modeller för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)
+* [Modeller för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html?lang=sv-SE)
 

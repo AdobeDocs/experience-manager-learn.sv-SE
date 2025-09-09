@@ -50,7 +50,7 @@ AEM har stöd för&quot;platt&quot; mapphantering, vilket innebär att innehåll
    * Titel: **Engelska**
    * Namn: **en**
 
-   En rotspråksmapp skapas för att placera projektet så att det stöder AEM inbyggda lokaliseringsfunktioner. Ett tips är att skapa projekt för flerspråkig support, även om du inte behöver lokalisering idag. Se [följande dokumentsida för mer information](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
+   En rotspråksmapp skapas för att placera projektet så att det stöder AEM inbyggda lokaliseringsfunktioner. Ett tips är att skapa projekt för flerspråkig support, även om du inte behöver lokalisering idag. Se [följande dokumentsida för mer information](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html?lang=sv-SE).
 
 1. Skapa två undermappar under den nya mappen **Mitt projekt > Engelska** med följande värden:
 

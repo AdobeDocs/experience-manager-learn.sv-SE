@@ -43,7 +43,7 @@ Lär dig mer om:
 
 Det här exemplet på React-appen körs lokalt (på `http://localhost:3000`) och ansluter till AEM Content Fragment Delivery för AEM Publish-tjänsten med OpenAPI:er. CORS (Cross-Origin Resource Sharing) måste vara konfigurerat för tjänsten AEM Publish (eller Preview) för att anslutningen ska kunna upprättas.
 
-Följ [instruktionerna om hur du ställer in en SPA som körs på `http://localhost:3000` för att tillåta CORS-begäranden till AEM Publish-tjänsten](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#different-domains).
+Följ [instruktionerna om hur du ställer in en SPA som körs på `http://localhost:3000` för att tillåta CORS-begäranden till AEM Publish-tjänsten](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/spa#different-domains).
 
 ### Lokal CORS-proxy
 

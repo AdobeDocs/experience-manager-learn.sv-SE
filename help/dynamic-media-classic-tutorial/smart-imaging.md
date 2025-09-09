@@ -21,7 +21,7 @@ En av de viktigaste aspekterna av kundupplevelsen på er webbplats eller mobilwe
 
 Smart Imaging har också bättre prestanda eftersom det är helt integrerat med den bästa premiumtjänsten från Adobe. Den här tjänsten hittar den optimala Internetvägen mellan servrar, nätverk och peering-punkter som har den lägsta latensen och/eller paketförlustfrekvensen än standardvägen på Internet.
 
-Läs mer om [Smart bildbehandling](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
+Läs mer om [Smart bildbehandling](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html?lang=sv-SE).
 
 ## Fördelar med smart bildbehandling
 
@@ -33,7 +33,7 @@ Eftersom bilder utgör huvuddelen av en sidas laddningstid kan prestandaförbät
 
 Som tidigare nämnts fungerar Smart Imaging med befintliga bildförinställningar för att automatiskt konvertera bilder till nästa generations optimala bildformat, som WebP, samtidigt som den visuella återgivningen bibehålls.
 
-Läs mer om [Hur smart bildbehandling fungerar](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html#how-does-smart-imaging-work), inklusive information om bildformat som stöds (och vad som händer om du inte använder dessa format) och hur de påverkar befintliga bildförinställningar som används.
+Läs mer om [Hur smart bildbehandling fungerar](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html?lang=sv-SE#how-does-smart-imaging-work), inklusive information om bildformat som stöds (och vad som händer om du inte använder dessa format) och hur de påverkar befintliga bildförinställningar som används.
 
 ## Effekter av Smart Imaging
 
@@ -47,11 +47,11 @@ Smart bildbehandling fungerar med bilder som levereras via HTTP, HTTPS och HTTP/
 
 Smart Imaging ingår i din befintliga licens av Dynamic Media Classic. Det finns inga extra kostnader för den här funktionen. För att kunna utnyttja detta måste du uppfylla två krav: ha ett Adobe-bundet CDN och en dedikerad domän. Sedan måste du aktivera det för ditt konto eftersom det inte aktiveras automatiskt.
 
-Att aktivera Smart Imaging börjar med att du skickar teknisk support via |skapa ett supportärende| [https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). Support kommer att fungera tillsammans med dig för att konfigurera en anpassad domän som du ska associera med Smart Imaging. Du ändrar en parameter som är relaterad till cachelagring (Time To Live, eller TTL) och stödet rensar cachen. Du kan också göra ett valfritt mellanlagringssteg om du vill innan du går till produktion. När Smart Imaging sedan är aktiverat kan du leverera bilder i mindre storlek till kunderna, men med samma kvalitet som de önskade. Det innebär att de får snabbare sidinläsning - och allt detta görs automatiskt.
+Att aktivera Smart Imaging börjar med att du skickar teknisk support via |skapa ett supportärende| [https://helpx.adobe.com/se/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html](https://helpx.adobe.com/se/enterprise/admin-guide.html/enterprise/using/support-for-experience-cloud.ug.html). Support kommer att fungera tillsammans med dig för att konfigurera en anpassad domän som du ska associera med Smart Imaging. Du ändrar en parameter som är relaterad till cachelagring (Time To Live, eller TTL) och stödet rensar cachen. Du kan också göra ett valfritt mellanlagringssteg om du vill innan du går till produktion. När Smart Imaging sedan är aktiverat kan du leverera bilder i mindre storlek till kunderna, men med samma kvalitet som de önskade. Det innebär att de får snabbare sidinläsning - och allt detta görs automatiskt.
 
 När du har aktiverat Smart Imaging vill du kontrollera att den fungerar som förväntat.
 
-Du har antagligen ytterligare frågor om Smart Imaging. Vi har sammanställt en lista med vanliga frågor och svar. Läs [Frågor och svar](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html).
+Du har antagligen ytterligare frågor om Smart Imaging. Vi har sammanställt en lista med vanliga frågor och svar. Läs [Frågor och svar](https://experienceleague.adobe.com/docs/experience-manager-65/assets/dynamic/imaging-faq.html?lang=sv-SE).
 
 ## Ytterligare resurser
 

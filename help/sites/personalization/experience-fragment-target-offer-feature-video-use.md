@@ -35,5 +35,5 @@ Adobe Experience Manager förnyar personaliseringsarbetsflödet mellan AEM och T
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Dokumentation för Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html)
+* [Dokumentation för Experience Fragments](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/authoring/experience-fragments.html?lang=sv-SE)
 * [Använda upplevelsefragment](/help/sites/experience-fragments/experience-fragments-feature-video-use.md)
