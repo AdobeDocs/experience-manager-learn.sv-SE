@@ -11,7 +11,7 @@ role: Developer
 level: Intermediate, Experienced
 exl-id: 766bfaff-ade0-41c8-a395-e79dfb4b3d76
 duration: 115
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
 workflow-type: tm+mt
 source-wordcount: '401'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 Arbetare definieras som Adobe I/O Runtime åtgärdsposter under `actions` och består av en uppsättning konfigurationer.
 
-Arbetare som använder andra Adobe I/O-integreringar måste ange egenskapen `annotations -> require-adobe-auth` till `true` eftersom [visar arbetarens Adobe I/O-autentiseringsuppgifter](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=sv-SE#access-adobe-apis) via objektet `params.auth`. Detta krävs vanligtvis när arbetaren anropar Adobe I/O API:er som Adobe Photoshop, Lightroom eller Sensei API:er och kan växlas per arbetare.
+Arbetare som använder andra Adobe I/O-integreringar måste ange egenskapen `annotations -> require-adobe-auth` till `true` eftersom [visar arbetarens Adobe I/O-autentiseringsuppgifter](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#access-adobe-apis) via objektet `params.auth`. Detta är vanligtvis nödvändigt när arbetaren anropar Adobe I/O API:er som Adobe Photoshop eller Lightroom API:er och kan växlas per arbetare.
 
 1. Öppna och granska den automatiskt genererade arbetaren `manifest.yml`. Projekt som innehåller flera Asset Compute-arbetare måste definiera en post för varje arbetare under arrayen `actions`.
 
@@ -44,14 +44,14 @@ packages:
         limits:
           concurrency: 10
         annotations:
-          require-adobe-auth: true # set to true, to pass through Adobe I/O access token/client id via params.auth in the worker, typically required when the worker calls out to Adobe I/O APIs such as the Adobe Photoshop, Lightroom or Sensei APIs.
+          require-adobe-auth: true # set to true, to pass through Adobe I/O access token/client id via params.auth in the worker, typically required when the worker calls out to Adobe I/O APIs such as the Adobe Photoshop, or Lightroom.
 ```
 
 ## Definiera gränser
 
 Varje arbetare kan konfigurera [limits](https://www.adobe.io/apis/experienceplatform/runtime/docs.html#!adobedocs/adobeio-runtime/master/guides/system_settings.md) för sin körningskontext i Adobe I/O Runtime. Dessa värden bör justeras för att ge optimal storlek för arbetaren, baserat på volymen, hastigheten och typen av resurser som den beräknar samt vilken typ av arbete den utför.
 
-Granska [Adobe vägledning om storleksändring](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html?lang=sv-SE#sizing-workers) innan du anger gränser. Asset Compute-arbetare kan få slut på minne när de bearbetar resurser, vilket kan leda till att körningen av Adobe I/O Runtime avbryts, så att arbetaren har rätt storlek för att hantera alla kandidatresurser.
+Granska [Adobe vägledning om storleksändring](https://experienceleague.adobe.com/docs/asset-compute/using/extend/develop-custom-application.html#sizing-workers) innan du anger gränser. Asset Compute-arbetare kan få slut på minne när de bearbetar resurser, vilket kan leda till att körningen av Adobe I/O Runtime avbryts, så att arbetaren har rätt storlek för att hantera alla kandidatresurser.
 
 1. Lägg till ett `inputs`-avsnitt i den nya `wknd-asset-compute`-åtgärdsposten. Detta gör att Asset Compute-arbetarens totala prestanda och resurstilldelning kan justeras.
 
@@ -113,7 +113,7 @@ Så här startar du Asset Compute Development Tool för Asset Compute-projektet:
    $ aio app run
    ```
 
-1. Det lokala Asset Compute Development Tool öppnas i din standardwebbläsare på __http://localhost:9000__.
+1. Det lokala Asset Compute Development Tool öppnas i din standardwebbläsare: __http://localhost :9000__.
 
    ![AIR-appkörning](assets/environment-variables/aio-app-run.png)
 

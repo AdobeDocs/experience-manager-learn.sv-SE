@@ -8,10 +8,10 @@ sub-product: Experience Manager Sites
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-2963
 index: y
-source-git-commit: 6425188da75f789b0661ec9bfb79624b5704c92b
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 8%
+source-wordcount: '343'
+ht-degree: 7%
 
 ---
 
@@ -19,8 +19,16 @@ ht-degree: 8%
 # Kom igång med AEM Headless{#getting-started-with-aem-headless}
 
 + [AEM Headless Overview](./overview.md)
++ OpenAPI {#open-api}
+   + Grundläggande självstudier {#basic}
+      + [Ökning](./open-api/basic/overview.md)
+      + [1 - Definiera modeller för innehållsfragment](./open-api/basic/1-content-fragment-models.md)
+      + [2 - Skapa innehållsfragment](./open-api/basic/2-author-content-fragments.md)
+      + [3 - Utforska OpenAPI API:er](./open-api/basic/3-explore-openapis.md)
+      + [4 - Bygg en React-app](./open-api/basic/4-react-app.md)
+      + [5 - Integrering med Universal Editor](./open-api/basic/5-universal-editor.md)
 + GraphQL {#graphql}
-   + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE){target=_blank}
+   + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
    + [Ökning](./graphql/overview.md)
    + Snabbinställningar {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)

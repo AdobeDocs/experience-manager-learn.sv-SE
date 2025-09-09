@@ -1,6 +1,6 @@
 ---
 title: Använda Smart Crop med AEM Assets Dynamic Media
-description: Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma beskärningsåtgärder för responsiv design.
+description: Smart Crop eliminerar de tidskrävande och dyra arbetsmomenten med att beskära material för responsiv design.
 feature: Smart Crop, Image Profiles
 version: Experience Manager 6.4, Experience Manager 6.5
 topic: Content Management
@@ -10,22 +10,22 @@ jira: KT-784
 doc-type: Feature Video
 exl-id: 295bbfb6-241f-41c0-972d-d9688863cea1
 duration: 443
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
 
 # Använda Smart Crop med AEM Assets Dynamic Media{#using-smart-crop-with-aem-assets-dynamic-media}
 
-Smart Crop använder Adobe Sensei för att eliminera tidskrävande och kostsamma beskärningsåtgärder för responsiv design.
+Smart Crop eliminerar de tidskrävande och dyra arbetsmomenten med att beskära material för responsiv design.
 
 >[!VIDEO](https://video.tv.adobe.com/v/21519?quality=12&learn=on)
 
 >[!NOTE]
 >
->I videon antas att din AEM-instans körs i läget Dynamic Media S7. [Instruktioner för hur du konfigurerar AEM med Dynamic Media finns här.](https://helpx.adobe.com/se/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
+>I videon antas att din AEM-instans körs i läget Dynamic Media S7. [Instruktioner för hur du konfigurerar AEM med Dynamic Media finns här.](https://helpx.adobe.com/experience-manager/6-3/assets/using/config-dynamic-fp-14410.html)
 
 ## Adobe Experience Manager Dynamic Media Smart Crop innehåller
 

@@ -1,6 +1,6 @@
 ---
 title: Självstudiekurs om bästa praxis för Dynamic Media Classic
-description: Dynamic Media Classic är navet som kunderna skapar, skapar och levererar multimediematerial runt. Denna självstudiekurs om bästa praxis har tagits fram för att hjälpa nuvarande och nya användare av Dynamic Media Classic att bättre förstå vad de kan göra med denna kraftfulla multimedielösning från Adobe. I den här delen av självstudiekursen får du lära dig vad Dynamic Media Classic är och en kort titt på dess kärnfunktioner och användargränssnitt.
+description: Dynamic Media Classic är navet som kunderna skapar, skapar och levererar multimediematerial runt. Denna självstudiekurs om metodtips har tagits fram för att hjälpa nuvarande och nya användare av Dynamic Media Classic att bättre förstå vad de kan göra med denna kraftfulla multimedielösning från Adobe. I den här delen av självstudiekursen får du lära dig vad Dynamic Media Classic är och en kort titt på dess kärnfunktioner och användargränssnitt.
 feature: Dynamic Media Classic
 topic: Content Management
 role: User
@@ -8,16 +8,16 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 975b85af-ca6a-419e-ab2a-6e1781bfee4a
 duration: 173
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
 
 # Självstudiekurs om bästa praxis för Dynamic Media Classic
 
-Den här guiden ska hjälpa nuvarande och nya användare av Dynamic Media Classic att bättre förstå vad de kan göra med sin kraftfulla multimedielösning från Adobe. Vi gör det genom att:
+Den här guiden är avsedd att hjälpa nuvarande och nya användare av Dynamic Media Classic att bättre förstå vad de kan göra med sin kraftfulla multimedielösning från Adobe. Vi gör det genom att:
 
 - Vi presenterar Dynamic Media Classic, beskriver vad det är och ger en översikt över dess kärnfunktioner och användargränssnitt.
 - Förklara det allmänna arbetsflödet Skapa, Författare och Leverera som du kommer att följa när du arbetar med resurser i lösningen.
@@ -40,9 +40,9 @@ I den här guiden diskuterar vi följande kärnfunktioner i Dynamic Media Classi
 
 - **Dynamic Imaging.** Paraplytermen för redigering i realtid, formatering och storleksändring samt interaktiv zoom och panorering, visning av färger och texturer, 360-graders rotation, bildmallar och multimediavisare.
 - **Video.** Överför färdiga videoklipp, publicera dem och ladda sedan ned dem progressivt till konfigurerbara videovisningsprogram.
-- **Smart bildbehandling.**-teknik som utnyttjar Adobe Sensei AI-funktioner och fungerar med befintliga &quot;Image Presets&quot; för att förbättra bildleveransprestanda genom att automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarens kapacitet.
+- **Smart bildbehandling.**-teknik som fungerar med befintliga&quot;Bildförinställningar&quot; för att förbättra bildleveransprestanda genom att automatiskt optimera bildformat, storlek och kvalitet baserat på webbläsarfunktioner i klienten.
 
-Om du vill ha mer information om lösningen går du till [Dokumentation för Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html?lang=sv-SE).
+Om du vill ha mer information om lösningen går du till [Dokumentation för Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/intro/introduction.html).
 
 ## Dynamic Media Classic användargränssnitt
 
@@ -64,12 +64,12 @@ _Dynamic Media Classic UI_
 
 >[!IMPORTANT]
 >
->Förutom varje resurs-ID finns växeln **Mark for Publish**. När växeln är aktiverad (grön) visar det att resursen är markerad för publicering.
+>Förutom varje resurs-ID finns växeln **Markera för publicering**. När växeln är aktiverad (grön) visar det att resursen är markerad för publicering.
 
 ![bild](assets/overview/overview-mark-for-publish.png)
 
 >[!TIP]
 >
->Markera kryssrutan **Publish efter överföring** i dialogrutan Överför för att automatiskt publicera resurser vid överföring.
+>Markera kryssrutan **Publicera efter överföring** i dialogrutan Överför för att automatiskt publicera resurser vid överföring.
 
-Läs mer om [Navigera i användargränssnittet i Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html?lang=sv-SE).
+Läs mer om [Navigera i användargränssnittet i Dynamic Media Classic](https://experienceleague.adobe.com/docs/dynamic-media-classic/using/getting-started/navigation-basics.html).
