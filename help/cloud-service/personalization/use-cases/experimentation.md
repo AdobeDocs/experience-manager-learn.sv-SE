@@ -9,9 +9,9 @@ level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18720
-thumbnail: null
+thumbnail: KT-18720.jpeg
 exl-id: c8a4f0bf-1f80-4494-abe6-9fbc138e4039
-source-git-commit: d81c657daa0b572076a4dcc0813d204e4bea77b0
+source-git-commit: 5b91e7409ff0735bab40d78ad98410ac2ab006ed
 workflow-type: tm+mt
 source-wordcount: '1493'
 ht-degree: 0%
@@ -256,7 +256,7 @@ Om du vill se hur A/B-testet fungerar går du till webbplatsen [WKND-aktivering]
 
 ## Ytterligare resurser
 
-- [Översikt över A/B-test](https://experienceleague.adobe.com/sv/docs/target/using/activities/abtest/test-ab)
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/home)
-- [Översikt över dataströmmar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/overview)
-- [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/sv/docs/target/using/experiences/vec/visual-experience-composer)
+- [Översikt över A/B-test](https://experienceleague.adobe.com/en/docs/target/using/activities/abtest/test-ab)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
+- [Översikt över dataströmmar](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
+- [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
