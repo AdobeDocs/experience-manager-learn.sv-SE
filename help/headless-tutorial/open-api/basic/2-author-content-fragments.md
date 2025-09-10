@@ -10,7 +10,7 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 duration: 700
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+source-git-commit: 01f51a3556cfbcc22bbe31c4c05c11caaab71708
 workflow-type: tm+mt
 source-wordcount: '1274'
 ht-degree: 0%
@@ -50,7 +50,7 @@ AEM har stöd för&quot;platt&quot; mapphantering, vilket innebär att innehåll
    * Titel: **Engelska**
    * Namn: **en**
 
-   En rotspråksmapp skapas för att placera projektet så att det stöder AEM inbyggda lokaliseringsfunktioner. Ett tips är att skapa projekt för flerspråkig support, även om du inte behöver lokalisering idag. Se [följande dokumentsida för mer information](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html?lang=sv-SE).
+   En rotspråksmapp skapas för att placera projektet så att det stöder AEM inbyggda lokaliseringsfunktioner. Ett tips är att skapa projekt för flerspråkig support, även om du inte behöver lokalisering idag. Se [följande dokumentsida för mer information](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/admin/translate-assets.html).
 
 1. Skapa två undermappar under den nya mappen **Mitt projekt > Engelska** med följande värden:
 
