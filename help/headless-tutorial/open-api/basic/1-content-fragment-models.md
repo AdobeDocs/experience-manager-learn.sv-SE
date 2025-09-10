@@ -68,7 +68,7 @@ Skapa en innehållsfragmentmodell för en **person**, som är datamodell, eller 
    * Egenskapsnamn: `fullName`
    * Kontrollera **krävs**
 
-   Egenskapsnamnet **** definierar namnet på egenskapen där det skapade värdet lagras i AEM. Egenskapsnamnet **Property Name** definierar också **key**-namnet för den här egenskapen som en del av dataschemat och används som nyckel i JSON-svaret när innehållsfragmentet levereras via AEM OpenAPI:er.
+   Egenskapsnamnet **&#x200B;**&#x200B;definierar namnet på egenskapen där det skapade värdet lagras i AEM. Egenskapsnamnet **Property Name** definierar också **key**-namnet för den här egenskapen som en del av dataschemat och används som nyckel i JSON-svaret när innehållsfragmentet levereras via AEM OpenAPI:er.
 
 1. Markera fliken **Datatyper** och dra och släpp ett **flerradigt textfält** under fältet **Fullständigt namn**. Ange följande egenskaper:
 
