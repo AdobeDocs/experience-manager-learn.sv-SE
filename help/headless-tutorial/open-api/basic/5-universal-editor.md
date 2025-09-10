@@ -27,7 +27,7 @@ Universell redigerare är ett kraftfullt sätt att aktivera kontextredigering f�
 ## Förutsättningar
 
 * Föregående steg i den här självstudiekursen har slutförts, närmare bestämt [Skapa en React-app där AEM Content Fragment Delivery OpenAPI:er används](./4-react-app.md)
-* En arbetskunskap om [hur du använder och implementerar Universal Editor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction).
+* En arbetskunskap om [hur du använder och implementerar Universal Editor](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/introduction).
 
 ## Mål
 
@@ -39,14 +39,14 @@ Lär dig mer om:
 
 ## Universell redigeringsinstrumentering
 
-Universell redigerare kräver [HTML-attribut och metataggar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types) för att identifiera redigerbart innehåll och upprätta en anslutning mellan användargränssnittet och AEM-innehållet.
+Universell redigerare kräver [HTML-attribut och metataggar](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types) för att identifiera redigerbart innehåll och upprätta en anslutning mellan användargränssnittet och AEM-innehållet.
 
 ### Lägg till taggar för Universal Editor
 
 Lägg först till de metataggar som krävs för att identifiera React-appen som Universal Editor-kompatibel.
 
 1. Öppna `public/index.html` i React-appen.
-1. Lägg till [metataggar för Universal Editor och CORS-skript](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started) i avsnittet `<head>` i React-appen:
+1. Lägg till [metataggar för Universal Editor och CORS-skript](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/getting-started) i avsnittet `<head>` i React-appen:
 
    ```html
    <!DOCTYPE html>
@@ -88,7 +88,7 @@ Lägg först till de metataggar som krävs för att identifiera React-appen som 
 Nu kan du lägga till attribut för Universal Editor för att göra teamkomponenten redigerbar.
 
 1. Öppna `src/components/Teams.js`.
-1. Uppdatera `Team`-komponenten så att den innehåller [attribut för Universal Editor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types):
+1. Uppdatera `Team`-komponenten så att den innehåller [attribut för Universal Editor](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types):
 
    När du anger attributet `data-aue-resource` kontrollerar du att AEM-sökvägen till innehållsfragmentet, som returneras av AEM Content Fragment Delivery med OpenAPI-API:er, är postfix med undersökvägen till varianten för innehållsfragment, i det här fallet `/jcr:content/data/master`.
 
@@ -214,7 +214,7 @@ Nu kan du lägga till attribut för Universal Editor för att göra teamkomponen
 Lägg på samma sätt till attribut för Universal Editor i komponenten Person.
 
 1. Öppna `src/components/Person.js`.
-1. Uppdatera komponenten så att den innehåller [attribut för Universal Editor](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types):
+1. Uppdatera komponenten så att den innehåller [attribut för Universal Editor](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types):
 
    När du anger attributet `data-aue-resource` kontrollerar du att AEM-sökvägen till innehållsfragmentet, som returneras av AEM Content Fragment Delivery med OpenAPI-API:er, är postfix med undersökvägen till varianten för innehållsfragment, i det här fallet `/jcr:content/data/master`.
 
