@@ -10,14 +10,14 @@ topic: Headless, Content Management
 role: Developer
 level: Beginner
 duration: 430
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+source-git-commit: a3d2a88232cae941647464be8e215a47c85bc0ab
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 0%
 
 ---
 
-# Definiera modeller för innehållsfragment
+# Skapa modeller för innehållsfragment
 
 I det här kapitlet får du lära dig att modellera innehåll och skapa ett schema med **modeller för innehållsfragment** samt om de olika datatyper som definierar en modell för innehållsfragment.
 
@@ -68,7 +68,7 @@ Skapa en innehållsfragmentmodell för en **person**, som är datamodell, eller 
    * Egenskapsnamn: `fullName`
    * Kontrollera **krävs**
 
-   Egenskapsnamnet **&#x200B;**&#x200B;definierar namnet på egenskapen där det skapade värdet lagras i AEM. Egenskapsnamnet **Property Name** definierar också **key**-namnet för den här egenskapen som en del av dataschemat och används som nyckel i JSON-svaret när innehållsfragmentet levereras via AEM OpenAPI:er.
+   Egenskapsnamnet **** definierar namnet på egenskapen där det skapade värdet lagras i AEM. Egenskapsnamnet **Property Name** definierar också **key**-namnet för den här egenskapen som en del av dataschemat och används som nyckel i JSON-svaret när innehållsfragmentet levereras via AEM OpenAPI:er.
 
 1. Markera fliken **Datatyper** och dra och släpp ett **flerradigt textfält** under fältet **Fullständigt namn**. Ange följande egenskaper:
 
@@ -160,5 +160,5 @@ I nästa kapitel, [Skapa modeller för innehållsfragment](2-author-content-frag
 
 ## Relaterad dokumentation
 
-* [Modeller för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html?lang=sv-SE)
+* [Modeller för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/assets/content-fragments/content-fragments-models.html)
 
