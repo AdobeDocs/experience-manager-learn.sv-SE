@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Läs om hur AEM Assets as a Cloud Service använder Adobe GenAI för att generera och förstärka metadata för mediefiler för att underlätta hantering och identifiering av innehåll.
 
->[!VIDEO](https://video.tv.adobe.com/v/3474891/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474908/?learn=on&enablevpops&captions=swe)

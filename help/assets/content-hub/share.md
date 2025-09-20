@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Lär dig hur du delar resurser och samlingar med teammedlemmar i AEM Assets Content Hub, vilket främjar effektivt lagarbete och säker delning av resurser.
 
->[!VIDEO](https://video.tv.adobe.com/v/3474890/?learn=on&enablevpops=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3474923/?learn=on&enablevpops=on&captions=swe)
