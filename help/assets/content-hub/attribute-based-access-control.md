@@ -24,4 +24,4 @@ Lär dig hur du ställer in och styr åtkomst till resurser i AEM Assets Content
 
 >[!VIDEO](https://video.tv.adobe.com/v/3475413/?learn=on&enablevpops)
 
-[Hämta det attributbaserade kalkylbladet för åtkomstkontrollsdefinitionen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control) från AEM Assets Content Hub Attributbaserad åtkomstkontrollsdokumentation.
+[Hämta det attributbaserade kalkylbladet för åtkomstkontrollsdefinitionen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/content-hub/attribute-based-access-control) från AEM Assets Content Hub Attributbaserad åtkomstkontrollsdokumentation.
