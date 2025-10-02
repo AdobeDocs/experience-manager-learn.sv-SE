@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Lär dig hur du migrerar andra Adobe-lösningar till de nya autentiseringsuppgifterna för OAuth Server-till-Server från de inaktuella JWT-autentiseringsuppgifterna (Service Account).
 
->[!VIDEO](https://video.tv.adobe.com/v/3432960/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449242/?learn=on&captions=swe)
