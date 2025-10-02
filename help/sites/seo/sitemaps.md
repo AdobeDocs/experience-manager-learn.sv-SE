@@ -12,7 +12,7 @@ last-substantial-update: 2022-10-03T00:00:00Z
 doc-type: Technical Video
 exl-id: 40bb55f9-011d-4261-9f44-b1104a591252
 duration: 937
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: d2714443fa644ba17afdfbed5e6da8091425aeab
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Lär dig hur du kan förbättra din SEO genom att skapa webbplatskartor för AEM
 >
 >I den här videon visas hur relativa URL:er används i platskartan. Webbplatskartor [ska använda absoluta URL:er](https://sitemaps.org/protocol.html). Se [Konfigurationer](#absolute-sitemap-urls) för hur du aktiverar absoluta URL:er, eftersom detta inte beskrivs i videon nedan.
 
->[!VIDEO](https://video.tv.adobe.com/v/3454365?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
 
 ## Konfigurationer
 
@@ -52,7 +52,7 @@ Skärmbilden nedan visar en liknande konfiguration, men för `http://wknd.local`
 
 Definierar fabrikskonfigurationen [OSGi](http://localhost:4502/system/console/configMgr/org.apache.sling.sitemap.impl.SitemapScheduler) för frekvensen (med [cron expressions](https://cron.help/)) återskapas/genereras och cachelagras i AEM.
 
-`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.publish`
+`ui.config/src/main/jcr_content/apps/wknd/osgiconfig/config.author`
 
 ```json
 {
@@ -89,7 +89,7 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 
 ## Resurser
 
-+ [AEM SiteMap-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=sv-SE)
++ [AEM SiteMap-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=en)
 + [Dokumentation för Apache Sling Sitemap](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
 + [Sitemap.org för webbplatskartan](https://www.sitemaps.org/protocol.html)
 + [Sitemap.org Dokumentation för indexfil för platskarta](https://www.sitemaps.org/protocol.html#index)
