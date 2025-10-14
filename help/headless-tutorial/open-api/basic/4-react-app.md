@@ -66,7 +66,7 @@ Källkoden för exempelappen React är [tillgänglig på Github.com](https://git
 
 Så här skaffar du React-appen:
 
-1. Klona exempelappen WKND OpenAPI React från [Github.com](https://github.com/adobe/aem-tutorials) från [`headless_open-api_basic`-taggen ](https://github.com/adobe/aem-tutorials/tree/headless_open-api_basic).
+1. Klona exempelappen WKND OpenAPI React från [Github.com](https://github.com/adobe/aem-tutorials) från [`headless_open-api_basic`-taggen &#x200B;](https://github.com/adobe/aem-tutorials/tree/headless_open-api_basic).
 
    ```shell
    $ cd ~/Code

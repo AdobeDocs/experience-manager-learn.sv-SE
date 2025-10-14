@@ -108,7 +108,7 @@ Framsidesresurserna levereras till webbläsarna via URI-sökvägar som börjar m
   ```
 
 
-* De paketerade resurserna flyttas till modulen `ui.apps` med plugin-programmet [ aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator), med hjälp av konfigurationen som hanteras i filen `clientlib.config.js`.
+* De paketerade resurserna flyttas till modulen `ui.apps` med plugin-programmet [&#x200B; aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator), med hjälp av konfigurationen som hanteras i filen `clientlib.config.js`.
 
 ```javascript
     ...

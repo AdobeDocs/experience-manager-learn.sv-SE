@@ -26,7 +26,7 @@ Det här är en självstudiekurs i flera delar där stegen som beskrivs i [Skapa
 
 Se till att du har följande:
 
-* Värdnamnet för AEM Publish-tjänsten (t.ex. `https://publish-<PROGRAM_ID>-e<ENVIRONMENT_ID >.adobeaemcloud.com/`) som [innehållsfragment publiceras till ](./2-author-content-fragments.md#publish-content-fragments). Om du publicerar en AEM Preview-tjänst ska värdnamnet vara tillgängligt (t.ex. `https://preview-<PROGRAM_ID>-e<ENVIRONMENT_ID>.adobeaemcloud.com/`).
+* Värdnamnet för AEM Publish-tjänsten (t.ex. `https://publish-<PROGRAM_ID>-e<ENVIRONMENT_ID >.adobeaemcloud.com/`) som [innehållsfragment publiceras till &#x200B;](./2-author-content-fragments.md#publish-content-fragments). Om du publicerar en AEM Preview-tjänst ska värdnamnet vara tillgängligt (t.ex. `https://preview-<PROGRAM_ID>-e<ENVIRONMENT_ID>.adobeaemcloud.com/`).
 
 ## Mål {#objectives}
 

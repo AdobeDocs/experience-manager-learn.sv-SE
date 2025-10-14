@@ -44,7 +44,7 @@ Om du vill aktivera felsökning på klientsidan anropar du metoden `setDebug(tru
 
 ## Felsökning via Adobe Experience Platform Debugger
 
-Adobe tillhandahåller [Chrome-tillägget ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) för Adobe Experience Platform Debugger för att felsöka, förstå och få insikter i integreringen.
+Adobe tillhandahåller [Chrome-tillägget &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) för Adobe Experience Platform Debugger för att felsöka, förstå och få insikter i integreringen.
 
 1. Öppna tillägget Adobe Experience Platform Debugger och öppna webbplatssidan på Publish-instansen
 

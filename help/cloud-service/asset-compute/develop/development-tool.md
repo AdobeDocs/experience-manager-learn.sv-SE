@@ -30,7 +30,7 @@ Asset Compute Development Tool kan köras från Asset Compute-projektets rot via
 $ aio app run
 ```
 
-Utvecklingsverktyget startas på __http://localhost:9000__ och öppnas automatiskt i ett webbläsarfönster. För att utvecklingsverktyget ska kunna köras måste [en giltig, automatiskt genererad devToolToken anges via en frågeparameter ](#troubleshooting__devtooltoken).
+Utvecklingsverktyget startas på __http://localhost:9000__ och öppnas automatiskt i ett webbläsarfönster. För att utvecklingsverktyget ska kunna köras måste [en giltig, automatiskt genererad devToolToken anges via en frågeparameter &#x200B;](#troubleshooting__devtooltoken).
 
 ## Förstå gränssnittet i Asset Compute Development Tools{#interface}
 

@@ -210,7 +210,7 @@ Filen `filter.xml` ska se ut så här:
 
 När nu AEM-projektet distribueras inkluderas dessa konfigurationer automatiskt.
 
-Samlingsmappningseffekterna som AEM kör på `http` och `localhost`, så det finns bara stöd för lokal utveckling. Vid distribution till AEM as a Cloud Service måste liknande kopplingsmappningar läggas till för målet `https` och för rätt AEM as a Cloud Service-domän/domäner. Mer information finns i [ Dokumentation om kopplingsmappning ](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) .
+Samlingsmappningseffekterna som AEM kör på `http` och `localhost`, så det finns bara stöd för lokal utveckling. Vid distribution till AEM as a Cloud Service måste liknande kopplingsmappningar läggas till för målet `https` och för rätt AEM as a Cloud Service-domän/domäner. Mer information finns i [&#x200B; Dokumentation om kopplingsmappning &#x200B;](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) .
 
 ## Cross-Origin Resource Sharing - säkerhetsprinciper
 

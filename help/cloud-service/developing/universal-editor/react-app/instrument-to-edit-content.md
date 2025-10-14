@@ -417,7 +417,7 @@ Men som en snabb sammanfattning lagras WKND-teammedlemmarna som `Person`-innehå
 
 ## Lösningsfiler
 
-Om du vill verifiera implementeringsändringarna eller om du inte kan få WKND Teams React-appen att fungera med Universal Editor läser du [lösningsgrenen ](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial-instrumented-for-UE) som bygger på grundläggande självstudiekurser för UE.
+Om du vill verifiera implementeringsändringarna eller om du inte kan få WKND Teams React-appen att fungera med Universal Editor läser du [lösningsgrenen &#x200B;](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial-instrumented-for-UE) som bygger på grundläggande självstudiekurser för UE.
 
 Fil-för-fil-jämförelse med den **grundläggande självstudiekursen** som fungerar finns [här](https://github.com/adobe/aem-guides-wknd-graphql/compare/solution/basic-tutorial...solution/basic-tutorial-instrumented-for-UE?expand=1).
 

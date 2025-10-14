@@ -142,7 +142,7 @@ När du har skapat ADC-projektet måste du lägga till de AEM-API:er du vill anv
 
    ![Välj autentisering](./assets/s2s/select-authentication.png)
 
-   Server-till-server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Autentiseringsalternativen Web App och Single Page App är lämpliga för program som behöver API-åtkomst åt användarna. Mer information finns i [Skillnaden mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App respektive Single Page App ](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
+   Server-till-server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Autentiseringsalternativen Web App och Single Page App är lämpliga för program som behöver API-åtkomst åt användarna. Mer information finns i [Skillnaden mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App respektive Single Page App &#x200B;](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
 
    >[!TIP]
    >

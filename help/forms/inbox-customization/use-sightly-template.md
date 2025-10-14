@@ -26,7 +26,7 @@ Du kan använda en liten mall för att formatera de data som ska visas i inkorgs
 
 ## Liten mall
 
-Här följer en enkel mall. Koden i mallen visas med ikonen beroende på inkomsten. Ikonerna är tillgängliga som en del av [URI-ikonbiblioteket ](https://helpx.adobe.com/se/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) som medföljer AEM.
+Här följer en enkel mall. Koden i mallen visas med ikonen beroende på inkomsten. Ikonerna är tillgängliga som en del av [URI-ikonbiblioteket &#x200B;](https://helpx.adobe.com/se/experience-manager/6-3/sites/developing/using/reference-materials/coral-ui/coralui3/Coral.Icon.html#availableIcons) som medföljer AEM.
 
 ```java
 <template data-sly-template.incomeTemplate="${@ item}>">

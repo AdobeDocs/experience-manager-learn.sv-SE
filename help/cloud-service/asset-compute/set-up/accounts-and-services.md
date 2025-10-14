@@ -29,7 +29,7 @@ Alla Adobes tjänster måste vara tillgängliga via samma Adobe Org som använde
    + Etableringen kan ta mellan 2 och 10 dagar
 + molnlagring
    + [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/)
-   + eller [Amazon S3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card)
+   + eller [Amazon S3](https://aws.amazon.com/s3/?did=ft_card&trk=ft_card)
 
 >[!WARNING]
 >
@@ -84,7 +84,7 @@ _Klicka igenom etableringen av Azure Blob Storage (inget ljud)_
 
 ### Amazon S3{#amazon-s3}
 
-Vi rekommenderar att du använder [Microsoft Azure Blob Storage](#azure-blob-storage) för att slutföra den här självstudiekursen, men [Amazon S3](https://aws.amazon.com/s3/?did=ft_card&amp;trk=ft_card) kan också användas.
+Vi rekommenderar att du använder [Microsoft Azure Blob Storage](#azure-blob-storage) för att slutföra den här självstudiekursen, men [Amazon S3](https://aws.amazon.com/s3/?did=ft_card&trk=ft_card) kan också användas.
 
 Om du använder Amazon S3-lagring anger du inloggningsuppgifterna för Amazon S3-molnlagring när du [konfigurerar projektets miljövariabler](../develop/environment-variables.md#amazon-s3).
 

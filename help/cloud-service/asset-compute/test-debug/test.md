@@ -85,7 +85,7 @@ Det här testfallet kontrollerar parametriserade indata (`params.json`) för ind
    + Kontrollera att [Docker Desktop](../set-up/development-environment.md#docker) och tillhörande Docker-bilder är installerade och startade
    + Avsluta alla instanser av utvecklingsverktyget som körs
 
-![Test - lyckades ](./assets/test/success-parameterized/result.png)
+![Test - lyckades &#x200B;](./assets/test/success-parameterized/result.png)
 
 ## Skriva ett fel vid kontroll av testfall
 
@@ -103,7 +103,7 @@ Det här testfallet testar för att säkerställa att arbetaren genererar rätt 
    ```
 
    + Ange `contrast`-parametrar till `10`, ett ogiltigt värde eftersom kontrasten måste vara mellan -1 och 1, för att generera `RenditionInstructionsError`.
-   + Kontrollera att rätt fel genereras i tester genom att ange nyckeln `errorReason` till &quot;reason&quot; som är associerad med det förväntade felet. Den här ogiltiga kontrastparametern genererar det [anpassade felet ](../develop/worker.md#errors), `RenditionInstructionsError`, och därför anges `errorReason` till felets orsak, eller `rendition_instructions_error` för att bekräfta att det genereras.
+   + Kontrollera att rätt fel genereras i tester genom att ange nyckeln `errorReason` till &quot;reason&quot; som är associerad med det förväntade felet. Den här ogiltiga kontrastparametern genererar det [anpassade felet &#x200B;](../develop/worker.md#errors), `RenditionInstructionsError`, och därför anges `errorReason` till felets orsak, eller `rendition_instructions_error` för att bekräfta att det genereras.
 
 1. Eftersom ingen återgivning ska genereras under en körning krävs ingen `rendition.<extension>`-fil.
 1. Kör testsviten från projektets rot genom att köra kommandot `aio app test`

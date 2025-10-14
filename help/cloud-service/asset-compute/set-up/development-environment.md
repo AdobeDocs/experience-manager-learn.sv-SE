@@ -89,7 +89,7 @@ $ aio plugins:install @adobe/aio-cli-plugin-asset-compute
 
 ## Installera wskdebug{#wskdebug}
 
-Hämta och installera [Apache OpenWhisk-felsökningsmodulen ](https://www.npmjs.com/package/@openwhisk/wskdebug) npm för att underlätta lokal felsökning av Asset Compute-arbetare.
+Hämta och installera [Apache OpenWhisk-felsökningsmodulen &#x200B;](https://www.npmjs.com/package/@openwhisk/wskdebug) npm för att underlätta lokal felsökning av Asset Compute-arbetare.
 
 _Visual Studio Code 1.48.x+ krävs för att [wskdebug](#wskdebug) ska fungera._
 

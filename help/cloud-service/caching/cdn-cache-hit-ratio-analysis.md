@@ -149,7 +149,7 @@ Om du vill identifiera nyckeldetaljerna använder du projektet [AEMCS-CDN-Log-An
 
 För dem som inte vill installera programvaran lokalt (dvs. ELK-kontrollpanelsverktyget från föregående avsnitt) finns det ett annat alternativ, men det krävs en licens för Adobe Experience Platform.
 
-[Jupyter-anteckningsboken](https://jupyter.org/) är ett webbprogram med öppen källkod där du kan skapa dokument som innehåller kod, text och visualisering. Det används för datatransformering, visualisering och statistisk modellering. Den kan nås via fjärranslutning [ som en del av Adobe Experience Platform](https://experienceleague.adobe.com/sv/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data).
+[Jupyter-anteckningsboken](https://jupyter.org/) är ett webbprogram med öppen källkod där du kan skapa dokument som innehåller kod, text och visualisering. Det används för datatransformering, visualisering och statistisk modellering. Den kan nås via fjärranslutning [&#x200B; som en del av Adobe Experience Platform](https://experienceleague.adobe.com/sv/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data).
 
 #### Hämtar den interaktiva Python-anteckningsboksfilen
 

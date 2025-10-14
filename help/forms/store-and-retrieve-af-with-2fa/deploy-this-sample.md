@@ -28,7 +28,7 @@ Följ följande anvisningar för att få det här användningsfallet att fungera
 
 ## Skapa databas
 
-I det här exemplet används MySQL-databasen för att lagra data för anpassade formulär. Du måste skapa databasschemat [genom att importera schemafilen ](assets/data-base-schema.sql) till MySQL workbench.
+I det här exemplet används MySQL-databasen för att lagra data för anpassade formulär. Du måste skapa databasschemat [genom att importera schemafilen &#x200B;](assets/data-base-schema.sql) till MySQL workbench.
 
 ## Skapa datakälla
 
@@ -44,7 +44,7 @@ Skapa ett utvecklarkonto med [Nexmo](https://dashboard.nexmo.com/) för att skic
 
 ## Distribuera följande OSGi-paket
 
-Distribuera det paket som innehåller [koden för att lagra och hämta data från databasen ](assets/SaveAndResume.core-1.0.0-SNAPSHOT.jar)
+Distribuera det paket som innehåller [koden för att lagra och hämta data från databasen &#x200B;](assets/SaveAndResume.core-1.0.0-SNAPSHOT.jar)
 Ladda ned och zippa upp [developingwith serviceUser.zip](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/developingwithserviceuser.zip?lang=sv-SE) .
 Distribuera filen DevelopingWithServiceUser.jar med Felix webbkonsol.
 

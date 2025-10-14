@@ -164,7 +164,7 @@ Det är också ett mycket vanligt system. Du staplar flera lager med cacheminnen
 
 Det är lätt att implementera. Tyvärr är det svårt att förutsäga den effektiva livslängden för en datadel.
 
-![Yttre kontur som förlänger ett inre objekts livscykel ](assets/chapter-3/outer-cache.png)
+![Yttre kontur som förlänger ett inre objekts livscykel &#x200B;](assets/chapter-3/outer-cache.png)
 
 *Yttre cache som förlänger ett inre objekts livslängd*
 

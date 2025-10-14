@@ -156,7 +156,7 @@ Adobe-klientdatalagret är ett **händelsestyrt** datalager. När datalagret fö
    });
    ```
 
-   Ovanstående kodfragment lägger till en händelseavlyssnare genom att [överföra en funktion](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function) till datalagret. När händelsen `cmp:show` aktiveras anropas funktionen `pageShownEventHandler`. I den här funktionen läggs några säkerhetskontroller till och en ny `event` skapas med det senaste [-läget för datalagret ](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) för komponenten som utlöste händelsen.
+   Ovanstående kodfragment lägger till en händelseavlyssnare genom att [överföra en funktion](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function) till datalagret. När händelsen `cmp:show` aktiveras anropas funktionen `pageShownEventHandler`. I den här funktionen läggs några säkerhetskontroller till och en ny `event` skapas med det senaste [-läget för datalagret &#x200B;](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) för komponenten som utlöste händelsen.
 
    Slutligen anropas funktionen `trigger(event)`. Funktionen `trigger()` är ett reserverat namn i taggegenskapen och den **utlöser** regeln. Objektet `event` skickas som en parameter som i sin tur visas med ett annat reserverat namn i taggegenskapen. Dataelement i taggegenskapen kan nu referera till olika egenskaper med kodfragment som `event.component['someKey']`.
 
@@ -314,7 +314,7 @@ Regeln **Sidinläsning** visar för närvarande bara en konsolsats. Använd seda
 
    ![Ange åtgärdstillägg för analysuppsättningsvariabler](assets/collect-data-analytics/analytics-set-variables-action.png)
 
-1. Markera en tillgänglig **eVar** på huvudpanelen och ange som värde för dataelementets **sidmall**. Använd ikonen ![Dataelement ](assets/collect-data-analytics/cylinder-icon.png) för att välja elementet **Sidmall**.
+1. Markera en tillgänglig **eVar** på huvudpanelen och ange som värde för dataelementets **sidmall**. Använd ikonen ![Dataelement &#x200B;](assets/collect-data-analytics/cylinder-icon.png) för att välja elementet **Sidmall**.
 
    ![Ange som eVar-sidmall](assets/collect-data-analytics/set-evar-page-template.png)
 

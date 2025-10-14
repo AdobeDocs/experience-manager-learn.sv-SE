@@ -105,7 +105,7 @@ Det finns ytterligare delar som är vanliga i Apache-konfigurationer och vi har 
 
 #### Skriver om katalog
 
-Den här katalogen kan innehålla alla `_rewrite.rules` filer som du skapar och som innehåller din vanliga RewriteRuleSyntax som används på Apache-webbservrar i modulen [ mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)
+Den här katalogen kan innehålla alla `_rewrite.rules` filer som du skapar och som innehåller din vanliga RewriteRuleSyntax som används på Apache-webbservrar i modulen [&#x200B; mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html)
 
 - `/etc/httpd/conf.d/rewrites/`
 

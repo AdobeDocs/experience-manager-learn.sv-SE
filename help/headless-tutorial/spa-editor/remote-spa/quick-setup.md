@@ -87,8 +87,8 @@ Den här självstudien är beroende av __WKND 2.1.0+__ -projektet (för innehål
 
 För att göra en snabb konfiguration tillhandahålls AEM-paket här som innehåller kursens slutliga AEM-konfiguration och innehåll.
 
-1. [Ladda ned ](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [Ladda ned ](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
+1. [Ladda ned &#x200B;](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [Ladda ned &#x200B;](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
 1. Logga in på AEM SDK Package Manager på [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) med inloggningsuppgifterna för `admin`.
 1. __Överför__ de `wknd-app.all.x.x.x.zip` som hämtades i steg 1
 1. Tryck på knappen __Installera__ för posten `wknd-app.all.x.x.x.zip`

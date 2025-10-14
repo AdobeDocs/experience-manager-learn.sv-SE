@@ -121,7 +121,7 @@ $ find /mnt/var/www/html/ -type f -name ".stat"
 
 Här följer ett diagram över hur den här filstrukturen ser ut när du har objekt i cachen och har fått en tömningsbegäran skickad och bearbetad av modulen Dispatcher
 
-![statusfiler blandade med innehåll och datum som visas med statusnivåer ](assets/disp-flushing/dispatcher-statfiles.png "dispatcher-statfiles")
+![statusfiler blandade med innehåll och datum som visas med statusnivåer &#x200B;](assets/disp-flushing/dispatcher-statfiles.png "dispatcher-statfiles")
 
 ### STARTFILNIVÅ
 

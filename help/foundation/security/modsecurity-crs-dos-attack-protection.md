@@ -73,7 +73,7 @@ I den här självstudien visas hur du aktiverar och konfigurerar CRS-regeln **DO
 
    Mer information finns i CRS-reglerna och konfigurationsfilen med det nya namnet i WKND-projektkoden.
 
-   ![Inaktiverade CRS-regler i AEM-projektkod - ModSecurity ](assets/modsecurity-crs/disabled-crs-rules.png){width="200" zoomable="yes"}
+   ![Inaktiverade CRS-regler i AEM-projektkod - ModSecurity &#x200B;](assets/modsecurity-crs/disabled-crs-rules.png){width="200" zoomable="yes"}
 
 ## Aktivera och konfigurera DoS-skyddsregel (Denial of Service)
 

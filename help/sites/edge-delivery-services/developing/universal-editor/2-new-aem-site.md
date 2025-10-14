@@ -30,7 +30,7 @@ Följ de [detaljerade stegen som beskrivs i dokumentationen](https://experiencel
    * Platstitel: `WKND (Universal Editor)`
    * Platsnamn: `aem-wknd-eds-ue`
 
-      * Värdet för platsnamnet måste matcha webbplatsens sökvägsnamn [ som lagts till i `paths.json`](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/path-mapping).
+      * Värdet för platsnamnet måste matcha webbplatsens sökvägsnamn [&#x200B; som lagts till i `paths.json`](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/path-mapping).
 
 2. **Importera den senaste mallen** från [Edge Delivery Services med AEM redigeringswebbplatsmall](https://github.com/adobe-rnd/aem-boilerplate-xwalk/releases).
 3. **Ge platsen** ett namn som matchar GitHub-databasnamnet och ange GitHub-URL:en som databasens URL.

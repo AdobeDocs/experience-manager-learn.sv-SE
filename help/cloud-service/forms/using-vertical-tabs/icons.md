@@ -123,7 +123,7 @@ För den här artikeln skapade jag en ny CSS-klass (cmp-verticaltabs—marketing
 ## Ändra komponenten vertikaltabbar
 
 Kopiera filen verticaltabs.html från ```/apps/core/fd/components/form/verticaltabs/v1/verticaltabs/verticaltabs.html``` och klistra in den under komponenten verticaltabs i projektet. Lägg till följande rad ```data-icon-name="${tab.name}"``` i den kopierade filen under den liska rollen som visas i bilden nedan
-![ data-icon ](assets/data-icons.png)
+![&#x200B; data-icon &#x200B;](assets/data-icons.png)
 vi anger ett anpassat dataattribut med namnet data-icon-name med värdet för tabbnamnet. Om tabbnamnet matchar ett bildnamn i ikonmappningen associeras motsvarande bild med tabben.
 
 

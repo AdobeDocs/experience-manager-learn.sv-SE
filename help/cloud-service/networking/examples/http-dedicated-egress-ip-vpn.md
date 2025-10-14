@@ -33,7 +33,7 @@ Kontrollera att den [dedikerade IP-adressen för utgångar eller den avancerade 
 
 >[!CAUTION]
 >
-> Det här kodexemplet gäller bara för [IP-adressen ](../dedicated-egress-ip-address.md) och [VPN](../vpn.md) för det dedikerade uttrycket. Ett liknande, men annat kodexempel är tillgängligt för [HTTP/HTTPS-anslutningar på portar som inte är standard för flexibla portadresser](./http-on-non-standard-ports-flexible-port-egress.md).
+> Det här kodexemplet gäller bara för [IP-adressen &#x200B;](../dedicated-egress-ip-address.md) och [VPN](../vpn.md) för det dedikerade uttrycket. Ett liknande, men annat kodexempel är tillgängligt för [HTTP/HTTPS-anslutningar på portar som inte är standard för flexibla portadresser](./http-on-non-standard-ports-flexible-port-egress.md).
 
 ## Exempel på kod
 

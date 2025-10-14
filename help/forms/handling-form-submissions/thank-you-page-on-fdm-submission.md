@@ -48,6 +48,6 @@ Skapa ett adaptivt formulär och konfigurera för att skicka formuläret med for
 [Distribuera exempelmallen för anpassningsbara formulär](assets/thank-you-page-template.zip)
 Skapa ett tackformulär baserat på den här mallen
 Koppla den här tacksidan till huvudformuläret
-Ändra jsp-koden i [ createXml.jsp ](http://localhost:4502/apps/thank-you-page-template/component/page/thankyoupage/createxml.jsp) för att skapa den XML som behövs för att förifylla ditt adaptiva formulär.
+Ändra jsp-koden i [&#x200B; createXml.jsp &#x200B;](http://localhost:4502/apps/thank-you-page-template/component/page/thankyoupage/createxml.jsp) för att skapa den XML som behövs för att förifylla ditt adaptiva formulär.
 Förhandsgranska och skicka in ditt anpassningsbara formulär.
 Tacka-sidan ska visas och fyllas i i förväg med data som anges i XML

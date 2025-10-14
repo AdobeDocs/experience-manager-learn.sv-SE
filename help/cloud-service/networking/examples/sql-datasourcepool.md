@@ -35,7 +35,7 @@ Kontrollera att den [lämpliga](../advanced-networking.md#advanced-networking) a
 
 OSGi-konfigurationens anslutningssträng använder:
 
-+ `AEM_PROXY_HOST`-värde via konfigurationsmiljövariabeln [ OSGi ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` som anslutningsvärd
++ `AEM_PROXY_HOST`-värde via konfigurationsmiljövariabeln [&#x200B; OSGi &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` som anslutningsvärd
 + `30001` som är `portOrig`-värdet för framåtmappning för Cloud Manager-port `30001` → `mysql.example.com:3306`
 
 Eftersom hemligheter inte får lagras i kod bör SQL-anslutningens användarnamn och lösenord anges via OSGi-konfigurationsvariabler som anges med AIO CLI eller Cloud Manager API:er.
@@ -61,7 +61,7 @@ $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONME
 ## Exempel på kod
 
 Detta Java™-kodexempel är en OSGi-tjänst som skapar en anslutning till en extern MySQL-databas via AEM DataSourcePool OSGi-tjänst.
-Fabrikskonfigurationen för DataSourcePool OSGi anger i sin tur en port (`30001`) som mappas via regeln `portForwards` i åtgärden [ enableEnvironmentAdvancedNetworkingConfiguration ](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) till den externa värden och porten `mysql.example.com:3306`.
+Fabrikskonfigurationen för DataSourcePool OSGi anger i sin tur en port (`30001`) som mappas via regeln `portForwards` i åtgärden [&#x200B; enableEnvironmentAdvancedNetworkingConfiguration &#x200B;](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) till den externa värden och porten `mysql.example.com:3306`.
 
 ```json
 ...

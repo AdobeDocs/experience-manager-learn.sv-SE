@@ -40,7 +40,7 @@ Om Content Fragment Models **inte** är aktiverat för en konfiguration visas in
 >
 >När konfigurationen `global` används gäller konfigurationen allt innehåll och `cq:conf` behöver inte anges.
 >
->Mer information finns i [[!UICONTROL Configuration Browser]-dokumentationen ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=sv-SE).
+>Mer information finns i [[!UICONTROL Configuration Browser]-dokumentationen &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/configurations.html?lang=sv-SE).
 
 1. Logga in på AEM författare som en användare med tillräcklig behörighet för att ändra den relevanta konfigurationen.
    * I den här självstudiekursen kan användaren **admin** användas.

@@ -116,7 +116,7 @@ I tidigare kapitel lades komponenten `HeaderComponent` till som en ren Angular-k
        componentGroup="WKND SPA Angular - Structure"/>
    ```
 
-   AEM `Header`-komponenten ärver alla funktioner i [ Navigation Core Component ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=sv-SE) via egenskapen `sling:resourceSuperType` .
+   AEM `Header`-komponenten ärver alla funktioner i [&#x200B; Navigation Core Component &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=sv-SE) via egenskapen `sling:resourceSuperType` .
 
 ## Lägg till HeaderComponent i SPA-mallen {#add-header-template}
 
@@ -313,7 +313,7 @@ Implementera sedan navigeringsmenyn med en ny `NavigationComponent`. Vi kan läg
    ":type": "wknd-spa-angular/components/header"
    ```
 
-   AEM-sidornas hierarkiska karaktär modelleras i JSON som kan användas för att fylla i en navigeringsmeny. Kom ihåg att komponenten `Header` ärver alla funktioner i [ Navigation Core Component ](https://www.aemcomponents.dev/content/core-components-examples/library/core-structure/navigation.html) och att innehållet som visas via JSON automatiskt mappas till Angular `@Input` -anteckningen.
+   AEM-sidornas hierarkiska karaktär modelleras i JSON som kan användas för att fylla i en navigeringsmeny. Kom ihåg att komponenten `Header` ärver alla funktioner i [&#x200B; Navigation Core Component &#x200B;](https://www.aemcomponents.dev/content/core-components-examples/library/core-structure/navigation.html) och att innehållet som visas via JSON automatiskt mappas till Angular `@Input` -anteckningen.
 
 2. Öppna ett nytt terminalfönster och navigera till mappen `ui.frontend` i SPA-projektet. Skapa en ny `NavigationComponent` med Angular CLI-verktyget:
 
@@ -643,7 +643,7 @@ Nu när navigeringen har implementerats inspekterar du routningen i AEM.
 
    `AemPageDataResolver` omformar till exempel en vägs URL `content/wknd-spa-angular/us/en/home.html` till sökvägen `/content/wknd-spa-angular/us/en/home`. Detta används för att matcha sidans innehåll baserat på sökvägen i JSON-modellens API.
 
-   `AemPageRouteReuseStrategy`, som tillhandahålls av AEM SPA Editor JS SDK, är en anpassad [ RouteReuseStrategy ](https://angular.io/api/router/RouteReuseStrategy) som förhindrar återanvändning av `PageComponent` över vägar. Annars kan innehåll från sidan &quot;A&quot; visas vid navigering till sidan &quot;B&quot;.
+   `AemPageRouteReuseStrategy`, som tillhandahålls av AEM SPA Editor JS SDK, är en anpassad [&#x200B; RouteReuseStrategy &#x200B;](https://angular.io/api/router/RouteReuseStrategy) som förhindrar återanvändning av `PageComponent` över vägar. Annars kan innehåll från sidan &quot;A&quot; visas vid navigering till sidan &quot;B&quot;.
 
 2. Öppna filen `page.component.ts` vid `ui.frontend/src/app/components/page/`.
 

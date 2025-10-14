@@ -112,7 +112,7 @@ För att snabba upp självstudiekursen finns en React JS-app med startfunktion.
 
 >[!IMPORTANT]
 >
->    Om du undrar varför GraphQL API-begäran görs mot domänen `http://localhost:3000` och INTE mot AEM Publish Service kan du gå igenom [ under värddatorn ](../multi-step/graphql-and-react-app.md#under-the-hood) från den grundläggande självstudiekursen.
+>    Om du undrar varför GraphQL API-begäran görs mot domänen `http://localhost:3000` och INTE mot AEM Publish Service kan du gå igenom [&#x200B; under värddatorn &#x200B;](../multi-step/graphql-and-react-app.md#under-the-hood) från den grundläggande självstudiekursen.
 
 
 ## Granska koden

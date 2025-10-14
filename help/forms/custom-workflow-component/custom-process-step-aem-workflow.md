@@ -144,7 +144,7 @@ Tjänsten QueryBuilder används för att fråga efter noder av typen nt:file i m
 #### Bygg och driftsätt
 
 [Bygg paketet enligt beskrivningen här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/creating-your-first-osgi-bundle/create-your-first-osgi-bundle.html?lang=sv-SE)
-[Kontrollera att paketet är distribuerat och i aktivt läge ](http://localhost:4502/system/console/bundles)
+[Kontrollera att paketet är distribuerat och i aktivt läge &#x200B;](http://localhost:4502/system/console/bundles)
 
 ## Nästa steg
 

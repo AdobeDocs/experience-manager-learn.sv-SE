@@ -153,7 +153,7 @@ Exempelprogrammet är Node.js-baserat, så det är bäst att använda modulen [@
 
 1. Uppdatera `getAccessToken(..)` för att inspektera JSON-filens innehåll och avgöra om den representerar en lokal utvecklingsåtkomsttoken eller tjänstautentiseringsuppgifter. Detta kan enkelt uppnås genom att kontrollera om egenskapen `.accessToken` finns, vilket bara finns för Local Development Access Token JSON.
 
-   Om Service Credentials anges genererar programmet en JWT och byter ut den mot Adobe IMS för en åtkomsttoken. Använd funktionen `auth(...)` för [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) som genererar en JWT och byter ut den mot en åtkomsttoken i ett enda funktionsanrop. Parametrarna för metoden `auth(..)` är ett [ JSON-objekt som består av specifik information ](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) som finns tillgänglig från JSON för tjänstautentiseringsuppgifter, vilket beskrivs nedan i koden.
+   Om Service Credentials anges genererar programmet en JWT och byter ut den mot Adobe IMS för en åtkomsttoken. Använd funktionen `auth(...)` för [@adobe/jwt-auth](https://www.npmjs.com/package/@adobe/jwt-auth) som genererar en JWT och byter ut den mot en åtkomsttoken i ett enda funktionsanrop. Parametrarna för metoden `auth(..)` är ett [&#x200B; JSON-objekt som består av specifik information &#x200B;](https://www.npmjs.com/package/@adobe/jwt-auth#config-object) som finns tillgänglig från JSON för tjänstautentiseringsuppgifter, vilket beskrivs nedan i koden.
 
 ```javascript
  async function getAccessToken(developerConsoleCredentials) {

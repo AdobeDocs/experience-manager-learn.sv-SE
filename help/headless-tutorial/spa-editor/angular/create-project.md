@@ -90,7 +90,7 @@ Det finns flera alternativ för att skapa ett projekt med flera moduler i Maven 
 
    >[!NOTE]
    >
-   > Observera egenskapen `frontendModule=angular`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [Angular ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=sv-SE) som ska användas med AEM SPA Editor.
+   > Observera egenskapen `frontendModule=angular`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [Angular &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=sv-SE) som ska användas med AEM SPA Editor.
 
 ## Bygg projektet
 

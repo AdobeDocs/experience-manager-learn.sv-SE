@@ -26,7 +26,7 @@ Asset Compute-projekt är Node.js-projekt som genereras med Adobe I/O CLI och so
 
 _Klicka igenom för att generera ett Asset compute-projekt (inget ljud)_
 
-Använd plugin-programmet [Adobe I/O CLI Asset compute ](../set-up/development-environment.md#aio-cli) för att generera ett nytt, tomt Asset compute-projekt.
+Använd plugin-programmet [Adobe I/O CLI Asset compute &#x200B;](../set-up/development-environment.md#aio-cli) för att generera ett nytt, tomt Asset compute-projekt.
 
 1. Navigera från kommandoraden till den mapp som projektet ska finnas i.
 1. Kör `aio app init` från kommandoraden för att påbörja den interaktiva projektgenereringen av CLI.
@@ -34,7 +34,7 @@ Använd plugin-programmet [Adobe I/O CLI Asset compute ](../set-up/development-e
 1. __Välj organisation__
    + Markera den Adobe-organisation som har AEM as a Cloud Service, App Builder är registrerad hos
 1. __Välj projekt__
-   + Leta reda på och markera projektet. Det här är [projekttiteln ](../set-up/app-builder.md) som skapats från App Builder projektmall, i det här fallet `WKND AEM Asset Compute`
+   + Leta reda på och markera projektet. Det här är [projekttiteln &#x200B;](../set-up/app-builder.md) som skapats från App Builder projektmall, i det här fallet `WKND AEM Asset Compute`
 1. __Välj Workspace__
    + Välj arbetsytan `Development`
 1. __Vilka Adobe I/O App-funktioner vill du aktivera för det här projektet? Välj komponenter som ska inkluderas__

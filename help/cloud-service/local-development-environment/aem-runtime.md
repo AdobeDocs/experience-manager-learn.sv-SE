@@ -35,7 +35,7 @@ Observera att `~` används som kortskrift för användarens katalog. I Windows m
 
 Experience Manager är en Java™-applikation och därför krävs Oracle Java™ SDK för utvecklingsverktygen.
 
-1. [Hämta och installera den senaste Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr cr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
+1. [Hämta och installera den senaste Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&1_group.propertyvalues.operation=equals&1_group.propertyvalues.0_values=software-type%3Atooling&fulltext=Oracle%7E+JDK%7E+11%7E&orderby=%40jcr%3Acontent%2Fjcr cr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14)
 1. Kontrollera att Oracle Java™ 11 SDK är installerat genom att köra kommandot:
 
 >[!BEGINTABS]
@@ -364,7 +364,7 @@ java.lang.Exception: Quickstart requires a Java Specification 11 VM, but your VM
 Quickstart: aborting
 ```
 
-Detta beror på att AEM as a Cloud Service kräver Java™ SDK 11 och du kör en annan version, troligen Java™ 8. Du löser det här problemet genom att hämta och installera [Oracle Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&amp;1_group.propertyvalues.operation=equals&amp;1_group.propertyvalues.0_values=software-type%3Atooling&amp;fulltext=Oracle%7E+JDK%7E+11%7E&amp;orderby=%40jcr%3Acontent%2Fjcr cr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
+Detta beror på att AEM as a Cloud Service kräver Java™ SDK 11 och du kör en annan version, troligen Java™ 8. Du löser det här problemet genom att hämta och installera [Oracle Java™ SDK 11](https://experience.adobe.com/#/downloads/content/software-distribution/en/general.html?1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2FDc%3AsoftwareType&1_group.propertyvalues.operation=equals&1_group.propertyvalues.0_values=software-type%3Atooling&fulltext=Oracle%7E+JDK%7E+11%7E&orderby=%40jcr%3Acontent%2Fjcr cr%3AlastModified&amp;orderby.sort=desc&amp;layout=list&amp;p.offset=0&amp;p.limit=14).
 
 När Oracle Java™ 11 SDK har installerats kontrollerar du att det är den aktiva versionen genom att köra kommandot från kommandoraden:
 

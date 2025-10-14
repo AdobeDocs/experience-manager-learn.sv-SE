@@ -31,7 +31,7 @@ Krav för den här självstudiekursen:
    * [Officiell dokumentation för att aktivera SSL på AEM 6.4](https://helpx.adobe.com/se/experience-manager/6-4/sites/administering/using/ssl-by-default.html)
 
 * Du måste ha ett Salesforce-konto
-* Du måste skapa en ansluten app. Den officiella dokumentationen från Salesforce för att skapa appen visas [här](https://help.salesforce.com/articleView?id=connected_app_create.htm&amp;type=0).
+* Du måste skapa en ansluten app. Den officiella dokumentationen från Salesforce för att skapa appen visas [här](https://help.salesforce.com/articleView?id=connected_app_create.htm&type=0).
 * Ange lämpliga OAuth-scope för appen (jag har valt alla tillgängliga OAuth-scope för testning)
 * Ange återanrops-URL. Återanrops-URL:en i mitt fall var
 

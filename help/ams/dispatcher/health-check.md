@@ -44,7 +44,7 @@ Standardkontrollen är vanligtvis en portkontroll för att se om servrarna som �
 
 För att undvika att skicka trafik till en hälsosam dispatcher som står framför en ohälsosam AEM-instans skapade AMS några extrafunktioner som utvärderar benets hälsa och inte bara Dispatcher.
 
-![Bilden visar de olika delarna som hälsokontrollen kan användas för ](assets/load-balancer-healthcheck/health-check-pieces.png "hälsokontroll-bitar")
+![Bilden visar de olika delarna som hälsokontrollen kan användas för &#x200B;](assets/load-balancer-healthcheck/health-check-pieces.png "hälsokontroll-bitar")
 
 Hälsokontrollen består av följande delar
 - 1 `Load balancer`
@@ -64,7 +64,7 @@ För att ange om AEM fungerar måste du göra en grundläggande sidkompilering o
 
 Här är sidan.  Den visar databas-ID:t för installationen
 
-![Bilden visar sidan AMS Regent ](assets/load-balancer-healthcheck/health-check-page.png "health-check-page")
+![Bilden visar sidan AMS Regent &#x200B;](assets/load-balancer-healthcheck/health-check-page.png "health-check-page")
 
 > `Note:` Vi ser till att sidan inte kan cachelagras.  Det skulle inte kontrollera den faktiska statusen om varje gång den returnerade en cachelagrad sida!
 

@@ -71,7 +71,7 @@ Installera följande på datorn innan du påbörjar utvecklingen:
 
 ## Klona GitHub-databasen
 
-Klona [GitHub-databasen som skapats i det nya kodprojektkapitlet ](./1-new-code-project.md) som innehåller AEM Edge Delivery Services-kodprojektet till din lokala utvecklingsmiljö.
+Klona [GitHub-databasen som skapats i det nya kodprojektkapitlet &#x200B;](./1-new-code-project.md) som innehåller AEM Edge Delivery Services-kodprojektet till din lokala utvecklingsmiljö.
 
 ![GitHub-databasklon](./assets/3-local-development-environment/github-clone.png)
 
@@ -131,7 +131,7 @@ Om webbplatsen öppnas med en 404-sida är det sannolikt att [fstab.yaml eller p
 
 ## Bygg JSON-fragment
 
-Edge Delivery Services-projekt som skapats med [AEM-mallen XWalk ](https://github.com/adobe-rnd/aem-boilerplate-xwalk) förlitar sig på JSON-konfigurationer som aktiverar blockredigering i Universell redigerare.
+Edge Delivery Services-projekt som skapats med [AEM-mallen XWalk &#x200B;](https://github.com/adobe-rnd/aem-boilerplate-xwalk) förlitar sig på JSON-konfigurationer som aktiverar blockredigering i Universell redigerare.
 
 - **JSON-fragment**: Lagrades med tillhörande block och blockmodellerna, definitionerna och filtren definieras.
    - **Modellfragment**: Lagrat på `/blocks/example/_example.json`.
@@ -139,7 +139,7 @@ Edge Delivery Services-projekt som skapats med [AEM-mallen XWalk ](https://githu
    - **Filtrera fragment**: Lagrat på `/blocks/example/_example.json`.
 
 
-[AEM-mallens XWalk-projektmall ](https://github.com/adobe-rnd/aem-boilerplate-xwalk) innehåller en [Husky](https://typicode.github.io/husky/)-förimplementeringsfunktion som identifierar ändringar i JSON-fragment och kompilerar dem till lämpliga `component-*.json`-filer vid `git commit`.
+[AEM-mallens XWalk-projektmall &#x200B;](https://github.com/adobe-rnd/aem-boilerplate-xwalk) innehåller en [Husky](https://typicode.github.io/husky/)-förimplementeringsfunktion som identifierar ändringar i JSON-fragment och kompilerar dem till lämpliga `component-*.json`-filer vid `git commit`.
 
 Följande NPM-skript kan köras manuellt via `npm run` för att skapa JSON-filer, men detta är vanligtvis inte nödvändigt eftersom den himiska pre-commit-kroken hanterar den automatiskt.
 

@@ -23,7 +23,7 @@ Innan du börjar distribuera projektet till din AEM Forms as a Cloud Service rek
 ## Synkronisera ändringar med ditt AEM-projekt
 
 Starta IntelliJ och navigera till mappen adaptiveForm i mappen ``ui.apps`` enligt nedan
-![ Intellij ](assets/intellij.png)
+![&#x200B; Intellij &#x200B;](assets/intellij.png)
 
 Högerklicka på noden ``adaptiveForm`` och välj Ny | Paket
 Se till att du lägger till namnet **adressblock** i paketet

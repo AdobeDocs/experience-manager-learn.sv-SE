@@ -106,7 +106,7 @@ Om alla filer cachelagras och därmed lagras statiskt i Dispatcher kan du i prin
 
 Om du vill ha mer information om Dispatcher kan du gå igenom strukturen för en enkel exempel-URL.  Låt oss titta på exemplet nedan,
 
-`http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&amp;otherparameter=value#fragment`
+`http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&otherparameter=value#fragment`
 
 * `http` betecknar protokollet
 
@@ -1098,7 +1098,7 @@ Det är ett tal som definierar från vilken nivå i filsystemet två underträd 
 
 Vi tittar på standardfallet där statusfilnivån är 0.
 
-![/statfileslevel &quot;0&quot;:_ _.stat_ _skapas i docroot. Ogiltig domän omfattar hela installationen inklusive alla webbplatser ](assets/chapter-1/statfile-level-0.png)
+![/statfileslevel &quot;0&quot;:_ _.stat_ _skapas i docroot. Ogiltig domän omfattar hela installationen inklusive alla webbplatser &#x200B;](assets/chapter-1/statfile-level-0.png)
 
 `/statfileslevel "0":` Filen `.stat` skapas i dokumentroten. Domänen för ogiltigförklaring omfattar hela installationen inklusive alla webbplatser.
 

@@ -126,7 +126,7 @@ Adobe-klientdatalagret är ett **händelsestyrt** datalager. När någon Core Co
    });
    ```
 
-   Ovanstående kodfragment lägger till en händelseavlyssnare genom att [överföra en funktion](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function) till datalagret. När `cmp:click`-händelsen utlöses anropas funktionen `componentClickedHandler`. I den här funktionen läggs några säkerhetskontroller till och ett nytt `event`-objekt skapas med det senaste [-läget för datalagret ](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) för komponenten som utlöste händelsen.
+   Ovanstående kodfragment lägger till en händelseavlyssnare genom att [överföra en funktion](https://github.com/adobe/adobe-client-data-layer/wiki#pushing-a-function) till datalagret. När `cmp:click`-händelsen utlöses anropas funktionen `componentClickedHandler`. I den här funktionen läggs några säkerhetskontroller till och ett nytt `event`-objekt skapas med det senaste [-läget för datalagret &#x200B;](https://github.com/adobe/adobe-client-data-layer/wiki#getstate) för komponenten som utlöste händelsen.
 
    Slutligen anropas funktionen `trigger(event)`. Funktionen `trigger()` är ett reserverat namn i taggegenskapen och den **utlöser** regeln. Objektet `event` skickas som en parameter som i sin tur visas med ett annat reserverat namn i taggegenskapen. Dataelement i taggegenskapen kan nu referera till olika egenskaper med kodfragment som `event.component['someKey']`.
 
@@ -308,7 +308,7 @@ Nu när regeln **CTA Click** skickar analysfyren bör du kunna se analysspårnin
 
 1. Observera att meddelandet *&quot;Anpassad kod&quot; för regeln&quot;CTA klickad&quot; inte uppfylldes i webbläsarkonsolen.*
 
-   Ovanstående meddelande beror på att navigeringskomponenten utlöser en `cmp:click`-händelse *men* på grund av [villkoret för regeln ](#add-a-condition-to-the-cta-clicked-rule) som kontrollerar resurstypen. Ingen åtgärd utförs.
+   Ovanstående meddelande beror på att navigeringskomponenten utlöser en `cmp:click`-händelse *men* på grund av [villkoret för regeln &#x200B;](#add-a-condition-to-the-cta-clicked-rule) som kontrollerar resurstypen. Ingen åtgärd utförs.
 
    >[!NOTE]
    >

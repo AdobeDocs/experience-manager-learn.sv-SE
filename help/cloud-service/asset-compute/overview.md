@@ -139,7 +139,7 @@ Självstudiekursens kodbas finns på Github:
 
 + [adobe/aem-guides-wknd-asset-compute](https://github.com/adobe/aem-guides-wknd-asset-compute) @ huvudgren
 
-Källkoden innehåller inte de nödvändiga `.env`- eller `config.json`-filerna. Dessa måste läggas till och konfigureras med din [konto- och ](#accounts-and-services)-information.
+Källkoden innehåller inte de nödvändiga `.env`- eller `config.json`-filerna. Dessa måste läggas till och konfigureras med din [konto- och &#x200B;](#accounts-and-services)-information.
 
 ## Ytterligare resurser
 

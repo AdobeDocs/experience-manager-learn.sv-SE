@@ -168,7 +168,7 @@ Det är bäst att utlösa en anpassad kod som baseras på en händelse från dat
 
    En av de unika funktionerna i Adobe Client Data Layer är att du kan registrera händelseavlyssnare **före** eller **efter att** datalagret har initierats, vilket hjälper till att undvika konkurrensvillkoren.
 
-   Datalagret underhåller en kömatris med alla händelser som har inträffat i sekvens. Datalagret kommer som standard att utlösa händelseåteranrop för händelser som har inträffat i **förbi** och händelser i **future**. Det går att filtrera händelser från tidigare eller framtida händelser. [Mer information finns i dokumentationen ](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
+   Datalagret underhåller en kömatris med alla händelser som har inträffat i sekvens. Datalagret kommer som standard att utlösa händelseåteranrop för händelser som har inträffat i **förbi** och händelser i **future**. Det går att filtrera händelser från tidigare eller framtida händelser. [Mer information finns i dokumentationen &#x200B;](https://github.com/adobe/adobe-client-data-layer/wiki#addeventlistener).
 
 
 ## Nästa steg

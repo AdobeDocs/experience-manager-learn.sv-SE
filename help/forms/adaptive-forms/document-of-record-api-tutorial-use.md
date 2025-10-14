@@ -82,4 +82,4 @@ PDF visas inte på den nya webbläsarfliken:
 1. Kontrollera att du inte blockerar popup-fönster i webbläsaren
 1. Kontrollera att du startar AEM-servern som administratör (åtminstone i Windows)
 1. Kontrollera att DevelopingWithServiceUser-paketet är i *aktivt läge*
-1. [Kontrollera att systemanvändaren ](http://localhost:4502/useradmin) fd-service har behörighet att läsa, ändra och skapa på följande nod `/content/usergenerated/content/aemformsenablement`
+1. [Kontrollera att systemanvändaren &#x200B;](http://localhost:4502/useradmin) fd-service har behörighet att läsa, ändra och skapa på följande nod `/content/usergenerated/content/aemformsenablement`

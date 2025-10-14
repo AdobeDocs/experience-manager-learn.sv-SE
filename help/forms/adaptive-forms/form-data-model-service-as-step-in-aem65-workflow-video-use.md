@@ -38,5 +38,5 @@ Följ instruktionerna nedan om du vill testa den här funktionen på servern
    * Anpassad form som utlöser arbetsflödet när det skickas.
 * Öppna [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Fyll i uppgifterna och skicka in. När formuläret skickas aktiveras arbetsflödet [för låneprogram](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html).
 
-![ arbetsflöde ](assets/invokefdm651.PNG).
+![&#x200B; arbetsflöde &#x200B;](assets/invokefdm651.PNG).
 Arbetsflödet använder eller delar komponenten för att dirigera programmet till administratören om kreditpoängen är över 500. Om kreditpoängen är mindre än 500 dirigeras programmet till klotter.

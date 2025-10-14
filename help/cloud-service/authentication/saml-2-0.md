@@ -130,7 +130,7 @@ Global Trust Store har konfigurerats med IDP:s offentliga certifikat på AEM Aut
 
 ## Skapa nyckelbehållare för autentiseringstjänster{#authentication-service-keystore}
 
-_Det krävs att du skapar en nyckelbehållare för autentiseringstjänsten när [ SAML 2.0-autentiseringshanterarens OSGi-konfigurationsegenskap `handleLogout` är inställd på `true`](#saml-20-authenticationsaml-2-0-authentication) eller när [AuthnRequest-signering/SAML-försäkran ](#install-aem-public-private-key-pair) krävs_
+_Det krävs att du skapar en nyckelbehållare för autentiseringstjänsten när [&#x200B; SAML 2.0-autentiseringshanterarens OSGi-konfigurationsegenskap `handleLogout` är inställd på `true`](#saml-20-authenticationsaml-2-0-authentication) eller när [AuthnRequest-signering/SAML-försäkran &#x200B;](#install-aem-public-private-key-pair) krävs_
 
 1. Logga in på AEM Author som AEM Administrator för att ladda upp den privata nyckeln.
 1. Navigera till __Verktyg > Dokumentskydd > Användare__ och välj __authentication-service__ användare. Välj sedan __Egenskaper__ i det övre åtgärdsfältet.
@@ -366,7 +366,7 @@ När [krypterar AuthnRequest och SAML-försäkran](#encrypting-the-authnrequest-
 
 + `useEncryption` inställd på `true`
 + `spPrivateKeyAlias` innehåller nyckelbehållarpostens alias för den privata nyckel som används av SAML-integreringen.
-+ `keyStorePassword` innehåller en [ OSGi-hemlig konfigurationsvariabel ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#secret-configuration-values) som innehåller lösenordet för användarens nyckelbehållare `authentication-service`.
++ `keyStorePassword` innehåller en [&#x200B; OSGi-hemlig konfigurationsvariabel &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#secret-configuration-values) som innehåller lösenordet för användarens nyckelbehållare `authentication-service`.
 
 +++
 
@@ -597,7 +597,7 @@ och tillhandahålla frågeparametrar:
 
 | Frågeparameternamn | Frågeparametervärde |
 |----------------------|-----------------------|
-| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren avlyssnar, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi-konfigurationens ](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
+| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren avlyssnar, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi-konfigurationens &#x200B;](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
 | `saml_request_path` | URL-sökvägen som användaren ska tas till efter SAML-autentiseringen. |
 
 Den här HTML-länken utlöser till exempel SAML-inloggningsflödet och tar användaren till `/content/wknd/us/en/protected/page.html` när det är klart. Dessa frågeparametrar kan ställas in programmatiskt efter behov.
@@ -618,7 +618,7 @@ och tillhandahålla formulärdata:
 
 | Namn på formulärdata | Formulärdatavärde |
 |----------------------|-----------------------|
-| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren avlyssnar, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi-konfigurationens ](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
+| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren avlyssnar, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi-konfigurationens &#x200B;](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
 | `saml_request_path` | URL-sökvägen som användaren ska tas till efter SAML-autentiseringen. |
 
 

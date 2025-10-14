@@ -179,7 +179,7 @@ Skapa en `teaser.css`-fil i blockets mapp. Den här filen innehåller den CSS-ko
 
 Olika element kan fortfarande formateras direkt eller med de anpassade CSS-klasserna. För mer komplexa block kan semantiska CSS-klasser göra CSS mer begripligt och underhållbart, särskilt när du arbetar med större team över längre tidsperioder.
 
-[Precis som tidigare ](./7a-block-css.md#develop-a-block-with-css) kan du omsluta CSS till `.block.teaser` med [CSS-kapsling](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting) för att undvika konflikter med andra block.
+[Precis som tidigare &#x200B;](./7a-block-css.md#develop-a-block-with-css) kan du omsluta CSS till `.block.teaser` med [CSS-kapsling](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting) för att undvika konflikter med andra block.
 
 [!BADGE /blocks/teaser/teaser.css]{type=Neutral tooltip="Filnamn på kodexemplet nedan."}
 

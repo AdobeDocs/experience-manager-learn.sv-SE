@@ -29,7 +29,7 @@ I följande skärmbild visas hur du använder processsteg i [AEM Workflow](http:
 ![arbetsflödeskommentarer1](assets/workflowcomments1.gif)
 
 Så här testar du den här funktionen på datorn:
-* [Kontrollera att processsteget i arbetsflödet är konfigurerat att använda kommentarerna för arbetsflödet ](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)
+* [Kontrollera att processsteget i arbetsflödet är konfigurerat att använda kommentarerna för arbetsflödet &#x200B;](http://localhost:4502/editor.html/conf/global/settings/workflow/models/CaptureComments.html)
 
 * [Distribuera Developing with service user bundle](/help/forms/assets/common-osgi-bundles/DevelopingWithServiceUser.jar)
 

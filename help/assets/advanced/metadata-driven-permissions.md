@@ -109,8 +109,8 @@ Fördelarna med metadatadrivna behörigheter är:
 > 
 > - Egenskaperna utvärderas mot begränsningarna med __Stränglikhet__ (`=`) (andra datatyper eller operatorer stöds ännu inte, för större egenskaper än (`>`) eller Date)
 > - Om du vill tillåta flera värden för en begränsningsegenskap kan du lägga till ytterligare begränsningar i åtkomstkontrollposten genom att välja samma egenskap i listrutan &quot;Välj typ&quot; och ange ett nytt begränsningsvärde (t.ex. `status=approved`, `status=wip`) och klicka på &quot;+&quot; för att lägga till begränsningen i posten
-> ![Tillåt flera värden ](./assets/metadata-driven-permissions/allow-multiple-values.png)
+> ![Tillåt flera värden &#x200B;](./assets/metadata-driven-permissions/allow-multiple-values.png)
 > - __AND-begränsningar__ stöds, via flera begränsningar i en enda åtkomstkontrollpost med olika egenskapsnamn (t.ex. `status=approved`, `brand=Adobe`) utvärderas som ett AND-villkor, vilket innebär att den valda användargruppen beviljas läsåtkomst till resurser med `status=approved AND brand=Adobe`
-> ![Tillåt flera begränsningar ](./assets/metadata-driven-permissions/allow-multiple-restrictions.png)
+> ![Tillåt flera begränsningar &#x200B;](./assets/metadata-driven-permissions/allow-multiple-restrictions.png)
 > - __OR-begränsningar__ stöds genom att en ny Access Control-post med en metadataegenskapsbegränsning lägger till ett OR-villkor för posterna, t.ex. en enskild post med restriktionen `status=approved` och en enskild post med `brand=Adobe` utvärderas som `status=approved OR brand=Adobe`
-> ![Tillåt flera begränsningar ](./assets/metadata-driven-permissions/allow-multiple-aces.png)
+> ![Tillåt flera begränsningar &#x200B;](./assets/metadata-driven-permissions/allow-multiple-aces.png)

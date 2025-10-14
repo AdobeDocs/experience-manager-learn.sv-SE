@@ -537,7 +537,7 @@ Ett fullständigt exempel på hur du skriver en anpassad referensrenderare finns
 
 >[!NOTE]
 >
-> I videon ovan används `_publishUrl` för att återge bildreferensen. Använd i stället `_dynamicUrl` enligt anvisningarna i [webboptimerade bilder ](./images.md);
+> I videon ovan används `_publishUrl` för att återge bildreferensen. Använd i stället `_dynamicUrl` enligt anvisningarna i [webboptimerade bilder &#x200B;](./images.md);
 
 
 I föregående video visas ett exempel från början till slut:

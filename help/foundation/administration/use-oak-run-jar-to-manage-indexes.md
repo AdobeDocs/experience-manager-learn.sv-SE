@@ -28,7 +28,7 @@ Indexkommandot för [!DNL oak-run.jar] konsoliderar ett antal funktioner för at
 
 >[!VIDEO](https://video.tv.adobe.com/v/21475?quality=12&learn=on)
 
-* Versionen av [[!DNL oak-run.jar]](https://repository.apache.org/service/local/artifact/maven/redirect?r=releases&amp;g=org.apache.jackrabbit&amp;a=oak-run&amp;v=1.8.0) måste matcha den version av Oak som används på AEM-instansen.
+* Versionen av [[!DNL oak-run.jar]](https://repository.apache.org/service/local/artifact/maven/redirect?r=releases&g=org.apache.jackrabbit&a=oak-run&v=1.8.0) måste matcha den version av Oak som används på AEM-instansen.
 * När du hanterar index med [!DNL oak-run.jar] används kommandot **[!DNL index]** med olika flaggor för att stödja olika åtgärder.
 
    * `java -jar oak-run*.jar index ...`

@@ -21,7 +21,7 @@ ht-degree: 0%
 
 När du har konfigurerat datakällan är nästa steg att skapa en formulärdatamodell som baseras på den datakälla som konfigurerats i det tidigare steget. Så här skapar du en formulärdatamodell:
 
-Peka webbläsaren på sidan [ dataintegreringar.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) Den här listan innehåller alla dataintegreringar som har skapats på din AEM-instans.
+Peka webbläsaren på sidan [&#x200B; dataintegreringar.](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments-fdm) Den här listan innehåller alla dataintegreringar som har skapats på din AEM-instans.
 
 1. Klicka på Skapa | Formulärdatamodell
 1. Ange beskrivande titel som FormsAndMarketo och klicka på Nästa

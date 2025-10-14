@@ -82,7 +82,7 @@ I det här exemplet distribueras SPA till en Netlify-domän (`https://main--spar
 
 1. SPA hanteras från en Netlify-domän, men gör ett XHR-anrop till AEM GraphQL API:er på en annan domän. Den här begäran över flera platser kräver att [CORS](./configurations/cors.md) har konfigurerats på AEM för att tillåta begäran från Netlify-domänen att få åtkomst till dess innehåll.
 
-   ![SPA-begäran från SPA- och AEM-värdar ](assets/spa/cors-requirement.png)
+   ![SPA-begäran från SPA- och AEM-värdar &#x200B;](assets/spa/cors-requirement.png)
 
 2. `Access-Control-Allow-Origin` är närvarande när XHR-begäran inspekteras i AEM GraphQL API, vilket anger för webbläsaren att AEM tillåter begäran från den här Netlify-domänen att komma åt dess innehåll.
 

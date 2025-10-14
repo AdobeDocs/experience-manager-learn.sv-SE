@@ -324,7 +324,7 @@ Det är ofta viktigt att beständiga konfigurationer, som mallar och relaterade 
 För närvarande behandlas mallar som andra kodavsnitt och **artikelsidmallen** synkroniseras som en del av projektet.
 Fram tills nu överförs kod från det AEM projektet till en lokal instans av AEM. **Artikelsidmallen** skapades direkt på en lokal instans av AEM, så den måste **importera** mallen till det AEM projektet. Modulen **ui.content** ingår i det AEM projektet för detta ändamål.
 
-Nästa steg görs i VSCode IDE med plugin-programmet [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync&amp;ssr=false#overview) . Men de kan använda vilken IDE som helst som du har konfigurerat till **import** eller importera innehåll från en lokal instans av AEM.
+Nästa steg görs i VSCode IDE med plugin-programmet [VSCode AEM Sync](https://marketplace.visualstudio.com/items?itemName=yamato-ltd.vscode-aem-sync&ssr=false#overview) . Men de kan använda vilken IDE som helst som du har konfigurerat till **import** eller importera innehåll från en lokal instans av AEM.
 
 1. I öppnar VSCode `aem-guides-wknd`-projektet.
 

@@ -115,7 +115,7 @@ En fullständig beskrivning av konfigurationsfilerna finns i de opackade Dispatc
 
 ## Validera konfigurationer
 
-Dispatcher- och Apache-webbserverkonfigurationerna (via `httpd -t`) kan valideras med skriptet `validate` (ska inte blandas ihop med den körbara filen `validator`). Skriptet `validate` är ett praktiskt sätt att köra [ tre faser ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=sv-SE) i `validator`.
+Dispatcher- och Apache-webbserverkonfigurationerna (via `httpd -t`) kan valideras med skriptet `validate` (ska inte blandas ihop med den körbara filen `validator`). Skriptet `validate` är ett praktiskt sätt att köra [&#x200B; tre faser &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/validation-debug.html?lang=sv-SE) i `validator`.
 
 
 >[!BEGINTABS]

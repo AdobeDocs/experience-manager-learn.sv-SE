@@ -29,7 +29,7 @@ Så här testar du den här funktionen på din AEM Forms-instans:
 * Hämta och distribuera [JAR](assets/mysqldriver.jar)-filerna för MySQL-drivrutinen med webbkonsolen [felix](http://localhost:4502/system/console/bundles)
 * Hämta och distribuera [OSGi-paketet](assets/SaveAndContinue.SaveAndContinue.core-1.0-SNAPSHOT.jar) med webbkonsolen [felix](http://localhost:4502/system/console/bundles)
 * Hämta och installera det [paket som innehåller klientlib, adaptiv formulärmall och den anpassade sidkomponenten](assets/store-and-fetch-af-with-data.zip) med hjälp av [pakethanteraren](http://localhost:4502/crx/packmgr/index.jsp)
-* Importera det adaptiva [exemplet ](assets/sample-adaptive-form.zip) med gränssnittet [FormsAndDocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
+* Importera det adaptiva [exemplet &#x200B;](assets/sample-adaptive-form.zip) med gränssnittet [FormsAndDocuments](http://localhost:4502/aem/forms.html/content/dam/formsanddocuments)
 
 * Importera [form-data-db.sql](assets/form-data-db.sql) med MySQL Workbench. Detta skapar de scheman och tabeller som behövs i databasen för att den här självstudiekursen ska fungera.
 * Logga in på [configMgr.](http://localhost:4502/system/console/configMgr) Sök efter &quot;Apache Sling Connection Pooled DataSource. Skapa en ny post för datakällan för anslutningen till Apache Sling med namnet **SaveAndContinue** med följande egenskaper:

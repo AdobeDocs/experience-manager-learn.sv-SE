@@ -91,6 +91,6 @@ Du kan ladda ned följande resurser för att få ett försprång i överlappande
 De färdiga swagger-filerna kan hämtas från [här](assets/geonames-swagger-files.zip)
 Swagger-filerna beskriver följande REST API
 * [Hämta alla länder](https://secure.geonames.org/countryInfoJSON?username=yourusername)
-* [Hämta underordnade objekt för Geoname-objekt](https://secure.geonames.org/children?formatted=true&amp;geonameId=6252001&amp;username=yourusername)
+* [Hämta underordnade objekt för Geoname-objekt](https://secure.geonames.org/children?formatted=true&geonameId=6252001&username=yourusername)
 
 Den färdiga [formulärdatamodellen kan hämtas här](assets/geonames-api-form-data-model.zip)

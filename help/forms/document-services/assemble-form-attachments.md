@@ -45,7 +45,7 @@ String  []attachmentNames  = arg2.get("PROCESS_ARGS","string").toString().split(
 
 ### Skapa DDX från namnen på de bifogade filerna
 
-Sedan måste vi skapa [DX ](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)-dokument (Document Description XML) som används av Assembler-tjänsten för att samla ihop dokument. Följande är den DDX som skapades från processargumenten. Med NoForms-elementet kan du förenkla XFA-baserade dokument innan de sätts samman. Observera att källelementen i PDF är i rätt ordning enligt processargumenten.
+Sedan måste vi skapa [DX &#x200B;](https://helpx.adobe.com/pdf/aem-forms/6-2/ddxRef.pdf)-dokument (Document Description XML) som används av Assembler-tjänsten för att samla ihop dokument. Följande är den DDX som skapades från processargumenten. Med NoForms-elementet kan du förenkla XFA-baserade dokument innan de sätts samman. Observera att källelementen i PDF är i rätt ordning enligt processargumenten.
 
 ![ddx-xml](assets/ddx.PNG)
 

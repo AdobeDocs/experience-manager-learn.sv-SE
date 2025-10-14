@@ -70,7 +70,7 @@ Fel som upptäcks i den här fasen bör kunna reproduceras lokalt, med följande
 
 Kodskanning utför statisk kodanalys med en blandning av Java- och AEM-specifika metodtips.
 
-Kodskanning resulterar i ett byggfel om det finns en allvarlig säkerhetslucka i koden. Mindre överträdelser kan åsidosättas, men vi rekommenderar att de åtgärdas. Observera att kodskanningen inte är perfekt och kan resultera i [falskt positiva ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html?lang=sv-SE#dealing-with-false-positives).
+Kodskanning resulterar i ett byggfel om det finns en allvarlig säkerhetslucka i koden. Mindre överträdelser kan åsidosättas, men vi rekommenderar att de åtgärdas. Observera att kodskanningen inte är perfekt och kan resultera i [falskt positiva &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html?lang=sv-SE#dealing-with-false-positives).
 
 Lös problem med kodskanning genom att hämta den CSV-formaterade rapporten från Cloud Manager via knappen **Hämta information** och granska eventuella poster.
 

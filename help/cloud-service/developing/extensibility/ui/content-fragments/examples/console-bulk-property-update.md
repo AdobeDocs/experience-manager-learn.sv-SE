@@ -171,7 +171,7 @@ I den här exempelappen finns en modal React-komponent (`BulkPropertyUpdateModal
 Viktigt är att all interaktion med AEM från tillägget delegeras till en [AppBuilder Adobe I/O Runtime-åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), som är en separat serverlös process som körs i [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
 Adobe I/O Runtime-åtgärder används för att kommunicera med AEM för att undvika anslutningsproblem mellan olika ursprung (CORS).
 
-När formuläret för uppdatering av gruppegenskap skickas, anropar en anpassad `onSubmitHandler()` Adobe I/O Runtime-åtgärden och skickar den aktuella AEM-värden (domän) och användarens AEM-åtkomsttoken, som i sin tur anropar [ AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=sv-SE) för att uppdatera innehållsfragmenten.
+När formuläret för uppdatering av gruppegenskap skickas, anropar en anpassad `onSubmitHandler()` Adobe I/O Runtime-åtgärden och skickar den aktuella AEM-värden (domän) och användarens AEM-åtkomsttoken, som i sin tur anropar [&#x200B; AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=sv-SE) för att uppdatera innehållsfragmenten.
 
 När svaret från Adobe I/O Runtime-åtgärden tas emot uppdateras modal-åtgärden så att resultatet av bulkegenskapsuppdateringen visas.
 

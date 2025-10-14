@@ -237,4 +237,4 @@ Grattis! Du har nu lagt till flikar, använt datatyperna date-and-time och JSON-
 Nästa kapitel i den här serien omfattar [redigering av innehållsfragment](/help/headless-tutorial/graphql/advanced-graphql/author-content-fragments.md) från modellerna som du skapade i det här kapitlet. Lär dig hur du använder de datatyper som introduceras i det här kapitlet och skapa mappprofiler för att begränsa vad Content Fragment-modeller kan skapa i en resursmapp.
 
 Det är valfritt för den här självstudiekursen, men se till att publicera allt innehåll i verkliga produktionssituationer. En recension av redigerings- och publiceringsmiljöer i AEM finns i
-[AEM Headless och GraphQL ](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md).
+[AEM Headless och GraphQL &#x200B;](/help/headless-tutorial/graphql/video-series/author-publish-architecture.md).

@@ -145,7 +145,7 @@ Om du vill ta emot AEM Events och köra Adobe I/O Runtime Action som skapades i 
 
 - I steget **Så här tar du emot händelser** expanderar du alternativet **Körningsåtgärd** och väljer den _generiska_ åtgärden som skapades i föregående steg. Klicka på **Spara konfigurerade händelser**.
 
-  ![Körningsåtgärd - Konfigurera projekt ](../assets/examples/runtime-action/select-runtime-action.png)
+  ![Körningsåtgärd - Konfigurera projekt &#x200B;](../assets/examples/runtime-action/select-runtime-action.png)
 
 - Granska informationen om händelseregistrering, även fliken **Felsökningsspårning**, och verifiera **Utfrågningsavsökningen** - förfrågan och svar.
 

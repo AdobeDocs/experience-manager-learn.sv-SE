@@ -68,7 +68,7 @@ Granska sedan modulen `ui.frontend` för att förstå SPA-filen som har generera
 
 1. Under `dependencies` ska du se flera relaterade till `react` inklusive `react-scripts`
 
-   `ui.frontend` är ett React-program som bygger på [Create React App ](https://create-react-app.dev/) eller CRA kort. Versionen `react-scripts` anger vilken version av CRA som används.
+   `ui.frontend` är ett React-program som bygger på [Create React App &#x200B;](https://create-react-app.dev/) eller CRA kort. Versionen `react-scripts` anger vilken version av CRA som används.
 
 1. Det finns också flera beroenden som har prefixats med `@adobe`:
 

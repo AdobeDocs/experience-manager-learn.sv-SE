@@ -113,7 +113,7 @@ Komponenten Adventures frågar AEM efter alla äventyr efter språkområde och v
 
 Den här metoden kan utökas till andra frågor i programmet, så att alla frågor bara innehåller innehåll som anges av användarens språkområdesval.
 
-Frågan mot AEM utförs i den anpassade React-kroken [getAdventuresByLocale, som beskrivs mer ingående i AEM GraphQL-dokumentationen ](./aem-headless-sdk.md).
+Frågan mot AEM utförs i den anpassade React-kroken [getAdventuresByLocale, som beskrivs mer ingående i AEM GraphQL-dokumentationen &#x200B;](./aem-headless-sdk.md).
 
 ```javascript
 // src/Adventures.js

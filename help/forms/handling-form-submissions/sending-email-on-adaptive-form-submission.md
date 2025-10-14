@@ -39,7 +39,7 @@ På skärmbilden visas konfigurationsegenskaperna för Adobe-e-postservern.
 
 Följ dessa anvisningar om du vill prova detta på servern:
 
-* [Importera resurserna ](assets/timeoffrequest.zip) som är associerade med den här artikeln i AEM med hjälp av pakethanteraren.
+* [Importera resurserna &#x200B;](assets/timeoffrequest.zip) som är associerade med den här artikeln i AEM med hjälp av pakethanteraren.
 
 * Öppna [TimeOffRequestForm](http://localhost:4502/content/dam/formsanddocuments/helpx/timeoffrequestform/jcr:content?wcmmode=disabled).
 

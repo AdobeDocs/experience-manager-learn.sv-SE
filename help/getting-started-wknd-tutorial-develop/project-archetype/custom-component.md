@@ -398,7 +398,7 @@ Skapa ett publikt Java™-gränssnitt för Byline. `Byline.java` definierar de p
 
 1. I `core`-modulen i mappen `core/src/main/java/com/adobe/aem/guides/wknd/core/models` skapas en fil med namnet `Byline.java`
 
-   ![skapa gränssnitt ](assets/custom-component/create-byline-interface.png)
+   ![skapa gränssnitt &#x200B;](assets/custom-component/create-byline-interface.png)
 
 1. Uppdatera `Byline.java` med följande metoder:
 
@@ -644,7 +644,7 @@ Vi använder metoden **second**. Det första tillvägagångssättet är förmodl
    >
    >I en implementering i verkligheten är det bäst att använda metoden One, med `@Self` eftersom det är den enklare och mer eleganta lösningen. I den här självstudiekursen används den andra metoden eftersom den kräver att du utforskar fler aspekter av Sling Models som är användbara är mer komplexa komponenter!
 
-   Eftersom Sling Models är Java™ POJO och inte OSGi Services, kan de vanliga OSGi-injektionskommentarerna `@Reference` **inte** användas, i stället tillhandahåller Sling Models en speciell **[@OSGiService ](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)** -anteckning som ger liknande funktioner.
+   Eftersom Sling Models är Java™ POJO och inte OSGi Services, kan de vanliga OSGi-injektionskommentarerna `@Reference` **inte** användas, i stället tillhandahåller Sling Models en speciell **[@OSGiService &#x200B;](https://sling.apache.org/documentation/bundles/models.html#injector-specific-annotations)** -anteckning som ger liknande funktioner.
 
 1. Uppdatera `BylineImpl.java` så att den innehåller anteckningen `OSGiService` för att mata in `ModelFactory`:
 

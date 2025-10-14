@@ -34,7 +34,7 @@ Om en CSRF-token inte skickas med en POST-, PUT- eller DELETE-begäran returnera
 [INFO][POST /path/to/aem/endpoint HTTP/1.1][com.adobe.granite.csrf.impl.CSRFFilter] doFilter: the provided CSRF token is invalid
 ```
 
-Mer information om AEM CSRF-skydd finns i [dokumentationen ](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=sv-SE).
+Mer information om AEM CSRF-skydd finns i [dokumentationen &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/csrf-protection.html?lang=sv-SE).
 
 
 ## CSRF-klientbibliotek
@@ -45,7 +45,7 @@ Om du vill använda den här metoden lägger du till `granite.csrf.standalone` s
 
 ## Skräddarsydd formulärinlämning med CSRF-skydd
 
-Om [`granite.csrf.standalone`-klientbiblioteket ](#csrf-client-library) inte är aktiverat för ditt användningssätt kan du lägga till en CSRF-token manuellt i ett formulär. I följande exempel visas hur du lägger till en CSRF-token i en formulärsändning.
+Om [`granite.csrf.standalone`-klientbiblioteket &#x200B;](#csrf-client-library) inte är aktiverat för ditt användningssätt kan du lägga till en CSRF-token manuellt i ett formulär. I följande exempel visas hur du lägger till en CSRF-token i en formulärsändning.
 
 Detta kodfragment visar hur CSRF-token kan hämtas från AEM när formulär skickas och läggas till i formulärindata med namnet `:cq_csrf_token`. Eftersom CSRF-token har kort livslängd är det bäst att hämta och ställa in CSRF-token omedelbart innan formuläret skickas, vilket säkerställer dess giltighet.
 
@@ -74,7 +74,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
 
 ## Hämta med CSRF-skydd
 
-Om [`granite.csrf.standalone`-klientbiblioteket ](#csrf-client-library) inte är aktiverat för ditt användningsfall kan du lägga till en CSRF-token manuellt i en XHR-begäran eller hämta begäranden. I följande exempel visas hur du lägger till en CSRF-token i en XHR som skapats med fetch.
+Om [`granite.csrf.standalone`-klientbiblioteket &#x200B;](#csrf-client-library) inte är aktiverat för ditt användningsfall kan du lägga till en CSRF-token manuellt i en XHR-begäran eller hämta begäranden. I följande exempel visas hur du lägger till en CSRF-token i en XHR som skapats med fetch.
 
 Detta kodfragment visar hur du hämtar en CSRF-token från AEM och lägger till den i HTTP-begärandehuvudet `CSRF-Token` för en hämtningsbegäran. Eftersom CSRF-token har kort livslängd är det bäst att hämta och ställa in CSRF-token omedelbart innan hämtningsbegäran görs, vilket säkerställer dess giltighet.
 

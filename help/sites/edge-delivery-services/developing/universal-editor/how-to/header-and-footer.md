@@ -150,7 +150,7 @@ Om du vill söka efter och inspektera sidans `<header>`-element i webbläsarens 
 
 ## Blockera JavaScript
 
-Filen `/blocks/header/header.js` från [AEM-mallen XWalk ](https://github.com/adobe-rnd/aem-boilerplate-xwalk) innehåller JavaScript för navigering, inklusive listrutor och en responsiv mobilvy.
+Filen `/blocks/header/header.js` från [AEM-mallen XWalk &#x200B;](https://github.com/adobe-rnd/aem-boilerplate-xwalk) innehåller JavaScript för navigering, inklusive listrutor och en responsiv mobilvy.
 
 Skriptet `header.js` är ofta mycket anpassat för att matcha en webbplats design, men det är viktigt att behålla de första raderna i `decorate()` som hämtar och bearbetar sidhuvudsfragmentet.
 

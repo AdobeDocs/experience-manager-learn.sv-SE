@@ -163,4 +163,4 @@ En genomgång av hur du installerar och använder [!DNL Apache Sling Dynamic Inc
 ## Stödmaterial
 
 * [Ladda ned paketet Sling Dynamic Include](https://sling.apache.org/downloads.cgi)
-* [Dokumentation för Dynamisk inkludering av Apache Sling ](https://github.com/Cognifide/Sling-Dynamic-Include)
+* [Dokumentation för Dynamisk inkludering av Apache Sling &#x200B;](https://github.com/Cognifide/Sling-Dynamic-Include)

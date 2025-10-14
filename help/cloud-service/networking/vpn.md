@@ -36,7 +36,7 @@ Ett Cloud Manager-program kan bara ha en __enskild__ nätverksinfrastrukturtyp. 
 
 >[!NOTE]
 >
->Observera att det inte går att ansluta byggmiljön från Cloud Manager till ett VPN. Om du måste få åtkomst till binära artefakter från en privat databas måste du skapa en säker och lösenordsskyddad databas med en URL som är tillgänglig på den offentliga Internet [ enligt beskrivningen här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project).
+>Observera att det inte går att ansluta byggmiljön från Cloud Manager till ett VPN. Om du måste få åtkomst till binära artefakter från en privat databas måste du skapa en säker och lösenordsskyddad databas med en URL som är tillgänglig på den offentliga Internet [&#x200B; enligt beskrivningen här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project).
 
 >[!MORELIKETHIS]
 >

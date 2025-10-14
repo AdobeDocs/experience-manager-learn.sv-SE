@@ -114,9 +114,9 @@ lrwxrwxrwx. 1 root root 35 Oct 13 21:38 aem_flush.vhost -> ../available_vhosts/a
 
 > Kommandot `Warning:` mklink för att skapa symboler kräver administratörsbehörighet för att kunna köras korrekt. Även som ett administratörskonto måste du köra Kommandotolken &quot;Som administratör&quot; om inte utvecklarläget är aktiverat
 > <br/>Felaktiga behörigheter:
-> ![Bild av Windows-kommandotolken som visar att kommandot misslyckades på grund av behörighet ](./assets/git-symlinks/windows-mklink-underpriv.png)
+> ![Bild av Windows-kommandotolken som visar att kommandot misslyckades på grund av behörighet &#x200B;](./assets/git-symlinks/windows-mklink-underpriv.png)
 > <br/>Rätt behörigheter:
-> ![Bilden av Windows-kommandotolken kördes som administratör ](./assets/git-symlinks/windows-mklink-properpriv.png)
+> ![Bilden av Windows-kommandotolken kördes som administratör &#x200B;](./assets/git-symlinks/windows-mklink-properpriv.png)
 
 Här är kommandona som skapar länken:
 

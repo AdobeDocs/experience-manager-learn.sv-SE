@@ -57,7 +57,7 @@ Maven är ett automatiserat byggverktyg som främst används för Java-projekt. 
 En Maven `settings.xml`-fil definierar värden som konfigurerar Maven-körning på olika sätt. Det används oftast för att definiera en lokal plats för databasen, alternativa servrar för fjärrdatabaser och autentiseringsinformation för privata databaser.
 
 Navigera till `C:\Users\<username>\.m2 folder`
-Extrahera innehållet i filen [ settings.zip ](assets/settings.zip) och placera det i mappen `.m2` .
+Extrahera innehållet i filen [&#x200B; settings.zip &#x200B;](assets/settings.zip) och placera det i mappen `.m2` .
 
 ## Installera Eclipse
 

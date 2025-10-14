@@ -131,7 +131,7 @@ Adobe Experience Manager Content Fragments och Experience Fragments kan se likad
 </td>
 </tr><tr><td><strong>Dokumentation</strong></td>
 <td><ul>
-<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=sv-SE&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js" target="_blank">AEM Content Fragments User Guide</a></li>
+<li><a href="https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=sv-SE&topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js" target="_blank">AEM Content Fragments User Guide</a></li>
 <li><a href="https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=sv-SE" target="_blank">Använda innehållsfragment i AEM</a></li>
 </ul>
 </td>
@@ -172,7 +172,7 @@ Följande diagram visar den övergripande arkitekturen för AEM Content Fragment
 
 ## Stödresurs för innehållsfragment
 
-+ [Användarhandbok för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=sv-SE&amp;topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
++ [Användarhandbok för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-65/assets/home.html?lang=sv-SE&topic=/experience-manager/6-5/assets/morehelp/content-fragments.ug.js)
 + [Introduktion till Adobe Experience Manager som Headless CMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html?lang=sv-SE)
 + [Använda innehållsfragment i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/content-fragments/content-fragments-feature-video-use.html?lang=sv-SE)
 + [AEM WCM Core Components&#39; Content Fragment component](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=sv-SE)

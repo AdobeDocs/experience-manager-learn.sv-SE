@@ -21,6 +21,6 @@ ht-degree: 0%
 
 # AEM boilerplate
 
-Konfigurera Git-koddatabasen med [AEM-mallmallen ](https://github.com/adobe/aem-boilerplate) för Edge Delivery Services.
+Konfigurera Git-koddatabasen med [AEM-mallmallen &#x200B;](https://github.com/adobe/aem-boilerplate) för Edge Delivery Services.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3434615/?learn=on&captions=swe)

@@ -215,7 +215,7 @@ Den resulterande Edge Delivery Services HTML för det här blocket placerar bild
 </div>        
 ```
 
-Som du kan se [ i nästa kapitel](./7a-block-css.md) förenklar den här HTML-strukturen formateringen av blocket som en kohesiv enhet.
+Som du kan se [&#x200B; i nästa kapitel](./7a-block-css.md) förenklar den här HTML-strukturen formateringen av blocket som en kohesiv enhet.
 
 Om du vill förstå konsekvenserna av att inte använda fältkomprimering och elementgruppering läser du fliken **Fel sätt** ovan.
 
@@ -363,7 +363,7 @@ Den här strukturen ser till att blocket är konfigurerat i den universella redi
 
 ### Blockfilter
 
-Blockets `filters`-array definierar, för [ behållarblock](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container), vilka andra block som kan läggas till i behållaren. Filter definierar en lista med block-ID (`model.id`) som kan läggas till i behållaren.
+Blockets `filters`-array definierar, för [&#x200B; behållarblock](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/wysiwyg-authoring/content-modeling#container), vilka andra block som kan läggas till i behållaren. Filter definierar en lista med block-ID (`model.id`) som kan läggas till i behållaren.
 
 [!BADGE /blocks/teaser/_teaser.json]{type=Neutral tooltip="Filnamn på kodexemplet nedan."}
 
@@ -410,7 +410,7 @@ Teaser block definition ID för `teaser` läggs till i `components`-arrayen.
 
 ## Laga dina JSON-filer
 
-Se till att du [ofta ](./3-local-development-environment.md#linting) lintar dina ändringar så att de blir rena och konsekventa. Linting hjälper dig att fånga upp problem tidigt och minskar den totala utvecklingstiden. Kommandot `npm run lint:js` begränsar också JSON-filer och fångar upp eventuella syntaxfel.
+Se till att du [ofta &#x200B;](./3-local-development-environment.md#linting) lintar dina ändringar så att de blir rena och konsekventa. Linting hjälper dig att fånga upp problem tidigt och minskar den totala utvecklingstiden. Kommandot `npm run lint:js` begränsar också JSON-filer och fångar upp eventuella syntaxfel.
 
 ```bash
 # ~/Code/aem-wknd-eds-ue
@@ -420,7 +420,7 @@ $ npm run lint:js
 
 ## Bygg projekt-JSON
 
-När blockets JSON-filer (t.ex. `blocks/teaser/_teaser.json`, `models/_section.json`) har konfigurerats kompileras de automatiskt till projektets `component-models.json` -, `component-definitions.json` - och `component-filters.json` -filer. Den här kompileringen hanteras automatiskt av en [Husky](https://typicode.github.io/husky/)-exekveringskrok som ingår i projektmallen [AEM Boilerplate XWalk ](https://github.com/adobe-rnd/aem-boilerplate-xwalk) .
+När blockets JSON-filer (t.ex. `blocks/teaser/_teaser.json`, `models/_section.json`) har konfigurerats kompileras de automatiskt till projektets `component-models.json` -, `component-definitions.json` - och `component-filters.json` -filer. Den här kompileringen hanteras automatiskt av en [Husky](https://typicode.github.io/husky/)-exekveringskrok som ingår i projektmallen [AEM Boilerplate XWalk &#x200B;](https://github.com/adobe-rnd/aem-boilerplate-xwalk) .
 
 Bygger kan också aktiveras manuellt eller programmatiskt med projektets [build JSON](./3-local-development-environment.md#build-json-fragments) NPM-skript.
 

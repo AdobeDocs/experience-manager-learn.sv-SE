@@ -209,11 +209,11 @@ Observera också att noddefinitionen för OSGi-konfigurationen föredrar `cfg.js
 
 ### [!DNL Sling] servletregistrering {#sling-servlet-registration}
 
-* [!DNL Sling] serverregistrering, använd [ OSGi DS 1.2-anteckningar med @SlingServletResourceTypes](https://sling.apache.org/documentation/the-sling-engine/servlets.html) istället för `@SlingServlet`
+* [!DNL Sling] serverregistrering, använd [&#x200B; OSGi DS 1.2-anteckningar med @SlingServletResourceTypes](https://sling.apache.org/documentation/the-sling-engine/servlets.html) istället för `@SlingServlet`
 
 ### [!DNL Sling] Filterregistrering {#sling-filter-registration}
 
-* [!DNL Sling] filterregistrering, använd [ OSGi DS 1.2-anteckningar med @SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) framför `@SlingFilter`
+* [!DNL Sling] filterregistrering, använd [&#x200B; OSGi DS 1.2-anteckningar med @SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) framför `@SlingFilter`
 
 ## Användbara kodfragment
 
@@ -356,7 +356,7 @@ Resource resource = asset.adaptTo(Resource.class);
 
 ### Skriva egenskaper med ModiitableValueMap för [!DNL Sling]
 
-Använd [ för ](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ModifiableValueMap.html) från [!DNL Sling] för att skriva egenskaper till noder. Detta kan bara skriva till den omedelbara noden (relativa egenskapssökvägar stöds inte).
+Använd [&#x200B; för &#x200B;](https://sling.apache.org/apidocs/sling10/org/apache/sling/api/resource/ModifiableValueMap.html) från [!DNL Sling] för att skriva egenskaper till noder. Detta kan bara skriva till den omedelbara noden (relativa egenskapssökvägar stöds inte).
 
 Observera att anropet till `.adaptTo(ModifiableValueMap.class)` kräver skrivbehörighet för resursen, annars returneras null.
 

@@ -55,7 +55,7 @@ function App(props) {
 
 `ExtensionRegistration.js` måste läsas in omedelbart via tilläggets indexflöde och fungerar som registreringspunkt för tillägget.
 
-Baserat på AEM UI-tilläggsmallen som valdes när [App Builder-programtillägget ](./app-initialization.md) initierades stöds olika tilläggspunkter.
+Baserat på AEM UI-tilläggsmallen som valdes när [App Builder-programtillägget &#x200B;](./app-initialization.md) initierades stöds olika tilläggspunkter.
 
 + [Tillägg för innehållsfragment i användargränssnittet](./content-fragments/overview.md#extension-points)
 

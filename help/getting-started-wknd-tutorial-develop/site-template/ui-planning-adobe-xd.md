@@ -62,7 +62,7 @@ Steg på hög nivå:
 
 Grattis! Du har lärt dig hur Adobe XD UI Kits kan användas för att mappa och planera en AEM Sites-implementering.
 
-Det finns ytterligare [UI-kit ](https://www.adobe.com/products/xd/features/ui-kits.html) för att kontrollera och hämta.
+Det finns ytterligare [UI-kit &#x200B;](https://www.adobe.com/products/xd/features/ui-kits.html) för att kontrollera och hämta.
 
 ### Nästa steg {#next-steps}
 

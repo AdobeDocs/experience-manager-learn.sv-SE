@@ -218,7 +218,7 @@ Ett särskilt dataattribut `data-cmp-data-layer` på varje AEM-komponent använd
 
 1. Navigera under svaret under `component` för att hitta instansen av komponenten `byline` som har lagts till i datalagret:
 
-   ![En del av datalagret ](assets/adobe-client-data-layer/byline-part-of-datalayer.png) med penna
+   ![En del av datalagret &#x200B;](assets/adobe-client-data-layer/byline-part-of-datalayer.png) med penna
 
    Du bör se ett inlägg som följande:
 
@@ -420,7 +420,7 @@ Det finns en verktygsklass, `DataLayerBuilder`, som kan utföra de flesta grova 
 
    >[!NOTE]
    >
-   > Det är lite svårare att inkludera anpassade egenskaper som `occupation` när [ DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html) används. Men om du utökar en Core-komponent som innehåller en bild eller sida sparar verktyget mycket tid.
+   > Det är lite svårare att inkludera anpassade egenskaper som `occupation` när [&#x200B; DataLayerBuilder](https://javadoc.io/doc/com.adobe.cq/core.wcm.components.core/latest/com/adobe/cq/wcm/core/components/models/datalayer/builder/ComponentDataBuilder.html) används. Men om du utökar en Core-komponent som innehåller en bild eller sida sparar verktyget mycket tid.
 
    >[!NOTE]
    >

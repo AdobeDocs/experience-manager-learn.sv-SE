@@ -21,7 +21,7 @@ Den senaste versionen av AEM och AEM WCM Core Components rekommenderas alltid.
 
 * AEM 6.5 eller senare
 * AEM WCM Core Components 2.4.0 eller senare
-   * Ingår i innehållspaketet för [WKND-AEM ](#wknd-mobile-application-packages) nedan
+   * Ingår i innehållspaketet för [WKND-AEM &#x200B;](#wknd-mobile-application-packages) nedan
 
 Innan du startar den här självstudiekursen kontrollerar du att följande AEM har [installerats och körs på din lokala dator](https://helpx.adobe.com/se/experience-manager/6-5/sites/deploying/using/deploy.html#Default%20Local%20Install):
 

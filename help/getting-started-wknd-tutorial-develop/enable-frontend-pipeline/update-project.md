@@ -34,7 +34,7 @@ I det här kapitlet gör vi konfigurationsändringar i __WKND Sites-projektet__ 
 
 ## Förutsättningar {#prerequisites}
 
-Det här är en självstudiekurs i flera delar och det antas att du har granskat modulen [&#39;ui.front&#39; ](./review-uifrontend-module.md).
+Det här är en självstudiekurs i flera delar och det antas att du har granskat modulen [&#39;ui.front&#39; &#x200B;](./review-uifrontend-module.md).
 
 
 ## Förändringar i AEM-projekt i full hög

@@ -75,7 +75,7 @@ I följande kod visas de olika typerna av resurser som använder söknings- och 
 
 ## Konfigurera sök- och listkomponenten {#configure-search-and-lister-component}
 
-När vi har definierat den anpassade mallen måste vi nu koppla den anpassade mallen till komponenten Sök och visa. Peka webbläsaren [ mot den här URL:en](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
+När vi har definierat den anpassade mallen måste vi nu koppla den anpassade mallen till komponenten Sök och visa. Peka webbläsaren [&#x200B; mot den här URL:en](http://localhost:4502/editor.html/content/AemForms/CustomPortal.html).
 
 Växla till designläge och konfigurera styckesystemet så att det inkluderar Search and Lister-komponenten i den tillåtna komponentgruppen. Komponenten Sök och Lister ingår i Document Services-gruppen.
 
@@ -105,7 +105,7 @@ I följande skärmbild visas resurstyperna som är konfigurerade för listning
 
 ![resurstyper](assets/assettypes.png)
 
-Nu när du har konfigurerat söknings- och listportalkomponenten är det dags att se hur listan fungerar. Peka webbläsaren [ mot den här URL:en](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). Resultatet ska se ut ungefär som bilden nedan.
+Nu när du har konfigurerat söknings- och listportalkomponenten är det dags att se hur listan fungerar. Peka webbläsaren [&#x200B; mot den här URL:en](http://localhost:4502/content/AemForms/CustomPortal.html?wcmmode=disabled). Resultatet ska se ut ungefär som bilden nedan.
 
 >[!NOTE]
 >

@@ -33,7 +33,7 @@ Skapa brytpunkter som ska användas tillsammans med mobilemulatorn i filen `/ui.
 
 ## Anpassa mallens brytpunkter
 
-Öppna filen `ui.content/src/main/content/jcr_root/conf/<app name>/settings/wcm/templates/page-content/structure/.content.xml` och uppdatera `cq:responsive/breakpoints` med de nya brytpunktsnoddefinitionerna. Varje [CSS-brytpunkt ](#create-new-css-breakpoints) ska ha en motsvarande nod under `breakpoints` med egenskapen `width` inställd på CSS-brytpunktens `max-width`.
+Öppna filen `ui.content/src/main/content/jcr_root/conf/<app name>/settings/wcm/templates/page-content/structure/.content.xml` och uppdatera `cq:responsive/breakpoints` med de nya brytpunktsnoddefinitionerna. Varje [CSS-brytpunkt &#x200B;](#create-new-css-breakpoints) ska ha en motsvarande nod under `breakpoints` med egenskapen `width` inställd på CSS-brytpunktens `max-width`.
 
 ![Anpassa mallens responsiva brytpunkter](./assets/responsive-breakpoints/customize-template-breakpoints.jpg)
 

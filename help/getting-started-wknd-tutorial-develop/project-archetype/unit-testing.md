@@ -378,7 +378,7 @@ Nu när vi har skapat en grundläggande modellkontext kan vi skriva vårt först
    }
    ```
 
-   * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** markerar klassen Test Case som ska köras med [ Mockito JUnit Jupiter Extension](https://www.javadoc.io/static/org.mockito/mockito-junit-jupiter/4.11.0/org/mockito/junit/jupiter/MockitoExtension.html) som tillåter användning av @Mock-anteckningar för att definiera modellobjekt på klassnivå.
+   * **`@ExtendWith({AemContextExtension.class, MockitoExtension.class})`** markerar klassen Test Case som ska köras med [&#x200B; Mockito JUnit Jupiter Extension](https://www.javadoc.io/static/org.mockito/mockito-junit-jupiter/4.11.0/org/mockito/junit/jupiter/MockitoExtension.html) som tillåter användning av @Mock-anteckningar för att definiera modellobjekt på klassnivå.
    * **`@Mock private Image`** skapar ett modellobjekt av typen `com.adobe.cq.wcm.core.components.models.Image`. Detta definieras på klassnivå så att `@Test`-metoder kan ändra sitt beteende efter behov.
    * **`@Mock private ModelFactory`** skapar ett modellobjekt av typen ModelFactory. Det här är en helt sann Mockito-mock och har inga metoder implementerade på den. Detta definieras på klassnivå så att `@Test`metoder kan ändra sitt beteende efter behov.
    * **`when(modelFactory.getModelFromWrappedRequest(..)`** registrerar modellbeteende för när `getModelFromWrappedRequest(..)` anropas i modellmodellobjektet ModelFactory. Resultatet som definieras i `thenReturn (..)` är att returnera modellbildobjektet. Det här beteendet anropas bara när: den första parametern är lika med `ctx`s begäranobjekt, den andra parametern är ett Resource-objekt och den tredje parametern måste vara Core Components Image-klass. Vi accepterar alla resurser eftersom vi under testerna ställer in `ctx.currentResource(...)` på olika modellresurser som definieras i **BylineImplTest.json**. Observera att vi lägger till strängen **leenient()** eftersom vi senare vill åsidosätta det här beteendet för ModelFactory.
@@ -461,7 +461,7 @@ Kom ihåg att den här metoden måste returnera en alfabetiskt sorterad lista me
 
 1. Kör testet, och återigen godkänns vi! Det ser ut som att få de sorterade arbetsuppgifterna att fungera!
 
-   ![Få jobb att gå ](assets/unit-testing/testgetoccupations-pass.png)
+   ![Få jobb att gå &#x200B;](assets/unit-testing/testgetoccupations-pass.png)
 
    *testGetOccupations() passerar*
 

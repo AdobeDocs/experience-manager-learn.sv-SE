@@ -39,7 +39,7 @@ När du har skapat din anpassade profil skapar du sedan en JSP-fil som hämtar d
 
 När XDP-filen återges kan du även skicka vissa parametrar till xdp och utifrån parameterns värde kan du hämta data från backend-systemet.
 
-[Den här URL:en har till exempel namnparametern ](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=john)
+[Den här URL:en har till exempel namnparametern &#x200B;](http://localhost:4502/content/dam/formsanddocuments/PrepopulateMobileForm.xdp/jcr:content?name=john)
 
 Den JSP som du skriver har åtkomst till name-parametern via request.getParameter(&quot;name&quot;). Du kan sedan skicka värdet för den här parametern till backend-processen för att hämta nödvändiga data.
 Följ stegen nedan för att få den här funktionen att fungera i ditt system:
