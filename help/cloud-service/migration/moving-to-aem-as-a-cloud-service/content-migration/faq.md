@@ -207,7 +207,7 @@ Ovanstående metod kan bara användas för att mäta migreringstiden, men den m�
 
 ## Ytterligare resurser
 
-+ [Tips och tricks för migrering till Experience Manager i molnet (Summit 2022)](https://business.adobe.com/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
++ [Tips och tricks för migrering till Experience Manager i molnet (Summit 2022)](https://business.adobe.com/se/summit/2022/sessions/tips-and-tricks-for-migrating-to-experience-manage-tw109.html)
 
 + [Video från CTT Expert Series](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/migration/moving-to-aem-as-a-cloud-service/content-migration/content-transfer-tool.html?lang=sv-SE)
 
