@@ -1,0 +1,96 @@
+[
+  {
+    "_id": "/teddy-ski-booking",
+    "_repo": {
+      "createDate": "2025-10-09T10:00:00-05:00",
+      "modifyDate": "2025-10-09T10:00:00-05:00"
+    },
+    "_techmarketingdemos": {
+      "address": "123 Snow Peak Road",
+      "adventureEndDate": "2025-11-07",
+      "adventurePurchaseAmount": 899.99,
+      "adventurePurchaseDate": "2025-10-10",
+      "adventurePurchaseQuantity": 1,
+      "adventurePurchased": "Downhill Skiing Wyoming",
+      "adventureStartDate": "2025-11-05",
+      "age": 34,
+      "city": "New York",
+      "country": "USA",
+      "email": {
+        "address": "teddy.davis@example.com",
+        "label": "personal",
+        "primary": true,
+        "status": "active",
+        "statusReason": "confirmed",
+        "type": "personal"
+      },
+      "firstName": "Teddy",
+      "gender": "male",
+      "lastName": "Davis",
+      "phone": {
+        "countryCode": "1",
+        "extension": "",
+        "number": "9705550101",
+        "primary": true,
+        "status": "active",
+        "statusReason": "verified",
+        "validity": "consistent"
+      },
+      "state": "NY",
+      "wkndUserId": "teddy",
+      "zipCode": "81611"
+    },
+    "createdByBatchID": "/wknd/booking-batch-001",
+    "modifiedByBatchID": "/wknd/booking-batch-001",
+    "personID": "teddy",
+    "repositoryCreatedBy": "WKND-System",
+    "repositoryLastModifiedBy": "WKND-System"
+  },
+  {
+    "_id": "/asmith-ski-booking",
+    "_repo": {
+      "createDate": "2025-10-09T10:05:00-05:00",
+      "modifyDate": "2025-10-09T10:05:00-05:00"
+    },
+    "_techmarketingdemos": {
+      "address": "45 Summit Trail",
+      "adventureEndDate": "2025-11-20",
+      "adventurePurchaseAmount": 1299.00,
+      "adventurePurchaseDate": "2025-10-10",
+      "adventurePurchaseQuantity": 2,
+      "adventurePurchased": "Ski Touring Mont Blanc",
+      "adventureStartDate": "2025-11-15",
+      "age": 29,
+      "city": "Park City",
+      "country": "USA",
+      "email": {
+        "address": "alison.smith@example.com",
+        "label": "personal",
+        "primary": true,
+        "status": "active",
+        "statusReason": "confirmed",
+        "type": "personal"
+      },
+      "firstName": "Alison",
+      "gender": "female",
+      "lastName": "Smith",
+      "phone": {
+        "countryCode": "1",
+        "extension": "",
+        "number": "4355550123",
+        "primary": true,
+        "status": "active",
+        "statusReason": "verified",
+        "validity": "consistent"
+      },
+      "state": "UT",
+      "wkndUserId": "asmith",
+      "zipCode": "84060"
+    },
+    "createdByBatchID": "/wknd/booking-batch-001",
+    "modifiedByBatchID": "/wknd/booking-batch-001",
+    "personID": "asmith",
+    "repositoryCreatedBy": "WKND-System",
+    "repositoryLastModifiedBy": "WKND-System"
+  }
+]
