@@ -46,7 +46,7 @@ Besök webbplatsen [WKND Enablement](https://wknd.enablementadobe.com/us/en.html
 
 - **Tidskriftssida**: När användare läser _tre eller fler_ artiklar kategoriseras de som **Tidskriftsläsare** och ser en personlig hjältedel på tidningssidan.
 
->[!VIDEO](https://video.tv.adobe.com/v/3474001/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474005/?captions=swe&learn=on&enablevpops)
 
 >[!TIP]
 >
