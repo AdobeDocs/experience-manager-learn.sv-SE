@@ -11,16 +11,16 @@ last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18717
 thumbnail: null
 exl-id: c4fb11b9-b613-4522-b9da-18d7ae0826ec
-source-git-commit: 5b91e7409ff0735bab40d78ad98410ac2ab006ed
+source-git-commit: c367564acb6465d5f203e5db943c5470607b63c9
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '386'
 ht-degree: 0%
 
 ---
 
 # Personalization - översikt
 
-Läs om hur AEM as a Cloud Service (AEMCS) kan integreras med Adobe Target och Adobe Experience Platform (AEP). Upptäck hur ni kan leverera personaliserade upplevelser med A/B-testning, målinrikta användare utifrån deras beteende eller personalisera innehåll med hjälp av kundprofiler.
+Läs om hur AEM as a Cloud Service (AEMCS) integreras med Adobe Target och Adobe Experience Platform (AEP) för att leverera personaliserade upplevelser. Använd Experience Fragments som personaliserat innehåll, upptäck hur man kör A/B-tester, målgruppsanpassar användare baserat på beteende i realtid eller personaliserar innehåll med hjälp av enhetliga kundprofiler som bygger på data mellan olika system.
 
 ## Förutsättningar
 
@@ -38,14 +38,14 @@ I den här självstudien används [AEM WKND](https://github.com/adobe/aem-guides
 
 ## Kom igång
 
-Innan du utforskar specifika användningsfall måste du först konfigurera AEM as a Cloud Service för personalisering. Börja med att integrera Adobe Target och taggar för personalisering på klientsidan med AEP Web SDK. Med dessa grundläggande steg kan era AEM-sidor experimentera, målinrikta och personalisera i realtid.
+Innan du utforskar specifika användningsfall måste du först konfigurera AEM as a Cloud Service för personalisering. Börja med att integrera Adobe Target och taggar för att möjliggöra personalisering på klientsidan med Web SDK. Med dessa grundläggande steg kan era AEM-sidor experimentera, målinrikta och personalisera i realtid.
 
 <!-- CARDS
 {target = _self}
 
 * ./setup/integrate-adobe-target.md
   {title = Integrate Adobe Target}
-  {description = Integrate AEMCS with Adobe Target to activate personalized content as Adobe Target offers.}
+  {description = Integrate AEMCS with Adobe Target to activate personalized content, such as Experience Fragments, as offers.}
   {image = ./assets/setup/integrate-target.png}
   {cta = Integrate Target}
 
@@ -54,6 +54,7 @@ Innan du utforskar specifika användningsfall måste du först konfigurera AEM a
   {description = Integrate AEMCS with Tags to inject the Web SDK and custom JavaScript for data collection and personalization.}
   {image = ./assets/setup/integrate-tags.png}
   {cta = Integrate Tags}
+  
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -72,7 +73,7 @@ Innan du utforskar specifika användningsfall måste du först konfigurera AEM a
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./setup/integrate-adobe-target.md" target="_self" rel="referrer" title="Integrera Adobe Target">Integrera Adobe Target</a>
                     </p>
-                    <p class="is-size-6">Integrera AEMCS med Adobe Target för att aktivera personaliserat innehåll som Adobe Target erbjuder.</p>
+                    <p class="is-size-6">Integrera AEMCS med Adobe Target för att aktivera personaliserat innehåll, som Experience Fragments, som erbjudanden.</p>
                 </div>
                 <a href="./setup/integrate-adobe-target.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Integrera mål </span>
@@ -117,7 +118,7 @@ Utforska följande vanliga användningsexempel för personalisering som stöds a
 
 * ./use-cases/experimentation.md
     {title = Experimentation (A/B Testing)}
-    {description = Learn how to test different content variations in AEMCS using Adobe Target for A/B testing.}
+    {description = Learn how to test different content variations on an AEMCS website using Adobe Target for A/B testing.}
     {image = ./assets/use-cases/experiment/experimentation.png}
     {cta = Learn Experimentation}
 
@@ -126,6 +127,12 @@ Utforska följande vanliga användningsexempel för personalisering som stöds a
     {description = Learn how to personalize content based on user behavior using Adobe Experience Platform and Adobe Target.}
     {image = ./assets/use-cases/behavioral-targeting/behavioral-targeting.png}
     {cta = Learn Behavioral Targeting}
+
+* ./use-cases/known-user-personalization.md
+    {title = Known-user personalization}
+    {description = Learn how to personalize content based on known user data by stitching information from multiple systems into a complete customer profile.}
+    {image = ./assets/use-cases/known-user-personalization/known-user-personalization.png}
+    {cta = Learn Known-user personalization}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -144,7 +151,7 @@ Utforska följande vanliga användningsexempel för personalisering som stöds a
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="./use-cases/experimentation.md" target="_self" rel="referrer" title="Experimentation (A/B-testning)">Experimentation (A/B-testning)</a>
                     </p>
-                    <p class="is-size-6">Lär dig hur du testar olika innehållsvariationer i AEMCS med Adobe Target för A/B-testning.</p>
+                    <p class="is-size-6">Lär dig hur du testar olika innehållsvariationer på en AEMCS-webbplats med Adobe Target för A/B-testning.</p>
                 </div>
                 <a href="./use-cases/experimentation.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Lär dig experimentera </span>
@@ -171,6 +178,29 @@ Utforska följande vanliga användningsexempel för personalisering som stöds a
                 </div>
                 <a href="./use-cases/behavioral-targeting.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Lär dig beteendeanpassning </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Known-user personalization">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="./use-cases/known-user-personalization.md" title="Känd personalisering för användare" target="_self" rel="referrer">
+                        <img class="is-bordered-r-small" src="./assets/use-cases/known-user-personalization/known-user-personalization.png" alt="Känd personalisering för användare"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="./use-cases/known-user-personalization.md" target="_self" rel="referrer" title="Känd personalisering för användare">Känd användaranpassning</a>
+                    </p>
+                    <p class="is-size-6">Lär dig att personalisera innehåll baserat på kända användardata genom att sammanfoga information från flera system till en komplett kundprofil.</p>
+                </div>
+                <a href="./use-cases/known-user-personalization.md" target="_self" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Lär dig mer om användaranpassning</span>
                 </a>
             </div>
         </div>
