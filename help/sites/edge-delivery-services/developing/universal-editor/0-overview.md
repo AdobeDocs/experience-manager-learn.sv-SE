@@ -101,7 +101,7 @@ Lär dig hur du konfigurerar din lokala utvecklingsmiljö för snabb webbplatsut
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="Konfigurera en lokal utvecklingsmiljö" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1753811862249" alt="Konfigurera en lokal utvecklingsmiljö"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443982/?captions=swe&format=jpeg&nocache=1753811862249" alt="Konfigurera en lokal utvecklingsmiljö"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
