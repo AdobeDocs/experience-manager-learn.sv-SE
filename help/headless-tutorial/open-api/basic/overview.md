@@ -1,6 +1,7 @@
 ---
 title: AEM Headless OpenAPI - självstudiekurs | Leverans av innehållsfragment
 description: En komplett självstudiekurs som visar hur man bygger upp och exponerar innehåll med AEM OpenAPI-baserade API:er för Content Fragment Delivery.
+short-description: En självstudiekurs som visar hur du bygger upp och exponerar AEM-innehåll med Content Fragment Delivery med OpenAPI:er och använder det i en extern app för headless CMS-scenarier.
 doc-type: Tutorial
 mini-toc-levels: 1
 jira: KT-6678
@@ -11,9 +12,10 @@ role: Developer
 level: Beginner
 last-substantial-update: 2022-10-17T00:00:00Z
 duration: 54
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+exl-id: 1bb7c415-58f8-4f6c-a0bc-38bdbdb521cf
+source-git-commit: f0b1b906e1ef04b53eca940f191e65d62a2e0bab
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '393'
 ht-degree: 1%
 
 ---
@@ -56,7 +58,7 @@ Starta självstudiekursen med [Definiera modeller för innehållsfragment](1-con
 
 Källkoden och innehållspaketen är tillgängliga i [AEM Headless-självstudiekurserna](https://github.com/adobe/aem-tutorials) GitHub-databasen.
 
-Branschen [`main` innehåller den slutliga källkoden &#x200B;](https://github.com/adobe/aem-tutorials/tree/main/headless/open-api/basic) för den här självstudien.
+Branschen [`main` innehåller den slutliga källkoden ](https://github.com/adobe/aem-tutorials/tree/main/headless/open-api/basic) för den här självstudien.
 Ögonblicksbilder av koden i slutet av varje steg är tillgängliga som Git-taggar.
 
 * Början av kapitel 4 - Reagera app: [`headless_open-api_basic`](https://github.com/adobe/aem-tutorials/tree/headless_open-api_basic//headless/open-api/basic)

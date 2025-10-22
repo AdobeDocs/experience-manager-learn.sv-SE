@@ -1,6 +1,7 @@
 ---
 title: Edge Delivery Services and Universal Editor developer tutorial
 description: Lär dig grunderna i hur du utvecklar en ny webbplats som skapats i AEM Universal Editor och levererats med Edge Delivery Services.
+short-description: En självstudiekurs för utvecklare av AEM webbplatser som kombinerar kraftfull redigering med Universal Editor och blixtsnabb leverans med Edge Delivery Services. Lär dig hur du skapar ett nytt projekt, konfigurerar en lokal utvecklingsmiljö och bygger anpassade block.
 version: Experience Manager as a Cloud Service
 feature: Edge Delivery Services
 topic: Development
@@ -10,9 +11,9 @@ doc-type: Catalog
 jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: f0ad5d66549970337118220156d7a6b0fd30fd57
+source-git-commit: f0b1b906e1ef04b53eca940f191e65d62a2e0bab
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
@@ -100,7 +101,7 @@ Lär dig hur du konfigurerar din lokala utvecklingsmiljö för snabb webbplatsut
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="Konfigurera en lokal utvecklingsmiljö" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443982/?format=jpeg&nocache=1753811862249&captions=swe" alt="Konfigurera en lokal utvecklingsmiljö"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1753811862249" alt="Konfigurera en lokal utvecklingsmiljö"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

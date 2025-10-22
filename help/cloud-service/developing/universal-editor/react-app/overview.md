@@ -1,6 +1,7 @@
 ---
 title: Reagera på appredigering med Universal Editor
 description: Lär dig hur du redigerar innehållet i ett exempel på React-program med Universal Editor.
+short-description: Lär dig hur du redigerar innehållet i ett exempel på React-program med Universal Editor. Innehållet lagras i innehållsfragment i AEM och hämtas med GraphQL API:er.
 version: Experience Manager as a Cloud Service
 feature: Developer Tools, Headless
 topic: Development, Content Management
@@ -12,9 +13,9 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 69ed610e-2eff-43b3-98f9-3dc40594e879
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: f0b1b906e1ef04b53eca940f191e65d62a2e0bab
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
@@ -56,7 +57,7 @@ Teaminformation som titel, beskrivning och teammedlemmar lagras som _Team_-inneh
 
 Innehållet för React-appen tillhandahålls av AEM med GraphQL API:er och användargränssnittet byggs med två React-komponenter, `Teams` och `Person`.
 
-Det finns en motsvarande självstudiekurs som lär dig hur du bygger appen **WKND Teams**. Självstudiekursen [finns här](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview).
+Det finns en motsvarande självstudiekurs som lär dig hur du bygger appen **WKND Teams**. Självstudiekursen [finns här](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/multi-step/overview).
 
 ## Nästa steg
 
