@@ -33,7 +33,7 @@ Din organisation kan ha olika användningsområden för en känd användarperson
 
 ## Exempel
 
-![VIDEO](https://video.tv.adobe.com/v/3476105/?learn=on&enablevpops)
+![VIDEO](https://video.tv.adobe.com/v/3476113/?captions=swe&learn=on&enablevpops)
 
 I den här självstudiekursen, med [WKND-exempelwebbplatsen](https://github.com/adobe/aem-guides-wknd), visar processen hur **inloggade användare** som har köpt ett **Ski**-äventyr ser en personlig hjälte på **WKND-hemsidan**.
 
