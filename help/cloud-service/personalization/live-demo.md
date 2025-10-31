@@ -26,7 +26,7 @@ Den här sidan vägleder dig genom praktiska demonstrationer av varje personalis
 >[!IMPORTANT]
 >
 > Öppna demowebbplatsen i flera webbläsarfönster eller inkognito/privat surfläge om du vill se olika personaliserade varianter samtidigt.
-> > När du använder läget för privat surfning kan Firefox och Safari blockera ECID-cookien, alternativt använda vanligt bläddringsläge eller rensa cookies innan du provar ett nytt personaliseringsscenario.
+> &#x200B;> När du använder läget för privat surfning kan Firefox och Safari blockera ECID-cookien, alternativt använda vanligt bläddringsläge eller rensa cookies innan du provar ett nytt personaliseringsscenario.
 
 ## Exempel på demoanvändning
 
