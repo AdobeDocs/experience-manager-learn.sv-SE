@@ -7,10 +7,10 @@ topic: Personalization, Integrations
 role: Developer, Architect, Leader, User
 level: Beginner
 doc-type: Tutorial
-last-substantial-update: 2025-11-01T00:00:00Z
+last-substantial-update: 2025-11-03T00:00:00Z
 jira: KT-19546
 thumbnail: KT-19546.jpeg
-source-git-commit: 055dc7d666d082244d73d3494bac54d7eb4bb886
+source-git-commit: 9e99936fb03e085f6bc276c7d6ef5cc08e34d1e5
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 0%
@@ -21,12 +21,14 @@ ht-degree: 0%
 
 Besök webbplatsen [WKND Enablement](https://wknd.enablementadobe.com/us/en.html){target="wknd"} om du vill se exempel på A/B-testning, beteendeanpassning och personalisering för kända användare.
 
+>[!VIDEO](https://video.tv.adobe.com/v/3476461/?learn=on&enablevpops)
+
 Den här sidan vägleder dig genom praktiska demonstrationer av varje personaliseringsscenario. Använd det för att utforska vad som är möjligt innan du skapar dessa funktioner på din egen AEM-webbplats.
 
 >[!IMPORTANT]
 >
 > Öppna demowebbplatsen i flera webbläsarfönster eller inkognito/privat surfläge om du vill se olika personaliserade varianter samtidigt.
-> &#x200B;> När du använder läget för privat surfning kan Firefox och Safari blockera ECID-cookien, alternativt använda vanligt bläddringsläge eller rensa cookies innan du provar ett nytt personaliseringsscenario.
+> När du använder läget för privat surfning kan Firefox och Safari blockera ECID-cookien, alternativt använda vanligt bläddringsläge eller rensa cookies innan du provar ett nytt personaliseringsscenario.
 
 ## Exempel på demoanvändning
 
