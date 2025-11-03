@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Besök webbplatsen [WKND Enablement](https://wknd.enablementadobe.com/us/en.html){target="wknd"} om du vill se exempel på A/B-testning, beteendeanpassning och personalisering för kända användare.
 
->[!VIDEO](https://video.tv.adobe.com/v/3476461/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3476465/?captions=swe&learn=on&enablevpops)
 
 Den här sidan vägleder dig genom praktiska demonstrationer av varje personaliseringsscenario. Använd det för att utforska vad som är möjligt innan du skapar dessa funktioner på din egen AEM-webbplats.
 
