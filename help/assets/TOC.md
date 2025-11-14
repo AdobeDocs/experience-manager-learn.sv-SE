@@ -7,9 +7,9 @@ sub-product: Experience Manager Assets
 version: Experience Manager 6.4, Experience Manager 6.5, Experience Manager as a Cloud Service
 feature-set: Experience Manager Assets, Experience Manager Sites, Experience Manager
 team: TM
-source-git-commit: 4d17b28ed67d7e5b03caa5fb57701ab7ddbcb77f
+source-git-commit: bf996405c360c77475d9f76d5de9bcd4fde3c163
 workflow-type: tm+mt
-source-wordcount: '464'
+source-wordcount: '467'
 ht-degree: 7%
 
 ---
@@ -69,6 +69,7 @@ ht-degree: 7%
    + [Metadatastyrda behörigheter](./advanced/metadata-driven-permissions.md)
    + [Undertexter för video](./advanced/video-closed-captions.md)
    + [Vattenstämplar](./advanced/watermarks.md)
+   + [Programmatisk överföring av resurser](./advanced/programmatic-asset-upload.md)
 
 + Avancerad metadatahantering{#metadata}
    + [GenAI-metadata](metadata/genai-metadata.md)
@@ -95,7 +96,7 @@ ht-degree: 7%
    + [Sidekick plugin](./edge-delivery-services/sidekick-plugin.md)
 
 + Adobe GenStudio{#adobe-genstudio}
-   + [AEM Assets och GenStudio for Performance Marketing](https://experienceleague.adobe.com/sv/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
+   + [AEM Assets och GenStudio for Performance Marketing](https://experienceleague.adobe.com/en/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
 
 + Delning och distribution{#sharing}
    + [Hämta resurser](./sharing/download.md)
@@ -205,4 +206,4 @@ ht-degree: 7%
 + Distribution{#deployment}
    + [Multi-tenancy och samtidig utveckling](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Grundläggande om resurser](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=sv-SE){target=_blank}
++ [Grundläggande om resurser](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}
