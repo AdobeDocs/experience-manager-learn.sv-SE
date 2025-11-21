@@ -19,7 +19,7 @@ ht-degree: 37%
 # Kom igång med AEM Sites – självstudiekurs om WKND {#getting-started-wknd-tutorial-develop}
 
 + [Översikt över WKND-självstudiekurs](overview.md)
-+ Projektarkityp {#project-archetype}
++ Project Archetype {#project-archetype}
    + [Ökning](./project-archetype/overview.md)
    + [1 - Projektinställningar](./project-archetype/project-setup.md)
    + [2 - Komponentgrunder](./project-archetype/component-basics.md)
@@ -28,14 +28,14 @@ ht-degree: 37%
    + [5 - Stilsystem](./project-archetype/style-system.md)
    + [6 - Anpassad komponent](./project-archetype/custom-component.md)
    + [7 - Enhetstestning](./project-archetype/unit-testing.md)
-+ Skapa webbplats snabbt {#site-template}
++ Skapa snabbt webbplatser {#site-template}
    + [Ökning](./site-template/overview.md)
    + [1 - Skapa en webbplats](./site-template/create-site.md)
    + [2 - Introduktion till framtagning och publicering](./site-template/author-content-publish.md)
    + [3 - UI-planering med Adobe XD](./site-template/ui-planning-adobe-xd.md)
    + [4 - Sidmallar](./site-template/page-templates.md)
    + [5 - Tema](./site-template/theming.md)
-+ Aktivera frontpipeline - DevOps{#enable-frontend-pipeline-devops}
++ Aktivera frontpipeline - devOps{#enable-frontend-pipeline-devops}
    + [Ökning](./enable-frontend-pipeline/overview.md)
    + [1 - Granska projekt i full hög](./enable-frontend-pipeline/review-uifrontend-module.md)
    + [2 - Uppdatera projektet så att det använder frontdelspipelinen](./enable-frontend-pipeline/update-project.md)

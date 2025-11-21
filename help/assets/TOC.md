@@ -96,7 +96,7 @@ ht-degree: 7%
    + [Sidekick plugin](./edge-delivery-services/sidekick-plugin.md)
 
 + Adobe GenStudio{#adobe-genstudio}
-   + [AEM Assets och GenStudio for Performance Marketing](https://experienceleague.adobe.com/sv/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
+   + [AEM Assets och GenStudio for Performance Marketing](https://experienceleague.adobe.com/en/docs/integrations-learn/experience-cloud/tutorials/genstudio-for-performance-marketing-experience-manager/overview)
 
 + Delning och distribution{#sharing}
    + [Hämta resurser](./sharing/download.md)
@@ -206,4 +206,4 @@ ht-degree: 7%
 + Distribution{#deployment}
    + [Multi-tenancy och samtidig utveckling](deployment/multitenancy-concurrent-article-understand.md)
 
-+ [Grundläggande om resurser](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html?lang=sv-SE){target=_blank}
++ [Grundläggande om resurser](https://experienceleague.adobe.com/docs/experience-manager-learn/assets-essentials/overview.html){target=_blank}

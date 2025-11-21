@@ -58,7 +58,7 @@ Starta självstudiekursen med [Definiera modeller för innehållsfragment](1-con
 
 Källkoden och innehållspaketen är tillgängliga i [AEM Headless-självstudiekurserna](https://github.com/adobe/aem-tutorials) GitHub-databasen.
 
-Branschen [`main` innehåller den slutliga källkoden &#x200B;](https://github.com/adobe/aem-tutorials/tree/main/headless/open-api/basic) för den här självstudien.
+Branschen [`main` innehåller den slutliga källkoden ](https://github.com/adobe/aem-tutorials/tree/main/headless/open-api/basic) för den här självstudien.
 Ögonblicksbilder av koden i slutet av varje steg är tillgängliga som Git-taggar.
 
 * Början av kapitel 4 - Reagera app: [`headless_open-api_basic`](https://github.com/adobe/aem-tutorials/tree/headless_open-api_basic//headless/open-api/basic)
