@@ -10,7 +10,7 @@ last-substantial-update: 2025-11-14T00:00:00Z
 doc-type: Tutorial
 jira: KT-19571
 thumbnail: KT-19571.png
-source-git-commit: bf996405c360c77475d9f76d5de9bcd4fde3c163
+source-git-commit: 151a5220ee842ee77ae27e99ded62f8d3dae4612
 workflow-type: tm+mt
 source-wordcount: '1585'
 ht-degree: 0%
@@ -21,6 +21,10 @@ ht-degree: 0%
 # Programmatisk överföring av resurser till AEM as a Cloud Service
 
 Lär dig hur du överför resurser till AEM as a Cloud Service-miljön med klientprogrammet som använder biblioteket [aem-upload](https://github.com/adobe/aem-upload) Node.js.
+
+
+>[!VIDEO](https://video.tv.adobe.com/v/3476952?quality=12&learn=on)
+
 
 ## Vad du lär dig
 
@@ -50,7 +54,7 @@ I direkt binär överföring överförs binära data direkt till molnlagringen m
 
 >[!CAUTION]
 >
->Det finns ingen motsvarighet till biblioteket [aem-upload](https://github.com/adobe/aem-upload) i Java. Klientprogrammet måste skrivas i Node.js för att metoden _direkt binär överföring_ ska kunna användas. Mer information finns på sidan [Experience Manager Assets API:er och åtgärder](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis#use-cases-and-apis).
+>Det finns ingen motsvarighet till biblioteket [aem-upload](https://github.com/adobe/aem-upload) i Java. Klientprogrammet måste skrivas i Node.js för att metoden _direkt binär överföring_ ska kunna användas. Mer information finns på sidan [Experience Manager Assets API:er och åtgärder](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis#use-cases-and-apis).
 
 ## Exempelprogram
 
@@ -97,9 +101,9 @@ Innan du kör exempelprogrammet måste du konfigurera det med nödvändig AEM as
 
 Det finns _flera autentiseringsmetoder_ som stöds av biblioteket [aem-upload](https://github.com/adobe/aem-upload) Node.js. I följande tabell sammanfattas de _autentiseringsmetoder_ som stöds och deras syfte.
 
-| | Grundläggande autentisering | [Lokal utvecklingstoken](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [Tjänstautentiseringsuppgifter](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth-webbapp](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
+| | Grundläggande autentisering | [Lokal utvecklingstoken](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [Tjänstautentiseringsuppgifter](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth-webbapp](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
 |---|---|---|---|---|---|---|
-| Stöds? | &check; | &check; | &check; | &cross; | &cross; | &cross; |
+| Stöds? | &amp;check; | &amp;check; | &amp;check; | &amp;cross; | &amp;cross; | &amp;cross; |
 | Syfte | Lokal utveckling | Lokal utveckling | Produktion | Ej tillämpligt | Ej tillämpligt | Ej tillämpligt |
 
 Följ stegen nedan för att konfigurera exempelprogrammet:
@@ -176,7 +180,7 @@ Du måste använda **AEM** Developer Console för att få inloggningsuppgifterna
 
 1. Uppdatera miljövariabeln `AEM_SERVICE_CREDENTIALS_FILE` med sökvägen till filen service-credentials.json.
 
-1. Kontrollera att tjänstens autentiseringsuppgifter-användare har de behörigheter som krävs för att överföra resurser till AEM as a Cloud Service-miljön. Mer information finns på sidan [Konfigurera åtkomst i AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem).
+1. Kontrollera att tjänstens autentiseringsuppgifter-användare har de behörigheter som krävs för att överföra resurser till AEM as a Cloud Service-miljön. Mer information finns på sidan [Konfigurera åtkomst i AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials#configure-access-in-aem).
 
 >[!ENDTABS]
 
