@@ -103,7 +103,7 @@ Det finns _flera autentiseringsmetoder_ som stöds av biblioteket [aem-upload](h
 
 | | Grundläggande autentisering | [Lokal utvecklingstoken](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/local-development-access-token) | [Tjänstautentiseringsuppgifter](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials) | [OAuth S2S](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) | [OAuth-webbapp](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-web-app-credential) | [OAuth SPA](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/implementation#oauth-single-page-app-credential) |
 |---|---|---|---|---|---|---|
-| Stöds? | &amp;check; | &amp;check; | &amp;check; | &amp;cross; | &amp;cross; | &amp;cross; |
+| Stöds? | &check; | &check; | &check; | &cross; | &cross; | &cross; |
 | Syfte | Lokal utveckling | Lokal utveckling | Produktion | Ej tillämpligt | Ej tillämpligt | Ej tillämpligt |
 
 Följ stegen nedan för att konfigurera exempelprogrammet:
