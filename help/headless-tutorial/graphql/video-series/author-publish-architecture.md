@@ -27,4 +27,4 @@ I den här videon kommer du att:
 + Förstå arkitekturen för AEM Author och Publish och hur innehållet publiceras
 + Lär dig de bästa sätten för headless-leverans med en AEM Publishing-miljö
 
->[!VIDEO](https://video.tv.adobe.com/v/333296?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3450953?captions=swe&quality=12&learn=on)

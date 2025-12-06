@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Läs om hur du med växeln Ny redigerare kan växla mellan den nya standardredigeraren för innehållsfragment och den klassiska redigeraren utan problem.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419312/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477320/?captions=swe&learn=on)

@@ -71,7 +71,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./basics/content-fragment-editor.md" title="Översikt över redigeraren"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3424373?format=jpeg"
+                src="https://video.tv.adobe.com/v/3477331?captions=swe&format=jpeg"
                 alt="Översikt över redigeraren">
             </a>
           </figure>
@@ -138,7 +138,7 @@ Granska [dokumentationen](https://experienceleague.adobe.com/docs/experience-man
             <a href="./editor/new-editor-toggle.md" title="Växla mellan redigeringsprogram"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3419312?format=jpeg" alt="Nytt
+                src="https://video.tv.adobe.com/v/3477320?captions=swe&format=jpeg" alt="Nytt
                 Växla redigerare">
             </a>
           </figure>

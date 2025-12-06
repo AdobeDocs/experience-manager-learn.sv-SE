@@ -41,7 +41,7 @@ AEM Sites funktioner för sidskillnad ger en snabb, färgkodad vy över vilket i
 
 ## Jämföra startsidor {#comparing-launch-pages}
 
->[!VIDEO](https://video.tv.adobe.com/v/17746?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477342?captions=swe&quality=12&learn=on)
 
 Funktionen Sidskillnad kan även användas för att identifiera skillnaden mellan utkast och livecopior samt utkast och språkkopior.
 

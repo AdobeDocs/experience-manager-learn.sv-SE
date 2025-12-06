@@ -23,4 +23,4 @@ ht-degree: 0%
 
 En kort introduktion till AEM Content Fragment Editor.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424373/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3477331/?captions=swe&learn=on)
