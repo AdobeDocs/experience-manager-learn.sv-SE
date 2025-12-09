@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Integrationer med Adobe Experience Manager (AEM) as a Cloud Service måste kunna autentiseras säkert i AEM. AEM Developer Console ger åtkomst till Service Credentials, som används för att underlätta för externa program, system och tjänster att programmässigt interagera med AEM Author eller Publish services via HTTP.
 
-AEM kan integreras med andra Adobe-produkter med hjälp av [S2S OAuth som hanteras via Adobe Developer Console](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service). För anpassade integreringar med tjänstkonton används och hanteras JWT-autentiseringsuppgifter i AEM Developer Console.
+AEM kan integreras med andra Adobe-produkter med hjälp av [S2S OAuth som hanteras via Adobe Developer Console](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/setting-up-ims-integrations-for-aem-as-a-cloud-service). För anpassade integreringar med tjänstkonton används och hanteras JWT-autentiseringsuppgifter i AEM Developer Console.
 
 >[!VIDEO](https://video.tv.adobe.com/v/330519?quality=12&learn=on)
 
@@ -224,7 +224,7 @@ När det tekniska kontot som AEM-användaren har finns i AEM (efter den första 
 1. Navigera till __Verktyg__ > __Säkerhet__ > __Användare__
 1. Leta upp AEM-användaren med __inloggningsnamnet__ som identifieras i steg 1 och öppna dess __Egenskaper__
 1. Navigera till fliken __Grupper__ och lägg till gruppen __DAM-användare__ (som skrivåtkomst till resurser)
-   + [Se listan över användargrupper från AEM](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html#built-in-users-and-groups) som du kan lägga till tjänstanvändaren i för att få optimal behörighet. Om det inte finns tillräckligt med användargrupper från AEM kan du skapa en egen och lägga till rätt behörigheter.
+   + [Se listan över användargrupper från AEM](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=sv-SE#built-in-users-and-groups) som du kan lägga till tjänstanvändaren i för att få optimal behörighet. Om det inte finns tillräckligt med användargrupper från AEM kan du skapa en egen och lägga till rätt behörigheter.
 1. Tryck på __Spara och stäng__
 
 Kör programmet igen med det tekniska kontot som är tillåtet i AEM för skrivbehörighet för resurser:
