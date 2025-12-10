@@ -24,4 +24,4 @@ Upptäck hur du skapar och kör en konfigurationspipeline för Edge Delivery i A
 
 >[!VIDEO](https://video.tv.adobe.com/v/3458975/?learn=on&enablevpops)
 
-I [dokumentationen för Edge Delivery-konfigurationspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/operations/config-pipeline#yamls-for-eds) finns en fullständig översikt över konfigurationsalternativen och formaten.
+I [dokumentationen för Edge Delivery-konfigurationspipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/operations/config-pipeline#yamls-for-eds) finns en fullständig översikt över konfigurationsalternativen och formaten.
