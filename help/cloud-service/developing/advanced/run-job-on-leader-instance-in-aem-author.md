@@ -80,7 +80,7 @@ public class SimpleJobCreaterImpl {
 De viktigaste punkterna att notera i ovanstående kod är:
 
 - Jobbnyttolasten har två egenskaper: `action` och `message`.
-- Jobbet läggs till i avsnittet [ med ](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/apache/sling/event/jobs/JobManager.html)JobManager`addJob(...)`s `wknd/simple/job/topic` -metod.
+- Jobbet läggs till i avsnittet [&#x200B; med &#x200B;](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/apache/sling/event/jobs/JobManager.html)JobManager`addJob(...)`s `wknd/simple/job/topic` -metod.
 
 ### Bearbeta ett jobb
 

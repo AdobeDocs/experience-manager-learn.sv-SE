@@ -28,7 +28,7 @@ I det här kapitlet går vi igenom utveckling, distribution och leverans av fron
 ## Mål {#objective}
 
 * Förstå hur frontendartefakter byggs och driftsätts i ett högklassigt AEM-projekt
-* Granska `ui.frontend`webpack[-konfigurationer för AEM-fullstacksprojektet i modulen ](https://webpack.js.org/)
+* Granska `ui.frontend`webpack[-konfigurationer för AEM-fullstacksprojektet i modulen &#x200B;](https://webpack.js.org/)
 * Genereringsprocess för AEM klientbibliotek (kallas även klientlibs)
 
 ## Driftsättningsflöde i gränssnittet för AEM-projekt i full hög och snabbinstallation av webbplatser
@@ -108,7 +108,7 @@ Framsidesresurserna levereras till webbläsarna via URI-sökvägar som börjar m
   ```
 
 
-* De paketerade resurserna flyttas till modulen `ui.apps` med plugin-programmet [ aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator), med hjälp av konfigurationen som hanteras i filen `clientlib.config.js`.
+* De paketerade resurserna flyttas till modulen `ui.apps` med plugin-programmet [&#x200B; aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator), med hjälp av konfigurationen som hanteras i filen `clientlib.config.js`.
 
 ```javascript
     ...

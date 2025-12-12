@@ -136,7 +136,7 @@ En giltig lösning är att anpassa OTB-indexet `cqPageLucene` och `damAssetLucen
 
 I bilden nedan visas ett anpassat index (som inte följer namnkonventionen) utan egenskapen `queryPaths`.
 
-![Frågesökvägsegenskapen ](./assets/understand-indexing-best-practices/absense-of-queryPaths-prop.png) saknas
+![Frågesökvägsegenskapen &#x200B;](./assets/understand-indexing-best-practices/absense-of-queryPaths-prop.png) saknas
 
 ##### Analys
 
@@ -213,7 +213,7 @@ Så här inaktiverar du Apache Tika efter MIME-typ:
 
 Följande bild visar indexet OTB `damAssetLucene` med noden `tika` och filen `config.xml` som inaktiverar PDF och andra MIME-typer.
 
-![OTB damAssetLucene-index med kodnoden ](./assets/understand-indexing-best-practices/ootb-index-with-tika-node.png)
+![OTB damAssetLucene-index med kodnoden &#x200B;](./assets/understand-indexing-best-practices/ootb-index-with-tika-node.png)
 
 ### Inaktivera helt
 

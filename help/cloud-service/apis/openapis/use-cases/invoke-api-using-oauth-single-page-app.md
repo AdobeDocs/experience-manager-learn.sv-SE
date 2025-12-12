@@ -25,7 +25,7 @@ Lär dig hur du anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service m
 
 OAuth Single Page App-autentisering är idealisk för JavaScript-baserade program som körs i webbläsaren. Oavsett om de saknar en serverdelsserver eller behöver hämta åtkomsttoken för att kunna interagera med AEM API:er för en användares räkning.
 
-PKCE-flödet utökar anslagstypen OAuth 2.0 _permission_code_ och förbättrar säkerheten genom att förhindra avlyssning av auktoriseringskoden. Mer information finns i avsnittet [Skillnad mellan autentiseringsuppgifter för OAuth Server-till-Server och Web App respektive Single Page App ](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
+PKCE-flödet utökar anslagstypen OAuth 2.0 _permission_code_ och förbättrar säkerheten genom att förhindra avlyssning av auktoriseringskoden. Mer information finns i avsnittet [Skillnad mellan autentiseringsuppgifter för OAuth Server-till-Server och Web App respektive Single Page App &#x200B;](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
 
 ## Vad du lär dig{#what-you-learn}
 

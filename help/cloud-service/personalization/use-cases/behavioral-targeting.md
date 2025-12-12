@@ -40,7 +40,7 @@ I demosyfte kategoriseras användare med det här surfbeteendet som **Family Tra
 
 Besök webbplatsen [WKND Enablement](https://wknd.enablementadobe.com/us/en.html) om du vill se beteendeanpassning i praktiken. Webbplatsen har tre olika beteendebaserade upplevelser:
 
-- **Hemsida**: När användare besöker hemsidan efter att ha bläddrat på någon av _äventyrssidorna Bali Surf Camp_, _Riverside Camping_ eller _Tahoe Skiing_ kategoriseras de som målgruppen **Familjeresenärer** och ser en personlig hjältedel ovanför _Nästa-annonser{11_ -avsnitt.
+- **Hemsida**: När användare besöker hemsidan efter att ha bläddrat på någon av _äventyrssidorna Bali Surf Camp_, _Riverside Camping_ eller _Tahoe Skiing_ kategoriseras de som målgruppen **Familjeresenärer** och ser en personlig hjältedel ovanför _Nästa-annonser&lbrace;11_ -avsnitt.
 
 - **Äventsida**: När användare visar _Bali Surf Camp_ eller _Surf Camp i Costa Rica_ äventyrssidor kategoriseras de som **Surfing Interest** -målgrupp och en personlig hjältedel visas på annonssidan.
 

@@ -36,7 +36,7 @@ Ett Cloud Manager-program kan bara ha en __enskild__ nätverksinfrastrukturtyp. 
 
 >[!NOTE]
 >
->Observera att det inte går att ansluta byggmiljön från Cloud Manager till ett VPN. Om du måste få åtkomst till binära artefakter från en privat databas måste du skapa en säker och lösenordsskyddad databas med en URL som är tillgänglig på den offentliga Internet [ enligt beskrivningen här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project).
+>Observera att det inte går att ansluta byggmiljön från Cloud Manager till ett VPN. Om du måste få åtkomst till binära artefakter från en privat databas måste du skapa en säker och lösenordsskyddad databas med en URL som är tillgänglig på den offentliga Internet [&#x200B; enligt beskrivningen här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project).
 
 >[!MORELIKETHIS]
 >
@@ -261,7 +261,7 @@ När VPN har skapats kan du nu konfigurera det med Cloud Manager API:er enligt b
    Om AEM-distributionen __endast__ kräver HTTP/HTTPS-anslutningar till den externa tjänsten lämnar du `portForwards`-arrayen tom, eftersom dessa regler bara krävs för icke-HTTP/HTTPS-begäranden.
 
 
-2. Verifiera VPN-routningsreglerna för varje miljö med Cloud Manager API:ns [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) -åtgärd.
+&#x200B;2. Verifiera VPN-routningsreglerna för varje miljö med Cloud Manager API:ns [getEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) -åtgärd.
 
    __getEnvironmentAdvancedNetworkingConfiguration HTTP-begäran__
 
@@ -273,9 +273,9 @@ När VPN har skapats kan du nu konfigurera det med Cloud Manager API:er enligt b
        -H 'Content-Type: application/json'
    ```
 
-3. Proxykonfigurationer för virtuella privata nätverk kan uppdateras med Cloud Manager API:ts [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) -åtgärd. Kom ihåg att `enableEnvironmentAdvancedNetworkingConfiguration` är en `PUT`-åtgärd, så alla regler måste anges med varje anrop av den här åtgärden.
+&#x200B;3. Proxykonfigurationer för virtuella privata nätverk kan uppdateras med Cloud Manager API:ts [enableEnvironmentAdvancedNetworkingConfiguration](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/) -åtgärd. Kom ihåg att `enableEnvironmentAdvancedNetworkingConfiguration` är en `PUT`-åtgärd, så alla regler måste anges med varje anrop av den här åtgärden.
 
-4. Nu kan du använda den virtuella privata nätverkets utgångskonfiguration i din anpassade AEM-kod och konfiguration.
+&#x200B;4. Nu kan du använda den virtuella privata nätverkets utgångskonfiguration i din anpassade AEM-kod och konfiguration.
 
 ## Ansluta till externa tjänster via det virtuella privata nätverket
 

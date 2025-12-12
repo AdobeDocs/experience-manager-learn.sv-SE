@@ -62,7 +62,7 @@ Koden använder [Apache HttpComponent](https://hc.apache.org/)s [HttpClient](htt
 
 ## HttpClient och läsa in AEM TrustStore-material
 
-Om du vill anropa en API-slutpunkt som har _privat eller självsignerat certifikat_ måste [ för ](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)HttpClient`SSLContextBuilder` läsas in med AEM TrustStore och användas för att underlätta anslutningen.
+Om du vill anropa en API-slutpunkt som har _privat eller självsignerat certifikat_ måste [&#x200B; för &#x200B;](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)HttpClient`SSLContextBuilder` läsas in med AEM TrustStore och användas för att underlätta anslutningen.
 
 Följ stegen nedan:
 

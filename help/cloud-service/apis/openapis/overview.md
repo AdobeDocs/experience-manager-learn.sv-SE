@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Lär dig mer om OpenAPI-baserade AEM API:er, inklusive autentiseringsstöd, viktiga koncept och hur du får tillgång till Adobe API:er.
 
-[OpenAPI-specifikationen ](https://swagger.io/specification/) (tidigare Swagger) är en vanlig standard för att definiera RESTful-API:er. AEM as a Cloud Service tillhandahåller flera OpenAPI-specifikationsbaserade API:er (eller helt enkelt OpenAPI-baserade AEM API:er), vilket gör det enklare att skapa anpassade program som interagerar med AEM författare eller publiceringstjänsttyper. Nedan följer några exempel:
+[OpenAPI-specifikationen &#x200B;](https://swagger.io/specification/) (tidigare Swagger) är en vanlig standard för att definiera RESTful-API:er. AEM as a Cloud Service tillhandahåller flera OpenAPI-specifikationsbaserade API:er (eller helt enkelt OpenAPI-baserade AEM API:er), vilket gör det enklare att skapa anpassade program som interagerar med AEM författare eller publiceringstjänsttyper. Nedan följer några exempel:
 
 **Webbplatser**
 

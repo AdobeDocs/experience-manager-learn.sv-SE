@@ -80,7 +80,7 @@ Marknadsföringsteamet kan till exempel skapa en ny *sida för omdirigeringskart
 
 >[!IMPORTANT]
 >
->ACS Commons version **{6.7.0 eller senare** krävs för att använda Omdirigeringshanteraren. Mer information finns i [ACS Commons - Redirect Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html).
+>ACS Commons version **&lbrace;6.7.0 eller senare** krävs för att använda Omdirigeringshanteraren. Mer information finns i [ACS Commons - Redirect Manager](https://adobe-consulting-services.github.io/acs-aem-commons/features/redirect-manager/index.html).
 
 ### ACS-kommandon - omdirigeringshanteraren
 
@@ -194,7 +194,7 @@ RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 ...
 ```
 
->[!TAB ACS-kommandon - Omdirigeringshanteraren]
+>[!TAB ACS-kommandon - Omdirigeringshanteraren&#x200B;]
 
 När URL-omdirigeringar hanteras med ACS Commons - Redirect Manager är konfigurationerna följande.
 

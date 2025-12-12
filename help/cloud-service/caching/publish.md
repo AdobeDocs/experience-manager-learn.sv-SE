@@ -55,7 +55,7 @@ Vanligtvis cachelagras en HTTP-begäran/ett HTTP-svar för en enskild URL som et
 
 ### Cachelagring{#cdn-cache-life}
 
-AEM Publish CDN är TTL-baserad (time-to-live), vilket innebär att cachetiden bestäms av HTTP-svarshuvuden `Cache-Control`, `Surrogate-Control` eller `Expires`. Om rubrikerna för HTTP-svarscachning inte har angetts av projektet och [kriterierna ](#when-are-http-requestsresponses-cached) är uppfyllda, anger Adobe en standardcache på 10 minuter (600 sekunder).
+AEM Publish CDN är TTL-baserad (time-to-live), vilket innebär att cachetiden bestäms av HTTP-svarshuvuden `Cache-Control`, `Surrogate-Control` eller `Expires`. Om rubrikerna för HTTP-svarscachning inte har angetts av projektet och [kriterierna &#x200B;](#when-are-http-requestsresponses-cached) är uppfyllda, anger Adobe en standardcache på 10 minuter (600 sekunder).
 
 Så här påverkar cacherubrikerna CDN-cachens livslängd:
 
@@ -79,7 +79,7 @@ Om ett HTTP-svar kvalificerar sig för AEM Dispatcher-cachelagring [per ovan-kva
 
 ### Anpassa cacheregler
 
-[Konfigurationen av hur CDN cachelagrar innehåll ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#disp) begränsas till att ange cacherubriker för HTTP-svar. Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher `vhost`-konfigurationer med `mod_headers`, men kan även ställas in i anpassad Java™-kod som körs i AEM Publish.
+[Konfigurationen av hur CDN cachelagrar innehåll &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#disp) begränsas till att ange cacherubriker för HTTP-svar. Dessa cacherubriker ställs vanligtvis in i AEM Dispatcher `vhost`-konfigurationer med `mod_headers`, men kan även ställas in i anpassad Java™-kod som körs i AEM Publish.
 
 ## AEM Dispatcher
 
@@ -98,7 +98,7 @@ HTTP-svar för motsvarande HTTP-begäranden cachelagras när alla följande vill
    + Cachelagring av autentiserade begäranden [kan dock aktiveras globalt](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#caching-when-authentication-is-used) eller selektivt via [behörighetskänslig cachning](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/permissions-cache.html).
 + HTTP-begäran innehåller inga frågeparametrar.
    + Om du konfigurerar [ignorerade frågeparametrar](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#ignoring-url-parameters) kan HTTP-begäranden med de ignorerade frågeparametrarna cachelagras/hanteras från cachen.
-+ HTTP-begärans sökväg [ matchar en Tillåt-Dispatcher-regel och matchar inte en Neka-regel ](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache).
++ HTTP-begärans sökväg [&#x200B; matchar en Tillåt-Dispatcher-regel och matchar inte en Neka-regel &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html#specifying-the-documents-to-cache).
 + HTTP-svar har inte någon av följande HTTP-svarshuvuden inställda av AEM Publish:
 
    + `no-cache`

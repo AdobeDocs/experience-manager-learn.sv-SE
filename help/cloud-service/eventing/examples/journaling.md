@@ -49,7 +49,7 @@ För att kunna genomföra den här självstudiekursen behöver du:
 
 Följ de här stegen för att få åtkomst till webbprogrammet som tillhandahålls av Adobe:
 
-- Kontrollera att du har åtkomst till [Glitch - webbprogrammet ](https://indigo-speckle-antler.glitch.me/) på en ny webbläsarflik.
+- Kontrollera att du har åtkomst till [Glitch - webbprogrammet &#x200B;](https://indigo-speckle-antler.glitch.me/) på en ny webbläsarflik.
 
   ![Fel - webbprogram som är värd](../assets/examples/journaling/glitch-hosted-web-application.png)
 

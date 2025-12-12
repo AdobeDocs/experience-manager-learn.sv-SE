@@ -25,7 +25,7 @@ Lär dig hur du genererar en bild med OpenAI eller DALL ・ E 2 och överför de
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413093?quality=12&learn=on)
 
-Det här exemplet på AEM Content Fragment Console-tillägg är ett [åtgärdsfältstillägg](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) som genererar digital bild från indata på naturligt språk med [OpenAI API ](https://openai.com/api/) eller [DALL ・ E 2](https://openai.com/dall-e-2/) . Den genererade bilden överförs till AEM DAM och den valda Content Fragment-bildegenskapen uppdateras för att referera till den nyligen genererade, överförda bilden från DAM.
+Det här exemplet på AEM Content Fragment Console-tillägg är ett [åtgärdsfältstillägg](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) som genererar digital bild från indata på naturligt språk med [OpenAI API &#x200B;](https://openai.com/api/) eller [DALL ・ E 2](https://openai.com/dall-e-2/) . Den genererade bilden överförs till AEM DAM och den valda Content Fragment-bildegenskapen uppdateras för att referera till den nyligen genererade, överförda bilden från DAM.
 
 I det här exemplet lär du dig:
 

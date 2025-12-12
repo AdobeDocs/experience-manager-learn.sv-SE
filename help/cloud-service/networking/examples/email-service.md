@@ -47,7 +47,7 @@ Kontrollera att den [lämpliga](../advanced-networking.md#advanced-networking) a
 
 ## OSGi-konfiguration
 
-I det här OSGi-konfigurationsexemplet konfigureras AEM Mail OSGi-tjänsten till att använda en extern e-posttjänst med hjälp av följande Cloud Manager `portForwards`-regel i åtgärden [ enableEnvironmentAdvancedNetworkingConfiguration ](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) .
+I det här OSGi-konfigurationsexemplet konfigureras AEM Mail OSGi-tjänsten till att använda en extern e-posttjänst med hjälp av följande Cloud Manager `portForwards`-regel i åtgärden [&#x200B; enableEnvironmentAdvancedNetworkingConfiguration &#x200B;](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) .
 
 ```json
 ...
