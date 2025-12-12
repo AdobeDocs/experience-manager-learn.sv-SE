@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+source-git-commit: 2160ed585ebfd958275af9aa8ef0aab750f684ef
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1859'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar AEM as a Cloud Service-miljön för att ge åtkomst till OpenAPI-baserade AEM API:er.
 
-I det här exemplet används AEM Assets-API:t som använder autentiseringsmetoden Server-till-server för att demonstrera konfigurationsprocessen. Samma steg kan följas för andra OpenAPI-baserade AEM-API:er.
+I det här exemplet används **AEM Assets API** med autentiseringsmetoden **Server-till-server** för att demonstrera den OpenAPI-baserade installationsprocessen för AEM API:er. Liknande steg kan följas för att konfigurera [andra OpenAPI-baserade AEM API:er](https://developer.adobe.com/experience-cloud/experience-manager-apis/#openapi-based-apis).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3457510?quality=12&learn=on)
 
@@ -35,20 +35,26 @@ Konfigurationsprocessen på hög nivå omfattar följande steg:
 1. Konfigurera ADC-projekt.
 1. Konfigurera AEM-instansen för att aktivera ADC-projektkommunikation.
 
+## Förutsättningar
+
+- Tillgång till Cloud Manager- och AEM as a Cloud Service-miljön
+- Tillgång till Adobe Developer Console (ADC).
+- AEM-projekt för att lägga till eller uppdatera API-konfigurationen i filen `api.yaml`.
+
 ## Modernisering av AEM as a Cloud Service miljö{#modernization-of-aem-as-a-cloud-service-environment}
 
-Moderniseringen av AEM as a Cloud Service-miljön är en engångsåtgärd per miljö som omfattar följande steg:
+Moderniseringen av AEM as a Cloud Service-miljön är en **engångsåtgärd per miljöaktivitet** som omfattar följande steg. Om du redan har moderniserat din AEM as a Cloud Service-miljö kan du hoppa över det här steget.
 
 - Uppdatera till AEM-utgåvan **2024.10.18459.20241031T210302Z** eller senare.
 - Lägg till nya produktprofiler i den om miljön skapades före utgåvan 2024.10.18459.20241031T210302Z.
 
 ### Uppdatera AEM-instans{#update-aem-instance}
 
-Om du vill uppdatera AEM-instansen väljer du _ellipsikonen_ bredvid miljönamnet i Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/)s _Environment_ och sedan alternativet **Update** .
+- När du har loggat in på Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) och vill uppdatera AEM-instansen går du till avsnittet _Miljö_, markerar ikonen _ellips_ bredvid miljönamnet och väljer alternativet **Uppdatera** .
 
 ![Uppdatera AEM-instans](./assets/setup/update-aem-instance.png)
 
-Klicka sedan på knappen **Skicka** och kör den _föreslagna_ kompletta stackpipeline.
+- Klicka sedan på knappen **Skicka** och kör den _föreslagna_ kompletta stackpipeline.
 
 ![Välj den senaste versionen av AEM](./assets/setup/select-latest-aem-release.png)
 
@@ -56,41 +62,41 @@ I det här fallet heter Pipeline i helhög **Dev :: Fullstack-Deploy** och AEM-m
 
 ### Lägg till nya produktprofiler{#add-new-product-profiles}
 
-Om du vill lägga till nya produktprofiler i AEM-instansen går du till avsnittet _Miljö_ för Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) och markerar ikonen _ellips_ bredvid miljönamnet. Välj sedan alternativet **Lägg till produktprofiler** .
+- Om du vill lägga till nya produktprofiler i AEM-instansen går du till avsnittet [Miljö](https://my.cloudmanager.adobe.com/) för Adobe _Cloud Manager_ och markerar ikonen _ellips_ bredvid miljönamnet. Välj sedan alternativet **Lägg till produktprofiler** .
 
 ![Lägg till nya produktprofiler](./assets/setup/add-new-product-profiles.png)
 
-Du kan granska de nya produktprofilerna genom att klicka på ikonen _ellips_ bredvid miljönamnet och välja **Hantera åtkomst** > **Författarprofiler**.
+- Granska de nya produktprofilerna genom att klicka på ikonen _ellips_ bredvid miljönamnet och välja **Hantera åtkomst** > **Författarprofiler**.
 
-Fönstret _Admin Console_ visar de nya produktprofilerna.
+- Fönstret _Admin Console_ visar de nya produktprofilerna. Beroende på dina AEM-rättigheter som AEM Assets, AEM Sites, AEM Forms osv. kan du se olika produktprofiler. I mitt fall har jag till exempel AEM Assets- och Sites-rättigheter, så jag ser följande produktprofiler.
 
 ![Granska nya produktprofiler](./assets/setup/review-new-product-profiles.png)
 
-Ovanstående steg avslutar moderniseringen av AEM as a Cloud Service-miljön.
+- Ovanstående steg avslutar moderniseringen av AEM as a Cloud Service-miljön.
 
 ## Aktivera åtkomst till AEM API:er{#enable-aem-apis-access}
 
-Förekomsten av de _nya produktprofilerna_ aktiverar OpenAPI-baserad AEM API-åtkomst i Adobe Developer Console (ADC). Kom ihåg att [Adobe Developer Console (ADC)](./overview.md#accessing-adobe-apis-and-related-concepts) är utvecklarnavet för åtkomst till Adobe API:er, SDK:er, realtidshändelser, serverlösa funktioner med mera.
+Förekomsten av de _nya produktprofilerna_ aktiverar OpenAPI-baserad AEM API-åtkomst i [Adobe Developer Console (ADC)](https://developer.adobe.com/). Utan dessa produktprofiler kan du inte konfigurera de OpenAPI-baserade AEM-API:erna i Adobe Developer Console (ADC).
 
-De nya produktprofilerna är kopplade till _tjänsterna_ som representerar _AEM-användargrupper med fördefinierade åtkomstkontrollistor_. _Tjänsterna_ används för att styra åtkomstnivån för AEM API:er.
+De nya produktprofilerna är kopplade till _tjänsterna_ som representerar _AEM-användargrupper med fördefinierade åtkomstkontrollistor_. _Tjänsterna_ används för att styra åtkomstnivån för AEM API:er. Du kan också markera eller avmarkera de _tjänster_ som är kopplade till produktprofilen för att minska eller öka åtkomstnivån.
 
-Du kan också markera eller avmarkera de _tjänster_ som är kopplade till produktprofilen för att minska eller öka åtkomstnivån.
-
-Granska associationen genom att klicka på ikonen _Visa detaljer_ bredvid produktprofilens namn.
+Granska associationen genom att klicka på ikonen _Visa detaljer_ bredvid produktprofilens namn. På följande skärmbild ser du kopplingen mellan **AEM Sites Content Managers - author - Program XXX - Environment XXX** och **AEM Sites Content Managers** Service. Granska andra produktprofiler och deras associationer med tjänsterna.
 
 ![Granska tjänster som är kopplade till produktprofilen](./assets/setup/review-services-associated-with-product-profile.png)
 
 ### Aktivera åtkomst till AEM Assets API:er{#enable-aem-assets-apis-access}
 
-Som standard är **AEM Assets API-användartjänsten** inte kopplad till någon produktprofil. Låt oss associera det med den nya produktprofilen **AEM Assets Collaborator Users - författare - Program XXX - Miljö XXX** eller någon annan produktprofil som du vill använda för AEM Assets API-åtkomst.
+I det här exemplet används **AEM Assets-API:t** för att demonstrera den OpenAPI-baserade installationsprocessen för AEM-API:er. Som standard är dock **AEM Assets API-användartjänsten** inte kopplad till någon produktprofil. Du måste associera den med den önskade produktprofilen.
+
+Låt oss associera det med den nya produktprofilen **AEM Assets Collaborator Users - författare - Program XXX - Miljö XXX** eller någon annan produktprofil som du vill använda för AEM Assets API-åtkomst.
 
 ![Koppla AEM Assets API-användartjänst till produktprofil](./assets/setup/associate-aem-assets-api-users-service-with-product-profile.png)
 
 ### Aktivera autentisering från server till server
 
-Om du vill aktivera autentisering från server till server för de AEM-API:er du vill använda måste användaren som konfigurerar integrering med Adobe Developer Console (ADC) läggas till som utvecklare i den produktprofil där tjänsten är kopplad.
+Om du vill aktivera autentisering från server till server för de OpenAPI-baserade AEM-API:erna måste användaren som konfigurerar integrering med Adobe Developer Console (ADC) läggas till som utvecklare i _produktprofilen_ där _tjänsten_ är associerad.
 
-Om du till exempel vill aktivera autentisering från server till server för AEM Assets API måste användaren läggas till som utvecklare i produktprofilen för **AEM Assets Collaborator Users - författare - Program XXX - Miljö XXX**.
+Om du till exempel vill aktivera autentisering från server till server för AEM Assets API måste användaren läggas till som utvecklare i **AEM Assets Collaborator Users - författare - Program XXX - Miljö XXX** _Produktprofil_.
 
 ![Koppla utvecklare till produktprofil](./assets/setup/associate-developer-to-product-profile.png)
 
@@ -100,7 +106,11 @@ Efter den här associationen kan ADC-projektets _API för tillgångsförfattare_
 >
 >Ovanstående steg är viktigt för att aktivera autentisering från server till server för önskat AEM API. Utan den här associationen kan AEM API inte användas med autentiseringsmetoden Server-till-server.
 
+Genom att utföra alla ovanstående steg har du förberett AEM as a Cloud Service-miljön för att aktivera OpenAPI-baserad åtkomst till AEM API:er. Sedan måste du skapa Adobe Developer Console-projektet (ADC) för att konfigurera OpenAPI-baserade AEM API:er.
+
 ## Skapa Adobe Developer Console-projekt (ADC){#adc-project}
+
+Adobe Developer Console-projektet (ADC) används för att konfigurera OpenAPI-baserade AEM API:er. Kom ihåg att [Adobe Developer Console (ADC)](./overview.md#accessing-adobe-apis-and-related-concepts) är utvecklarnavet för åtkomst till Adobe API:er, SDK:er, realtidshändelser, serverlösa funktioner med mera.
 
 ADC-projektet används för att lägga till önskade API:er, konfigurera autentiseringen och associera autentiseringskontot med produktprofilen.
 
@@ -126,6 +136,8 @@ Så här skapar du ett ADC-projekt:
 
 När du har skapat ADC-projektet måste du lägga till de AEM-API:er du vill använda, konfigurera autentiseringen och associera autentiseringskontot med produktprofilen.
 
+I det här fallet används **AEM Assets-API:t** för att demonstrera den OpenAPI-baserade installationsprocessen för AEM-API:er. Du kan dock följa de här stegen för att lägga till andra OpenAPI-baserade AEM-API:er som **AEM Sites API**, **AEM Forms API** osv. AEM-berättigandena avgör vilka API:er som är tillgängliga i Adobe Developer Console (ADC).
+
 1. Om du vill lägga till AEM API:er klickar du på knappen **Lägg till API** .
 
    ![Lägg till API](./assets/s2s/add-api.png)
@@ -142,7 +154,7 @@ När du har skapat ADC-projektet måste du lägga till de AEM-API:er du vill anv
 
    ![Välj autentisering](./assets/s2s/select-authentication.png)
 
-   Server-till-server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Autentiseringsalternativen Web App och Single Page App är lämpliga för program som behöver API-åtkomst åt användarna. Mer information finns i [Skillnaden mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App respektive Single Page App &#x200B;](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
+   Server-till-server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Autentiseringsalternativen Web App och Single Page App är lämpliga för program som behöver API-åtkomst åt användarna. Mer information finns i [Skillnaden mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App respektive Single Page App ](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
 
    >[!TIP]
    >
@@ -167,15 +179,17 @@ Om du väljer autentiseringsmetoden **OAuth Web App** eller **OAuth Single Page 
 
 ## Konfigurera AEM-instansen för att aktivera ADC-projektkommunikation{#configure-aem-instance}
 
-Om du vill att ADC-projektets ClientID ska kunna kommunicera med AEM-instansen måste du konfigurera AEM-instansen.
+Därefter måste du konfigurera AEM-instansen så att den aktiverar ovanstående ADC-projektkommunikation. Med den här konfigurationen kan ADC-projektets ClientID INTE kommunicera med AEM-instansen och resulterar i ett 403-otillåtet fel. Tänk på den här konfigurationen som en brandväggsregel så att bara de klient-ID:n som tillåts kan kommunicera med AEM-instansen.
 
-Detta görs genom att definiera API-konfigurationen i en YAML-fil och distribuera den med Config Pipeline i Cloud Manager. YAML-filen definierar de tillåtna klient-ID:n från ADC-projektet som kan kommunicera med AEM-instansen.
+Låt oss följa stegen för att konfigurera AEM-instansen så att den aktiveras ovanför ADC Project-kommunikationen.
 
-1. Leta reda på eller skapa filen `api.yaml` från mappen `config` i AEM Project.
+1. Navigera till AEM-projektet (eller klona det om du inte redan gjort det) på den lokala datorn och leta upp mappen `config`.
 
-   ![Hitta API YAML](./assets/setup/locate-api-yaml.png){width="500" zoomable="no"}
+1. Leta reda på eller skapa filen `api.yaml` från mappen `config` i AEM Project. I mitt fall används [AEM WKND Sites Project](https://github.com/adobe/aem-guides-wknd) för att demonstrera den OpenAPI-baserade installationsprocessen för AEM API:er.
 
-1. Lägg till följande konfiguration i filen `api.yaml`.
+   ![Hitta API YAML](./assets/setup/locate-api-yaml.png)
+
+1. Lägg till följande konfiguration i filen `api.yaml` så att ADC-projektets ClientID kan kommunicera med AEM-instansen.
 
    ```yaml
    kind: "API"
@@ -196,9 +210,11 @@ Detta görs genom att definiera API-konfigurationen i en YAML-fil och distribuer
 
 1. Bekräfta konfigurationsändringarna och skicka ändringarna till Git-fjärrdatabasen som Cloud Manager pipeline är ansluten till.
 
-1. Distribuera ovanstående ändringar med Config Pipeline i Cloud Manager. Observera att filen `api.yaml` också kan installeras i en RDE med kommandoradsverktyg.
+1. Distribuera ovanstående ändringar med [konfigurationsförloppet](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline) i Cloud Manager.
 
    ![Distribuera YAML](./assets/setup/config-pipeline.png)
+
+Observera att filen `api.yaml` också kan installeras i en [RDE](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview), [med kommandoradsverktyg](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files). Detta är användbart när du vill testa konfigurationsändringarna innan du distribuerar dem till produktionsmiljön.
 
 ## Nästa steg
 
