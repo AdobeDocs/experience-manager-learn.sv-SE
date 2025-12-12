@@ -4,7 +4,7 @@ description: Lär dig hur du hämtar den första uppsättningen AEM Events från
 version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 duration: 280
@@ -12,7 +12,7 @@ last-substantial-update: 2023-01-29T00:00:00Z
 jira: KT-14734
 thumbnail: KT-14734.jpeg
 exl-id: 33eb0757-f0ed-4c2d-b8b9-fa6648e87640
-source-git-commit: e01eb7ff050321a70d84f8a613705799017dbf5d
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '579'
 ht-degree: 0%
@@ -32,8 +32,8 @@ Inom Adobe Developer Console-projektet aktiveras automatiskt alla händelseregis
 >[!IMPORTANT]
 >
 >Slutpunkterna för live-demo i den här självstudiekursen fanns tidigare på [Glitch](https://glitch.com/). Från juli 2025 har Glitch upphört med sin värdtjänst och slutpunkterna är inte längre tillgängliga.
->&#x200B;>Vi arbetar aktivt med att migrera demos till en alternativ plattform. Självstudieinnehållet är korrekt och uppdaterade länkar kommer snart.
->&#x200B;>Tack för din förståelse och ditt tålamod.
+>Vi arbetar aktivt med att migrera demos till en alternativ plattform. Självstudieinnehållet är korrekt och uppdaterade länkar kommer snart.
+>Tack för din förståelse och ditt tålamod.
 
 Använd ditt eget program tills live-demonstrationsslutpunkterna blir tillgängliga igen.
 
@@ -49,7 +49,7 @@ För att kunna genomföra den här självstudiekursen behöver du:
 
 Följ de här stegen för att få åtkomst till webbprogrammet som tillhandahålls av Adobe:
 
-- Kontrollera att du har åtkomst till [Glitch - webbprogrammet &#x200B;](https://indigo-speckle-antler.glitch.me/) på en ny webbläsarflik.
+- Kontrollera att du har åtkomst till [Glitch - webbprogrammet ](https://indigo-speckle-antler.glitch.me/) på en ny webbläsarflik.
 
   ![Fel - webbprogram som är värd](../assets/examples/journaling/glitch-hosted-web-application.png)
 

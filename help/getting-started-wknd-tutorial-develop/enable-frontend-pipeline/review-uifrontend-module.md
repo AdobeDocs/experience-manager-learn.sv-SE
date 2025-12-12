@@ -4,7 +4,7 @@ description: Granska utvecklingsfasen, driftsättningen och leveranscykeln för 
 version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
-role: Developer, Architect, Admin
+role: Developer, Admin
 level: Intermediate
 jira: KT-10689
 mini-toc-levels: 1
@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: 65e8d41e-002a-4d80-a050-5366e9ebbdea
 duration: 364
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 0%
@@ -28,7 +28,7 @@ I det här kapitlet går vi igenom utveckling, distribution och leverans av fron
 ## Mål {#objective}
 
 * Förstå hur frontendartefakter byggs och driftsätts i ett högklassigt AEM-projekt
-* Granska [webpack](https://webpack.js.org/)-konfigurationer för AEM-fullstacksprojektet i modulen `ui.frontend`
+* Granska `ui.frontend`webpack[-konfigurationer för AEM-fullstacksprojektet i modulen ](https://webpack.js.org/)
 * Genereringsprocess för AEM klientbibliotek (kallas även klientlibs)
 
 ## Driftsättningsflöde i gränssnittet för AEM-projekt i full hög och snabbinstallation av webbplatser
@@ -56,14 +56,14 @@ Nedan visas en högnivårepresentation av __utvecklingen, distributionen och lev
 
 Under utvecklingsfasen utförs ändringar i gränssnittet, som formatering och omprofilering, genom att CSS-, JS-filer från mappen `ui.frontend/src/main/webpack` uppdateras. Under byggtiden förvandlar sedan pluginmodulen [webpack](https://webpack.js.org/) och maven dessa filer till optimerade AEM-klienter under modulen `ui.apps`.
 
-Front-end-ändringar distribueras till AEM as a Cloud Service-miljön när du kör pipelinen [__Full-stack__ i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=sv-SE).
+Front-end-ändringar distribueras till AEM as a Cloud Service-miljön när du kör pipelinen [__Full-stack__ i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html).
 
 Framsidesresurserna levereras till webbläsarna via URI-sökvägar som börjar med `/etc.clientlibs/`, och cachas vanligtvis i AEM Dispatcher och CDN.
 
 
 >[!NOTE]
 >
-> På samma sätt distribueras [ändringarna i gränssnittet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html?lang=sv-SE) i __AEM snabbplatsresa__ till AEM as a Cloud Service-miljön genom att pipeline __Front-End__ körs. Se [Konfigurera pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html?lang=sv-SE).
+> På samma sätt distribueras __ändringarna i gränssnittet__ i [AEM snabbplatsresa](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/customize-theme.html) till AEM as a Cloud Service-miljön genom att pipeline __Front-End__ körs. Se [Konfigurera pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/pipeline-setup.html).
 
 ### Granska webbpaketskonfigurationer i WKND Sites-projektet {#development-frontend-webpack-clientlib}
 
@@ -108,7 +108,7 @@ Framsidesresurserna levereras till webbläsarna via URI-sökvägar som börjar m
   ```
 
 
-* De paketerade resurserna flyttas till modulen `ui.apps` med plugin-programmet [&#x200B; aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator), med hjälp av konfigurationen som hanteras i filen `clientlib.config.js`.
+* De paketerade resurserna flyttas till modulen `ui.apps` med plugin-programmet [ aem-clientlib-generator](https://www.npmjs.com/package/aem-clientlib-generator), med hjälp av konfigurationen som hanteras i filen `clientlib.config.js`.
 
 ```javascript
     ...
@@ -134,7 +134,7 @@ Framsidesresurserna levereras till webbläsarna via URI-sökvägar som börjar m
 
 ### Distribution till AEM as a Cloud Service {#deployment-frontend-aemaacs}
 
-[__Fullhög__ pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=sv-SE&#full-stack-pipeline) distribuerar dessa ändringar till en AEM as a Cloud Service-miljö.
+[__Fullhög__ pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#full-stack-pipeline) distribuerar dessa ändringar till en AEM as a Cloud Service-miljö.
 
 
 ### Leverans från AEM as a Cloud Service {#delivery-frontend-aemaacs}

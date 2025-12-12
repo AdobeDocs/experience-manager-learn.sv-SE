@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: f3047f1d-1c46-4aee-9262-7aab35e9c4cb
 duration: 1438
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1289'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Lär dig hur du genererar en bild med OpenAI eller DALL ・ E 2 och överför de
 
 >[!VIDEO](https://video.tv.adobe.com/v/3413093?quality=12&learn=on)
 
-Det här exemplet på AEM Content Fragment Console-tillägg är ett [åtgärdsfältstillägg](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) som genererar digital bild från indata på naturligt språk med [OpenAI API &#x200B;](https://openai.com/api/) eller [DALL ・ E 2](https://openai.com/dall-e-2/) . Den genererade bilden överförs till AEM DAM och den valda Content Fragment-bildegenskapen uppdateras för att referera till den nyligen genererade, överförda bilden från DAM.
+Det här exemplet på AEM Content Fragment Console-tillägg är ett [åtgärdsfältstillägg](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) som genererar digital bild från indata på naturligt språk med [OpenAI API ](https://openai.com/api/) eller [DALL ・ E 2](https://openai.com/dall-e-2/) . Den genererade bilden överförs till AEM DAM och den valda Content Fragment-bildegenskapen uppdateras för att referera till den nyligen genererade, överförda bilden från DAM.
 
 I det här exemplet lär du dig:
 
@@ -53,7 +53,7 @@ Det funktionella flödet för exempeltillägget är följande:
 Det här exemplet utökar till tilläggspunkten `actionBar` för att lägga till en anpassad knapp i konsolen för innehållsfragment.
 
 | AEM UI Extended | Tilläggspunkt |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Konsol för innehållsfragment](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [Åtgärdsfält](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
 
 ## Exempel på tillägg
@@ -223,7 +223,7 @@ I den här exempelappen finns en modal React-komponent (`GenerateImageModal.js`)
 Viktigt är att all interaktion med AEM från tillägget delegeras till en [AppBuilder Adobe I/O Runtime-åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), som är en separat serverlös process som körs i [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
 Användning av Adobe I/O Runtime-åtgärder för att kommunicera med AEM, och för att undvika anslutningsproblem med korsdomänsdelning (CORS).
 
-När formuläret _Generera bild_ skickas anropar en anpassad `onSubmitHandler()` Adobe I/O Runtime-åtgärd och skickar bildbeskrivningen, aktuell AEM-värd (domän) och användarens AEM-åtkomsttoken. Åtgärden anropar sedan OpenAI:s [Image generation](https://beta.openai.com/docs/guides/images/image-generation-beta) -API för att generera en bild med den inskickade bildbeskrivningen. Sedan använder du [AEM Upload](https://github.com/adobe/aem-upload) -nodmodulens `DirectBinaryUpload` -klass för att överföra genererad bild till AEM och använder slutligen [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=sv-SE) för att uppdatera innehållsfragmenten.
+När formuläret _Generera bild_ skickas anropar en anpassad `onSubmitHandler()` Adobe I/O Runtime-åtgärd och skickar bildbeskrivningen, aktuell AEM-värd (domän) och användarens AEM-åtkomsttoken. Åtgärden anropar sedan OpenAI:s [Image generation](https://beta.openai.com/docs/guides/images/image-generation-beta) -API för att generera en bild med den inskickade bildbeskrivningen. Sedan använder du [AEM Upload](https://github.com/adobe/aem-upload) -nodmodulens `DirectBinaryUpload` -klass för att överföra genererad bild till AEM och använder slutligen [AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) för att uppdatera innehållsfragmenten.
 
 När svaret från Adobe I/O Runtime-åtgärden tas emot uppdateras modalen så att resultatet av bildgenereringen visas.
 
@@ -482,7 +482,7 @@ export default function GenerateImageModal() {
 
 >[!NOTE]
 >
->I funktionen `buildAssetDetailsURL()` antar variabelvärdet `aemAssetdetailsURL` att [Unified Shell](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html?lang=sv-SE#overview) är aktiverat. Om du har inaktiverat det enhetliga skalet måste du ta bort `/ui#/aem` från variabelvärdet.
+>I funktionen `buildAssetDetailsURL()` antar variabelvärdet `aemAssetdetailsURL` att [Unified Shell](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/aem-cloud-service-on-unified-shell.html#overview) är aktiverat. Om du har inaktiverat det enhetliga skalet måste du ta bort `/ui#/aem` från variabelvärdet.
 
 
 ### Adobe I/O Runtime action

@@ -10,7 +10,7 @@ topic: Development
 jira: KT-9980
 exl-id: 693dac88-84f3-4051-8e46-3105093711a3
 duration: 56
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%
@@ -26,8 +26,8 @@ När du använder Assembler-tjänsten ska du använda ett XML-baserat språk som
 ```xml
 <DDX xmlns="http://ns.adobe.com/DDX/1.0/">
 <PDF result="doc3.pdf"> 
-	<PDF source="CA-Drivers-Handbook.pdf"/>
- 	<PDF source="CA-Parent-Teen-Handbook.pdf"/>
+  <PDF source="CA-Drivers-Handbook.pdf"/>
+  <PDF source="CA-Parent-Teen-Handbook.pdf"/>
   </PDF>
 </DDX>
 ```

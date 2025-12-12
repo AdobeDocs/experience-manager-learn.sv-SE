@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 83acbddb-9168-4d8b-84b5-97577d8a1ead
 duration: 538
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Det vanligaste användningsområdet för RTE-emblem är att använda dem tillsam
 
 Märken som är kopplade till widgetarna används vanligtvis för att lägga till det dynamiska innehållet som är beroende av ett externt system, men _innehållsförfattare kan inte ändra_ det infogade dynamiska innehållet för att bevara integriteten. De kan bara tas bort som ett helt objekt.
 
-**emblem** läggs till i **RTE** i Content Fragment Editor med tilläggspunkten `rte`. `getBadges()`-metoden för tilläggspunkten `rte` använder ett eller flera emblem.
+**emblem** läggs till i **RTE** i Content Fragment Editor med tilläggspunkten `rte`. `rte`-metoden för tilläggspunkten `getBadges()` använder ett eller flera emblem.
 
 I det här exemplet visas hur du lägger till en widget som heter _kundtjänst för stora gruppbokningar_ för att hitta, välja och lägga till WKND-äventyrsspecifik kundtjänstinformation som **Representantnamn** och **Telefonnummer** i ett RTE-innehåll. **Telefonnummer** är **inte redigerbart** med hjälp av taggfunktionaliteten, men WKND-innehållsförfattare kan redigera det representativa namnet.
 
@@ -44,7 +44,7 @@ I det här exemplet används ramverket [Adobe React Spectrum](https://react-spec
 Det här exemplet utökar till tilläggspunkten `rte` för att lägga till ett märke i textredigeraren i innehållets fragmentredigerare.
 
 | AEM UI Extended | Tilläggspunkter |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Innehållsfragmentsredigeraren](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [RTF-redigerarens emblem](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-badges/) och [RTF-redigerarens widgetar](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
 
 ## Exempel på tillägg
@@ -115,7 +115,7 @@ export default ExtensionRegistration;
 
 ### Lägg till `largeBookingsCustomerService`-väg i `App.js`{#add-widgets-route}
 
-Lägg till `largeBookingsCustomerService`-vägen i huvudkomponenten `App.js` för att återge gränssnittet för den relativa URL-sökvägen ovan.
+Lägg till `App.js`-vägen i huvudkomponenten `largeBookingsCustomerService` för att återge gränssnittet för den relativa URL-sökvägen ovan.
 
 `src/aem-cf-editor-1/web-src/src/components/App.js`
 
@@ -148,7 +148,7 @@ Här är viktiga markeringar av `LargeBookingsCustomerService`-koden:
 + `guestConnection` initieras med `useEffect` [React-krok](https://react.dev/reference/react/useEffect) och hanteras som komponenttillstånd. Den används för att kommunicera med AEM-värden.
 + Funktionen `handleCustomerServiceChange` hämtar representativt namn och telefonnummer och uppdaterar komponentens lägesvariabler.
 + Funktionen `addCustomerServiceDetails` som använder objektet `guestConnection` tillhandahåller RTE-instruktion att köra. I det här fallet `insertContent`-instruktion och HTML-kodfragment.
-+ `#`-specialtecknet läggs till före och efter variabeln `phoneNumber`, till exempel `...<div><p>Phone Number: #${phoneNumber}#</strong></p></div>`, för att **telefonnumret inte ska kunna redigeras** med hjälp av emblem.
++ **-specialtecknet läggs till före och efter variabeln**, till exempel `#`, för att `phoneNumber`telefonnumret inte ska kunna redigeras`...<div><p>Phone Number: #${phoneNumber}#</strong></p></div>` med hjälp av emblem.
 
 `src/aem-cf-editor-1/web-src/src/components/LargeBookingsCustomerService.js`
 

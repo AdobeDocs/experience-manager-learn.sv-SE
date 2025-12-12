@@ -4,7 +4,7 @@ description: Lär dig hur du anropar OpenAPI-baserade AEM API:er på AEM as a Cl
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Intermediate
 doc-type: Tutorial
 jira: KT-16718
@@ -12,7 +12,7 @@ thumbnail: KT-16718.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 9cf7c318-2be4-4b26-bd6f-0c80d002db45
-source-git-commit: 723c439202b8e00e7b3236a50641ee1f2f6a4d9c
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '2262'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Lär dig hur du anropar OpenAPI-baserade AEM API:er på AEM as a Cloud Service med användarbaserad autentisering från en anpassad webbapp som använder OAuth Web App.
 
-OAuth Web App-autentiseringen är idealisk för webbprogram med klientkomponenter och _backend_ -komponenter som behöver **komma åt AEM API:er för en användares räkning**. Den använder OAuth 2.0-anslagstypen _permission_code_ för att få en åtkomsttoken åt användaren för att få åtkomst till AEM API:er. Mer information finns i [Skillnad mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App respektive Single Page App &#x200B;](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
+OAuth Web App-autentiseringen är idealisk för webbprogram med klientkomponenter och _backend_ -komponenter som behöver **komma åt AEM API:er för en användares räkning**. Den använder OAuth 2.0-anslagstypen _permission_code_ för att få en åtkomsttoken åt användaren för att få åtkomst till AEM API:er. Mer information finns i [Skillnad mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App respektive Single Page App ](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
 
 ## Vad du lär dig{#what-you-learn}
 
@@ -49,7 +49,7 @@ WKND PIM-appen är ett exempelwebbprogram som är utformat för att hantera prod
 
 Adobe Developer Console-projektet (ADC) har konfigurerats för åtkomst till Assets Author API med hjälp av OAuth Web App-autentisering. Den tillhandahåller nödvändiga _client_id_ och _client_secrets_ till WKND-PIM-webbprogrammet för att initiera _permission_code_-anslagsflödet.
 
->[!VIDEO](https://video.tv.adobe.com/v/3442761?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3442757?quality=12&learn=on)
 
 
 Följande diagram visar det funktionella flödet för WKND-PIM-webbprogrammet _som hämtar användarspecifika åtkomsttoken för interaktion med Assets Author API_.
@@ -497,7 +497,7 @@ Följ instruktionerna i artikeln [Konfigurera OpenAPI-baserade AEM API:er](../se
 
 Som standard har WKND Sites-projektet inte det nödvändiga metadata-schemat för resurser för att visa produktattributen. Låt oss skapa och använda metadatamatchemat för resurser i AEM-instansen.
 
-1. Logga in på instansen AEM as a Cloud Service Asset. Navigera med [resursvyn](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/authoring/switch-views) till mappen `/content/dam/wknd-shared/en`.
+1. Logga in på instansen AEM as a Cloud Service Asset. Navigera med [resursvyn](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/authoring/switch-views) till mappen `/content/dam/wknd-shared/en`.
 
    ![Navigera till mappen](../assets/web-app/navigate-to-folder.png)
 
@@ -609,7 +609,7 @@ Med ovanstående steg kan resurserna i mappen **PIM** lagra metadata för produk
 
 1. Logga in med dina Adobe ID-inloggningsuppgifter och ge ditt medgivande till att WKND-PIM-webbappen får åtkomst till Assets Author API åt dig.
 
-1. Klicka på fliken **AEM-resursattribut** på vägen/sidan `https://localhost:3001/update-product-attributes`. Välj ett resurs-ID i listrutan **Resurs-ID** för att visa metadata för resursen.
+1. Klicka på fliken `https://localhost:3001/update-product-attributes`AEM-resursattribut **på vägen/sidan**. Välj ett resurs-ID i listrutan **Resurs-ID** för att visa metadata för resursen.
 
    ![Hämta resursmetadata](../assets/web-app/get-asset-metadata.png)
 

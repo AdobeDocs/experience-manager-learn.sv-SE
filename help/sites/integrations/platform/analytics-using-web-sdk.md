@@ -4,7 +4,7 @@ description: Integrera AEM Sites och Adobe Analytics med SDK.
 version: Experience Manager as a Cloud Service
 feature: Integrations
 topic: Integrations, Architecture
-role: Admin, Architect, Data Architect, Developer
+role: Admin, Developer
 level: Beginner, Intermediate
 doc-type: Tutorial
 last-substantial-update: 2023-05-25T00:00:00Z
@@ -14,7 +14,7 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Sites as a Cloud Service, AEM Sites 6.5" before-title="false"
 exl-id: 0cc3d3bc-e4ea-4ab2-8878-adbcf0c914f5
 duration: 2252
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1529'
 ht-degree: 0%
@@ -27,9 +27,9 @@ Lär dig det **moderna sättet** att integrera Adobe Experience Manager (AEM) oc
 
 ## Ökning
 
-Att få insikter i användarbeteenden är ett viktigt mål för alla marknadsföringsteam. Genom att förstå hur användarna interagerar med sitt innehåll kan teamen fatta välgrundade beslut, optimera strategier och få bättre resultat. WKND:s marknadsföringsteam, en fiktiv enhet, har satt sina mål att implementera Adobe Analytics på sin webbplats för att uppnå detta mål. Det främsta målet är att samla in data om två viktiga mätvärden: sidvisningar och CTA-klick (homepage call-to-action).
+Att få insikter i användarbeteenden är ett viktigt mål för alla marknadsföringsteam. Genom att förstå hur användarna interagerar med sitt innehåll kan teamen fatta välgrundade beslut, optimera strategier och få bättre resultat. WKND:s marknadsföringsteam, en fiktiv enhet, har satt sina mål att implementera Adobe Analytics på sin webbplats för att uppnå detta mål. Det främsta målet är att samla in data om två viktiga mätvärden: sidvisningar och call-to-action-klickningar (CTA) på hemsidan.
 
-Genom att spåra sidvisningar kan teamet analysera vilka sidor som får flest uppmärksamhet från användarna. Dessutom ger spårning av CTA klickningar på hemsidan värdefull information om hur effektivt teamets anropselement är. Dessa data kan visa vilka CTA:er som är intressanta för användarna, vilka som behöver justeras, och de kan upptäcka nya möjligheter att öka användarengagemanget och driva konverteringar.
+Genom att spåra sidvisningar kan teamet analysera vilka sidor som får flest uppmärksamhet från användarna. Dessutom ger spårning av CTA-klickningar på hemsidan värdefulla insikter om hur effektivt teamets call-to-action-element är. Dessa data kan visa vilka CTA:er som är intressanta för användarna, vilka som behöver justeras, och de kan upptäcka nya möjligheter att öka användarengagemanget och driva konverteringar.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419872?quality=12&learn=on)
@@ -42,7 +42,7 @@ Du har slutfört konfigurationsstegen från självstudiekursen **[Integrera Expe
 
 I **AEM som Cloud Service**:
 
-+ [AEM Administratörsåtkomst till AEM as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html?lang=sv-SE)
++ [AEM Administratörsåtkomst till AEM as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/accessing/overview.html)
 + Tillgång till Cloud Manager för Distributionshanteraren
 + Klona och distribuera [WKND - exempelprojektet för Adobe Experience Manager](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) till din AEM as a Cloud Service-miljö.
 
@@ -76,7 +76,7 @@ SDR-dokumentet ger en omfattande översikt över implementeringsplanen och säke
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419874?quality=12&learn=on)
 
-Mer information om koncept och olika element som ska inkluderas i SDR-dokumentet finns i [Skapa och underhåll ett SDR-dokument](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html?lang=sv-SE). Du kan också hämta en Excel-exempelmall, men den WKND-specifika versionen är också tillgänglig [här](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
+Mer information om koncept och olika element som ska inkluderas i SDR-dokumentet finns i [Skapa och underhåll ett SDR-dokument](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html). Du kan också hämta en Excel-exempelmall, men den WKND-specifika versionen är också tillgänglig [här](./assets/Initial-WKND-WebSDK-BRD-SDR.xlsx).
 
 ## Ställ in Analytics - report suite, Analysis Workspace
 
@@ -90,10 +90,10 @@ För att analysera, samla in insikter och dela dessa insikter med andra från in
 
 Om du vill veta mer om konfiguration och koncept för Analytics rekommenderar vi följande resurser:
 
-+ [Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html?lang=sv-SE)
-+ [Konverteringsvariabler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html?lang=sv-SE)
-+ [Slutförda händelser](https://experienceleague.adobe.com/sv/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)
-+ [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html?lang=sv-SE)
++ [Report Suite](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite.html)
++ [Konverteringsvariabler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/conversion-var-admin.html)
++ [Slutförda händelser](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/success-event)
++ [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/home.html)
 
 ## Uppdatera dataström - lägg till analystjänst
 
@@ -214,7 +214,7 @@ I den [tidigare självstudiekursen](./web-sdk.md) skapas en taggegenskap med dat
 
 +++
 
-Mer information om hur du integrerar AEM Core Components med Adobe Client Data Layer finns i [Using the Adobe Client Data Layer with AEM Core Components guide](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=sv-SE).
+Mer information om hur du integrerar AEM Core Components med Adobe Client Data Layer finns i [Using the Adobe Client Data Layer with AEM Core Components guide](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html).
 
 
 >[!INFO]
@@ -273,9 +273,9 @@ Genom att implementera de rekommenderade stegen och använda de tillhandahållna
 
 ## Ytterligare resurser
 
-+ [Integrera Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html?lang=sv-SE)
-+ [Använda Adobe-klientdatalagret med kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html?lang=sv-SE)
-+ [Integrerar Experience Platform-datainsamlingstaggar och AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html?lang=sv-SE)
-+ [Adobe Experience Platform Web SDK och Edge Network - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html?lang=sv-SE)
-+ [Självstudiekurser för datainsamling](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html?lang=sv-SE)
-+ [Adobe Experience Platform Debugger - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=sv-SE)
++ [Integrera Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform/web-sdk.html)
++ [Använda Adobe-klientdatalagret med kärnkomponenterna](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview.html)
++ [Integrerar Experience Platform-datainsamlingstaggar och AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview.html)
++ [Adobe Experience Platform Web SDK och Edge Network - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html)
++ [Självstudiekurser för datainsamling](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html)
++ [Adobe Experience Platform Debugger - översikt](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html)

@@ -3,7 +3,7 @@ title: Bootstrap fjärr-SPA för SPA Editor
 description: Lär dig hur du startar en fjärransluten SPA för kompatibilitet med AEM SPA Editor.
 topic: Headless, SPA, Development
 feature: SPA Editor, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7633
 thumbnail: kt-7633.jpeg
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: b8d43e44-014c-4142-b89c-ff4824b89c78
 duration: 327
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1167'
 ht-degree: 0%
@@ -70,7 +70,7 @@ Flera miljövariabler måste vara exponerade för fjärr-SPA så att de kan inte
       * Krävs för användning med AEM Author
       * Krävs eventuellt för användning med AEM Publish (om innehållet är skyddat)
       * Utvecklingar mot AEM SDK har stöd för lokala konton via Basic Auth. Det här är den metod som används i den här självstudien.
-      * Använd [åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=sv-SE) när du integrerar med AEM as a Cloud Service
+      * Använd [åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html) när du integrerar med AEM as a Cloud Service
    * `REACT_APP_BASIC_AUTH_USER`: AEM __username__ av SPA för autentisering när AEM-innehåll hämtas.
    * `REACT_APP_BASIC_AUTH_PASS`: AEM __password__ av SPA för autentisering när AEM-innehåll hämtas.
 
@@ -129,7 +129,7 @@ När du skapar en redigerbar SPA är det bäst att ställa in en [intern proxy i
        * @returns true if the SPA request should be re-routed to AEM
        */
        const toAEM = function(path, req) {
-           return path.startsWith('/content') || 
+           return path.startsWith('/content') ||
                path.startsWith('/graphql') ||
                path.endsWith('.model.json')
        }

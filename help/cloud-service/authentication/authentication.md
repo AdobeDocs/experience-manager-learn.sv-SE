@@ -4,14 +4,14 @@ description: Läs mer om autentisering i AEM as a Cloud Service.
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Integrations, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-10436
 thumbnail: KT-10436.png
 last-substantial-update: 2022-10-14T00:00:00Z
 exl-id: 4dba6c09-2949-4153-a9bc-d660a740f8f7
 duration: 28
-source-git-commit: 5674261f0d030c8cb4dfc823b944fba29b8d562a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 0%
@@ -25,11 +25,11 @@ AEM as a Cloud Service har stöd för flera autentiseringsalternativ och variera
 |                       | AEM Author | AEM Publish |
 |-----------------------|:----------:|:-----------:|
 | [Adobe IMS](../accessing/overview.md) | ✔ | ✔ |
-| [OpenID Connect (OIDC)](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/open-id-connect-support-for-aem-as-a-cloud-service-on-publish-tier) | ✘ | ✔ |
-| [SAML 2.0 via Adobe IMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html?lang=sv-SE#how-to-set-up) | ✔ | ✔ |
+| [OpenID Connect (OIDC)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/open-id-connect-support-for-aem-as-a-cloud-service-on-publish-tier) | ✘ | ✔ |
+| [SAML 2.0 via Adobe IMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/security/ims-support.html#how-to-set-up) | ✔ | ✔ |
 | [SAML 2.0](./saml-2-0.md) | ✘ | ✔ |
-| [Enkel inloggning (SSO)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html?lang=sv-SE#integration-with-an-idp) | ✘ | ✔ |
-| [OAuth](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html?lang=sv-SE#integration-with-an-idp) | ✘ | ✔ |
+| [Enkel inloggning (SSO)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
+| [OAuth](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier.html#integration-with-an-idp) | ✘ | ✔ |
 | [Tokenautentisering](../../headless-tutorial/authentication/overview.md) | ✔ | ✔ |
 | Grundläggande autentisering | ✘ | ✘ |
 

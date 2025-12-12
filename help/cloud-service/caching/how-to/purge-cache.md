@@ -4,7 +4,7 @@ description: Lär dig hur du rensar eller tar bort det cachelagrade HTTP-svaret 
 version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 0
@@ -12,7 +12,7 @@ last-substantial-update: 2024-08-13T00:00:00Z
 jira: KT-15963
 thumbnail: KT-15963.jpeg
 exl-id: 5d81f6ee-a7df-470f-84b9-12374c878a1b
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '924'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Lär dig hur du rensar eller tar bort det cachelagrade HTTP-svaret från AEM as 
 
 I den här självstudien får du lära dig hur du konfigurerar och använder rensnings-API-token för att rensa CDN-cachen för exempelwebbplatsen [AEM WKND](https://github.com/adobe/aem-guides-wknd) med hjälp av självbetjäningsfunktionen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3436931?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3432948?quality=12&learn=on)
 
 ## Cacheogiltigförklaring kontra explicit tömning
 
@@ -45,7 +45,7 @@ Låt oss lära oss hur du ställer in rensnings-API-token för att rensa CDN-cac
 
 Token för rensnings-API skapas genom att CDN-regeln konfigureras i AEM-projektkoden.
 
-1. Öppna filen `cdn.yaml` från huvudmappen `config` i ditt AEM-projekt. Exempel: filen cdn.yaml[&#128279;](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml) för WKND-projektet.
+1. Öppna filen `cdn.yaml` från huvudmappen `config` i ditt AEM-projekt. Exempel: filen cdn.yaml[ för ](https://github.com/adobe/aem-guides-wknd/blob/main/config/cdn.yaml)WKND-projektet.
 
 1. Lägg till följande CDN-regel i filen `cdn.yaml`:
 
@@ -79,7 +79,7 @@ Skapa sedan Cloud Manager-miljövariablerna för att lagra Token-värdet för re
 
 1. Logga in på Cloud Manager på [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) och välj organisation och program.
 
-1. Klicka på **ellipserna** (..) bredvid önskad miljö i avsnittet __Miljö__ och välj **Visa detaljer**.
+1. Klicka på __ellipserna__ (..) bredvid önskad miljö i avsnittet **Miljö** och välj **Visa detaljer**.
 
    ![Visa detaljer](../assets/how-to/view-env-details.png)
 
@@ -104,7 +104,7 @@ Distribuera slutligen den konfigurerade CDN-regeln till AEM as a Cloud Service-m
 
 1. I Cloud Manager går du till avsnittet **Pipelines**.
 
-1. Skapa en ny pipeline eller välj den befintliga pipeline som endast distribuerar **Config**-filerna. Detaljerade steg finns i [Skapa en konfigurationspipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager).
+1. Skapa en ny pipeline eller välj den befintliga pipeline som endast distribuerar **Config**-filerna. Detaljerade steg finns i [Skapa en konfigurationspipeline](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager).
 
 1. Klicka på knappen **Kör** för att distribuera CDN-regeln.
 

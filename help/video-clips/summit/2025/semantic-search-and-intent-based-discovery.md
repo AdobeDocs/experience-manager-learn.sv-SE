@@ -4,7 +4,7 @@ description: Se hur semantisk sökning och avsiktsbaserad upptäckt revolutioner
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets
 feature-set: Experience Manager, Experience Manager Assets
-role: Leader, User, Developer, Admin, Architect
+role: Leader, User, Developer, Admin
 level: Beginner, Intermediate, Experienced
 type: Event
 doc-type: Video Clip
@@ -13,13 +13,13 @@ feature: Generative AI, Search, Tagging
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
+exl-id: c726c62a-d3a9-471f-8091-4fb00010a7d9
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
 
 ---
-
 
 # Semantisk sökning och återgivningsbaserad sökning
 

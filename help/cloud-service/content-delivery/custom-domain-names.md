@@ -4,7 +4,7 @@ description: Lär dig hur du hanterar och implementerar anpassade domännamn fö
 version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Custom Domain Names
 topic: Architecture, Migration
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 130
@@ -12,9 +12,9 @@ last-substantial-update: 2024-08-09T00:00:00Z
 jira: KT-15946
 thumbnail: KT-15946.jpeg
 exl-id: e11ff38c-e823-4631-a5b0-976c2d11353e
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---

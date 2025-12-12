@@ -4,7 +4,7 @@ description: Lär dig hur du tar emot AEM Events med Adobe I/O Runtime-åtgärd 
 version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 duration: 457
@@ -12,7 +12,7 @@ last-substantial-update: 2024-01-29T00:00:00Z
 jira: KT-14878
 thumbnail: KT-14878.jpeg
 exl-id: b1c127a8-24e7-4521-b535-60589a1391bf
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%
@@ -70,7 +70,7 @@ Om du vill lägga till Adobe I/O Runtime Action i projektet måste du initiera p
   aio app init
   ```
 
-- Markera `Organization`, `Project` som du skapade i föregående steg och arbetsytan. Välj alternativet `All Templates` i steget `What templates do you want to search for?`.
+- Markera `Organization`, `Project` som du skapade i föregående steg och arbetsytan. Välj alternativet `What templates do you want to search for?` i steget `All Templates`.
 
   ![Organisationsprojektval - Initiera projekt](../assets/examples/runtime-action/all-templates.png)
 
@@ -145,7 +145,7 @@ Om du vill ta emot AEM Events och köra Adobe I/O Runtime Action som skapades i 
 
 - I steget **Så här tar du emot händelser** expanderar du alternativet **Körningsåtgärd** och väljer den _generiska_ åtgärden som skapades i föregående steg. Klicka på **Spara konfigurerade händelser**.
 
-  ![Körningsåtgärd - Konfigurera projekt &#x200B;](../assets/examples/runtime-action/select-runtime-action.png)
+  ![Körningsåtgärd - Konfigurera projekt ](../assets/examples/runtime-action/select-runtime-action.png)
 
 - Granska informationen om händelseregistrering, även fliken **Felsökningsspårning**, och verifiera **Utfrågningsavsökningen** - förfrågan och svar.
 

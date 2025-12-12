@@ -4,16 +4,16 @@ description: Lär dig hur du konfigurerar SAML 2.0-autentisering för AEM as a C
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9351
 thumbnail: 343040.jpeg
 last-substantial-update: 2024-05-15T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '4262'
+source-wordcount: '4233'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Det typiska flödet av en AEM Publish SAML-integration är följande:
 
 ## Genomgång av konfiguration
 
->[!VIDEO](https://video.tv.adobe.com/v/3455337?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
 
 I den här videon går vi igenom hur man konfigurerar SAML 2.0-integrering med AEM as a Cloud Service Publish Service och använder Okta som IDP.
 
@@ -69,14 +69,14 @@ Följande krävs när du konfigurerar SAML 2.0-autentisering:
 + Administratörsåtkomst till IDP:n
 + Tillgång till ett offentligt/privat nyckelpar som används för att kryptera SAML-nyttolaster
 
-SAML 2.0 stöds endast för att autentisera användning av AEM Publish eller Preview. Om du vill hantera autentiseringen av AEM Author med hjälp av och IDP [integrerar du IDP med Adobe IMS](https://helpx.adobe.com/se/enterprise/using/set-up-identity.html).
+SAML 2.0 stöds endast för att autentisera användning av AEM Publish eller Preview. Om du vill hantera autentiseringen av AEM Author med hjälp av och IDP [integrerar du IDP med Adobe IMS](https://helpx.adobe.com/enterprise/using/set-up-identity.html).
 
 
 ## Installera det offentliga IDP-certifikatet på AEM
 
 IDP:s offentliga certifikat läggs till i AEM Global Trust Store och används för att validera att SAML-försäkran som skickas av IDP är giltig.
 
-+++SAML-kontrollsigneringsflöde
++++Signeringsflöde för SAML-försäkran
 
 ![SAML 2.0 - IDP SAML Assertion signing](./assets/saml-2-0/idp-signing-diagram.png)
 
@@ -130,7 +130,7 @@ Global Trust Store har konfigurerats med IDP:s offentliga certifikat på AEM Aut
 
 ## Skapa nyckelbehållare för autentiseringstjänster{#authentication-service-keystore}
 
-_Det krävs att du skapar en nyckelbehållare för autentiseringstjänsten när [&#x200B; SAML 2.0-autentiseringshanterarens OSGi-konfigurationsegenskap `handleLogout` är inställd på `true`](#saml-20-authenticationsaml-2-0-authentication) eller när [AuthnRequest-signering/SAML-försäkran &#x200B;](#install-aem-public-private-key-pair) krävs_
+_Det krävs att du skapar en nyckelbehållare för autentiseringstjänsten när [ SAML 2.0-autentiseringshanterarens OSGi-konfigurationsegenskap `handleLogout` är inställd på `true`](#saml-20-authenticationsaml-2-0-authentication) eller när [AuthnRequest-signering/SAML-försäkran ](#install-aem-public-private-key-pair) krävs_
 
 1. Logga in på AEM Author som AEM Administrator för att ladda upp den privata nyckeln.
 1. Navigera till __Verktyg > Dokumentskydd > Användare__ och välj __authentication-service__ användare. Välj sedan __Egenskaper__ i det övre åtgärdsfältet.
@@ -141,7 +141,7 @@ _Det krävs att du skapar en nyckelbehållare för autentiseringstjänsten när 
 1. Välj __Spara och stäng__.
 1. Skapa ett paket som innehåller den uppdaterade användaren __authentication-service__.
 
-   _Använd följande tillfälliga lösning med paket:_
+   _Använd följande tillfälliga lösning med paket :_
 
    1. Navigera till __Verktyg > Distribution > Paket__.
    1. Skapa ett paket
@@ -228,7 +228,7 @@ Både AuthnRequest-signering och SAML-verifieringskryptering är valfria, men b�
 1. Välj __Spara och stäng__.
 1. Skapa ett paket som innehåller den uppdaterade användaren __authentication-service__.
 
-   _Använd följande tillfälliga lösning med paket:_
+   _Använd följande tillfälliga lösning med paket :_
 
    1. Navigera till __Verktyg > Distribution > Paket__.
    1. Skapa ett paket
@@ -333,9 +333,9 @@ OSGi-konfigurationer per miljö (`config.publish.dev`, `config.publish.stage` oc
 
 ### Använd kryptering
 
-När [krypterar AuthnRequest och SAML-försäkran](#encrypting-the-authnrequest-and-saml-assertion) krävs följande egenskaper: `useEncryption`, `spPrivateKeyAlias` och `keyStorePassword`. `keyStorePassword` innehåller ett lösenord och därför får värdet inte lagras i OSGi-konfigurationsfilen utan injiceras med [hemliga konfigurationsvärden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#secret-configuration-values)
+När [krypterar AuthnRequest och SAML-försäkran](#encrypting-the-authnrequest-and-saml-assertion) krävs följande egenskaper: `useEncryption`, `spPrivateKeyAlias` och `keyStorePassword`. `keyStorePassword` innehåller ett lösenord och därför får värdet inte lagras i OSGi-konfigurationsfilen utan injiceras med [hemliga konfigurationsvärden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)
 
-+++Som tillval kan du uppdatera OSGi-konfigurationen så att kryptering används
++++Du kan även uppdatera OSGi-konfigurationen så att kryptering används
 
 1. Öppna `/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~saml.cfg.json` i din IDE.
 1. Lägg till de tre egenskaperna `useEncryption`, `spPrivateKeyAlias` och `keyStorePassword` enligt nedan.
@@ -366,7 +366,7 @@ När [krypterar AuthnRequest och SAML-försäkran](#encrypting-the-authnrequest-
 
 + `useEncryption` inställd på `true`
 + `spPrivateKeyAlias` innehåller nyckelbehållarpostens alias för den privata nyckel som används av SAML-integreringen.
-+ `keyStorePassword` innehåller en [&#x200B; OSGi-hemlig konfigurationsvariabel &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#secret-configuration-values) som innehåller lösenordet för användarens nyckelbehållare `authentication-service`.
++ `keyStorePassword` innehåller en [ OSGi-hemlig konfigurationsvariabel ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values) som innehåller lösenordet för användarens nyckelbehållare `authentication-service`.
 
 +++
 
@@ -452,7 +452,7 @@ Dynamiskt gruppmedlemskap är en funktion i [Apache Jackrabbit Oak](https://jack
 ### Aktivera dynamiskt gruppmedlemskap för SAML-användare i nya miljöer
 
 För att avsevärt förbättra prestandan vid grupputvärdering i nya AEM as a Cloud Service-miljöer rekommenderas aktivering av funktionen för dynamiskt gruppmedlemskap i nya miljöer.
-Detta är också ett nödvändigt steg när datasynkronisering aktiveras. Mer information [här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier).
+Detta är också ett nödvändigt steg när datasynkronisering aktiveras. Mer information [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier).
 Det gör du genom att lägga till följande egenskap i OSGI-konfigurationsfilen:
 
 `/apps/example/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~example.cfg.json`
@@ -583,7 +583,7 @@ SAML-autentiseringsflödet kan anropas från en webbsida på en AEM-webbplats ge
 
 ## Skyddad cachelagring när SAML används
 
-I publiceringsinstansen för AEM cache-lagras de flesta sidor. För SAML-skyddade sökvägar bör cachelagring antingen vara inaktiverad eller skyddad cachelagring vara aktiverad med konfigurationen auth_checker. Mer information finns i [här](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/configuring/permissions-cache)
+I publiceringsinstansen för AEM cache-lagras de flesta sidor. För SAML-skyddade sökvägar bör cachelagring antingen vara inaktiverad eller skyddad cachelagring vara aktiverad med konfigurationen auth_checker. Mer information finns i [här](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/permissions-cache)
 
 Observera att om du cachelagrar skyddade sökvägar utan att aktivera auth_checker kan du uppleva oförutsägbara beteenden.
 
@@ -597,7 +597,7 @@ och tillhandahålla frågeparametrar:
 
 | Frågeparameternamn | Frågeparametervärde |
 |----------------------|-----------------------|
-| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren avlyssnar, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi-konfigurationens &#x200B;](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
+| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren avlyssnar, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi-konfigurationens ](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
 | `saml_request_path` | URL-sökvägen som användaren ska tas till efter SAML-autentiseringen. |
 
 Den här HTML-länken utlöser till exempel SAML-inloggningsflödet och tar användaren till `/content/wknd/us/en/protected/page.html` när det är klart. Dessa frågeparametrar kan ställas in programmatiskt efter behov.
@@ -618,7 +618,7 @@ och tillhandahålla formulärdata:
 
 | Namn på formulärdata | Formulärdatavärde |
 |----------------------|-----------------------|
-| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren avlyssnar, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi-konfigurationens &#x200B;](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
+| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren avlyssnar, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi-konfigurationens ](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
 | `saml_request_path` | URL-sökvägen som användaren ska tas till efter SAML-autentiseringen. |
 
 

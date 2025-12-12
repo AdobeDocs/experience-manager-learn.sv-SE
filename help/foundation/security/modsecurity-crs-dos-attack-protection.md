@@ -4,7 +4,7 @@ description: Lär dig hur du aktiverar ModSecurity för att skydda din webbplats
 feature: Security
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
-role: Admin, Architect
+role: Admin, Developer
 level: Experienced
 jira: KT-10385
 thumbnail: KT-10385.png
@@ -12,7 +12,7 @@ doc-type: Article
 last-substantial-update: 2023-08-18T00:00:00Z
 exl-id: 9f689bd9-c846-4c3f-ae88-20454112cf9a
 duration: 783
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1171'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 Lär dig hur du aktiverar ModSecurity för att skydda din webbplats från DoS-attacker (Denial of Service) med **OWASP ModSecurity Core Rule Set (CRS)** på Adobe Experience Manager (AEM) Publish Dispatcher.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3452128?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3422976?quality=12&learn=on)
 
 ## Ökning
 
@@ -38,7 +38,7 @@ I den här självstudien visas hur du aktiverar och konfigurerar CRS-regeln **DO
 
 >[!TIP]
 >
->Det är viktigt att notera att AEM as a Cloud Service [hanterade CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=sv-SE) uppfyller de flesta kundens krav på prestanda och säkerhet. ModSecurity erbjuder dock ett extra säkerhetslager som möjliggör kundspecifika regler och konfigurationer.
+>Det är viktigt att notera att AEM as a Cloud Service [hanterade CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html) uppfyller de flesta kundens krav på prestanda och säkerhet. ModSecurity erbjuder dock ett extra säkerhetslager som möjliggör kundspecifika regler och konfigurationer.
 
 ## Lägg till CRS i Dispatcher projektmodul
 
@@ -73,7 +73,7 @@ I den här självstudien visas hur du aktiverar och konfigurerar CRS-regeln **DO
 
    Mer information finns i CRS-reglerna och konfigurationsfilen med det nya namnet i WKND-projektkoden.
 
-   ![Inaktiverade CRS-regler i AEM-projektkod - ModSecurity &#x200B;](assets/modsecurity-crs/disabled-crs-rules.png){width="200" zoomable="yes"}
+   ![Inaktiverade CRS-regler i AEM-projektkod - ModSecurity ](assets/modsecurity-crs/disabled-crs-rules.png){width="200" zoomable="yes"}
 
 ## Aktivera och konfigurera DoS-skyddsregel (Denial of Service)
 
@@ -228,7 +228,7 @@ Alla de ovanstående konfigurationerna _ModSecurity CRS_ och _DOS-PROTECTION_ fi
 
 ### Validera Dispatcher-konfiguration
 
-När du arbetar med AEM as a Cloud Service bör du validera ändringarna lokalt med `validate`-skriptet för [AEM SDK Dispatcher-verktygen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=sv-SE) innan du distribuerar _Dispatcher-konfigurationen_ .
+När du arbetar med AEM as a Cloud Service bör du validera ändringarna lokalt med _-skriptet för_ AEM SDK Dispatcher-verktygen`validate` innan du distribuerar [Dispatcher-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) .
 
 ```
 # Go inside Dispatcher SDK 'bin' directory
@@ -240,11 +240,11 @@ $ ./validate.sh <YOUR-AEM-PROJECT-CODE-DIR>/dispatcher/src
 
 ## Distribuera
 
-Distribuera lokalt validerade Dispatcher-konfigurationer med Cloud Manager pipeline [Web Tier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=sv-SE&#web-tier-config) eller [Full Stack](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=sv-SE&#full-stack-code) . Du kan också använda [Rapid Development Environment](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=sv-SE) för snabbare vändningstid.
+Distribuera lokalt validerade Dispatcher-konfigurationer med Cloud Manager pipeline [Web Tier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?#web-tier-config) eller [Full Stack](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?#full-stack-code) . Du kan också använda [Rapid Development Environment](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html) för snabbare vändningstid.
 
 ## Verifiera
 
-För att verifiera DoS-skyddet, i det här exemplet, skickar vi mer än 50 förfrågningar (25 tröskelvärden för förfrågningar gånger två förekomster) inom ett intervall av 60 sekunder. Dessa förfrågningar bör dock skickas via AEM as a Cloud Service [inbyggda](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=sv-SE) eller någon annan [CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=sv-SE&#point-to-point-CDN) som finns på webbplatsen.
+För att verifiera DoS-skyddet, i det här exemplet, skickar vi mer än 50 förfrågningar (25 tröskelvärden för förfrågningar gånger två förekomster) inom ett intervall av 60 sekunder. Dessa förfrågningar bör dock skickas via AEM as a Cloud Service [inbyggda](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html) eller någon annan [CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?#point-to-point-CDN) som finns på webbplatsen.
 
 En metod för att få CDN-överföringen är att lägga till en frågeparameter med ett **nytt slumpmässigt värde i varje begäran om webbplatssidan**.
 

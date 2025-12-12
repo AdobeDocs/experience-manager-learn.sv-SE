@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-07T00:00:00Z
 exl-id: 87143cf9-e932-4ad6-afe2-cce093c520f4
 duration: 198
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Anpassade stödrasterkolumner kan läggas till på konsolen för innehållsfragm
 Det här exemplet utökar till tilläggspunkten `contentFragmentGrid` för att lägga till en anpassad kolumn i konsolen för innehållsfragment.
 
 | AEM UI Extended | Tilläggspunkt |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Konsol för innehållsfragment](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [Stödrasterkolumner](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/grid-columns/) |
 
 ## Exempel på tillägg
@@ -208,7 +208,7 @@ Om andra data krävs för att fylla i den anpassade kolumnen kan HTTP-begärande
 
 >[!IMPORTANT]
 >
-> Kontrollera att AEM Author-instansen är konfigurerad att tillåta [korsdomänsförfrågningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=sv-SE) från de ursprung som AppBuilder-appen körs på. Tillåtna ursprung är `https://localhost:9080`, AppBuilder-scenens ursprung och AppBuilder-produktionens ursprung.
+> Kontrollera att AEM Author-instansen är konfigurerad att tillåta [korsdomänsförfrågningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) från de ursprung som AppBuilder-appen körs på. Tillåtna ursprung är `https://localhost:9080`, AppBuilder-scenens ursprung och AppBuilder-produktionens ursprung.
 >
 > Tillägget kan också anropa en anpassad [AppBuilder-åtgärd](../../runtime-action.md) som gör begäran till AEM Author för tilläggets räkning.
 

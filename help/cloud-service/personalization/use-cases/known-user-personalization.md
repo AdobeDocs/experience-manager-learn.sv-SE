@@ -4,13 +4,13 @@ description: Lär dig att personalisera innehåll baserat på kända användarda
 version: Experience Manager as a Cloud Service
 feature: Personalization
 topic: Personalization, Content Management, Integrations
-role: Developer, Architect, Leader
+role: Developer, Leader
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2025-10-17T00:00:00Z
 jira: KT-16331
 thumbnail: KT-16331.jpeg
-source-git-commit: a713c282af1dd6c3e947a1b22de53488d7761019
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '6446'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Din organisation kan ha olika användningsområden för en känd användarperson
 
 ## Exempel
 
->[!VIDEO](https://video.tv.adobe.com/v/3476113/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3476105/?learn=on&enablevpops)
 
 I den här självstudiekursen, med [WKND-exempelwebbplatsen](https://github.com/adobe/aem-guides-wknd), visar processen hur **inloggade användare** som har köpt ett **Ski**-äventyr ser en personlig hjälte på **WKND-hemsidan**.
 
@@ -78,7 +78,7 @@ Kontrollera att du har slutfört följande innan du fortsätter med användnings
 - [Integrera Adobe Target](../setup/integrate-adobe-target.md): Gör det möjligt för team att skapa och hantera personaliserat innehåll centralt i AEM och aktivera det som erbjudanden i Adobe Target.
 - [Integrera taggar i Adobe Experience Platform](../setup/integrate-adobe-tags.md): Gör att team kan hantera och distribuera JavaScript för personalisering och datainsamling utan att behöva distribuera om AEM-kod.
 
-Lär dig även känna till [Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/sv/docs/id-service/using/home)- och [Adobe Experience Platform](https://experienceleague.adobe.com/sv/docs/experience-platform/landing/home)-koncept, till exempel Schema, Datauppsättning, Datastream, Publiker, Identiteter och Profiler.
+Lär dig även känna till [Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/en/docs/id-service/using/home)- och [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home)-koncept, till exempel Schema, Datauppsättning, Datastream, Publiker, Identiteter och Profiler.
 
 I den här självstudiekursen får du lära dig mer om hur du sätter ihop identiteter och bygger en kundprofil i Adobe Experience Platform. Genom att kombinera beteendedata med transaktionsdata skapas således en fullständig kundprofil.
 
@@ -1186,9 +1186,9 @@ Grattis! Ni är en expert på att leverera den kända användarpersonaliseringsu
 
 ## Ytterligare resurser
 
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/home)
-- [Översikt över dataströmmar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/overview)
-- [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/sv/docs/target/using/experiences/vec/visual-experience-composer)
-- [Edge-segmentering](https://experienceleague.adobe.com/sv/docs/experience-platform/segmentation/methods/edge-segmentation)
-- [Målgruppstyper](https://experienceleague.adobe.com/sv/docs/experience-platform/segmentation/types/overview)
-- [Adobe Target-anslutning](https://experienceleague.adobe.com/sv/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
+- [Översikt över dataströmmar](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
+- [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
+- [Edge-segmentering](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/edge-segmentation)
+- [Målgruppstyper](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/overview)
+- [Adobe Target-anslutning](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)

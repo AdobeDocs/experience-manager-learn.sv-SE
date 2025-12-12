@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: ec8e2804-1fd6-4e95-af6d-07d840069c8b
 duration: 379
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1694'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Apache Web Server bryr sig egentligen inte om vad filtillägget är för en fil 
 | Fil | Filmål | Beskrivning |
 | --- | --- | --- |
 | FILNAMN `.any` | `/etc/httpd/conf.dispatcher.d/` | AEM Dispatcher Apache Module hämtar inställningarna från `*.any` filer. Standardfilen för överordnad inkludering är `conf.dispatcher.d/dispatcher.any` |
-| FILNAMN `_farm.any` | Mellanlagrad: `/etc/httpd/conf.dispatcher.d/available_farms/`<br>Aktiv: `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>Obs!</b> De här servergruppsfilerna ska inte kopieras till mappen `enabled_farms`, men använd `symlinks` för att ange en relativ sökväg till `available_farms/*_farm.any` file <br/>`*_farm.any` -filerna som finns i filen `conf.dispatcher.d/dispatcher.any` . Dessa överordnade gruppfiler finns för att styra modulbeteendet för varje rendering eller webbplatstyp. Filerna skapas i katalogen `available_farms` och aktiveras med en `symlink` i katalogen `enabled_farms`.  <br/>De inkluderas automatiskt efter namn från filen `dispatcher.any`.<br/><b>Baslinje</b>-servergruppsfiler börjar med `000_` för att se till att de läses in först.<br><b>Egna </b>-servergruppsfiler ska läsas in efter att deras nummerschema har startats på `100_` för att säkerställa korrekt inkluderingsbeteende. |
+| FILNAMN `_farm.any` | Mellanlagrad: `/etc/httpd/conf.dispatcher.d/available_farms/`<br>Aktiv: `/etc/httpd/conf.dispatcher.d/enabled_farms/`<br><br><b>Obs!</b> De här servergruppsfilerna ska inte kopieras till mappen `enabled_farms`, men använd `symlinks` för att ange en relativ sökväg till `available_farms/*_farm.any` file <br/>`*_farm.any` -filerna som finns i filen `conf.dispatcher.d/dispatcher.any` . Dessa överordnade gruppfiler finns för att styra modulbeteendet för varje rendering eller webbplatstyp. Filerna skapas i katalogen `available_farms` och aktiveras med en `symlink` i katalogen `enabled_farms`.  <br/>De inkluderas automatiskt efter namn från filen `dispatcher.any`.<br/><b>Baslinje</b>-servergruppsfiler börjar med `000_` för att se till att de läses in först.<br><b>Egna </b>-servergruppsfiler ska läsas in efter att deras nummerschema har startats på `100_` för att säkerställa korrekt inkluderingsbeteende. | |
 | FILNAMN `_filters.any` | `/etc/httpd/conf.dispatcher.d/filters/` | `*_filters.any` filer inkluderas från `conf.dispatcher.d/enabled_farms/*_farm.any`-filerna. Varje gård har en uppsättning regler som förändrar vilken trafik som ska filtreras bort och inte övergå till renderarna. |
 | FILNAMN `_vhosts.any` | `/etc/httpd/conf.dispatcher.d/vhosts/` | `*_vhosts.any` filer inkluderas från `conf.dispatcher.d/enabled_farms/*_farm.any`-filerna. De här filerna är en lista över värdnamn eller uri-sökvägar som matchas av blobbmatchning för att avgöra vilken renderare som ska användas för begäran |
 | FILNAMN `_cache.any` | `/etc/httpd/conf.dispatcher.d/cache/` | `*_cache.any` filer inkluderas från `conf.dispatcher.d/enabled_farms/*_farm.any`-filerna. De här filerna anger vilka objekt som cachelagras och vilka som inte |
@@ -249,11 +249,11 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 ### AMS-servergruppen innehåller
 
-![&lt;FILENAME>_farm.any innehåller underordnade .any-filer för att slutföra en servergruppskonfiguration.  I den här bilden ser du att en servergrupp kommer att innehålla varje cache för avsnittsfiler på den översta nivån, klientheaders, filters, renders och vhosts.any-filer](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Includes")
+![<FILENAME>_farm.any innehåller underordnade .any-filer för att slutföra en servergruppskonfiguration.  I den här bilden ser du att en servergrupp kommer att innehålla varje cache för avsnittsfiler på den översta nivån, klientheaders, filters, renders och vhosts.any-filer](assets/explanation-config-files/Apache-Webserver-AMS-Farm-Includes.png "Apache-Webserver-AMS-Farm-Includes")
 
 När en FILENAME_farm.any-fil från katalogen `/etc/httpd/conf.dispatcher.d/available_farms/` får en länk till katalogen `/etc/httpd/conf.dispatcher.d/enabled_farms/` används de i den konfiguration som körs.
 
-Servergruppsfilerna innehåller undergrupper baserade på [toppnivåavsnitt i servergruppen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#defining-farms-farms) som cache, klienthuvuden, filter, återgivningar och värdar.
+Servergruppsfilerna innehåller undergrupper baserade på [toppnivåavsnitt i servergruppen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#defining-farms-farms) som cache, klienthuvuden, filter, återgivningar och värdar.
 
 Filerna `FILENAME_farm.any` kommer att innehålla programsatser för varje fil baserat på var de måste inkluderas i servergruppsfilen.  Här är ett exempel på syntax för en `FILENAME_farm.any`-fil som en bra referens:
 

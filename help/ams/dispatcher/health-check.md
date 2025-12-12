@@ -10,7 +10,7 @@ thumbnail: xx.jpg
 doc-type: Article
 exl-id: 69b4e469-52cc-441b-b6e5-2fe7ef18da90
 duration: 247
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1143'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Standardkontrollen är vanligtvis en portkontroll för att se om servrarna som �
 
 För att undvika att skicka trafik till en hälsosam dispatcher som står framför en ohälsosam AEM-instans skapade AMS några extrafunktioner som utvärderar benets hälsa och inte bara Dispatcher.
 
-![Bilden visar de olika delarna som hälsokontrollen kan användas för &#x200B;](assets/load-balancer-healthcheck/health-check-pieces.png "hälsokontroll-bitar")
+![Bilden visar de olika delarna som hälsokontrollen kan användas för ](assets/load-balancer-healthcheck/health-check-pieces.png "hälsokontroll-bitar")
 
 Hälsokontrollen består av följande delar
 - 1 `Load balancer`
@@ -64,7 +64,7 @@ För att ange om AEM fungerar måste du göra en grundläggande sidkompilering o
 
 Här är sidan.  Den visar databas-ID:t för installationen
 
-![Bilden visar sidan AMS Regent &#x200B;](assets/load-balancer-healthcheck/health-check-page.png "health-check-page")
+![Bilden visar sidan AMS Regent ](assets/load-balancer-healthcheck/health-check-page.png "health-check-page")
 
 > `Note:` Vi ser till att sidan inte kan cachelagras.  Det skulle inte kontrollera den faktiska statusen om varje gång den returnerade en cachelagrad sida!
 
@@ -87,7 +87,7 @@ Detta är den `<VirtualHost>` Apache-konfigurationsfil som gör att CGI-Bin-file
 ```
 Listen 81
 <VirtualHost *:81>
-    ServerName	"health"
+    ServerName "health"
     ...SNIP...
     ScriptAlias /health/ "/var/www/cgi-bin/health/"
 </VirtualHost>
@@ -128,6 +128,7 @@ RELOAD_MODE='author'
 ```
 
 Giltiga alternativ:
+
 - författare
    - Det här är standardalternativet.
    - Detta skapar en underhållssida för författaren när den inte är felfri
@@ -142,27 +143,27 @@ När du tittar på inställningen `VirtualHost` för dessa ser du att de läser 
 
 ```
 <VirtualHost *:80>
-	ServerName	unhealthyauthor
-	ServerAlias	${AUTHOR_DEFAULT_HOSTNAME}
-	ErrorDocument	503 /error.html
-	DocumentRoot	/mnt/var/www/default
-	<Directory />
-		Options FollowSymLinks
-		AllowOverride None
-	</Directory>
-	<Directory "/mnt/var/www/default">
-		AllowOverride None
-		Require all granted
-	</Directory>
-	<IfModule mod_headers.c>
-		Header always add X-Dispatcher ${DISP_ID}
-		Header always add X-Vhost "unhealthy-author"
-	</IfModule>
-	<IfModule mod_rewrite.c>
-		ReWriteEngine   on
-		RewriteCond %{REQUEST_URI} !^/error.html$
-		RewriteRule ^/* /error.html [R=503,L,NC]
-	</IfModule>
+    ServerName    unhealthyauthor
+    ServerAlias    ${AUTHOR_DEFAULT_HOSTNAME}
+    ErrorDocument    503 /error.html
+    DocumentRoot    /mnt/var/www/default
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride None
+    </Directory>
+    <Directory "/mnt/var/www/default">
+        AllowOverride None
+        Require all granted
+    </Directory>
+    <IfModule mod_headers.c>
+        Header always add X-Dispatcher ${DISP_ID}
+        Header always add X-Vhost "unhealthy-author"
+    </IfModule>
+    <IfModule mod_rewrite.c>
+        ReWriteEngine   on
+        RewriteCond %{REQUEST_URI} !^/error.html$
+        RewriteRule ^/* /error.html [R=503,L,NC]
+    </IfModule>
 </VirtualHost>
 ```
 

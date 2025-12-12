@@ -4,7 +4,7 @@ description: Lär dig hur du blockerar DoS, DDoS och avancerade attacker med tra
 version: Experience Manager as a Cloud Service
 feature: Security, Operations
 topic: Security, Administration, Performance
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 436
@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15184
 thumbnail: KT-15184.jpeg
 exl-id: 60c2306f-3cb6-4a6e-9588-5fa71472acf7
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Nu ska vi veta vilka DDoS-skydd som är standard för din AEM-webbplats:
 - **Cachelagring:** Med bra cachelagringsprinciper är effekten av en DDoS-attack mer begränsad eftersom CDN förhindrar att de flesta begäranden kommer till ursprungsläget och orsakar prestandaförsämring.
 - **Automatisk skalning:** AEM författare och publicerar tjänster automatiskt för att hantera trafiktoppar, även om de fortfarande kan påverkas av plötsliga, massiva trafikökningar.
 - **Blockering:** Adobe CDN blockerar trafik till ursprunget om den överskrider en Adobe-definierad frekvens från en viss IP-adress, per CDN PoP (Point of Presence).
-- **Varning!** Åtgärdscentret skickar en trafikspik med varningsmeddelanden om trafiken överskrider en viss nivå. Den här varningen utlöses när trafiken till en angiven CDN PoP överskrider en _Adobe-definierad_ förfrågningsfrekvens per IP-adress. Mer information finns i [Varningar om trafikfilterregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts).
+- **Varning!** Åtgärdscentret skickar en trafikspik med varningsmeddelanden om trafiken överskrider en viss nivå. Den här varningen utlöses när trafiken till en angiven CDN PoP överskrider en _Adobe-definierad_ förfrågningsfrekvens per IP-adress. Mer information finns i [Varningar om trafikfilterregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#traffic-filter-rules-alerts).
 
 Dessa inbyggda skydd bör betraktas som en baslinje för en organisations förmåga att minimera prestandapåverkan av en DDoS-attack. Eftersom varje webbplats har olika prestandaegenskaper och kan se att prestandaförsämringen innan den Adobe-definierade hastighetsgränsen uppnås, bör du utöka standardskyddet med _kundkonfigurationen_.
 

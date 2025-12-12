@@ -4,7 +4,7 @@ description: Utforska de stora utmaningar som företag står inför när det gä
 cloud: Experience Cloud
 solution: Experience Manager, Experience Manager Assets, Experience Manager Forms, Experience Manager Sites
 feature-set: Experience Manager, Experience Manager Assets, Experience Manager Forms, Experience Manager Sites
-role: Leader, User, Developer, Admin, Architect
+role: Leader, User, Developer, Admin
 level: Beginner, Intermediate, Experienced
 type: Event
 doc-type: Video Clip
@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: 71a64094-efca-400a-a6fa-cc801cbec664
-source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%

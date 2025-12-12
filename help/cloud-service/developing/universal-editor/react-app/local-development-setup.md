@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar en lokal utvecklingsmiljö för Univer
 version: Experience Manager as a Cloud Service
 feature: Developer Tools, Headless
 topic: Development, Content Management
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 189
@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 47bef697-5253-493a-b9f9-b26c27d2db56
-source-git-commit: 7c58c5cb6a3d99a9577206b3e5e0b8dcd55a850e
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
@@ -33,8 +33,8 @@ Du måste följa den här självstudiekursen på följande sätt:
    - [Git](https://git-scm.com/downloads)
    - En IDE- eller kodredigerare, till exempel [Visual Studio Code](https://code.visualstudio.com/)
 - Hämta och installera följande:
-   - [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk): Den innehåller den QuickStart Jar som används för att köra AEM Author och publicera lokalt för utvecklingsändamål.
-   - [Universal Editor-tjänsten](https://experienceleague.adobe.com/sv/docs/experience-cloud/software-distribution/home): En lokal kopia av Universal Editor-tjänsten har en delmängd av funktioner och kan hämtas från Software Distribution Portal.
+   - [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime#download-the-aem-as-a-cloud-service-sdk): Den innehåller den QuickStart Jar som används för att köra AEM Author och publicera lokalt för utvecklingsändamål.
+   - [Universal Editor-tjänsten](https://experienceleague.adobe.com/en/docs/experience-cloud/software-distribution/home): En lokal kopia av Universal Editor-tjänsten har en delmängd av funktioner och kan hämtas från Software Distribution Portal.
    - [local-ssl-proxy](https://www.npmjs.com/package/local-ssl-proxy#local-ssl-proxy): En enkel lokal SSL HTTP-proxy som använder ett självsignerat certifikat för lokal utveckling. AEM Universal Editor kräver HTTPS-URL:en för React-appen för att läsa in den i redigeraren.
 
 ## Lokal installation

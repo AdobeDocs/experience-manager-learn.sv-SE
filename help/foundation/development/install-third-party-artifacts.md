@@ -4,7 +4,7 @@ description: Lär dig hur du installerar artefakter från tredje part som *inte 
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 feature: OSGI
 topic: Development
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 0
@@ -12,7 +12,7 @@ last-substantial-update: 2024-09-13T00:00:00Z
 jira: KT-16207
 thumbnail: KT-16207.jpeg
 exl-id: 0cec14b3-4be5-4666-a36c-968ea2fc634f
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1569'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Lär dig hur du installerar artefakter från tredje part som *inte är tillgäng
 
 - [OSGi-paketet](https://www.osgi.org/resources/architecture/): Ett OSGi-paket är en Java™-arkivfil som innehåller Java-klasser, resurser och ett manifest som beskriver paketet och dess beroenden.
 - [Java jar](https://docs.oracle.com/javase/tutorial/deployment/jar/basicsindex.html): En Java™-arkivfil som innehåller Java-klasser och -resurser.
-- [Paket](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager#what-are-packages): Ett paket är en ZIP-fil som innehåller databasinnehåll i filsystemets serialiseringsformat.
+- [Paket](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/sites/administering/contentmanagement/package-manager#what-are-packages): Ett paket är en ZIP-fil som innehåller databasinnehåll i filsystemets serialiseringsformat.
 
 ## Standardscenario
 
@@ -57,7 +57,7 @@ Orsaken kan vara:
 
 Om du vill följa den här självstudiekursen behöver du:
 
-- Installationen av den [lokala AEM-utvecklingsmiljön](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview) eller [Rapid Development Environment(RDE)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/overview).
+- Installationen av den [lokala AEM-utvecklingsmiljön](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview) eller [Rapid Development Environment(RDE)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview).
 
 - [AEM WKND-projektet](https://github.com/adobe/aem-guides-wknd) _som lägger till paketet eller behållaren eller paketet från tredje part_ och verifierar ändringarna.
 
@@ -89,7 +89,7 @@ Det första steget är att lägga till `my-example-bundle` i AEM WKND-projektets
 
 - Hämta och extrahera filen [my-example-bundle.zip](./assets/install-third-party-articafcts/my-example-bundle.zip).
 
-- Skapa katalogstrukturen `all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install` i AEM WKND-projektets `all`-modul. Katalogen `/all/src/main/content` finns. Du behöver bara skapa katalogerna `jcr_root/apps/wknd-vendor-packages/container/install`.
+- Skapa katalogstrukturen `all` i AEM WKND-projektets `all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install`-modul. Katalogen `/all/src/main/content` finns. Du behöver bara skapa katalogerna `jcr_root/apps/wknd-vendor-packages/container/install`.
 
 - Kopiera filen `my-example-bundle-1.0-SNAPSHOT.jar` från den extraherade katalogen `target` till katalogen ovan `all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install`.
 
@@ -99,7 +99,7 @@ Det första steget är att lägga till `my-example-bundle` i AEM WKND-projektets
 
 Vi använder OSGi-tjänsten `HelloWorldService` från `my-example-bundle` i AEM WKND-projektet.
 
-- Skapa `SayHello.java` Sling-serverleten @ `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet` i AEM WKND-projektets `core`-modul.
+- Skapa `core` Sling-serverleten @ `SayHello.java` i AEM WKND-projektets `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet`-modul.
 
   ```java
   package com.adobe.aem.guides.wknd.core.servlet;
@@ -138,7 +138,7 @@ Vi använder OSGi-tjänsten `HelloWorldService` från `my-example-bundle` i AEM 
   }
   ```
 
-- Lägg till `my-example-bundle` som ett beroende i AEM WKND-projektets rotfil `pom.xml`.
+- Lägg till `pom.xml` som ett beroende i AEM WKND-projektets rotfil `my-example-bundle`.
 
   ```xml
   ...
@@ -158,7 +158,7 @@ Vi använder OSGi-tjänsten `HelloWorldService` från `my-example-bundle` i AEM 
    - `systemPath` är sökvägen till filen `my-example-bundle` i AEM WKND-projektets `all`-modul.
    - `${maven.multiModuleProjectDirectory}` är en Maven-egenskap som pekar på rotkatalogen för flermodulsprojektet.
 
-- Lägg till `my-example-bundle` som ett beroende i `core`-modulens `core/pom.xml`-fil i AEM WKND-projektets -modul.
+- Lägg till `core` som ett beroende i `core/pom.xml`-modulens `my-example-bundle`-fil i AEM WKND-projektets -modul.
 
   ```xml
   ...
@@ -188,7 +188,7 @@ The [tutorial/install-3third-party-bundle](https://github.com/adobe/aem-guides-w
 
 De OSGi-paket som inte finns i den offentliga Maven-databasen kan installeras i ett AEM-projekt genom att följa dessa steg:
 
-- Kopiera OSGi-paketet till `jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install` för modulen `all`. Det här steget är nödvändigt för att paketera och distribuera paketet till AEM-instansen.
+- Kopiera OSGi-paketet till `all` för modulen `jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install`. Det här steget är nödvändigt för att paketera och distribuera paketet till AEM-instansen.
 
 - Uppdatera rotmodulens och kärnmodulens `pom.xml`-filer för att lägga till OSGi-paketet som ett beroende med `system` scope och `systemPath` som pekar på paketfilen. Detta steg är nödvändigt för att kompilera projektet.
 
@@ -208,7 +208,7 @@ Det första steget är att lägga till `my-example-jar` i AEM WKND-projektets `a
 
 - Hämta och extrahera filen [my-example-jar.zip](./assets/install-third-party-articafcts/my-example-jar.zip).
 
-- Skapa katalogstrukturen `all/resource/jar` i AEM WKND-projektets `all`-modul.
+- Skapa katalogstrukturen `all` i AEM WKND-projektets `all/resource/jar`-modul.
 
 - Kopiera filen `my-example-jar-1.0-SNAPSHOT.jar` från den extraherade katalogen `target` till katalogen ovan `all/resource/jar`.
 
@@ -218,7 +218,7 @@ Det första steget är att lägga till `my-example-jar` i AEM WKND-projektets `a
 
 Vi använder `MyHelloWorldService` från `my-example-jar` i AEM WKND-projektet.
 
-- Skapa `SayHello.java` Sling-serverleten @ `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet` i AEM WKND-projektets `core`-modul.
+- Skapa `core` Sling-serverleten @ `SayHello.java` i AEM WKND-projektets `core/src/main/java/com/adobe/aem/guides/wknd/core/servlet`-modul.
 
   ```java
   package com.adobe.aem.guides.wknd.core.servlet;
@@ -258,7 +258,7 @@ Vi använder `MyHelloWorldService` från `my-example-jar` i AEM WKND-projektet.
   }    
   ```
 
-- Lägg till `my-example-jar` som ett beroende i AEM WKND-projektets rotfil `pom.xml`.
+- Lägg till `pom.xml` som ett beroende i AEM WKND-projektets rotfil `my-example-jar`.
 
   ```xml
   ...
@@ -278,7 +278,7 @@ Vi använder `MyHelloWorldService` från `my-example-jar` i AEM WKND-projektet.
    - `systemPath` är sökvägen till filen `my-example-jar` i AEM WKND-projektets `all`-modul.
    - `${maven.multiModuleProjectDirectory}` är en Maven-egenskap som pekar på rotkatalogen för flermodulsprojektet.
 
-- Gör två ändringar i `core/pom.xml`-filen för modulen `core` i AEM WKND-projektet:
+- Gör två ändringar i `core`-filen för modulen `core/pom.xml` i AEM WKND-projektet:
 
    - Lägg till `my-example-jar` som ett beroende.
 
@@ -333,7 +333,7 @@ Vi använder `MyHelloWorldService` från `my-example-jar` i AEM WKND-projektet.
 
 The [tutorial/install-3third-party-jar](https://github.com/adobe/aem-guides-wknd/compare/main...tutorial/install-3rd-party-jar) branch of the AEM WKND project has the above changes for your reference.
 
-I scenarier där Java jar-filen _är tillgänglig i den offentliga Maven-databasen men inte är ett OSGi-paket_, kan du följa ovanstående steg förutom att elementen `system` scope och `systemPath` för `<dependency>` inte krävs.
+I scenarier där Java jar-filen _är tillgänglig i den offentliga Maven-databasen men inte är ett OSGi-paket_, kan du följa ovanstående steg förutom att elementen `<dependency>` scope och `system` för `systemPath` inte krävs.
 
 ### Viktiga lärdomar{#key-learnings-jar}
 
@@ -343,7 +343,7 @@ Java-burkarna som inte är OSGi-paket och som är tillgängliga eller inte är t
 
 Följande steg krävs bara om Java jar inte är tillgängligt i den offentliga Maven-databasen:
 
-- Kopiera Java jar till `resource/jar`-katalogen för modulen `all`.
+- Kopiera Java jar till `all`-katalogen för modulen `resource/jar`.
 
 - Uppdatera rot- och kärnmodulens `pom.xml`-filer för att lägga till Java-behållaren som ett beroende med `system` scope och `systemPath` som pekar på jar-filen.
 
@@ -371,7 +371,7 @@ Det första steget är att lägga till paketet i AEM WKND-projektets `all`-modul
 
 - Det lokalt skapade paketet finns @ `all/target`, det finns två ZIP-filer, det ena som slutar med `-cloud` är avsett för AEM as a Cloud Service och det andra för AEM 6.X.
 
-- Skapa katalogstrukturen `all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install` i AEM WKND-projektets `all`-modul. Katalogen `/all/src/main/content` finns. Du behöver bara skapa katalogerna `jcr_root/apps/wknd-vendor-packages/container/install`.
+- Skapa katalogstrukturen `all` i AEM WKND-projektets `all/src/main/content/jcr_root/apps/wknd-vendor-packages/container/install`-modul. Katalogen `/all/src/main/content` finns. Du behöver bara skapa katalogerna `jcr_root/apps/wknd-vendor-packages/container/install`.
 
 - Kopiera den lokalt skapade paketfilen (.zip) till katalogen `/all/src/main/content/jcr_root/apps/mysite-vendor-packages/container/install`.
 
@@ -397,7 +397,7 @@ Det första steget är att lägga till paketet i AEM WKND-projektets `all`-modul
 
 AEM-paketen som inte är tillgängliga i den offentliga Maven-databasen kan installeras i ett AEM-projekt enligt följande:
 
-- Kopiera paketet till `jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install`-katalogen för modulen `all`. Det här steget är nödvändigt för att paketera och distribuera paketet till AEM-instansen.
+- Kopiera paketet till `all`-katalogen för modulen `jcr_root/apps/<PROJECT-NAME>-vendor-packages/container/install`. Det här steget är nödvändigt för att paketera och distribuera paketet till AEM-instansen.
 
 
 ## Sammanfattning

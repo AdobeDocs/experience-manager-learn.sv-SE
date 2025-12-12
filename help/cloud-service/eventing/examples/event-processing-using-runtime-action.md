@@ -4,7 +4,7 @@ description: Lär dig hur du bearbetar mottagna AEM-händelser med Adobe I/O Run
 version: Experience Manager as a Cloud Service
 feature: Developing, App Builder
 topic: Development, Architecture, Content Management
-role: Architect, Developer
+role: Developer
 level: Beginner
 doc-type: Tutorial
 duration: 558
@@ -12,7 +12,7 @@ last-substantial-update: 2024-01-30T00:00:00Z
 jira: KT-14879
 thumbnail: KT-14879.jpeg
 exl-id: c362011e-89e4-479c-9a6c-2e5caa3b6e02
-source-git-commit: bb4f9982263a15f18b9f39b1577b61310dfbe643
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '548'
 ht-degree: 0%
@@ -162,7 +162,7 @@ För att utföra de uppgifter som nämns ovan ska vi utveckla följande JavaScri
   ...
   ```
 
-  Se självstudiekursen [AEM Service Credentials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=sv-SE) om du vill veta mer om den. [App Builder konfigurationsfiler](https://developer.adobe.com/app-builder/docs/guides/configuration/) för hantering av hemligheter och åtgärdsparametrar.
+  Se självstudiekursen [AEM Service Credentials](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials.html?lang=en) om du vill veta mer om den. [App Builder konfigurationsfiler](https://developer.adobe.com/app-builder/docs/guides/configuration/) för hantering av hemligheter och åtgärdsparametrar.
 
 - Modulen `src/dx-excshell-1/actions/aem-event-processor/storeEventData.js` lagrar ursprungliga händelsedata, aktivitetsmeddelanden och ändringsinformation (om sådan finns) i Adobe I/O Runtime-lagringsutrymme.
 

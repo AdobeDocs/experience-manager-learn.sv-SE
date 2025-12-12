@@ -4,7 +4,7 @@ description: Lär dig hur du analyserar de CDN-loggar som tillhandahålls av AEM
 version: Experience Manager as a Cloud Service
 feature: Operations, CDN Cache
 topic: Administration, Performance
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2023-11-10T00:00:00Z
@@ -12,7 +12,7 @@ jira: KT-13312
 thumbnail: KT-13312.jpeg
 exl-id: 43aa7133-7f4a-445a-9220-1d78bb913942
 duration: 276
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1476'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Cachelagrat innehåll på CDN minskar den fördröjning som webbplatsanvändare 
 Lär dig hur du analyserar de **CDN-loggar** som tillhandahålls av AEM as a Cloud Service och får insikter som **cache-träffgrad** och **högsta URL:er för _MISS_ och _PASS_ cache-typer**, för optimeringsändamål.
 
 
-CDN-loggarna är tillgängliga i JSON-format, som innehåller olika fält, bland annat `url`, `cache`. Mer information finns i [CDN-loggformatet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=sv-SE#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs). Fältet `cache` innehåller information om _cache_ och dess möjliga värden är HIT, MISS eller PASS. Vi granskar detaljerna om möjliga värden.
+CDN-loggarna är tillgängliga i JSON-format, som innehåller olika fält, bland annat `url`, `cache`. Mer information finns i [CDN-loggformatet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/logging.html?lang=en#cdn-log:~:text=Toggle%20Text%20Wrapping-,Log%20Format,-The%20CDN%20logs). Fältet `cache` innehåller information om _cache_ och dess möjliga värden är HIT, MISS eller PASS. Vi granskar detaljerna om möjliga värden.
 
 | Tillstånd för cache </br>, möjligt värde | Beskrivning |
 |------------------------------------|:-----------------------------------------------------:|
@@ -61,13 +61,13 @@ Om den hämtade loggfilen kommer från _idag_ är filtillägget `.log`, annars �
 
 ## Analysera hämtade CDN-loggar
 
-Analysera CDN-loggfilen om du vill få insikter om till exempel cacheminnets träffgrad och de översta URL:erna för MISS- och PASS-cachetyperna. Dessa insikter hjälper till att optimera [CDN-cachekonfigurationen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching) och förbättra platsens prestanda.
+Analysera CDN-loggfilen om du vill få insikter om till exempel cacheminnets träffgrad och de översta URL:erna för MISS- och PASS-cachetyperna. Dessa insikter hjälper till att optimera [CDN-cachekonfigurationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching) och förbättra platsens prestanda.
 
 I den här självstudiekursen visas tre alternativ för att analysera CDN-loggarna:
 
 1. **Elasticsearch, Logstash och Kibana (ELK)**: [ELK-instrumentpanelsverktyget](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/ELK/README.md) kan installeras lokalt.
-1. **Splunk**: Verktyget [Splunk-kontrollpanelen](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) kräver åtkomst till Splunk och [AEMCS-loggvidarebefordran aktiverad](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) för att kunna importera CDN-loggarna.
-1. **Jupyter-anteckningsbok**: Den kan nås via fjärråtkomst som en del av [Adobe Experience Platform](https://experienceleague.adobe.com/sv/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) utan att ytterligare programvara installeras, för kunder som har licensierat Adobe Experience Platform.
+1. **Splunk**: Verktyget [Splunk-kontrollpanelen](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md) kräver åtkomst till Splunk och [AEMCS-loggvidarebefordran aktiverad](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) för att kunna importera CDN-loggarna.
+1. **Jupyter-anteckningsbok**: Den kan nås via fjärråtkomst som en del av [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data) utan att ytterligare programvara installeras, för kunder som har licensierat Adobe Experience Platform.
 
 ### Alternativ 1: Använda verktygen på ELK-kontrollpanelen
 
@@ -149,7 +149,7 @@ Om du vill identifiera nyckeldetaljerna använder du projektet [AEMCS-CDN-Log-An
 
 För dem som inte vill installera programvaran lokalt (dvs. ELK-kontrollpanelsverktyget från föregående avsnitt) finns det ett annat alternativ, men det krävs en licens för Adobe Experience Platform.
 
-[Jupyter-anteckningsboken](https://jupyter.org/) är ett webbprogram med öppen källkod där du kan skapa dokument som innehåller kod, text och visualisering. Det används för datatransformering, visualisering och statistisk modellering. Den kan nås via fjärranslutning [&#x200B; som en del av Adobe Experience Platform](https://experienceleague.adobe.com/sv/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data).
+[Jupyter-anteckningsboken](https://jupyter.org/) är ett webbprogram med öppen källkod där du kan skapa dokument som innehåller kod, text och visualisering. Det används för datatransformering, visualisering och statistisk modellering. Den kan nås via fjärranslutning [ som en del av Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/data-science-workspace/jupyterlab/analyze-your-data).
 
 #### Hämtar den interaktiva Python-anteckningsboksfilen
 
@@ -172,13 +172,13 @@ Kör sedan Jupyter Notebook i Adobe Experience Platform enligt följande:
 
    ![Värdeuppdatering för loggfil för anteckningsbok](assets/cdn-logs-analysis/datascience-notebook.png){width="500" zoomable="yes"}
 
-1. Ladda upp CDN-loggfilen och `aemcs_cdn_logs_analysis.ipynb` -filen med ikonen **Överför filer** på JupyterLab-menyn.
+1. Ladda upp CDN-loggfilen och **-filen med ikonen**&#x200B;Överför filer`aemcs_cdn_logs_analysis.ipynb` på JupyterLab-menyn.
 
    ![Överför filer - JupyteLab](assets/cdn-logs-analysis/jupyterlab-upload-file.png){width="500" zoomable="yes"}
 
 1. Öppna filen `aemcs_cdn_logs_analysis.ipynb` genom att dubbelklicka.
 
-1. Uppdatera värdet `log_file` i avsnittet **Läs in CDN-loggfil** i anteckningsboken.
+1. Uppdatera värdet **i avsnittet** Läs in CDN-loggfil`log_file` i anteckningsboken.
 
    ![Värdeuppdatering för loggfil för anteckningsbok](assets/cdn-logs-analysis/notebook-update-variable.png){width="500" zoomable="yes"}
 
@@ -200,6 +200,6 @@ Du kan förbättra Jupyter-anteckningsboken för att analysera CDN-loggarna utif
 
 När du har analyserat CDN-loggarna kan du optimera CDN-cachekonfigurationen för att förbättra platsens prestanda. AEM bästa metod är att ha en cache-träfffrekvens på 90 % eller mer.
 
-Mer information finns i [Optimera CDN-cachekonfiguration](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching).
+Mer information finns i [Optimera CDN-cachekonfiguration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching).
 
 AEM WKND-projektet har en referens-CDN-konfiguration. Mer information finns i [CDN-konfiguration](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L137-L190) från filen `wknd.vhost`.

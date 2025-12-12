@@ -3,7 +3,7 @@ title: Komma igång med SPA-redigeraren och fjärr-SPA - översikt
 description: Välkommen till självstudiekursen med flera delar för utvecklare som vill utöka en befintlig fjärr-SPA med redigerbart AEM-innehåll med AEM SPA Editor.
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7630
 thumbnail: 333272.jpeg
@@ -12,7 +12,7 @@ doc-type: Tutorial
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
 duration: 294
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '571'
 ht-degree: 1%
@@ -25,9 +25,9 @@ ht-degree: 1%
 
 Välkommen till den självstudiekurs i flera delar för utvecklare som vill utöka en befintlig React-baserad (eller Next.js) fjärr-SPA med redigerbart AEM-innehåll med AEM SPA Editor.
 
-Den här självstudiekursen bygger på [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE), en React-app som använder AEM Content Fragment-innehåll i stället för AEM GraphQL API:er, men har ingen kontextredigering av SPA-innehåll.
+Den här självstudiekursen bygger på [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html), en React-app som använder AEM Content Fragment-innehåll i stället för AEM GraphQL API:er, men har ingen kontextredigering av SPA-innehåll.
 
->[!VIDEO](https://video.tv.adobe.com/v/3444851?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
 ## Om självstudiekursen
 
@@ -48,7 +48,7 @@ Självstudiekursen är utformad för att fungera med **AEM as a Cloud Service** 
 
 Den här självstudiekursen kräver följande:
 
-+ [SDK för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=sv-SE)
++ [SDK för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en)
 + [Node.js v18](https://nodejs.org/en/)
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
@@ -66,7 +66,7 @@ I den här självstudien förutsätts:
 
 >[!NOTE]
 >
-> **Behöver du hjälp med att konfigurera din lokala utvecklingsmiljö?** Titta i [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=sv-SE).
+> **Behöver du hjälp med att konfigurera din lokala utvecklingsmiljö?** Titta i [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 
 ## &#x200B;1. Konfigurera AEM för SPA Editor
 

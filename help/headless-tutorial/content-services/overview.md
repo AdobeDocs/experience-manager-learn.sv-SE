@@ -1,5 +1,5 @@
 ---
-title: Komma igång med AEM utan rubriker - Innehållstjänster
+title: Komma igång med AEM Headless - Innehållstjänster
 description: En komplett självstudiekurs som visar hur du bygger upp och visar innehåll med hjälp av AEM Headless.
 feature: Content Fragments, APIs
 topic: Headless, Content Management
@@ -8,22 +8,22 @@ level: Beginner
 doc-type: Tutorial
 exl-id: 5aa32791-861a-48e3-913c-36028373b788
 duration: 311
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '327'
 ht-degree: 3%
 
 ---
 
-# Komma igång med AEM utan rubriker - Innehållstjänster
+# Komma igång med AEM Headless - Innehållstjänster
 
-AEM Content Services använder traditionella AEM Pages för att skapa rubrikfria REST API-slutpunkter och AEM Components definierar, eller refererar, innehållet som ska visas på dessa slutpunkter.
+AEM Content Services använder traditionella AEM Pages för att skapa rubrikfria REST API-slutpunkter och AEM Components definierar, eller refererar, det innehåll som ska visas på dessa slutpunkter.
 
-AEM Content Services tillåter att samma innehållsavvikelser som används för att skapa webbsidor i AEM Sites definierar innehållet och schemana för dessa HTTP API:er. Med AEM Pages och AEM Components kan marknadsförarna snabbt komponera och uppdatera flexibla JSON API:er som kan användas i alla applikationer.
+Med AEM Content Services kan samma innehållsabstraktioner som används för att skapa webbsidor i AEM Sites definiera innehåll och scheman för dessa HTTP-API:er. Med AEM Pages och AEM Components kan marknadsförarna snabbt komponera och uppdatera flexibla JSON-API:er som kan användas i alla applikationer.
 
 ## Självstudiekurs om innehållstjänster
 
-En heltäckande självstudiekurs som visar hur man bygger upp och exponerar innehåll med hjälp av AEM och som används av en intern mobilapp i ett headless CMS-scenario.
+En heltäckande självstudiekurs som visar hur man bygger upp och exponerar innehåll med AEM och som används av en inbyggd mobilapp i ett headless CMS-scenario.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28315?quality=12&learn=on)
 
@@ -32,7 +32,7 @@ I den här självstudiekursen utforskas hur AEM Content Services kan användas f
 Den här självstudiekursen kommer att omfatta följande ämnen:
 
 * Skapa innehåll som representerar en händelse med innehållsfragment
-* Definiera AEM Content Services-slutpunkter med AEM Sites mallar och sidor som visar händelsedata som JSON
+* Definiera slutpunkter för AEM Content Services med AEM Sites mallar och sidor som visar händelsedata som JSON
 * Se hur AEM WCM Core Components kan användas för att marknadsförarna ska kunna skapa JSON-slutpunkter
 * Förbruka AEM Content Services JSON från en mobilapp
    * Användningen av Android beror på att det har en plattformsoberoende emulator som alla användare (Windows, macOS och Linux) av den här självstudiekursen kan använda för att köra programmet.
@@ -43,11 +43,11 @@ Källkoden och innehållspaketen är tillgängliga på [AEM Guides - WKND Mobile
 
 Om du har problem med självstudiekursen eller koden lämnar du ett [GitHub-problem](https://github.com/adobe/aem-guides-wknd-mobile/issues).
 
-## AEM GraphQL jämfört med AEM Content Services
+## AEM GraphQL vs. AEM Content Services
 
 |                                | AEM GraphQL API:er | AEM Content Services |
 |--------------------------------|:-----------------|:---------------------|
-| Schemadefinition | Strukturerade modeller för innehållsfragment | AEM |
-| Innehåll | Innehållsfragment | AEM |
-| Innehållsidentifiering | Efter GraphQL-fråga | Efter AEM |
+| Schemadefinition | Strukturerade modeller för innehållsfragment | AEM Components |
+| Innehåll | Innehållsfragment | AEM Components |
+| Innehållsidentifiering | Efter GraphQL-fråga | Efter AEM Page |
 | Leveransformat | GraphQL JSON | AEM ComponentExporter JSON |

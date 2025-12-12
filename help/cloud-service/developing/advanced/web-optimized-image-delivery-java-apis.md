@@ -4,7 +4,7 @@ description: Lär dig använda AEM as a Cloud Service webboptimerade Java&handel
 version: Experience Manager as a Cloud Service
 feature: APIs, Sling Model, OSGI, HTL or HTML Template Language
 topic: Performance, Development
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Code Sample
 last-substantial-update: 2023-03-30T00:00:00Z
@@ -12,7 +12,7 @@ jira: KT-13014
 thumbnail: KT-13014.jpeg
 exl-id: c6bb9d6d-aef0-42d5-a189-f904bbbd7694
 duration: 352
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -23,17 +23,17 @@ ht-degree: 0%
 
 Lär dig använda AEM as a Cloud Service webboptimerade Java™-API:er för bildleverans för att utveckla högpresterande webbupplevelser.
 
-AEM as a Cloud Service stöder [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html?lang=sv-SE) som automatiskt genererar optimerade bildwebbåtergivningar av resurser. Webboptimerad bildleverans kan användas på tre sätt:
+AEM as a Cloud Service stöder [webboptimerad bildleverans](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html) som automatiskt genererar optimerade bildwebbåtergivningar av resurser. Webboptimerad bildleverans kan användas på tre sätt:
 
-1. [Använd AEM Core WCM-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE)
-2. Skapa en anpassad komponent som [utökar avbildningskomponenten för AEM Core WCM-komponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html?lang=sv-SE#tackling-the-image-problem)
+1. [Använd AEM Core WCM-komponenter](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html)
+2. Skapa en anpassad komponent som [utökar avbildningskomponenten för AEM Core WCM-komponenten](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/project-archetype/custom-component.html#tackling-the-image-problem)
 3. Skapa en anpassad komponent som använder AssetDelivery Java™ API för att generera webboptimerade bild-URL:er.
 
 I den här artikeln utforskas hur du använder Java™-API:er för webboptimerade bilder i en anpassad komponent, på ett sätt som tillåter kodbaserad användning på både AEM as a Cloud Service och AEM SDK.
 
 ## Java™-API:er
 
-[AssetDelivery API](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/cq/wcm/spi/AssetDelivery.html) är en OSGi-tjänst som genererar webboptimerade URL:er för leverans av bildresurser. `AssetDelivery.getDeliveryURL(...)` tillåtna alternativ [dokumenteras här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html?lang=sv-SE#can-i-use-web-optimized-image-delivery-with-my-own-component%3F).
+[AssetDelivery API](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/com/adobe/cq/wcm/spi/AssetDelivery.html) är en OSGi-tjänst som genererar webboptimerade URL:er för leverans av bildresurser. `AssetDelivery.getDeliveryURL(...)` tillåtna alternativ [dokumenteras här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/web-optimized-image-delivery.html#can-i-use-web-optimized-image-delivery-with-my-own-component%3F).
 
 OSGi-tjänsten `AssetDelivery` är bara klar när den körs i AEM as a Cloud Service. I AEM SDK returneras `AssetDelivery` OSGi-tjänsten `null`. Det är bäst att villkorligt använda den webboptimerade URL:en när du kör på AEM as a Cloud Service och använda en URL för reservbild på AEM SDK. Resursens webbåtergivning är vanligtvis ett tillräckligt reservläge.
 

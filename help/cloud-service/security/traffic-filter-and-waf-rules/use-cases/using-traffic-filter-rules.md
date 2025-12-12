@@ -4,14 +4,14 @@ description: Lär dig hur du skyddar AEM webbplatser från denial of service-att
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18307
 thumbnail: null
 exl-id: 5e235220-82f6-46e4-b64d-315f027a7024
-source-git-commit: b7f567da159865ff04cb7e9bd4dae0b140048e7d
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1780'
 ht-degree: 0%
@@ -212,7 +212,7 @@ Varningar genereras när trafikfilterreglerna aktiveras. Du kan granska dessa va
 
 ## Analysera resultaten
 
-Om du vill analysera resultatet av trafikfilterreglerna kan du använda AEMCS CDN-loggarna och ELK-kontrollpanelen. Följ instruktionerna från inställningsavsnittet [CDN-loggar &#x200B;](../setup.md#ingest-cdn-logs) för att importera CDN-loggarna till ELK-stacken.
+Om du vill analysera resultatet av trafikfilterreglerna kan du använda AEMCS CDN-loggarna och ELK-kontrollpanelen. Följ instruktionerna från inställningsavsnittet [CDN-loggar ](../setup.md#ingest-cdn-logs) för att importera CDN-loggarna till ELK-stacken.
 
 På följande skärmbild ser du CDN-loggarna i AEM Dev-miljön som är inkapslade i ELK-stacken.
 
@@ -228,7 +228,7 @@ Du kan också använda andra paneler i CDN Traffic Dashboard för att analysera 
 
 ### Splunk-integrering
 
-Kunder som har [Splunk Log-vidarebefordran aktiverad](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) kan skapa nya instrumentpaneler för att analysera trafikmönstren.
+Kunder som har [Splunk Log-vidarebefordran aktiverad](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) kan skapa nya instrumentpaneler för att analysera trafikmönstren.
 
 Om du vill skapa kontrollpaneler i Splunk följer du stegen [Splunk dashboards för AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis).
 
@@ -391,4 +391,4 @@ För mer avancerade scenarier kan du utforska följande exempel som visar hur du
 
 ## Ytterligare resurser
 
-- [Rekommenderade startregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)
+- [Rekommenderade startregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)

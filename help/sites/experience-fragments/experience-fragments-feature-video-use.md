@@ -4,7 +4,7 @@ description: Med Experience Fragments kan innehållsförfattare återanvända in
 sub-product: Experience Manager Sites
 feature: Experience Fragments
 topic: Content Management
-role: Architect, Developer, Admin, User
+role: Developer, Admin, User
 level: Beginner
 doc-type: Feature Video
 version: Experience Manager as a Cloud Service
@@ -13,7 +13,7 @@ thumbnail: 331785.jpg
 last-substantial-update: 2021-06-09T00:00:00Z
 exl-id: 84d2b240-5ecc-4230-97a0-6c2faead8d1a
 duration: 228
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 0%
@@ -26,9 +26,9 @@ ht-degree: 0%
 
 Med Experience Fragments kan innehållsförfattare återanvända innehåll i olika kanaler, inklusive webbplatser och tredjepartssystem.
 
->[!VIDEO](https://video.tv.adobe.com/v/3445611?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/331785?quality=12&learn=on)
 
-En Experience Fragment är en grupperad uppsättning komponenter som när de kombineras skapar en upplevelse. En *titel*, *bild*, *beskrivning* och *Anrop till åtgärdsknapp* kan till exempel kombineras för att skapa en helskärmsfunktion.
+En Experience Fragment är en grupperad uppsättning komponenter som när de kombineras skapar en upplevelse. En *titel*, *Bild*, *Beskrivning* och *Call to action-knapp* kan till exempel kombineras för att skapa en helhetsbild.
 
 Med Experience Fragments kan marknadsförarna
 

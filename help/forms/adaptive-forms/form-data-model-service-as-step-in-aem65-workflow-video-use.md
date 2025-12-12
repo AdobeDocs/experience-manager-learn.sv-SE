@@ -10,7 +10,7 @@ level: Intermediate
 exl-id: 1f13d82e-c1d0-4c8c-8468-b4a4c5897c71
 last-substantial-update: 2021-02-09T00:00:00Z
 duration: 239
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '257'
 ht-degree: 0%
@@ -21,6 +21,8 @@ ht-degree: 0%
 
 Från och med AEM Forms 6.4 kan vi nu använda Form Data Model Service som en del av AEM Workflow. I följande videofilm visas de steg som krävs för att konfigurera steget Formulärdatamodell i AEM Workflow
 
+>[!NOTE]
+>
 >Funktionen som demonstreras i den här videon kräver AEM Forms 6.5.1
 
 
@@ -38,5 +40,6 @@ Följ instruktionerna nedan om du vill testa den här funktionen på servern
    * Anpassad form som utlöser arbetsflödet när det skickas.
 * Öppna [MortgageApplicationForm](http://localhost:4502/content/dam/formsanddocuments/loanapplication/jcr:content?wcmmode=disabled). Fyll i uppgifterna och skicka in. När formuläret skickas aktiveras arbetsflödet [för låneprogram](http://http://localhost:4502/editor.html/conf/global/settings/workflow/models/LoanApplication2.html).
 
-![&#x200B; arbetsflöde &#x200B;](assets/invokefdm651.PNG).
+![arbetsflöde](assets/invokefdm651.PNG).
+
 Arbetsflödet använder eller delar komponenten för att dirigera programmet till administratören om kreditpoängen är över 500. Om kreditpoängen är mindre än 500 dirigeras programmet till klotter.

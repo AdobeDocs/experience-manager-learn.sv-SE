@@ -4,7 +4,7 @@ description: Lär dig hur du gör HTTPS-anrop från AEM till webb-API:er som kr�
 feature: Security
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Experienced
 jira: KT-13881
 thumbnail: KT-13881.png
@@ -12,7 +12,7 @@ doc-type: Article
 last-substantial-update: 2023-10-10T00:00:00Z
 exl-id: 7238f091-4101-40b5-81d9-87b4d57ccdb2
 duration: 495
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '731'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Lär dig hur du gör HTTPS-anrop från AEM till webb-API:er som kräver mTLS-autentisering (Mutual Transport Layer Security).
 
->[!VIDEO](https://video.tv.adobe.com/v/3447863?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3424855?quality=12&learn=on)
 
 mTLS- eller tvåvägs TLS-autentisering förbättrar TLS-protokollets säkerhet genom att kräva att **både klienten och servern autentiserar varandra**. Autentiseringen görs med digitala certifikat. Det används ofta i scenarier där stark säkerhet och identitetsverifiering är avgörande.
 
@@ -122,7 +122,7 @@ Så här importerar du AEM-certifikat:
 
    ![Privat nyckel och certifikat för AEM har importerats](assets/mutual-tls-authentication/aem-privatekey-cert-imported.png)
 
-Om API-providern använder ett självsignerat CA-certifikat importerar du det mottagna certifikatet till AEM TrustStore, följer du stegen från [här](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html?lang=sv-SE#httpclient-and-load-aem-truststore-material).
+Om API-providern använder ett självsignerat CA-certifikat importerar du det mottagna certifikatet till AEM TrustStore, följer du stegen från [här](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/call-internal-apis-having-private-certificate.html#httpclient-and-load-aem-truststore-material).
 
 Om AEM använder ett självsignerat CA-certifikat ber du API-providern att importera det.
 
@@ -217,7 +217,7 @@ private KeyStore getAEMTrustStore(KeyStoreService keyStoreService, ResourceResol
 - Om API-providern använder ett självsignerat CA-certifikat hämtar du det globala AEM TrustStore, gör metoden `getAEMTrustStore(...)` det.
 - Skapa ett objekt av `SSLContextBuilder`, se Java™ [API-information](https://javadoc.io/static/org.apache.httpcomponents/httpcore/4.4.8/index.html?org/apache/http/ssl/SSLContextBuilder.html).
 - Läs in användarens AEM KeyStore till `SSLContextBuilder` med metoden `loadKeyMaterial(final KeyStore keystore,final char[] keyPassword)`.
-- Nyckellösenordet är det lösenord som angavs när nyckelbehållaren skapades. Det bör lagras i OSGi-konfigurationen, se [Hemliga konfigurationsvärden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#secret-configuration-values).
+- Nyckellösenordet är det lösenord som angavs när nyckelbehållaren skapades. Det bör lagras i OSGi-konfigurationen, se [Hemliga konfigurationsvärden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values).
 
 ## Undvik JVM-nyckelbehållarändringar
 

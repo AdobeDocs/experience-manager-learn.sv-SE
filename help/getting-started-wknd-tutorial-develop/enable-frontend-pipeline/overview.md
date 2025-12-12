@@ -4,7 +4,7 @@ description: Lär dig hur du aktiverar en frontpipeline för vanliga AEM-projekt
 version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
-role: Developer, Architect, Admin
+role: Developer, Admin
 level: Intermediate
 jira: KT-10689
 mini-toc-levels: 1
@@ -15,7 +15,7 @@ last-substantial-update: 2022-09-23T00:00:00Z
 doc-type: Tutorial
 exl-id: b795e7e8-f611-4fc3-9846-1d3f1a28ccbc
 duration: 206
-source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 0%
@@ -35,10 +35,10 @@ Efter WKND Sites AEM-projektkonverteringen kan utvecklarna arbeta separat från 
 
 >[!IMPORTANT]
 >
->Generellt sett används frontendspipelinen vanligtvis med [AEM Quick Site Creation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/overview.html?lang=sv-SE). Det finns en självstudiekurs [Getting Started with AEM Sites - Quick Site Creation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html?lang=sv-SE) som du kan lära dig mer om. Så i den här självstudiekursen och tillhörande videor som du hittar referenser till den är det för att se till att små skillnader verkligen uppstår och att det finns en direkt eller indirekt jämförelse som förklarar viktiga koncept.
+>Generellt sett används frontendspipelinen vanligtvis med [AEM Quick Site Creation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/site-creation/quick-site/overview.html?lang=en). Det finns en självstudiekurs [Getting Started with AEM Sites - Quick Site Creation](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html) som du kan lära dig mer om. Så i den här självstudiekursen och tillhörande videor som du hittar referenser till den är det för att se till att små skillnader verkligen uppstår och att det finns en direkt eller indirekt jämförelse som förklarar viktiga koncept.
 
 
-En relaterad självstudiekurs i [flera steg](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html?lang=sv-SE) går igenom implementeringen av en AEM-webbplats för ett fiktivt livsstilsmärke som WKND med hjälp av funktionen Skapa snabbwebbplats. Det är också praktiskt att granska arbetsflödet [Tema](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html?lang=sv-SE) för att förstå arbetsuppgifterna för pipeline i frontend.
+En relaterad självstudiekurs i [flera steg](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/overview.html) går igenom implementeringen av en AEM-webbplats för ett fiktivt livsstilsmärke som WKND med hjälp av funktionen Skapa snabbwebbplats. Det är också praktiskt att granska arbetsflödet [Tema](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/site-template/theming.html) för att förstå arbetsuppgifterna för pipeline i frontend.
 
 ## Översikt, fördelar och överväganden för frontendpipeline
 
@@ -51,9 +51,9 @@ En relaterad självstudiekurs i [flera steg](https://experienceleague.adobe.com/
 
 ## Förutsättningar
 
-Distributionssteget i den här självstudiekursen äger rum i en Adobe Cloud Manager. Se till att du har en __Distributionshanterarroll__, se [Rolldefinitioner för molnet](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=sv-SE#role-definitions).
+Distributionssteget i den här självstudiekursen äger rum i en Adobe Cloud Manager. Se till att du har en __Distributionshanterarroll__, se [Rolldefinitioner för molnet](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions).
 
-Var noga med att använda [sandlådeprogrammet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html?lang=sv-SE) och [utvecklingsmiljön](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE) när du slutför den här självstudiekursen.
+Var noga med att använda [sandlådeprogrammet](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) och [utvecklingsmiljön](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html) när du slutför den här självstudiekursen.
 
 ## Nästa steg {#next-steps}
 

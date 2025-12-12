@@ -4,7 +4,7 @@ description: Lär dig hur du använder AEM Tags på resurser via Workfront-data,
 version: Experience Manager as a Cloud Service
 topic: Content Management, Integrations
 feature: Asset Management
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Beginner
 jira: KT-9720
 thumbnail: 340333.jpeg
@@ -14,9 +14,9 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: 520a75cd-757a-4ae9-acf6-3c1f5e1f3747
 duration: 2633
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---
@@ -33,4 +33,4 @@ _Del tre av en [fyra delars expertserie om den förbättrade anslutningen för W
 
 ## Korrigeringar
 
-+ __@ 4:34 och 6:20__ AEM-taggsyntaxen är felaktig. Videon visar `we-retail:apparel/footwear`. Den korrekta syntaxen är `["we-retail:apparel/footwear"]` eller mer allmänt `["namespace:tag/childtag"]`.
++ __@ 4:34 och 6 :20__AEM-taggsyntaxen är felaktig. Videon visar `we-retail:apparel/footwear`. Den korrekta syntaxen är `["we-retail:apparel/footwear"]` eller mer allmänt `["namespace:tag/childtag"]`.

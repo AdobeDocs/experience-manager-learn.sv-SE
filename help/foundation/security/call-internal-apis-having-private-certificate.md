@@ -4,7 +4,7 @@ description: Lär dig hur du anropar interna API:er med privata eller självsign
 feature: Security
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 topic: Security, Development
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Experienced
 jira: KT-11548
 thumbnail: KT-11548.png
@@ -12,7 +12,7 @@ doc-type: Article
 last-substantial-update: 2023-08-25T00:00:00Z
 exl-id: c88aa724-9680-450a-9fe8-96e14c0c6643
 duration: 332
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -62,7 +62,7 @@ Koden använder [Apache HttpComponent](https://hc.apache.org/)s [HttpClient](htt
 
 ## HttpClient och läsa in AEM TrustStore-material
 
-Om du vill anropa en API-slutpunkt som har _privat eller självsignerat certifikat_ måste `SSLContextBuilder` för [HttpClient](https://hc.apache.org/httpcomponents-client-4.5.x/index.html) läsas in med AEM TrustStore och användas för att underlätta anslutningen.
+Om du vill anropa en API-slutpunkt som har _privat eller självsignerat certifikat_ måste [ för ](https://hc.apache.org/httpcomponents-client-4.5.x/index.html)HttpClient`SSLContextBuilder` läsas in med AEM TrustStore och användas för att underlätta anslutningen.
 
 Följ stegen nedan:
 

@@ -4,13 +4,14 @@ description: Lär dig övervaka känsliga begäranden genom att logga dem med tr
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Security, Administration, Architecture
-role: Admin, Architect
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18311
 thumbnail: null
-source-git-commit: 293157c296676ef1496e6f861ed8c2c24da7e068
+exl-id: 8fa0488f-b901-49bf-afa5-5ed29242355f
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 0%
@@ -104,4 +105,3 @@ Låt oss analysera resultatet av regeln `publish-auth-requests` genom att hämta
 - Granska den uppdaterade instrumentpanelens **Analyserade förfrågningar**, **Flaggade förfrågningar** och **Flaggade förfrågningar**. För matchande CDN-loggposter bör värdena för varje posts klient-IP (cli_ip), host, url, action (waf_action) och rule-name (waf_match) visas.
 
   ![ELK Tool Dashboard](../assets/how-to/elk-tool-dashboard.png)
-

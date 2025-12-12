@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-02T00:00:00Z
 exl-id: 70adb2c1-9e08-4a4b-b8f1-16bddd84c23d
 duration: 307
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Sidhuvudsknappar kan finnas som en enda knapp eller som en knapp med underordnad
 Det här exemplet utökar till tilläggspunkten `headerBar` för att lägga till en anpassad knapp i redigeraren för innehållsfragment.
 
 | AEM UI Extended | Tilläggspunkt |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Innehållsfragmentsredigeraren](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Huvudmeny](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/header-menu/) |
 
 ## Exempel på tillägg

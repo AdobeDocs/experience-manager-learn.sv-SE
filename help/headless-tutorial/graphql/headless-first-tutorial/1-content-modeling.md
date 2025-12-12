@@ -12,7 +12,7 @@ jira: KT-13270
 thumbnail: KT-13270.jpeg
 exl-id: 6e5e3cb4-9a47-42af-86af-da33fd80cb47
 duration: 175
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 0%
@@ -55,8 +55,8 @@ Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och pra
    | Datatyp | Namn | Obligatoriskt | Alternativ |
    |----------|------|----------|---------|
    | Innehållsreferens | Tillgång | ja | Lägg till en standardbild om du vill. Exempel: /content/dam/wknd-headless/assets/AdobeStock_307513975.mp4 |
-   | Enkelradig text | Titel | ja |
-   | Enkelradig text | Förtitel | no |
+   | Enkelradig text | Titel | ja | |
+   | Enkelradig text | Förtitel | no | |
    | Flerradstext | Beskrivning | no | Kontrollera att standardtypen är RTF-text |
    | Uppräkning | Stil | ja | Rendera som listruta. Alternativen är Hero -> hero och Featured -> featured |
 
@@ -87,7 +87,7 @@ Under hela självstudiekursen kommer vi att ge förklaringar, kodexempel och pra
    ![Lägg till mapp](./assets/1/create-folder.png)
 
 1. När mappen har skapats markerar du mappen och öppnar dess __Egenskaper__.
-1. Välj konfigurationen [som skapades tidigare](#enable-content-fragments-and-graphql) på fliken __Molnkonfigurationer__ i mappen.
+1. Välj konfigurationen __som skapades tidigare__ på fliken [Molnkonfigurationer](#enable-content-fragments-and-graphql) i mappen.
 
    ![Resursmapp AEM Headless-molnkonfiguration](./assets/1/cloud-config.png)
 

@@ -4,14 +4,14 @@ description: Lär dig hur du anpassar AEM as a Cloud Service webbplatser med Ado
 version: Experience Manager as a Cloud Service
 feature: Personalization, Integrations
 topic: Personalization, Integrations, Architecture
-role: Developer, Architect, Leader, Data Architect, User
+role: Developer, Leader, User
 level: Beginner
 doc-type: Tutorial
 last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18717
 thumbnail: null
 exl-id: c4fb11b9-b613-4522-b9da-18d7ae0826ec
-source-git-commit: 4d345ba7b10ea21d7bc7eee89157de782e1c4350
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 0%

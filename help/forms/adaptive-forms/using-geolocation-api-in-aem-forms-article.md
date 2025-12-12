@@ -9,7 +9,7 @@ level: Experienced
 exl-id: 50db6155-ee83-4ddb-9e3a-56e8709222db
 last-substantial-update: 2020-03-20T00:00:00Z
 duration: 88
-source-git-commit: 03b68057748892c757e0b5315d3a41d0a2e4fc79
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 0%
@@ -23,11 +23,8 @@ I den här artikeln ska vi titta närmare på hur du använder Google Geolocatio
 Följande steg har utförts för att använda Geolocation-API:t i Adaptive Forms.
 
 1. [Hämta API-nyckel](https://developers.google.com/maps/documentation/javascript/get-api-key) från Google för att använda Google Maps-plattformen. Du kan få en provnyckel som gäller i ett år.
-
 1. Anpassat formulärfragment skapades med fält för den aktuella adressen
-
 1. Geolocation-API:t anropades för click-händelsen för image-objektet i det adaptiva formuläret
-
 1. JSON-data som returnerades av API-anropet parsades och värdena för anpassade formulärfält ställdes in i enlighet med detta.
 
 ```javascript
@@ -94,13 +91,17 @@ Den JSON som returneras av API tolkas sedan för att ange fälten för adaptiv f
 Så här aktiverar du den här funktionen på servern:
 
 * Installera och starta AEM Forms-servern.
-> Den här funktionen testades på AEM Forms 6.3 och senare
->* [Hämta Google API-nyckel](https://developers.google.com/maps/documentation/javascript/get-api-key).
->* [Importera resurser som hör till den här artikeln till AEM.](assets/geolocationapi.zip)
->* [Öppna det adaptiva formulärfragmentet i redigeringsläge.](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
->* Öppna regelredigeraren för komponenten Bildval.
->* Ersätt &lt;your_api_key> med Google API-nyckeln.
->* Spara ändringarna.
->* [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled).
->* Klicka på ikonen &quot;geolocation&quot; (geopositionering).
->* Formuläret ska fyllas i med den aktuella platsen.
+
+  >[!NOTE]
+  >
+  >Den här funktionen testades i AEM Forms 6.3 och senare
+
+* [Hämta Google API-nyckel](https://developers.google.com/maps/documentation/javascript/get-api-key).
+* [Importera resurser som hör till den här artikeln till AEM.](assets/geolocationapi.zip)
+* [Öppna det adaptiva formulärfragmentet i redigeringsläge.](http://localhost:4502/editor.html/content/forms/af/currentaddressfragment.html)
+* Öppna regelredigeraren för komponenten Bildval.
+* Ersätt &lt;your_api_key> med Google API-nyckeln.
+* Spara ändringarna.
+* [Förhandsgranska formuläret](http://localhost:4502/content/dam/formsanddocuments/currentaddressfragment/jcr:content?wcmmode=disabled).
+* Klicka på ikonen &quot;geolocation&quot; (geopositionering).
+* Formuläret ska fyllas i med den aktuella platsen.

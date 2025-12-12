@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2024-01-26T00:00:00Z
 exl-id: fbfb5c10-95f8-4875-88dd-9a941d7a16fd
 duration: 1362
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '769'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Exempel på uppdatering av massegenskaper
 
->[!VIDEO](https://video.tv.adobe.com/v/3454454?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
 
 Det här exemplet på AEM Content Fragment Console-tillägg är ett [åtgärdsfältstillägg](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) som uppdaterar en Content Fragment-egenskap till ett gemensamt värde.
 
@@ -42,7 +42,7 @@ Det funktionella flödet för exempeltillägget är följande:
 Det här exemplet utökar till tilläggspunkten `actionBar` för att lägga till en anpassad knapp i konsolen för innehållsfragment.
 
 | AEM UI Extended | Tilläggspunkt |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Konsol för innehållsfragment](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/) | [Åtgärdsfält](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) |
 
 
@@ -171,7 +171,7 @@ I den här exempelappen finns en modal React-komponent (`BulkPropertyUpdateModal
 Viktigt är att all interaktion med AEM från tillägget delegeras till en [AppBuilder Adobe I/O Runtime-åtgärd](https://developer.adobe.com/runtime/docs/guides/using/creating_actions/), som är en separat serverlös process som körs i [Adobe I/O Runtime](https://developer.adobe.com/runtime/docs/).
 Adobe I/O Runtime-åtgärder används för att kommunicera med AEM för att undvika anslutningsproblem mellan olika ursprung (CORS).
 
-När formuläret för uppdatering av gruppegenskap skickas, anropar en anpassad `onSubmitHandler()` Adobe I/O Runtime-åtgärden och skickar den aktuella AEM-värden (domän) och användarens AEM-åtkomsttoken, som i sin tur anropar [&#x200B; AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html?lang=sv-SE) för att uppdatera innehållsfragmenten.
+När formuläret för uppdatering av gruppegenskap skickas, anropar en anpassad `onSubmitHandler()` Adobe I/O Runtime-åtgärden och skickar den aktuella AEM-värden (domän) och användarens AEM-åtkomsttoken, som i sin tur anropar [ AEM Content Fragment API](https://experienceleague.adobe.com/docs/experience-manager-65/assets/extending/assets-api-content-fragments.html) för att uppdatera innehållsfragmenten.
 
 När svaret från Adobe I/O Runtime-åtgärden tas emot uppdateras modal-åtgärden så att resultatet av bulkegenskapsuppdateringen visas.
 

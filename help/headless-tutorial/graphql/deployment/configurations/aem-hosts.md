@@ -4,15 +4,15 @@ description: Lär dig hur du konfigurerar AEM-värdar i appen AEM Headless.
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10831
 thumbnail: KT-10831.jpg
 exl-id: a932147c-2245-4488-ba1a-99c58045ee2b
 duration: 496
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1610'
 ht-degree: 0%
 
 ---
@@ -162,7 +162,7 @@ let { data, error } = useAdventureByPath('/content/dam/wknd-shared/en/adventures
 
 +++
 
-+++ iOS™-exempel
++++ iOS™-exempel 
 
 Det här exemplet, som baseras på [exemplet med AEM Headless iOS™-appen](../../example-apps/ios-swiftui-app.md), visar hur AEM GraphQL API-begäranden kan konfigureras för att ansluta till olika AEM-värdar baserat på [build-specifika konfigurationsvariabler](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project?changes=l_3).
 
@@ -232,7 +232,7 @@ Android™-appar (skrivna i Java™) bör använda [AEM Headless Client för Jav
 Android™-appar definierar&quot;productFlavors&quot; som används för att skapa artefakter för olika användningsområden.
 I det här exemplet visas hur två Android™-produktsmak kan definieras, vilket ger olika AEM-tjänstvärdar (`AEM_HOST`) för utveckling (`dev`) och produktion (`prod`).
 
-En ny `flavorDimension` med namnet `env` skapas i appens `build.gradle`-fil.
+En ny `build.gradle` med namnet `flavorDimension` skapas i appens `env`-fil.
 
 I dimensionen `env` definieras två `productFlavors`: `dev` och `prod`. Varje `productFlavor` använder `buildConfigField` för att ange byggspecifika variabler som definierar den AEM-tjänst som ska anslutas till.
 
@@ -483,7 +483,7 @@ I det här exemplet, som baseras på [exemplet med AEM Headless Android™-appen
 Android™-appar definierar&quot;productFlavors&quot; som används för att skapa artefakter för olika användningsområden.
 I det här exemplet visas hur två Android™-produktsmak kan definieras, vilket ger olika AEM-tjänstvärdar (`AEM_HOST`) för utveckling (`dev`) och produktion (`prod`).
 
-En ny `flavorDimension` med namnet `env` skapas i appens `build.gradle`-fil.
+En ny `build.gradle` med namnet `flavorDimension` skapas i appens `env`-fil.
 
 I dimensionen `env` definieras två `productFlavors`: `dev` och `prod`. Varje `productFlavor` använder `buildConfigField` för att ange byggspecifika variabler som definierar den AEM-tjänst som ska anslutas till.
 

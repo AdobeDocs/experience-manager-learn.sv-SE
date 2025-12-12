@@ -11,7 +11,7 @@ last-substantial-update: 2024-02-27T00:00:00Z
 jira: KT-14903
 thumbnail: KT-14903.jpeg
 exl-id: 563bab0e-21e3-487c-9bf3-de15c3a81aba
-source-git-commit: be710750cd6f2c71fa6b5eb8a6309d5965d67c82
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '473'
 ht-degree: 0%
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Lär dig skapa anpassade fält i AEM Content Fragment Editor.
 
->[!VIDEO](https://video.tv.adobe.com/v/3437638?learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3427585?learn=on)
 
 AEM UI-tillägg bör utvecklas med ramverket [Adobe React Spectrum](https://react-spectrum.adobe.com/react-spectrum/index.html) eftersom det bibehåller ett konsekvent utseende och en enhetlig känsla med resten av AEM och har ett omfattande bibliotek med fördefinierade funktioner, vilket minskar utvecklingstiden.
 
@@ -31,7 +31,7 @@ AEM UI-tillägg bör utvecklas med ramverket [Adobe React Spectrum](https://reac
 Det här exemplet ersätter ett befintligt fält i Content Fragment Editor med en anpassad implementering.
 
 | AEM UI Extended | Tilläggspunkt |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Innehållsfragmentsredigeraren](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Egen återgivning av formulärelement](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/custom-fields/) |
 
 ## Exempel på tillägg

@@ -4,7 +4,7 @@ description: Lär dig hur du implementerar ett eget domännamn på AEM as a Clou
 version: Experience Manager as a Cloud Service
 feature: Cloud Manager, Operations
 topic: Administration, Architecture
-role: Admin, Architect, Developer
+role: Admin, Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 0
@@ -12,7 +12,7 @@ last-substantial-update: 2024-06-21T00:00:00Z
 jira: KT-15945
 thumbnail: KT-15945.jpeg
 exl-id: fa9ee14f-130e-491b-91b6-594ba47a7278
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1051'
 ht-degree: 0%
@@ -41,13 +41,13 @@ Stegen på hög nivå är:
    - Customer CDN - för att konfigurera kundens CDN och lägga till SSL-certifikat och domäninformation, som AWS CloudFront, Azure CDN eller Akamai.
    - DNS-värdtjänst (Domain Name System) - för att lägga till DNS-poster för din anpassade domän, som Azure DNS eller AWS Route 53.
 - Åtkomst till [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/) för att distribuera CDN-regeln för HTTP Header-validering till AEM as a Cloud Service-miljön.
-- Exempelwebbplatsen [AEM WKND](https://github.com/adobe/aem-guides-wknd) har distribuerats till AEM as a Cloud Service-miljön av typen [produktionsprogram](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs).
+- Exempelwebbplatsen [AEM WKND](https://github.com/adobe/aem-guides-wknd) har distribuerats till AEM as a Cloud Service-miljön av typen [produktionsprogram](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs).
 
 Om du inte har tillgång till tredjepartstjänster kan du _samarbeta med ditt säkerhets- eller värdteam för att slutföra stegen_.
 
 ## Generera SSL-certifikat
 
->[!VIDEO](https://video.tv.adobe.com/v/3441481?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
 
 Du har två alternativ:
 
@@ -222,7 +222,7 @@ Så här konfigurerar och distribuerar du CDN-regeln för HTTP-huvudvalidering:
 
 ## Skicka hemlighet i HTTP-huvudet X-AEM-Edge-Key
 
->[!VIDEO](https://video.tv.adobe.com/v/3445049?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3432567?quality=12&learn=on)
 
 Uppdatera kundens CDN så att hemligheten skickas i HTTP-huvudet `X-AEM-Edge-Key`. Hemligheten används av Adobe CDN för att validera att begäran kommer från kundens CDN och transformera rubrikvärdet `Host` till värdet för `X-Forwarded-Host` som tas emot från kundens CDN.
 

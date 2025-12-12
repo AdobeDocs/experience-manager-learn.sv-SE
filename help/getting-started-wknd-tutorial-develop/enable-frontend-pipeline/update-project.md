@@ -4,7 +4,7 @@ description: Lär dig hur du uppdaterar AEM-projekt i full stack så att det kan
 version: Experience Manager as a Cloud Service
 feature: AEM Project Archetype, Cloud Manager, CI-CD Pipeline
 topic: Content Management, Development, Development, Architecture
-role: Developer, Architect, Admin
+role: Developer, Admin
 level: Intermediate
 jira: KT-10689
 mini-toc-levels: 1
@@ -13,7 +13,7 @@ recommendations: noDisplay, noCatalog
 doc-type: Tutorial
 exl-id: c4a961fb-e440-4f78-b40d-e8049078b3c0
 duration: 307
-source-git-commit: b395b3b84e63fe6c24e597d1628f4aed5ba47469
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 0%
@@ -30,11 +30,11 @@ I det här kapitlet gör vi konfigurationsändringar i __WKND Sites-projektet__ 
 
 ## Översikt över konfigurationsändringar i AEM-projekt i fullhög
 
->[!VIDEO](https://video.tv.adobe.com/v/3453613?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3409419?quality=12&learn=on)
 
 ## Förutsättningar {#prerequisites}
 
-Det här är en självstudiekurs i flera delar och det antas att du har granskat modulen [&#39;ui.front&#39; &#x200B;](./review-uifrontend-module.md).
+Det här är en självstudiekurs i flera delar och det antas att du har granskat modulen [&#39;ui.front&#39; ](./review-uifrontend-module.md).
 
 
 ## Förändringar i AEM-projekt i full hög
@@ -117,7 +117,7 @@ Det finns tre projektrelaterade konfigurationsändringar och en formatändring s
    >Det är upp till dig hur du vill namnge eller ordna dem.
 
 
-   * Kontrollera att egenskapsvärdet `name` är samma som platsnamnet från noden `/conf` i filen `package.json`. Under egenskapen `scripts` finns ett `build`-skript som instruerar om hur front end-filerna från den här modulen ska skapas.
+   * Kontrollera att egenskapsvärdet `package.json` är samma som platsnamnet från noden `name` i filen `/conf`. Under egenskapen `scripts` finns ett `build`-skript som instruerar om hur front end-filerna från den här modulen ska skapas.
 
    ```javascript
        {
@@ -195,7 +195,7 @@ Slutligen kan du överföra dessa ändringar till Adobe Git-databasen.
 
 ## Varning - _Aktivera frontslutspipeline_-knapp
 
-Alternativet [Plats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=sv-SE) för [spårningsväljaren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=sv-SE) visar knappen **Aktivera frontpipeline** när du väljer platsroten eller webbplatssidan. Om du klickar på knappen **Aktivera frontpipeline** åsidosätts de **Sling-konfigurationer** som anges ovan. Kontrollera att **du inte klickar på den här knappen** efter att du distribuerat de ovanstående ändringarna via Cloud Manager pipeline-körning.
+Alternativet [Plats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) för [spårningsväljaren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) visar knappen **Aktivera frontpipeline** när du väljer platsroten eller webbplatssidan. Om du klickar på knappen **Aktivera frontpipeline** åsidosätts de **Sling-konfigurationer** som anges ovan. Kontrollera att **du inte klickar på den här knappen** efter att du distribuerat de ovanstående ändringarna via Cloud Manager pipeline-körning.
 
 ![Aktivera knapp för frontslutspipeline](assets/enable-front-end-Pipeline-button.png)
 

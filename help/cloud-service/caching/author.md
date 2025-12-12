@@ -4,7 +4,7 @@ description: Allmän översikt över cachelagring av tjänsten AEM as a Cloud Se
 version: Experience Manager as a Cloud Service
 feature: Developer Tools
 topic: Performance
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Article
 last-substantial-update: 2023-08-28T00:00:00Z
@@ -12,7 +12,7 @@ jira: KT-13858
 thumbnail: KT-13858.jpeg
 exl-id: b8e09820-f1f2-4897-b454-16c0df5a0459
 duration: 56
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 0%
@@ -35,7 +35,7 @@ AEM Author-tjänsten använder ett CDN, men dess syfte är att förbättra lever
 
 CDN-numret för AEM-författare finns mellan slutanvändaren, vanligtvis en marknadsförare eller innehållsförfattare, och AEM författare. Det cachelagrar oföränderliga filer, t.ex. statiska resurser som används vid redigering i AEM och inte redigerat innehåll.
 
-CDN för AEM-författare cachelagrar flera typer av resurser som kan vara av intresse, bland annat en [anpassningsbar TTL för beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=sv-SE&author-instances) och en [lång TTL för anpassade klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE#client-side-libraries).
+CDN för AEM-författare cachelagrar flera typer av resurser som kan vara av intresse, bland annat en [anpassningsbar TTL för beständiga frågor](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances) och en [lång TTL för anpassade klientbibliotek](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries).
 
 ### Standardcachetid
 
@@ -43,9 +43,9 @@ Följande kundvända resurser cachelagras av AEM Author CDN och har följande st
 
 | Innehållstyp | Standardcachetid för CDN |
 |:------------ |:---------- |
-| [Beständiga frågor (JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?lang=sv-SE&author-instances) | 1 minut |
-| [Klientbibliotek (JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE#client-side-libraries) | 30 dagar |
-| [Allt annat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html?lang=sv-SE#other-content) | Inte cachelagrad |
+| [Beständiga frågor (JSON)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/graphql-api/persisted-queries.html?author-instances) | 1 minut |
+| [Klientbibliotek (JS/CSS)](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#client-side-libraries) | 30 dagar |
+| [Allt annat](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/caching.html#other-content) | Inte cachelagrad |
 
 
 ## AEM Dispatcher

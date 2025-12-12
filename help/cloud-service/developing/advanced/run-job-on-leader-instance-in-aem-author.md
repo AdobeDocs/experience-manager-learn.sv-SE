@@ -4,7 +4,7 @@ description: Lär dig hur du kör ett jobb på ledarinstansen i AEM as a Cloud S
 version: Experience Manager as a Cloud Service
 topic: Development
 feature: OSGI, Cloud Manager
-role: Architect, Developer
+role: Developer
 level: Intermediate, Experienced
 doc-type: Article
 duration: 0
@@ -12,7 +12,7 @@ last-substantial-update: 2024-10-23T00:00:00Z
 jira: KT-16399
 thumbnail: KT-16399.jpeg
 exl-id: b8b88fc1-1de1-4b5e-8c65-d94fcfffc5a5
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%
@@ -80,7 +80,7 @@ public class SimpleJobCreaterImpl {
 De viktigaste punkterna att notera i ovanstående kod är:
 
 - Jobbnyttolasten har två egenskaper: `action` och `message`.
-- Jobbet läggs till i avsnittet `wknd/simple/job/topic` med [JobManager](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/apache/sling/event/jobs/JobManager.html)s `addJob(...)` -metod.
+- Jobbet läggs till i avsnittet [ med ](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/org/apache/sling/event/jobs/JobManager.html)JobManager`addJob(...)`s `wknd/simple/job/topic` -metod.
 
 ### Bearbeta ett jobb
 
@@ -136,7 +136,7 @@ Detta är ofta problematiskt om jobbet ansvarar för att ändra tillstånd, till
 
 Om du vill att jobbet bara ska köras en gång på AEM Author-tjänsten lägger du till konfigurationen [jobbkö](#how-to-run-a-job-on-the-leader-instance) som beskrivs nedan.
 
-Du kan verifiera den genom att granska loggarna för AEM Author-tjänsten i [Cloud Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#cloud-manager).
+Du kan verifiera den genom att granska loggarna för AEM Author-tjänsten i [Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/debugging/debugging-aem-as-a-cloud-service/logs#cloud-manager).
 
 ![Jobbet har bearbetats av alla instanser](./assets/run-job-once/job-processed-by-all-instances.png)
 
@@ -157,7 +157,7 @@ Det finns två loggposter, en för varje AEM Author-instans (`68775db964-nxxcx` 
 
 Om du vill köra ett jobb _endast en gång_ på AEM Author-tjänsten skapar du en ny Sling-jobbkö av typen **Beställd** och associerar jobbämnet (`wknd/simple/job/topic`) med den här kön. Med den här konfigurationen tillåts endast den ledande AEM Author-instansen (pod) att bearbeta jobbet.
 
-Skapa en OSGi-konfigurationsfil (`org.apache.sling.event.jobs.QueueConfiguration~wknd.cfg.json`) i modulen `ui.config` i ditt AEM-projekt och lagra den i mappen `ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author`.
+Skapa en OSGi-konfigurationsfil (`ui.config`) i modulen `org.apache.sling.event.jobs.QueueConfiguration~wknd.cfg.json` i ditt AEM-projekt och lagra den i mappen `ui.config/src/main/content/jcr_root/apps/wknd/osgiconfig/config.author`.
 
 ```json
 {

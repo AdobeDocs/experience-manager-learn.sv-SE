@@ -1,13 +1,13 @@
 ---
 title: Acrobat med AEM Forms
 description: En självstudiekurs som visar hur du skapar ett adaptivt formulär med Acrobat och sammanfogar data för att få en PDF. PDF med sammanfogade data kan sedan skickas för signering med Acrobat Sign.
-feature: adaptive-forms
+feature: Adaptive Forms
 doc-type: Tutorial
 version: Experience Manager 6.5
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 45
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 0%

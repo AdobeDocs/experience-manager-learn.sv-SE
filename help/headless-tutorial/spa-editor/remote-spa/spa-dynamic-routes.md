@@ -3,7 +3,7 @@ title: Lägg till redigerbara komponenter i fjärr-SPA:s dynamiska vägar
 description: Lär dig hur du lägger till redigerbara komponenter i dynamiska vägar i en fjärr-SPA.
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7636
 thumbnail: kt-7636.jpeg
@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: 4accc1ca-6f4b-449e-bf2e-06f19d2fe17d
 duration: 202
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ SPA-vägen för Adventure Detail definieras som `/adventure/:slug` där `slug` �
 
 I de föregående två kapitlen mappades redigerbart komponentinnehåll från SPA:s hemvy till motsvarande fjärr-SPA-rotsida i AEM på `/content/wknd-app/us/en/`.
 
-Att definiera mappning för redigerbara komponenter för SPA:s dynamiska vägar är likartat, men vi måste skapa ett 1:1-mappningsschema mellan instanser av flödet och AEM-sidor.
+Att definiera mappning för redigerbara komponenter för SPA:s dynamiska vägar är likartat, men vi måste skapa ett :1-mappningsschema mellan instanser av flödet och AEM-sidor.
 
 I den här självstudiekursen tar vi namnet på WKND Adventure Content Fragment, som är det sista segmentet i sökvägen, och mappar det till en enkel sökväg under `/content/wknd-app/us/en/adventure`.
 
@@ -166,7 +166,7 @@ När `<ResponsiveGrid...>` är på plats och dess `pagePath` dynamiskt anges bas
    ![Bali Adventure Detail Authoring](./assets/spa-dynamic-routes/adventure-detail-edit.png)
 
 1. __Förhandsgranska__ dina ändringar i AEM Page Editor
-1. Uppdatera WKND-appen som körs lokalt på [http://localhost:3000](http://localhost:3000), navigera till __Bali Surf Camp__ för att se de redigerade ändringarna!
+1. Uppdatera WKND-appen som körs lokalt på [http://localhost:3000](http://localhost:3000), navigera till __Bali Surf Camp__ -vägen för att se de ändringar som har skapats.
 
    ![Fjärr-SPA-bali](./assets/spa-dynamic-routes/remote-spa-final.png)
 

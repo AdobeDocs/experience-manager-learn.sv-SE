@@ -4,15 +4,15 @@ description: Lär dig hur du gör HTTP/HTTPS-begäranden från AEM as a Cloud Se
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9354
 thumbnail: KT-9354.jpeg
 exl-id: a565bc3a-675f-4d5e-b83b-c14ad70a800b
 duration: 70
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Kontrollera att den [dedikerade IP-adressen för utgångar eller den avancerade 
 
 >[!CAUTION]
 >
-> Det här kodexemplet gäller bara för [IP-adressen &#x200B;](../dedicated-egress-ip-address.md) och [VPN](../vpn.md) för det dedikerade uttrycket. Ett liknande, men annat kodexempel är tillgängligt för [HTTP/HTTPS-anslutningar på portar som inte är standard för flexibla portadresser](./http-on-non-standard-ports-flexible-port-egress.md).
+> Det här kodexemplet gäller bara för [IP-adressen ](../dedicated-egress-ip-address.md) och [VPN](../vpn.md) för det dedikerade uttrycket. Ett liknande, men annat kodexempel är tillgängligt för [HTTP/HTTPS-anslutningar på portar som inte är standard för flexibla portadresser](./http-on-non-standard-ports-flexible-port-egress.md).
 
 ## Exempel på kod
 

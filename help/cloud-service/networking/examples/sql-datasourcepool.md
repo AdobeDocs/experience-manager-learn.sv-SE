@@ -4,15 +4,15 @@ description: Lär dig hur du ansluter till SQL-databaser från AEM as a Cloud Se
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9355
 thumbnail: KT-9355.jpeg
 exl-id: c1a26dcb-b2ae-4015-b865-2ce32f4fa869
 duration: 117
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Kontrollera att den [lämpliga](../advanced-networking.md#advanced-networking) a
 
 OSGi-konfigurationens anslutningssträng använder:
 
-+ `AEM_PROXY_HOST`-värde via konfigurationsmiljövariabeln [&#x200B; OSGi &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` som anslutningsvärd
++ `AEM_PROXY_HOST`-värde via konfigurationsmiljövariabeln [ OSGi ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=en#environment-specific-configuration-values) `$[env:AEM_PROXY_HOST;default=proxy.tunnel]` som anslutningsvärd
 + `30001` som är `portOrig`-värdet för framåtmappning för Cloud Manager-port `30001` → `mysql.example.com:3306`
 
 Eftersom hemligheter inte får lagras i kod bör SQL-anslutningens användarnamn och lösenord anges via OSGi-konfigurationsvariabler som anges med AIO CLI eller Cloud Manager API:er.
@@ -61,7 +61,7 @@ $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONME
 ## Exempel på kod
 
 Detta Java™-kodexempel är en OSGi-tjänst som skapar en anslutning till en extern MySQL-databas via AEM DataSourcePool OSGi-tjänst.
-Fabrikskonfigurationen för DataSourcePool OSGi anger i sin tur en port (`30001`) som mappas via regeln `portForwards` i åtgärden [&#x200B; enableEnvironmentAdvancedNetworkingConfiguration &#x200B;](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) till den externa värden och porten `mysql.example.com:3306`.
+Fabrikskonfigurationen för DataSourcePool OSGi anger i sin tur en port (`30001`) som mappas via regeln `portForwards` i åtgärden [ enableEnvironmentAdvancedNetworkingConfiguration ](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) till den externa värden och porten `mysql.example.com:3306`.
 
 ```json
 ...

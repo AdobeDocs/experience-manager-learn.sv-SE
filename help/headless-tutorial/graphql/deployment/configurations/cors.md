@@ -4,16 +4,16 @@ description: Lär dig hur du konfigurerar Cross-origin-resursdelning (CORS) för
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10830
 thumbnail: KT-10830.jpg
 exl-id: 394792e4-59c8-43c1-914e-a92cdfde2f8a
 last-substantial-update: 2024-03-22T00:00:00Z
 duration: 185
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ Nyckelkonfigurationsegenskaperna är:
 + `supportedheaders` inkluderar `"Authorization"` som begäranden till AEM Author ska auktoriseras.
 + `supportscredentials` är inställd på `true` eftersom begäran till AEM Author ska auktoriseras.
 
-[Läs mer om CORS OSGi-konfigurationen.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=sv-SE)
+[Läs mer om CORS OSGi-konfigurationen.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
 
 Följande exempel stöder användning av beständiga frågor från AEM GraphQL på AEM Author. Om du vill använda klientdefinierade GraphQL-frågor lägger du till en GraphQL-slutpunkts-URL i `allowedpaths` och `POST` i `supportedmethods`.
 

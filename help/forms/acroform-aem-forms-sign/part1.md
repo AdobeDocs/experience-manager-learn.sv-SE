@@ -1,13 +1,13 @@
 ---
 title: Acrobat med AEM Forms
 description: Del 1 av Integrering av Acrobat med AEM Forms. Skapa ett adaptivt formulär med Acrobat och sammanfoga data för att få en PDF.
-feature: adaptive-forms
+feature: Adaptive Forms
 doc-type: Tutorial
 version: Experience Manager 6.5
 badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Forms 6.5" before-title="false"
 duration: 144
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Acrobat är formulär som skapats med Acrobat. Du kan skapa ett nytt formulär f
 >
 >Om du skickar ett XFA-baserat dokument måste du förenkla dokumentet och Acrobat Sign-signaturtaggarna måste finnas som statisk text i dokumentet.
 
-[Acrobat Sign-texttaggdokument](https://helpx.adobe.com/se/sign/using/text-tag.html)
+[Acrobat Sign-texttaggdokument](https://helpx.adobe.com/sign/using/text-tag.html)
 
 >[!NOTE]
 >

@@ -8,7 +8,7 @@ breadcrumb-title: Självstudiekurser om AEM Forms
 sub-product: Experience Manager Forms
 version: Experience Manager 6.4, Experience Manager 6.5
 index: y
-source-git-commit: c4b5a015f1c0d5e3877886052476871548ec9b0e
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '2104'
 ht-degree: 1%
@@ -316,8 +316,7 @@ ht-degree: 1%
    + [Introduktion till Workbench](aem-forms-workbench/workbench-introduction.md)
    + [Skapa formulärprocess](aem-forms-workbench/workbench-creating-a-process.md)
    + [Felsökningsprocess](aem-forms-workbench/workbench-recording-and-testing-process.md)
-+ Interaktiv kommunikation för tryckkanaler 
-{#ic-print-channel-tutorial}
++ Interaktiv kommunikation för tryckkanaler {#ic-print-channel-tutorial}
    + [1 - Introduktion](ic-print-channel-tutorial/introduction.md)
    + [2 - Konfigurera Tomcat](ic-print-channel-tutorial/set-up-tomcat.md)
    + [3 - Skapa data Source](ic-print-channel-tutorial/create-data-source.md)

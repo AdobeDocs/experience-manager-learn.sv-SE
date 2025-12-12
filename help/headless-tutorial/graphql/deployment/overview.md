@@ -4,14 +4,14 @@ description: Läs mer om de olika distributionsaspekterna för AEM Headless-appa
 version: Experience Manager as a Cloud Service
 feature: GraphQL API
 topic: Headless, Content Management
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-10794
 thumbnail: kt-10794.jpg
 last-substantial-update: 2022-08-26T00:00:00Z
 exl-id: 6de58ca0-9444-4272-9487-15a9e3c89231
 duration: 59
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%

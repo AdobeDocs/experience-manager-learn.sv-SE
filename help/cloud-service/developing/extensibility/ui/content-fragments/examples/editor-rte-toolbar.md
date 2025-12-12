@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 6fd93d3b-6d56-43c5-86e6-2e2685deecc9
 duration: 345
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 0%
@@ -27,7 +27,7 @@ Lär dig hur du lägger till en anpassad knapp i verktygsfältet för textredige
 
 Du kan lägga till anpassade knappar i verktygsfältet **RTE** i Content Fragment Editor med hjälp av tilläggspunkten `rte`. I det här exemplet visas hur du lägger till en anpassad knapp med namnet _Lägg till tips_ i verktygsfältet för textredigering och ändrar innehållet i textredigeraren.
 
-Med metoden `getCustomButtons()` för tilläggspunkten `rte` kan en eller flera anpassade knappar läggas till i verktygsfältet **RTE**. Det går också att lägga till eller ta bort standardknappar för textredigering som _Kopiera, Klistra in, Fet och Kursiv_ med metoderna `getCoreButtons()` respektive `removeButtons)`.
+Med metoden `rte` för tilläggspunkten `getCustomButtons()` kan en eller flera anpassade knappar läggas till i verktygsfältet **RTE**. Det går också att lägga till eller ta bort standardknappar för textredigering som _Kopiera, Klistra in, Fet och Kursiv_ med metoderna `getCoreButtons()` respektive `removeButtons)`.
 
 I det här exemplet visas hur du infogar en markerad anteckning eller ett markerat tips med en anpassad _Lägg till tips_-verktygsfältsknapp. Det markerade antecknings- eller tipsinnehållet har en särskild formatering som används via HTML-element och de associerade CSS-klasserna. Platshållarinnehållet och HTML-koden infogas med callback-metoden `onClick()` för `getCustomButtons()`.
 
@@ -36,7 +36,7 @@ I det här exemplet visas hur du infogar en markerad anteckning eller ett marker
 Det här exemplet utökas till tilläggspunkten `rte` för att lägga till en anpassad knapp i verktygsfältet för textredigering i redigeraren för innehållsfragment.
 
 | AEM UI Extended | Tilläggspunkt |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Innehållsfragmentsredigeraren](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Verktygsfältet RTF-redigerare](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-toolbar/) |
 
 ## Exempel på tillägg

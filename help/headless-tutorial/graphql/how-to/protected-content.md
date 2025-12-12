@@ -4,13 +4,13 @@ description: Lär dig skydda innehåll i AEM Headless.
 version: Experience Manager as a Cloud Service
 topic: Headless
 feature: GraphQL API
-role: Developer, Architect
+role: Developer
 level: Intermediate
 jira: KT-15233
 last-substantial-update: 2024-05-01T00:00:00Z
 exl-id: c4b093d4-39b8-4f0b-b759-ecfbb6e9e54f
 duration: 254
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1151'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Detta handledningar täcker inte:
 
 ## Användargrupper
 
-Först måste vi definiera en [användargrupp](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions) som innehåller de användare som ska ha tillgång till det skyddade innehållet.
+Först måste vi definiera en [användargrupp](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/accessing/aem-users-groups-and-permissions) som innehåller de användare som ska ha tillgång till det skyddade innehållet.
 
 ![AEM Headless-användargrupp för skyddat innehåll](./assets/protected-content/user-groups.png){align="center"}
 
@@ -54,7 +54,7 @@ Om olika åtkomstnivåer krävs skapar du flera användargrupper som kan kopplas
 
 Om du vill ge AEM Headless GraphQL API-begäranden åtkomst till skyddat innehåll kan du koppla den headless-begäran till en användare som tillhör en viss användargrupp. Här är två vanliga metoder:
 
-1. **AEM as a Cloud Service [tekniska konton](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials):**
+1. **AEM as a Cloud Service [tekniska konton](https://experienceleague.adobe.com/en/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/service-credentials):**
    - Skapa ett tekniskt konto i AEM as a Cloud Service Developer Console.
    - Logga in på AEM Author en gång med det tekniska kontot.
    - Lägg till det tekniska kontot i användargruppen via **Verktyg > Säkerhet > Grupper > AEM Headless API-användare > Medlemmar**.
@@ -73,7 +73,7 @@ Skydda innehållsfragment är nödvändigt för att skydda ditt AEM Headless-inn
 
 ![AEM Headless CUG](./assets/protected-content/cugs.png){align="center"}
 
-Följ de här stegen för att uppnå detta genom [Stängda användargrupper (CUG)](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/advanced/closed-user-groups).
+Följ de här stegen för att uppnå detta genom [Stängda användargrupper (CUG)](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/advanced/closed-user-groups).
 
 1. Logga in på AEM Author som **DAM-användare**.
 2. Navigera till **Assets > Filer** och markera den **mapp** som innehåller de innehållsfragment som ska skyddas. CUG-filer används hierarkiskt och påverkar undermappar om de inte åsidosätts av en annan CUG-fil.
@@ -96,7 +96,7 @@ Beroende på innehållsarkitekturen kan det vara nödvändigt att använda anvä
 
 ## Förhindra cachelagring av skyddat innehåll
 
-AEM as a Cloud Service [cachelagrar HTTP-svar som standard](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/caching/publish) för prestandaförbättringar. Detta kan dock orsaka problem med att skicka skyddat innehåll. Om du vill förhindra cachelagring av sådant innehåll [tar du bort cacherubriker för specifika slutpunkter](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/caching/publish#how-to-customize-cache-rules-1) i Apache-konfigurationen för AEM Publish-instansen.
+AEM as a Cloud Service [cachelagrar HTTP-svar som standard](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/publish) för prestandaförbättringar. Detta kan dock orsaka problem med att skicka skyddat innehåll. Om du vill förhindra cachelagring av sådant innehåll [tar du bort cacherubriker för specifika slutpunkter](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/publish#how-to-customize-cache-rules-1) i Apache-konfigurationen för AEM Publish-instansen.
 
 Lägg till följande regel i ditt Dispatcher-projekts Apache-konfigurationsfil för att ta bort cacherubriker för specifika slutpunkter:
 
@@ -120,4 +120,4 @@ Observera att detta medför en prestandaförsämring eftersom innehållet inte c
 
 ## Skydda AEM Headless GraphQL API-slutpunkter
 
-Den här guiden skyddar inte själva [AEM Headless GraphQL API-slutpunkterna](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/headless/graphql-api/graphql-endpoint), utan fokuserar på att skydda det innehåll som hanteras av dem. Alla användare, även anonyma användare, har åtkomst till slutpunkterna som innehåller skyddat innehåll. Endast det innehåll som är tillgängligt för användarens stängda användargrupper returneras. Om inget innehåll är tillgängligt kommer AEM Headless API-svaret fortfarande att ha en 200 HTTP-svarskod, men resultatet kommer att vara tomt. Normalt räcker det att skydda innehållet eftersom själva slutpunkterna inte exponerar känsliga data. Om du behöver skydda slutpunkterna lägger du till åtkomstkontrollistor i dem i AEM Publish via [Repoinit-skript (Sling Repository Initialization)](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios).
+Den här guiden skyddar inte själva [AEM Headless GraphQL API-slutpunkterna](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/headless/graphql-api/graphql-endpoint), utan fokuserar på att skydda det innehåll som hanteras av dem. Alla användare, även anonyma användare, har åtkomst till slutpunkterna som innehåller skyddat innehåll. Endast det innehåll som är tillgängligt för användarens stängda användargrupper returneras. Om inget innehåll är tillgängligt kommer AEM Headless API-svaret fortfarande att ha en 200 HTTP-svarskod, men resultatet kommer att vara tomt. Normalt räcker det att skydda innehållet eftersom själva slutpunkterna inte exponerar känsliga data. Om du behöver skydda slutpunkterna lägger du till åtkomstkontrollistor i dem i AEM Publish via [Repoinit-skript (Sling Repository Initialization)](https://sling.apache.org/documentation/bundles/repository-initialization.html#repoinit-parser-test-scenarios).

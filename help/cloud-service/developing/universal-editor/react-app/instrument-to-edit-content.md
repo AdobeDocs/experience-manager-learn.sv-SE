@@ -4,7 +4,7 @@ description: Lär dig hur du kan använda React-appen för att redigera innehål
 version: Experience Manager as a Cloud Service
 feature: Developer Tools, Headless
 topic: Development, Content Management
-role: Architect, Developer
+role: Developer
 level: Intermediate
 doc-type: Tutorial
 duration: 421
@@ -12,7 +12,7 @@ last-substantial-update: 2024-04-19T00:00:00Z
 jira: KT-15359
 thumbnail: KT-15359.png
 exl-id: 2a25cd44-cbd1-465e-ae3f-d3876e915114
-source-git-commit: 252d7045ba43c0998e9bb98fa86c399812ce92e9
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1606'
 ht-degree: 0%
@@ -178,7 +178,7 @@ export default App;
 
 ## Instrument för React-komponenterna
 
-Om du vill redigera innehållet i WKND Teams React-appen, t.ex. _teamets titel och teambeskrivning_, måste du mäta React-komponenterna. Instrumentationen innebär att relevanta dataattribut (`data-aue-*`) läggs till i de HTML-element som du vill göra ändringsbara med den universella redigeraren. Mer information om dataattribut finns i [Attribut och typer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types).
+Om du vill redigera innehållet i WKND Teams React-appen, t.ex. _teamets titel och teambeskrivning_, måste du mäta React-komponenterna. Instrumentationen innebär att relevanta dataattribut (`data-aue-*`) läggs till i de HTML-element som du vill göra ändringsbara med den universella redigeraren. Mer information om dataattribut finns i [Attribut och typer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/universal-editor/attributes-types).
 
 ### Definiera redigerbara element
 
@@ -417,7 +417,7 @@ Men som en snabb sammanfattning lagras WKND-teammedlemmarna som `Person`-innehå
 
 ## Lösningsfiler
 
-Om du vill verifiera implementeringsändringarna eller om du inte kan få WKND Teams React-appen att fungera med Universal Editor läser du [lösningsgrenen &#x200B;](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial-instrumented-for-UE) som bygger på grundläggande självstudiekurser för UE.
+Om du vill verifiera implementeringsändringarna eller om du inte kan få WKND Teams React-appen att fungera med Universal Editor läser du [lösningsgrenen ](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial-instrumented-for-UE) som bygger på grundläggande självstudiekurser för UE.
 
 Fil-för-fil-jämförelse med den **grundläggande självstudiekursen** som fungerar finns [här](https://github.com/adobe/aem-guides-wknd-graphql/compare/solution/basic-tutorial...solution/basic-tutorial-instrumented-for-UE?expand=1).
 

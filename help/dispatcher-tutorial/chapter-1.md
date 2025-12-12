@@ -1,16 +1,16 @@
 ---
 title: Kapitel 1 - Dispatcher Conceptions, Patterns and Antipatterns
-description: I detta kapitel ges en kort introduktion om Dispatcher historia och mekaniker och vi diskuterar hur en AEM utvecklare skulle kunna utforma sina komponenter.
+description: I det här kapitlet ges en kort introduktion om Dispatcher historia och mekaniker och vi diskuterar hur en AEM-utvecklare skulle kunna utforma sina komponenter.
 feature: Dispatcher
 topic: Architecture
-role: Architect
+role: Developer
 level: Beginner
 doc-type: Tutorial
 exl-id: 3bdb6e36-4174-44b5-ba05-efbc870c3520
 duration: 3855
-source-git-commit: f4c621f3a9caa8c2c64b8323312343fe421a5aee
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '17384'
+source-wordcount: '17382'
 ht-degree: 0%
 
 ---
@@ -19,17 +19,17 @@ ht-degree: 0%
 
 ## Ökning
 
-I detta kapitel ges en kort introduktion om Dispatcher historia och mekaniker och vi diskuterar hur en AEM utvecklare skulle kunna utforma sina komponenter.
+I det här kapitlet ges en kort introduktion om Dispatcher historia och mekaniker och vi diskuterar hur en AEM-utvecklare skulle kunna utforma sina komponenter.
 
 ## Varför utvecklare ska bry sig om infrastruktur
 
-Dispatcher är en viktig del av de flesta - kanske inte alla AEM. Det finns många artiklar om hur du konfigurerar Dispatcher, samt tips och tricks.
+Dispatcher är en viktig del av de flesta - kanske inte alla AEM-installationer. Det finns många artiklar om hur du konfigurerar Dispatcher, samt tips och tricks.
 
 Dessa bitar och delar av information börjar dock alltid på en mycket teknisk nivå - förutsatt att du redan vet vad du vill göra och därmed bara ger information om hur du ska uppnå det du vill ha. Vi har aldrig hittat några konceptuella rapporter som beskriver _vad som är och varför_ när det gäller vad du kan och inte kan göra med dispatchern.
 
 ### Antipattern: Dispatcher as an Afterthought
 
-Denna brist på grundläggande information leder till ett antal antimönster som vi har sett i ett antal AEM projekt:
+Denna brist på grundläggande information leder till ett antal antimönster som vi har sett i ett antal AEM-projekt:
 
 1. När Dispatcher är installerat på Apache-webbservern är det jobbet för &quot;Unix-gudarna&quot; i projektet som konfigurerar det. En&quot;dödlig java-utvecklare&quot; behöver inte bekymra sig om den.
 
@@ -51,7 +51,7 @@ Men råden&quot;Först får det att fungera - sedan snabbt&quot; är helt fel n�
 
 3. Mönster som används och återanvänds om och om igen, i alla delar av systemet. Om programmönstret visar sig vara suboptimalt måste alla artefakter som använder mönstret kodas om.
 
-Kommer du ihåg? På den här sidan sade vi att Dispatcher är en viktig del i ett AEM program. Åtkomsten till ett webbprogram är mycket slumpmässig - användarna kommer och kommer vid en oförutsägbar tidpunkt. Till slut kommer allt innehåll att (eller ska) cachas i Dispatcher. Om du har uppmärksammat detta kan du ha insett att cachning kan ses som en&quot;arkitektur&quot;-artefakt och därför bör förstås av alla teammedlemmar, utvecklare och administratörer.
+Kommer du ihåg? Utöver denna sida sade vi att Dispatcher är en viktig del i ett AEM-program. Åtkomsten till ett webbprogram är mycket slumpmässig - användarna kommer och kommer vid en oförutsägbar tidpunkt. Till slut kommer allt innehåll att (eller ska) cachas i Dispatcher. Om du har uppmärksammat detta kan du ha insett att cachning kan ses som en&quot;arkitektur&quot;-artefakt och därför bör förstås av alla teammedlemmar, utvecklare och administratörer.
 
 Vi säger inte att en utvecklare faktiskt ska konfigurera Dispatcher. De måste känna till koncepten - särskilt gränserna - för att se till att deras kod också kan utnyttjas av Dispatcher.
 
@@ -69,7 +69,7 @@ Dispatcher är
 
 * En omvänd proxy
 
-* En modul för Apache httpd-webbservern, som lägger till AEM funktioner till Apache-filens mångsidighet och smidigt fungerar tillsammans med alla andra Apache-moduler (som SSL eller SSI-inkluderingar som vi kommer att se senare)
+* En modul för Apache httpd-webbservern, som lägger till AEM-relaterade funktioner till Apache-filens mångsidighet och fungerar smidigt tillsammans med alla andra Apache-moduler (som SSL eller SSI-inkluderingar som vi kommer att se senare)
 
 I webbens tidiga dagar förväntar du dig ett par hundra besökare på en webbplats. En installation av en Dispatcher som&quot;skickas&quot; eller balanserar antalet förfrågningar till ett antal AEM publiceringsservrar och som vanligtvis var tillräckligt - dvs. namnet&quot;Dispatcher&quot;. I dag används dock inte den här inställningen särskilt mycket längre.
 
@@ -85,28 +85,28 @@ Här förklaras grunderna i dispatchern. Dispatchern är en enkel cachelagring a
 
 1. En användare begär en sida
 2. Dispatcher kontrollerar om det redan finns en återgiven version av den sidan. Låt oss anta att det är den allra första begäran för den här sidan och att Dispatcher inte kan hitta en lokal cachelagrad kopia.
-3. Dispatcher begär sidan från Publish system
-4. På Publish återges sidan med en JSP- eller HTML-mall
+3. Dispatcher begär sidan från publiceringssystemet
+4. På publiceringssystemet återges sidan med en JSP- eller HTML-mall
 5. Sidan skickas tillbaka till Dispatcher
 6. Dispatcher cachelagrar sidan
 7. Dispatcher returnerar sidan till webbläsaren
-8. Om samma sida begärs en andra gång kan den hanteras direkt från Dispatcher-cachen utan att den behöver återges om på Publish-instansen. Detta sparar väntetid för användar- och processorcyklerna på Publish-instansen.
+8. Om samma sida begärs en andra gång kan den hanteras direkt från Dispatcher-cachen utan att den behöver återges på nytt i Publish-instansen. Detta sparar väntetid för användare och CPU-cykler på Publish-instansen.
 
-Vi pratade om &quot;sidor&quot; i sista delen. Men samma schema gäller även andra resurser som bilder, CSS-filer, PDF-nedladdningar och så vidare.
+Vi pratade om &quot;sidor&quot; i sista delen. Men samma schema gäller även andra resurser som bilder, CSS-filer, PDF-filer som hämtas osv.
 
 #### Hur data cachelagras
 
-Dispatcher-modulen utnyttjar de funktioner som finns på Apache-värdservern. Resurser som HTML-sidor, nedladdningar och bilder lagras som enkla filer i Apache-filsystemet. Så enkelt är det.
+Dispatcher-modulen utnyttjar de funktioner som finns på Apache-värdservern. Resurser som HTML-sidor, nedladdningar och bilder lagras som enkla filer i filsystemet Apache. Så enkelt är det.
 
 Filnamnet härleds av URL:en för den begärda resursen. Om du begär en fil `/foo/bar.html` lagras den till exempel under /`var/cache/docroot/foo/bar.html`.
 
-Om alla filer cachelagras och därmed lagras statiskt i Dispatcher kan du i princip dra Publish-systemets plug-in och Dispatcher fungerar som en enkel webbserver. Men detta är bara för att illustrera principen. Det verkliga livet är mer komplicerat. Du kan inte cachelagra allt och cachen är aldrig helt&quot;full&quot; eftersom antalet resurser kan vara oändligt på grund av återgivningsprocessens dynamiska karaktär. Modellen för ett statiskt filsystem hjälper till att generera en helhetsbild av avsändarens funktioner. Och det hjälper till att förklara begränsningarna med dispatchern.
+Om alla filer cachelagras och därmed lagras statiskt i Dispatcher kan du i princip hämta plugin-programmet för publiceringssystemet och Dispatcher fungerar som en enkel webbserver. Men detta är bara för att illustrera principen. Det verkliga livet är mer komplicerat. Du kan inte cachelagra allt och cachen är aldrig helt&quot;full&quot; eftersom antalet resurser kan vara oändligt på grund av återgivningsprocessens dynamiska karaktär. Modellen för ett statiskt filsystem hjälper till att generera en helhetsbild av avsändarens funktioner. Och det hjälper till att förklara begränsningarna med dispatchern.
 
 #### AEM URL-struktur och filsystemsmappning
 
 Om du vill ha mer information om Dispatcher kan du gå igenom strukturen för en enkel exempel-URL.  Låt oss titta på exemplet nedan,
 
-`http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&otherparameter=value#fragment`
+`http://domain.com/path/to/resource/pagename.selectors.html/path/suffix.ext?parameter=value&amp;otherparameter=value#fragment`
 
 * `http` betecknar protokollet
 
@@ -114,21 +114,21 @@ Om du vill ha mer information om Dispatcher kan du gå igenom strukturen för en
 
 * `path/to/resource` är sökvägen som resursen lagras i CRX och därefter i Apache-serverns filsystem
 
-Härifrån skiljer det sig lite åt mellan AEM och Apache-filsystemet.
+Härifrån skiljer det sig lite åt mellan AEM filsystem och Apache-filsystemet.
 
-AEM
+I AEM
 
 * `pagename` är resursetiketten
 
 * `selectors` står för ett antal väljare som används i Sling för att bestämma hur resursen ska återges. En URL kan ha ett godtyckligt antal väljare. De avgränsas av en punkt. En väljarsektion kan till exempel vara &quot;french.mobile.dit&quot;. Väljarna får endast innehålla bokstäver, siffror och bindestreck.
 
-* `html` som den sista av väljarna kallas för ett tillägg. I AEM/Sling avgör det också delvis återgivningsskriptet.
+* `html` som den sista av väljarna kallas för ett tillägg. I AEM/Sling är det också delvis återgivningsskriptet som avgör.
 
-* `path/suffix.ext` är ett sökvägsliknande uttryck som kan vara ett suffix till URL:en.  Den kan användas i AEM skript för att ytterligare styra hur en resurs återges. Vi ska ha en hel sektion om den här delen senare. För tillfället bör det räcka att veta att du kan använda den som en extra parameter. Suffix måste ha ett tillägg.
+* `path/suffix.ext` är ett sökvägsliknande uttryck som kan vara ett suffix till URL:en.  Den kan användas i AEM-skript för att ytterligare styra hur en resurs återges. Vi ska ha en hel sektion om den här delen senare. För tillfället bör det räcka att veta att du kan använda den som en extra parameter. Suffix måste ha ett tillägg.
 
 * `?parameter=value&otherparameter=value` är frågeavsnittet i URL:en. Den används för att skicka godtyckliga parametrar till AEM. URL:er med parametrar kan inte cachelagras och parametrar bör därför begränsas till fall där de är absolut nödvändiga.
 
-* `#fragment`, fragmentdelen av en URL skickas inte till AEM den bara används i webbläsaren, antingen i JavaScript-ramverk som&quot;routningsparametrar&quot; eller för att hoppa till en viss del på sidan.
+* `#fragment`, fragmentdelen av en URL skickas inte till AEM utan används endast i webbläsaren, antingen i JavaScript-ramverk som&quot;routningsparametrar&quot; eller för att hoppa till en viss del på sidan.
 
 I Apache (*refererar till bilden nedan*),
 
@@ -261,7 +261,7 @@ Låt oss titta på en kort sammanfattning av det sista kapitlet plus några andr
 * URL utan tillägg
 * URL med ett suffix som inte har något tillägg
 * Svar som returnerar en annan statuskod än 200
-* Begäran om POST
+* POST-begäran
 
 ## Invalidera och tömma cachen
 
@@ -277,7 +277,7 @@ Det här verkar vara en enkel uppgift.. men det är det inte. Läs vidare så ko
 
 ### Enkla resurser och tömning
 
-Vi har konfigurerat vårt AEM för att dynamiskt skapa en miniatyrrendering för varje bild när det efterfrågas med en särskild&quot;tumväljare&quot;:
+Vi har konfigurerat vårt AEM-system för att dynamiskt skapa en miniatyrrendering för varje bild när det efterfrågas med en särskild&quot;tumväljare&quot;:
 
 `/content/dam/path/to/image.thumb.png`
 
@@ -295,7 +295,7 @@ Om vi laddar ned både miniatyrbilden och originalbilden får vi något som
 
 i Dispatcher filsystem.
 
-Nu laddar användaren upp och aktiverar en ny version av filen. I slutändan skickas en begäran om ogiltigförklaring från AEM till Dispatcher.
+Nu laddar användaren upp och aktiverar en ny version av filen. I slutändan skickas en begäran om ogiltigförklaring från AEM till Dispatcher,
 
 ```
 GET /invalidate
@@ -304,7 +304,7 @@ invalidate-path:  /content/dam/path/to/image
 <no body>
 ```
 
-Så enkelt är det att ogiltigförklara: En enkel begäran om GET till en speciell &quot;/invalidate&quot;-URL på Dispatcher. HTTP-body krävs inte, nyttolasten är bara huvudet invalidate-path. Observera också att invalidate-path i sidhuvudet är den resurs som AEM känner till - och inte den eller de filer som Dispatcher har cachelagrat. AEM känner bara till resurser. Tillägg, väljare och suffix används vid körning när en resurs begärs. AEM bokför inte vilka väljare som har använts på en resurs, så resurssökvägen är helt säker när en resurs aktiveras.
+Så enkelt är det att ogiltigförklara: En enkel GET-begäran till en speciell &quot;/invalidate&quot;-URL på Dispatcher. HTTP-body krävs inte, nyttolasten är bara huvudet invalidate-path. Observera också att invalidate-path i huvudet är den resurs som AEM känner till - och inte den eller de filer som Dispatcher har cachelagrat. AEM känner bara till resurser. Tillägg, väljare och suffix används vid körning när en resurs begärs. AEM bokför inte vilka väljare som har använts på en resurs, så resurssökvägen är helt säker när en resurs aktiveras.
 
 Det räcker i vårt fall. Om en resurs har ändrats kan vi anta att alla återgivningar av den resursen också har ändrats. Om bilden har ändrats återges även en ny miniatyrbild.
 
@@ -320,7 +320,7 @@ Mycket enkelt ... så länge du bara använder en resurs för att besvara en fö
 
 #### Problem med det delade innehållet
 
-Till skillnad från bilder eller andra binära filer som överförts till AEM är HTML sidor inte ett enda djur. De lever i flockar och de är i hög grad sammankopplade med varandra genom hyperlänkar och referenser. Den enkla länken är ofarlig, men den blir svår när vi talar om innehållsreferenser. Den vanliga toppnavigeringen eller de vanligaste scenerna på sidor är innehållsreferenser.
+Till skillnad från bilder och andra binära filer som överförts till AEM är HTML sidor inte fristående djur. De lever i flockar och de är i hög grad sammankopplade med varandra genom hyperlänkar och referenser. Den enkla länken är ofarlig, men den blir svår när vi talar om innehållsreferenser. Den vanliga toppnavigeringen eller de vanligaste scenerna på sidor är innehållsreferenser.
 
 #### Innehållsreferenser och varför de är ett problem
 
@@ -336,7 +336,7 @@ eller
 
 ![](assets/chapter-1/content-references.png)
 
-AEM fungerar bara som charm, men om du använder en Dispatcher i Publish-instansen händer något konstigt.
+På AEM fungerar det bara som charm, men om du använder en Dispatcher i Publish-instansen händer något konstigt.
 
 Tänk dig att du har publicerat din webbplats. Titeln på din Kanadassida är &quot;Kanada&quot;. När en besökare begär din hemsida - som har en stegvis referens till den sidan - återges något som liknar det som komponenten på&quot;Kanadas&quot; sida
 
@@ -351,7 +351,7 @@ Tänk dig att du har publicerat din webbplats. Titeln på din Kanadassida är &q
 
 Nu har marknadsföraren lärt sig att det ska gå att agera med teaserrubriker. Så han bestämmer sig för att ändra titeln från &quot;Kanada&quot; till &quot;Besök Kanada&quot; och uppdaterar även bilden.
 
-Han publicerar den redigerade&quot;Canada&quot;-sidan och går igenom den tidigare publicerade hemsidan för att se ändringarna. Men inget förändrades där. Den visar fortfarande den gamla teaser. Han dubbelkollar &quot;Winter Special&quot;. Den sidan har aldrig begärts tidigare och är därför inte statiskt cachelagrad i Dispatcher. Den här sidan renderas av Publish och den här sidan innehåller nu det nya&quot;Besök Kanada&quot;-teasret.
+Han publicerar den redigerade&quot;Canada&quot;-sidan och går igenom den tidigare publicerade hemsidan för att se ändringarna. Men inget förändrades där. Den visar fortfarande den gamla teaser. Han dubbelkollar &quot;Winter Special&quot;. Den sidan har aldrig begärts tidigare och är därför inte statiskt cachelagrad i Dispatcher. Den här sidan återges alltså nyligen av Publish och den här sidan innehåller nu det nya&quot;Besök Kanada&quot;-teaseret.
 
 ![Dispatcher lagrar inaktuellt innehåll på startsidan](assets/chapter-1/dispatcher-storing-stale-content.png)
 
@@ -365,13 +365,13 @@ Dispatcher är en webbserver som bara är baserad på filsystem och är snabb me
 
 Sidan&quot;Vinter special&quot; har inte renderats än, så det finns ingen statisk version på Dispatcher och den visas därför med den nya teaser som den renderas på begäran.
 
-Du kanske tror att Dispatcher håller reda på alla resurser som den rör vid vid återgivningen och tömmer alla sidor som har använt resursen när resursen ändras. Men Dispatcher återger inte sidorna. Återgivningen utförs av Publish-systemet. Dispatcher vet inte vilka resurser som går till en återgiven HTML-fil.
+Du kanske tror att Dispatcher håller reda på alla resurser som den rör vid vid återgivningen och tömmer alla sidor som har använt resursen när resursen ändras. Men Dispatcher återger inte sidorna. Återgivningen utförs av publiceringssystemet. Dispatcher vet inte vilka resurser som går till en återgiven HTML-fil.
 
-Fortfarande inte övertygad? Du kanske tror att *måste finnas ett sätt att implementera någon typ av beroendespårning*. Det finns faktiskt, eller mer exakt där *var*. Communiqué 3, farfars-farfars-farfars-farfars-farfar, hade en beroendespårare implementerad i _sessionen_ som användes för att återge en sida.
+Fortfarande inte övertygad? Du kanske tror att *måste finnas ett sätt att implementera någon typ av beroendespårning*. Det finns faktiskt, eller mer exakt där *var*. Communiqué 3, AEM gammelfarfar, hade en beroendespårare implementerad i _session_ som användes för att återge en sida.
 
 Under en begäran spårades varje resurs som hämtades via den här sessionen som ett beroende av den URL som för närvarande återges.
 
-Men det visade sig att det var väldigt dyrt att hålla reda på beroendena. Folk upptäckte snart att webbplatsen är snabbare om de stängde av funktionen för beroendespårning helt och hållet och förlitade sig på att återge alla HTML-sidor efter att en HTML-sida ändrats. Dessutom var detta system inte heller perfekt - det fanns ett antal fallgropar och undantag på vägen. I vissa fall använde du inte standardsessionen för begäranden för att hämta en resurs, utan en administratörssession för att få hjälp med att återge en begäran. Dessa beroenden spårades vanligtvis inte och ledde till huvudvärk och telefonsamtal till teamet som bad om att manuellt tömma cachen. Du hade tur om de hade en standardprocedur för att göra det. Det fanns fler saker på vägen men.. vi slutar påminna. Detta leder tillbaka till 2005. I slutändan inaktiverades funktionen som standard i Communiqué 4, och den återgick inte till den efterföljare CQ5 som sedan blev AEM.
+Men det visade sig att det var väldigt dyrt att hålla reda på beroendena. Folk upptäckte snart att webbplatsen är snabbare om de stängde av funktionen för beroendespårning helt och hållet och förlitade sig på att återge alla HTML-sidor efter att en HTML-sida ändrats. Dessutom var detta system inte heller perfekt - det fanns ett antal fallgropar och undantag på vägen. I vissa fall använde du inte standardsessionen för begäranden för att hämta en resurs, utan en administratörssession för att få hjälp med att återge en begäran. Dessa beroenden spårades vanligtvis inte och ledde till huvudvärk och telefonsamtal till teamet som bad om att manuellt tömma cachen. Du hade tur om de hade en standardprocedur för att göra det. Det fanns fler saker på vägen men.. vi slutar påminna. Detta leder tillbaka till 2005. I slutändan inaktiverades den funktionen som standard i Communiqué 4 och den återgick inte till den efterföljare som CQ5, som då blev AEM.
 
 ### Automatisk invalidering
 
@@ -405,7 +405,7 @@ Om du ändrar NavTitle på Islands sida från &quot;Island&quot; till &quot;Beau
 
 Om du har en stor webbplats med tusentals sidor tar det en hel stund att göra en slinga genom alla sidor och ta bort dem fysiskt. Under denna period kan Dispatcher oavsiktligt leverera gammalt innehåll. Ännu värre är att vissa konflikter kan uppstå vid åtkomst av cachefilerna, en sida kanske efterfrågas medan den just tas bort eller en sida tas bort igen på grund av en andra ogiltigförklaring som inträffade efter en omedelbar efterföljande aktivering. Tänk på vilken röra det skulle vara. Som tur är är det inte så här. Dispatcher använder ett smart trick för att undvika detta: Istället för att ta bort hundratals och tusentals filer placerar den en enkel, tom fil i roten av filsystemet när en fil publiceras och därför betraktas alla beroende filer som ogiltiga. Den här filen kallas för &quot;statfile&quot;. Statusfilen är en tom fil - det viktiga med statusfilen är bara skapandedatumet.
 
-Alla filer i dispatchern som har ett datum som är äldre än statusfilen har återgetts före den senaste aktiveringen (och ogiltigförklaringen) och betraktas därför som&quot;ogiltiga&quot;. De finns fortfarande fysiskt kvar i filsystemet, men de ignoreras av Dispatcher. De är&quot;föråldrade&quot;. När en begäran om en inaktuell resurs görs ber Dispatcher AEM att återge sidan igen. Den nya återgivna sidan lagras sedan i filsystemet - nu med ett nytt skapandedatum och den är ny igen.
+Alla filer i dispatchern som har ett datum som är äldre än statusfilen har återgetts före den senaste aktiveringen (och ogiltigförklaringen) och betraktas därför som&quot;ogiltiga&quot;. De finns fortfarande fysiskt kvar i filsystemet, men de ignoreras av Dispatcher. De är&quot;föråldrade&quot;. När en begäran om en inaktuell resurs görs ber Dispatcher AEM-systemet att återge sidan igen. Den nya återgivna sidan lagras sedan i filsystemet - nu med ett nytt skapandedatum och den är ny igen.
 
 ![Skapad av .stat-filen definierar vilket innehåll som är inaktuellt och som är färskt](assets/chapter-1/creation-date.png)
 
@@ -423,13 +423,13 @@ Men vänta... tidigare sa vi att enstaka resurser tas bort fysiskt. Nu säger vi
 
 Svaret är enkelt. Du använder vanligtvis båda strategierna parallellt, men för olika typer av resurser. Binära resurser, som bilder, är fristående. De är inte kopplade till andra resurser på ett sätt som innebär att deras information måste återges.
 
-HTML sidor å andra sidan är mycket beroende av varandra. Du skulle alltså tillämpa automatisk ogiltigförklaring på dessa. Det här är standardinställningen i Dispatcher. Alla filer som tillhör en ogiltig resurs tas bort fysiskt. Dessutom blir filer som slutar med &quot;.html&quot; automatiskt ogiltiga.
+HTML sidor är å andra sidan mycket beroende av varandra. Du skulle alltså tillämpa automatisk ogiltigförklaring på dessa. Det här är standardinställningen i Dispatcher. Alla filer som tillhör en ogiltig resurs tas bort fysiskt. Dessutom blir filer som slutar med &quot;.html&quot; automatiskt ogiltiga.
 
 Dispatcher beslutar om filtillägget ska tillämpas eller inte.
 
 Filsluten för automatisk ogiltigförklaring kan konfigureras. I teorin kan du inkludera alla tillägg till automatisk ogiltigförklaring. Men tänk på att det här kommer till ett mycket högt pris. Du kommer inte att se föråldrade resurser levereras oavsiktligt, men leveransresultaten försämras avsevärt på grund av överogiltigförklaring.
 
-Tänk dig till exempel att du implementerar ett schema där PNG-filer och JPG återges dynamiskt och är beroende av andra resurser för att göra det. Du kanske vill skala om högupplösta bilder till en mindre webbkompatibel upplösning. När du är klar ändras också komprimeringsgraden. Upplösning och komprimeringsgrad i det här exemplet är inga fasta konstanter, men konfigurerbara parametrar i komponenten som använder bilden. Om den här parametern ändras måste du göra bilderna ogiltiga.
+Tänk dig till exempel att du implementerar ett schema där PNG- och JPG-filer återges dynamiskt och är beroende av andra resurser för att göra det. Du kanske vill skala om högupplösta bilder till en mindre webbkompatibel upplösning. När du är klar ändras också komprimeringsgraden. Upplösning och komprimeringsgrad i det här exemplet är inga fasta konstanter, men konfigurerbara parametrar i komponenten som använder bilden. Om den här parametern ändras måste du göra bilderna ogiltiga.
 
 Inga problem - vi fick just veta att vi kunde lägga till bilder till automatisk ogiltigförklaring och alltid ha återgivna bilder när något ändras.
 
@@ -445,7 +445,7 @@ Självständiga resurser ska betjänas på den resursens sökväg. Det hjälper 
 
 ##### Undantag för automatisk invalidering: Invalidering av endast resurs
 
-Inaktiveringsbegäran för Dispatcher utlöses vanligtvis från Publish-system av en replikeringsagent.
+Inaktiveringsbegäran för Dispatcher utlöses vanligtvis från publiceringssystemet/publiceringssystemen av en replikeringsagent.
 
 Om du känner dig riktigt säker på dina beroenden kan du försöka skapa en egen ogiltig replikeringsagent.
 
@@ -483,7 +483,7 @@ Resurserna överförs till DAM-området för AEM och bara _refereras_ i komponen
 
 Responskomponenten tar hand om både återgivningen av markeringen och leveransen av binära bilddata.
 
-Det sätt vi implementerar det här är ett gemensamt mönster som vi har sett i många projekt, och till och med en av de AEM kärnkomponenterna är baserad på det mönstret. Därför är det mycket troligt att du som utvecklare kan anpassa det mönstret. Den har sina ljuvliga fläckar när det gäller inkapsling, men det kräver en hel del arbete för att göra den redo för Dispatcher. Vi kommer att diskutera flera olika alternativ för att minska problemet senare.
+Det sätt vi implementerar det här är ett gemensamt mönster som vi har sett i många projekt, och till och med en av AEM kärnkomponenter är baserad på det mönstret. Därför är det mycket troligt att du som utvecklare kan anpassa det mönstret. Den har sina ljuvliga fläckar när det gäller inkapsling, men det kräver en hel del arbete för att göra den redo för Dispatcher. Vi kommer att diskutera flera olika alternativ för att minska problemet senare.
 
 Vi kallar det mönster som används här för &quot;Utskriftsmönster&quot;, eftersom problemet är en del av de tidiga dagarna i Communiqué 3 där det fanns en metod som kunde anropas på en resurs för att strömma dess binära rådata till svaret.
 
@@ -544,7 +544,7 @@ Nu begär en användare sidan - och resurserna via Dispatcher. Detta resulterar 
 
 <br> 
 
-Överväg att en användare överför och aktiverar en ny version av de två blombilderna till DAM. AEM skickar enligt invalidiseringsbegäran för
+Överväg att en användare överför och aktiverar en ny version av de två blombilderna till DAM. AEM skickar in en begäran om ogiltigförklaring av
 
 `/content/dam/flower.jpg`
 
@@ -582,7 +582,7 @@ Ser du? &quot;M&quot; i DAM står för &quot;Management&quot; - som i Digital As
 
 #### Slutsats
 
-Ur AEM perspektiv såg mönstret superelegant ut. Men när Dispatcher har tagit hänsyn till ekvationen kanske du håller med om att det naiva tillvägagångssättet kanske inte är tillräckligt.
+Ur AEM utvecklares perspektiv såg mönstret superelegant ut. Men när Dispatcher har tagit hänsyn till ekvationen kanske du håller med om att det naiva tillvägagångssättet kanske inte är tillräckligt.
 
 Vi låter dig bestämma om det är ett mönster eller ett antimönster för tillfället. Och du kanske redan har bra idéer i åtanke om hur du kan mildra problemen som beskrivs ovan? Bra. Då ska du vara angelägen om att se hur andra projekt har löst dessa problem.
 
@@ -602,7 +602,7 @@ Vi kommer att beskriva principerna och taktiken i följande avsnitt.
 >
 >Det här är ett antimönster. Använd den inte. Någonsin.
 
-Har du någonsin sett frågeparametrar som `?ck=398547283745`? De kallas cachelagring (&quot;ck&quot;). Tanken är att om du lägger till en frågeparameter kommer resursen inte att cachelagras. Om du dessutom lägger till ett slumpmässigt tal som parameterns värde (till exempel &quot;398547283745&quot;) blir URL-adressen unik och du ser till att ingen annan cache mellan AEM och skärmen kan cachelagra något. Vanligtvis är mellanliggande misstänkta ett&quot;varnish&quot;-cache framför Dispatcher, ett CDN eller till och med webbläsarens cache. Gör inte det igen. Du vill verkligen att dina resurser ska cachas så mycket och så länge som möjligt. Cacheminnet är din vän. Dödar inte vänner.
+Har du någonsin sett frågeparametrar som `?ck=398547283745`? De kallas cachelagring (&quot;ck&quot;). Tanken är att om du lägger till en frågeparameter kommer resursen inte att cachelagras. Om du dessutom lägger till ett slumpmässigt tal som parameterns värde (till exempel &quot;398547283745&quot;) blir URL-adressen unik och du ser till att ingen annan cache mellan AEM-systemet och skärmen kan cachelagra något. Vanligtvis är mellanliggande misstänkta ett&quot;varnish&quot;-cache framför Dispatcher, ett CDN eller till och med webbläsarens cache. Gör inte det igen. Du vill verkligen att dina resurser ska cachas så mycket och så länge som möjligt. Cacheminnet är din vän. Dödar inte vänner.
 
 #### Automatisk invalidering
 
@@ -624,17 +624,17 @@ En Unix-tidsstämpel är tillräckligt bra för en implementering i verkligheten
 
 Fingeravtrycket får inte användas som frågeparameter, som URL-adresser med frågeparametrar   kan inte cachelagras. Du kan använda en väljare eller suffixet för fingeravtrycket.
 
-Låt oss anta att filen `/content/dam/flower.jpg` har datumet `jcr:lastModified` den 31 december 2018, 23:59. URL:en med fingeravtrycket är `/content/home/jcr:content/par/respi.fp-2018-31-12-23-59.jpg`.
+Vi antar att filen `/content/dam/flower.jpg` har datumet `jcr:lastModified` 31 december 2018, 23:59. URL:en med fingeravtrycket är `/content/home/jcr:content/par/respi.fp-2018-31-12-23-59.jpg`.
 
 Den här URL:en är stabil så länge som den refererade resursfilen (`flower.jpg`) inte ändras. Det kan cachas på obestämd tid och är ingen cacheminnesmördare.
 
-Observera att den här URL:en måste skapas och hanteras av den responsiva bildkomponenten. Det är inte en körklar AEM.
+Observera att den här URL:en måste skapas och hanteras av den responsiva bildkomponenten. Det är inte en körklar AEM-funktion.
 
 Det är det grundläggande konceptet. Det finns dock några detaljer som lätt kan förbises.
 
 I vårt exempel renderades och cachelagrades komponenten vid 23:59. Nu har bilden ändrats, till exempel 00:00.  Komponenten _skulle_ generera en ny fingeravtrycks URL i markeringen.
 
-Du kanske tycker att det _borde_.. men det gör det inte. Eftersom endast bildens binärfil har ändrats och inkluderingssidan inte har berörts, behövs ingen återgivning av HTML-markeringen. Så Dispatcher skickar sidan med det gamla fingeravtrycket och därmed den gamla versionen av bilden.
+Du kanske tycker att det _borde_.. men det gör det inte. Eftersom endast bildens binärfil har ändrats och inkluderingssidan inte har berörts, behövs ingen återgivning av HTML-koden. Så Dispatcher skickar sidan med det gamla fingeravtrycket och därmed den gamla versionen av bilden.
 
 ![Bildkomponenten är nyare än den refererade bilden, inget nytt fingeravtryck återges.](assets/chapter-1/recent-image-component.png)
 
@@ -658,13 +658,13 @@ Tills nu har vi inte diskuterat statfilnivån. Automatisk ogiltigförklaring fun
 
 &quot;statfile level&quot; definierar var på vilka djuprotnoder underträden finns. I exemplet ovan skulle nivån vara &quot;2&quot; (1=/content, 2=/mysite,dam)
 
-Tanken på att&quot;minska&quot; statusfilnivån till 0 är i princip att definiera hela /content-trädet som det enda underordnade trädet, så att sidor och resurser blir tillgängliga i samma domän för automatisk ogiltigförklaring. Vi har alltså bara ett stort träd på nivå (vid dokumentroten &quot;/&quot;). Om du gör det blir alla webbplatser på servern ogiltiga när något publiceras - även på helt orelaterade webbplatser. Lita på oss: Det här är en dålig idé i längden eftersom du kommer att försämra din totala cacheminnesträffhastighet avsevärt. Allt du kan göra är att hoppas att dina AEM har tillräckligt med brandkraft för att kunna köras utan cache.
+Tanken på att&quot;minska&quot; statusfilnivån till 0 är i princip att definiera hela /content-trädet som det enda underordnade trädet, så att sidor och resurser blir tillgängliga i samma domän för automatisk ogiltigförklaring. Vi har alltså bara ett stort träd på nivå (vid dokumentroten &quot;/&quot;). Om du gör det blir alla webbplatser på servern ogiltiga när något publiceras - även på helt orelaterade webbplatser. Lita på oss: Det här är en dålig idé i längden eftersom du kommer att försämra din totala cacheminnesträffhastighet avsevärt. Allt du kan göra är att hoppas att dina AEM-servrar har tillräckligt med eldkraft för att kunna köras utan cache.
 
 Du kommer att förstå de fullständiga fördelarna med djupare statusnivåer lite senare.
 
 #### Implementera en anpassad valideringsagent
 
-Hur som helst - vi måste berätta för Dispatcher på något sätt för att ogiltigförklara HTML-sidorna om en .jpg eller .png ändras så att återgivning tillåts med en ny URL.
+Hur som helst - vi måste berätta för Dispatcher på något sätt för att göra HTML-Pages ogiltiga om en .jpg eller .png ändras för att tillåta återgivning med en ny URL.
 
 Det vi har sett i projekt är till exempel särskilda replikeringsagenter i publiceringssystemet som skickar ogiltigförklaringsbegäranden för en plats när en bild av den platsen publiceras.
 
@@ -744,7 +744,7 @@ Vi missbrukar en väljare som parameter: fp-2018-31-12-23-59 genereras dynamiskt
 
 Varje begäran kommer att kringgå Dispatcher och orsaka inläsning på en Publish-instans. Och ännu värre - skapa en fil i enlighet med Dispatcher.
 
-I stället för att bara använda fingeravtrycket som en enkel cacheminnesmördare måste du kontrollera jcr:lastModified-datumet för bilden och returnera 404 om det inte är det förväntade datumet. Det tar en stund och processortid i Publish-systemet ... vilket är vad du vill förhindra från början.
+I stället för att bara använda fingeravtrycket som en enkel cachemördare, måste du kontrollera jcr:lastModified-datumet för bilden och returnera 404 om det inte är det förväntade datumet. Det tar en stund och CPU cyklar i publiceringssystemet ... vilket är vad du ville förhindra från början.
 
 #### Värden för URL-fingeravtryck i högfrekventa versioner
 
@@ -752,11 +752,11 @@ Du kan använda fingeravtrycksschemat inte bara för resurser som kommer från D
 
 [Versionsklipp](https://adobe-consulting-services.github.io/acs-aem-commons/features/versioned-clientlibs/index.html) är en modul som använder det här arbetssättet.
 
-Men här kan du stå inför en annan kavaat med URL-fingeravtryck: den kopplar URL:en till innehållet. Du kan inte ändra innehållet utan att ändra URL-adressen (d.v.s. uppdatera ändringsdatumet). Det är det fingeravtrycken är utformade för i första hand. Men tänk på att ni nu lanserar en ny release med nya CSS- och JS-filer och därmed nya URL:er med nya fingeravtryck. Alla dina HTML-sidor har fortfarande referenser till de gamla fingeravtrycks-URL:erna. För att få den nya versionen att fungera på ett konsekvent sätt måste du ogiltigförklara alla HTML-sidor samtidigt för att tvinga fram en omrendering med referenser till de nya fingeravtrycksfilerna. Om du har flera platser som är beroende av samma bibliotek kan det vara en avsevärd mängd återgivning - och här kan du inte utnyttja `statfiles`. Så var redo att se belastningstoppar på dina Publish-system efter utrullningen. Du kanske ska fundera på en blågrön distribution med cacheuppvärmning eller kanske ett TTL-baserat cacheminne framför din Dispatcher ... möjligheterna är oändliga.
+Men här kan du stå inför en annan kavaat med URL-fingeravtryck: den kopplar URL:en till innehållet. Du kan inte ändra innehållet utan att ändra URL-adressen (d.v.s. uppdatera ändringsdatumet). Det är det fingeravtrycken är utformade för i första hand. Men tänk på att ni nu lanserar en ny release med nya CSS- och JS-filer och därmed nya URL:er med nya fingeravtryck. Alla dina HTML-sidor har fortfarande referenser till gamla fingeravtrycksadresser. För att få den nya versionen att fungera konsekvent måste du därför ogiltigförklara alla HTML-sidor samtidigt för att tvinga fram en ny återgivning med referenser till de nya fingeravtrycksfilerna. Om du har flera platser som är beroende av samma bibliotek kan det vara en avsevärd mängd återgivning - och här kan du inte utnyttja `statfiles`. Så var redo att se belastningstoppar i dina Publish-system efter en utrullning. Du kanske ska fundera på en blågrön distribution med cacheuppvärmning eller kanske ett TTL-baserat cacheminne framför din Dispatcher ... möjligheterna är oändliga.
 
 #### En kort brytning
 
-Det är en hel del detaljer att tänka på, eller hur? Och den vägrar att lätt förstå, testa och felsöka. Och allt för en till synes elegant lösning. Visserligen är det elegant - men bara ur ett AEM perspektiv. Tillsammans med Dispatcher blir det otrevligt.
+Det är en hel del detaljer att tänka på, eller hur? Och den vägrar att lätt förstå, testa och felsöka. Och allt för en till synes elegant lösning. Visserligen är det elegant - men bara ur ett AEM-perspektiv. Tillsammans med Dispatcher blir det otrevligt.
 
 Och ändå - det löser inte ett enkelt cavat, om en bild används flera gånger på olika sidor cachelagras de under dessa sidor. Det finns inte mycket cachelagring av synergi där.
 
@@ -774,15 +774,15 @@ Dispatcher känner inte till resursberoenden. Det är bara en massa enstaka file
 
 AEM vet också lite om beroenden. Det saknas en korrekt semantik eller en &quot;beroendespårare&quot;.
 
-AEM är medvetna om några av referenserna. Den här informationen används för att varna dig när du försöker ta bort eller flytta en refererad sida eller resurs. Det gör du genom att fråga den interna sökningen när du tar bort en resurs. Innehållsreferenser har ett mycket specifikt formulär. De är sökvägsuttryck som börjar med &quot;/content&quot;. De kan enkelt indexeras i fulltext - och efterfrågas vid behov.
+AEM känner till några referenser. Den här informationen används för att varna dig när du försöker ta bort eller flytta en refererad sida eller resurs. Det gör du genom att fråga den interna sökningen när du tar bort en resurs. Innehållsreferenser har ett mycket specifikt formulär. De är sökvägsuttryck som börjar med &quot;/content&quot;. De kan enkelt indexeras i fulltext - och efterfrågas vid behov.
 
-I det här fallet behöver vi en anpassad replikeringsagent på Publish-systemet som utlöser en sökning efter en viss sökväg när sökvägen har ändrats.
+I det här fallet behöver vi en anpassad replikeringsagent i publiceringssystemet som utlöser en sökning efter en specifik sökväg när sökvägen har ändrats.
 
 Låt oss säga
 
 `/content/dam/flower.jpg`
 
-Har ändrats i Publish. Agenten skulle starta en sökning efter&quot;/content/dam/flower.jpg&quot; och hitta alla sidor som refererar till dessa bilder.
+Har ändrats vid publicering. Agenten skulle starta en sökning efter&quot;/content/dam/flower.jpg&quot; och hitta alla sidor som refererar till dessa bilder.
 
 Den kan sedan skicka ut ett antal ogiltigförklaringar till Dispatcher. En för varje sida som innehåller resursen.
 
@@ -806,7 +806,7 @@ Vårt exempel är enkelt att lösa:
 
 <br> 
 
-Resursernas ursprungliga resurssökvägar används för att återge data. Om vi behöver återge originalbilden som den är kan vi bara använda AEM standardåtergivning för resurser.
+Resursernas ursprungliga resurssökvägar används för att återge data. Om vi behöver återge originalbilden som den är kan vi bara använda AEM:s standardåtergivare för resurser.
 
 Om vi behöver utföra någon speciell bearbetning för en viss komponent, registrerar vi en dedikerad server på den banan och väljaren för att utföra omvandlingen för komponentens räkning. Vi gjorde det här exemplariskt med&quot;.respi&quot;. väljare. Det är klokt att hålla reda på väljarnamnen som används i det globala URL-området (till exempel `/content/dam`) och ha en bra namnkonvention för att undvika namnkonflikter.
 
@@ -910,14 +910,14 @@ Detta gör att cacheminnet kringgås och inläsning skapas i publiceringssysteme
 
 #### Filtrering av ogiltiga begäranden när väljare används
 
-Att minska antalet väljare var en bra början. Som tumregel bör du alltid begränsa antalet giltiga parametrar till ett absolut minimum. Om du gör detta smart kan du även använda en brandvägg för webbaserade program utanför AEM med en statisk uppsättning filter utan djupa kunskaper om det underliggande AEM för att skydda dina system:
+Att minska antalet väljare var en bra början. Som tumregel bör du alltid begränsa antalet giltiga parametrar till ett absolut minimum. Om du gör detta smart kan du till och med utnyttja en brandvägg för webbaserade program utanför AEM med en statisk uppsättning filter utan djupa kunskaper om det underliggande AEM-systemet för att skydda dina system:
 
 ```
 Allow: /content/dam/(-\_/a-z0-9)+/(-\_a-z0-9)+
        \.respi\.q-(20|40|60|80|100)\.jpg
 ```
 
-Om du inte har någon brandvägg för webbprogram måste du filtrera i Dispatcher eller i AEM. Om du gör det i AEM, vänligen kontrollera att
+Om du inte har någon brandvägg för webbprogram måste du filtrera i Dispatcher eller i AEM. Om du gör det i AEM ska du se till att
 
 1. Filtret implementeras supereffektivt, utan att du behöver använda CRX för mycket och slösar med minne och tid.
 
@@ -958,7 +958,7 @@ Bättre är att returnera en `301 – Moved permanently`:
 
 Här säger AEM till webbläsaren. &quot;Jag har inte `q-41`. Men du kan fråga mig om `q-40`.
 
-Detta lägger till en extra begärande-svar-loop i konversationen, som är lite överliggande, men det är billigare än att utföra fullständig bearbetning på `q-41`. Du kan också utnyttja filen som redan har cachelagrats under `q-40`. Du måste dock förstå att 302 svar inte cachelagras i Dispatcher, vi talar om logik som körs i AEM. Om och om igen. Det är bäst att du gör den smal och snabb.
+Detta lägger till en extra begärande-svar-loop i konversationen, som är lite överliggande, men det är billigare än att utföra fullständig bearbetning på `q-41`. Du kan också utnyttja filen som redan har cachelagrats under `q-40`. Du måste dock förstå att 302 svar inte cachas i Dispatcher, vi talar om logik som utförs i AEM. Om och om igen. Det är bäst att du gör den smal och snabb.
 
 Personligen tycker vi om att 404 svarar mest. Det gör det superuppenbart vad som händer. Och hjälper till att identifiera fel på webbplatsen när du analyserar loggfiler. 301s kan vara avsett, där 404 alltid ska analyseras och elimineras.
 
@@ -974,11 +974,11 @@ Det beror på. Ju förr desto bättre.
 
 #### Brandväggar för webbaserade program
 
-Om du har en Brandvägg för webbaserade program eller &quot;WAF&quot; som är utformad för webbsäkerhet bör du utnyttja dessa funktioner. Men du kanske får reda på att WAF hanteras av personer som bara har begränsad kunskap om ditt innehållsprogram och som antingen filtrerar giltiga begäranden eller låter skicka för många skadliga förfrågningar. Kanske kommer du att få reda på att de personer som driver WAF är tilldelade till en annan avdelning med olika tidsplaner och releaser, att kommunikationen kanske inte är lika noggrann som med era direkta teamkamrater och att ni inte alltid får ändringarna i tid, vilket betyder att utvecklingen och innehållets hastighet i slutändan blir lidande.
+Om du har en brandväggsfunktion för webbaserade program eller&quot;WAF&quot; som är utformad för webbsäkerhet bör du verkligen utnyttja dessa funktioner. Men du kanske får reda på att WAF drivs av personer som bara har begränsad kunskap om ditt innehållsprogram och antingen filtrerar giltiga förfrågningar eller låter dem skicka för många skadliga förfrågningar. Kanske kommer du att få reda på att de som driver WAF har tilldelats olika avdelningar med olika tidsplaner och releaser, att kommunikationen kanske inte är lika noggrann som med era direktteam och att ni inte alltid får ändringarna i tid, vilket betyder att er utveckling och innehållshastighet blir lidande.
 
 Du kanske får några allmänna regler, eller till och med en blockeringslista, som din magkänsla säger, kan bli åtstramad.
 
-#### Dispatcher- och Publish-filtrering
+#### Dispatcher- och Publish Filtering
 
 Nästa steg är att lägga till regler för URL-filtrering i Apache-kärnan och/eller i Dispatcher.
 
@@ -986,7 +986,7 @@ Här har du bara tillgång till URL:er. Du är begränsad till mönsterbaserade 
 
 #### Övervakning och felsökning
 
-I praktiken har du en viss säkerhet på varje nivå. Men se till att du har möjlighet att ta reda på på vilken nivå en begäran filtreras bort. Se till att du har direktåtkomst till Publish-systemet, till Dispatcher och till loggfilerna på WAF för att ta reda på vilket filter i kedjan som blockerar förfrågningar.
+I praktiken har du en viss säkerhet på varje nivå. Men se till att du har möjlighet att ta reda på på vilken nivå en begäran filtreras bort. Kontrollera att du har direkt åtkomst till publiceringssystemet, till Dispatcher och till loggfilerna på WAF för att ta reda på vilket filter i kedjan som blockerar begäranden.
 
 ### Väljare och spridning av väljare
 
@@ -1080,7 +1080,7 @@ Alla cachefiler i Dispatcher filsystem som har konfigurerats att ogiltigförklar
 >
 >Det senaste ändringsdatumet vi talar om är den cachelagrade filen det datum då filen begärdes från klientens webbläsare och slutligen skapades i filsystemet. Det är inte datumet `jcr:lastModified` för resursen.
 
-Senaste ändringsdatum för statusfilen (`.stat`) är det datum då invalideringsbegäran från AEM togs emot på Dispatcher.
+Senaste ändringsdatum för statusfilen (`.stat`) är det datum då ogiltigförklaringsbegäran från AEM togs emot på Dispatcher.
 
 Om du har fler än en Dispatcher kan det leda till märkliga effekter. Webbläsaren kan ha en senare version av Dispatcher (om du har fler än en Dispatcher). Eller så tror Dispatcher att webbläsarens version som utfärdades av den andra Dispatcher är inaktuell och i onödan skickar en ny kopia. Dessa effekter påverkar inte prestanda eller funktionskrav i någon större utsträckning. Och de kommer att jämna ut över tid när webbläsaren har den senaste versionen. Det kan dock vara lite förvirrande när du optimerar och felsöker webbläsarens cachelagring. Var så varnad.
 
@@ -1088,7 +1088,7 @@ Om du har fler än en Dispatcher kan det leda till märkliga effekter. Webbläsa
 
 När vi införde automatisk ogiltigförklaring och statusfilen som vi sa, anses *alla*-filer vara ogiltiga när det finns någon ändring och att alla filer ändå är beroende av varandra.
 
-Det är inte riktigt exakt. Vanligtvis är alla filer som delar en gemensam huvudnavigeringsrot beroende av varandra. Men en AEM kan vara värd för ett antal webbplatser - *oberoende* webbplatser. Att inte dela en gemensam navigering - faktiskt, att inte dela någonting.
+Det är inte riktigt exakt. Vanligtvis är alla filer som delar en gemensam huvudnavigeringsrot beroende av varandra. Men en AEM-instans kan vara värd för ett antal webbplatser - *oberoende* webbplatser. Att inte dela en gemensam navigering - faktiskt, att inte dela någonting.
 
 Skulle det inte vara slöseri att ogiltigförklara webbplats B eftersom det är en förändring i plats A? Ja, det är det. Och det behöver inte vara så.
 
@@ -1098,7 +1098,7 @@ Det är ett tal som definierar från vilken nivå i filsystemet två underträd 
 
 Vi tittar på standardfallet där statusfilnivån är 0.
 
-![/statfileslevel &quot;0&quot;:_ _.stat_ _skapas i docroot. Ogiltig domän omfattar hela installationen inklusive alla webbplatser &#x200B;](assets/chapter-1/statfile-level-0.png)
+![/statfileslevel &quot;0&quot;:_ _.stat_ _skapas i docroot. Ogiltig domän omfattar hela installationen inklusive alla webbplatser ](assets/chapter-1/statfile-level-0.png)
 
 `/statfileslevel "0":` Filen `.stat` skapas i dokumentroten. Domänen för ogiltigförklaring omfattar hela installationen inklusive alla webbplatser.
 
@@ -1167,7 +1167,7 @@ Den bästa lösningen är naturligtvis att göra alla webbplatsers rötter lika 
 
 Vilken är den rätta nivån nu? Det beror på hur många beroenden du har mellan platserna. Inklusioner som du löser för återgivning av en sida betraktas som&quot;beroende&quot;. En sådan _inkludering_ visades när _Teaser_-komponenten introducerades i början av den här guiden.
 
-_Hyperlänkar_ är en mjukare form av beroenden. Det är mycket troligt att du hyperlänkar inom en webbplats ... och det är inte troligt att du har länkar mellan dina webbplatser. Enkla hyperlänkar skapar vanligtvis inte beroenden mellan webbplatser. Tänk bara på en extern länk som du länkar från din webbplats till facebook... Du behöver inte återge din sida om något ändras på facebook och vice versa, eller hur?
+_Hyperlänkar_ är en mjukare form av beroenden. Det är mycket troligt att du hyperlänkar inom en webbplats ... och det är inte troligt att du har länkar mellan dina webbplatser. Enkla hyperlänkar skapar vanligtvis inte beroenden mellan webbplatser. Tänk bara på en extern länk som du länkar från sajten till Facebook... Du behöver inte återge sidan om något ändras i Facebook och vice versa, eller hur?
 
 Ett beroende inträffar när du läser innehåll från den länkade resursen (t.ex. navigeringstiteln). Sådana beroenden kan undvikas om du bara förlitar dig på lokalt angivna navigeringsrubriker och inte ritar dem från målsidan (som med externa länkar).
 
@@ -1298,25 +1298,25 @@ Vi ska avsluta den första delen av denna bok med en slumpmässig samling tips o
 
 ### Korrigera invalideringstider
 
-Om du installerar en AEM författare och Publish är topologin lite udda. Författaren skickar samtidigt innehållet till Publish-systemen och ogiltighetsbegäran till Dispatcher. Eftersom både Publish och Dispatcher är frikopplade från författaren i köer kan tajmingen vara lite olycklig. Dispatcher kan ta emot invalideringsbegäran från författaren innan innehållet uppdateras i Publish.
+Om du installerar en AEM-författare och publicerar direkt är topologin lite udda. Författaren skickar samtidigt innehållet till publiceringssystemen och ogiltighetsbegäran till Dispatcher. Eftersom både Publish-systemen och Dispatcher inte längre är kopplade till Author by queues kan tajmingen vara lite olycklig. Dispatcher kan ta emot en begäran om ogiltigförklaring från författaren innan innehållet uppdateras i publiceringssystemet.
 
 Om en kund begär detta innehåll under tiden kommer Dispatcher att begära och lagra gammalt innehåll.
 
-En mer tillförlitlig konfiguration skickar en ogiltigförklaringsbegäran från Publish-systemen _när_ har tagit emot innehållet. Artikeln [Invaliderar Dispatcher-cache från en publiceringsinstans](https://helpx.adobe.com/se/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance). Beskriver informationen.
+En mer tillförlitlig konfiguration skickar en ogiltigförklaringsbegäran från publiceringssystemen _när_ har tagit emot innehållet. Artikeln [Invaliderar Dispatcher-cache från en publiceringsinstans](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance). Beskriver informationen.
 
 **Referenser**
 
-[helpx.adobe.com - Invaliderar Dispatcher-cache från en publiceringsinstans](https://helpx.adobe.com/se/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)
+[helpx.adobe.com - Invaliderar Dispatcher-cache från en publiceringsinstans](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)
 
 ### HTTP Header and Header Caching
 
-På den gamla tiden lagrade Dispatcher bara oformaterade filer i filsystemet. Om du behövde HTTP-headers för att kunna levereras till kunden gjorde du det genom att konfigurera Apache baserat på den lilla information du hade från filen eller platsen. Det var särskilt irriterande när du implementerade ett webbprogram i AEM som var starkt beroende av HTTP-huvuden. Allt fungerade bra i den AEM förekomsten, men inte när du använde en Dispatcher.
+På den gamla tiden lagrade Dispatcher bara oformaterade filer i filsystemet. Om du behövde HTTP-headers för att kunna levereras till kunden gjorde du det genom att konfigurera Apache baserat på den lilla information du hade från filen eller platsen. Det var särskilt irriterande när du implementerade ett webbprogram i AEM som var starkt beroende av HTTP-huvuden. Allt fungerade bra i AEM men inte när du använde en Dispatcher.
 
 Vanligtvis började du återanvända de saknade rubrikerna på resurserna i Apache-servern med `mod_headers` genom att använda information som du kan härleda genom resurssökvägen och suffixet. Men det var inte alltid tillräckligt.
 
-Särskilt irriterande var att även med Dispatcher kom det första _ocachelagrade_-svaret till webbläsaren från Publish-systemet med ett stort antal rubriker, medan de efterföljande svaren genererades av Dispatcher med en begränsad rubrikuppsättning.
+Särskilt irriterande var att även med Dispatcher kom det första _ocachelagrade_-svaret till webbläsaren från publiceringssystemet med ett stort antal rubriker, medan de efterföljande svaren genererades av Dispatcher med en begränsad uppsättning rubriker.
 
-Från och med Dispatcher 4.1.11 kan Dispatcher lagra rubriker som genererats av Publish-systemen.
+Från och med Dispatcher 4.1.11 kan Dispatcher lagra rubriker som genererats av publiceringssystemen.
 
 På så sätt slipper du duplicera rubriklogik i Dispatcher och frigör den fulla uttryckskraften i HTTP och AEM.
 
@@ -1376,17 +1376,17 @@ Om du vill att den andra delen ska fungera måste du skicka datumet `Last-Modifi
 
 Vi förklarade tidigare att när datumet `Last-Modified` genereras av Dispatcher kan det variera mellan olika begäranden eftersom den cachelagrade filen - och dess datum - genereras när filen begärs av webbläsaren. Ett alternativ är att använda &quot;e-taggar&quot; - det är tal som identifierar det faktiska innehållet (t.ex. genom att generera en hash-kod) i stället för ett datum.
 
-[Etag-stöd](https://adobe-consulting-services.github.io/acs-aem-commons/features/etag/index.html) från _ACS-kommandopaketet_ använder det här sättet. Detta har dock ett pris: Eftersom e-taggen måste skickas som en rubrik, men beräkningen av hash-koden kräver att svaret läses helt, måste svaret buffras helt i huvudminnet innan det kan levereras. Detta kan påverka fördröjningen negativt när det är mer sannolikt att din webbplats har ocachelagrade resurser och du måste naturligtvis hålla ett öga på det minne som AEM använder.
+[Etag-stöd](https://adobe-consulting-services.github.io/acs-aem-commons/features/etag/index.html) från _ACS-kommandopaketet_ använder det här sättet. Detta har dock ett pris: Eftersom e-taggen måste skickas som en rubrik, men beräkningen av hash-koden kräver att svaret läses helt, måste svaret buffras helt i huvudminnet innan det kan levereras. Detta kan påverka fördröjningen negativt när det är mer sannolikt att din webbplats har ocachelagrade resurser och du måste naturligtvis hålla ett öga på det minne som används av ditt AEM-system.
 
 Om du använder URL-fingeravtryck kan du ange mycket långa förfallodatum. Du kan cachelagra fingeravtrycksresurser för gott i webbläsaren. En ny version är markerad med en ny URL och äldre versioner behöver aldrig uppdateras.
 
 Vi använde URL-fingeravtryck när vi introducerade buffertmönstret. Statiska filer som kommer från `/etc/design` (CSS, JS) ändras sällan, vilket även gör dem bra att använda som fingeravtryck.
 
-För vanliga filer skapar vi vanligtvis ett fast schema, som att kontrollera HTML var 30:e minut, bilder var 4:e timme och så vidare.
+För vanliga filer skapar vi vanligtvis ett fast schema, som att kontrollera om HTML var 30:e minut, bilder var 4:e timme och så vidare.
 
 Webbläsarcachelagring är mycket användbart i redigeringssystemet. Du vill cacha så mycket du kan i webbläsaren för att förbättra redigeringsupplevelsen. Tyvärr är de dyraste resurserna, HTML-sidorna kan inte cachelagras.. de ska ändras ofta på författaren.
 
-Granitbiblioteken, som AEM användargränssnittet, kan cachas under en hel del tid. Du kan även cachelagra platsens statiska filer (teckensnitt, CSS och JavaScript) i webbläsaren. Även bilder i `/content/dam` kan vanligtvis cachelagras i ungefär 15 minuter eftersom de inte ändras så ofta som kopieringstext på sidorna. Bilder redigeras inte interaktivt i AEM. De redigeras och godkänns först, innan de överförs till AEM. Du kan alltså anta att de inte ändras lika ofta som text.
+Granitbiblioteken, som utgör AEM användargränssnitt, kan cachas under en hel del tid. Du kan även cachelagra platsens statiska filer (teckensnitt, CSS och JavaScript) i webbläsaren. Även bilder i `/content/dam` kan vanligtvis cachelagras i ungefär 15 minuter eftersom de inte ändras så ofta som kopieringstext på sidorna. Bilder redigeras inte interaktivt i AEM. De redigeras och godkänns först, innan de överförs till AEM. Du kan alltså anta att de inte ändras lika ofta som text.
 
 När du cachelagrar gränssnittsfiler kan platsens biblioteksfiler och bilder göra att det går betydligt snabbare att läsa in sidor när du är i redigeringsläge.
 
@@ -1426,7 +1426,7 @@ Men lita inte bara på AEM. Om du gör det har du sökvägar som `/home.html` i 
 
 Vi har sett ett projekt med separata dokument för varje domän. Det var en mardröm att felsöka och underhålla - och vi såg faktiskt aldrig den felfritt.
 
-Vi kan lösa problemen genom att strukturera om cachen. Vi hade en enda dokumentrot för alla domäner och ogiltigförklaringsbegäranden kunde hanteras 1:1 eftersom alla filer på servern började med `/content`.
+Vi kan lösa problemen genom att strukturera om cachen. Vi hade en enda dokumentrot för alla domäner och ogiltigförklaringsbegäranden kunde hanteras :1 eftersom alla filer på servern började med `/content`.
 
 Den trunkerande delen var också mycket enkel.  AEM genererade trunkerade länkar på grund av en konfiguration i `/etc/map`.
 
@@ -1440,7 +1440,7 @@ Den regeln konfigurerades statiskt i varje värdkonfiguration. Kort sagt, regler
   RewriteRule "^(.\*\.html)" "/content/shiny-brand/finland/fi/$1"
 ```
 
-I filsystemet finns nu vanliga `/content`-baserade sökvägar som också finns på författaren och Publish - vilket har varit till stor hjälp vid felsökning. För att inte tala om korrekt ogiltigförklaring - det var inte längre något problem.
+I filsystemet finns nu vanliga `/content`-baserade sökvägar som också finns på författaren och publiceringen, vilket har varit till stor hjälp vid felsökning. För att inte tala om korrekt ogiltigförklaring - det var inte längre något problem.
 
 Observera att vi bara gjorde det för &quot;synliga&quot; URL:er, URL:er som visas i webbläsarens URL-plats. URL:er för bilder var till exempel fortfarande rena &quot;/content&quot;-URL:er. Vi anser att det räcker att förfina&quot;huvud&quot;-URL:en för att optimera sökmotorn.
 
@@ -1454,15 +1454,15 @@ Att ha ett gemensamt dokument hade också en annan bra funktion. När något gic
 
 * [apache.org - Skriv om stämning](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
 
-* [helpx.adobe.com - Resursmappning](https://helpx.adobe.com/se/experience-manager/6-4/sites/deploying/using/resource-mapping.html)
+* [helpx.adobe.com - Resursmappning](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/resource-mapping.html)
 
 ### Felhantering
 
-I AEM klasser får du lära dig att programmera en felhanterare i Sling. Detta skiljer sig inte så mycket från att skriva en vanlig mall. Du skriver bara en mall i JSP eller HTML, eller hur?
+I AEM-klasser får du lära dig att programmera en felhanterare i Sling. Detta skiljer sig inte så mycket från att skriva en vanlig mall. Du skriver bara en mall i JSP eller HTML, eller hur?
 
 Ja, men det här är bara AEM. Kom ihåg - Dispatcher cache-lagrar inte `404 – not found`- eller `500 – internal server error`-svar.
 
-Om du återger dessa sidor dynamiskt vid varje (misslyckad) begäran, kommer du att få en onödig hög belastning på Publish-systemen.
+Om du återger de här sidorna dynamiskt i varje (misslyckad) begäran kommer du att få en onödig hög belastning på publiceringssystemen.
 
 Det vi tyckte var användbart är att inte återge hela felsidan när ett fel inträffar, utan bara en superförenklad och liten - till och med statisk version av den sidan, utan några utsmyckningar eller logik.
 
@@ -1473,13 +1473,13 @@ ErrorDocument 404 "/content/shiny-brand/fi/fi/edocs/error-404.html"
 ErrorDocument 500 "/content/shiny-brand/fi/fi/edocs/error-500.html"
 ```
 
-Nu kan AEM bara meddela Dispatcher att något var fel och Dispatcher kan leverera en blankt och tilltalande version av feldokumentet.
+Nu kan AEM-systemet bara meddela Dispatcher att något var fel och Dispatcher kan leverera en blankt och tilltalande version av feldokumentet.
 
 Två saker bör noteras här.
 
 Först är `error-404.html` alltid samma sida. Det finns alltså inget enskilt meddelande som &quot;Din sökning efter &quot;_produkten_&quot; gav inget resultat&quot;. Vi kunde lätt leva med det där.
 
-För det andra.. Om vi ser ett internt serverfel - eller ännu värre om det uppstår ett avbrott i AEM system, finns det inget sätt att be AEM att återge en felsida, eller hur? Den nödvändiga efterföljande begäran enligt definitionen i direktivet `ErrorDocument` kommer också att misslyckas. Vi arbetade runt problemet genom att köra ett cron-job som regelbundet skulle hämta felsidorna från sina definierade platser via `wget` och lagra dem på statiska filplatser som definieras i direktivet `ErrorDocuments`.
+För det andra: om vi ser ett internt serverfel - eller ännu värre om vi stöter på ett driftstopp i AEM-systemet, finns det inget sätt att be AEM att återge en felsida, eller hur? Den nödvändiga efterföljande begäran enligt definitionen i direktivet `ErrorDocument` kommer också att misslyckas. Vi arbetade runt problemet genom att köra ett cron-job som regelbundet skulle hämta felsidorna från sina definierade platser via `wget` och lagra dem på statiska filplatser som definieras i direktivet `ErrorDocuments`.
 
 **Referenser**
 
@@ -1489,9 +1489,9 @@ För det andra.. Om vi ser ett internt serverfel - eller ännu värre om det upp
 
 Dispatcher kontrollerar inte behörigheter när en resurs levereras som standard. Den implementeras så här med syftet - för att påskynda er offentliga webbplats. Om du vill skydda vissa resurser genom att logga in har du i princip tre alternativ:
 
-1. Protect resursen innan begäran når cacheminnet, dvs. av en SSO-gateway (Single Sign On) framför Dispatcher, eller som en modul i Apache-servern
+1. Skydda resursen innan begäran når cacheminnet, dvs. via en SSO-gateway (Single Sign On) framför Dispatcher, eller som en modul i Apache-servern
 
-2. Undvik att cachelagra känsliga resurser och betjäna dem därför alltid direkt från Publish.
+2. Undvik att cachelagra känsliga resurser och betjäna dem därför alltid direkt från publiceringssystemet.
 
 3. Använda behörighetskänslig cachelagring i Dispatcher
 
@@ -1504,13 +1504,13 @@ Och du kan förstås välja en egen blandning av alla tre metoderna.
 >Det här mönstret kräver en _gateway_ som _fångar_ varje begäran och utför den faktiska _auktoriseringen_ - som beviljar eller nekar begäranden till Dispatcher. Om ditt SSO-system är en _autentiserare_ fastställer detta bara identiteten för en användare som du måste implementera alternativ 3. Om du läser termer som &quot;SAML&quot; eller &quot;OAauth&quot; i SSO-systemets handbok är det en stark indikator på att du måste implementera alternativ 3.
 
 
-**Alternativ 2**. &quot;Att inte cacha&quot; är vanligtvis en dålig idé. Om du gör det ska du se till att mängden trafik och antalet känsliga resurser som är undantagna är små. Eller se till att du har ett visst minnescache i Publish-systemet installerat, att Publish-systemen kan hantera den resulterande belastningen - mer på den i del III av denna serie.
+**Alternativ 2**. &quot;Att inte cacha&quot; är vanligtvis en dålig idé. Om du gör det ska du se till att mängden trafik och antalet känsliga resurser som är undantagna är små. Eller se till att du har ett visst minnescache i publiceringssystemet installerat, att publiceringssystemen kan hantera den resulterande belastningen - mer därtill i del III i den här serien.
 
-**Alternativ 3**. &quot;Behörighetskänslig cachning&quot; är ett intressant tillvägagångssätt. Dispatcher cachelagrar en resurs, men innan den levereras blir AEM om den kan göra det. Detta skapar en extra begäran från Dispatcher till Publish, men sparar vanligtvis inte Publish-systemet från att återge en sida om den redan är cachelagrad. Den här metoden kräver dock en viss anpassad implementering. Mer information finns här i artikeln [Behörighetskänslig cachelagring](https://helpx.adobe.com/se/experience-manager/dispatcher/using/permissions-cache.html).
+**Alternativ 3**. &quot;Behörighetskänslig cachning&quot; är ett intressant tillvägagångssätt. Dispatcher cachelagrar en resurs, men innan den levereras blir AEM-systemet ombedd att göra det. Detta skapar en extra begäran från Dispatcher till Publicera, men sparar vanligtvis inte publiceringssystemet från att återge en sida om den redan är cachelagrad. Den här metoden kräver dock en viss anpassad implementering. Mer information finns här i artikeln [Behörighetskänslig cachelagring](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html).
 
 **Referenser**
 
-* [helpx.adobe.com - Behörighetskänslig cachelagring](https://helpx.adobe.com/se/experience-manager/dispatcher/using/permissions-cache.html)
+* [helpx.adobe.com - Behörighetskänslig cachelagring](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html)
 
 ### Ange respitperiod
 
@@ -1528,7 +1528,7 @@ Du kan vara mindre sträng med tolkningen av `statfile` om du vill minska proble
 
 Du kan ange att Dispatcher ska använda en `grace period` för automatisk ogiltigförklaring. Detta skulle lägga till extra tid till ändringsdatumet `statfiles` internt.
 
-Din `statfile` har en ändringstid på idag kl. 12:00 och din `gracePeriod` är inställd på 2 minuter. Därefter betraktas alla automatiskt ogiltigförklarade filer som giltiga kl. 12:01 och kl. 12:02. De återges efter 12:02.
+Din `statfile` har en ändringstid på idag, 12:00, och din `gracePeriod` är inställd på 2 minuter. Därefter betraktas alla automatiskt ogiltigförklarade filer som giltiga vid 12:01 och vid 12:02. De återges igen efter 12:02.
 
 Referenskonfigurationen föreslår `gracePeriod` på två minuter av en bra anledning. Du kanske tror &quot;Två minuter? Det är nästan ingenting. Jag kan enkelt vänta tio minuter på att innehållet ska visas...&quot;.  Så du kan vara frestad att ange en längre period, till exempel tio minuter, under förutsättning att ditt innehåll visas minst efter dessa tio minuter.
 
@@ -1540,13 +1540,13 @@ Låt oss illustrera hur `gracePeriod` faktiskt fungerar med ett exempel:
 
 Anta att du driver en mediewebbplats och att din redigeringspersonal tillhandahåller regelbundna innehållsuppdateringar var femte minut. Tänk på att du ställer in värdet för GracePeriod till 5 minuter.
 
-Vi börjar med ett kort exempel kl. 12.00.
+Vi börjar med ett kort exempel på :00.
 
-12:00 - Statfile är inställd på 12:00. Alla cachelagrade filer anses vara giltiga till kl. 12.05.
+12:00 - Statusfilen är inställd på 12:00. Alla cachelagrade filer anses vara giltiga till 12:05.
 
 12:01 - En ogiltigförklaring inträffar. Detta förlänger hastighetstiden till 12:06
 
-12:05 - en annan redigerare publicerar artikeln - som förlänger fristen med en annan GracePeriod till 12:10.
+12:05 - en annan redigerare publicerar den här artikeln - förlänger fristen med en annan GracePeriod till 12:10.
 
 Och så vidare ... innehållet blir aldrig ogiltigt. Varje ogiltigförklaring *inom* förlänger respittiden effektivt respittiden. `gracePeriod` är utformad för att vädja om invalideringsstormen... men du måste gå ut i regnet så småningom.. så håll `gracePeriod` avsevärt kort för att förhindra att den gömmer sig i skyddet för evigt.
 
@@ -1556,7 +1556,7 @@ Vi skulle vilja presentera en annan idé om hur du kan vädja en invalideringsst
 
 `gracePeriod` kan bli oförutsägbart lång om det normala replikeringsintervallet är kortare än `gracePeriod`.
 
-Den alternativa idén är följande: Endast ogiltigt i fasta tidsintervall. Tiden däremellan innebär alltid att gammalt innehåll hanteras. Invalidering kommer så småningom att ske, men ett antal ogiltigförklaringar samlas in till en &quot;massogiltigförklaring&quot;, så att Dispatcher kan leverera visst cachelagrat innehåll under tiden och ge Publish-systemet lite luft att andas.
+Den alternativa idén är följande: Endast ogiltigt i fasta tidsintervall. Tiden däremellan innebär alltid att gammalt innehåll hanteras. Invalidering kommer så småningom att ske, men ett antal ogiltigförklaringar samlas in till en&quot;massogiltigförklaring&quot;, så att Dispatcher kan leverera visst cachelagrat innehåll under tiden och ge publiceringssystemet lite luft att andas.
 
 Implementeringen skulle se ut så här:
 
@@ -1570,13 +1570,13 @@ Om du till exempel anger 30 sek som respitperiod, kommer Dispatcher att avrunda 
 
 <br> 
 
-Cacheträffarna som inträffar mellan invalideringsbegäran och nästa runda 30-sekundersfack betraktas sedan som inaktuella. Det fanns en uppdatering för Publish - men Dispatcher levererar fortfarande gammalt innehåll.
+Cacheträffarna som inträffar mellan invalideringsbegäran och nästa runda 30-sekundersfack betraktas sedan som inaktuella. Det fanns en uppdatering vid publicering - men Dispatcher levererar fortfarande gammalt innehåll.
 
 Detta tillvägagångssätt skulle kunna hjälpa till att definiera längre fristen utan att behöva oroa sig för att efterföljande förfrågningar förlänger perioden obestämt. Fast som vi sa förut - är det bara en idé och vi hade inte chansen att testa den.
 
 **Referenser**
 
-[helpx.adobe.com - Dispatcher Configuration](https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher-configuration.html)
+[helpx.adobe.com - Dispatcher Configuration](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)
 
 ### Automatisk återhämtning
 
@@ -1588,11 +1588,11 @@ En godtycklig begäran om ogiltigförklaring skickas till Dispatcher, vilket gö
 
 Eftersom dessa sidor är så populära finns det nya inkommande förfrågningar från olika webbläsare. Låt oss ta hemsidan som exempel.
 
-Eftersom cacheminnet nu är ogiltigt vidarebefordras alla begäranden till startsidan som kommer in samtidigt till Publish-systemet och genererar en hög belastning.
+Eftersom cacheminnet nu är ogiltigt vidarebefordras alla begäranden till startsidan som kommer in samtidigt till publiceringssystemet och genererar en hög belastning.
 
-![Parallella begäranden till samma resurs på en tom cache: begäranden vidarebefordras till Publish](assets/chapter-1/parallel-requests.png)
+![Parallella begäranden till samma resurs på en tom cache: Begäranden vidarebefordras till Publicera](assets/chapter-1/parallel-requests.png)
 
-*Parallella begäranden till samma resurs på en tom cache: begäranden vidarebefordras till Publish*
+*Parallella begäranden till samma resurs på en tom cache: Begäranden vidarebefordras till Publicera*
 
 Med automatisk omhämtning kan du i viss utsträckning minska detta. De flesta ogiltiga sidor lagras fortfarande fysiskt på Dispatcher efter automatisk ogiltigförklaring. De betraktas bara som _inaktuella_. _Automatisk uppdatering_ innebär att du fortfarande skickar dessa inaktuella sidor under några sekunder samtidigt som du initierar _en enda_-begäran till publiceringssystemet för att hämta det inaktuella innehållet igen:
 
@@ -1604,7 +1604,7 @@ Med automatisk omhämtning kan du i viss utsträckning minska detta. De flesta o
 
 Om du vill aktivera omhämtning måste du tala om för Dispatcher vilka resurser som ska hämtas igen efter en automatisk ogiltigförklaring. Kom ihåg att alla sidor som du aktiverar automatiskt gör alla andra sidor ogiltiga, även de som är populära.
 
-Att hämta in igen innebär att berätta för Dispatcher i varje (!) ogiltigförklaring begär att du vill hämta in de populäraste igen - och vilka de populäraste är.
+Att hämta in igen innebär i själva verket att man i varje (!) invalideringsbegäran berättar för Dispatcher att man vill hämta tillbaka de populäraste - och vilka de populäraste är.
 
 Detta uppnås genom att en lista med resurs-URL:er (faktiska URL:er - inte bara sökvägar) läggs till i texten för ogiltigförklaringsbegäranden:
 
@@ -1623,25 +1623,25 @@ Content-Length: 207
 /content/my-brand/products/product-2.html
 ```
 
-När Dispatcher ser en sådan begäran kommer den att utlösa automatisk ogiltigförklaring som vanligt, och den kommer omedelbart att köa förfrågningar om att hämta nytt innehåll från Publish-systemet.
+När Dispatcher ser en sådan begäran kommer den att utlösa automatisk ogiltigförklaring som vanligt, och den kommer omedelbart att ställa frågor i kö för att hämta nytt innehåll från publiceringssystemet.
 
 Eftersom vi nu använder en begärandetext måste vi också ange innehållstyp och innehållslängd enligt HTTP-standarden.
 
 Dispatcher markerar också URL:erna internt så att de vet att de kan leverera dessa resurser direkt även om de betraktas som ogiltiga av automatisk ogiltigförklaring.
 
-Alla listade URL:er begärs en i taget. Du behöver alltså inte bekymra dig om att skapa för hög belastning på Publish system. Men du vill inte heller lägga in för många URL:er i listan. Till slut måste kön bearbetas så småningom inom en begränsad tid för att inte gammalt innehåll ska spelas upp för länge. Lägg bara in de 10 mest använda sidorna.
+Alla listade URL:er begärs en i taget. Du behöver alltså inte bekymra dig om att skapa för hög belastning på publiceringssystemen. Men du vill inte heller lägga in för många URL:er i listan. Till slut måste kön bearbetas så småningom inom en begränsad tid för att inte gammalt innehåll ska spelas upp för länge. Lägg bara in de 10 mest använda sidorna.
 
 Om du tittar in i Dispatcher cachekatalog ser du temporära filer markerade med tidsstämplar. Detta är de filer som för närvarande läses in i bakgrunden.
 
 **Referenser**
 
-[helpx.adobe.com - Cachelagrade sidor från AEM](https://helpx.adobe.com/se/experience-manager/dispatcher/using/page-invalidate.html) valideras
+[helpx.adobe.com - Cachelagrade sidor från AEM valideras inte](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
 
 ### Shielding the Publish System
 
-Dispatcher ger extra säkerhet genom att skydda Publish-systemet från förfrågningar som endast är avsedda för underhåll. Du vill t.ex. inte visa `/crx/de`- eller `/system/console`-URL:er för allmänheten.
+Dispatcher ger extra säkerhet genom att skydda publiceringssystemet från förfrågningar som bara är avsedda för underhåll. Du vill t.ex. inte visa `/crx/de`- eller `/system/console`-URL:er för allmänheten.
 
-Det skadar inte att ha en brandvägg för ett webbprogram (WAF) installerad i datorn. Men det ökar budgeten avsevärt och inte alla projekt befinner sig i en situation där de har råd och - för att inte glömma det - driver och underhåller en WAF.
+Det skadar inte att ha en WAF-brandvägg installerad i datorn. Men det ökar budgeten avsevärt och alla projekt befinner sig inte i en situation där de har råd och - för att inte glömma det - driver och underhåller WAF.
 
 Det vi ofta ser är en uppsättning regler för Apache-omskrivning i Dispatcher-konfigurationen som förhindrar åtkomst till de mer sårbara resurserna.
 
@@ -1684,13 +1684,13 @@ Ett annat alternativ att använda Dispatcher som filter är att ställa in filte
 
 Vi kräver inte att ett direktiv används framför ett annat, utan vi rekommenderar en lämplig blandning av alla direktiv.
 
-Men vi föreslår att du ska överväga att begränsa URL-utrymmet så tidigt som möjligt i kedjan, så mycket du behöver, och göra det på ett så enkelt sätt som möjligt. Tänk fortfarande på att dessa tekniker inte ersätter en WAF-fil på mycket känsliga webbplatser. En del människor kallar teknikerna &quot;Stackars mans brandvägg&quot; av en anledning.
+Men vi föreslår att du ska överväga att begränsa URL-utrymmet så tidigt som möjligt i kedjan, så mycket du behöver, och göra det på ett så enkelt sätt som möjligt. Tänk fortfarande på att dessa tekniker inte ersätter en WAF på mycket känsliga webbplatser. En del människor kallar teknikerna &quot;Stackars mans brandvägg&quot; av en anledning.
 
 **Referenser**
 
 [apache.org- sethandler-direktiv](https://httpd.apache.org/docs/2.4/mod/core.html#sethandler)
 
-[helpx.adobe.com - Konfigurera åtkomst till innehållsfilter](https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher-configuration.html#ConfiguringAccesstoContentfilter)
+[helpx.adobe.com - Konfigurera åtkomst till innehållsfilter](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#ConfiguringAccesstoContentfilter)
 
 ### Filtrera med reguljära uttryck och glober
 
@@ -1730,7 +1730,7 @@ det här är strängen som mönstret ska jämföras med. Nybörjare brukar glöm
 
 `/0002  { /glob "/content/\*" /type "allow" }`
 
-Misslyckas alltid eftersom &quot;/content&quot; inte matchar &quot;GET ..&quot; om begäran.
+Misslyckas alltid eftersom &quot;/content&quot; inte matchar&quot;GET ..&quot; om begäran.
 
 Så när du vill använda Globs
 
@@ -1843,13 +1843,13 @@ Troligen kommer du att lägga till en ny regel i en av grupperna - eller kanske 
 
 **Referenser**
 
-[helpx.adobe.com - Designa mönster för globegenskaper](https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher-configuration.html#DesigningPatternsforglobProperties)
+[helpx.adobe.com - Designa mönster för globegenskaper](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#DesigningPatternsforglobProperties)
 
 ### Protokollspecifikation
 
 Det sista tipset är inget riktigt tips, men vi kände att det var värt att dela det med dig i alla fall.
 
-AEM och Dispatcher fungerar i de flesta fall som de ska. Så du kommer inte att hitta någon omfattande Dispatcher-protokollspecifikation om ogiltigförklaringsprotokollet som kan bygga din egen applikation överst. Informationen är offentlig, men är lite spridd över ett antal resurser.
+AEM och Dispatcher fungerar oftast som de ska. Så du kommer inte att hitta någon omfattande Dispatcher-protokollspecifikation om ogiltigförklaringsprotokollet som kan bygga din egen applikation överst. Informationen är offentlig, men är lite spridd över ett antal resurser.
 
 Vi försöker fylla gapet i viss utsträckning här. Så här ser en ogiltigförklaring ut:
 
@@ -1906,17 +1906,17 @@ Ange de URL:er som du vill hämta omedelbart efter ogiltigförklaringen.
 
 ## Ytterligare resurser
 
-En bra översikt och introduktion till Dispatcher-cachning: [https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher.html](https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher.html)
+En bra översikt och introduktion till Dispatcher-cachning: [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)
 
-Dispatcher-dokumentation med alla direktiv förklarade: [https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher-configuration.html](https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher-configuration.html)
+Dispatcher-dokumentation med alla direktiv förklarade: [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)
 
-Några vanliga frågor: [https://helpx.adobe.com/se/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/se/experience-manager/using/dispatcher-faq.html)
+Några vanliga frågor: [https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html)
 
 Inspelning av ett webbinarium om Dispatcher-optimering - rekommenderas varmt: [https://my.adobeconnect.com/p7th2gf8k43?proto=true](https://my.adobeconnect.com/p7th2gf8k43?proto=true)
 
 Presentationen&quot;The underskattad power of content invalidation&quot;,&quot;customiTo()&quot;, konferensen i Potsdam 2018 [https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html](https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html)
 
-Invaliderar cachelagrade sidor från AEM: [https://helpx.adobe.com/se/experience-manager/dispatcher/using/page-invalidate.html](https://helpx.adobe.com/se/experience-manager/dispatcher/using/page-invalidate.html)
+Invaliderar cachelagrade sidor från AEM: [https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
 
 ## Nästa steg
 

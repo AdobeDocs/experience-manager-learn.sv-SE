@@ -3,7 +3,7 @@ title: Konfigurera AEM för SPA Editor och fjärr-SPA
 description: Ett AEM-projekt krävs för att konfigurera kompatibla konfigurations- och innehållskrav så att AEM SPA Editor kan skapa en fjärr-SPA.
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7631
 thumbnail: kt-7631.jpeg
@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: 0bdb93c9-5070-483c-a34c-f2b348bfe5ae
 duration: 297
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1229'
 ht-degree: 0%
@@ -142,8 +142,8 @@ Mappningen kan utföras med [Sling Mapping](https://sling.apache.org/documentati
 1. Öppna delprojektet `ui.content` i den integrerade utvecklingsmiljön
 1. Navigera till `src/main/content/jcr_root`
 1. Skapa en mapp `etc`
-1. Skapa en mapp `map` i `etc`
-1. Skapa en mapp `http` i `map`
+1. Skapa en mapp `etc` i `map`
+1. Skapa en mapp `map` i `http`
 1. I `http` skapar du en fil `.content.xml` med innehållet:
 
    ```
@@ -154,7 +154,7 @@ Mappningen kan utföras med [Sling Mapping](https://sling.apache.org/documentati
    </jcr:root>
    ```
 
-1. Skapa en mapp `localhost_any` i `http`
+1. Skapa en mapp `http` i `localhost_any`
 1. I `localhost_any` skapar du en fil `.content.xml` med innehållet:
 
    ```
@@ -166,7 +166,7 @@ Mappningen kan utföras med [Sling Mapping](https://sling.apache.org/documentati
    </jcr:root>
    ```
 
-1. Skapa en mapp `wknd-app-routes-adventure` i `localhost_any`
+1. Skapa en mapp `localhost_any` i `wknd-app-routes-adventure`
 1. I `wknd-app-routes-adventure` skapar du en fil `.content.xml` med innehållet:
 
    ```
@@ -210,11 +210,11 @@ Filen `filter.xml` ska se ut så här:
 
 När nu AEM-projektet distribueras inkluderas dessa konfigurationer automatiskt.
 
-Samlingsmappningseffekterna som AEM kör på `http` och `localhost`, så det finns bara stöd för lokal utveckling. Vid distribution till AEM as a Cloud Service måste liknande kopplingsmappningar läggas till för målet `https` och för rätt AEM as a Cloud Service-domän/domäner. Mer information finns i [&#x200B; Dokumentation om kopplingsmappning &#x200B;](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) .
+Samlingsmappningseffekterna som AEM kör på `http` och `localhost`, så det finns bara stöd för lokal utveckling. Vid distribution till AEM as a Cloud Service måste liknande kopplingsmappningar läggas till för målet `https` och för rätt AEM as a Cloud Service-domän/domäner. Mer information finns i [ Dokumentation om kopplingsmappning ](https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html) .
 
 ## Cross-Origin Resource Sharing - säkerhetsprinciper
 
-Konfigurera sedan AEM att skydda innehållet så att endast denna SPA kan komma åt AEM-innehållet. Konfigurera resursdelning mellan [ursprung i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html?lang=sv-SE).
+Konfigurera sedan AEM att skydda innehållet så att endast denna SPA kan komma åt AEM-innehållet. Konfigurera resursdelning mellan [ursprung i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html).
 
 1. Öppna `ui.config` Maven-delprojektet i din utvecklingsmiljö
 1. Navigera `src/main/content/jcr_root/apps/wknd-app/osgiconfig/config`

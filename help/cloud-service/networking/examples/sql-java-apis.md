@@ -4,15 +4,15 @@ description: Lär dig hur du ansluter till SQL-databaser från AEM as a Cloud Se
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9356
 thumbnail: KT-9356.jpeg
 exl-id: ec9d37cb-70b6-4414-a92b-3b84b3f458ab
 duration: 124
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '291'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Kontrollera att den [lämpliga](../advanced-networking.md#advanced-networking) a
 
 ## OSGi-konfiguration
 
-Eftersom hemligheter inte får lagras i kod bör SQL-anslutningens användarnamn och lösenord anges med [hemliga OSGi-konfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#secret-configuration-values), som anges med AIO CLI eller Cloud Manager API:er.
+Eftersom hemligheter inte får lagras i kod bör SQL-anslutningens användarnamn och lösenord anges med [hemliga OSGi-konfigurationsvariabler](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#secret-configuration-values), som anges med AIO CLI eller Cloud Manager API:er.
 
 + `ui.config/src/jcr_root/apps/wknd-examples/osgiconfig/com.adobe.aem.wknd.examples.core.connections.impl.MySqlExternalServiceImpl.cfg.json`
 
@@ -54,7 +54,7 @@ $ aio cloudmanager:set-environment-variables --programId=<PROGRAM_ID> <ENVIRONME
 
 ## Exempel på kod
 
-Detta Java™-kodexempel är en OSGi-tjänst som skapar en anslutning till en extern SQL-server via följande Cloud Manager `portForwards`-regel i åtgärden [&#x200B; enableEnvironmentAdvancedNetworkingConfiguration &#x200B;](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) .
+Detta Java™-kodexempel är en OSGi-tjänst som skapar en anslutning till en extern SQL-server via följande Cloud Manager `portForwards`-regel i åtgärden [ enableEnvironmentAdvancedNetworkingConfiguration ](https://www.adobe.io/experience-cloud/cloud-manager/reference/api/#operation/enableEnvironmentAdvancedNetworkingConfiguration) .
 
 ```json
 ...

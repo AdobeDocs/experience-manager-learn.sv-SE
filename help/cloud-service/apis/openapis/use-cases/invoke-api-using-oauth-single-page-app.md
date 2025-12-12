@@ -4,7 +4,7 @@ description: Lär dig hur du anropar OpenAPI-baserade AEM-API:er på AEM as a Cl
 version: Experience Manager as a Cloud Service
 feature: Developing
 topic: Development, Architecture, Content Management
-role: Architect, Developer, Leader
+role: Developer, Leader
 level: Intermediate
 doc-type: Tutorial
 jira: KT-17430
@@ -12,7 +12,7 @@ thumbnail: KT-17430.jpg
 last-substantial-update: 2025-03-28T00:00:00Z
 duration: 0
 exl-id: 9fb92127-9dea-4a1d-b1f7-8fb98cabf188
-source-git-commit: 7c7c9070bb6061dc59530070dd32ca6b8c78bc8d
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '2130'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Lär dig hur du anropar OpenAPI-baserade AEM-API:er på AEM as a Cloud Service m
 
 OAuth Single Page App-autentisering är idealisk för JavaScript-baserade program som körs i webbläsaren. Oavsett om de saknar en serverdelsserver eller behöver hämta åtkomsttoken för att kunna interagera med AEM API:er för en användares räkning.
 
-PKCE-flödet utökar anslagstypen OAuth 2.0 _permission_code_ och förbättrar säkerheten genom att förhindra avlyssning av auktoriseringskoden. Mer information finns i avsnittet [Skillnad mellan autentiseringsuppgifter för OAuth Server-till-Server och Web App respektive Single Page App &#x200B;](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
+PKCE-flödet utökar anslagstypen OAuth 2.0 _permission_code_ och förbättrar säkerheten genom att förhindra avlyssning av auktoriseringskoden. Mer information finns i avsnittet [Skillnad mellan autentiseringsuppgifter för OAuth Server-till-Server och Web App respektive Single Page App ](../overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
 
 ## Vad du lär dig{#what-you-learn}
 
@@ -59,7 +59,7 @@ Adobe Developer Console-projektet (ADC) är konfigurerat för att aktivera auten
 >ADC-projektet tillhandahåller INTE någon _client_secrets_. I stället genererar SPA en _code_verifier_ och _code_enge_ för att på ett säkert sätt utbyta auktoriseringskoden för en _åtkomsttoken_. Det eliminerar behovet av att lagra en klienthemlighet på klientsidan, vilket förbättrar säkerheten.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456968?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
 
 
 

@@ -3,7 +3,7 @@ title: Lägga till redigerbara React-behållarkomponenter i en fjärr-SPA
 description: Lär dig hur du lägger till redigerbara behållarkomponenter i ett fjärr-SPA som gör att AEM-författare kan dra och släppa komponenter i dem.
 topic: Headless, SPA, Development
 feature: SPA Editor, Core Components, APIs, Developing
-role: Developer, Architect
+role: Developer
 level: Beginner
 jira: KT-7635
 thumbnail: kt-7635.jpeg
@@ -13,7 +13,7 @@ doc-type: Tutorial
 exl-id: e5e6204c-d88c-4e79-a7f4-0cfc140bc51c
 duration: 306
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '1112'
 ht-degree: 0%

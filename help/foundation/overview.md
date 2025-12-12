@@ -1,18 +1,18 @@
 ---
-title: AEM Foundation videor och självstudiekurser
+title: AEM Foundation - videor och självstudiekurser
 description: Titta på våra videor och självstudiekurser för att få hjälp med Adobe Experience Manager Foundation.
-role: Leader, Architect, Developer, Admin, User
+role: Leader, Developer, Admin, User
 level: Beginner
 doc-type: Catalog
 exl-id: af0fe7fb-873b-4d2d-a5a3-59a5a3da9b96
-source-git-commit: 6825b0a4c9770f77e5078c81154080e94d3fd5f4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
 
 ---
 
-# AEM Foundation videor och självstudiekurser {#overview}
+# AEM Foundation - videor och självstudiekurser {#overview}
 
 {{edge-delivery-services}}
 
@@ -41,7 +41,7 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
     </a>
     </div>
     <p>
-    <em>Cloud Manager för AEM är en enkel, men ändå robust lösning som gör det enkelt att hantera, inspektera och självbetjäna AEM miljöer.</em>
+    <em>Cloud Manager för AEM är en enkel, men ändå robust lösning som gör det enkelt att hantera, inspektera och självbetjäna AEM-miljöer.</em>
     <p>
   </td>
    <td>
@@ -54,7 +54,7 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
     </a>
     </div>
     <p>
-    <em>Upptäck hur du konfigurerar SDI (Sling Dynamic Include) och tillåt att dynamiska AEM alltid kan leverera aktuellt innehåll.</em>
+    <em>Upptäck hur du konfigurerar SDI (Sling Dynamic Include) och tillåter att dynamiska AEM-komponenter alltid levererar aktuellt innehåll.</em>
     <p>
   </td>
   <td>
@@ -67,7 +67,7 @@ Adobe Experience Manager har en gemensam uppsättning funktioner som är tillgä
     </a>
     </div>
     <p>
-    <em>En högnivåbeskrivning av viktiga funktioner som ska tolkas när du överväger att uppgradera till den senaste versionen av AEM.</em>
+    <em>En högnivåbeskrivning av viktiga funktioner som du bör känna till när du överväger att uppgradera till den senaste versionen av AEM.</em>
     </p>
   </td>
 </tr>

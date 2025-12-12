@@ -12,7 +12,7 @@ doc-type: article
 last-substantial-update: 2023-06-12T00:00:00Z
 exl-id: 167a4b11-1202-4c7a-b022-f3f996348a4e
 duration: 476
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
 source-wordcount: '553'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Lär dig hur du lägger till widgetar i RTF-redigeraren i AEM Content Fragment Editor.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447436?quality=12&learn=on&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3420822?quality=12&learn=on)
 
 Om du vill lägga till det dynamiska innehållet i RTF-redigeraren kan du använda **widgetfunktionen**. Widgetarna hjälper dig att integrera det enkla eller komplexa användargränssnittet i RTE och användargränssnittet kan skapas med valfritt JS-ramverk. De kan betraktas som dialogrutor som öppnas genom att trycka på `{`-specialtangenten i textredigeraren.
 
@@ -40,7 +40,7 @@ I det här exemplet används [Adobe React Spectrum](https://react-spectrum.adobe
 Det här exemplet utökas till tilläggspunkten `rte` för att lägga till en widget i textredigeraren i innehållets fragmentredigerare.
 
 | AEM UI Extended | Tilläggspunkt |
-| ------------------------ | --------------------- | 
+| ------------------------ | --------------------- |
 | [Innehållsfragmentsredigeraren](https://developer.adobe.com/uix/docs/services/aem-cf-editor/) | [Widgetar för textredigerare](https://developer.adobe.com/uix/docs/services/aem-cf-editor/api/rte-widgets/) |
 
 ## Exempel på tillägg
@@ -94,7 +94,7 @@ export default ExtensionRegistration;
 
 ### Lägg till `discountCodes`-väg i `App.js`{#add-widgets-route}
 
-Lägg till `discountCodes`-vägen i huvudkomponenten `App.js` för att återge gränssnittet för den relativa URL-sökvägen ovan.
+Lägg till `App.js`-vägen i huvudkomponenten `discountCodes` för att återge gränssnittet för den relativa URL-sökvägen ovan.
 
 `src/aem-cf-editor-1/web-src/src/components/App.js`
 

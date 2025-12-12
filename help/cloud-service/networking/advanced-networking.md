@@ -4,16 +4,16 @@ description: Läs om AEM as a Cloud Service avancerade nätverksalternativ.
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Integrations, Security
-role: Architect, Developer
+role: Developer
 level: Intermediate
 jira: KT-9354
 thumbnail: KT-9354.png
 last-substantial-update: 2022-10-13T00:00:00Z
 exl-id: d1c1a3cf-989a-4693-9e0f-c1b545643e41
 duration: 85
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 AEM as a Cloud Service har avancerade nätverksfunktioner som möjliggör exakt hantering av anslutningar till och från AEM as a Cloud Service-program.
 
-|                                                   | [Produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html?lang=sv-SE) | [Sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html?lang=sv-SE) |
+|                                                   | [Produktionsprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs.html) | [Sandlådeprogram](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-sandbox-programs.html) |
 |---------------------------------------------------|:-----------------------:|:---------------------:|
 | Stöd för avancerade nätverk | ✔ | ✘ |
 
@@ -37,7 +37,7 @@ AEM avancerade nätverk består av tre alternativ för hantering av anslutning m
 | [__Virtuellt privat nätverk__](./vpn.md) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 
 
-Mer information om vad du bör tänka på när du väljer lämplig avancerad nätverkstyp finns i [avancerad nätverksdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html?lang=sv-SE).
+Mer information om vad du bör tänka på när du väljer lämplig avancerad nätverkstyp finns i [avancerad nätverksdokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html).
 
 ## Avancerade självstudiekurser för nätverk
 
@@ -106,15 +106,15 @@ Kontrollera att rätt [avancerad nätverkskonfiguration](#advanced-networking) h
       </p>
     </td>   
     <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html?lang=sv-SE"><img alt="Använda IP tillåtelselista" src="./assets/code_examples__vpn-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html?lang=sv-SE">Använder en IP-tillåtelselista</a></strong></div>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html"><img alt="Använda IP tillåtelselista" src="./assets/code_examples__vpn-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list.html">Använder en IP-tillåtelselista</a></strong></div>
       <p>
             Konfigurera en IP-tillåtelselista så att endast VPN-trafik kan komma åt AEM.
       </p>
     </td>
    <td>
-      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html?lang=sv-SE#restrict-vpn-to-ingress-connections"><img alt="Sökvägsbaserade begränsningar för VPN-åtkomst till AEM Publish" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html?lang=sv-SE#restrict-vpn-to-ingress-connections">Sökvägsbaserade begränsningar för VPN-åtkomst till AEM Publish</a></strong></div>
+      <a  href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections"><img alt="Sökvägsbaserade begränsningar för VPN-åtkomst till AEM Publish" src="./assets/code_examples__vpn-path-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/configuring-advanced-networking.html#restrict-vpn-to-ingress-connections">Sökvägsbaserade begränsningar för VPN-åtkomst till AEM Publish</a></strong></div>
       <p>
             Kräv VPN-åtkomst för specifika sökvägar i AEM Publish.
       </p>
