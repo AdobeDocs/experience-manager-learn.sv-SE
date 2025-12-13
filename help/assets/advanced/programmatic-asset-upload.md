@@ -23,7 +23,7 @@ ht-degree: 0%
 Lär dig hur du överför resurser till AEM as a Cloud Service-miljön med klientprogrammet som använder biblioteket [aem-upload](https://github.com/adobe/aem-upload) Node.js.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3476952?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3476956?captions=swe&quality=12&learn=on)
 
 
 ## Vad du lär dig

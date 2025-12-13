@@ -24,7 +24,7 @@ ht-degree: 0%
 Lär dig hur du tar emot AEM-händelser på en webbkrok och granskar händelseinformation som nyttolast, sidhuvuden och metadata.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3427051?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449752?captions=swe&quality=12&learn=on)
 
 
 >[!IMPORTANT]

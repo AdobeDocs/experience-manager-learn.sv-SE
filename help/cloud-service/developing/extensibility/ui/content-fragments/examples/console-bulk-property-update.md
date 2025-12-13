@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Exempel på uppdatering av massegenskaper
 
->[!VIDEO](https://video.tv.adobe.com/v/3412296?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454454?captions=swe&quality=12&learn=on)
 
 Det här exemplet på AEM Content Fragment Console-tillägg är ett [åtgärdsfältstillägg](https://developer.adobe.com/uix/docs/services/aem-cf-console-admin/api/action-bar/) som uppdaterar en Content Fragment-egenskap till ett gemensamt värde.
 

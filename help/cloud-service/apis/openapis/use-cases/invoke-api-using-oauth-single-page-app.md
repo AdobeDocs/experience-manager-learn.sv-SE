@@ -59,7 +59,7 @@ Adobe Developer Console-projektet (ADC) är konfigurerat för att aktivera auten
 >ADC-projektet tillhandahåller INTE någon _client_secrets_. I stället genererar SPA en _code_verifier_ och _code_enge_ för att på ett säkert sätt utbyta auktoriseringskoden för en _åtkomsttoken_. Det eliminerar behovet av att lagra en klienthemlighet på klientsidan, vilket förbättrar säkerheten.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3456964?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3456968?captions=swe&quality=12&learn=on)
 
 
 

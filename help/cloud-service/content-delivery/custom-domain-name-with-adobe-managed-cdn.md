@@ -46,7 +46,7 @@ Om du inte har tillgång till tredjepartstjänster kan du _samarbeta med ditt s�
 
 ## Generera SSL-certifikat
 
->[!VIDEO](https://video.tv.adobe.com/v/3427908?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3441481?captions=swe&quality=12&learn=on)
 
 Du har två alternativ:
 

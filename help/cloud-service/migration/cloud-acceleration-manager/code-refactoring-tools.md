@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Se hur AEM Code Refactoring Tools kan automatisera konverteringen av befintliga AEM-projekt till AEM as a Cloud Service-kompatibla.
 
->[!VIDEO](https://video.tv.adobe.com/v/336693?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3444719?captions=swe&quality=12&learn=on)

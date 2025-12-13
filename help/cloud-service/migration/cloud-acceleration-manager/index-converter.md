@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Läs om hur indexkonverteraren automatiskt konverterar befintliga AEM-indexdefinitioner till AEM as a Cloud Service-kompatibla.
 
->[!VIDEO](https://video.tv.adobe.com/v/336696?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443777?captions=swe&quality=12&learn=on)

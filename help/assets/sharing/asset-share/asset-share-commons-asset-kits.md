@@ -23,6 +23,6 @@ ht-degree: 0%
 
 Lär dig hur du använder [resurspaketet](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) för att skapa anpassade, delningsbara webbsidor med resurser från AEM Assets-mappar eller samlingar.
 
->[!VIDEO](https://video.tv.adobe.com/v/3415467?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453453?captions=swe&quality=12&learn=on)
 
 _[Resurspaket](https://opensource.adobe.com/asset-share-commons/pages/asset-kit/overview/) är bara tillgängligt för resursdelningskommentarer &lbrace;2.5.4+_

@@ -26,7 +26,7 @@ ht-degree: 0%
 
 Med Experience Fragments kan innehållsförfattare återanvända innehåll i olika kanaler, inklusive webbplatser och tredjepartssystem.
 
->[!VIDEO](https://video.tv.adobe.com/v/331785?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3445611?captions=swe&quality=12&learn=on)
 
 En Experience Fragment är en grupperad uppsättning komponenter som när de kombineras skapar en upplevelse. En *titel*, *Bild*, *Beskrivning* och *Call to action-knapp* kan till exempel kombineras för att skapa en helhetsbild.
 

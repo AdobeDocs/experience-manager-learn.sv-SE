@@ -21,4 +21,4 @@ ht-degree: 16%
 
 Lär dig hur verktyget för migrering av arbetsflöden hjälper dig att migrera dina befintliga AEM Assets-arbetsflöden till AEM as a Cloud Service.
 
->[!VIDEO](https://video.tv.adobe.com/v/336697?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438976?captions=swe&quality=12&learn=on)

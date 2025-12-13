@@ -26,6 +26,6 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar Workfront och AEM Assets för att hantera och synkronisera metadata för resurser med hjälp av anpassade Workfront-formulär och AEM-metadatamatchningar.
 
->[!VIDEO](https://video.tv.adobe.com/v/340332?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3431494?captions=swe&quality=12&learn=on)
 
 _Del 2 av en [fyra delars expertserie om den förbättrade anslutningen för Workfront för Experience Manager](./overview.md)_

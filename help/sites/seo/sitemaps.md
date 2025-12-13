@@ -27,7 +27,7 @@ Lär dig hur du kan förbättra din SEO genom att skapa webbplatskartor för AEM
 >
 >I den här videon visas hur relativa URL:er används i platskartan. Webbplatskartor [ska använda absoluta URL:er](https://sitemaps.org/protocol.html). Se [Konfigurationer](#absolute-sitemap-urls) för hur du aktiverar absoluta URL:er, eftersom detta inte beskrivs i videon nedan.
 
->[!VIDEO](https://video.tv.adobe.com/v/337960?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454365?captions=swe&quality=12&learn=on)
 
 ## Konfigurationer
 

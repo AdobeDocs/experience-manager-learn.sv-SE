@@ -21,4 +21,4 @@ ht-degree: 0%
 
 En berättarröst om hur du använder Cloud Acceleration Manager verktyg.
 
->[!VIDEO](https://video.tv.adobe.com/v/336699?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454674?captions=swe&quality=12&learn=on)

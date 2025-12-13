@@ -24,4 +24,4 @@ ht-degree: 0%
 
 Lär dig hur du använder och konfigurerar verktyget AEM Importer för att migrera dokumentskrivna webbplatser till Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429595/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443700/?captions=swe&learn=on)

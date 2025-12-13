@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Se hur Semantic Search i AEM Assets hjälper dig att hitta innehåll som matchar dina avsikter på ett effektivare sätt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459226/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461892/?captions=swe&learn=on&enablevpops)

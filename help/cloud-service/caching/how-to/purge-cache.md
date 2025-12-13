@@ -25,7 +25,7 @@ Lär dig hur du rensar eller tar bort det cachelagrade HTTP-svaret från AEM as 
 
 I den här självstudien får du lära dig hur du konfigurerar och använder rensnings-API-token för att rensa CDN-cachen för exempelwebbplatsen [AEM WKND](https://github.com/adobe/aem-guides-wknd) med hjälp av självbetjäningsfunktionen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432948?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3436931?captions=swe&quality=12&learn=on)
 
 ## Cacheogiltigförklaring kontra explicit tömning
 

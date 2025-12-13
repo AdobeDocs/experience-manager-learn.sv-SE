@@ -23,7 +23,7 @@ ht-degree: 0%
 
 AEM Headless-programmen har stöd för integrerad förhandsgranskning. Förhandsgranskningen länkar AEM Authors Content Fragment-redigerare till din anpassade app (adresserbar via HTTP), vilket ger en djup länk till den app som återger det innehållsområde som förhandsgranskas.
 
->[!VIDEO](https://video.tv.adobe.com/v/3416906?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449592?captions=swe&quality=12&learn=on)
 
 Om du vill använda förhandsgranskning av innehållsfragment måste flera villkor vara uppfyllda:
 

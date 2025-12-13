@@ -190,7 +190,7 @@ Använd tillägget Adobe Experience Platform Debugger [Chrome](https://chrome.go
 + Plattforms-SDK biblioteksversion, DataStream ID
 + XDM-objekt som del `events`-attribut i Experience Platform Web SDK
 
->[!VIDEO](https://video.tv.adobe.com/v/3418897?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454498?captions=swe&quality=12&learn=on)
 
 ## Skapa datauppsättning - Experience Platform
 
