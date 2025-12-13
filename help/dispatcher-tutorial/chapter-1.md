@@ -1302,11 +1302,11 @@ Om du installerar en AEM-författare och publicerar direkt är topologin lite ud
 
 Om en kund begär detta innehåll under tiden kommer Dispatcher att begära och lagra gammalt innehåll.
 
-En mer tillförlitlig konfiguration skickar en ogiltigförklaringsbegäran från publiceringssystemen _när_ har tagit emot innehållet. Artikeln [Invaliderar Dispatcher-cache från en publiceringsinstans](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance). Beskriver informationen.
+En mer tillförlitlig konfiguration skickar en ogiltigförklaringsbegäran från publiceringssystemen _när_ har tagit emot innehållet. Artikeln [Invaliderar Dispatcher-cache från en publiceringsinstans](https://helpx.adobe.com/se/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance). Beskriver informationen.
 
 **Referenser**
 
-[helpx.adobe.com - Invaliderar Dispatcher-cache från en publiceringsinstans](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)
+[helpx.adobe.com - Invaliderar Dispatcher-cache från en publiceringsinstans](https://helpx.adobe.com/se/experience-manager/dispatcher/using/page-invalidate.html#InvalidatingDispatcherCachefromaPublishingInstance)
 
 ### HTTP Header and Header Caching
 
@@ -1454,7 +1454,7 @@ Att ha ett gemensamt dokument hade också en annan bra funktion. När något gic
 
 * [apache.org - Skriv om stämning](https://httpd.apache.org/docs/2.4/mod/mod_rewrite.html)
 
-* [helpx.adobe.com - Resursmappning](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/resource-mapping.html)
+* [helpx.adobe.com - Resursmappning](https://helpx.adobe.com/se/experience-manager/6-4/sites/deploying/using/resource-mapping.html)
 
 ### Felhantering
 
@@ -1506,11 +1506,11 @@ Och du kan förstås välja en egen blandning av alla tre metoderna.
 
 **Alternativ 2**. &quot;Att inte cacha&quot; är vanligtvis en dålig idé. Om du gör det ska du se till att mängden trafik och antalet känsliga resurser som är undantagna är små. Eller se till att du har ett visst minnescache i publiceringssystemet installerat, att publiceringssystemen kan hantera den resulterande belastningen - mer därtill i del III i den här serien.
 
-**Alternativ 3**. &quot;Behörighetskänslig cachning&quot; är ett intressant tillvägagångssätt. Dispatcher cachelagrar en resurs, men innan den levereras blir AEM-systemet ombedd att göra det. Detta skapar en extra begäran från Dispatcher till Publicera, men sparar vanligtvis inte publiceringssystemet från att återge en sida om den redan är cachelagrad. Den här metoden kräver dock en viss anpassad implementering. Mer information finns här i artikeln [Behörighetskänslig cachelagring](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html).
+**Alternativ 3**. &quot;Behörighetskänslig cachning&quot; är ett intressant tillvägagångssätt. Dispatcher cachelagrar en resurs, men innan den levereras blir AEM-systemet ombedd att göra det. Detta skapar en extra begäran från Dispatcher till Publicera, men sparar vanligtvis inte publiceringssystemet från att återge en sida om den redan är cachelagrad. Den här metoden kräver dock en viss anpassad implementering. Mer information finns här i artikeln [Behörighetskänslig cachelagring](https://helpx.adobe.com/se/experience-manager/dispatcher/using/permissions-cache.html).
 
 **Referenser**
 
-* [helpx.adobe.com - Behörighetskänslig cachelagring](https://helpx.adobe.com/experience-manager/dispatcher/using/permissions-cache.html)
+* [helpx.adobe.com - Behörighetskänslig cachelagring](https://helpx.adobe.com/se/experience-manager/dispatcher/using/permissions-cache.html)
 
 ### Ange respitperiod
 
@@ -1576,7 +1576,7 @@ Detta tillvägagångssätt skulle kunna hjälpa till att definiera längre frist
 
 **Referenser**
 
-[helpx.adobe.com - Dispatcher Configuration](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)
+[helpx.adobe.com - Dispatcher Configuration](https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher-configuration.html)
 
 ### Automatisk återhämtning
 
@@ -1635,7 +1635,7 @@ Om du tittar in i Dispatcher cachekatalog ser du temporära filer markerade med 
 
 **Referenser**
 
-[helpx.adobe.com - Cachelagrade sidor från AEM valideras inte](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
+[helpx.adobe.com - Cachelagrade sidor från AEM valideras inte](https://helpx.adobe.com/se/experience-manager/dispatcher/using/page-invalidate.html)
 
 ### Shielding the Publish System
 
@@ -1690,7 +1690,7 @@ Men vi föreslår att du ska överväga att begränsa URL-utrymmet så tidigt so
 
 [apache.org- sethandler-direktiv](https://httpd.apache.org/docs/2.4/mod/core.html#sethandler)
 
-[helpx.adobe.com - Konfigurera åtkomst till innehållsfilter](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#ConfiguringAccesstoContentfilter)
+[helpx.adobe.com - Konfigurera åtkomst till innehållsfilter](https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher-configuration.html#ConfiguringAccesstoContentfilter)
 
 ### Filtrera med reguljära uttryck och glober
 
@@ -1843,7 +1843,7 @@ Troligen kommer du att lägga till en ny regel i en av grupperna - eller kanske 
 
 **Referenser**
 
-[helpx.adobe.com - Designa mönster för globegenskaper](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html#DesigningPatternsforglobProperties)
+[helpx.adobe.com - Designa mönster för globegenskaper](https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher-configuration.html#DesigningPatternsforglobProperties)
 
 ### Protokollspecifikation
 
@@ -1906,17 +1906,17 @@ Ange de URL:er som du vill hämta omedelbart efter ogiltigförklaringen.
 
 ## Ytterligare resurser
 
-En bra översikt och introduktion till Dispatcher-cachning: [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher.html)
+En bra översikt och introduktion till Dispatcher-cachning: [https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher.html](https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher.html)
 
-Dispatcher-dokumentation med alla direktiv förklarade: [https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html](https://helpx.adobe.com/experience-manager/dispatcher/using/dispatcher-configuration.html)
+Dispatcher-dokumentation med alla direktiv förklarade: [https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher-configuration.html](https://helpx.adobe.com/se/experience-manager/dispatcher/using/dispatcher-configuration.html)
 
-Några vanliga frågor: [https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/experience-manager/using/dispatcher-faq.html)
+Några vanliga frågor: [https://helpx.adobe.com/se/experience-manager/using/dispatcher-faq.html](https://helpx.adobe.com/se/experience-manager/using/dispatcher-faq.html)
 
 Inspelning av ett webbinarium om Dispatcher-optimering - rekommenderas varmt: [https://my.adobeconnect.com/p7th2gf8k43?proto=true](https://my.adobeconnect.com/p7th2gf8k43?proto=true)
 
 Presentationen&quot;The underskattad power of content invalidation&quot;,&quot;customiTo()&quot;, konferensen i Potsdam 2018 [https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html](https://adapt.to/2018/en/schedule/the-underappreciated-power-of-content-invalidation.html)
 
-Invaliderar cachelagrade sidor från AEM: [https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html](https://helpx.adobe.com/experience-manager/dispatcher/using/page-invalidate.html)
+Invaliderar cachelagrade sidor från AEM: [https://helpx.adobe.com/se/experience-manager/dispatcher/using/page-invalidate.html](https://helpx.adobe.com/se/experience-manager/dispatcher/using/page-invalidate.html)
 
 ## Nästa steg
 

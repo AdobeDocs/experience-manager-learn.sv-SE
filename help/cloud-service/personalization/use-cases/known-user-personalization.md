@@ -78,7 +78,7 @@ Kontrollera att du har slutfört följande innan du fortsätter med användnings
 - [Integrera Adobe Target](../setup/integrate-adobe-target.md): Gör det möjligt för team att skapa och hantera personaliserat innehåll centralt i AEM och aktivera det som erbjudanden i Adobe Target.
 - [Integrera taggar i Adobe Experience Platform](../setup/integrate-adobe-tags.md): Gör att team kan hantera och distribuera JavaScript för personalisering och datainsamling utan att behöva distribuera om AEM-kod.
 
-Lär dig även känna till [Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/en/docs/id-service/using/home)- och [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home)-koncept, till exempel Schema, Datauppsättning, Datastream, Publiker, Identiteter och Profiler.
+Lär dig även känna till [Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/sv/docs/id-service/using/home)- och [Adobe Experience Platform](https://experienceleague.adobe.com/sv/docs/experience-platform/landing/home)-koncept, till exempel Schema, Datauppsättning, Datastream, Publiker, Identiteter och Profiler.
 
 I den här självstudiekursen får du lära dig mer om hur du sätter ihop identiteter och bygger en kundprofil i Adobe Experience Platform. Genom att kombinera beteendedata med transaktionsdata skapas således en fullständig kundprofil.
 
@@ -1186,9 +1186,9 @@ Grattis! Ni är en expert på att leverera den kända användarpersonaliseringsu
 
 ## Ytterligare resurser
 
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
-- [Översikt över dataströmmar](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
-- [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
-- [Edge-segmentering](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/edge-segmentation)
-- [Målgruppstyper](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/overview)
-- [Adobe Target-anslutning](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/home)
+- [Översikt över dataströmmar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/overview)
+- [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/sv/docs/target/using/experiences/vec/visual-experience-composer)
+- [Edge-segmentering](https://experienceleague.adobe.com/sv/docs/experience-platform/segmentation/methods/edge-segmentation)
+- [Målgruppstyper](https://experienceleague.adobe.com/sv/docs/experience-platform/segmentation/types/overview)
+- [Adobe Target-anslutning](https://experienceleague.adobe.com/sv/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)

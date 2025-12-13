@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Implementera URL-omdirigeringar som är fria från pipeline
 
-Lär dig hur du implementerar [URL-omdirigeringar utan pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) i AEM as a Cloud Service så att marknadsföringsteamet kan hantera omdirigeringarna utan att behöva någon utvecklare.
+Lär dig hur du implementerar [URL-omdirigeringar utan pipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) i AEM as a Cloud Service så att marknadsföringsteamet kan hantera omdirigeringarna utan att behöva någon utvecklare.
 
 Det finns flera alternativ för att hantera URL-omdirigeringar i AEM. Mer information finns i [URL-omdirigeringar](url-redirection.md).
 
@@ -37,7 +37,7 @@ För att kunna genomföra den här självstudiekursen behöver du:
 
 ## Exempel på självstudiekurser
 
-Vi antar att WKND:s marknadsföringsteam lanserar en ny skidkampanj. De vill skapa korta URL:er för hjälpsidorna och hantera dem själva på samma sätt som de hanterar innehållet. De bestämde sig för att använda metoden [URL-omdirigeringar utan pipeline](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) för att hantera URL-omdirigeringarna.
+Vi antar att WKND:s marknadsföringsteam lanserar en ny skidkampanj. De vill skapa korta URL:er för hjälpsidorna och hantera dem själva på samma sätt som de hanterar innehållet. De bestämde sig för att använda metoden [URL-omdirigeringar utan pipeline](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects) för att hantera URL-omdirigeringarna.
 
 Baserat på marknadsföringsteamets krav är följande URL-omdirigeringar som måste skapas.
 
@@ -229,7 +229,7 @@ RewriteRule ^(.*)$ ${skicampaign:$1|/} [L,R=301]
 >
 >Termen *pipeline-fri* används för att betona att konfigurationerna bara distribueras en gång *och marknadsföringsteamet kan hantera URL-omdirigeringar genom att uppdatera textfilen.*
 
-Om du vill distribuera konfigurationerna använder du pipeline [full-stack](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline) eller [web tier config](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#web-tier-config-pipelines) i [Cloud Manager](https://my.cloudmanager.adobe.com/) .
+Om du vill distribuera konfigurationerna använder du pipeline [full-stack](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#full-stack-pipeline) eller [web tier config](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#web-tier-config-pipelines) i [Cloud Manager](https://my.cloudmanager.adobe.com/) .
 
 ![Distribuera via pipeline i helhög](./assets/pipeline-free-redirects/deploy-full-stack-pipeline.png)
 
@@ -248,5 +248,5 @@ Marknadsföringsteamet kan hantera URL-omdirigeringar som nyckelvärdepar i en t
 
 ## Ytterligare resurser
 
-- [Pipeline-fria URL-omdirigeringar](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
+- [Pipeline-fria URL-omdirigeringar](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/pipeline-free-url-redirects)
 - [URL-omdirigeringar](url-redirection.md)

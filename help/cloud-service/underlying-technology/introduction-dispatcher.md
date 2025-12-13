@@ -26,4 +26,4 @@ En introduktion till funktionerna och funktionerna i [!DNL dispatcher] som en de
 
 ## Ytterligare resurser {#additional-resources}
 
-* [[!DNL Dispatcher] dokumentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
+* [[!DNL Dispatcher] dokumentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE)

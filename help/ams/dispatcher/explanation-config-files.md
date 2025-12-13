@@ -253,7 +253,7 @@ RewriteRule ^/logo.jpg$ /content/dam/weretail/general/logo.jpg [NC,PT]
 
 När en FILENAME_farm.any-fil från katalogen `/etc/httpd/conf.dispatcher.d/available_farms/` får en länk till katalogen `/etc/httpd/conf.dispatcher.d/enabled_farms/` används de i den konfiguration som körs.
 
-Servergruppsfilerna innehåller undergrupper baserade på [toppnivåavsnitt i servergruppen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=en#defining-farms-farms) som cache, klienthuvuden, filter, återgivningar och värdar.
+Servergruppsfilerna innehåller undergrupper baserade på [toppnivåavsnitt i servergruppen](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/configuring/dispatcher-configuration.html?lang=sv-SE#defining-farms-farms) som cache, klienthuvuden, filter, återgivningar och värdar.
 
 Filerna `FILENAME_farm.any` kommer att innehålla programsatser för varje fil baserat på var de måste inkluderas i servergruppsfilen.  Här är ett exempel på syntax för en `FILENAME_farm.any`-fil som en bra referens:
 

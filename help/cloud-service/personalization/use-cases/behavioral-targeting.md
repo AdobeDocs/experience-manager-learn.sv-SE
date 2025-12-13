@@ -59,7 +59,7 @@ Innan du fortsätter med beteendestyrd användning måste du kontrollera att du 
 - [Integrera Adobe Target](../setup/integrate-adobe-target.md): Gör det möjligt för team att skapa och hantera personaliserat innehåll centralt i AEM och aktivera det som erbjudanden i Adobe Target.
 - [Integrera taggar i Adobe Experience Platform](../setup/integrate-adobe-tags.md): Gör att team kan hantera och distribuera JavaScript för personalisering och datainsamling utan att behöva distribuera om AEM-kod.
 
-Du bör också känna till [Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/en/docs/id-service/using/home) och [Adobe Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home) -koncept, till exempel Schema, Datastream, Publiker, Identiteter och Profiler.
+Du bör också känna till [Adobe Experience Cloud Identity Service (ECID)](https://experienceleague.adobe.com/sv/docs/id-service/using/home) och [Adobe Experience Platform](https://experienceleague.adobe.com/sv/docs/experience-platform/landing/home) -koncept, till exempel Schema, Datastream, Publiker, Identiteter och Profiler.
 
 Du kan skapa enkla målgrupper i Adobe Target, men i Adobe Experience Platform (AEP) är det moderna sättet att skapa och hantera målgrupper och bygga kompletta kundprofiler med hjälp av olika datakällor som beteendedata och transaktionsdata.
 
@@ -659,9 +659,9 @@ Den första målgruppen använder **Edge**-utvärdering för personalisering i r
 
 ## Ytterligare resurser
 
-- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)
-- [Översikt över dataströmmar](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview)
-- [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer)
-- [Edge-segmentering](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/methods/edge-segmentation)
-- [Målgruppstyper](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/types/overview)
-- [Adobe Target-anslutning](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)
+- [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/home)
+- [Översikt över dataströmmar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/overview)
+- [Visual Experience Composer (VEC)](https://experienceleague.adobe.com/sv/docs/target/using/experiences/vec/visual-experience-composer)
+- [Edge-segmentering](https://experienceleague.adobe.com/sv/docs/experience-platform/segmentation/methods/edge-segmentation)
+- [Målgruppstyper](https://experienceleague.adobe.com/sv/docs/experience-platform/segmentation/types/overview)
+- [Adobe Target-anslutning](https://experienceleague.adobe.com/sv/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection)

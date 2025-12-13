@@ -26,21 +26,21 @@ Lär dig hur du ansluter AEM as a Cloud Service till ditt VPN för att skapa sä
 >
 >Du kan konfigurera VPN och portvidarebefordran antingen via Cloud Manager-gränssnittet eller med API-anrop. Den här självstudien fokuserar på API-metoden.
 >
->Om du föredrar att använda användargränssnittet läser du [Konfigurera avancerat nätverk för AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
+>Om du föredrar att använda användargränssnittet läser du [Konfigurera avancerat nätverk för AEM as a Cloud Service](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
 
 ## Vad är ett virtuellt privat nätverk?
 
-Med VPN (Virtual Private Network) kan en AEM as a Cloud Service-kund ansluta **AEM-miljöerna** i ett Cloud Manager-program till en befintlig, [stödd](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) VPN. VPN ger säkra och kontrollerade anslutningar mellan AEM as a Cloud Service och tjänster i kundens nätverk.
+Med VPN (Virtual Private Network) kan en AEM as a Cloud Service-kund ansluta **AEM-miljöerna** i ett Cloud Manager-program till en befintlig, [stödd](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) VPN. VPN ger säkra och kontrollerade anslutningar mellan AEM as a Cloud Service och tjänster i kundens nätverk.
 
-Ett Cloud Manager-program kan bara ha en __enskild__ nätverksinfrastrukturtyp. Kontrollera att Virtuellt privat nätverk är den [lämpligaste typen av nätverksinfrastruktur](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) för din AEM as a Cloud Service innan du kör följande kommandon.
+Ett Cloud Manager-program kan bara ha en __enskild__ nätverksinfrastrukturtyp. Kontrollera att Virtuellt privat nätverk är den [lämpligaste typen av nätverksinfrastruktur](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) för din AEM as a Cloud Service innan du kör följande kommandon.
 
 >[!NOTE]
 >
->Observera att det inte går att ansluta byggmiljön från Cloud Manager till ett VPN. Om du måste få åtkomst till binära artefakter från en privat databas måste du skapa en säker och lösenordsskyddad databas med en URL som är tillgänglig på den offentliga Internet [&#x200B; enligt beskrivningen här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project).
+>Observera att det inte går att ansluta byggmiljön från Cloud Manager till ett VPN. Om du måste få åtkomst till binära artefakter från en privat databas måste du skapa en säker och lösenordsskyddad databas med en URL som är tillgänglig på den offentliga Internet [&#x200B; enligt beskrivningen här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/create-application-project/setting-up-project).
 
 >[!MORELIKETHIS]
 >
-> Läs AEM as a Cloud Service [dokumentation om avancerad nätverkskonfiguration](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) om du vill ha mer information om virtuellt privat nätverk.
+> Läs AEM as a Cloud Service [dokumentation om avancerad nätverkskonfiguration](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking) om du vill ha mer information om virtuellt privat nätverk.
 
 ## Förutsättningar
 
@@ -55,13 +55,13 @@ Följande krävs när du konfigurerar ett virtuellt privat nätverk med Cloud Ma
 + Cloud Manager miljö-ID:n
 + Ett **Routbaserat** virtuellt privat nätverk med åtkomst till alla nödvändiga anslutningsparametrar.
 
-Mer information finns i [Konfigurera och hämta API-autentiseringsuppgifter för Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth) så att du kan använda dem för att göra ett Cloud Manager API-anrop.
+Mer information finns i [Konfigurera och hämta API-autentiseringsuppgifter för Cloud Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/extensibility/app-builder/server-to-server-auth) så att du kan använda dem för att göra ett Cloud Manager API-anrop.
 
 >[!IMPORTANT]
 >
 >I den här självstudien används `curl` för att göra Cloud Manager API-konfigurationer -*om du föredrar en programmatisk metod*. De `curl`-kommandon som tillhandahålls förutsätter en Linux®- eller macOS-syntax. Om du använder kommandotolken i Windows ersätter du radbrytningstecknet `\` med `^`.
 >
->Du kan också slutföra samma uppgift via Cloud Manager-gränssnittet. *Om du föredrar gränssnittsmetoden* läser du [Konfigurera avancerat nätverk för AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
+>Du kan också slutföra samma uppgift via Cloud Manager-gränssnittet. *Om du föredrar gränssnittsmetoden* läser du [Konfigurera avancerat nätverk för AEM as a Cloud Service](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
 
 ## Aktivera virtuellt privat nätverk per program
 
@@ -113,7 +113,7 @@ Virtuellt privat nätverk kan aktiveras med Cloud Manager API:er. I följande st
 
 1. Ta först reda på i vilken region det avancerade nätverket behövs genom att använda Cloud Manager API-åtgärden [listRegions](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/). `region name` krävs för efterföljande Cloud Manager API-anrop. Normalt används regionen där produktionsmiljön finns.
 
-   Hitta AEM as a Cloud Service-miljöns region i [Cloud Manager](https://my.cloudmanager.adobe.com) under [miljöns information](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments). Regionnamnet som visas i Cloud Manager kan [mappas till regionkoden](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) som används i Cloud Manager API.
+   Hitta AEM as a Cloud Service-miljöns region i [Cloud Manager](https://my.cloudmanager.adobe.com) under [miljöns information](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments). Regionnamnet som visas i Cloud Manager kan [mappas till regionkoden](https://developer.adobe.com/experience-cloud/cloud-manager/guides/api-usage/creating-programs-and-environments/#creating-aem-cloud-service-environments) som används i Cloud Manager API.
 
    __listRegions HTTP request__
 
@@ -294,7 +294,7 @@ När du skapar HTTP/HTTPS-anslutningar från AEM proxideras HTTP/HTTPS-anslutnin
 
 >[!TIP]
 >
-> I AEM as a Cloud Service dokumentation för virtuellt privat nätverk finns [en fullständig uppsättning routningsregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
+> I AEM as a Cloud Service dokumentation för virtuellt privat nätverk finns [en fullständig uppsättning routningsregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/configuring-advanced-networking).
 
 #### Exempel på koder
 
@@ -362,8 +362,8 @@ Konfigurationen Virtuellt privat nätverk begränsar åtkomsten till AEM as a Cl
 
 <table><tr>
    <td>
-      <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list"><img alt="Använda IP tillåtelselista" src="./assets/code_examples__vpn-allow-list.png"/></a>
-      <div><strong><a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list">Använder en IP-tillåtelselista</a></strong></div>
+      <a href="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list"><img alt="Använda IP tillåtelselista" src="./assets/code_examples__vpn-allow-list.png"/></a>
+      <div><strong><a href="https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/ip-allow-lists/apply-allow-list">Använder en IP-tillåtelselista</a></strong></div>
       <p>
             Konfigurera en IP-tillåtelselista så att endast VPN-trafik kan komma åt AEM.
       </p>

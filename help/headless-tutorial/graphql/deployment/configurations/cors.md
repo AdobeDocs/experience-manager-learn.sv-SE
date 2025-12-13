@@ -59,7 +59,7 @@ Nyckelkonfigurationsegenskaperna är:
 + `supportedheaders` inkluderar `"Authorization"` som begäranden till AEM Author ska auktoriseras.
 + `supportscredentials` är inställd på `true` eftersom begäran till AEM Author ska auktoriseras.
 
-[Läs mer om CORS OSGi-konfigurationen.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html)
+[Läs mer om CORS OSGi-konfigurationen.](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/understand-cross-origin-resource-sharing.html?lang=sv-SE)
 
 Följande exempel stöder användning av beständiga frågor från AEM GraphQL på AEM Author. Om du vill använda klientdefinierade GraphQL-frågor lägger du till en GraphQL-slutpunkts-URL i `allowedpaths` och `POST` i `supportedmethods`.
 

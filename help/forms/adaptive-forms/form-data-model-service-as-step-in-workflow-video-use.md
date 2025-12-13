@@ -32,7 +32,7 @@ Följ instruktionerna nedan om du vill testa den här funktionen på servern
   >
   >I AEM Forms 6.5 och senare finns den här funktionen tillgänglig direkt i paketet. [Beskriv här](form-data-model-service-as-step-in-aem65-workflow-video-use.md)
 
-* Konfigurera tomcat med filen SampleRest.war enligt beskrivningen [här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html). Krigsfilen som distribueras i Tomcat har koden som returnerar sökandens kreditpoäng. Kreditpoängen är ett slumpmässigt tal mellan 200 och 800
+* Konfigurera tomcat med filen SampleRest.war enligt beskrivningen [här](https://experienceleague.adobe.com/docs/experience-manager-learn/forms/ic-print-channel-tutorial/introduction.html?lang=sv-SE). Krigsfilen som distribueras i Tomcat har koden som returnerar sökandens kreditpoäng. Kreditpoängen är ett slumpmässigt tal mellan 200 och 800
 
 * [Importera resurserna till AEM med pakethanteraren](assets/invoke-fdm-as-service-step.zip). Paketet innehåller följande:
 

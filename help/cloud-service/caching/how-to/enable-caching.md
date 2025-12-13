@@ -31,7 +31,7 @@ När det INTE finns några anpassade konfigurationer används standardvärdena. 
 
 ![Standardbeteende för cachelagring](../assets/how-to/aem-publish-default-cache-headers.png){width="800" zoomable="yes"}
 
-Granska [AEM Publish - standardcachetid](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/publish.html#cdn-cache-life) och [AEM Author - standardcachetid](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/author.html?#default-cache-life) för mer information.
+Granska [AEM Publish - standardcachetid](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/publish.html?lang=sv-SE#cdn-cache-life) och [AEM Author - standardcachetid](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/caching/author.html?lang=sv-SE&#default-cache-life) för mer information.
 
 Sammanfattningsvis cachelagrar AEM as a Cloud Service de flesta innehållstyperna (HTML, JSON, JS, CSS och Assets) i AEM Publish och några innehållstyper (JS, CSS) i AEM Author.
 
@@ -99,7 +99,7 @@ Följ de här stegen för att öka livslängden för webbläsaren och CDN-cachen
    ```
 
    Värdfilerna i katalogen `dispatcher/src/conf.d/enabled_vhosts` är **symlinks** till filerna i katalogen `dispatcher/src/conf.d/available_vhosts`, så se till att du skapar symboler om sådana inte finns.
-1. Distribuera värdändringarna till önskad AEM as a Cloud Service-miljö med [Cloud Manager - konfigurationspipeline för webbnivå](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?#web-tier-config-pipelines) eller [RDE-kommandon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=en#deploy-apache-or-dispatcher-configuration).
+1. Distribuera värdändringarna till önskad AEM as a Cloud Service-miljö med [Cloud Manager - konfigurationspipeline för webbnivå](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines.html?lang=sv-SE&#web-tier-config-pipelines) eller [RDE-kommandon](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use.html?lang=sv-SE#deploy-apache-or-dispatcher-configuration).
 
 Om du vill ha olika värden för webbläsarens och CDN-cacheperioden kan du använda rubriken `Surrogate-Control` i ovanstående exempel. Du kan också använda rubriken `Expires` om du vill att cachen ska förfalla vid ett visst datum och en viss tid. Med attributen `stale-while-revalidate` och `stale-if-error` kan du dessutom styra hanteringen av svarsinnehållet i inaktivt läge. AEM WKND-projektet har en [referens till inaktuell tillståndsbehandling](https://github.com/adobe/aem-guides-wknd/blob/main/dispatcher/src/conf.d/available_vhosts/wknd.vhost#L150-L155) CDN-cachekonfiguration.
 

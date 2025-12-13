@@ -208,7 +208,7 @@ Om andra data krävs för att fylla i den anpassade kolumnen kan HTTP-begärande
 
 >[!IMPORTANT]
 >
-> Kontrollera att AEM Author-instansen är konfigurerad att tillåta [korsdomänsförfrågningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html) från de ursprung som AppBuilder-appen körs på. Tillåtna ursprung är `https://localhost:9080`, AppBuilder-scenens ursprung och AppBuilder-produktionens ursprung.
+> Kontrollera att AEM Author-instansen är konfigurerad att tillåta [korsdomänsförfrågningar](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/deployments/configurations/cors.html?lang=sv-SE) från de ursprung som AppBuilder-appen körs på. Tillåtna ursprung är `https://localhost:9080`, AppBuilder-scenens ursprung och AppBuilder-produktionens ursprung.
 >
 > Tillägget kan också anropa en anpassad [AppBuilder-åtgärd](../../runtime-action.md) som gör begäran till AEM Author för tilläggets räkning.
 

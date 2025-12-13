@@ -23,11 +23,11 @@ ht-degree: 0%
 
 # Integrera AEM Sites och Experience Platform Web SDK
 
-Lär dig integrera AEM as a Cloud Service med Experience Platform [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/web-sdk/home.html). Detta grundläggande steg är avgörande för att integrera Adobe Experience Cloud-produkter som Adobe Analytics, Target eller nyligen lanserade innovativa produkter som Real-Time Customer Data Platform, Customer Journey Analytics och Journey Optimizer.
+Lär dig integrera AEM as a Cloud Service med Experience Platform [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/web-sdk/home.html?lang=sv-SE). Detta grundläggande steg är avgörande för att integrera Adobe Experience Cloud-produkter som Adobe Analytics, Target eller nyligen lanserade innovativa produkter som Real-Time Customer Data Platform, Customer Journey Analytics och Journey Optimizer.
 
-Du får också lära dig att samla in och skicka [WKND - exempel på Adobe Experience Manager-projekt](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) sidvisningsdata i [Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/home).
+Du får också lära dig att samla in och skicka [WKND - exempel på Adobe Experience Manager-projekt](https://github.com/adobe/aem-guides-wknd#aem-wknd-sites-project) sidvisningsdata i [Experience Platform](https://experienceleague.adobe.com/sv/docs/experience-platform/landing/home).
 
-När du är klar med konfigurationen har du implementerat en stabil grund. Du kan dessutom gå vidare med implementeringen av Experience Platform med program som [Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html), [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/en/docs/customer-journey-analytics) och [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/en/docs/journey-optimizer). Den avancerade implementeringen bidrar till att öka kundengagemanget genom att standardisera webb- och kunddata.
+När du är klar med konfigurationen har du implementerat en stabil grund. Du kan dessutom gå vidare med implementeringen av Experience Platform med program som [Real-Time Customer Data Platform (Real-Time CDP)](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=sv-SE), [Customer Journey Analytics (CJA)](https://experienceleague.adobe.com/sv/docs/customer-journey-analytics) och [Adobe Journey Optimizer (AJO)](https://experienceleague.adobe.com/sv/docs/journey-optimizer). Den avancerade implementeringen bidrar till att öka kundengagemanget genom att standardisera webb- och kunddata.
 
 ## Förutsättningar
 
@@ -55,14 +55,14 @@ Om du inte har de behörigheter som krävs kan systemadministratören som använ
 
 XDM-schemat (Experience Data Model) hjälper er att standardisera kundupplevelsedata. Om du vill samla in **WKND-sidvisningsdata** skapar du ett XDM-schema och använder de fältgrupper som tillhandahålls av Adobe `AEP Web SDK ExperienceEvent` för webbdatainsamling.
 
-Det finns generiska och specifika branscher, till exempel Retail, Financial Services, Healthcare med flera, en serie referensdatamodeller. Mer information finns i [Översikt över branschdatamodeller](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/industries/overview).
+Det finns generiska och specifika branscher, till exempel Retail, Financial Services, Healthcare med flera, en serie referensdatamodeller. Mer information finns i [Översikt över branschdatamodeller](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/schema/industries/overview).
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418894?quality=12&learn=on)
 
-Läs mer om XDM-schema och relaterade koncept som fältgrupper, typer, klasser och datatyper i [XDM-systemöversikt](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home).
+Läs mer om XDM-schema och relaterade koncept som fältgrupper, typer, klasser och datatyper i [XDM-systemöversikt](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/home).
 
-[XDM-systemöversikten](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home) är en bra resurs för att lära sig mer om XDM-schema och relaterade begrepp som fältgrupper, typer, klasser och datatyper. Det ger en omfattande förståelse för XDM-datamodellen och hur man skapar och hanterar XDM-scheman för att standardisera data i hela företaget. Utforska den för att få en djupare förståelse för XDM-schemat och hur det kan hjälpa er med datainsamling och datahantering.
+[XDM-systemöversikten](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/home) är en bra resurs för att lära sig mer om XDM-schema och relaterade begrepp som fältgrupper, typer, klasser och datatyper. Det ger en omfattande förståelse för XDM-datamodellen och hur man skapar och hanterar XDM-scheman för att standardisera data i hela företaget. Utforska den för att få en djupare förståelse för XDM-schemat och hur det kan hjälpa er med datainsamling och datahantering.
 
 ## Skapa dataström - Experience Platform
 
@@ -71,7 +71,7 @@ En dataström instruerar Platform Edge Network var insamlade data ska skickas. D
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418895?quality=12&learn=on)
 
-Bekanta dig med begreppet Datastreams och relaterade ämnen som datastyrning och konfiguration genom att gå till [sidan Översikt över datastreams](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html).
+Bekanta dig med begreppet Datastreams och relaterade ämnen som datastyrning och konfiguration genom att gå till [sidan Översikt över datastreams](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html?lang=sv-SE).
 
 ## Create Tag property - Experience Platform
 
@@ -168,13 +168,13 @@ När du skapar och publicerar taggbiblioteket med **publiceringsflödet** kan du
 +++
 
 
-Översikten [Taggar](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home) innehåller ingående information om viktiga begrepp som dataelement, regler och tillägg.
+Översikten [Taggar](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/home) innehåller ingående information om viktiga begrepp som dataelement, regler och tillägg.
 
-Mer information om hur du integrerar AEM Core Components med Adobe Client Data Layer finns i [Using the Adobe Client Data Layer with AEM Core Components guide](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview).
+Mer information om hur du integrerar AEM Core Components med Adobe Client Data Layer finns i [Using the Adobe Client Data Layer with AEM Core Components guide](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview).
 
 ## Ansluta taggegenskap till AEM
 
-Lär dig hur du länkar den nyligen skapade taggegenskapen till AEM via Adobe IMS och taggar i Adobe Experience Platform Configuration i AEM. När en AEM as a Cloud Service-miljö är etablerad genereras automatiskt flera konfigurationer av Adobe IMS Technical Account, inklusive taggar. Stegvisa instruktioner finns i [Koppla AEM Sites med taggegenskap med IMS](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/connect-aem-tag-property-using-ims).
+Lär dig hur du länkar den nyligen skapade taggegenskapen till AEM via Adobe IMS och taggar i Adobe Experience Platform Configuration i AEM. När en AEM as a Cloud Service-miljö är etablerad genereras automatiskt flera konfigurationer av Adobe IMS Technical Account, inklusive taggar. Stegvisa instruktioner finns i [Koppla AEM Sites med taggegenskap med IMS](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/connect-aem-tag-property-using-ims).
 
 För AEM 6.5 måste du dock konfigurera en manuellt.
 
@@ -199,7 +199,7 @@ De sidvisningsdata som samlas in med Web SDK lagras i Experience Platform datasj
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418898?quality=12&learn=on)
 
-[Översikt över datauppsättningar](https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/overview) innehåller mer information om begrepp, konfigurationer och andra inmatningsfunktioner.
+[Översikt över datauppsättningar](https://experienceleague.adobe.com/sv/docs/experience-platform/catalog/datasets/overview) innehåller mer information om begrepp, konfigurationer och andra inmatningsfunktioner.
 
 
 ## WKND-sidvisningsdata i Experience Platform
@@ -222,8 +222,8 @@ Snyggt jobb! Du har slutfört installationen av AEM med Experience Platform Web 
 
 ## Ytterligare resurser
 
-+ [Använda Adobe-klientdatalagret med kärnkomponenterna](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)
-+ [Integrerar Experience Platform-datainsamlingstaggar och AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview)
-+ [Adobe Experience Platform Web SDK och Edge Network - översikt](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/web-sdk/overview)
-+ [Självstudiekurser för datainsamling](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/overview)
-+ [Adobe Experience Platform Debugger - översikt](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/debugger/overview)
++ [Använda Adobe-klientdatalagret med kärnkomponenterna](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/sites/integrations/adobe-client-data-layer/data-layer-overview)
++ [Integrerar Experience Platform-datainsamlingstaggar och AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/sites/integrations/experience-platform-data-collection-tags/overview)
++ [Adobe Experience Platform Web SDK och Edge Network - översikt](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/web-sdk/overview)
++ [Självstudiekurser för datainsamling](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/overview)
++ [Adobe Experience Platform Debugger - översikt](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/debugger/overview)

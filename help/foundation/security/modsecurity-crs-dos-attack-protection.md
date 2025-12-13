@@ -38,7 +38,7 @@ I den här självstudien visas hur du aktiverar och konfigurerar CRS-regeln **DO
 
 >[!TIP]
 >
->Det är viktigt att notera att AEM as a Cloud Service [hanterade CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html) uppfyller de flesta kundens krav på prestanda och säkerhet. ModSecurity erbjuder dock ett extra säkerhetslager som möjliggör kundspecifika regler och konfigurationer.
+>Det är viktigt att notera att AEM as a Cloud Service [hanterade CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=sv-SE) uppfyller de flesta kundens krav på prestanda och säkerhet. ModSecurity erbjuder dock ett extra säkerhetslager som möjliggör kundspecifika regler och konfigurationer.
 
 ## Lägg till CRS i Dispatcher projektmodul
 
@@ -228,7 +228,7 @@ Alla de ovanstående konfigurationerna _ModSecurity CRS_ och _DOS-PROTECTION_ fi
 
 ### Validera Dispatcher-konfiguration
 
-När du arbetar med AEM as a Cloud Service bör du validera ändringarna lokalt med _-skriptet för_ AEM SDK Dispatcher-verktygen`validate` innan du distribuerar [Dispatcher-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) .
+När du arbetar med AEM as a Cloud Service bör du validera ändringarna lokalt med _-skriptet för_ AEM SDK Dispatcher-verktygen`validate` innan du distribuerar [Dispatcher-konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=sv-SE) .
 
 ```
 # Go inside Dispatcher SDK 'bin' directory
@@ -240,11 +240,11 @@ $ ./validate.sh <YOUR-AEM-PROJECT-CODE-DIR>/dispatcher/src
 
 ## Distribuera
 
-Distribuera lokalt validerade Dispatcher-konfigurationer med Cloud Manager pipeline [Web Tier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?#web-tier-config) eller [Full Stack](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?#full-stack-code) . Du kan också använda [Rapid Development Environment](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html) för snabbare vändningstid.
+Distribuera lokalt validerade Dispatcher-konfigurationer med Cloud Manager pipeline [Web Tier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=sv-SE&#web-tier-config) eller [Full Stack](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/configuring-production-pipelines.html?lang=sv-SE&#full-stack-code) . Du kan också använda [Rapid Development Environment](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/developing/rde/overview.html?lang=sv-SE) för snabbare vändningstid.
 
 ## Verifiera
 
-För att verifiera DoS-skyddet, i det här exemplet, skickar vi mer än 50 förfrågningar (25 tröskelvärden för förfrågningar gånger två förekomster) inom ett intervall av 60 sekunder. Dessa förfrågningar bör dock skickas via AEM as a Cloud Service [inbyggda](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html) eller någon annan [CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?#point-to-point-CDN) som finns på webbplatsen.
+För att verifiera DoS-skyddet, i det här exemplet, skickar vi mer än 50 förfrågningar (25 tröskelvärden för förfrågningar gånger två förekomster) inom ett intervall av 60 sekunder. Dessa förfrågningar bör dock skickas via AEM as a Cloud Service [inbyggda](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=sv-SE) eller någon annan [CDN](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn.html?lang=sv-SE&#point-to-point-CDN) som finns på webbplatsen.
 
 En metod för att få CDN-överföringen är att lägga till en frågeparameter med ett **nytt slumpmässigt värde i varje begäran om webbplatssidan**.
 

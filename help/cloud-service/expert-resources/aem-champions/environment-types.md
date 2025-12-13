@@ -26,5 +26,5 @@ Ta en titt på de här tipsen från din tekniska chef, Rakesh Pasupuleti. Rakesh
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html) - Dokumentation om miljöhantering i AEM as a Cloud Service
-* [Snabba utvecklingsmiljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html) - Dokumentation om referensmiljöer i AEM as a Cloud Service
+* [Hantera miljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE) - Dokumentation om miljöhantering i AEM as a Cloud Service
+* [Snabba utvecklingsmiljöer](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/rapid-development-environments.html?lang=sv-SE) - Dokumentation om referensmiljöer i AEM as a Cloud Service

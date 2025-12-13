@@ -140,7 +140,7 @@ Testa exportfunktionen för att bekräfta att integreringen fungerar som den ska
 
 ## Ytterligare resurser
 
-- [Översikt över mål-API](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/target-api-overview)
-- [Målerbjudande](https://experienceleague.adobe.com/en/docs/target/using/experiences/offers/manage-content)
+- [Översikt över mål-API](https://experienceleague.adobe.com/sv/docs/target-dev/developer/api/target-api-overview)
+- [Målerbjudande](https://experienceleague.adobe.com/sv/docs/target/using/experiences/offers/manage-content)
 - [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/)
-- [Upplevelsefragment i AEM](https://experienceleague.adobe.com/en/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use)
+- [Upplevelsefragment i AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/sites/experience-fragments/experience-fragments-feature-video-use)

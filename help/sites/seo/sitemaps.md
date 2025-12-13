@@ -89,7 +89,7 @@ RewriteRule ^/(.*)$ /content/${CONTENT_FOLDER_NAME}/$1 [PT,L]
 
 ## Resurser
 
-+ [AEM SiteMap-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=en)
++ [AEM SiteMap-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/overview/seo-and-url-management.html?lang=sv-SE)
 + [Dokumentation för Apache Sling Sitemap](https://github.com/apache/sling-org-apache-sling-sitemap#readme)
 + [Sitemap.org för webbplatskartan](https://www.sitemaps.org/protocol.html)
 + [Sitemap.org Dokumentation för indexfil för platskarta](https://www.sitemaps.org/protocol.html#index)

@@ -26,4 +26,4 @@ Verktyget Innehållsöverföring är det rekommenderade sättet att migrera inne
 
 ## Ytterligare resurser {#additional-resources}
 
-* [Översikt över verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html)
+* [Översikt över verktyget Innehållsöverföring](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/moving/cloud-migration/content-transfer-tool/overview-content-transfer-tool.html?lang=sv-SE)

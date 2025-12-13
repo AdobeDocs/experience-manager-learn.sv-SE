@@ -41,7 +41,7 @@ Stegen på hög nivå är:
    - Customer CDN - för att konfigurera kundens CDN och lägga till SSL-certifikat och domäninformation, som AWS CloudFront, Azure CDN eller Akamai.
    - DNS-värdtjänst (Domain Name System) - för att lägga till DNS-poster för din anpassade domän, som Azure DNS eller AWS Route 53.
 - Åtkomst till [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/) för att distribuera CDN-regeln för HTTP Header-validering till AEM as a Cloud Service-miljön.
-- Exempelwebbplatsen [AEM WKND](https://github.com/adobe/aem-guides-wknd) har distribuerats till AEM as a Cloud Service-miljön av typen [produktionsprogram](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs).
+- Exempelwebbplatsen [AEM WKND](https://github.com/adobe/aem-guides-wknd) har distribuerats till AEM as a Cloud Service-miljön av typen [produktionsprogram](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/programs/introduction-production-programs).
 
 Om du inte har tillgång till tredjepartstjänster kan du _samarbeta med ditt säkerhets- eller värdteam för att slutföra stegen_.
 
