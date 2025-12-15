@@ -9,9 +9,9 @@ level: Beginner
 doc-type: Feature Video
 exl-id: 59462cb4-d379-4e58-b786-ff8dbae6191c
 duration: 2516
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: a43bd7ae4e5b0a6793c52b5a8d0f36e3c1b260b1
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -111,12 +111,3 @@ Balansera jpeg-bildens kvalitet mot den resulterande filstorleken (i kilobyte) f
 
 Lägg enkelt till textning i Dynamic Media-video genom att lägga till URL:en Copy så att den pekar på ett annat dokument i filen Closed Captioning, en web.VTT-fil, som innehåller CC-informationen för alla videofilmer.
 
-## Bildskärpa
-
-I den här videon beskrivs varför det är viktigt att göra en bild skarpare för att bibehålla bildens återgivning och hur du använder avancerade inställningar för att skapa den perfekta bilden.
-
-<!--
-This link is broken
-
->[!VIDEO](https://demos-pub.assetsadobe.com/etc/dam/viewers/s7viewers/html5/VideoViewer.html?asset=%2Fcontent%2Fdam%2Fdm-public-facing-upgrade-portal-video%2F04_DynamicImagery_AdvancedSettings_071917_BH.mp4&config=/etc/dam/presets/viewer/Video_social&serverUrl=https%3A%2F%2Fadobedemo62-h.assetsadobe.com%2Fis%2Fimage%2F&contenturl=%2F&config2=/etc/dam/presets/analytics&videoserverurl=https://gateway-na.assetsadobe.com/DMGateway/public/demoCo&posterimage=/content/dam/dm-public-facing-upgrade-portal-video/04_DynamicImagery_AdvancedSettings_071917_BH.mp4)
--->
