@@ -21,6 +21,6 @@ ht-degree: 0%
 
 Utforska AEM Assets Dynamic Media URL-syntaxen och lär dig hur du maximerar värdet med hjälp av Image Presets. Förbättra resurshanteringen och förbättra arbetsflödet.
 
->[!VIDEO](https://video.tv.adobe.com/v/3477924/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3477940/?captions=swe&learn=on&enablevpops)
 
 Titta på den här korta videon om [hur du skapar bildförinställningar i AEM Assets](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/tutorials/creating-image-presets).
