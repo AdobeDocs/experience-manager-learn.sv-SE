@@ -10,9 +10,9 @@ index: y
 doc-type: Tutorial
 exl-id: e76c50da-e7a8-4560-bc53-02cdb13619bb
 duration: 93
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 3cadf95ab2a17e17c6c52801cf285a57f6f1e286
 workflow-type: tm+mt
-source-wordcount: '33'
+source-wordcount: '59'
 ht-degree: 0%
 
 ---
@@ -22,3 +22,5 @@ ht-degree: 0%
 I den här videon går du igenom stegen för att skapa bildförinställningar i Dynamic Media.
 
 >[!VIDEO](https://video.tv.adobe.com/v/335459?quality=12&learn=on)
+
+Lär dig de bästa sätten att skapa dynamiska medie-URL:er och bildförinställningar i AEM Assets och förstå hur allt fungerar! [Titta på videon här](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-urls-and-image-presets).
