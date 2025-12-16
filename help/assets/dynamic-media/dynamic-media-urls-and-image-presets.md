@@ -23,4 +23,4 @@ Utforska AEM Assets Dynamic Media URL-syntaxen och lär dig hur du maximerar vä
 
 >[!VIDEO](https://video.tv.adobe.com/v/3477924/?learn=on&enablevpops)
 
-Titta på den här korta videon om [hur du skapar bildförinställningar i AEM Assets](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/tutorials/creating-image-presets).
+Titta på den här korta videon om [hur du skapar bildförinställningar i AEM Assets](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/tutorials/creating-image-presets).
