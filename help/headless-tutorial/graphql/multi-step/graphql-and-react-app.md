@@ -11,9 +11,9 @@ role: Developer
 level: Beginner
 exl-id: 772b595d-2a25-4ae6-8c6e-69a646143147
 duration: 410
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: e7f556737cdf6a92c0503d3b4a52eef1f71c8330
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1479'
 ht-degree: 0%
 
 ---
@@ -27,23 +27,35 @@ En enkel React-app används för att fråga efter och visa **Team**- och **Perso
 
 ## Förutsättningar
 
-Stegen som beskrivs i de tidigare delarna av den här flerdelade självstudiekursen har slutförts, eller så har [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip) installerats på dina AEM as a Cloud Service Author- och Publish-tjänster.
+Stegen som beskrivs i de tidigare delarna av den här flerdelade självstudiekursen har slutförts, eller så har [basic-tutorial-solution.content.zip](assets/explore-graphql-api/basic-tutorial-solution.content.zip) installerats på dina AEM Author- och Publish-tjänster.
 
 _Skärmbilder i IDE i det här kapitlet kommer från [Visual Studio-kod](https://code.visualstudio.com/)_
 
+### AEM
+
+För att slutföra den här självstudiekursen rekommenderar vi att du har AEM Administrator-åtkomst till något av följande:
+
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
++ Lokal konfiguration med [tjänsten AEM Cloud SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
++ [AEM 6.5 LTS](https://experienceleague.adobe.com/docs/experience-manager-65/content/release-notes/release-notes.html) med [GraphQL Index Package 1.0.5+](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/graphql-api/graphql-endpoint.html) installerat
+
+### Programvarukrav
+
 Följande programvara måste vara installerad:
 
-- [Node.js v18](https://nodejs.org/en)
-- [Visual Studio-kod](https://code.visualstudio.com/)
++ [Node.js v18+](https://nodejs.org/en)
++ [Visual Studio-kod](https://code.visualstudio.com/)
++ [Git](https://git-scm.com/)
++ [Java JDK](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/introduction/technical-requirements) (vid anslutning till lokal AEM SDK eller 6.5-instans)
 
 ## Mål
 
 Lär dig mer om:
 
-- Hämta och starta exempelappen React
-- Fråga AEM GraphQL slutpunkter med [AEM Headless JS SDK](https://github.com/adobe/aem-headless-client-js)
-- Fråga AEM efter en lista över team och deras refererade medlemmar
-- Fråga AEM efter information om en teammedlem
++ Hämta och starta exempelappen React
++ Fråga AEM GraphQL slutpunkter med [AEM Headless JS SDK](https://github.com/adobe/aem-headless-client-js)
++ Fråga AEM efter en lista över team och deras refererade medlemmar
++ Fråga AEM efter information om en teammedlem
 
 ## Hämta exempelappen React
 
@@ -53,7 +65,7 @@ Källkoden för exempelappen React finns på Github.com på <https://github.com/
 
 Så här skaffar du React-appen:
 
-1. Klona exempelappen WKND GraphQL React från [Github.com](https://github.com/adobe/aem-guides-wknd-graphql).
+1. Klona exempelappen WKND GraphQL React från [Github.com](https://github.com/adobe/aem-guides-wknd-graphql). Kom ihåg att den här Git-databasen innehåller flera projekt, så glöm inte att navigera till mappen `basic-tutorial` enligt beskrivningen i nästa steg.
 
    ```shell
    $ cd ~/Code
@@ -69,9 +81,25 @@ Så här skaffar du React-appen:
 
    ![Reagera app i VSCode](./assets/graphql-and-external-app/react-app-in-vscode.png)
 
-1. Uppdatera `.env.development` för att ansluta till AEM as a Cloud Service Publish-tjänsten.
+1. Uppdatera `.env.development` för att ansluta till din AEM Publish-tjänst.
 
-   - Ange värdet för `REACT_APP_HOST_URI` som din AEM as a Cloud Service Publish URL (t.ex. `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`) och `REACT_APP_AUTH_METHOD` har värdet `none`
+   Mer information om exempelprojektets miljövariabler och hur du ställer in dem [finns i README.md](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial#update-environment-variables).
+
+   **AEM as a Cloud Service**
+
+   När du ansluter React-appen till AEM as a Cloud Service Publish-tjänsten anger du värdet för `REACT_APP_HOST_URI` som din AEM as a Cloud Service Publish URL (t.ex. `REACT_APP_HOST_URI=https://publish-p123-e456.adobeaemcloud.com`) och `REACT_APP_AUTH_METHOD` har värdet `none`
+
+   **AEM SDK för AEM as a Cloud Service (lokal)**
+
+   När du ansluter React-appen till en lokal AEM as a Cloud Service SDK-miljö anger du värdet för `REACT_APP_HOST_URI` som din lokala värd och publiceringsport (till exempel. `REACT_APP_HOST_URI=http://localhost:4503`) och `REACT_APP_AUTH_METHOD` har värdet `none`
+
+   **AEM 6.5 LTS-värdmiljö**
+
+   När du ansluter React-appen till AEM as a Cloud Service Publish-tjänsten anger du värdet för `REACT_APP_HOST_URI` till din publicerings-URL för AEM 6.5 (t.ex. `REACT_APP_HOST_URI=https://dev.mysite.com`) och `REACT_APP_AUTH_METHOD` har värdet `none`
+
+   **AEM 6.5 LTS snabbstart (lokal)**
+
+   När du ansluter React-appen till en lokal AEM 6.5-snabbstart anger du värdet för `REACT_APP_HOST_URI` som din lokala värd och publiceringsport (till exempel. `REACT_APP_HOST_URI=http://localhost:4503`) och `REACT_APP_AUTH_METHOD` har värdet `none`
 
    >[!NOTE]
    >
@@ -99,11 +127,11 @@ Så här skaffar du React-appen:
 >   Den här React-appen är delvis implementerad. Följ stegen i den här självstudiekursen för att slutföra implementeringen. De JavaScript-filer som behöver implementeras har följande kommentar, se till att du lägger till/uppdaterar koden i de filerna med koden som anges i den här självstudiekursen.
 >
 >
-> //**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**
+> //**********************************
 >
 >  // TODO Implementera detta genom att följa stegen från AEM Headless Tutorial
 >
->  //**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**&#x200B;**
+>  //**********************************
 >
 
 ## Anatomi i React-appen
@@ -111,8 +139,8 @@ Så här skaffar du React-appen:
 Exempelappen React består av tre huvuddelar:
 
 1. Mappen `src/api` innehåller filer som används för att skapa GraphQL-frågor till AEM.
-   - `src/api/aemHeadlessClient.js` initierar och exporterar AEM Headless Client som används för att kommunicera med AEM
-   - `src/api/usePersistedQueries.js` implementerar [anpassade React-kopplingar](https://react.dev/learn/reusing-logic-with-custom-hooks#custom-hooks-sharing-logic-between-components) som returnerar data från AEM GraphQL till vykomponenterna `Teams.js` och `Person.js`.
+   + `src/api/aemHeadlessClient.js` initierar och exporterar AEM Headless Client som används för att kommunicera med AEM
+   + `src/api/usePersistedQueries.js` implementerar [anpassade React-kopplingar](https://react.dev/learn/reusing-logic-with-custom-hooks#custom-hooks-sharing-logic-between-components) som returnerar data från AEM GraphQL till vykomponenterna `Teams.js` och `Person.js`.
 
 1. Filen `src/components/Teams.js` visar en lista med team och deras medlemmar med hjälp av en listfråga.
 1. Filen `src/components/Person.js` visar information om en person med hjälp av en parametriserad fråga med ett resultat.
@@ -125,11 +153,11 @@ Granska filen `aemHeadlessClient.js` för hur du skapar det `AEMHeadless`-objekt
 
 1. Granska raderna 1-40:
 
-   - Importdeklarationen `AEMHeadless` från [AEM Headless Client för JavaScript](https://github.com/adobe/aem-headless-client-js), rad 11.
+   + Importdeklarationen `AEMHeadless` från [AEM Headless Client för JavaScript](https://github.com/adobe/aem-headless-client-js), rad 11.
 
-   - Auktoriseringskonfigurationen baseras på variabler som definierats i `.env.development`, rad 14-22 och, pilfunktionsuttrycket `setAuthorization`, rad 31-40.
+   + Auktoriseringskonfigurationen baseras på variabler som definierats i `.env.development`, rad 14-22 och, pilfunktionsuttrycket `setAuthorization`, rad 31-40.
 
-   - `serviceUrl`-konfigurationen för den inkluderade [utvecklingsproxykonfigurationen](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app#proxy-api-requests), rad 27.
+   + `serviceUrl`-konfigurationen för den inkluderade [utvecklingsproxykonfigurationen](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/basic-tutorial#proxy-api-requests), rad 27.
 
 1. Raderna 42-49 är viktigast eftersom de instansierar klienten `AEMHeadless` och exporterar den för användning i hela React-appen.
 
@@ -190,8 +218,8 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
 
 Bygg sedan upp funktionaliteten för att visa teamen och deras medlemmar i React-appens huvudvy. Den här funktionen kräver:
 
-- En ny [anpassad React useEffect-krok](https://react.dev/reference/react/useEffect#useeffect) i `src/api/usePersistedQueries.js` som anropar den `my-project/all-teams` beständiga frågan och returnerar en lista med Team Content Fragments i AEM.
-- En React-komponent på `src/components/Teams.js` som anropar den nya anpassade React `useEffect`-kroken och återger teamdata.
++ En ny [anpassad React useEffect-krok](https://react.dev/reference/react/useEffect#useeffect) i `src/api/usePersistedQueries.js` som anropar den `my-project/all-teams` beständiga frågan och returnerar en lista med Team Content Fragments i AEM.
++ En React-komponent på `src/components/Teams.js` som anropar den nya anpassade React `useEffect`-kroken och återger teamdata.
 
 När det är klart fylls programmets huvudvy i med teamdata från AEM.
 
@@ -238,7 +266,7 @@ När det är klart fylls programmets huvudvy i med teamdata från AEM.
 
 1. Öppna `src/components/Teams.js`
 
-1. Hämta listan med team från AEM med kroken `useAllTeams()` i komponenten `Teams` React.
+1. Hämta listan med team från AEM med kroken `Teams` i komponenten `useAllTeams()` React.
 
    ```javascript
    import { useAllTeams } from "../api/usePersistedQueries";
@@ -340,9 +368,9 @@ Med funktionen [Teams](#implement-teams-functionality) slutförd kan vi implemen
 
 Den här funktionen kräver:
 
-- En ny [anpassad React useEffect-krok](https://react.dev/reference/react/useEffect#useeffect) i `src/api/usePersistedQueries.js` som anropar den parametriserade `my-project/person-by-name` beständiga frågan och returnerar en person.
++ En ny [anpassad React useEffect-krok](https://react.dev/reference/react/useEffect#useeffect) i `src/api/usePersistedQueries.js` som anropar den parametriserade `my-project/person-by-name` beständiga frågan och returnerar en person.
 
-- En React-komponent på `src/components/Person.js` som använder en persons fullständiga namn som frågeparameter, anropar den nya anpassade React `useEffect`-kroken och återger persondata.
++ En React-komponent på `src/components/Person.js` som använder en persons fullständiga namn som frågeparameter, anropar den nya anpassade React `useEffect`-kroken och återger persondata.
 
 När du är klar återges en personvy när du väljer en persons namn i Teams-vyn.
 
@@ -395,7 +423,7 @@ När du är klar återges en personvy när du väljer en persons namn i Teams-vy
    ```
 
 1. Öppna `src/components/Person.js`
-1. Analysera vägparametern `fullName` i komponenten `Person` och hämta persondata från AEM med hjälp av kroken `usePersonByName(fullName)`.
+1. Analysera vägparametern `Person` i komponenten `fullName` och hämta persondata från AEM med hjälp av kroken `usePersonByName(fullName)`.
 
    ```javascript
    import { useParams } from "react-router-dom";
@@ -487,13 +515,20 @@ När du är klar återges en personvy när du väljer en persons namn i Teams-vy
    export default Person;
    ```
 
+
+## CORS-konfiguration
+
+Det här exemplet på React-appen kräver inte resursdelning över ursprung (CORS) under utvecklingen eftersom den ansluter till AEM med en lokal proxy. Lokal proxy används endast för att underlätta snabb utveckling och inte för icke-utvecklingsbruk.
+
+I produktionsscenarier är det dock oftast bäst att klientprogrammet kommunicerar direkt med AEM via användarens webbläsare. Om du vill aktivera detta kan [CORS behöva konfigureras i AEM](../deployment/overview.md) för att tillåta hämtningsbegäranden från ditt webbprogram.
+
 ## Prova appen
 
 Granska appen [http://localhost:3000/](http://localhost:3000/) och klicka på länkarna _Medlemmar_. Du kan också lägga till fler team och/eller medlemmar i Team Alpha genom att lägga till innehållsfragment i AEM.
 
 >[!IMPORTANT]
 >
->Om du vill verifiera implementeringsändringarna eller om du inte kan få appen att fungera efter ändringarna ovan, se lösningsgrenen [grundläggande självstudiekurs](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial).
+>Om du vill verifiera implementeringsändringarna eller om du inte kan få appen att fungera efter ändringarna ovan, se [grundläggande självstudiekurs](https://github.com/adobe/aem-guides-wknd-graphql/tree/solution/basic-tutorial) `solution` grenen.
 
 ## Under hålet
 
