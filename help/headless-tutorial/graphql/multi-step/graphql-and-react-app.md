@@ -35,9 +35,9 @@ _Skärmbilder i IDE i det här kapitlet kommer från [Visual Studio-kod](https:/
 
 För att slutföra den här självstudiekursen rekommenderar vi att du har AEM Administrator-åtkomst till något av följande:
 
-+ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html)
-+ Lokal konfiguration med [tjänsten AEM Cloud SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html)
-+ [AEM 6.5 LTS](https://experienceleague.adobe.com/docs/experience-manager-65/content/release-notes/release-notes.html) med [GraphQL Index Package 1.0.5+](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/graphql-api/graphql-endpoint.html) installerat
++ [AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=sv-SE)
++ Lokal konfiguration med [tjänsten AEM Cloud SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=sv-SE)
++ [AEM 6.5 LTS](https://experienceleague.adobe.com/docs/experience-manager-65/content/release-notes/release-notes.html?lang=sv-SE) med [GraphQL Index Package 1.0.5+](https://experienceleague.adobe.com/docs/experience-manager-65/content/headless/graphql-api/graphql-endpoint.html) installerat
 
 ### Programvarukrav
 
@@ -46,7 +46,7 @@ Följande programvara måste vara installerad:
 + [Node.js v18+](https://nodejs.org/en)
 + [Visual Studio-kod](https://code.visualstudio.com/)
 + [Git](https://git-scm.com/)
-+ [Java JDK](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/introduction/technical-requirements) (vid anslutning till lokal AEM SDK eller 6.5-instans)
++ [Java JDK](https://experienceleague.adobe.com/sv/docs/experience-manager-65/content/implementing/deploying/introduction/technical-requirements) (vid anslutning till lokal AEM SDK eller 6.5-instans)
 
 ## Mål
 
