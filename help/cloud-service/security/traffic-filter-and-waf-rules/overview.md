@@ -11,9 +11,9 @@ last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-13148
 thumbnail: null
 exl-id: e6d67204-2f76-441c-a178-a34798fe266d
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '1185'
+source-wordcount: '1195'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Du kan också lära dig mer om skillnaderna mellan standardtrafikfilter och WAF 
 
 >[!IMPORTANT]
 >
-> WAF trafikfilterregler kräver ytterligare en licens för **WAF-DDoS-skydd** eller **Förbättrat skydd**. Standardregler för trafikfilter är som standard tillgängliga för Sites- och Forms-kunder.
+> WAF trafikfilterregler kräver en extra licens för Extended Security (tidigare WAF-DDoS Protection) eller Extended Security for Healthcare (tidigare kallat Enhanced Security). Standardregler för trafikfilter är som standard tillgängliga för Sites- och Forms-kunder.
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3469394/?quality=12&learn=on)
@@ -55,7 +55,7 @@ Regeluppsättningarna hjälper kunderna att förhindra vanliga och sofistikerade
 
 Standardreglerna för trafikfilter är användbara för att tillämpa affärsspecifika principer, som hastighetsbegränsningar eller blockera specifika regioner, samt för att blockera trafik baserat på begäranegenskaper och rubriker som IP-adress, sökväg eller användaragent.
 WAF trafikfilterregler ger å andra sidan ett omfattande förebyggande skydd för kända webbexplosioner och attackvektorer och har avancerad intelligens för att begränsa falska positiva effekter (dvs. blockera legitim trafik).
-Om du vill definiera båda typerna av regler använder du YAML-syntaxen. Mer information finns i [Syntax för trafikfilterregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax).
+Om du vill definiera båda typerna av regler använder du YAML-syntaxen. Mer information finns i [Syntax för trafikfilterregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax).
 
 ## När och varför ska de användas
 
@@ -291,4 +291,4 @@ För mer avancerade scenarier kan du utforska följande exempel som visar hur du
 
 ## Ytterligare resurser
 
-- [Trafikfilterregler inklusive WAF-regler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
+- [Trafikfilterregler inklusive WAF-regler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)

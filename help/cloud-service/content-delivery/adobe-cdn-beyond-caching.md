@@ -12,9 +12,9 @@ last-substantial-update: 2024-08-21T00:00:00Z
 jira: KT-15123
 thumbnail: KT-15123.jpeg
 exl-id: 8948a900-01e9-49ed-9ce5-3a057f5077e4
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Förutom att cache-lagra innehåll har Adobe CDN flera avancerade funktioner som
 
 De här funktionerna är **självbetjäningsfunktioner**. Konfigureras i filen `cdn.yaml` i ditt AEM-projekt och distribueras med Cloud Manager konfigurationsflöde.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440274?captions=swe&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3433104?quality=12&learn=on)
 
 ## Konfigurera trafik vid leveransnätverket
 
@@ -39,7 +39,7 @@ Låt oss förstå nyckelfunktionerna som är relaterade till _Konfigurera trafik
 
 - **DoS-attacker:** Adobe CDN absorberar DoS-attacker i nätverkslagret, vilket förhindrar dem från att nå din ursprungliga server.
 - **Hastighetsbegränsning:** Om du vill skydda din ursprungliga server från att överbelastas med för många begäranden kan du konfigurera hastighetsbegränsning i CDN.
-- **Brandvägg för webbaserade program (WAF):** WAF skyddar din webbplats från vanliga sårbarheter i webbprogram, som SQL-injektion, serveröverskridande skript med mera. Den utökade säkerhetslicensen eller WAF-DDoS-skyddslicensen krävs för att den här funktionen ska kunna användas.
+- **Brandvägg för webbaserade program (WAF):** WAF skyddar din webbplats från vanliga sårbarheter i webbprogram, som SQL-injektion, serveröverskridande skript med mera. Licensen för utökad säkerhet (tidigare WAF-DDoS Protection) eller utökad säkerhet för sjukvård (tidigare kallat Förbättrat skydd) krävs för att den här funktionen ska kunna användas.
 - **Begäranomvandling:** Ändra inkommande begäranden som att ange eller ta bort rubriker, ändra frågeparametrar, cookies och mycket annat.
 - **Svarsomvandling:** Ändra utgående svar, till exempel ange eller ta bort rubriker.
 - **Urval av ursprung:** Dirigera trafik till olika ursprungliga servrar (Adobe och icke-Adobe) baserat på begärande-URL.
@@ -65,7 +65,7 @@ Implementeringen av dessa avancerade funktioner omfattar två steg:
 
 1. **Uppdatera CDN-konfigurationsfilen**: Uppdatera `cdn.yaml`-filen i ditt AEM-projekt med de nödvändiga konfigurationerna. Konfigurationerna läggs till som regler och de följer en regelsyntax. Regeln innehåller tre huvudkomponenter: `name`, `when` och `action`.
 
-2. **Distribuera CDN-konfigurationsfilen**: Distribuera den uppdaterade `cdn.yaml` filen med hjälp av Cloud Manager konfigurationsflöde. Mer information finns i [Distribuera regler via Cloud Manager](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager).
+2. **Distribuera CDN-konfigurationsfilen**: Distribuera den uppdaterade `cdn.yaml` filen med hjälp av Cloud Manager konfigurationsflöde. Mer information finns i [Distribuera regler via Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/how-to-setup#deploy-rules-through-cloud-manager).
 
 ### Exempel
 
@@ -89,15 +89,15 @@ data:
 
 ## Relaterade självstudier
 
-[Skydda webbplatser med trafikfilterregler](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
+[Skydda webbplatser med trafikfilterregler](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/security/traffic-filter-and-waf-rules/overview)
 
-[Konfigurera och distribuera CDN-regel för HTTP Header-validering](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule)
+[Konfigurera och distribuera CDN-regel för HTTP Header-validering](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names-with-customer-managed-cdn#configure-and-deploy-http-header-validation-cdn-rule)
 
-[Töm CDN-cachen](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
+[Töm CDN-cachen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/how-to/purge-cache)
 
-[Konfigurera CDN-felsidor](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
+[Konfigurera CDN-felsidor](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-error-pages#cdn-error-pages)
 
-[Konfigurera trafik vid CDN](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
+[Konfigurera trafik vid CDN](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-configuring-traffic#client-side-redirectors)
 
-[Konfigurerar CDN-autentiseringsuppgifter och autentisering](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
+[Konfigurerar CDN-autentiseringsuppgifter och autentisering](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/content-delivery/cdn-credentials-authentication)
 
