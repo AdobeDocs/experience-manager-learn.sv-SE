@@ -12,9 +12,9 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f4f177f2745cb03c81011679b9d88eaadeb9cae3
 workflow-type: tm+mt
-source-wordcount: '1859'
+source-wordcount: '1891'
 ht-degree: 0%
 
 ---
@@ -154,7 +154,7 @@ I det här fallet används **AEM Assets-API:t** för att demonstrera den OpenAPI
 
    ![Välj autentisering](./assets/s2s/select-authentication.png)
 
-   Server-till-server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Autentiseringsalternativen Web App och Single Page App är lämpliga för program som behöver API-åtkomst åt användarna. Mer information finns i [Skillnaden mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App respektive Single Page App &#x200B;](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
+   Server-till-server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Autentiseringsalternativen Web App och Single Page App är lämpliga för program som behöver API-åtkomst åt användarna. Mer information finns i [Skillnaden mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App respektive Single Page App ](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
 
    >[!TIP]
    >
@@ -179,7 +179,9 @@ Om du väljer autentiseringsmetoden **OAuth Web App** eller **OAuth Single Page 
 
 ## Konfigurera AEM-instansen för att aktivera ADC-projektkommunikation{#configure-aem-instance}
 
-Därefter måste du konfigurera AEM-instansen så att den aktiverar ovanstående ADC-projektkommunikation. Med den här konfigurationen kan ADC-projektets ClientID INTE kommunicera med AEM-instansen och resulterar i ett 403-otillåtet fel. Tänk på den här konfigurationen som en brandväggsregel så att bara de klient-ID:n som tillåts kan kommunicera med AEM-instansen.
+Därefter måste du konfigurera AEM-instansen så att den aktiverar ovanstående ADC-projektkommunikation.
+
+Utan den här konfigurationen kan ADC-projektets ClientID INTE kommunicera med AEM-instansen och resulterar i ett 403-otillåtet fel. Tänk på den här konfigurationen som en brandväggsregel så att bara de klient-ID:n som tillåts kan kommunicera med AEM-instansen.
 
 Låt oss följa stegen för att konfigurera AEM-instansen så att den aktiveras ovanför ADC Project-kommunikationen.
 
@@ -210,11 +212,16 @@ Låt oss följa stegen för att konfigurera AEM-instansen så att den aktiveras 
 
 1. Bekräfta konfigurationsändringarna och skicka ändringarna till Git-fjärrdatabasen som Cloud Manager pipeline är ansluten till.
 
-1. Distribuera ovanstående ändringar med [konfigurationsförloppet](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline) i Cloud Manager.
+1. Distribuera ovanstående ändringar med [konfigurationsförloppet](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline) i Cloud Manager.
 
    ![Distribuera YAML](./assets/setup/config-pipeline.png)
 
-Observera att filen `api.yaml` också kan installeras i en [RDE](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/overview), [med kommandoradsverktyg](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files). Detta är användbart när du vill testa konfigurationsändringarna innan du distribuerar dem till produktionsmiljön.
+Observera att filen `api.yaml` också kan installeras i en [RDE](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview), [med kommandoradsverktyg](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files). Detta är användbart när du vill testa konfigurationsändringarna innan du distribuerar dem till produktionsmiljön.
+
+>[!CAUTION]
+>
+>YAML-filen (`api.yaml`) är det enda sättet att konfigurera AEM-instansen så att den kan kommunicera med ADC-projektet. Andra metoder, till exempel att använda miljövariabler, stöds inte för den här konfigurationen.
+
 
 ## Nästa steg
 
