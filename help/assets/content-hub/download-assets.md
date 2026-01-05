@@ -7,12 +7,12 @@ topic: Content Supply Chain, Content Management
 role: User
 level: Beginner
 doc-type: Feature Video
-duration: 196
-last-substantial-update: 2024-08-28T00:00:00Z
+duration: 375
+last-substantial-update: 2026-01-05T00:00:00Z
 jira: KT-15986
 thumbnail: KT-15986.jpeg
 exl-id: b48556f5-cc51-4f4d-b02d-de2909e51b02
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 05ecc7a3dbe28610233a05d3ae5c423ef087a1e5
 workflow-type: tm+mt
 source-wordcount: '49'
 ht-degree: 0%
