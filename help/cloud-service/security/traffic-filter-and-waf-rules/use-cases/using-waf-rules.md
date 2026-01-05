@@ -30,7 +30,7 @@ De sofistikerade attackerna kännetecknas av hög begärandefrekvens, komplexa m
 > WAF trafikfilterregler kräver en extra licens för Extended Security (tidigare WAF-DDoS Protection) eller Extended Security for Healthcare (tidigare kallat Enhanced Security). Standardregler för trafikfilter är som standard tillgängliga för Sites- och Forms-kunder.
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3469397/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3469434/?captions=swe&quality=12&learn=on)
 
 ## Utbildningsmål
 
