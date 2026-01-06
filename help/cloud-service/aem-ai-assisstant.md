@@ -1,6 +1,6 @@
 ---
 title: AEM AI Assistant
-description: Förenkla AEM med AI Assistant. Upptäck funktioner, bästa praxis och åtgärda problem samtidigt som du ökar produktiviteten med stöd för AI.
+description: Förenkla AEM med AI-assistenten. Upptäck funktioner och bästa praxis och åtgärda problem samtidigt som du ökar produktiviteten med AI-driven support.
 version: Experience Manager as a Cloud Service
 role: Admin, Developer, Leader, User
 level: Beginner
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 # AEM AI Assistant
 
-Lär dig hur [AEM AI Assistant](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) förenklar dina Adobe Experience Manager-arbetsflöden. Från att hitta funktioner, lära dig om bästa praxis, felsöka problem och till och med skapa supportärenden - det är din smarta följeslagare i AEM. Öka produktiviteten med AI-styrd vägledning, insikter och support - allt på ett och samma ställe.
+Lär dig hur [AEM AI Assistant](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) förenklar dina arbetsflöden i Adobe Experience Manager. Från att hitta funktioner, lära dig mer om metodtips, felsöka problem och till och med skapa supportärenden - det är din intelligenta följeslagare i AEM. Öka produktiviteten med AI-driven vägledning, insikter och support - allt på ett enda ställe.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475362/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
 
 
 ## Konfigurera åtkomst till AEM AI Assistant
 
-Lär dig hur du konfigurerar åtkomst till AI-assistenten i Adobe Experience Manager med [Adobe Admin Console](https://adminconsole.adobe.com). Det här steget är nödvändigt för att användarna ska kunna få svar från assistenten och utnyttja det automatiska skapandet av biljetter.
+Lär dig konfigurera åtkomst till AI Assistant i Adobe Experience Manager med [Adobe Admin Console](https://adminconsole.adobe.com). Det här steget är nödvändigt för att göra det möjligt för användare att få svar från assistenten och utnyttja automatiskt skapande av biljetter.
 
->[!VIDEO](https://video.tv.adobe.com/v/3474070/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474066/?learn=on&enablevpops)
