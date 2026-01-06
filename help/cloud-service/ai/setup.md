@@ -24,7 +24,7 @@ För att kunna använda AEM AI Assistant och Agents i AEM måste du konfigurera 
 
 Lär dig hur du konfigurerar åtkomst till AI-assistenten i Adobe Experience Manager med [Adobe Admin Console](https://adminconsole.adobe.com). Det här steget är nödvändigt för att användarna ska kunna få svar från assistenten och utnyttja det automatiska skapandet av biljetter.
 
->[!VIDEO](https://video.tv.adobe.com/v/3474066/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3474070/?captions=swe&learn=on&enablevpops)
 
 ### Agenter i AEM
 

@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Lär dig hur du använder agenter som exponerats via [AEM AI Assistant](./ai-assistant.md) för att automatisera uppgifter och effektivisera arbetsflöden. Upptäck vad agenterna är, hur de fungerar och var de passar in i det arbete du gör i AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/3478455/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3478459/?captions=swe&learn=on&enablevpops)
 
 En fullständig lista över tillgängliga agenter i AEM och deras funktioner, inklusive exempelfrågor, finns i [Agenter i AEM-dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview).
 
