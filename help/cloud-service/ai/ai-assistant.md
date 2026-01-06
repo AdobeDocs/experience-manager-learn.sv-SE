@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # AEM AI Assistant
 
-Lär dig hur [AEM AI Assistant](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) förenklar dina Adobe Experience Manager-arbetsflöden. Från att hitta funktioner, lära dig om bästa praxis, felsöka problem och till och med skapa supportärenden - det är din smarta följeslagare i AEM. Öka produktiviteten med AI-styrd vägledning, insikter och support - allt på ett och samma ställe.
+Lär dig hur [AEM AI Assistant](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) förenklar dina Adobe Experience Manager-arbetsflöden. Från att hitta funktioner, lära dig om bästa praxis, felsöka problem och till och med skapa supportärenden - det är din smarta följeslagare i AEM. Öka produktiviteten med AI-styrd vägledning, insikter och support - allt på ett och samma ställe.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3475357/?learn=on&enablevpops)
 

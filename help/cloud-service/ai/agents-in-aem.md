@@ -22,6 +22,6 @@ Lär dig hur du använder agenter som exponerats via [AEM AI Assistant](./ai-ass
 
 >[!VIDEO](https://video.tv.adobe.com/v/3478455/?learn=on&enablevpops)
 
-En fullständig lista över tillgängliga agenter i AEM och deras funktioner, inklusive exempelfrågor, finns i [Agenter i AEM-dokumentationen](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview).
+En fullständig lista över tillgängliga agenter i AEM och deras funktioner, inklusive exempelfrågor, finns i [Agenter i AEM-dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview).
 
 *Om du vill få åtkomst till agenterna i AEM måste du kontrollera att du har konfigurerat åtkomst i din AEM-miljö genom att följa [installationsguiden](./setup.md#agents-in-aem).*

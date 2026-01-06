@@ -28,7 +28,7 @@ Lär dig hur du konfigurerar åtkomst till AI-assistenten i Adobe Experience Man
 
 ### Agenter i AEM
 
-Om du vill använda agenter i AEM måste du först ha konfigurerat [AEM AI Assistant](#aem-ai-assistant)-åtkomst. Agenter i AEM måste etableras av Adobe. Om du vill begära åtkomst till agenter i AEM kontaktar du Adobe eller [Adobe Support](https://experienceleague.adobe.com/en/support).
+Om du vill använda agenter i AEM måste du först ha konfigurerat [AEM AI Assistant](#aem-ai-assistant)-åtkomst. Agenter i AEM måste etableras av Adobe. Om du vill begära åtkomst till agenter i AEM kontaktar du Adobe eller [Adobe Support](https://experienceleague.adobe.com/sv/support).
 
 ## Playground
 
