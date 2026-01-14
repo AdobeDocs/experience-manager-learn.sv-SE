@@ -25,4 +25,4 @@ ht-degree: 0%
 
 En guide om hur du ställer in dokumentredigering för författare.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425699/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438866/?captions=swe&learn=on)

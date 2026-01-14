@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Se hur man sammanställer dokument med standardinnehåll, block med mera.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425701/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438814/?captions=swe&learn=on)

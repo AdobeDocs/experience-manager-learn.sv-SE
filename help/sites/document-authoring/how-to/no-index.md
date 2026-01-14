@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Se hur du förhindrar att webbsidor som skapats med AEM-dokument indexeras av sökmotorer.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425726/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438117/?captions=swe&learn=on)

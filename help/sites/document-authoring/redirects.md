@@ -25,4 +25,4 @@ ht-degree: 0%
 
 En djupdykning i hur omdirigeringar fungerar i dokumentutvecklingen och hur författare enkelt kan skapa omdirigeringar utan tekniska kunskaper.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425704/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438547/?captions=swe&learn=on)

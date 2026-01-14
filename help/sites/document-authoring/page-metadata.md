@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Läs om hur dokumentredigering hanterar metadata på sidnivå och hur författare kan uppdatera detta utan tekniska kunskaper.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425706/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438070/?captions=swe&learn=on)

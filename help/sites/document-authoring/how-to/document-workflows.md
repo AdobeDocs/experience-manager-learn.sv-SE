@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Lär dig hur du använder dokumentarbetsflöden med AEM dokumentredigering.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425720/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438294/?captions=swe&learn=on)
