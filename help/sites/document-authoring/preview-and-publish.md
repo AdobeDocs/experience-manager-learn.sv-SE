@@ -1,7 +1,7 @@
 ---
 title: Förhandsgranska och publicera innehåll
 description: Skapa och publicera innehåll med dokumentredigering.
-version: Experience Manager 6.5, Experience Manager as a Cloud Service
+version: Experience Manager as a Cloud Service
 feature: Authoring
 topic: Content Management
 role: User
@@ -12,7 +12,7 @@ jira: KT-14466
 thumbnail: 3425700.jpeg
 duration: 137
 exl-id: f416c435-d42f-4d88-b28f-ebabff295a72
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 8323da7961c4b6ffeaad5f936b7b515bb08a616a
 workflow-type: tm+mt
 source-wordcount: '32'
 ht-degree: 0%
