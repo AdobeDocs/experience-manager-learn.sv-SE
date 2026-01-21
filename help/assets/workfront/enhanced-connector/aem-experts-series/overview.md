@@ -13,9 +13,9 @@ badgeIntegration: label="Integrering" type="positive"
 badgeVersions: label="AEM Assets as a Cloud Service, AEM Assets 6.5" before-title="false"
 exl-id: 4f279c0d-270f-433e-b047-88c02f5b1e78
 duration: 49
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 866dca32844a7185bdf3980e38570da1d44d8b83
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -95,3 +95,9 @@ Denna fyra expertserie följer en grupp från Adobe experter - från produktchef
    </td>
   </tr>  
 </tbody></table>
+
+## Anslut via Workfront Fusion
+
+Om du använder Workfront Fusion för att länka till Workfront och AEM Assets, för att automatisera projektskapande och arbetsflödessamordning, ska du läsa integreringsdokumentationen för Workflow och AEM Assets.
+
+[Använd Workfront Fusion för att konvertera ett Workfront-problem till ett projekt med AEM-arbetsflöden](https://experienceleague.adobe.com/en/docs/workfront/using/documents/wf-aem-integrations/wf-aem-essentials/use-fusion-to-create-project-with-workflows)
