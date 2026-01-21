@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar Experience Manager Assets Content Hub med Adobe Cloud Manager och resurstillägg. Lär dig även hur du konfigurerar åtkomst för användare med produktprofiler.
 
->[!VIDEO](https://video.tv.adobe.com/v/3472918/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3472939/?captions=swe&learn=on)
 
 
 ## Konfigurera AEM Assets Dynamic Media OpenAPI:er
