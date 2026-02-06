@@ -27,4 +27,4 @@ ht-degree: 0%
 
  Adobe IMS-användargrupper skapar logiska uppsättningar av användare som exponeras för AEM, där de kan användas för att definiera finjusteringsbehörigheter för AEM-användare.
 
->[!VIDEO](https://video.tv.adobe.com/v/39150?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3479631?captions=swe&quality=12&learn=on)
