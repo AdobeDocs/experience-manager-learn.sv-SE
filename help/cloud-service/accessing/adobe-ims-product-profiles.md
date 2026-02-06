@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Med Adobes IMS-produktprofiler kan användare logga in på en AEM Author-tjänst och ange en åtkomstnivå beroende på vilken produktprofil de är medlemmar i.
 
->[!VIDEO](https://video.tv.adobe.com/v/39156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3479634?captions=swe&quality=12&learn=on)
 
 ## Ytterligare resurser
 
