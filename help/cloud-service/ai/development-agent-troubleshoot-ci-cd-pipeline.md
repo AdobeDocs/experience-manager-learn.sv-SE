@@ -25,7 +25,7 @@ AEM Development Agent hjälper tekniska team, inklusive utvecklare, DevOps-ingen
 
 >[!TIP]
 >
-> Se även [Översikt över agenter i AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview) för en fullständig lista över tillgängliga agenter i AEM as a Cloud Service, deras funktioner och hur du kan få tillgång till dem.
+> Se även [Översikt över agenter i AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview) för en fullständig lista över tillgängliga agenter i AEM as a Cloud Service, deras funktioner och hur du kan få tillgång till dem.
 
 
 ## Ökning
@@ -41,9 +41,9 @@ För enkelhetens skull introduceras i den här självstudien ett enhetstestfel i
 Om du vill följa den här självstudiekursen behöver du:
 
 - AI-assistenten och agenter i AEM har aktiverats. Mer information finns i [Konfigurera AI i AEM](./setup.md) och observera att de spelgrunder som nämns i den artikeln inte har funktioner för AEM Development Agent.
-- Åtkomst till Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) med en utvecklar- eller programhanterarroll. Mer information finns i [rolldefinitioner](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/requirements/users-and-roles#role-definitions).
+- Åtkomst till Adobe [Cloud Manager](https://my.cloudmanager.adobe.com/) med en utvecklar- eller programhanterarroll. Mer information finns i [rolldefinitioner](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-manager/content/requirements/users-and-roles#role-definitions).
 - En AEM as a Cloud Service-miljö
-- Åtkomst till agenter i AEM via programmet [Beta](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)
+- Åtkomst till agenter i AEM via programmet [Beta](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/release-notes/release-notes-current#aem-beta-programs)
 - [WKND-webbplatsprojektet](https://github.com/adobe/aem-guides-wknd) klonades till din lokala dator
 
 ### Aktuella funktioner i AEM Development Agent
@@ -122,7 +122,7 @@ I den här självstudien används WKND Sites Projects `tutorial/dev-agent/unit-t
 
 ### Skapa och konfigurera en pipeline för kodkvalitet
 
-I den här självstudien används en pipeline för kodkvalitet (icke-produktion) för att utlösa ett pipeline-fel för felsökning. Mer information om pipelines för kodkvalitet finns i [Introduktion till CI/CD-pipelines](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#introduction).
+I den här självstudien används en pipeline för kodkvalitet (icke-produktion) för att utlösa ett pipeline-fel för felsökning. Mer information om pipelines för kodkvalitet finns i [Introduktion till CI/CD-pipelines](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#introduction).
 
 - I Cloud Manager navigerar du till avsnittet **Förgreningar** och väljer **Lägg till** > **Lägg till icke-produktionsförlopp**.
 - Konfigurera följande i dialogrutan **Lägg till icke-produktionspipeline**:
@@ -210,17 +210,17 @@ WKND Sites Project innehåller ytterligare exempel på problem med trasig kod oc
 
 ![Jämför grenar](./assets/dev-agent/compare-branches.png)
 
-Se även [Exempeluppmaningarna](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview#sample-prompts) om du vill ha mer information om hur du använder AEM Development Agent.
+Se även [Exempeluppmaningarna](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview#sample-prompts) om du vill ha mer information om hur du använder AEM Development Agent.
 
 ## Sammanfattning
 
 I den här självstudiekursen lärde du dig att använda AEM Development Agent för att felsöka och korrigera en misslyckad CI/CD-pipeline med hjälp av AI-assistenten. Du har också lärt dig hur AI snabbar upp de tekniska arbetsflödena genom att ge användbara insikter och kodändringar.
 
-Börja använda AEM Development Agent och andra agenter i AEM för att snabba upp arbetsflödena. Mer information finns i [Översikt över agenter i AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview).
+Börja använda AEM Development Agent och andra agenter i AEM för att snabba upp arbetsflödena. Mer information finns i [Översikt över agenter i AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview).
 
 ## Ytterligare resurser
 
 - [AI i Experience Manager](./overview.md)
-- [Översikt över agenter i AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
-- [Översikt över utvecklingsagenten](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview)
-- [Översikt över agenter i AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
+- [Översikt över agenter i AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
+- [Översikt över utvecklingsagenten](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/agents/development/overview)
+- [Översikt över agenter i AEM](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/agents/overview)
