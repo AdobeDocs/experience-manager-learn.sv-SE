@@ -23,7 +23,7 @@ ht-degree: 0%
 >id="aemcloud_adobeims_productprofiles"
 >title="Adobes IMS-produktprofiler"
 >abstract="Med Adobes IMS-produktprofiler kan användare logga in på en AEM Author-tjänst och ange en åtkomstnivå beroende på vilken produktprofil de är medlemmar i. Läs mer om Adobe IMS-produktprofiler."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=en#introduction" text="Hantera produkter och användaråtkomst i Admin Console"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=sv-SE#introduction" text="Hantera produkter och användaråtkomst i Admin Console"
 
 Med Adobes IMS-produktprofiler kan användare logga in på en AEM Author-tjänst och ange en åtkomstnivå beroende på vilken produktprofil de är medlemmar i.
 
@@ -31,4 +31,4 @@ Med Adobes IMS-produktprofiler kan användare logga in på en AEM Author-tjänst
 
 ## Ytterligare resurser
 
-+ [Hantera produkter och användaråtkomst i Admin Console-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html#managing-products-and-user-access-in-admin-console)
++ [Hantera produkter och användaråtkomst i Admin Console-dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/security/ims-support.html?lang=sv-SE#managing-products-and-user-access-in-admin-console)
