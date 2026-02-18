@@ -68,9 +68,9 @@ Följande krävs när du konfigurerar SAML 2.0-autentisering:
 + AEM Administrator-åtkomst till AEM as a Cloud Service-miljön
 + Administratörsåtkomst till IDP:n
 + Tillgång till ett offentligt/privat nyckelpar som används för att kryptera SAML-nyttolaster
-+ AEM Sites-sidor (eller sidträd), publicerade till AEM Publish och [skyddade av stängda användargrupper (CUG)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
++ AEM Sites-sidor (eller sidträd), publicerade till AEM Publish och [skyddade av stängda användargrupper (CUG)](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
 
-SAML 2.0 stöds endast för att autentisera användning av AEM Publish eller Preview. Om du vill hantera autentiseringen av AEM Author med hjälp av och IDP [integrerar du IDP med Adobe IMS](https://helpx.adobe.com/enterprise/using/set-up-identity.html).
+SAML 2.0 stöds endast för att autentisera användning av AEM Publish eller Preview. Om du vill hantera autentiseringen av AEM Author med hjälp av och IDP [integrerar du IDP med Adobe IMS](https://helpx.adobe.com/se/enterprise/using/set-up-identity.html).
 
 
 ## Installera det offentliga IDP-certifikatet på AEM
@@ -334,7 +334,7 @@ OSGi-konfigurationer per miljö (`config.publish.dev`, `config.publish.stage` oc
 
 ### Använd kryptering
 
-När [krypterar AuthnRequest och SAML-försäkran](#encrypting-the-authnrequest-and-saml-assertion) krävs följande egenskaper: `useEncryption`, `spPrivateKeyAlias` och `keyStorePassword`. `keyStorePassword` innehåller ett lösenord och därför får värdet inte lagras i OSGi-konfigurationsfilen utan injiceras med [hemliga konfigurationsvärden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)
+När [krypterar AuthnRequest och SAML-försäkran](#encrypting-the-authnrequest-and-saml-assertion) krävs följande egenskaper: `useEncryption`, `spPrivateKeyAlias` och `keyStorePassword`. `keyStorePassword` innehåller ett lösenord och därför får värdet inte lagras i OSGi-konfigurationsfilen utan injiceras med [hemliga konfigurationsvärden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#secret-configuration-values)
 
 +++Du kan även uppdatera OSGi-konfigurationen så att kryptering används
 
@@ -367,7 +367,7 @@ När [krypterar AuthnRequest och SAML-försäkran](#encrypting-the-authnrequest-
 
 + `useEncryption` inställd på `true`
 + `spPrivateKeyAlias` innehåller nyckelbehållarpostens alias för den privata nyckel som används av SAML-integreringen.
-+ `keyStorePassword` innehåller en [&#x200B; OSGi-hemlig konfigurationsvariabel &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values) som innehåller lösenordet för användarens nyckelbehållare `authentication-service`.
++ `keyStorePassword` innehåller en [&#x200B; OSGi-hemlig konfigurationsvariabel &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#secret-configuration-values) som innehåller lösenordet för användarens nyckelbehållare `authentication-service`.
 
 +++
 
@@ -453,7 +453,7 @@ Dynamiskt gruppmedlemskap är en funktion i [Apache Jackrabbit Oak](https://jack
 ### Aktivera dynamiskt gruppmedlemskap för SAML-användare i nya miljöer
 
 För att avsevärt förbättra prestandan vid grupputvärdering i nya AEM as a Cloud Service-miljöer rekommenderas aktivering av funktionen för dynamiskt gruppmedlemskap i nya miljöer.
-Detta är också ett nödvändigt steg när datasynkronisering aktiveras. Mer information [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier).
+Detta är också ett nödvändigt steg när datasynkronisering aktiveras. Mer information [här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier).
 Det gör du genom att lägga till följande egenskap i OSGI-konfigurationsfilen:
 
 `/apps/example/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~example.cfg.json`
@@ -623,7 +623,7 @@ public void postSyncUserProcess(
 
 **Viktigt!** För att ändra användaregenskaper i databasen krävs följande för implementeringen av kroken:
 + En `SlingRepository`-referens injicerad via `@Reference`
-+ En konfigurerad [tjänstanvändare](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) med lämplig behörighet (konfigurerad i tillägget Apache Sling Service User Mapper Service)
++ En konfigurerad [tjänstanvändare](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) med lämplig behörighet (konfigurerad i tillägget Apache Sling Service User Mapper Service)
 + Korrekt sessionshantering med try-catch-finally-block
 
 ### Implementera en anpassad SAML-krok
@@ -809,7 +809,7 @@ Artefakten `aem-sdk-api` innehåller alla nödvändiga Adobe Granite SAML-gräns
 
 #### Steg 4: Konfigurera tjänstanvändare (om databasen ändras)
 
-Om SAML-kroken behöver ändra användaregenskaper i databasen (som visas i exemplet `postSyncUserProcess`) måste en [tjänstanvändare](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) konfigureras:
+Om SAML-kroken behöver ändra användaregenskaper i databasen (som visas i exemplet `postSyncUserProcess`) måste en [tjänstanvändare](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) konfigureras:
 
 1. Skapa en tjänstanvändarmappning i projektet på `/ui.config/src/main/content/jcr_root/apps/myproject/osgiconfig/config/org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~saml.cfg.json`:
 
@@ -852,8 +852,8 @@ Distribuera den anpassade SAML-kroken till AEM as a Cloud Service:
 + **Testar**: Testa anpassade kopplingar noggrant i lägre miljöer innan du distribuerar till produktionen
 + **Flera kopplingar**: Flera SAML-krokimplementeringar kan konfigureras. Alla matchande krokar kommer att köras. Använd egenskapen `service.ranking` i OSGi-komponenten för att styra körningsordningen (högre rankningsvärden körs först). Om du vill återanvända en SAML-krok i flera SAML Authentication Handler-fabrikskonfigurationer (`com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>`) skapar du flera krokkonfigurationer (OSGi-fabrikskonfigurationer), där var och en har olika `idpIdentifier` som matchar respektive SAML Authentication Handler
 + **Säkerhet**: Verifiera och sanera alla data från SAML-försäkran innan de används i affärslogiken
-+ **Databasåtkomst**: När du ändrar användaregenskaper i `postSyncUserProcess` ska du alltid använda en [tjänstanvändare](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) med lämplig behörighet i stället för administrativa sessioner
-+ **Tjänstanvändarbehörigheter**: Bevilja minimala nödvändiga behörigheter till [tjänstanvändaren](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) (t.ex. endast `jcr:read` och `rep:write` på `/home/users`, inte fullständiga administratörsrättigheter)
++ **Databasåtkomst**: När du ändrar användaregenskaper i `postSyncUserProcess` ska du alltid använda en [tjänstanvändare](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) med lämplig behörighet i stället för administrativa sessioner
++ **Tjänstanvändarbehörigheter**: Bevilja minimala nödvändiga behörigheter till [tjänstanvändaren](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) (t.ex. endast `jcr:read` och `rep:write` på `/home/users`, inte fullständiga administratörsrättigheter)
 + **Sessionshantering**: Använd alltid try-catch-finally-block för att säkerställa att databassessionerna stängs korrekt, även om undantag inträffar
 + **Inställning för användarsynkronisering**: `postSyncUserProcess`-kroken körs efter att användaren har synkroniserats med OAK, så användarobjektet finns garanterat i databasen vid den tidpunkten
 
@@ -878,7 +878,7 @@ SAML-autentiseringsflödet kan anropas från en webbsida på en AEM-webbplats ge
 
 ## Skyddad cachelagring när SAML används
 
-I publiceringsinstansen för AEM cache-lagras de flesta sidor. För SAML-skyddade sökvägar bör cachelagring antingen vara inaktiverad eller skyddad cachelagring vara aktiverad med konfigurationen auth_checker. Mer information finns i [här](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/permissions-cache)
+I publiceringsinstansen för AEM cache-lagras de flesta sidor. För SAML-skyddade sökvägar bör cachelagring antingen vara inaktiverad eller skyddad cachelagring vara aktiverad med konfigurationen auth_checker. Mer information finns i [här](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/configuring/permissions-cache)
 
 Observera att om du cachelagrar skyddade sökvägar utan att aktivera auth_checker kan du uppleva oförutsägbara beteenden.
 
