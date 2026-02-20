@@ -10,9 +10,9 @@ jira: KT-20288
 thumbnail: KT-20288.png
 last-substantial-update: 2026-02-09T00:00:00Z
 exl-id: 287894ea-9cc1-4c27-ac7e-967ad46f4789
-source-git-commit: effacd58725dab502f6fb6a4750646c1ea956de2
+source-git-commit: 08dd5006ebf4ebd94e8bc60594f8f1541feb810f
 workflow-type: tm+mt
-source-wordcount: '519'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,29 @@ Lär dig hur du söker efter och tar bort inaktuella API:er i AEM as a Cloud Ser
 
 ## Ökning
 
-AEM as a Cloud Service **Actions Center** meddelar dig om _inaktuella API:er_ i ditt projekt. Ta bort inaktuella API:er från ditt projekt för att vara säker och effektiv och för att du ska kunna fortsätta att distribuera kod med Cloud Manager-pipelines.
+Ta bort inaktuella API:er från ditt projekt för att vara säker och effektiv och för att du ska kunna fortsätta att distribuera kod med Cloud Manager-pipelines.
 
 I den här självstudiekursen får du lära dig att hitta och ta bort inaktuella API:er i din AEM as a Cloud Service-miljö med [AEM Analyser Maven Plugin](https://github.com/adobe/aemanalyser-maven-plugin/blob/main/aemanalyser-maven-plugin/README.md).
+
+## Meddelanden om inaktuella API:er
+
+De inaktuella API:erna och de åtgärder som krävs för att åtgärda dem rapporteras regelbundet, vi ska titta på några exempel.
+
+- AEM as a Cloud Service **Actions Center** meddelar dig om _inaktuella API:er_ i ditt projekt.
+  ![Föråldrade API:er i Åtgärdscenter](./assets/deprecated-apis/actions-center-deprecated-apis.png)
+
+- I steget **Kodsökning** i Cloud Manager-pipeline rapporteras inaktuella API:er i ditt projekt. Granska rapporten **Hämta information** om du vill se en fullständig lista över inaktuella API:er.
+  ![Föråldrade API:er i kodsökning](./assets/deprecated-apis/code-scanning-summary.png)
+
+- **Förberedelsesteget för felaktigheter** i Cloud Manager-pipeline rapporterar inaktuella API:er i ditt projekt, **Hämtningslogg** och söker efter _Analyserarvarningar_ i loggfilen.
+
+  ```
+  2026-02-20 15:40:48.376 Analyser warnings have been found 
+  2026-02-20 15:40:48.376 The analyser found the following warnings for author and publish : 
+  2026-02-20 15:40:48.376 [region-deprecated-api] com.adobe.aem.guides:aem-guides-wknd.core:4.0.5-SNAPSHOT: Usage of deprecated package found : org.apache.commons.lang : Commons Lang 2 is in maintenance mode. Commons Lang 3 should be used instead. Deprecated since 2021-04-30 For removal : 2021-12-31 (com.adobe.aem.guides:aem-guides-wknd.all:4.0.5-SNAPSHOT)
+  2026-02-20 15:40:56.458 Convert Merge Analyse finished.
+  ```
+
 
 ## Söka efter föråldrade API:er
 
@@ -39,7 +59,7 @@ Följ de här stegen för att hitta inaktuella API:er i ditt AEM as a Cloud Serv
 
      ```xml
      ...
-     <aemanalyser.version>1.6.14</aemanalyser.version> <!-- Latest released version as of 09-Feb-2026 -->
+     <aemanalyser.version>1.6.16</aemanalyser.version> <!-- Latest released version as of 20-Feb-2026 -->
      ...
      <!-- AEM Analyser Plugin -->
      <plugin>
@@ -55,7 +75,7 @@ Följ de här stegen för att hitta inaktuella API:er i ditt AEM as a Cloud Serv
 
      ```xml
      ...
-     <aem.sdk.api>2026.2.24288.20260204T121510Z-260100</aem.sdk.api> <!-- Latest available AEM SDK version as of 09-Feb-2026 -->
+     <aem.sdk.api>2026.2.24464.20260214T050318Z-260100</aem.sdk.api> <!-- Latest available AEM SDK version as of 20-Feb-2026 -->
      ...
      ```
 
@@ -117,11 +137,11 @@ AEM Analyser rapporterar **vad** är föråldrat och ger **rekommendationen** om
 
 | Varningstyp för analysator | Vad det indikerar | Rekommenderad åtgärd | Referens |
 | --------------------- | ----------------- | ------------------ | --------- |
-| Inaktuellt AEM API | API ska tas bort från AEM as a Cloud Service | Ersätt användning med det offentliga API som stöds | [API-vägledning för borttagning](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
-| Inaktuellt AEM-paket eller -klass | Paket eller klass stöds inte längre | Kod för att använda det rekommenderade alternativet | [Föråldrade API:er](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#aem-apis) |
-| Inaktuellt tredjepartsbibliotek | Biblioteket stöds inte i framtida SDK:er | Uppgradera beroendeförhållandet och användningen av omfakturor | [Allmänna riktlinjer](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
-| Inaktuella Sling-/OSGi-mönster | Äldre anteckningar eller API:er har identifierats | Migrera till moderna Sling- och OSGi-API:er | [Borttagning av Sling-/OSGi-mönster](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
-| Planerad borttagning (framtida datum) | API fungerar fortfarande, men borttagning framtvingas senare | Schemalägg rensning före implementering av pipeline | [Versionsinformation](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/home) |
+| Inaktuellt AEM API | API ska tas bort från AEM as a Cloud Service | Ersätt användning med det offentliga API som stöds | [API-vägledning för borttagning](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| Inaktuellt AEM-paket eller -klass | Paket eller klass stöds inte längre | Kod för att använda det rekommenderade alternativet | [Föråldrade API:er](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#aem-apis) |
+| Inaktuellt tredjepartsbibliotek | Biblioteket stöds inte i framtida SDK:er | Uppgradera beroendeförhållandet och användningen av omfakturor | [Allmänna riktlinjer](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| Inaktuella Sling-/OSGi-mönster | Äldre anteckningar eller API:er har identifierats | Migrera till moderna Sling- och OSGi-API:er | [Borttagning av Sling-/OSGi-mönster](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance) |
+| Planerad borttagning (framtida datum) | API fungerar fortfarande, men borttagning framtvingas senare | Schemalägg rensning före implementering av pipeline | [Versionsinformation](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/home) |
 
 ### Praktisk vägledning
 
@@ -134,4 +154,4 @@ Genom att åtgärda inaktuella API:er tidigt kan du hålla ditt projekt **uppgra
 ## Ytterligare resurser
 
 - [AEM Analyser Maven Plugin](https://github.com/adobe/aemanalyser-maven-plugin/blob/main/aemanalyser-maven-plugin/README.md)
-- [Inaktuella och borttagna funktioner och API:er](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance)
+- [Inaktuella och borttagna funktioner och API:er](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/deprecated-removed-features#api-removal-guidance)
