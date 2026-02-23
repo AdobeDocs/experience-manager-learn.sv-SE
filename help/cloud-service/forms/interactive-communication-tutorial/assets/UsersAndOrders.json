@@ -1,0 +1,133 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Mock Orders API",
+      "description": "AEM-friendly Swagger (wrapper object response) for orders by user with embedded user + product details."
+    },
+    "host": "mock-orders-api-aem.onrender.com",
+    "basePath": "/",
+    "schemes": ["https"],
+    "produces": ["application/json"],
+    "paths": {
+      "/getOrdersByUser/{userId}": {
+        "get": {
+          "summary": "Gets one or more orders for a user (wrapper response)",
+          "operationId": "getOrdersByUser",
+          "parameters": [
+            {
+              "name": "userId",
+              "type": "integer",
+              "in": "path",
+              "required": true,
+              "description": "User ID"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "schema": {
+                "$ref": "#/definitions/OrdersResponse"
+              }
+            }
+          }
+        }
+      },
+      "/getOrder/{id}": {
+        "get": {
+          "summary": "Gets a single order by id",
+          "operationId": "getOrderById",
+          "parameters": [
+            {
+              "name": "id",
+              "type": "integer",
+              "in": "path",
+              "required": true,
+              "description": "Order ID"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Successful Response",
+              "schema": {
+                "$ref": "#/definitions/Order"
+              }
+            },
+            "404": {
+              "description": "Not Found",
+              "schema": {
+                "$ref": "#/definitions/Error"
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "OrdersResponse": {
+        "type": "object",
+        "properties": {
+          "orders": {
+            "type": "array",
+            "items": {
+              "$ref": "#/definitions/Order"
+            }
+          }
+        }
+      },
+      "Order": {
+        "type": "object",
+        "required": ["id", "userId", "user", "products", "total"],
+        "properties": {
+          "id": { "type": "integer" },
+          "userId": { "type": "integer" },
+          "user": { "$ref": "#/definitions/User" },
+          "products": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/OrderProduct" }
+          },
+          "total": { "type": "number" },
+          "createdAt": { "type": "string" }
+        }
+      },
+      "User": {
+        "type": "object",
+        "required": ["id", "firstName", "lastName", "mailingAddress"],
+        "properties": {
+          "id": { "type": "integer" },
+          "firstName": { "type": "string" },
+          "lastName": { "type": "string" },
+          "mailingAddress": { "$ref": "#/definitions/MailingAddress" }
+        }
+      },
+      "MailingAddress": {
+        "type": "object",
+        "required": ["address", "city", "state", "postalCode", "country"],
+        "properties": {
+          "address": { "type": "string" },
+          "city": { "type": "string" },
+          "state": { "type": "string" },
+          "postalCode": { "type": "string" },
+          "country": { "type": "string" }
+        }
+      },
+      "OrderProduct": {
+        "type": "object",
+        "required": ["id", "title", "description", "price", "quantity"],
+        "properties": {
+          "id": { "type": "integer" },
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "price": { "type": "number" },
+          "quantity": { "type": "integer" }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "message": { "type": "string" }
+        }
+      }
+    }
+  }
+  
