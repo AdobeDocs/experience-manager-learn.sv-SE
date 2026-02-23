@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Skapa interaktiva kommunikationsdokument med fördefinierade mallar och återanvändbara fragment. Detta säkerställer enhetlighet och effektivitet vid framtagning av dokument. Bädda in dynamiska data genom att välja rätt formulärdatamodell (FDM) och infoga fragment i angivna målområden. Testa slutresultatet för precision och formatering.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480054/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480069/?captions=swe&learn=on&enablevpops)
 
 ## Nästa steg
 

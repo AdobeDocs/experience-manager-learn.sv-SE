@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Lär dig utveckla återanvändbara fragment för interaktiva kommunikationsdokument. Optimera layouten och säkerställ dynamisk databindning för kundadress- och bokstavsavsnitten. Förbättra dokumentdesignen med formatering, positionering och marginalreglage.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480042/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480058/?captions=swe&learn=on&enablevpops)
 
 ## Nästa steg
 

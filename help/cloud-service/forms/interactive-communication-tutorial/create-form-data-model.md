@@ -25,7 +25,7 @@ En modell-API-server implementerades som simulerar Orders-tjänsten för utveckl
 
 Swagger-filen som används för att skapa formulärdatamodellen kan [hämtas här](assets/UsersAndOrders.json)
 
->[!VIDEO](https://video.tv.adobe.com/v/3480005/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480021/?captions=swe&learn=on&enablevpops)
 
 ## Nästa steg
 

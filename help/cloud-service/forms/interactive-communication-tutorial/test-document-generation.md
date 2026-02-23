@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Lär dig hur du skapar interaktiva kommunikationsdokument med API och Postman. Den här processen innebär att hämta dokument-ID, autentisera begäranden och använda förifyllda konfigurationer för att återge PDF-filer. Upptäck hur detta API kan integreras i program för att skicka dynamiska körningsparametrar och för säker autentisering.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480017/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480033/?captions=swe&learn=on&enablevpops)

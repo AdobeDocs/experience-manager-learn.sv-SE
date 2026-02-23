@@ -21,7 +21,7 @@ ht-degree: 0%
 
 Upptäck hur du skapar interaktiva kommunikationsmallar för att standardisera utgående kommunikation. Mallarna säkerställer enhetlighet, styrning och varumärkesanpassning i kundkommunikationen. Lär dig hur du skapar, redigerar och aktiverar mallar för framtida bruk med verktyg som IC Web Designer och objektbibliotek.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480029/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480046/?captions=swe&learn=on&enablevpops)
 
 ## Nästa steg
 
