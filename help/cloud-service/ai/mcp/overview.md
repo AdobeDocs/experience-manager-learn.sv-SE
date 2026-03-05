@@ -21,7 +21,7 @@ Lär dig hur du använder AEM _Model Context Protocol (MCP)-servrar_ från en AI
 
 ## Lista över AEM MCP-servrar
 
-Alla AEM MCP-servrar är tillgängliga under `https://mcp.adobeaemcloud.com/adobe/mcp/`. Mer information finns i [Använda MCP med AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service).
+Alla AEM MCP-servrar är tillgängliga under `https://mcp.adobeaemcloud.com/adobe/mcp/`. Mer information finns i [Använda MCP med AEM as a Cloud Service](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service).
 
 - **Innehåll** (`/content`) - Fullständig åtkomst för att skapa, läsa, uppdatera och ta bort sidor, fragment och resurser.
 - **Innehåll (skrivskyddat)** (`/content-readonly`) - skrivskyddat för att visa och hämta sidor, fragment och resurser (inga ändringar).
@@ -76,7 +76,7 @@ AEM MCP-servrar är utformade för att fungera med en definierad uppsättning MC
 - [OpenAI ChatGPT](https://chatgpt.com/)
 - [Microsoft Copilot Studio](https://www.microsoft.com/en-us/microsoft-365-copilot/microsoft-copilot-studio)
 
-Mer information finns i [Installationsöversikt](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service#setup-overview).
+Mer information finns i [Installationsöversikt](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service#setup-overview).
 
 ## Användningsexempel
 
