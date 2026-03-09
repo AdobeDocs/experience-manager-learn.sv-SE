@@ -22,7 +22,7 @@ Använd **Content MCP-servern** från en AI-driven IDE som [Cursor IDE](https://
 
 I den här självstudiekursen _granskar_ Adventure-innehållets fragmentinformation, _uppdaterar_ ett fragment (till exempel priset på ett äventyr) och _verifierar_ ändringen i [WKND Adventures React-appen](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app) från din utvecklingsmiljö mot en _lägre AEM-miljö_ (RDE eller Development) utan att lämna MCP-flödet.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480895/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480899/?captions=swe&learn=on&enablevpops)
 
 ## Ökning
 
