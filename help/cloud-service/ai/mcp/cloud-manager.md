@@ -24,4 +24,4 @@ Med Cloud Manager MCP Server kan AEM-utvecklare köra pipelines, felsöka och ko
 >
 > Cloud Manager MCP Server är nu i betaversion. Om du vill begära åtkomst skickar du ett e-postmeddelande till [aemcs-mcp-feedback@adobe.com](mailto:aemcs-mcp-feedback@adobe.com) med en beskrivning av ditt användningsfall.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480340/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480346/?captions=swe&learn=on&enablevpops)
