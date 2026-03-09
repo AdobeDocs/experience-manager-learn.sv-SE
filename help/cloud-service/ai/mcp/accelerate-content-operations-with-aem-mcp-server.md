@@ -8,19 +8,21 @@ doc-type: tutorial
 duration: null
 last-substantial-update: 2026-03-04T00:00:00Z
 jira: KT-20474
-source-git-commit: c5f1c7f57181b1e9de6dd91aa2428f2fe1a04893
+exl-id: 843209cb-2f31-466c-b5b1-a9fb26965bc0
+source-git-commit: 6a0eb6e8f5fa9d7152f46d6b8054dc89ff656507
 workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 0%
 
 ---
 
-
 # Snabba upp AEM Content Operations med Content MCP Server
 
 Använd **Content MCP-servern** från en AI-driven IDE som [Cursor IDE](https://www.cursor.com/) för att arbeta med AEM-innehåll på naturligt språk, ingen API-kod på låg nivå eller gränssnittsnavigering.
 
 I den här självstudiekursen _granskar_ Adventure-innehållets fragmentinformation, _uppdaterar_ ett fragment (till exempel priset på ett äventyr) och _verifierar_ ändringen i [WKND Adventures React-appen](https://github.com/adobe/aem-guides-wknd-graphql/tree/main/react-app) från din utvecklingsmiljö mot en _lägre AEM-miljö_ (RDE eller Development) utan att lämna MCP-flödet.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3480895/?learn=on&enablevpops)
 
 ## Ökning
 
@@ -92,7 +94,7 @@ Konfigurera sedan [WKND Adventures React App](https://github.com/adobe/aem-guide
    $ git clone git@github.com:adobe/aem-guides-wknd.git
    ```
 
-1. Distribuera projektet [WKND Site](https://github.com/adobe/aem-guides-wknd) till din RDE. Detaljerade steg finns i [Så här använder du snabbutvecklingsmiljön](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-aem-artifacts-using-the-aem-rde-plugin).
+1. Distribuera projektet [WKND Site](https://github.com/adobe/aem-guides-wknd) till din RDE. Detaljerade steg finns i [Så här använder du snabbutvecklingsmiljön](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-aem-artifacts-using-the-aem-rde-plugin).
 
 1. Öppna mappen `react-app` i din utvecklingsmiljö.
 
