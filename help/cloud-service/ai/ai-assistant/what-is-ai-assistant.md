@@ -20,4 +20,4 @@ ht-degree: 0%
 
 AI Assistant snabbar upp AEM-uppgifter, ger snabba svar, ger guider för funktionsanvändning, felsöker problem och skapar supportärenden - allt från Experience Manager gränssnitt. Det hjälper team att leverera innehåll snabbare, minska antalet dokumentationssökningar och förbättra effektiviteten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480859/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480874/?captions=swe&learn=on&enablevpops)

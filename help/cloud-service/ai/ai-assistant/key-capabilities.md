@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Läs om hur AI Assistant snabbar upp AEM-arbetsflöden genom att ge direktvägledning, kodfragment och felsökningssteg. Detta minskar behovet av support och hjälper team att leverera innehåll snabbare och med högre kvalitet.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480858/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480863/?captions=swe&learn=on&enablevpops)
