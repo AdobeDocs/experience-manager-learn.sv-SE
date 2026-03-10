@@ -8,9 +8,10 @@ doc-type: Article
 duration: 0
 last-substantial-update: 2026-03-04T00:00:00Z
 jira: KT-20473
-source-git-commit: c5f1c7f57181b1e9de6dd91aa2428f2fe1a04893
+exl-id: 7f2e4e37-6440-423e-9ba9-9228fe03600b
+source-git-commit: ac44a73d2b63dba5292393730c712aec68ddea6c
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '877'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ Lär dig hur du använder AEM _Model Context Protocol (MCP)-servrar_ från en AI
 
 ## Lista över AEM MCP-servrar
 
-Alla AEM MCP-servrar är tillgängliga under `https://mcp.adobeaemcloud.com/adobe/mcp/`. Mer information finns i [Använda MCP med AEM as a Cloud Service](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service).
+Alla AEM MCP-servrar är tillgängliga under `https://mcp.adobeaemcloud.com/adobe/mcp/`. Mer information finns i [Använda MCP med AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service).
 
 - **Innehåll** (`/content`) - Fullständig åtkomst för att skapa, läsa, uppdatera och ta bort sidor, fragment och resurser.
 - **Innehåll (skrivskyddat)** (`/content-readonly`) - skrivskyddat för att visa och hämta sidor, fragment och resurser (inga ändringar).
@@ -69,14 +70,8 @@ Kort och gott: **Host** är ditt IDE- eller chattbaserade program, **Client** ä
 
 ## Inställningar
 
-AEM MCP-servrar är utformade för att fungera med en definierad uppsättning MCP-kompatibla program. Följande program stöds officiellt:
-
-- [Anthropic Claude](https://claude.com/product/overview)
-- [Markör](https://www.cursor.com/)
-- [OpenAI ChatGPT](https://chatgpt.com/)
-- [Microsoft Copilot Studio](https://www.microsoft.com/en-us/microsoft-365-copilot/microsoft-copilot-studio)
-
-Mer information finns i [Installationsöversikt](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service#setup-overview).
+AEM MCP-servrar är utformade för att fungera med en definierad uppsättning MCP-kompatibla program.
+Mer information finns i [MCP-program som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications) om du vill konfigurera AEM MCP-servrar i en IDE- eller chattbaserad applikation.
 
 ## Användningsexempel
 
