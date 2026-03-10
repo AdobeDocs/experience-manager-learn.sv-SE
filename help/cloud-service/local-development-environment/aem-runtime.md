@@ -24,7 +24,7 @@ ht-degree: 0%
 >id="aemcloud_localdev_aemruntime"
 >title="Lokal AEM Runtime"
 >abstract="Adobe Experience Manager (AEM) kan köras lokalt med AEM as a Cloud Service SDK QuickStart Jar. Detta gör att utvecklare kan distribuera till och testa anpassad kod, konfiguration och innehåll innan de implementerar det i källkontrollen och distribuerar det i en AEM as a Cloud Service-miljö."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html" text="AEM as a Cloud Service SDK"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-as-a-cloud-service-sdk.html?lang=sv-SE" text="AEM as a Cloud Service SDK"
 >additional-url="https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html" text="Hämta AEM as a Cloud Service SDK"
 
 Adobe Experience Manager (AEM) kan köras lokalt med AEM as a Cloud Service SDK QuickStart Jar. Detta gör att utvecklare kan distribuera till och testa anpassad kod, konfiguration och innehåll innan de implementerar det i källkontrollen och distribuerar det i en AEM as a Cloud Service-miljö.
@@ -176,7 +176,7 @@ $ java -jar aem-publish-p4503.jar
 
 ## Simulera innehållsdistribution {#content-distribution}
 
-I en äkta Cloud Service-miljö distribueras innehåll från författartjänsten till publiceringstjänsten med hjälp av [Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html) och Adobe Pipeline. [Adobe Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=en#content-distribution) är en isolerad mikrotjänst som bara är tillgänglig i molnmiljön.
+I en äkta Cloud Service-miljö distribueras innehåll från författartjänsten till publiceringstjänsten med hjälp av [Sling Content Distribution](https://sling.apache.org/documentation/bundles/content-distribution.html) och Adobe Pipeline. [Adobe Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/core-concepts/architecture.html?lang=sv-SE#content-distribution) är en isolerad mikrotjänst som bara är tillgänglig i molnmiljön.
 
 Under utvecklingen kan det vara önskvärt att simulera distributionen av innehåll med hjälp av den lokala redigerings- och publiceringstjänsten. Detta kan uppnås genom att aktivera de äldre replikeringsagenterna.
 
@@ -211,7 +211,7 @@ Under utvecklingen kan det vara önskvärt att simulera distributionen av inneh�
 
 ## Konfigurera lokala AEM-tjänster i förhandsversionsläge
 
-Den lokala AEM-miljön kan startas i [prerelease-läge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html), vilket gör att en utvecklare kan bygga på funktionerna i AEM as a Cloud Service nästa release. Förhandsversionen aktiveras genom att argumentet `-r prerelease` skickas från den lokala AEM-körningens första start. Detta kan användas med både AEM Author och AEM Publish.
+Den lokala AEM-miljön kan startas i [prerelease-läge](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/prerelease.html?lang=sv-SE), vilket gör att en utvecklare kan bygga på funktionerna i AEM as a Cloud Service nästa release. Förhandsversionen aktiveras genom att argumentet `-r prerelease` skickas från den lokala AEM-körningens första start. Detta kan användas med både AEM Author och AEM Publish.
 
 
 >[!BEGINTABS]
@@ -280,7 +280,7 @@ Om du vill stoppa en lokal AEM-miljö öppnar du kommandoradsfönstret som anvä
 
 ## Valfria lokala konfigurationsuppgifter för AEM runtime
 
-+ __Systemspecifika konfigurationsmiljövariabler och hemliga variabler__ är [särskilt inställda för AEM lokala körningsmiljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html#local-development) i stället för att hantera dem med AIO CLI.
++ __Systemspecifika konfigurationsmiljövariabler och hemliga variabler__ är [särskilt inställda för AEM lokala körningsmiljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/configuring-osgi.html?lang=sv-SE#local-development) i stället för att hantera dem med AIO CLI.
 
 ## När QuickStart Jar ska uppdateras
 
@@ -404,4 +404,4 @@ $ java --version
 + [Hämta AEM SDK](https://experience.adobe.com/#/downloads)
 + [Adobe Cloud Manager](https://my.cloudmanager.adobe.com/)
 + [Hämta Docker](https://www.docker.com/)
-+ [Experience Manager Dispatcher Documentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html)
++ [Experience Manager Dispatcher Documentation](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=sv-SE)
