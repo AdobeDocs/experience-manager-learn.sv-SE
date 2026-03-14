@@ -1,6 +1,6 @@
 ---
-title: SAML 2.0 i AEM as a Cloud Service
-description: Lär dig hur du konfigurerar SAML 2.0-autentisering för AEM as a Cloud Service Publish-tjänsten.
+title: SAML 2.0 på AEM som molntjänst
+description: Lär dig konfigurera SAML 2.0-autentisering på AEM som en Publish-molntjänst.
 version: Experience Manager as a Cloud Service
 feature: Security
 topic: Development, Security
@@ -8,21 +8,19 @@ role: Developer
 level: Intermediate
 jira: KT-9351
 thumbnail: 343040.jpeg
-last-substantial-update: 2024-05-15T00:00:00Z
+last-substantial-update: 2025-03-11T00:00:00Z
 exl-id: 461dcdda-8797-4a37-a0c7-efa7b3f1e23e
 duration: 2200
-source-git-commit: 4a8d97d8d65f0ff9b256cb233db5dd6a70fd2a8a
+source-git-commit: 34f098de6bd15875e5534250b28c08bdb62e74fa
 workflow-type: tm+mt
-source-wordcount: '5215'
+source-wordcount: '4423'
 ht-degree: 0%
 
 ---
 
-# SAML 2.0-autentisering{#saml-2-0-authentication}
+# SAML 2.0-autentisering
 
 Lär dig hur du konfigurerar och autentiserar slutanvändare (inte författare till AEM) till en SAML 2.0-kompatibel IDP som du väljer.
-
-## Vilken SAML för AEM as a Cloud Service?
 
 SAML 2.0-integrering med AEM Publish (eller Preview) gör att slutanvändare av en AEM-baserad webbupplevelse kan autentisera till en icke-Adobe IDP (Identity Provider) och få tillgång till AEM som namngiven, behörig användare.
 
@@ -56,7 +54,7 @@ Det typiska flödet av en AEM Publish SAML-integration är följande:
 
 ## Genomgång av konfiguration
 
->[!VIDEO](https://video.tv.adobe.com/v/3455337?captions=swe&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/343040?quality=12&learn=on)
 
 I den här videon går vi igenom hur man konfigurerar SAML 2.0-integrering med AEM as a Cloud Service Publish Service och använder Okta som IDP.
 
@@ -64,14 +62,19 @@ I den här videon går vi igenom hur man konfigurerar SAML 2.0-integrering med A
 
 Följande krävs när du konfigurerar SAML 2.0-autentisering:
 
-+ Tillgång till Cloud Manager för Distributionshanteraren
++ Distributionshanterarens åtkomst till Cloud Manager
 + AEM Administrator-åtkomst till AEM as a Cloud Service-miljön
 + Administratörsåtkomst till IDP:n
 + Tillgång till ett offentligt/privat nyckelpar som används för att kryptera SAML-nyttolaster
-+ AEM Sites-sidor (eller sidträd), publicerade till AEM Publish och [skyddade av stängda användargrupper (CUG)](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
++ AEM Sites-sidor (eller sidträd), publicerade till AEM Publish och [skyddade av stängda användargrupper (CUG)](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/sites-console/page-properties#permissions)
 
-SAML 2.0 stöds endast för att autentisera användning av AEM Publish eller Preview. Om du vill hantera autentiseringen av AEM Author med hjälp av och IDP [integrerar du IDP med Adobe IMS](https://helpx.adobe.com/se/enterprise/using/set-up-identity.html).
+SAML 2.0 stöds endast för att autentisera användning av AEM Publish eller Preview. Om du vill hantera autentiseringen av AEM Author med hjälp av och IDP [integrerar du IDP med Adobe IMS](https://helpx.adobe.com/enterprise/using/set-up-identity.html).
 
+### Stöd för tjänsten AEM as a Cloud Service Preview
+
+SAML 2.0 stöds i AEM as a Cloud Service, inklusive AEM Preview. SAML-konfigurationer i AEM förlitar sig dock på OSGi-konfigurationer, och både AEM Preview och AEM Publish delar samma OSGi-körningsupplösning (`config.publish`). Därför kan du inte skapa separata SAML-konfigurationsfiler för Förhandsgranska och Publicera.
+
+Använd i stället [miljöspecifika konfigurationsvärden](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#environment-specific-configuration-values) i dina OSGi-konfigurationer och [ange lämpliga variabelvärden](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi#cloud-manager-api-format-for-setting-properties) för förhandsgransknings- och publiceringsmiljöerna.
 
 ## Installera det offentliga IDP-certifikatet på AEM
 
@@ -105,12 +108,12 @@ IDP:s offentliga certifikat läggs till i AEM Global Trust Store och används f�
 
 1. Logga in på AEM Author som AEM Administrator.
 1. Navigera till __Verktyg > Säkerhet > Lita på butik__.
-1. Skapa eller öppna Global Trust Store. Om du skapar en Global Trust Store ska du spara lösenordet på ett säkert ställe.
-1. Expandera __Lägg till certifikat från CER-fil__.
-1. Välj __Välj certifikatfil__ och överför certifikatfilen från IDP:n.
-1. Lämna __mappningscertifikatet till användaren__ tomt.
+1. Skapa eller öppna Global Trust Store. Om du skapar ett globalt förtroendearkiv ska du förvara lösenordet på ett säkert ställe.
+1. Expandera __Lägg till certifikat från CER-filen__.
+1. Välj __Välj certifikatfil__ och överför certifikatfilen som tillhandahålls av IdP.
+1. Lämna __Mappa certifikat till användare__ tomt.
 1. Välj __Skicka__.
-1. Det nya certifikatet visas ovanför avsnittet __Lägg till certifikat från CRT-fil__.
+1. Det nyligen tillagda certifikatet visas ovanför avsnittet __Lägg till certifikat från CRT-fil__.
 1. Observera __alias__, eftersom det här värdet används i [SAML 2.0 Authentication Handler OSGi-konfigurationen](#saml-2-0-authentication-handler-osgi-configuration).
 1. Välj __Spara och stäng__.
 
@@ -118,7 +121,7 @@ Global Trust Store har konfigurerats med IDP:s offentliga certifikat på AEM Aut
 
 ![Replikera Global Trust Store till AEM Publish](./assets/saml-2-0/global-trust-store-replicate.png)
 
-1. Navigera till __Verktyg > Distribution > Paket__.
+1. Gå till __Verktyg > Distribution > Paket__.
 1. Skapa ett paket
    + Paketnamn: `Global Trust Store`
    + Version: `1.0.0`
@@ -131,7 +134,7 @@ Global Trust Store har konfigurerats med IDP:s offentliga certifikat på AEM Aut
 
 ## Skapa nyckelbehållare för autentiseringstjänster{#authentication-service-keystore}
 
-_Det krävs att du skapar en nyckelbehållare för autentiseringstjänsten när [&#x200B; SAML 2.0-autentiseringshanterarens OSGi-konfigurationsegenskap `handleLogout` är inställd på `true`](#saml-20-authenticationsaml-2-0-authentication) eller när [AuthnRequest-signering/SAML-försäkran &#x200B;](#install-aem-public-private-key-pair) krävs_
+_Det krävs att du skapar en nyckelbehållare för autentiseringstjänsten när [ SAML 2.0-autentiseringshanterarens OSGi-konfigurationsegenskap `handleLogout` är inställd på `true`](#saml-20-authenticationsaml-2-0-authentication) eller när [AuthnRequest-signering/SAML-försäkran ](#install-aem-public-private-key-pair) krävs_
 
 1. Logga in på AEM Author som AEM Administrator för att ladda upp den privata nyckeln.
 1. Navigera till __Verktyg > Dokumentskydd > Användare__ och välj __authentication-service__ användare. Välj sedan __Egenskaper__ i det övre åtgärdsfältet.
@@ -183,12 +186,12 @@ All HTTP-kommunikation mellan IDP och AEM Publish ska ske via HTTPS och därmed 
 
 ![SAML 2.0 - SP SAML-verifieringskryptering](./assets/saml-2-0/sp-samlrequest-encryption-diagram.png)
 
-1. Användaren autentiserar mot IDP.
-1. IDP genererar en SAML-försäkran som innehåller användarens data och signerar den med IDP:s privata certifikat.
-1. IDP krypterar sedan SAML-försäkran med AEM publika nyckel, som kräver att AEM privata nyckel dekrypteras.
-1. Den krypterade SAML-kontrollen skickas via användarens webbläsare till AEM Publish.
-1. AEM Publish tar emot SAML-försäkran och dekrypterar den med AEM privata nyckel.
-1. IDP uppmanar användaren att autentisera.
+1. Användaren autentiserar sig mot IdP.
+1. IDP genererar en SAML-försäkran som innehåller användarens data och signerar den med IdP:ns privata certifikat.
+1. IDP krypterar sedan SAML-försäkran med en offentlig AEM-nyckel, vilket kräver att den privata AEM-nyckeln dekrypterar.
+1. Den krypterade SAML-försäkran skickas via användarens webbläsare till AEM Publish.
+1. AEM Publish tar emot SAML-försäkran och dekrypterar den med hjälp av den privata nyckeln i AEM.
+1. IdP uppmanar användaren att autentisera.
 
 +++
 
@@ -210,7 +213,7 @@ Både AuthnRequest-signering och SAML-verifieringskryptering är valfria, men b�
    $ openssl pkcs8 -topk8 -inform der -nocrypt -in aem-private.der -outform der -out aem-private-pkcs8.der
    ```
 
-1. Överför den offentliga nyckeln till IDP.
+1. Överför den offentliga nyckeln till IdP.
    + Med metoden `openssl` ovan är den offentliga nyckeln filen `aem-public.crt`.
 1. Logga in på AEM Author som AEM Administrator för att ladda upp den privata nyckeln.
 1. Navigera till __Verktyg > Säkerhet > Lita på butik__ och välj __authentication-service__ användare. Välj sedan __Egenskaper__ i det övre åtgärdsfältet.
@@ -257,8 +260,8 @@ Konfigurationen är en OSGi-fabrikskonfiguration, vilket innebär att en enda AE
 | Banor | `path` | ✔ | Strängarray | `/` | AEM-sökvägar som den här autentiseringshanteraren används för. |
 | IDP-URL | `idpUrl` | ✔ | Sträng |                           | IDP-URL som SAML-autentiseringsbegäran skickas till. |
 | ID-certifikatalias | `idpCertAlias` | ✔ | Sträng |                           | Aliaset för IDP-certifikatet som finns i AEM Global Trust Store |
-| IDP HTTP-omdirigering | `idpHttpRedirect` | ✘ | Boolean | `false` | Anger om en HTTP-omdirigering till IDP-URL:en används i stället för att en AuthnRequest skickas. Ange till `true` för IDP-initierad autentisering. |
-| IDP-identifierare | `idpIdentifier` | ✘ | Sträng |                           | Unikt ID för att säkerställa att AEM användare och grupper är unika. Om den är tom används `serviceProviderEntityId` i stället. |
+| IDP HTTP-omdirigering | `idpHttpRedirect` | ✘ | Boolesk | `false` | Anger om en HTTP-omdirigering till IdP-URL:en i stället för att skicka en AuthnRequest. Ställ in som `true` för IdP-initierad autentisering. |
+| IdP-identifierare | `idpIdentifier` | ✘ | Sträng |                           | Unikt IdP-id som säkerställer att AEM är unikt för användare och grupper. Om den är tom används `serviceProviderEntityId` i stället. |
 | URL för konsumenttjänst för försäkran | `assertionConsumerServiceURL` | ✘ | Sträng |                           | URL-attributet `AssertionConsumerServiceURL` i AuthnRequest som anger var `<Response>`-meddelandet måste skickas till AEM. |
 | SP-enhets-ID | `serviceProviderEntityId` | ✔ | Sträng |                           | Identifierar unikt AEM för IDP, vanligtvis AEM värdnamn. |
 | SP-kryptering | `useEncryption` | ✘ | Boolean | `true` | Anger om IDP krypterar SAML-försäkringar. Kräver att `spPrivateKeyAlias` och `keyStorePassword` anges. |
@@ -334,7 +337,7 @@ OSGi-konfigurationer per miljö (`config.publish.dev`, `config.publish.stage` oc
 
 ### Använd kryptering
 
-När [krypterar AuthnRequest och SAML-försäkran](#encrypting-the-authnrequest-and-saml-assertion) krävs följande egenskaper: `useEncryption`, `spPrivateKeyAlias` och `keyStorePassword`. `keyStorePassword` innehåller ett lösenord och därför får värdet inte lagras i OSGi-konfigurationsfilen utan injiceras med [hemliga konfigurationsvärden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#secret-configuration-values)
+När [krypterar AuthnRequest och SAML-försäkran](#encrypting-the-authnrequest-and-saml-assertion) krävs följande egenskaper: `useEncryption`, `spPrivateKeyAlias` och `keyStorePassword`. `keyStorePassword` innehåller ett lösenord och därför får värdet inte lagras i OSGi-konfigurationsfilen utan injiceras med [hemliga konfigurationsvärden](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values)
 
 +++Du kan även uppdatera OSGi-konfigurationen så att kryptering används
 
@@ -367,7 +370,7 @@ När [krypterar AuthnRequest och SAML-försäkran](#encrypting-the-authnrequest-
 
 + `useEncryption` inställd på `true`
 + `spPrivateKeyAlias` innehåller nyckelbehållarpostens alias för den privata nyckel som används av SAML-integreringen.
-+ `keyStorePassword` innehåller en [&#x200B; OSGi-hemlig konfigurationsvariabel &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html?lang=sv-SE#secret-configuration-values) som innehåller lösenordet för användarens nyckelbehållare `authentication-service`.
++ `keyStorePassword` innehåller en [ OSGi-hemlig konfigurationsvariabel ](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/configuring-osgi.html#secret-configuration-values) som innehåller lösenordet för användarens nyckelbehållare `authentication-service`.
 
 +++
 
@@ -453,7 +456,7 @@ Dynamiskt gruppmedlemskap är en funktion i [Apache Jackrabbit Oak](https://jack
 ### Aktivera dynamiskt gruppmedlemskap för SAML-användare i nya miljöer
 
 För att avsevärt förbättra prestandan vid grupputvärdering i nya AEM as a Cloud Service-miljöer rekommenderas aktivering av funktionen för dynamiskt gruppmedlemskap i nya miljöer.
-Detta är också ett nödvändigt steg när datasynkronisering aktiveras. Mer information [här](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier).
+Detta är också ett nödvändigt steg när datasynkronisering aktiveras. Mer information [här](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/sites/authoring/personalization/user-and-group-sync-for-publish-tier).
 Det gör du genom att lägga till följande egenskap i OSGI-konfigurationsfilen:
 
 `/apps/example/osgiconfig/config.publish/com.adobe.granite.auth.saml.SamlAuthenticationHandler~example.cfg.json`
@@ -563,299 +566,11 @@ Gruppmedlemskapet för externa grupper lagras i användarprofilen i egenskapen `
 
 Om du vill migrera flera SAML-konfigurationer måste du skapa flera OSGi-fabrikskonfigurationer för `com.adobe.granite.auth.saml.migration.SamlDynamicGroupMembershipMigration`, där var och en anger en `idpIdentifier` som ska migreras.
 
-## Anpassade SAML-kopplingar för avancerad användning
+## Anpassade SAML-inloggningskopplingar
 
-Om IDP inte kan skicka användarprofildata och användargruppsmedlemskap i SAML-försäkran, eller om data måste omvandlas innan synkronisering till AEM, kan anpassade SAML-kopplingar implementeras för att utöka SAML-autentiseringsprocessen. SAML-kopplingar gör det möjligt att anpassa gruppmedlemskapstilldelning, ändra användarprofilattribut och lägga till anpassad affärslogik under autentiseringsflödet.
+För avancerade fall stöder AEM utveckling av anpassade SAML-inloggningskopplingar, som är OSGi-tjänster som implementerar gränssnittet `com.adobe.granite.auth.saml.SamlLoginHook`. Dessa kopplingar körs under SAML-autentiseringsprocessen och kan användas för att implementera anpassad logik, som ytterligare användaretablering eller anpassad loggning.
 
->[!NOTE]
->Anpassade SAML-kopplingar stöds på **AEM as a Cloud Service** och **AEM LTS**. Den här funktionen är inte tillgänglig i äldre versioner av AEM.
-
-### När anpassade SAML-kopplingar ska användas
-
-Anpassade SAML-kopplingar är användbara när det är nödvändigt att:
-
-+ Tilldela gruppmedlemskap dynamiskt baserat på anpassad affärslogik utöver vad som anges i SAML-försäkran
-+ Omvandla eller förbättra användarprofildata innan de synkroniseras med AEM
-+ Mappa komplexa SAML-attributstrukturer till AEM användaregenskaper
-+ Implementera anpassade auktoriseringsregler eller villkorliga grupptilldelningar
-+ Lägg till anpassad loggning eller granskning under SAML-autentisering
-+ Integrera med externa system under autentiseringsprocessen
-
-### Förstå SamlHook-gränssnittet
-
-Gränssnittet `com.adobe.granite.auth.saml.spi.SamlHook` innehåller två krokmetoder som anropas i olika steg i SAML-autentiseringsprocessen:
-
-#### 1. postSamlValidationProcess
-
-Den här metoden anropas **efter** att SAML-svaret har validerats, men **före** startar användarsynkroniseringsprocessen. Det här är det idealiska stället att ändra SAML-kontrolldata, till exempel lägga till eller omforma attribut.
-
-```java
-public void postSamlValidationProcess(
-    HttpServletRequest request, 
-    Assertion assertion, 
-    Message samlResponse)
-```
-
-**Användningsexempel:**
-+ Lägg till ytterligare gruppmedlemskap i försäkran
-+ Omforma attributvärden innan de synkroniseras
-+ Förbättra kontrollen med data från externa källor
-+ Validera anpassade affärsregler
-
-#### 2. postSyncUserProcess
-
-Den här metoden anropas **när** användarsynkroniseringsprocessen har slutförts. Den här kroken kan användas för att utföra ytterligare åtgärder efter att AEM-användaren har skapats eller uppdaterats.
-
-```java
-public void postSyncUserProcess(
-    HttpServletRequest request, 
-    HttpServletResponse response, 
-    Assertion assertion,
-    AuthenticationInfo authenticationInfo, 
-    String samlResponse)
-```
-
-**Användningsexempel:**
-+ Uppdatera ytterligare egenskaper för användarprofiler som inte omfattas av standardsynkronisering
-+ Skapa eller uppdatera anpassade användarrelaterade resurser i AEM
-+ Utlösa arbetsflöden eller meddelanden efter användarautentisering
-+ Logga anpassade autentiseringshändelser
-
-**Viktigt!** För att ändra användaregenskaper i databasen krävs följande för implementeringen av kroken:
-+ En `SlingRepository`-referens injicerad via `@Reference`
-+ En konfigurerad [tjänstanvändare](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) med lämplig behörighet (konfigurerad i tillägget Apache Sling Service User Mapper Service)
-+ Korrekt sessionshantering med try-catch-finally-block
-
-### Implementera en anpassad SAML-krok
-
-I följande steg beskrivs hur du skapar och distribuerar en anpassad SAML-krok:
-
-#### Steg 1: Skapa implementeringen av SAML-kroken
-
-Skapa en ny Java-klass i AEM-projektet som implementerar gränssnittet `com.adobe.granite.auth.saml.spi.SamlHook`:
-
-```java
-package com.mycompany.aem.saml;
-
-import com.adobe.granite.auth.saml.spi.Assertion;
-import com.adobe.granite.auth.saml.spi.Attribute;
-import com.adobe.granite.auth.saml.spi.Message;
-import com.adobe.granite.auth.saml.spi.SamlHook;
-import org.apache.jackrabbit.api.JackrabbitSession;
-import org.apache.jackrabbit.api.security.user.Authorizable;
-import org.apache.jackrabbit.api.security.user.UserManager;
-import org.apache.sling.auth.core.spi.AuthenticationInfo;
-import org.apache.sling.jcr.api.SlingRepository;
-import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
-import org.osgi.service.component.annotations.ReferenceCardinality;
-import org.osgi.service.metatype.annotations.AttributeDefinition;
-import org.osgi.service.metatype.annotations.Designate;
-import org.osgi.service.metatype.annotations.ObjectClassDefinition;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import javax.annotation.Nonnull;
-import javax.jcr.RepositoryException;
-import javax.jcr.Session;
-import javax.jcr.ValueFactory;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-@Component
-@Designate(ocd = SampleImpl.Configuration.class, factory = true)
-public class SampleImpl implements SamlHook {
-    @ObjectClassDefinition(name = "Saml Sample Authentication Handler Hook Configuration")
-    @interface Configuration {
-        @AttributeDefinition(
-                name = "idpIdentifier",
-                description = "Identifier of SAML Idp. Match the idpIdentifier property's value configured in the SAML Authentication Handler OSGi factory configuration (com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>) this SAML hook will hook into"
-        )
-        String idpIdentifier();
-
-    }
-
-    private static final String SAMPLE_SERVICE_NAME = "sample-saml-service";
-    private static final String CUSTOM_LOGIN_COUNT = "customLoginCount";
-
-    private final Logger log = LoggerFactory.getLogger(getClass());
-
-    private SlingRepository repository;
-
-    @SuppressWarnings("UnusedDeclaration")
-    @Reference(name = "repository", cardinality = ReferenceCardinality.MANDATORY)
-    public void bindRepository(SlingRepository repository) {
-        this.repository = repository;
-    }
-
-    /**
-     * This method is called after the user sync process is completed.
-     * At this point, the user has already been synchronized in OAK (created or updated).
-     * Example: Track login count by adding custom attributes to the user in the repository
-     *
-     * @param request
-     * @param response
-     * @param assertion
-     * @param authenticationInfo
-     * @param samlResponse
-     */
-    @Override
-    public void postSyncUserProcess(HttpServletRequest request, HttpServletResponse response, Assertion assertion,
-                                    AuthenticationInfo authenticationInfo, String samlResponse) {
-        log.info("Custom Audit Log: user {} successfully logged in", authenticationInfo.getUser());
-
-        // This code executes AFTER the user has been synchronized in OAK
-        // The user object already exists in the repository at this point
-        Session serviceSession = null;
-        try {
-            // Get a service session - requires "sample-saml-service" to be configured as system user
-            // Configure in: "Apache Sling Service User Mapper Service Amendment"
-            serviceSession = repository.loginService(SAMPLE_SERVICE_NAME, null);
-
-            // Get the UserManager to work with users and groups
-            UserManager userManager = ((JackrabbitSession) serviceSession).getUserManager();
-
-            // Get the authorizable (user) that just logged in
-            Authorizable user = userManager.getAuthorizable(authenticationInfo.getUser());
-
-            if (user != null && !user.isGroup()) {
-                ValueFactory valueFactory = serviceSession.getValueFactory();
-
-                // Increment login count
-                long loginCount = 1;
-                if (user.hasProperty(CUSTOM_LOGIN_COUNT)) {
-                    loginCount = user.getProperty(CUSTOM_LOGIN_COUNT)[0].getLong() + 1;
-                }
-                user.setProperty(CUSTOM_LOGIN_COUNT, valueFactory.createValue(loginCount));
-                log.debug("Set {} property to {} for user {}", CUSTOM_LOGIN_COUNT, loginCount, user.getID());
-
-                // Save all changes to the repository
-                if (serviceSession.hasPendingChanges()) {
-                    serviceSession.save();
-                    log.debug("Successfully saved custom attributes for user {}", user.getID());
-                }
-            } else {
-                log.warn("User {} not found or is a group", authenticationInfo.getUser());
-            }
-
-        } catch (RepositoryException e) {
-            log.error("Error adding custom attributes to user repository for user: {}",
-                     authenticationInfo.getUser(), e);
-        } finally {
-            if (serviceSession != null) {
-                serviceSession.logout();
-            }
-        }
-    }
-
-    /**
-     * This method is called after the SAML response is validated but before the user sync process starts.
-     * We can modify the assertion here to add custom attributes.
-     *
-     * @param request
-     * @param assertion
-     * @param samlResponse
-     */
-    @Override
-    public void postSamlValidationProcess(@Nonnull HttpServletRequest request, @Nonnull Assertion assertion, @Nonnull Message samlResponse) {
-        // Add the attribute "memberOf" with value "sample-group" to the assertion
-        // In this example "memberOf" is a multi-valued attribute that contains the groups from the Saml Idp
-        log.debug("Inside postSamlValidationProcess");
-        Attribute groupsAttr = assertion.getAttributes().get("groups");
-        if (groupsAttr != null) {
-            groupsAttr.addAttributeValue("sample-group-from-hook");
-        } else {
-            groupsAttr = new Attribute();
-            groupsAttr.setName("groups");
-            groupsAttr.addAttributeValue("sample-group-from-hook");
-            assertion.getAttributes().put("groups", groupsAttr);
-        }
-    }
-
-}
-```
-
-#### Steg 2: Konfigurera SAML-kroken
-
-SAML-kroken använder OSGi-konfiguration för att ange vilken IDP den ska gälla för. Skapa en OSGi-konfigurationsfil i projektet på:
-
-`/ui.config/src/main/content/jcr_root/wknd-examples/osgiconfig/config.publish/com.mycompany.aem.saml.CustomSamlHook~okta.cfg.json`
-
-```json
-{
-  "idpIdentifier": "$[env:SAML_IDP_ID;default=http://www.okta.com/exk4z55r44Jz9C6am5d7]",
-  "service.ranking": 100
-}
-```
-
-`idpIdentifier` måste matcha det `idpIdentifier`-värde som konfigurerats i motsvarande SAML Authentication Handler OSGi-fabrikskonfiguration (PID: `com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>.cfg.json`). Denna matchning är viktig: SAML-kroken anropas bara för SAML-autentiserings-hanterarinstansen som har samma `idpIdentifier`-värde. SAML Authentication Handler är en fabrikskonfiguration, vilket innebär att du kan ha flera instanser (t.ex. `com.adobe.granite.auth.saml.SamlAuthenticationHandler~okta.cfg.json`, `com.adobe.granite.auth.saml.SamlAuthenticationHandler~azure.cfg.json`) och varje krok är kopplad till en specifik hanterare via `idpIdentifier`. Egenskapen `service.ranking` styr körningsordningen när flera kopplingar är konfigurerade (högre värden körs först).
-
-#### Steg 3: Lägg till Maven-beroenden
-
-Lägg till det SAML SPI-beroende som krävs i AEM Maven Core-projektets `pom.xml`.
-
-**För AEM as a Cloud Service-projekt** använder du AEM SDK API-beroendet som innehåller SAML-gränssnitten:
-
-```xml
-<dependency>
-    <groupId>com.adobe.aem</groupId>
-    <artifactId>aem-sdk-api</artifactId>
-    <version>${aem.sdk.api}</version>
-    <scope>provided</scope>
-</dependency>
-```
-
-Artefakten `aem-sdk-api` innehåller alla nödvändiga Adobe Granite SAML-gränssnitt, inklusive `com.adobe.granite.auth.saml.spi.SamlHook`.
-
-#### Steg 4: Konfigurera tjänstanvändare (om databasen ändras)
-
-Om SAML-kroken behöver ändra användaregenskaper i databasen (som visas i exemplet `postSyncUserProcess`) måste en [tjänstanvändare](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) konfigureras:
-
-1. Skapa en tjänstanvändarmappning i projektet på `/ui.config/src/main/content/jcr_root/apps/myproject/osgiconfig/config/org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~saml.cfg.json`:
-
-```json
-{
-  "user.mapping": [
-    "com.mycompany.aem.core:sample-saml-service=saml-hook-service"
-  ]
-}
-```
-
-1. Skapa ett poinit-skript för att definiera tjänstanvändaren och behörigheterna på `/ui.config/src/main/content/jcr_root/apps/myproject/osgiconfig/config/org.apache.sling.jcr.repoinit.RepositoryInitializer~saml.cfg.json`:
-
-```
-create service user saml-hook-service with path system/saml
-
-set ACL for saml-hook-service
-    allow jcr:read,rep:write,rep:userManagement on /home/users
-end
-```
-
-Detta ger tjänstanvändaren behörighet att läsa och ändra användaregenskaper i databasen.
-
-#### Steg 5: Distribuera till AEM
-
-Distribuera den anpassade SAML-kroken till AEM as a Cloud Service:
-
-1. Bygg AEM-projektet
-1. Bekräfta koden i Cloud Manager Git-databasen
-1. Distribuera med hjälp av en pipeline för fullständig stackdistribution
-1. SAML-kroken aktiveras automatiskt när en användare autentiserar via SAML
-
-
-### Viktiga överväganden
-
-+ **IDP-identifierarmatchning**: `idpIdentifier` som konfigurerats i SAML-kroken måste exakt matcha `idpIdentifier` i SAML Authentication Handler-fabrikskonfigurationen (`com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>`)
-+ **Attributnamn**: Kontrollera att attributnamnen som refereras i kroken (t.ex. `groupMembership`) matchar attributen som konfigurerats i SAML Authentication Handler
-+ **Prestanda**: Behåll krok-implementeringar med låg vikt när de körs under varje SAML-autentisering
-+ **Felhantering**: SAML-krok-implementeringar ska utlösa `com.adobe.granite.auth.saml.spi.SamlHookException` när kritiska fel inträffar som ska misslyckas med autentiseringen. SAML-autentiseringshanteraren fångar upp dessa undantag och returnerar `AuthenticationInfo.FAIL_AUTH`. För databasåtgärder bör du alltid fånga upp `RepositoryException` och logga fel på rätt sätt. Använd try-catch-finally-blocken för att säkerställa att resurserna rensas ordentligt
-+ **Testar**: Testa anpassade kopplingar noggrant i lägre miljöer innan du distribuerar till produktionen
-+ **Flera kopplingar**: Flera SAML-krokimplementeringar kan konfigureras. Alla matchande krokar kommer att köras. Använd egenskapen `service.ranking` i OSGi-komponenten för att styra körningsordningen (högre rankningsvärden körs först). Om du vill återanvända en SAML-krok i flera SAML Authentication Handler-fabrikskonfigurationer (`com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>`) skapar du flera krokkonfigurationer (OSGi-fabrikskonfigurationer), där var och en har olika `idpIdentifier` som matchar respektive SAML Authentication Handler
-+ **Säkerhet**: Verifiera och sanera alla data från SAML-försäkran innan de används i affärslogiken
-+ **Databasåtkomst**: När du ändrar användaregenskaper i `postSyncUserProcess` ska du alltid använda en [tjänstanvändare](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) med lämplig behörighet i stället för administrativa sessioner
-+ **Tjänstanvändarbehörigheter**: Bevilja minimala nödvändiga behörigheter till [tjänstanvändaren](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) (t.ex. endast `jcr:read` och `rep:write` på `/home/users`, inte fullständiga administratörsrättigheter)
-+ **Sessionshantering**: Använd alltid try-catch-finally-block för att säkerställa att databassessionerna stängs korrekt, även om undantag inträffar
-+ **Inställning för användarsynkronisering**: `postSyncUserProcess`-kroken körs efter att användaren har synkroniserats med OAK, så användarobjektet finns garanterat i databasen vid den tidpunkten
+Mer information om hur du utvecklar och registrerar en anpassad SAML-inloggningskrok finns i dokumentationen för [anpassad SAML-inloggningshook](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/custom-saml-login-hook.html).
 
 ## Distribuera SAML-konfiguration
 
@@ -878,7 +593,7 @@ SAML-autentiseringsflödet kan anropas från en webbsida på en AEM-webbplats ge
 
 ## Skyddad cachelagring när SAML används
 
-I publiceringsinstansen för AEM cache-lagras de flesta sidor. För SAML-skyddade sökvägar bör cachelagring antingen vara inaktiverad eller skyddad cachelagring vara aktiverad med konfigurationen auth_checker. Mer information finns i [här](https://experienceleague.adobe.com/sv/docs/experience-manager-dispatcher/using/configuring/permissions-cache)
+I publiceringsinstansen för AEM cache-lagras de flesta sidor. För SAML-skyddade sökvägar bör cachelagring antingen vara inaktiverad eller skyddad cachelagring vara aktiverad med konfigurationen auth_checker. Mer information finns i [här](https://experienceleague.adobe.com/en/docs/experience-manager-dispatcher/using/configuring/permissions-cache)
 
 Observera att om du cachelagrar skyddade sökvägar utan att aktivera auth_checker kan du uppleva oförutsägbara beteenden.
 
@@ -892,7 +607,7 @@ och tillhandahålla frågeparametrar:
 
 | Frågeparameternamn | Frågeparametervärde |
 |----------------------|-----------------------|
-| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren avlyssnar, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi-konfigurationens &#x200B;](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
+| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren avlyssnar, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi-konfigurationens ](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
 | `saml_request_path` | URL-sökvägen som användaren ska tas till efter SAML-autentiseringen. |
 
 Den här HTML-länken utlöser till exempel SAML-inloggningsflödet och tar användaren till `/content/wknd/us/en/protected/page.html` när det är klart. Dessa frågeparametrar kan ställas in programmatiskt efter behov.
@@ -913,7 +628,7 @@ och tillhandahålla formulärdata:
 
 | Namn på formulärdata | Formulärdatavärde |
 |----------------------|-----------------------|
-| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren avlyssnar, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi-konfigurationens &#x200B;](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
+| `resource` | Alla JCR-sökvägar, eller undersökvägar, som är SAML-autentiseringshanteraren avlyssnar, enligt definitionen i [Adobe Granite SAML 2.0 Authentication Handler OSGi-konfigurationens ](#configure-saml-2-0-authentication-handler) `path` -egenskap. |
 | `saml_request_path` | URL-sökvägen som användaren ska tas till efter SAML-autentiseringen. |
 
 
