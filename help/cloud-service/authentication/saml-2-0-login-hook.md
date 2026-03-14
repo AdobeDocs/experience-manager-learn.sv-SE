@@ -81,7 +81,7 @@ public void postSyncUserProcess(
 **Viktigt!** För att ändra användaregenskaper i databasen krävs följande för implementeringen av kroken:
 
 + En `SlingRepository`-referens injicerad via `@Reference`
-+ En konfigurerad [tjänstanvändare](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) med lämplig behörighet (konfigurerad i tillägget Apache Sling Service User Mapper Service)
++ En konfigurerad [tjänstanvändare](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) med lämplig behörighet (konfigurerad i tillägget Apache Sling Service User Mapper Service)
 + Korrekt sessionshantering med try-catch-finally -block
 
 ## Implementera en anpassad SAML-hook
@@ -267,7 +267,7 @@ Artefakten `aem-sdk-api` innehåller alla nödvändiga Adobe Granite SAML-gräns
 
 ### Konfigurera tjänstanvändare (valfritt)
 
-Om SAML-kroken behöver ändra innehåll i AEM JCR-databas, t.ex. användaregenskaper (som visas i `postSyncUserProcess`-exemplet), måste en [tjänstanvändare](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) konfigureras:
+Om SAML-kroken behöver ändra innehåll i AEM JCR-databas, t.ex. användaregenskaper (som visas i `postSyncUserProcess`-exemplet), måste en [tjänstanvändare](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) konfigureras:
 
 1. Skapa en tjänstanvändarmappning i projektet på `/ui.config/src/main/content/jcr_root/apps/myproject/osgiconfig/config/org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~saml.cfg.json`:
 
@@ -310,7 +310,7 @@ Distribuera den anpassade SAML-kroken till AEM as a Cloud Service:
 + **Testa**: Testa anpassade krokar noggrant i lägre miljöer innan du driftsätter dem i produktion
 + **Flera hookar**: Flera SAML-hook-implementeringar kan konfigureras. Alla matchande hookar kommer att köras. Använd egenskapen `service.ranking` i OSGi-komponenten för att styra körningsordningen (högre rankningsvärden körs först). Om du vill återanvända en SAML-hook i flera fabrikskonfigurationer för SAML Authentication Handler (`com.adobe.granite.auth.saml.SamlAuthenticationHandler~<unique-id>`) skapar du flera krokkonfigurationer (OSGi-fabrikskonfigurationer), där var och en har en egen `idpIdentifier` som matchar respektive SAML-autentiseringshanterare
 + **Säkerhet**: Verifiera och sanera alla data från SAML-försäkran innan de används i affärslogiken
-+ **Databasåtkomst**: När du ändrar användaregenskaper i `postSyncUserProcess` ska du alltid använda en [tjänstanvändare](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) med lämplig behörighet i stället för administrativa sessioner
-+ **Tjänstanvändarbehörigheter**: Bevilja minimala nödvändiga behörigheter till [tjänstanvändaren](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) (t.ex. endast `jcr:read` och `rep:write` på `/home/users`, inte fullständiga administratörsrättigheter)
++ **Databasåtkomst**: När du ändrar användaregenskaper i `postSyncUserProcess` ska du alltid använda en [tjänstanvändare](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) med lämplig behörighet i stället för administrativa sessioner
++ **Tjänstanvändarbehörigheter**: Bevilja minimala nödvändiga behörigheter till [tjänstanvändaren](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/advanced/service-users) (t.ex. endast `jcr:read` och `rep:write` på `/home/users`, inte fullständiga administratörsrättigheter)
 + **Sessionshantering**: Använd alltid try-catch-finally-block för att säkerställa att databassessionerna stängs korrekt, även om undantag inträffar
 + **Inställning för användarsynkronisering**: `postSyncUserProcess`-kroken körs efter att användaren har synkroniserats med OAK, så användarobjektet finns garanterat i databasen vid den tidpunkten
