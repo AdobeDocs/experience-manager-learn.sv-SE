@@ -22,4 +22,4 @@ ht-degree: 0%
 
 Lär dig hur du skapar och hanterar profiler i Adobe Experience Platform med hjälp av AEM Forms inskickade data. Integrationen effektiviserar datahanteringen och förbättrar användarupplevelserna.
 
->[!VIDEO](https://video.tv.adobe.com/v/3481508/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3481513/?captions=swe&learn=on&enablevpops)

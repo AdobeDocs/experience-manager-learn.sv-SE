@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar en molnkonfiguration i AEM Forms säkert kan integreras med Adobe Experience Platform. Använd Adobe Developer Console inloggningsuppgifter för att möjliggöra smidig inlämning och hämtning av data för dina formulär. Den här guiden innehåller stegvisa instruktioner för hur du konfigurerar anslutningen effektivt.
 
->[!VIDEO](https://video.tv.adobe.com/v/3481496/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3481500/?captions=swe&learn=on&enablevpops)
 
 
 ## Nästa steg
