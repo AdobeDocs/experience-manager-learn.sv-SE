@@ -8,7 +8,7 @@ level: Intermediate
 doc-type: Technical Video
 last-substantial-update: 2026-03-16T00:00:00Z
 jira: KT-20539
-source-git-commit: 4c5bec95d74d3611dc96d1d23dcd4d3d708e0243
+source-git-commit: 3e57cadc429724a49464a6a26c6f32ddf24228b1
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%
