@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Lär dig hur du snabbt skapar webbplatser med Edge Delivery Services.
 
->[!VIDEO](https://video.tv.adobe.com/v/3427989/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453450/?captions=swe&learn=on)
 
 Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/edge-delivery/overview) om du vill ha fullständig information om Edge Delivery Services och dess funktioner.
 
@@ -109,7 +109,7 @@ CARDS
             <a href="./developing/prerequisites.md" title="Förutsättningar"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425709/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3434588/?captions=swe&format=jpeg"
                 alt="Förutsättningar">
             </a>
           </figure>
@@ -141,7 +141,7 @@ CARDS
             <a href="./developing/aem-boilerplate.md" title="Använd mall för mallsida"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425713/?format=jpeg" alt="Inställningar
+                src="https://video.tv.adobe.com/v/3434615/?captions=swe&format=jpeg" alt="Inställningar
                 Mallplatta">
             </a>
           </figure>
@@ -173,7 +173,7 @@ CARDS
             <a href="./developing/content-repository.md" title="Länka Google Drive"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425711/?format=jpeg" alt="Länka Google Drive">
+                src="https://video.tv.adobe.com/v/3434724/?captions=swe&format=jpeg" alt="Länka Google Drive">
             </a>
           </figure>
         </div>
@@ -203,7 +203,7 @@ CARDS
           <figure class="image is-16by9">
             <a href="./developing/content-repository.md" title="Länka SharePoint" tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425712/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3446032/?captions=swe&format=jpeg"
                 alt="Länka SharePoint">
             </a>
           </figure>
@@ -235,7 +235,7 @@ CARDS
             <a href="./developing/preview-and-publish.md" title="Förhandsgranska och publicera innehåll"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425714/?format=jpeg" alt="Förhandsgranska och publicera innehåll">
+                src="https://video.tv.adobe.com/v/3434713/?captions=swe&format=jpeg" alt="Förhandsgranska och publicera innehåll">
             </a>
           </figure>
         </div>
@@ -266,7 +266,7 @@ CARDS
             <a href="./developing/sidekick.md" title="Använda Sidekick"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425715/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441289/?captions=swe&format=jpeg"
                 alt="Använda Sidekick">
             </a>
           </figure>
@@ -330,7 +330,7 @@ CARDS
             <a href="./developing/local-development.md" title="Lokal utveckling"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425717/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3434735/?captions=swe&format=jpeg"
                 alt="Lokal utveckling">
             </a>
           </figure>
@@ -362,7 +362,7 @@ CARDS
             <a href="./developing/git.md" title="Integrera med Git"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425718/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3441830/?captions=swe&format=jpeg"
                 alt="Integrera med Git">
             </a>
           </figure>
@@ -399,7 +399,7 @@ CARDS
             <a href="./how-to/rss.md" title="Skapa RSS-flöden"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425725/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438003/?captions=swe&format=jpeg"
                 alt="Skapa RSS-flöden">
             </a>
           </figure>
@@ -431,7 +431,7 @@ CARDS
             <a href="./how-to/social-media-sharing.md" title="Delning av sociala medier"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425974/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3439441/?captions=swe&format=jpeg"
                 alt="Delning av sociala medier">
             </a>
           </figure>
@@ -463,7 +463,7 @@ CARDS
             <a href="./how-to/delete-page.md" title="Tar bort sidor"
               tabindex="-1">
               <img class="is-bordered-r-small"
-                src="https://video.tv.adobe.com/v/3425973/?format=jpeg"
+                src="https://video.tv.adobe.com/v/3438094/?captions=swe&format=jpeg"
                 alt="Tar bort sidor">
             </a>
           </figure>

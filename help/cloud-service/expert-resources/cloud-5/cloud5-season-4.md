@@ -43,7 +43,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" title="Bästa praxis för utveckling av Edge Delivery Services" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440978/?format=jpeg&nocache=1734040055526" alt="Bästa praxis för utveckling av Edge Delivery Services"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441004/?captions=swe&format=jpeg&nocache=1734040055526" alt="Bästa praxis för utveckling av Edge Delivery Services"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -66,7 +66,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-search-optimization.md" title="Sökoptimering i Edge Delivery Services" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440976/?format=jpeg&nocache=1734040055519" alt="Sökoptimering i Edge Delivery Services"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440982/?captions=swe&format=jpeg&nocache=1734040055519" alt="Sökoptimering i Edge Delivery Services"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -89,7 +89,7 @@ CARDS
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-google-maps.md" title="Integrera med Google Maps" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440977/?format=jpeg&nocache=1734040055523" alt="Integrera med Google Maps"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440993/?captions=swe&format=jpeg&nocache=1734040055523" alt="Integrera med Google Maps"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
