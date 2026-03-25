@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: eac1d731-6860-4af4-aba4-bc93abb40073
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Utforska Content Hub nya funktioner, inklusive attributbaserad åtkomstkontroll, varumärkesanpassade landningssidor och enhetlig sökning på olika plattformar.
 
->[!VIDEO](https://video.tv.adobe.com/v/3461814/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459223/?learn=on&enablevpops)

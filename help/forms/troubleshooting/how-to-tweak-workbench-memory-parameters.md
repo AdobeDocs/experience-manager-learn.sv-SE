@@ -7,10 +7,10 @@ level: Beginner
 version: Experience Manager 6.5
 feature: Workbench
 topic: Administration
-index: y
+index: true
 exl-id: e3e3e3ff-c914-4ae0-9d41-1fcbcf6375bf
 duration: 49
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '29'
 ht-degree: 0%

@@ -6,11 +6,11 @@ role: Developer
 level: Intermediate
 topic: Development
 feature: Operations
-index: y
+index: true
 doc-type: Tutorial
 exl-id: 7c12fc14-cdaf-45eb-807a-64de86a2a36a
 duration: 74
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%

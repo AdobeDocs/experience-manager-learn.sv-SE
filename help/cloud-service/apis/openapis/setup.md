@@ -12,7 +12,7 @@ thumbnail: KT-17426.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 1df4c816-b354-4803-bb6c-49aa7d7404c6
-source-git-commit: f4f177f2745cb03c81011679b9d88eaadeb9cae3
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 0%
@@ -154,7 +154,7 @@ I det här fallet används **AEM Assets-API:t** för att demonstrera den OpenAPI
 
    ![Välj autentisering](./assets/s2s/select-authentication.png)
 
-   Server-till-server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Autentiseringsalternativen Web App och Single Page App är lämpliga för program som behöver API-åtkomst åt användarna. Mer information finns i [Skillnaden mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App respektive Single Page App &#x200B;](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
+   Server-till-server-autentiseringen är idealisk för backend-tjänster som behöver API-åtkomst utan användarinteraktion. Autentiseringsalternativen Web App och Single Page App är lämpliga för program som behöver API-åtkomst åt användarna. Mer information finns i [Skillnaden mellan autentiseringsuppgifter för OAuth Server-to-Server och Web App respektive Single Page App ](./overview.md#difference-between-oauth-server-to-server-vs-web-app-vs-single-page-app-credentials).
 
    >[!TIP]
    >
@@ -212,11 +212,11 @@ Låt oss följa stegen för att konfigurera AEM-instansen så att den aktiveras 
 
 1. Bekräfta konfigurationsändringarna och skicka ändringarna till Git-fjärrdatabasen som Cloud Manager pipeline är ansluten till.
 
-1. Distribuera ovanstående ändringar med [konfigurationsförloppet](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline) i Cloud Manager.
+1. Distribuera ovanstående ändringar med [konfigurationsförloppet](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline) i Cloud Manager.
 
    ![Distribuera YAML](./assets/setup/config-pipeline.png)
 
-Observera att filen `api.yaml` också kan installeras i en [RDE](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/overview), [med kommandoradsverktyg](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files). Detta är användbart när du vill testa konfigurationsändringarna innan du distribuerar dem till produktionsmiljön.
+Observera att filen `api.yaml` också kan installeras i en [RDE](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview), [med kommandoradsverktyg](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files). Detta är användbart när du vill testa konfigurationsändringarna innan du distribuerar dem till produktionsmiljön.
 
 >[!CAUTION]
 >
@@ -227,7 +227,8 @@ Observera att filen `api.yaml` också kan installeras i en [RDE](https://experie
 
 När AEM-instansen har konfigurerats för att aktivera ADC-projektkommunikation kan du börja använda de OpenAPI-baserade AEM-API:erna. Lär dig hur du använder OpenAPI-baserade AEM API:er med olika OAuth-autentiseringsmetoder:
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./use-cases/invoke-api-using-oauth-s2s.md

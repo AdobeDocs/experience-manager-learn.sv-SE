@@ -11,7 +11,7 @@ last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-18307
 thumbnail: null
 exl-id: 5e235220-82f6-46e4-b64d-315f027a7024
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1780'
 ht-degree: 0%
@@ -212,7 +212,7 @@ Varningar genereras när trafikfilterreglerna aktiveras. Du kan granska dessa va
 
 ## Analysera resultaten
 
-Om du vill analysera resultatet av trafikfilterreglerna kan du använda AEMCS CDN-loggarna och ELK-kontrollpanelen. Följ instruktionerna från inställningsavsnittet [CDN-loggar &#x200B;](../setup.md#ingest-cdn-logs) för att importera CDN-loggarna till ELK-stacken.
+Om du vill analysera resultatet av trafikfilterreglerna kan du använda AEMCS CDN-loggarna och ELK-kontrollpanelen. Följ instruktionerna från inställningsavsnittet [CDN-loggar ](../setup.md#ingest-cdn-logs) för att importera CDN-loggarna till ELK-stacken.
 
 På följande skärmbild ser du CDN-loggarna i AEM Dev-miljön som är inkapslade i ELK-stacken.
 
@@ -228,7 +228,7 @@ Du kan också använda andra paneler i CDN Traffic Dashboard för att analysera 
 
 ### Splunk-integrering
 
-Kunder som har [Splunk Log-vidarebefordran aktiverad](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) kan skapa nya instrumentpaneler för att analysera trafikmönstren.
+Kunder som har [Splunk Log-vidarebefordran aktiverad](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/logging#splunk-logs) kan skapa nya instrumentpaneler för att analysera trafikmönstren.
 
 Om du vill skapa kontrollpaneler i Splunk följer du stegen [Splunk dashboards för AEMCS CDN Log Analysis](https://github.com/adobe/AEMCS-CDN-Log-Analysis-Tooling/blob/main/Splunk/README.md#splunk-dashboards-for-aemcs-cdn-log-analysis).
 
@@ -263,7 +263,8 @@ I den här självstudiekursen lärde du dig att skydda AEM webbplatser från DoS
 
 Lär dig hur du implementerar Adobe rekommenderade WAF-regler för att skydda dina AEM webbplatser från avancerade hot som använder avancerade tekniker för att kringgå traditionella säkerhetsåtgärder.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./using-waf-rules.md
@@ -305,7 +306,8 @@ Lär dig hur du implementerar Adobe rekommenderade WAF-regler för att skydda di
 
 För mer avancerade scenarier kan du utforska följande exempel som visar hur du implementerar anpassade trafikfilterregler baserat på specifika affärskrav:
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ../how-to/request-logging.md
@@ -391,4 +393,4 @@ För mer avancerade scenarier kan du utforska följande exempel som visar hur du
 
 ## Ytterligare resurser
 
-- [Rekommenderade startregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)
+- [Rekommenderade startregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#recommended-starter-rules)

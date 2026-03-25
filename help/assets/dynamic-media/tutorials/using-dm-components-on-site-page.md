@@ -6,11 +6,11 @@ level: Intermediate
 version: Experience Manager as a Cloud Service
 feature: Core Components
 topic: Development
-index: y
+index: true
 doc-type: Tutorial
 exl-id: b500261a-5b96-41b8-8270-fb6bde95d48a
 duration: 112
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '35'
 ht-degree: 0%

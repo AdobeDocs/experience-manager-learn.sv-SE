@@ -11,7 +11,7 @@ doc-type: Catalog
 jira: KT-15832
 duration: 88
 exl-id: aeac08a2-75a0-4adb-b32e-0e7f85e7eb1d
-source-git-commit: f0b1b906e1ef04b53eca940f191e65d62a2e0bab
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '658'
 ht-degree: 0%
@@ -28,7 +28,8 @@ I den här självstudiekursen får du lära dig grunderna i att skapa en AEM-web
 
 Lär dig hur du skapar ett kodprojekt och konfigurerar en ny webbplats i AEM as a Cloud Service. Med den här installationen kan du utveckla material smidigt med Universal Editor och snabbt leverera material via Edge Delivery Services.
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./1-new-code-project.md
 * ./2-new-aem-site.md
@@ -88,7 +89,8 @@ Lär dig hur du skapar ett kodprojekt och konfigurerar en ny webbplats i AEM as 
 ## Utvecklingsinställning
 
 Lär dig hur du konfigurerar din lokala utvecklingsmiljö för snabb webbplatsutveckling. Med den här installationen kan du skapa webbplatser smidigt med den universella redigeraren och leverera effektivt material via Edge Delivery Services, vilket ger ett smidigt och optimerat utvecklingsarbetsflöde.
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./3-local-development-environment.md
 * ./4-website-branding.md
@@ -101,7 +103,7 @@ Lär dig hur du konfigurerar din lokala utvecklingsmiljö för snabb webbplatsut
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./3-local-development-environment.md" title="Konfigurera en lokal utvecklingsmiljö" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443982/?captions=swe&format=jpeg&nocache=1753811862249" alt="Konfigurera en lokal utvecklingsmiljö"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443978/?format=jpeg&nocache=1753811862249" alt="Konfigurera en lokal utvecklingsmiljö"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -149,7 +151,8 @@ Lär dig hur du konfigurerar din lokala utvecklingsmiljö för snabb webbplatsut
 
 Lär dig hur du skapar ett nytt block genom att definiera dess innehållsmodell och konfigurera exempelinnehåll för testning och utveckling. Upptäck två metoder för att rendera blocket och förstå hur du strukturerar det för optimala prestanda och flexibilitet i AEM och Edge Delivery Services.
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./5-new-block.md {image = ./assets/5-new-block/card.png}
 * ./6-author-block.md {image = ./assets/6-author-block/card.png}
@@ -258,7 +261,8 @@ Lär dig hur du skapar ett nytt block genom att definiera dess innehållsmodell 
 
 Nu när du är klar med den här självstudiekursen kan du bygga vidare på det du lärt dig med dessa fokuserade tips. Guiderna innehåller kod och koncept som beskrivs här och beskriver rollspecifika användningsområden, avancerade tekniker och ytterligare tips som förbättrar utvecklingskunskaperna i Edge Delivery Services och Universal Editor.
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./how-to/block-options.md
 * ./how-to/header-and-footer.md

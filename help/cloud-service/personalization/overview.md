@@ -11,7 +11,7 @@ last-substantial-update: 2025-08-07T00:00:00Z
 jira: KT-18717
 thumbnail: null
 exl-id: c4fb11b9-b613-4522-b9da-18d7ae0826ec
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 0%
@@ -44,7 +44,8 @@ Upplev personalisering i praktiken på webbplatsen [WKND Enablement](https://wkn
 >
 > Genom att titta på live-demonstrationen först får ni en förståelse för värdet och funktionerna i varje personaliseringsteknik innan ni lägger tid på konfiguration och implementering.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./live-demo.md
@@ -85,7 +86,8 @@ Upplev personalisering i praktiken på webbplatsen [WKND Enablement](https://wkn
 
 Innan du utforskar specifika användningsfall måste du först konfigurera AEM as a Cloud Service för personalisering. Börja med att integrera Adobe Target och taggar för att möjliggöra personalisering på klientsidan med Web SDK. Med dessa grundläggande steg kan era AEM-sidor experimentera, målinrikta och personalisera i realtid.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./setup/integrate-adobe-target.md
@@ -158,7 +160,8 @@ Innan du utforskar specifika användningsfall måste du först konfigurera AEM a
 
 Utforska följande vanliga användningsexempel för personalisering som stöds av AEMCS, Adobe Target och Adobe Experience Platform.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./use-cases/experimentation.md

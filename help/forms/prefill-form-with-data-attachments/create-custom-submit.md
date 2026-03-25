@@ -10,7 +10,7 @@ topic: Integrations
 jira: KT-14794
 exl-id: c4257567-76bd-417e-a1a2-38a0647767d9
 duration: 147
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '187'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 # Skapa anpassad sändning för att hantera formuläröverföringen
 
-För att tillgodose användningsfallet skapades en anpassad skicka-tjänst för att lagra skickade data och bilagor i Azure. När en grundkomponentbaserad blankett skickas in har informationen följande format:
+För att tillgodose användningsexemplet skapades en anpassad skicka-tjänst för att lagra skickade data och bilagor i Azure. När en grundkomponentbaserad blankett skickas in har informationen följande format:
 
 ```json
 {
@@ -40,9 +40,9 @@ För att tillgodose användningsfallet skapades en anpassad skicka-tjänst för 
 }
 ```
 
-Elementet _&#x200B;**ContractCopy**&#x200B;_ representerar en bifogad fil och används för att hämta bifogade filer som har skickats med formuläret.
-För att kunna förifylla anpassningsbara formulär med data och bilagor, sparas de skickade bilagorna i Azure Portal och dataelementet för kontraktkopieobjektet i de skickade data uppdateras med URL:en för den sparade bilagan.
-Den anpassade skicka-tjänsten extraherar och lagrar de bifogade filerna i Azure-portalen.  Uppdaterade inskickade data ser ut så här
+Elementet _**ContractCopy**_ representerar en bifogad fil och används för att hämta bifogade filer som har skickats med formuläret.
+För att kunna förifylla anpassningsbara formulär med data och bilagor, sparas de inskickade bilagorna i Azure-portalen och dataelementet i kontraktkopieobjektet i de inskickade data uppdateras med URL:en för den sparade bilagan.
+Den anpassade skicka-tjänsten extraherar och lagrar de bifogade filerna i Azure Portal.  Uppdaterade inskickade data ser ut så här
 
 
 ```json
@@ -62,9 +62,7 @@ Den anpassade skicka-tjänsten extraherar och lagrar de bifogade filerna i Azure
     },
     "Message": "We would like to renew our annual contract "
 }
-``
 ```
-
 
 [Här finns ett exempel på en anpassad hanterare för att skicka kärnkomponenter baserat på adaptiv form.](https://github.com/adobe/aem-core-forms-components/blob/master/it/core/src/main/java/com/adobe/cq/forms/core/components/it/service/CustomAFSubmitService.java#L56). Följande anpassade sändning har skrivits för att hantera formuläröverföringen
 

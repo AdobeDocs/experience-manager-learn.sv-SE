@@ -4,7 +4,7 @@ description: Lär dig hur du implementerar en AEM-sajt för ett varumärke som k
 version: Experience Manager as a Cloud Service
 jira: KT-13565
 mini-toc-levels: 1
-index: y
+index: true
 thumbnail: 30476.jpg
 feature: Core Components, Page Editor, Editable Templates, AEM Project Archetype
 topic: Content Management, Development
@@ -13,7 +13,7 @@ level: Beginner
 doc-type: Catalog
 exl-id: 09a600f4-1ada-4fb7-ae44-586364cff389
 recommendations: disable
-source-git-commit: dbf63f30ccfd06e4f4d7883c2f7bc4ac78245364
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '577'
 ht-degree: 0%

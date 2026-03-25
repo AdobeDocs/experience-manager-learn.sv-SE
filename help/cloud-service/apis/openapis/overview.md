@@ -12,7 +12,7 @@ thumbnail: KT-16515.jpeg
 last-substantial-update: 2025-02-28T00:00:00Z
 duration: 0
 exl-id: 0eb0054d-0c0a-4ac0-b7b2-fdaceaa6479b
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1100'
 ht-degree: 0%
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Lär dig mer om OpenAPI-baserade AEM API:er, inklusive autentiseringsstöd, viktiga koncept och hur du får tillgång till Adobe API:er.
 
-[OpenAPI-specifikationen &#x200B;](https://swagger.io/specification/) (tidigare Swagger) är en vanlig standard för att definiera RESTful-API:er. AEM as a Cloud Service tillhandahåller flera OpenAPI-specifikationsbaserade API:er (eller helt enkelt OpenAPI-baserade AEM API:er), vilket gör det enklare att skapa anpassade program som interagerar med AEM författare eller publiceringstjänsttyper. Nedan följer några exempel:
+[OpenAPI-specifikationen ](https://swagger.io/specification/) (tidigare Swagger) är en vanlig standard för att definiera RESTful-API:er. AEM as a Cloud Service tillhandahåller flera OpenAPI-specifikationsbaserade API:er (eller helt enkelt OpenAPI-baserade AEM API:er), vilket gör det enklare att skapa anpassade program som interagerar med AEM författare eller publiceringstjänsttyper. Nedan följer några exempel:
 
 **Webbplatser**
 
@@ -86,7 +86,7 @@ Innan du får åtkomst till Adobe API:er är det viktigt att du förstår dessa 
 
 - **[Adobe Developer Console Project](https://developer.adobe.com/developer-console/docs/guides/projects/)**: Central plats för hantering av API-integreringar, händelser och körningsfunktioner. Här konfigurerar du API:er, anger autentisering och genererar nödvändiga autentiseringsuppgifter.
 
-- **[Produktprofiler](https://helpx.adobe.com/se/enterprise/using/manage-product-profiles.html)**: Produktprofiler innehåller en behörighetsförinställning som gör att du kan styra användar- eller programåtkomst till Adobe-produkter som AEM, Adobe Target, Adobe Analytics och andra. Alla Adobe-produkter har fördefinierade produktprofiler.
+- **[Produktprofiler](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html)**: Produktprofiler innehåller en behörighetsförinställning som gör att du kan styra användar- eller programåtkomst till Adobe-produkter som AEM, Adobe Target, Adobe Analytics och andra. Alla Adobe-produkter har fördefinierade produktprofiler.
 
 - **Tjänster**: Tjänsterna definierar de faktiska behörigheterna och är associerade med produktprofilen. Om du vill minska eller öka behörighetsförinställningen kan du avmarkera eller välja de tjänster som är kopplade till produktprofilen. Det innebär att du kan styra åtkomstnivån för produkten och dess API:er. I AEM as a Cloud Service representerar tjänster användargrupper med fördefinierade åtkomstkontrollistor (ACL) för databasnoder, vilket möjliggör detaljerad behörighetshantering.
 
@@ -94,7 +94,8 @@ Innan du får åtkomst till Adobe API:er är det viktigt att du förstår dessa 
 
 Lär dig hur du konfigurerar AEM as a Cloud Service-miljön och ett Adobe Developer Console-projekt för att ge åtkomst till OpenAPI-baserade AEM API:er. Du kan även använda AEM API med webbläsare för att kontrollera konfigurationen och granska begäran och svar.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./setup.md
@@ -135,7 +136,8 @@ Lär dig hur du konfigurerar AEM as a Cloud Service-miljön och ett Adobe Develo
 
 Lär dig hur du använder OpenAPI-baserade AEM API:er med olika OAuth-autentiseringsmetoder:
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./use-cases/invoke-api-using-oauth-s2s.md

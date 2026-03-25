@@ -11,7 +11,7 @@ last-substantial-update: 2025-06-04T00:00:00Z
 jira: KT-13148
 thumbnail: null
 exl-id: e6d67204-2f76-441c-a178-a34798fe266d
-source-git-commit: 7b29187ef84bebebd4586374abb09ced947dff28
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '1195'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Regeluppsättningarna hjälper kunderna att förhindra vanliga och sofistikerade
 
 Standardreglerna för trafikfilter är användbara för att tillämpa affärsspecifika principer, som hastighetsbegränsningar eller blockera specifika regioner, samt för att blockera trafik baserat på begäranegenskaper och rubriker som IP-adress, sökväg eller användaragent.
 WAF trafikfilterregler ger å andra sidan ett omfattande förebyggande skydd för kända webbexplosioner och attackvektorer och har avancerad intelligens för att begränsa falska positiva effekter (dvs. blockera legitim trafik).
-Om du vill definiera båda typerna av regler använder du YAML-syntaxen. Mer information finns i [Syntax för trafikfilterregler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax).
+Om du vill definiera båda typerna av regler använder du YAML-syntaxen. Mer information finns i [Syntax för trafikfilterregler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf#rules-syntax).
 
 ## När och varför ska de användas
 
@@ -95,7 +95,8 @@ Exempel:
 
 Lär dig definiera, driftsätta, testa och analysera trafikfilterregler, inklusive WAF-regler, i AEM as a Cloud Service genom att följa installationsguiden och användningsexemplen nedan. Detta ger dig bakgrundskunskaper så att du senare tryggt kan tillämpa de Adobe-rekommenderade reglerna.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./setup.md
@@ -136,7 +137,8 @@ Lär dig definiera, driftsätta, testa och analysera trafikfilterregler, inklusi
 
 Den här guiden innehåller stegvisa instruktioner för hur du konfigurerar och distribuerar trafikfilter som rekommenderas av Adobe och WAF i AEM as a Cloud Service-miljön.
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./use-cases/using-traffic-filter-rules.md
@@ -206,7 +208,8 @@ Den här guiden innehåller stegvisa instruktioner för hur du konfigurerar och 
 
 För mer avancerade scenarier kan du utforska följande exempel som visar hur du implementerar anpassade trafikfilterregler baserat på specifika affärskrav:
 
-<!-- CARDS
+<!-- 
+CARDS
 {target = _self}
 
 * ./how-to/request-logging.md
@@ -291,4 +294,4 @@ För mer avancerade scenarier kan du utforska följande exempel som visar hur du
 
 ## Ytterligare resurser
 
-- [Trafikfilterregler inklusive WAF-regler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
+- [Trafikfilterregler inklusive WAF-regler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)

@@ -7,11 +7,11 @@ solution: Experience Manager, Experience Manager Sites
 sub-product: Experience Manager Sites
 version: Experience Manager 6.5, Experience Manager as a Cloud Service
 jira: KT-2963
-index: y
-source-git-commit: c6213dd318ec4865375c57143af40dbe3f3990b1
+index: true
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '343'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 7%
       + [4 - Bygg en React-app](./open-api/basic/4-react-app.md)
       + [5 - Integrering med Universal Editor](./open-api/basic/5-universal-editor.md)
 + GraphQL {#graphql}
-   + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html?lang=sv-SE){target=_blank}
+   + [AEM Headless Developer Portal](https://experienceleague.adobe.com/landing/experience-manager/headless/developer.html){target=_blank}
    + [Ökning](./graphql/overview.md)
    + Snabbinställningar {#quick-setup}
       + [Cloud Service](./graphql/quick-setup/cloud-service.md)
@@ -74,7 +74,7 @@ ht-degree: 7%
    + [Bilder](./graphql/how-to/images.md)
    + [Lokaliserat innehåll](./graphql/how-to/localized-content.md)
    + [Stora resultatuppsättningar](./graphql/how-to/large-result-sets.md)
-   + [Förhandsgranska](./graphql/how-to/preview.md)
+   + [Förhandsgranskning](./graphql/how-to/preview.md)
    + [Skyddat innehåll](./graphql/how-to/protected-content.md)
    + [AEM Headless SDK](./graphql/how-to/aem-headless-sdk.md)
    + [Installera GraphiQL på AEM 6.5](./graphql/how-to/install-graphiql-aem-6-5.md)

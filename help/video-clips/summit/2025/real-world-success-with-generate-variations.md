@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: df0a03c1-d278-4c45-afff-bfbdaffe83bd
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Emily Kellman berättar hur Adobe.com använde Generate Variations för att öka innehållets hastighet, minska tidslinjerna och öka konverteringsgraden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3462704/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459232/?learn=on&enablevpops)

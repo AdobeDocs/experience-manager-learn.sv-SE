@@ -7,7 +7,7 @@ recommendations: noDisplay, noCatalog
 duration: 30
 last-substantial-update: 2024-12-15T00:00:00Z
 exl-id: ede3fb19-d803-4b21-8c03-4283f7b4f7f4
-source-git-commit: 155fc2ec8df735888be303242d6221a64e31daad
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '243'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## Introduktion
 
-Välkommen till fjärde årsperioden i Cloud 5-serien från AEM Engineering. Ett av de största problemen i en produkts implementeringsfas är att den har tillräckligt många kodexempel och/eller live-demonstrationer av dessa exempel, verktyg eller API:er. Målet med den här serien är att leverera användbar information om AEM och Edge Delivery Services på 5 minuter eller mindre.
+Välkommen till årstid fyra av Cloud 5-serien från AEM Engineering. Ett av de största problemen i en produkts implementeringsfas är att den har tillräckligt många kodexempel och/eller live-demonstrationer av dessa exempel, verktyg eller API:er. Målet med den här serien är att leverera användbar information om AEM och Edge Delivery Services på 5 minuter eller mindre.
 
 ## Förslagsruta
 
@@ -28,7 +28,8 @@ Besök [förslagsrutan](https://forms.office.com/r/74P5Xz4UH0) om du vill skicka
 
 Varje säsong varierar i längd och släpps enligt ett fast schema. Besök den här sidan om du vill ha uppdateringar varje vecka eller följ oss på det sociala nätverk du väljer.
 
-<!-- CARDS 
+<!-- 
+CARDS
 
 * ./season-4/cloud5-edge-delivery-services-best-practices.md {title=Development best practices for Edge Delivery Services}
 * ./season-4/cloud5-search-optimization.md {title=Search optimization in Edge Delivery Services}
@@ -41,8 +42,8 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Besök den h
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" title="Utveckla bästa praxis för Edge Delivery Services" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441004/?format=jpeg&nocache=1734040055526&captions=swe" alt="Utveckla bästa praxis för Edge Delivery Services"
+                    <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" title="Bästa praxis för utveckling av Edge Delivery Services" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440978/?format=jpeg&nocache=1734040055526" alt="Bästa praxis för utveckling av Edge Delivery Services"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -50,9 +51,9 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Besök den h
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" target="_blank" rel="referrer" title="Utveckla bästa praxis för Edge Delivery Services">Bästa utvecklingsmetoder för Edge Delivery Services</a>
+                        <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" target="_blank" rel="referrer" title="Bästa praxis för utveckling av Edge Delivery Services">Bästa praxis för utveckling för Edge Delivery Services</a>
                     </p>
-                    <p class="is-size-6">Upptäck tekniker för att utveckla Edge Delivery Services med en erfaren arkitekt.</p>
+                    <p class="is-size-6">Upptäck tekniker för utveckling i Edge Delivery Services med en erfaren arkitekt.</p>
                 </div>
                 <a href="./season-4/cloud5-edge-delivery-services-best-practices.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Bevakning</span>
@@ -65,7 +66,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Besök den h
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-search-optimization.md" title="Sökoptimering i Edge Delivery Services" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440982/?format=jpeg&nocache=1734040055519&captions=swe" alt="Sökoptimering i Edge Delivery Services"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440976/?format=jpeg&nocache=1734040055519" alt="Sökoptimering i Edge Delivery Services"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -88,7 +89,7 @@ Varje säsong varierar i längd och släpps enligt ett fast schema. Besök den h
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="./season-4/cloud5-google-maps.md" title="Integrera med Google Maps" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440993/?format=jpeg&nocache=1734040055523&captions=swe" alt="Integrera med Google Maps"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440977/?format=jpeg&nocache=1734040055523" alt="Integrera med Google Maps"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

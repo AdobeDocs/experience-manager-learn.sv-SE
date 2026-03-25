@@ -6,11 +6,11 @@ level: Intermediate
 version: Experience Manager as a Cloud Service
 feature: Image Profiles, Video Profiles, Viewer Presets
 topic: Development
-index: y
+index: true
 doc-type: Tutorial
 exl-id: a36c3299-20a0-4dd7-a5cd-9ff4387c8b53
 duration: 90
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '36'
 ht-degree: 0%

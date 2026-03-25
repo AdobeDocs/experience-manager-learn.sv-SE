@@ -7,10 +7,10 @@ level: Intermediate
 version: Experience Manager 6.5
 feature: Designer
 topic: Development
-index: y
+index: true
 exl-id: 9cffce45-c853-440f-9ddf-2e179dff6745
 duration: 45
-source-git-commit: 48433a5367c281cf5a1c106b08a1306f1b0e8ef4
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%

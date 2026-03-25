@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: dcc6c975-dd7e-402d-844c-eccf888d9b2c
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '50'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Läs om hur metadata driver arbetsflöden, sökningar och insikter och hur automatisering kan berika metadata för att passa varumärkesstandarder.
 
->[!VIDEO](https://video.tv.adobe.com/v/3461969/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459218/?learn=on&enablevpops)

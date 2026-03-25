@@ -13,16 +13,16 @@ feature: Content Fragments, Content Personalization, Asset Management
 index: false
 hide: true
 hidefromtoc: true
-source-git-commit: 0d93dab6ccdae1420589a00f3a46eef10bc16ec8
+exl-id: 07b2d50c-9243-4142-9357-29c36856c29d
+source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
 workflow-type: tm+mt
 source-wordcount: '44'
 ht-degree: 0%
 
 ---
 
-
 # Problem med upptäckt och återanvändning av innehåll
 
 Förstå svårigheterna för organisationer att hitta och återanvända innehåll och hur Experience Generation löser dessa problem.
 
->[!VIDEO](https://video.tv.adobe.com/v/3462387/?learn=on&enablevpops&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3459243/?learn=on&enablevpops)
