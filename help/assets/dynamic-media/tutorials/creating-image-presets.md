@@ -23,4 +23,4 @@ I den här videon går du igenom stegen för att skapa bildförinställningar i 
 
 >[!VIDEO](https://video.tv.adobe.com/v/335459?quality=12&learn=on)
 
-Lär dig de bästa sätten att skapa dynamiska medie-URL:er och bildförinställningar i AEM Assets och förstå hur allt fungerar! [Titta på videon här](https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-urls-and-image-presets).
+Lär dig de bästa sätten att skapa dynamiska medie-URL:er och bildförinställningar i AEM Assets och förstå hur allt fungerar! [Titta på videon här](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/assets/dynamic-media/images/dynamic-media-urls-and-image-presets).

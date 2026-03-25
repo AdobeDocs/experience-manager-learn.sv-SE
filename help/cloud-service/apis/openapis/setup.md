@@ -212,11 +212,11 @@ Låt oss följa stegen för att konfigurera AEM-instansen så att den aktiveras 
 
 1. Bekräfta konfigurationsändringarna och skicka ändringarna till Git-fjärrdatabasen som Cloud Manager pipeline är ansluten till.
 
-1. Distribuera ovanstående ändringar med [konfigurationsförloppet](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline) i Cloud Manager.
+1. Distribuera ovanstående ändringar med [konfigurationsförloppet](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/cicd-pipelines/introduction-ci-cd-pipelines#config-deployment-pipeline) i Cloud Manager.
 
    ![Distribuera YAML](./assets/setup/config-pipeline.png)
 
-Observera att filen `api.yaml` också kan installeras i en [RDE](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/overview), [med kommandoradsverktyg](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files). Detta är användbart när du vill testa konfigurationsändringarna innan du distribuerar dem till produktionsmiljön.
+Observera att filen `api.yaml` också kan installeras i en [RDE](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/overview), [med kommandoradsverktyg](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/developing/rde/how-to-use#deploy-configuration-yaml-files). Detta är användbart när du vill testa konfigurationsändringarna innan du distribuerar dem till produktionsmiljön.
 
 >[!CAUTION]
 >

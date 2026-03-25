@@ -86,7 +86,7 @@ Innan du får åtkomst till Adobe API:er är det viktigt att du förstår dessa 
 
 - **[Adobe Developer Console Project](https://developer.adobe.com/developer-console/docs/guides/projects/)**: Central plats för hantering av API-integreringar, händelser och körningsfunktioner. Här konfigurerar du API:er, anger autentisering och genererar nödvändiga autentiseringsuppgifter.
 
-- **[Produktprofiler](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html)**: Produktprofiler innehåller en behörighetsförinställning som gör att du kan styra användar- eller programåtkomst till Adobe-produkter som AEM, Adobe Target, Adobe Analytics och andra. Alla Adobe-produkter har fördefinierade produktprofiler.
+- **[Produktprofiler](https://helpx.adobe.com/se/enterprise/using/manage-product-profiles.html)**: Produktprofiler innehåller en behörighetsförinställning som gör att du kan styra användar- eller programåtkomst till Adobe-produkter som AEM, Adobe Target, Adobe Analytics och andra. Alla Adobe-produkter har fördefinierade produktprofiler.
 
 - **Tjänster**: Tjänsterna definierar de faktiska behörigheterna och är associerade med produktprofilen. Om du vill minska eller öka behörighetsförinställningen kan du avmarkera eller välja de tjänster som är kopplade till produktprofilen. Det innebär att du kan styra åtkomstnivån för produkten och dess API:er. I AEM as a Cloud Service representerar tjänster användargrupper med fördefinierade åtkomstkontrollistor (ACL) för databasnoder, vilket möjliggör detaljerad behörighetshantering.
 

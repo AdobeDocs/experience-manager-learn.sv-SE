@@ -38,7 +38,7 @@ I det här kapitlet skapar och kör vi en frontpipeline i Adobe Cloud Manager. D
 
 Det här är en självstudiekurs i flera delar och det antas att de steg som beskrivs i [Uppdatera AEM-standardprojekt](./update-project.md) har slutförts.
 
-Kontrollera att du har [behörighet att skapa och distribuera pipelines i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=en#role-definitions) och [åtkomst till en AEM as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html).
+Kontrollera att du har [behörighet att skapa och distribuera pipelines i Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/content/requirements/users-and-roles.html?lang=sv-SE#role-definitions) och [åtkomst till en AEM as a Cloud Service-miljö](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/manage-environments.html?lang=sv-SE).
 
 ## Byt namn på befintlig pipeline
 

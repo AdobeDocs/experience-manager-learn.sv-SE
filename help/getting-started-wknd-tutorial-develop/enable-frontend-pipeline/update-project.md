@@ -195,7 +195,7 @@ Slutligen kan du överföra dessa ändringar till Adobe Git-databasen.
 
 ## Varning - _Aktivera frontslutspipeline_-knapp
 
-Alternativet [Plats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) för [spårningsväljaren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html) visar knappen **Aktivera frontpipeline** när du väljer platsroten eller webbplatssidan. Om du klickar på knappen **Aktivera frontpipeline** åsidosätts de **Sling-konfigurationer** som anges ovan. Kontrollera att **du inte klickar på den här knappen** efter att du distribuerat de ovanstående ändringarna via Cloud Manager pipeline-körning.
+Alternativet [Plats](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=sv-SE) för [spårningsväljaren](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/authoring/getting-started/basic-handling.html?lang=sv-SE) visar knappen **Aktivera frontpipeline** när du väljer platsroten eller webbplatssidan. Om du klickar på knappen **Aktivera frontpipeline** åsidosätts de **Sling-konfigurationer** som anges ovan. Kontrollera att **du inte klickar på den här knappen** efter att du distribuerat de ovanstående ändringarna via Cloud Manager pipeline-körning.
 
 ![Aktivera knapp för frontslutspipeline](assets/enable-front-end-Pipeline-button.png)
 

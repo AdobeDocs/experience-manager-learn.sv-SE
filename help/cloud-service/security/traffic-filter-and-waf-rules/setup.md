@@ -337,4 +337,4 @@ CARDS
 
 ## Ytterligare resurser
 
-- [Trafikfilterregler inklusive WAF-regler](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
+- [Trafikfilterregler inklusive WAF-regler](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/security/traffic-filter-rules-including-waf)
