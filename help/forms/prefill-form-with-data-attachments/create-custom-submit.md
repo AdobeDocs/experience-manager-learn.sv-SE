@@ -40,7 +40,7 @@ För att tillgodose användningsexemplet skapades en anpassad skicka-tjänst fö
 }
 ```
 
-Elementet _**ContractCopy**_ representerar en bifogad fil och används för att hämta bifogade filer som har skickats med formuläret.
+Elementet _&#x200B;**ContractCopy**&#x200B;_ representerar en bifogad fil och används för att hämta bifogade filer som har skickats med formuläret.
 För att kunna förifylla anpassningsbara formulär med data och bilagor, sparas de inskickade bilagorna i Azure-portalen och dataelementet i kontraktkopieobjektet i de inskickade data uppdateras med URL:en för den sparade bilagan.
 Den anpassade skicka-tjänsten extraherar och lagrar de bifogade filerna i Azure Portal.  Uppdaterade inskickade data ser ut så här
 

@@ -74,7 +74,7 @@ Följ de här stegen när du ska distribuera reglerna:
    - **Typ**: Distributionsförlopp
    - **Pipelinenamn**: Dev-Config
 
-   ![Dialogrutan Cloud Manager Config Pipeline ](./assets/setup/cloud-manager-config-pipeline-step1-dialog.png)
+   ![Dialogrutan Cloud Manager Config Pipeline &#x200B;](./assets/setup/cloud-manager-config-pipeline-step1-dialog.png)
 
 4. Source Code-konfiguration:
 
@@ -85,7 +85,7 @@ Följ de här stegen när du ska distribuera reglerna:
    - **Git-grenen**: Din arbetsgren
    - **Kodplats**: `/config`
 
-   ![Dialogrutan Cloud Manager Config Pipeline ](./assets/setup/cloud-manager-config-pipeline-step2-dialog.png)
+   ![Dialogrutan Cloud Manager Config Pipeline &#x200B;](./assets/setup/cloud-manager-config-pipeline-step2-dialog.png)
 
 5. Granska pipelinekonfigurationen och klicka på **Spara**.
 

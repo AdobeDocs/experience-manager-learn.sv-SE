@@ -212,7 +212,7 @@ Varningar genereras när trafikfilterreglerna aktiveras. Du kan granska dessa va
 
 ## Analysera resultaten
 
-Om du vill analysera resultatet av trafikfilterreglerna kan du använda AEMCS CDN-loggarna och ELK-kontrollpanelen. Följ instruktionerna från inställningsavsnittet [CDN-loggar ](../setup.md#ingest-cdn-logs) för att importera CDN-loggarna till ELK-stacken.
+Om du vill analysera resultatet av trafikfilterreglerna kan du använda AEMCS CDN-loggarna och ELK-kontrollpanelen. Följ instruktionerna från inställningsavsnittet [CDN-loggar &#x200B;](../setup.md#ingest-cdn-logs) för att importera CDN-loggarna till ELK-stacken.
 
 På följande skärmbild ser du CDN-loggarna i AEM Dev-miljön som är inkapslade i ELK-stacken.
 
