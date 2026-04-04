@@ -76,5 +76,5 @@ InDesign mallfil och bildstöd
 
 Hämta [InDesign-mallfilen och bildstöd](assets/asset-templates-tutorial-video--supporting-files-1.zip)
 
-* [Ladda ned testversion av InDesign CC](https://creative.adobe.com/products/download/indesign)
-* Testversionen av InDesign Server kan laddas ned från [Adobe Prerelease-webbplatsen](https://www.adobeprerelease.com/) eller [CC Enterprise-kunder kan kontakta sin Account Executive för att begära testlicens av InDesign Server](https://www.adobe.com/products/indesignserver/faq.html)
+* [Ladda ned testversion av InDesign CC](https://creative.adobe.com/se/products/download/indesign)
+* Testversionen av InDesign Server kan laddas ned från [Adobe Prerelease-webbplatsen](https://www.adobeprerelease.com/) eller [CC Enterprise-kunder kan kontakta sin Account Executive för att begära testlicens av InDesign Server](https://www.adobe.com/se/products/indesignserver/faq.html)

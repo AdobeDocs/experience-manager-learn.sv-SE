@@ -46,7 +46,7 @@ Det finns två grundläggande strategier för att starta ett AEM Sites-projekt.
 
 ## Adobe XD UI Kit
 
-För att den här självstudiekursen ska bli närmare ett verkligt scenario skapade Adobe begåvade UX-designers dummies för webbplatsen med [Adobe XD](https://www.adobe.com/products/xd.html). Under självstudiekursen implementeras olika delar av designen till en helt redigerbar AEM-webbplats. Ett särskilt tack till **Lorenzo Buosi** och **Kilian Modiola** som skapade den vackra designen för WKND-webbplatsen.
+För att den här självstudiekursen ska bli närmare ett verkligt scenario skapade Adobe begåvade UX-designers dummies för webbplatsen med [Adobe XD](https://www.adobe.com/se/products/xd.html). Under självstudiekursen implementeras olika delar av designen till en helt redigerbar AEM-webbplats. Ett särskilt tack till **Lorenzo Buosi** och **Kilian Modiola** som skapade den vackra designen för WKND-webbplatsen.
 
 Ladda ned XD UI-kit:
 

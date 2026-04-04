@@ -21,13 +21,13 @@ ht-degree: 0%
 
 # UI Planning with Adobe XD {#ui-planning-adobe-xd}
 
-I de flesta fall börjar planering av en ny webbplats med dummies och statisk design. [Adobe XD](https://www.adobe.com/products/xd.html) är det bästa designverktyget för att skapa användarupplevelser. Adobe rekommenderar att du planerar implementeringen av dina webbplatser genom att använda gränssnittsmodeller med Adobe XD eller något annat verktyg.
+I de flesta fall börjar planering av en ny webbplats med dummies och statisk design. [Adobe XD](https://www.adobe.com/se/products/xd.html) är det bästa designverktyget för att skapa användarupplevelser. Adobe rekommenderar att du planerar implementeringen av dina webbplatser genom att använda gränssnittsmodeller med Adobe XD eller något annat verktyg.
 
 ## Förutsättningar {#prerequisites}
 
 Det här är en självstudiekurs i flera delar och det antas att stegen som beskrivs i det föregående kapitlet har slutförts. Det här kapitlet är bara en övervaknings- och inlärningsdel, ingen åtgärd krävs för att kunna fortsätta med efterföljande kapitel.
 
-Om du vill följa med i videofilmerna som du behöver ha [Adobe XD](https://www.adobe.com/products/xd/pricing/free-trial.html) installerat finns det en [kostnadsfri testversion](https://www.adobe.com/products/xd/pricing/free-trial.html).
+Om du vill följa med i videofilmerna som du behöver ha [Adobe XD](https://www.adobe.com/se/products/xd/pricing/free-trial.html) installerat finns det en [kostnadsfri testversion](https://www.adobe.com/se/products/xd/pricing/free-trial.html).
 
 ## Syfte
 
@@ -62,7 +62,7 @@ Steg på hög nivå:
 
 Grattis! Du har lärt dig hur Adobe XD UI Kits kan användas för att mappa och planera en AEM Sites-implementering.
 
-Det finns ytterligare [UI-kit &#x200B;](https://www.adobe.com/products/xd/features/ui-kits.html) för att kontrollera och hämta.
+Det finns ytterligare [UI-kit &#x200B;](https://www.adobe.com/se/products/xd/features/ui-kits.html) för att kontrollera och hämta.
 
 ### Nästa steg {#next-steps}
 

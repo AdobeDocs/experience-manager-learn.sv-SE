@@ -21,7 +21,7 @@ ht-degree: 0%
 
 # Sidmallar {#page-templates}
 
-I det här kapitlet utforskar vi förhållandet mellan en sidmall och en sida. Vi kommer att bygga ut en ej formaterad artikel i tidskriften som bygger på några modeller från [AdobeXD](https://www.adobe.com/products/xd.html). Under processen att skapa mallen beskrivs kärnkomponenter och avancerade principkonfigurationer.
+I det här kapitlet utforskar vi förhållandet mellan en sidmall och en sida. Vi kommer att bygga ut en ej formaterad artikel i tidskriften som bygger på några modeller från [AdobeXD](https://www.adobe.com/se/products/xd.html). Under processen att skapa mallen beskrivs kärnkomponenter och avancerade principkonfigurationer.
 
 ## Förutsättningar {#prerequisites}
 
