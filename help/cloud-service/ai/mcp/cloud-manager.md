@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Med Cloud Manager MCP Server kan AEM-utvecklare köra pipelines, felsöka och komma åt Cloud Manager-verktyg direkt i utvecklingsmiljön - ingen kontextväxling.
 
->[!VIDEO](https://video.tv.adobe.com/v/3480340/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3480346/?captions=swe&learn=on&enablevpops)
