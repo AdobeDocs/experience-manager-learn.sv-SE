@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Läs om hur AI Assistant kan förvandla dina avsikter till handling. I den här videon utforskar vi hur AI Assistant fungerar som en länk till AI-funktionerna i AEM. Du lär dig också AI på konceptnivå och presenterar snabbt agenter i AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/3483212/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3483216/?captions=swe&learn=on&enablevpops)
