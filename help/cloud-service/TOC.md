@@ -6,17 +6,17 @@ solution: Experience Manager, Experience Manager as a Cloud Service
 sub-product: Experience Manager as a Cloud Service
 version: Experience Manager as a Cloud Service
 team: TM
-source-git-commit: 3e57cadc429724a49464a6a26c6f32ddf24228b1
+source-git-commit: 2eb26576a0308d8b74c2d1ce7db61c148936d076
 workflow-type: tm+mt
-source-wordcount: '1500'
-ht-degree: 4%
+source-wordcount: '1505'
+ht-degree: 6%
 
 ---
 
 
 # Självstudiekurser om Adobe Experience Manager as a Cloud Service {#cloud-service}
 
-+ [Ökning](./overview.md)
++ [Översikt](./overview.md)
 + AEM testversioner {#aem-trials}
    + [Bilder](./aem-trials/images.md)
 + Spellistor{#playlists}
@@ -29,18 +29,19 @@ ht-degree: 4%
       + [Experience Manager - Styrnings- och personalmodeller och arkitekter](./introduction/experience-manager-governance-and-staffing-models.md)
 + [Experience Hub](./experience-hub.md)
 + AI {#ai}
-   + [Ökning](./ai/overview.md)
+   + [Översikt](./ai/overview.md)
    + [Konfigurera och provisionera](./ai/setup.md)
    + AI-assistenten {#ai-assistant}
-      + [Ökning](./ai/ai-assistant/overview.md)
+      + [Översikt](./ai/ai-assistant/overview.md)
       + [Vad är AI Assistant?](./ai/ai-assistant/what-is-ai-assistant.md)
       + [Vem är AI Assistant till?](./ai/ai-assistant/who-is-ai-assistant-for.md)
       + [Nyckelfunktioner](./ai/ai-assistant/key-capabilities.md)
+      + [AI Assistant och AI](./ai/ai-assistant/ai-assistant-and-agentic-ai.md)
    + Agenter {#agents}
-      + [Ökning](./ai/agents/agents-in-aem.md)
+      + [Översikt](./ai/agents/agents-in-aem.md)
       + [Felsökning för Dev Agent och CI/CD](./ai/agents/development-agent-troubleshoot-ci-cd-pipeline.md)
    + MCP-servrar {#mcp-servers}
-      + [Ökning](./ai/mcp/overview.md)
+      + [Översikt](./ai/mcp/overview.md)
       + [Snabba upp AEM Content Operations med MCP-servern](./ai/mcp/accelerate-content-operations-with-aem-mcp-server.md)
       + [Cloud Manager MCP Server](./ai/mcp/cloud-manager.md)
 + Experience Cloud-integreringar{#integrations}
@@ -54,7 +55,7 @@ ht-degree: 4%
    + [Författare och publiceringstjänster](./underlying-technology/introduction-author-publish.md)
    + [Dispatcher](./underlying-technology/introduction-dispatcher.md)
 + Edge Delivery Services {#edge-delivery-services}
-   + [AEM Assets Sidekick-plugin](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html?lang=sv-SE){target=_blank}
+   + [AEM Assets Sidekick-plugin](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/edge-delivery-services/sidekick-plugin.html){target=_blank}
 + Cloud Manager {#cloud-manager}
    + [Program](./cloud-manager/programs.md)
    + [Miljö](./cloud-manager/environments.md)
@@ -62,7 +63,7 @@ ht-degree: 4%
    + [CI/CD Production Pipeline](./cloud-manager/cicd-production-pipeline.md)
    + [CI/CD icke-produktionsförlopp](./cloud-manager/cicd-non-production-pipeline.md)
    + [Aktivitet](./cloud-manager/activity.md)
-   + [Anpassade domännamn](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
+   + [Anpassade domännamn](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/content-delivery/custom-domain-names){target=_blank}
    + [Innehållsåterställning](./cloud-manager/content-restore.md)
    + Dev Ops{#devops}
       + [Distribuera kod](./cloud-manager/devops/deploy-code.md)
@@ -73,7 +74,7 @@ ht-degree: 4%
       + [Dispatcher Configurations](./cloud-manager/devops/dispatcher-configurations.md)
       + [CDN-logganalys](./cloud-manager/devops/cdn-log-analysis.md)
 + Installation av lokal utvecklingsmiljö {#local-development-environment-set-up}
-   + [Ökning](./local-development-environment/overview.md)
+   + [Översikt](./local-development-environment/overview.md)
    + [Utvecklingsverktyg](./local-development-environment/development-tools.md)
    + [Lokal AEM SDK](./local-development-environment/aem-runtime.md)
    + [Dispatcher verktyg lokalt](./local-development-environment/dispatcher-tools.md)
@@ -84,7 +85,7 @@ ht-degree: 4%
          + [Generera åtkomsttoken för server-till-server](./developing/extensibility/app-builder/server-to-server-auth.md)
          + [Verifiering av Github-webkrok](./developing/extensibility/app-builder/github-webhook-verification.md)
       + Utbyggbarhet för användargränssnitt{#ui}
-         + [Ökning](./developing/extensibility/ui/overview.md)
+         + [Översikt](./developing/extensibility/ui/overview.md)
          + [Adobe Developer Console Project](./developing/extensibility/ui/adobe-developer-console-project.md)
          + [Initiera app](./developing/extensibility/ui/app-initialization.md)
          + [Registrera tillägg](./developing/extensibility/ui/extension-registration.md)
@@ -93,7 +94,7 @@ ht-degree: 4%
          + [Verifiera](./developing/extensibility/ui/verify.md)
          + [Distribuera](./developing/extensibility/ui/deploy.md)
          + Innehållsfragment{#content-fragments}
-            + [Ökning](./developing/extensibility/ui/content-fragments/overview.md)
+            + [Översikt](./developing/extensibility/ui/content-fragments/overview.md)
             + Exempel{#examples}
                + [Generering av AI-bilder](./developing/extensibility/ui/content-fragments/examples/console-image-generation-and-image-upload.md)
                + [Uppdatering av massegenskap](./developing/extensibility/ui/content-fragments/examples/console-bulk-property-update.md)
@@ -132,26 +133,26 @@ ht-degree: 4%
       + [Kör jobb på ledarinstans i AEM Author](./developing/advanced/run-job-on-leader-instance-in-aem-author.md)
       + [Söka efter och ta bort inaktuella API:er](./developing/advanced/deprecated-apis-find-removal.md)
    + Rapid Development Environment{#rde}
-      + [Ökning](./developing/rde/overview.md)
+      + [Översikt](./developing/rde/overview.md)
       + [Så här konfigurerar du](./developing/rde/how-to-setup.md)
       + [Så här använder du](./developing/rde/how-to-use.md)
       + [Utveckling/livscykeln](./developing/rde/development-life-cycle.md)
    + Universal Editor{#universal-editor}
       + Redigera appar{#react-app-editing}
-         + [Ökning](./developing/universal-editor/react-app/overview.md)
+         + [Översikt](./developing/universal-editor/react-app/overview.md)
          + [Lokal utvecklingskonfiguration](./developing/universal-editor/react-app/local-development-setup.md)
          + [Instrument React App](./developing/universal-editor/react-app/instrument-to-edit-content.md)
    + [AEM SDK API JavaDocs](https://javadoc.io/doc/com.adobe.aem/aem-sdk-api/latest/index.html){target=_blank}
 + Felsöka AEM{#debugging}
    + Felsöka AEM SDK{#debugging-aem-sdk}
-      + [Ökning](./debugging/aem-sdk-local-quickstart/overview.md)
+      + [Översikt](./debugging/aem-sdk-local-quickstart/overview.md)
       + [Loggar](./debugging/aem-sdk-local-quickstart/logs.md)
       + [Fjärrfelsökning](./debugging/aem-sdk-local-quickstart/remote-debugging.md)
       + [OSGi-webbkonsol](./debugging/aem-sdk-local-quickstart/osgi-web-consoles.md)
       + [Dispatcher Tools](./debugging/aem-sdk-local-quickstart/dispatcher-tools.md)
       + [Andra verktyg](./debugging/aem-sdk-local-quickstart/other-tools.md)
    + Felsöka AEM as a Cloud Service{#debugging-aem-as-a-cloud-service}
-      + [Ökning](./debugging/cloud-service/overview.md)
+      + [Översikt](./debugging/cloud-service/overview.md)
       + [Loggar](./debugging/cloud-service/logs.md)
       + [Bygg och driftsätt](./debugging/cloud-service/build-and-deployment.md)
       + [Developer Console](./debugging/cloud-service/developer-console.md)
@@ -159,7 +160,7 @@ ht-degree: 4%
       + Risker{#risks}
          + [Traversal-varningar](./debugging/cloud-service/risks/traversals.md)
 + Personalisering {#personalization}
-   + [Ökning](./personalization/overview.md)
+   + [Översikt](./personalization/overview.md)
    + [Livedemo](./personalization/live-demo.md)
    + Inställningar{#setup}
       + [Integrera Adobe Target](./personalization/setup/integrate-adobe-target.md)
@@ -169,9 +170,9 @@ ht-degree: 4%
       + [Beteendeanpassning](./personalization/use-cases/behavioral-targeting.md)
       + [Kända Personalization](./personalization/use-cases/known-user-personalization.md)
 + AEM API:er{#aem-apis}
-   + [Ökning](./apis/overview.md)
+   + [Översikt](./apis/overview.md)
    + OpenAPI:er{#openapis}
-      + [Ökning](./apis/openapis/overview.md)
+      + [Översikt](./apis/openapis/overview.md)
       + [Så här konfigurerar du](./apis/openapis/setup.md)
       + [Server-till-server-autentisering](./apis/openapis/use-cases/invoke-api-using-oauth-s2s.md)
       + [Användarautentisering (webbprogram)](./apis/openapis/use-cases/invoke-api-using-oauth-web-app.md)
@@ -183,12 +184,12 @@ ht-degree: 4%
    + [Anpassat domännamn](./content-delivery/custom-domain-names.md)
    + [Anpassat domännamn med Adobe hanterat CDN](./content-delivery/custom-domain-name-with-adobe-managed-cdn.md)
    + [Anpassat domännamn med kundens CDN](./content-delivery/custom-domain-names-with-customer-managed-cdn.md)
-   + [Cachelagring](https://experienceleague.adobe.com/sv/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
+   + [Cachelagring](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/caching/overview){target=_blank}
    + [Adobe CDN - bortom cachelagring](./content-delivery/adobe-cdn-beyond-caching.md)
    + [Anpassade felsidor](./content-delivery/custom-error-pages.md)
-   + [URL-omdirigeringar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html?lang=sv-SE){target=_blank}
+   + [URL-omdirigeringar](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/administration/url-redirection.html){target=_blank}
 + Cachning{#caching}
-   + [Ökning](./caching/overview.md)
+   + [Översikt](./caching/overview.md)
    + [AEM Publish Service](./caching/publish.md)
    + [AEM Author Service](./caching/author.md)
    + [Analys av träffar i CDN-cache](./caching/cdn-cache-hit-ratio-analysis.md)
@@ -197,18 +198,18 @@ ht-degree: 4%
       + [Inaktivera cachelagring](./caching/how-to/disable-caching.md)
       + [Rensa cache](./caching/how-to/purge-cache.md)
 + Åtkomst till AEM{#accessing}
-   + [Ökning](./accessing/overview.md)
+   + [Översikt](./accessing/overview.md)
    + [Adobe IMS-användare](./accessing/adobe-ims-users.md)
    + [Adobe IMS-användargrupper](./accessing/adobe-ims-user-groups.md)
    + [Produktprofiler för Adobe IMS](./accessing/adobe-ims-product-profiles.md)
    + [AEM användare, grupper och behörigheter](./accessing/aem-users-groups-and-permissions.md)
    + [Konfigurera åtkomst till AEM genomgång](./accessing/walk-through.md)
 + Autentisering{#authentication}
-   + [Ökning](./authentication/authentication.md)
+   + [Översikt](./authentication/authentication.md)
    + [SAML 2.0](./authentication/saml-2-0.md)
    + [SAML-inloggningskopplingar](./authentication/saml-2-0-login-hook.md)
 + Avancerat nätverksbyggande{#networking}
-   + [Ökning](./networking/advanced-networking.md)
+   + [Översikt](./networking/advanced-networking.md)
    + [Flexibel portutgång](./networking/flexible-port-egress.md)
    + [Dedikerad IP-adress för utgångar](./networking/dedicated-egress-ip-address.md)
    + [Virtuellt privat nätverk](./networking/vpn.md)
@@ -231,7 +232,7 @@ ht-degree: 4%
          + [Begränsa åtkomst](./security/traffic-filter-and-waf-rules/how-to/request-blocking.md)
          + [Normalisera begäranden](./security/traffic-filter-and-waf-rules/how-to/request-transformation.md)
 + AEM Eventing{#aem-eventing}
-   + [Ökning](./eventing/overview.md)
+   + [Översikt](./eventing/overview.md)
    + Exempel{#examples}
       + [Webkrok - Ta emot AEM Events](./eventing/examples/webhook.md)
       + [Journalföring - Läs in AEM-händelser](./eventing/examples/journaling.md)
@@ -271,7 +272,7 @@ ht-degree: 4%
       + [Verktyg för resursarbetsflödesmigrering](./migration/cloud-acceleration-manager/asset-workflow-migration-tool.md)
       + [Navigera i Cloud Acceleration Manager](./migration/cloud-acceleration-manager/navigating.md)
       + [Använda Cloud Acceleration Manager](./migration/cloud-acceleration-manager/using.md)
-+ [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html?lang=sv-SE){target=_blank}
++ [Innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-learn/content-fragments-console/overview.html){target=_blank}
 + Forms{#forms}
    + Utveckla för Forms as a Cloud Service{#developing-for-cloud-service}
       + [1 - Komma igång](./forms/developing-for-cloud-service/getting-started.md)
@@ -434,7 +435,7 @@ ht-degree: 4%
       + [Fyll i formulär i förväg med data från SharePoint-listan](./forms/forms-cs-sharepoint/prefill-data-from-sharepoint-list.md)
       + [Infoga data i SharePoint-listan med hjälp av arbetsflöde](./forms/forms-cs-sharepoint/submit-data-sharepoint-list-workflow.md)
 + Asset Compute Extensibility{#asset-compute}
-   + [Ökning](./asset-compute/overview.md)
+   + [Översikt](./asset-compute/overview.md)
    + Konfigurera{#set-up}
       + [Konto- och tjänsteetablering](./asset-compute/set-up/accounts-and-services.md)
       + [Lokal utvecklingsmiljö](./asset-compute/set-up/development-environment.md)
@@ -456,11 +457,11 @@ ht-degree: 4%
    + [Felsökning](./asset-compute/troubleshooting.md)
 
 + Självstudiekurser i flera steg{#multi-step-tutorials}
-   + [AEM Sites-utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE){target=_blank}
-   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE){target=_blank}
+   + [AEM Sites-utveckling](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html){target=_blank}
+   + [GraphQL](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html){target=_blank}
    + [SPA Editor (React)](https://experienceleague.adobe.com/docs/experience-manager-learn/spa-react-tutorial/overview.html){target=_blank}
-   + [AEM Sites och Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html?lang=sv-SE){target=_blank}
-   + [Tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=sv-SE){target=_blank}
+   + [AEM Sites och Adobe Target](https://experienceleague.adobe.com/docs/experience-manager-learn/aem-target-tutorial/overview.html){target=_blank}
+   + [Tokenbaserad autentisering](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html){target=_blank}
 + Expertresurser {#expert-resources}
    + AEM Champions {#aem-champions}
       + [Cloud Manager Onboarding Playbook](./expert-resources/aem-champions/onboarding-playbook.md)
