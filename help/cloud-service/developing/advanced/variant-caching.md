@@ -6,16 +6,18 @@ topic: Development
 feature: CDN Cache, Dispatcher
 exl-id: fdf62074-1a16-437b-b5dc-5fb4e11f1355
 duration: 149
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: 0f9480bb52765daa01c5372a117a441adb03bb9d
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
 
 # Cachelagrar sidvarianter
 
-Lär dig hur du konfigurerar och använder AEM som en molntjänst för att stödja cachelagring av sidvarianter.
+Webbupplevelser måste ofta anpassa innehåll för olika målgrupper, oavsett om det är baserat på geografi, personalisering eller experimenterande. I den här självstudiekursen får du lära dig hur du konfigurerar Adobe Experience Manager (AEM) as a Cloud Service så att du effektivt kan cachelagra och betjäna flera sidvarianter med hjälp av cookie-filen `x-aem-variant`, vilket ger både flexibilitet och höga prestanda i stor skala.
+
+På en hög nivå innebär detta att ditt projekts kod ställer in en besökarspecifik `x-aem-variant`-cookie (t.ex. baserad på plats), som sedan omvandlas till en begäranderubrik vid CDN. Detta värde är inbyggt i begärande-URL:en via en omskrivningsregel som gör att AEM kan återge rätt variant samtidigt som CDN och dispatchern kan cachelagra en separat version av sidan för varje variant.
 
 ## Exempel på användningsområden
 
@@ -27,7 +29,7 @@ Lär dig hur du konfigurerar och använder AEM som en molntjänst för att stöd
 
 + Identifiera variantnyckeln och antalet värden som den kan ha. I vårt exempel varierar vi mellan olika delstater, så det högsta antalet är 50. Detta är tillräckligt litet för att inte orsaka problem med variantgränserna vid CDN. [Granska avsnittet med variantbegränsningar](#variant-limitations).
 
-+ AEM-koden måste ange cookien __&quot;x-aem-variant&quot;__ till besökarens önskade tillstånd (t.ex. `Set-Cookie: x-aem-variant=NY`) på den inledande HTTP-begärans motsvarande HTTP-svar.
++ Projektkoden måste ange cookien __&quot;x-aem-variant&quot;__ till besökarens önskade tillstånd (t.ex. `Set-Cookie: x-aem-variant=NY`) på den inledande HTTP-begärans motsvarande HTTP-svar. AEM och det Adobe-hanterade CDN-nätverket fastställer eller ställer inte in `x-aem-variant` automatiskt. Om den här rubriken/cookien finns beror det på att programmet har ställt in den. Den här rubriken kan ställas in via ett anpassat AEM-serverfilter eller AEM-serverfiltret (som visas i kodexemplet nedan).
 
 + Efterföljande förfrågningar från besökaren skickar den cookien (t.ex. `"Cookie: x-aem-variant=NY"`) och cookien omvandlas på CDN-nivå till ett fördefinierat huvud (dvs. `x-aem-variant:NY`) som skickas till dispatchern.
 
@@ -49,13 +51,13 @@ Lär dig hur du konfigurerar och använder AEM som en molntjänst för att stöd
 
 ## Användning
 
-1. För att demonstrera funktionen kommer vi att använda [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=sv-SE)s implementering som exempel.
+1. För att demonstrera funktionen kommer vi att använda [WKND](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html)s implementering som exempel.
 
 1. Implementera en [SlingServletFilter](https://sling.apache.org/documentation/the-sling-engine/filters.html) i AEM för att ange `x-aem-variant`-cookie för HTTP-svaret, med ett variantvärde.
 
 1. AEM CDN omvandlar automatiskt `x-aem-variant`-cookie till en HTTP-rubrik med samma namn.
 
-1. Lägg till en Apache Web Server mod_rewrite-regel i ditt `dispatcher`-projekt, som ändrar sökvägen till begäran så att den innehåller variantväljaren.
+1. Lägg till regeln `mod_rewrite` för Apache-webbservern i ditt `dispatcher`-projekt, som ändrar sökvägen till begäran så att den innehåller variantväljaren.
 
 1. Distribuera filtret och skriv om reglerna med Cloud Manager.
 
