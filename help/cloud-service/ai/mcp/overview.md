@@ -22,7 +22,7 @@ Lär dig hur du använder AEM _Model Context Protocol (MCP)-servrar_ från en AI
 
 ## Lista över AEM MCP-servrar
 
-Alla AEM MCP-servrar är tillgängliga under `https://mcp.adobeaemcloud.com/adobe/mcp/`. Mer information finns i [Använda MCP med AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service).
+Alla AEM MCP-servrar är tillgängliga under `https://mcp.adobeaemcloud.com/adobe/mcp/`. Mer information finns i [Använda MCP med AEM as a Cloud Service](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service).
 
 - **Innehåll** (`/content`) - Innehållsåtgärder som att skapa, läsa, uppdatera och ta bort (CRUD) för sidor och innehållsfragment samt resursimport.
 - **Innehåll (skrivskyddat)** (`/content-readonly`) - Skrivskyddade innehållsåtgärder (Get, List/Search) för sidor och innehållsfragment.
@@ -71,7 +71,7 @@ Kort och gott: **Host** är ditt IDE- eller chattbaserade program, **Client** ä
 ## Inställningar
 
 AEM MCP-servrar är utformade för att fungera med en definierad uppsättning MCP-kompatibla program.
-Mer information finns i [MCP-program som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications) om du vill konfigurera AEM MCP-servrar i en IDE- eller chattbaserad applikation.
+Mer information finns i [MCP-program som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications) om du vill konfigurera AEM MCP-servrar i en IDE- eller chattbaserad applikation.
 
 ## Användningsexempel
 
