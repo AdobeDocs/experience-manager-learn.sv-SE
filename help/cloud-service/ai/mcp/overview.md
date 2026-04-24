@@ -9,9 +9,9 @@ duration: 0
 last-substantial-update: 2026-03-04T00:00:00Z
 jira: KT-20473
 exl-id: 7f2e4e37-6440-423e-9ba9-9228fe03600b
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: 794a0109e4b28b452c462c5cab37e2d094ab4897
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,10 @@ Lär dig hur du använder AEM _Model Context Protocol (MCP)-servrar_ från en AI
 
 ## Lista över AEM MCP-servrar
 
-Alla AEM MCP-servrar är tillgängliga under `https://mcp.adobeaemcloud.com/adobe/mcp/`. Mer information finns i [Använda MCP med AEM as a Cloud Service](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service).
+Alla AEM MCP-servrar är tillgängliga under `https://mcp.adobeaemcloud.com/adobe/mcp/`. Mer information finns i [Använda MCP med AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/using-mcp-with-aem-as-a-cloud-service).
 
-- **Innehåll** (`/content`) - Fullständig åtkomst för att skapa, läsa, uppdatera och ta bort sidor, fragment och resurser.
-- **Innehåll (skrivskyddat)** (`/content-readonly`) - skrivskyddat för att visa och hämta sidor, fragment och resurser (inga ändringar).
+- **Innehåll** (`/content`) - Innehållsåtgärder som att skapa, läsa, uppdatera och ta bort (CRUD) för sidor och innehållsfragment samt resursimport.
+- **Innehåll (skrivskyddat)** (`/content-readonly`) - Skrivskyddade innehållsåtgärder (Get, List/Search) för sidor och innehållsfragment.
 - **Cloud Manager** (`/cloudmanager`) - För att hantera Adobe Cloud Manager-program, miljöer, databaser och pipelines.
 
 >[!TIP]
@@ -43,7 +43,7 @@ Så här jämför de här två användningsmönstren:
 
 | Proportioner | Människocentral | Byråer |
 | ------ | ------------- | ------- |
-| **Vem kör åtgärder** | Du. <br> AI föreslår eller kör verktyg för dig i det IDE- eller chattbaserade programmet. | AI. <br> Den väljer vilka verktyg som ska användas och fortsätter med minimal vägledning. |
+| **Vem kör åtgärder** | Du. <br> AI föreslår eller kör verktyg åt dig i det IDE- eller chattbaserade programmet. | AI. <br> Det avgör vilka verktyg som ska användas och fortsätter att fungera med minimal vägledning. |
 | **Beslutsmyndighet** | Du behåller kontrollen. Du godkänner eller utlöser varje steg. | AI har större frihet. De effektiva åtgärderna kan kräva skyddsräcken eller godkännanden. |
 | **Normalt användningsmönster** | **Per utvecklare** använder du den från ditt eget IDE- eller chattbaserade program, en utvecklare per session, som är bra för dagligt utvecklingsarbete. | **Delad** via ett autentiskt program, som delade tjänster och gateways för många användare eller agenter. |
 | **Passar bäst för** | Granska innehåll, göra guidade uppdateringar, utforska eller upprepa uppgifter samtidigt som du är kvar i slingan. | Byråa arbetsflöden, batchjobb, rörledningar och mål där systemet ska fungera med minimal insats. |
@@ -71,7 +71,7 @@ Kort och gott: **Host** är ditt IDE- eller chattbaserade program, **Client** ä
 ## Inställningar
 
 AEM MCP-servrar är utformade för att fungera med en definierad uppsättning MCP-kompatibla program.
-Mer information finns i [MCP-program som stöds](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications) om du vill konfigurera AEM MCP-servrar i en IDE- eller chattbaserad applikation.
+Mer information finns i [MCP-program som stöds](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/mcp-support/using-mcp-with-aem-as-a-cloud-service#supported-mcp-applications) om du vill konfigurera AEM MCP-servrar i en IDE- eller chattbaserad applikation.
 
 ## Användningsexempel
 
