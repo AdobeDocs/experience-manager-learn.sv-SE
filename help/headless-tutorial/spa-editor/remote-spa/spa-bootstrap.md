@@ -70,7 +70,7 @@ Flera miljövariabler måste vara exponerade för fjärr-SPA så att de kan inte
       * Krävs för användning med AEM Author
       * Krävs eventuellt för användning med AEM Publish (om innehållet är skyddat)
       * Utvecklingar mot AEM SDK har stöd för lokala konton via Basic Auth. Det här är den metod som används i den här självstudien.
-      * Använd [åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html) när du integrerar med AEM as a Cloud Service
+      * Använd [åtkomsttoken](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/authentication/overview.html?lang=sv-SE) när du integrerar med AEM as a Cloud Service
    * `REACT_APP_BASIC_AUTH_USER`: AEM __username__ av SPA för autentisering när AEM-innehåll hämtas.
    * `REACT_APP_BASIC_AUTH_PASS`: AEM __password__ av SPA för autentisering när AEM-innehåll hämtas.
 

@@ -214,7 +214,7 @@ Samlingsmappningseffekterna som AEM kör på `http` och `localhost`, så det fin
 
 ## Cross-Origin Resource Sharing - säkerhetsprinciper
 
-Konfigurera sedan AEM att skydda innehållet så att endast denna SPA kan komma åt AEM-innehållet. Konfigurera resursdelning mellan [ursprung i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html).
+Konfigurera sedan AEM att skydda innehållet så att endast denna SPA kan komma åt AEM-innehållet. Konfigurera resursdelning mellan [ursprung i AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/foundation/security/develop-for-cross-origin-resource-sharing.html?lang=sv-SE).
 
 1. Öppna `ui.config` Maven-delprojektet i din utvecklingsmiljö
 1. Navigera `src/main/content/jcr_root/apps/wknd-app/osgiconfig/config`
