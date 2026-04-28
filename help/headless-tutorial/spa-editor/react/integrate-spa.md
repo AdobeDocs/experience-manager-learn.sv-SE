@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 31416399-6a4e-47d1-8ed8-be842a01a727
 duration: 409
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1964'
 ht-degree: 0%
 
 ---
@@ -54,13 +54,13 @@ Modulen `ui.frontend` är ett [webpack](https://webpack.js.org/)-projekt som inn
 
 *En högnivåbild av SPA-integreringen.*
 
-Ytterligare information om Front-end-bygget finns [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=sv-SE).
+Ytterligare information om Front-end-bygget finns [här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
 
 ## Inspektera SPA-integreringen {#inspect-spa-integration}
 
-Granska sedan modulen `ui.frontend` för att förstå SPA-filen som har genererats automatiskt av [AEM Project-arkivtypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=sv-SE).
+Granska sedan modulen `ui.frontend` för att förstå SPA-filen som har genererats automatiskt av [AEM Project-arkivtypen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html).
 
-1. Öppna AEM Project i den utvecklingsmiljö du väljer. I den här självstudien används [Visual Studio-kod-IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html?lang=sv-SE#microsoft-visual-studio-code).
+1. Öppna AEM Project i den utvecklingsmiljö du väljer. I den här självstudien används [Visual Studio-kod-IDE](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/development-tools.html#microsoft-visual-studio-code).
 
    ![VSCode - AEM WKND SPA-projekt](./assets/integrate-spa/vscode-ide-openproject.png)
 
@@ -68,7 +68,7 @@ Granska sedan modulen `ui.frontend` för att förstå SPA-filen som har generera
 
 1. Under `dependencies` ska du se flera relaterade till `react` inklusive `react-scripts`
 
-   `ui.frontend` är ett React-program som bygger på [Create React App &#x200B;](https://create-react-app.dev/) eller CRA kort. Versionen `react-scripts` anger vilken version av CRA som används.
+   `ui.frontend` är ett React-program som bygger på [Create React App ](https://create-react-app.dev/) eller CRA kort. Versionen `react-scripts` anger vilken version av CRA som används.
 
 1. Det finns också flera beroenden som har prefixats med `@adobe`:
 
@@ -80,7 +80,7 @@ Granska sedan modulen `ui.frontend` för att förstå SPA-filen som har generera
    "@adobe/aem-core-components-react-spa": "1.1.7",
    ```
 
-   Ovanstående moduler utgör [AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html?lang=sv-SE) och tillhandahåller funktioner som gör det möjligt att mappa SPA-komponenter till AEM-komponenter.
+   Ovanstående moduler utgör [AEM SPA Editor JS SDK](https://experienceleague.adobe.com/docs/experience-manager-65/developing/headless/spas/spa-blueprint.html) och tillhandahåller funktioner som gör det möjligt att mappa SPA-komponenter till AEM-komponenter.
 
    Innehåller också [AEM WCM-komponenter - React Core-implementering](https://github.com/adobe/aem-react-core-wcm-components-base) och [AEM WCM-komponenter - Spa editor - React Core-implementering](https://github.com/adobe/aem-react-core-wcm-components-spa). Detta är en uppsättning återanvändbara gränssnittskomponenter som mappar till AEM-komponenter som finns i kartongen. Dessa är utformade för att användas i befintligt skick och med den utformning som passar ditt projekt.
 
@@ -268,7 +268,7 @@ En [webpack-dev-server](https://webpack.js.org/configuration/dev-server/) kan an
 
    >[!NOTE]
    >
-   > På grund av säkerhetskraven i AEM måste du vara inloggad på den lokala AEM-instansen (http://localhost:4502) i samma webbläsare, men på en annan flik.
+   > På grund av säkerhetskraven för AEM måste du vara inloggad på den lokala AEM-instansen (http://localhost:4502) i samma webbläsare, men på en annan flik.
 
 1. Återgå till IDE och skapa en fil med namnet `Header.css` i mappen `src/components/Header`.
 1. Fyll i `Header.css` med följande:

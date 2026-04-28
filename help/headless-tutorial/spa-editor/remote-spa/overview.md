@@ -12,10 +12,10 @@ doc-type: Tutorial
 exl-id: c5f933eb-c409-41dc-bb6a-6b2220dfbb47
 duration: 294
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 1%
+source-wordcount: '667'
+ht-degree: 0%
 
 ---
 
@@ -25,9 +25,9 @@ ht-degree: 1%
 
 Välkommen till den självstudiekurs i flera delar för utvecklare som vill utöka en befintlig React-baserad (eller Next.js) fjärr-SPA med redigerbart AEM-innehåll med AEM SPA Editor.
 
-Den här självstudiekursen bygger på [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html?lang=sv-SE), en React-app som använder AEM Content Fragment-innehåll i stället för AEM GraphQL API:er, men har ingen kontextredigering av SPA-innehåll.
+Den här självstudiekursen bygger på [WKND GraphQL App](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/graphql/overview.html), en React-app som använder AEM Content Fragment-innehåll i stället för AEM GraphQL API:er, men har ingen kontextredigering av SPA-innehåll.
 
->[!VIDEO](https://video.tv.adobe.com/v/3444851?captions=swe&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333272?quality=12&learn=on)
 
 ## Om självstudiekursen
 
@@ -48,12 +48,12 @@ Självstudiekursen är utformad för att fungera med **AEM as a Cloud Service** 
 
 Den här självstudiekursen kräver följande:
 
-+ [SDK för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=sv-SE)
++ [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en)
 + [Node.js v18](https://nodejs.org/en/)
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
-+ [aem-guides-wknd.all-2.1.0.zip eller större](https://github.com/adobe/aem-guides-wknd/releases)
++ [aem-guides-wknd.all-2.1.0.zip eller högre](https://github.com/adobe/aem-guides-wknd/releases)
 + [källkoden aem-guides-wknd-graphql](https://github.com/adobe/aem-guides-wknd-graphql/tree/main)
 
 I den här självstudien förutsätts:
@@ -66,7 +66,7 @@ I den här självstudien förutsätts:
 
 >[!NOTE]
 >
-> **Behöver du hjälp med att konfigurera din lokala utvecklingsmiljö?** Titta i [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html?lang=sv-SE).
+> **Behöver du hjälp med att konfigurera din lokala utvecklingsmiljö?** Ta en titt på [följande guide för att konfigurera en lokal utvecklingsmiljö med AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/overview.html).
 
 ## &#x200B;1. Konfigurera AEM för SPA Editor
 
@@ -74,7 +74,7 @@ AEM-konfigurationer krävs för att integrera SPA med AEM SPA Editor. Dessa konf
 
 + [Lär dig konfigurera AEM för SPA Editor](./aem-configure.md)
 
-## &#x200B;2. Bootstrap och SPA
+## &#x200B;2. BOOTSTRAP i SPA
 
 För att AEM SPA Editor ska kunna integrera en SPA i sitt redigeringssammanhang måste ytterligare några läggas till i SPA-filen.
 

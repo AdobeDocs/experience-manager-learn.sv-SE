@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 197a0c1f-4d0a-4b99-ba89-cdff2e6ac4ec
 duration: 669
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '2454'
+source-wordcount: '2768'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Lär dig hur flera vyer i SPA stöds med AEM Pages och SPA Editor SDK. Dynamisk 
 
 ## Vad du ska bygga
 
-I det här kapitlet läggs en navigeringsmeny till i en befintlig `Header`-komponent. Navigeringsmenyn styrs av AEM sidhierarki och använder JSON-modellen som tillhandahålls av [kärnkomponenten för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=sv-SE).
+I det här kapitlet läggs en navigeringsmeny till i en befintlig `Header`-komponent. Navigeringsmenyn styrs av AEM sidhierarki och använder JSON-modellen som tillhandahålls av [kärnkomponenten för navigering](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html).
 
 ![Navigering implementerad](assets/navigation-routing/final-navigation-implemented.gif)
 
@@ -71,7 +71,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Granska uppdateringar av HeaderComponent {#inspect-header}
 
-I tidigare kapitel lades komponenten `HeaderComponent` till som en ren Angular-komponent som inkluderades via `app.component.html`. I det här kapitlet tas komponenten `HeaderComponent` bort från programmet och läggs till via [mallredigeraren](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html?lang=sv-SE). Detta gör att användare kan konfigurera navigeringsmenyn för `HeaderComponent` inifrån AEM.
+I tidigare kapitel lades komponenten `HeaderComponent` till som en ren Angular-komponent som inkluderades via `app.component.html`. I det här kapitlet tas komponenten `HeaderComponent` bort från programmet och läggs till via [mallredigeraren](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/page-authoring/template-editor-feature-video-use.html). Detta gör att användare kan konfigurera navigeringsmenyn för `HeaderComponent` inifrån AEM.
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ I tidigare kapitel lades komponenten `HeaderComponent` till som en ren Angular-k
        componentGroup="WKND SPA Angular - Structure"/>
    ```
 
-   AEM `Header`-komponenten ärver alla funktioner i [&#x200B; Navigation Core Component &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html?lang=sv-SE) via egenskapen `sling:resourceSuperType` .
+   AEM `Header`-komponenten ärver alla funktioner i [ Navigation Core Component ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/navigation.html) via egenskapen `sling:resourceSuperType` .
 
 ## Lägg till HeaderComponent i SPA-mallen {#add-header-template}
 
@@ -313,7 +313,7 @@ Implementera sedan navigeringsmenyn med en ny `NavigationComponent`. Vi kan läg
    ":type": "wknd-spa-angular/components/header"
    ```
 
-   AEM-sidornas hierarkiska karaktär modelleras i JSON som kan användas för att fylla i en navigeringsmeny. Kom ihåg att komponenten `Header` ärver alla funktioner i [&#x200B; Navigation Core Component &#x200B;](https://www.aemcomponents.dev/content/core-components-examples/library/core-structure/navigation.html) och att innehållet som visas via JSON automatiskt mappas till Angular `@Input` -anteckningen.
+   AEM-sidornas hierarkiska karaktär modelleras i JSON som kan användas för att fylla i en navigeringsmeny. Kom ihåg att komponenten `Header` ärver alla funktioner i [ Navigation Core Component ](https://www.aemcomponents.dev/content/core-components-examples/library/core-structure/navigation.html) och att innehållet som visas via JSON automatiskt mappas till Angular `@Input` -anteckningen.
 
 2. Öppna ett nytt terminalfönster och navigera till mappen `ui.frontend` i SPA-projektet. Skapa en ny `NavigationComponent` med Angular CLI-verktyget:
 
@@ -521,7 +521,7 @@ Nu när `NavigationComponent` har implementerats måste `HeaderComponent` uppdat
 
 2. Öppna en webbläsarflik och gå till [http://localhost:4200/](http://localhost:4200/).
 
-   Webbpaketets dev-server **&#x200B;**&#x200B;ska konfigureras att proxyansluta JSON-modellen från en lokal instans av AEM (`ui.frontend/proxy.conf.json`). På så sätt kan vi koda direkt mot innehåll som skapats i AEM tidigare i kursen.
+   Webbpaketets dev-server **** ska konfigureras att proxyansluta JSON-modellen från en lokal instans av AEM (`ui.frontend/proxy.conf.json`). På så sätt kan vi koda direkt mot innehåll som skapats i AEM tidigare i kursen.
 
    ![menyväxling som fungerar](./assets/navigation-routing/nav-toggle-static.gif)
 
@@ -643,7 +643,7 @@ Nu när navigeringen har implementerats inspekterar du routningen i AEM.
 
    `AemPageDataResolver` omformar till exempel en vägs URL `content/wknd-spa-angular/us/en/home.html` till sökvägen `/content/wknd-spa-angular/us/en/home`. Detta används för att matcha sidans innehåll baserat på sökvägen i JSON-modellens API.
 
-   `AemPageRouteReuseStrategy`, som tillhandahålls av AEM SPA Editor JS SDK, är en anpassad [&#x200B; RouteReuseStrategy &#x200B;](https://angular.io/api/router/RouteReuseStrategy) som förhindrar återanvändning av `PageComponent` över vägar. Annars kan innehåll från sidan &quot;A&quot; visas vid navigering till sidan &quot;B&quot;.
+   `AemPageRouteReuseStrategy`, som tillhandahålls av AEM SPA Editor JS SDK, är en anpassad [ RouteReuseStrategy ](https://angular.io/api/router/RouteReuseStrategy) som förhindrar återanvändning av `PageComponent` över vägar. Annars kan innehåll från sidan &quot;A&quot; visas vid navigering till sidan &quot;B&quot;.
 
 2. Öppna filen `page.component.ts` vid `ui.frontend/src/app/components/page/`.
 
@@ -704,7 +704,7 @@ Nu när navigeringen har implementerats inspekterar du routningen i AEM.
    >
    > Vissa mycket strikta lintingregler är aktiverade i Angular-projektet. Om det inte går att skapa Maven kontrollerar du felet och söker efter **Lint-fel i de listade filerna.**. Åtgärda eventuella fel som uppstått vid markören och kör kommandot Maven igen.
 
-2. Gå till SPA-startsidan i AEM: [http://localhost:4502/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/content/wknd-spa-angular/us/en/home.html) och öppna webbläsarens utvecklingsverktyg. Skärmbilder nedan hämtas från Google Chrome webbläsare.
+2. Gå till SPA-startsidan i AEM: [http://localhost:4502/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/content/wknd-spa-angular/us/en/home.html) och öppna webbläsarens utvecklarverktyg. Skärmbilder nedan hämtas från Google Chrome webbläsare.
 
    Uppdatera sidan så ser du en XHR-begäran till `/content/wknd-spa-angular/us/en.model.json`, som är SPA-roten. Observera att endast tre underordnade sidor inkluderas baserat på hierarkidjupets konfiguration till SPA-rotmallen som skapades tidigare i självstudiekursen. Detta inkluderar inte **sidan 3**.
 

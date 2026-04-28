@@ -1,5 +1,5 @@
 ---
-title: SPA Editor-projekt | Komma igång med AEM SPA Editor och Angular
+title: SPA Editor Project | Komma igång med AEM SPA Editor och Angular
 description: Lär dig hur du använder ett Adobe Experience Manager (AEM) Maven-projekt som utgångspunkt för ett Angular-program som är integrerat med AEM SPA Editor.
 feature: SPA Editor, AEM Project Archetype
 version: Experience Manager as a Cloud Service
@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 49fcd603-ab1a-4f1e-ae1f-49d3ff373439
 duration: 252
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '1134'
 ht-degree: 0%
 
 ---
@@ -90,7 +90,7 @@ Det finns flera alternativ för att skapa ett projekt med flera moduler i Maven 
 
    >[!NOTE]
    >
-   > Observera egenskapen `frontendModule=angular`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [Angular &#x200B;](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html?lang=sv-SE) som ska användas med AEM SPA Editor.
+   > Observera egenskapen `frontendModule=angular`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [Angular ](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-angular.html) som ska användas med AEM SPA Editor.
 
 ## Bygg projektet
 
@@ -149,7 +149,7 @@ Därefter kompilerar, bygger och distribuerar du projektkoden till en lokal inst
 
    All anpassad kod som krävs för projektet paketeras i dessa paket och installeras på AEM-miljön.
 
-6. Du bör också se flera paket för `spa.project.core` och `core.wcm.components`. Detta är beroenden som automatiskt inkluderas av arketypen. Mer information om [AEM Core Components finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=sv-SE).
+6. Du bör också se flera paket för `spa.project.core` och `core.wcm.components`. Detta är beroenden som automatiskt inkluderas av arketypen. Mer information om [AEM Core Components finns här](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html).
 
 ## Författarinnehåll
 
@@ -198,7 +198,7 @@ Verifiera sedan att det här är ett Single Page-program med hjälp av webbläsa
 
    *Varifrån kommer innehållet?*
 
-3. Återgå till fliken: [http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled)
+3. Gå tillbaka till fliken: [http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-angular/us/en/home.html?wcmmode=disabled)
 4. Öppna utvecklarverktygen i webbläsaren och inspektera nätverkstrafiken på sidan under en uppdatering. Visa **XHR**-begäranden:
 
    ![XHR-förfrågningar](./assets/create-project/xhr-requests.png)

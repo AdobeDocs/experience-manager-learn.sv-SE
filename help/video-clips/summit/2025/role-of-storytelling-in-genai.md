@@ -14,7 +14,7 @@ index: false
 hide: true
 hidefromtoc: true
 exl-id: f3902c6e-7f32-49ce-982a-76d264b87fd0
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Upptäck hur historieberättande principer inom landsismusik relaterar till designen av GenAI-verktyg för digitala upplevelser.
 
->[!VIDEO](https://video.tv.adobe.com/v/3462013/?captions=swe&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3459229/?learn=on&enablevpops)

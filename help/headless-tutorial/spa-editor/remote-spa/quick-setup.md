@@ -13,9 +13,9 @@ doc-type: Tutorial
 exl-id: ef7a1dad-993a-4c47-a9fb-91fa73de9b5d
 duration: 647
 hide: true
-source-git-commit: 8f3e8313804c8e1b8cc43aff4dc68fef7a57ff5c
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '838'
 ht-degree: 0%
 
 ---
@@ -36,14 +36,14 @@ _En videogenomgång av snabbinstallationen_
 
 Den här självstudiekursen kräver följande:
 
-+ [SDK för AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=sv-SE)
++ [AEM as a Cloud Service SDK](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/aem-runtime.html?lang=en)
 + [Node.js v18](https://nodejs.org/en/)
 + [Java™ 11](https://downloads.experiencecloud.adobe.com/content/software-distribution/en/general.html)
 + [Maven 3.6+](https://maven.apache.org/)
 + [Git](https://git-scm.com/downloads)
 + Förutsättningar endast för macOS
    + [Xcode](https://developer.apple.com/xcode/) eller [Xcode kommandoradsverktyg](https://developer.apple.com/xcode/resources/)
-+ [aem-guides-wknd.all-2.1.0.zip eller större](https://github.com/adobe/aem-guides-wknd/releases)
++ [aem-guides-wknd.all-2.1.0.zip eller högre](https://github.com/adobe/aem-guides-wknd/releases)
 + [aem-guides-wknd-graphql-källkod (gren: feature/spa-editor)](https://github.com/adobe/aem-guides-wknd-graphql/tree/feature/spa-editor)
 
 
@@ -59,7 +59,7 @@ I den här självstudien förutsätts:
 
 Hämta och installera AEM SDK Quickstart på port 4502, med standardautentiseringsuppgifterna för `admin/admin`.
 
-1. [Hämta senaste AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=1)
+1. [Ladda ned senaste AEM SDK](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=AEM*+SDK*&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=1)
 1. Zippa upp AEM SDK till `~/aem-sdk`
 1. Kör AEM SDK Quickstart Jar
 
@@ -87,8 +87,8 @@ Den här självstudien är beroende av __WKND 2.1.0+__ -projektet (för innehål
 
 För att göra en snabb konfiguration tillhandahålls AEM-paket här som innehåller kursens slutliga AEM-konfiguration och innehåll.
 
-1. [Ladda ned &#x200B;](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
-1. [Ladda ned &#x200B;](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
+1. [Hämta `wknd-app.all.x.x.x.zip`](./assets/quick-setup/wknd-app.all-1.0.0-SNAPSHOT.zip)
+1. [Hämta `wknd-app.ui.content.sample.x.x.x.zip`](./assets/quick-setup/wknd-app.ui.content.sample-1.0.1.zip)
 1. Logga in på AEM SDK Package Manager på [http://localhost:4502/crx/packmgr](http://localhost:4502/crx/packmgr) med inloggningsuppgifterna för `admin`.
 1. __Överför__ de `wknd-app.all.x.x.x.zip` som hämtades i steg 1
 1. Tryck på knappen __Installera__ för posten `wknd-app.all.x.x.x.zip`

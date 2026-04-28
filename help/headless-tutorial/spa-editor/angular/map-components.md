@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 19a8917c-a1e7-4293-9ce1-9f4c1a565861
 duration: 509
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '2211'
+source-wordcount: '2473'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Du kan alltid visa den färdiga koden på [GitHub](https://github.com/adobe/aem-
 
 ## Mappningsmetod
 
-Det grundläggande konceptet är att mappa en SPA-komponent till en AEM-komponent. AEM-komponenter kör serversidan och exporterar innehåll som en del av JSON-modellens API. JSON-innehållet används av SPA, som kör klientsidan i webbläsaren. En 1:1-mappning mellan SPA-komponenter och en AEM-komponent skapas.
+Det grundläggande konceptet är att mappa en SPA-komponent till en AEM-komponent. AEM-komponenter kör serversidan och exporterar innehåll som en del av JSON-modellens API. JSON-innehållet används av SPA, som kör klientsidan i webbläsaren. En :1-mappning mellan SPA-komponenter och en AEM-komponent skapas.
 
 ![Översikt på hög nivå över mappning av en AEM-komponent till en Angular-komponent](./assets/map-components/high-level-approach.png)
 
@@ -77,7 +77,7 @@ Det grundläggande konceptet är att mappa en SPA-komponent till en AEM-komponen
 
 ## Inspektera textkomponenten
 
-[AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en `Text`-komponent som är mappad till AEM [Text-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html?lang=sv-SE). Det här är ett exempel på en **content** -komponent, eftersom den återger *innehåll* från AEM.
+[AEM Project Archetype](https://github.com/adobe/aem-project-archetype) innehåller en `Text`-komponent som är mappad till AEM [Text-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/text.html). Det här är ett exempel på en **content** -komponent, eftersom den återger *innehåll* från AEM.
 
 Låt oss se hur komponenten fungerar.
 
@@ -105,7 +105,7 @@ Låt oss se hur komponenten fungerar.
 
    Modulen `ui.frontend` är för närvarande inställd på att använda JSON-modellen [mock](./integrate-spa.md#mock-json).
 
-2. Ett nytt webbläsarfönster öppnas för [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html)
+2. Ett nytt webbläsarfönster öppnas [http://localhost:4200/content/wknd-spa-angular/us/en/home.html](http://localhost:4200/content/wknd-spa-angular/us/en/home.html)
 
    ![Webbpaketets dev-server med modellinnehåll](assets/map-components/initial-start.png)
 
@@ -201,7 +201,7 @@ Låt oss se hur komponenten fungerar.
 
 ## Skapa bildkomponenten
 
-Skapa sedan en `Image` Angular-komponent som är mappad till AEM [Image-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html?lang=sv-SE). Komponenten `Image` är ett annat exempel på en **content**-komponent.
+Skapa sedan en `Image` Angular-komponent som är mappad till AEM [Image-komponent](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/image.html). Komponenten `Image` är ett annat exempel på en **content**-komponent.
 
 ### Inspektera JSON
 
@@ -401,7 +401,7 @@ Komponenten `ImageComponent` visas bara på **webbpaketets dev-server**. Distrib
 
    Klicka på **Klar** för att spara principuppdateringen.
 
-6. Navigera till **hemsidan** [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html).
+6. Gå till **hemsidan** [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html).
 
    Du bör också kunna redigera komponenten `Text` och lägga till ytterligare styckeformat i **helskärmsläge** .
 
@@ -431,13 +431,13 @@ Låt oss inspektera layoutbehållaren ytterligare.
 
    `AEMResponsiveGridComponent` implementeras som en del av AEM SPA Editor SDK och ingår i projektet via `import-components`.
 
-2. I en webbläsare går du till [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)
+2. Navigera i en webbläsare till [http://localhost:4502/content/wknd-spa-angular/us/en.model.json](http://localhost:4502/content/wknd-spa-angular/us/en.model.json)
 
    ![JSON-modell-API - responsivt stödraster](./assets/map-components/responsive-grid-modeljson.png)
 
    Komponenten **Layoutbehållare** har `sling:resourceType` `wcm/foundation/components/responsivegrid` och känns igen av SPA-redigeraren med egenskapen `:type`, precis som komponenterna `Text` och `Image`.
 
-   Samma funktioner för att ändra storlek på en komponent med [Layoutläge](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html?lang=sv-SE#defining-layouts-layout-mode) finns i SPA-redigeraren.
+   Samma funktioner för att ändra storlek på en komponent med [Layoutläge](https://experienceleague.adobe.com/docs/experience-manager-65/authoring/siteandpage/responsive-layout.html#defining-layouts-layout-mode) finns i SPA-redigeraren.
 
 3. Gå tillbaka till [http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html](http://localhost:4502/editor.html/content/wknd-spa-angular/us/en/home.html). Lägg till ytterligare **Bild**-komponenter och försök ändra storlek på dem med alternativet **Layout** :
 

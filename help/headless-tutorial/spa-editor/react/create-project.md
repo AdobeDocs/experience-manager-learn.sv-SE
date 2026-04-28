@@ -1,5 +1,5 @@
 ---
-title: Skapa projekt | Komma igång med AEM SPA Editor och React
+title: Skapa projekt | Komma igång med AEM SPA Editor och Reagera
 description: Lär dig hur du skapar ett Adobe Experience Manager (AEM) Maven-projekt som utgångspunkt för ett React-program som är integrerat med AEM SPA Editor.
 feature: SPA Editor, AEM Project Archetype
 version: Experience Manager as a Cloud Service
@@ -12,9 +12,9 @@ doc-type: Tutorial
 exl-id: 57c8fc16-fed5-4af4-b98b-5c3f0350b240
 duration: 250
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '974'
+source-wordcount: '1104'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ I det här kapitlet skapas ett nytt AEM-projekt baserat på [AEM Project Archety
 
 **Vad är ett Maven-projekt?** - [Apache Maven](https://maven.apache.org/) är ett programhanteringsverktyg för att skapa projekt. *Alla Adobe Experience Manager*-implementeringar använder Maven-projekt för att skapa, hantera och distribuera anpassad kod ovanpå AEM.
 
-**Vad är en Maven-arketype?** - En [Maven-arketyp](https://maven.apache.org/archetype/index.html) är en mall eller ett mönster för generering av nya projekt. Med AEM Project Archetype kan vi generera ett nytt projekt med ett anpassat namnutrymme och inkludera en projektstruktur som följer bästa praxis, vilket avsevärt snabbar upp vårt projekt.
+**Vad är en Maven-arketype?** - En [Maven-arkityp](https://maven.apache.org/archetype/index.html) är en mall eller ett mönster för generering av nya projekt. Med AEM Project Archetype kan vi generera ett nytt projekt med ett anpassat namnutrymme och inkludera en projektstruktur som följer bästa praxis, vilket avsevärt snabbar upp vårt projekt.
 
 ## Förutsättningar
 
@@ -67,7 +67,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
    >
    > Ersätt `aemVersion="cloud"` med `aemVersion="6.5.5"` om du har AEM 6.5.5+ som mål. Använd `aemVersion="6.4.8"` om du har 6.4.8+ som mål.
 
-   Observera egenskapen `frontendModule=react`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [React code base](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html?lang=sv-SE) som ska användas med AEM SPA Editor. Egenskaper som `appTitle`, `appId`, `artifactId` och `groupId` används för att identifiera projektet och syftet.
+   Observera egenskapen `frontendModule=react`. Detta anger att AEM Project Archetype ska starta projektet med startkoden [React code base](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/uifrontend-react.html) som ska användas med AEM SPA Editor. Egenskaper som `appTitle`, `appId`, `artifactId` och `groupId` används för att identifiera projektet och syftet.
 
    En fullständig lista över tillgängliga egenskaper för konfigurering av projektet [finns här](https://github.com/adobe/aem-project-archetype#available-properties).
 
@@ -92,7 +92,7 @@ Granska de verktyg och instruktioner som krävs för att konfigurera en [lokal u
        |--- .gitignore
    ```
 
-   Varje mapp representerar en enskild Maven-modul. I den här självstudiekursen arbetar vi primärt med modulen `ui.frontend`, som är React-appen. Mer information om enskilda moduler finns i [AEM Project Archetype-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=sv-SE).
+   Varje mapp representerar en enskild Maven-modul. I den här självstudiekursen arbetar vi primärt med modulen `ui.frontend`, som är React-appen. Mer information om enskilda moduler finns i [AEM Project Archetype-dokumentationen](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html).
 
 ## Distribuera och skapa projektet
 
@@ -193,7 +193,7 @@ Verifiera sedan att det här är ett Single Page-program med hjälp av webbläsa
 
    *Varifrån kommer innehållet?*
 
-3. Återgå till fliken: [http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
+3. Gå tillbaka till fliken: [http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled](http://localhost:4502/content/wknd-spa-react/us/en/home.html?wcmmode=disabled)
 4. Öppna utvecklarverktygen i webbläsaren och inspektera nätverkstrafiken på sidan under en uppdatering. Visa **XHR**-begäranden:
 
    ![XHR-förfrågningar](./assets/create-project/xhr-requests.png)

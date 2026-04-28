@@ -1,6 +1,6 @@
 ---
 title: Filtrera med jQuery och Handtag
-description: En JavaScript-implementering som använder jQuery och Handlebars som filtrerar WKND-annonser som ska visas.
+description: En JavaScript-implementering som använder jQuery och Handlebars som filtrerar WKND-annonser som ska visas. .
 version: Experience Manager as a Cloud Service
 mini-toc-levels: 1
 feature: Content Fragments, GraphQL API
@@ -14,9 +14,9 @@ hide: true
 hidefromtoc: true
 exl-id: 75ffd84a-62b1-480f-b05f-3664f54bb171
 duration: 26
-source-git-commit: 30b98e82e78120bf9fb13c9d41780af4c07665d8
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '150'
 ht-degree: 0%
 
 ---

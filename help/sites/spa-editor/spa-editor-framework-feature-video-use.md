@@ -12,9 +12,9 @@ doc-type: Feature Video
 exl-id: 645b6986-830f-4409-b46c-ddf15c33e84c
 duration: 473
 hide: true
-source-git-commit: 5b008419d0463e4eaa1d19c9fe86de94cba5cb9a
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '259'
 ht-degree: 0%
 
 ---
@@ -43,4 +43,4 @@ Hämta och installera lämpligt [WKND SPA-paket](https://github.com/adobe/aem-gu
 
 En detaljerad självstudiekurs om hur du utvecklar med SPA-redigeraren finns i:
 
-* [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html?lang=sv-SE)
+* [Komma igång med AEM SPA Editor och React](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)

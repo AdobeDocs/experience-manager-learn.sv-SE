@@ -4,7 +4,7 @@ description: Hämta arkiverade versioner av nyhetsbrevet.
 hidefromtoc: true
 hide: true
 exl-id: 16133400-b4c6-4d86-9c28-d5e230d55839
-source-git-commit: cfe98419bc04ad757adb8a14dde9068e62f0ea78
+source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
 workflow-type: tm+mt
 source-wordcount: '59'
 ht-degree: 0%
