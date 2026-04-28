@@ -37,7 +37,7 @@ Om du vill följa den här självstudiekursen behöver du följande:
 
 ## Installera AEM Agent Skills
 
-Installera AEM Agent Skills med kommandot `npx` (kräver [ Node.js](https://nodejs.org/) så att `npx` är tillgängligt). Andra installationsalternativ, till exempel Claude Code-plugin-program eller GitHub CLI-tillägg, finns i avsnittet [Installation](https://github.com/adobe/skills/tree/main#installation) i Adobe Skills-databasen.
+Installera AEM Agent Skills med kommandot `npx` (kräver [&#x200B; Node.js](https://nodejs.org/) så att `npx` är tillgängligt). Andra installationsalternativ, till exempel Claude Code-plugin-program eller GitHub CLI-tillägg, finns i avsnittet [Installation](https://github.com/adobe/skills/tree/main#installation) i Adobe Skills-databasen.
 
 1. Klona [WKND-webbplatsprojektet](https://github.com/adobe/aem-guides-wknd) lokalt:
 
