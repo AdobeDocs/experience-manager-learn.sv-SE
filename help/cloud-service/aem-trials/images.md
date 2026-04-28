@@ -20,4 +20,4 @@ Bildfiler måste placeras i mappen `assets` som finns bredvid den här filen.
 Alla bildfiler som ska publiceras ska länkas från den här filen med syntaxen:
 
 ![Personligt konto för utvärderingsförberedd e-postbild](./assets/select-personal-account.png)
-![ Slack e-postbild ](./assets/Slack-email-image.png)
+![&#x200B; Slack e-postbild &#x200B;](./assets/Slack-email-image.png)

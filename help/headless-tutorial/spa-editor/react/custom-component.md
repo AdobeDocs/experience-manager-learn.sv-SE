@@ -23,7 +23,7 @@ ht-degree: 0%
 
 {{spa-editor-deprecation}}
 
-Lär dig hur du skapar en anpassad väderkomponent som ska användas med AEM SPA Editor. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent. API:t [Open Weather ](https://openweathermap.org) och [React Open Weather ](https://www.npmjs.com/package/react-open-weather) används.
+Lär dig hur du skapar en anpassad väderkomponent som ska användas med AEM SPA Editor. Lär dig hur du utvecklar redigeringsdialogrutor och Sling-modeller för att utöka JSON-modellen så att den fyller i en anpassad komponent. API:t [Open Weather &#x200B;](https://openweathermap.org) och [React Open Weather &#x200B;](https://www.npmjs.com/package/react-open-weather) används.
 
 ## Syfte
 
