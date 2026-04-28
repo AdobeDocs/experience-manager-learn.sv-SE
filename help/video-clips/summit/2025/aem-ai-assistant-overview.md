@@ -25,4 +25,4 @@ ht-degree: 0%
 
 Läs om hur AEM AI Assistant gör det enklare att hitta produktinformation och automatiserar arbetet med supportärenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3459225/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3461918/?captions=swe&learn=on&enablevpops)
