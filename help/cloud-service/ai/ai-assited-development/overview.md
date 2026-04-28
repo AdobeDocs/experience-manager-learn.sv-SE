@@ -69,8 +69,8 @@ MCP-servrar exponerar verktyg och data för kodningsagenten via [Model Context P
 
 Installera dessa **lokala MCP-servrar** från [programdistributionsportalen](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html?fulltext=mcp*&1_group.propertyvalues.property=.%2Fjcr%3Acontent%2Fmetadata%2Fdc%3AsoftwareType&1_group.propertyvalues.operation=equals&1_group.propertyvalues.0_values=software-type%3Atooling&orderby=%40jcr%3Acontent%2Fjcr%3AlastModified&orderby.sort=desc&layout=list&p.offset=0&p.limit=3) för **lokal utveckling** mot AEM SDK och Dispatcher:
 
-- **AEM Quickstart Local MCP-server**: Exponerar data från en lokal AEM SDK-instans för felsökning och utveckling. Mer information finns i [AEM Quickstart MCP Server](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#aem-quickstart-mcp-server).
-- **Dispatcher lokal MCP-server**: Aktiverar körningsvalidering och kontroll av en lokal Dispatcher-instans. Mer information finns i [Dispatcher MCP Server](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#dispatcher-mcp-server).
+- **AEM Quickstart Local MCP-server**: Exponerar data från en lokal AEM SDK-instans för felsökning och utveckling. Mer information finns i [AEM Quickstart MCP Server](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#aem-quickstart-mcp-server).
+- **Dispatcher lokal MCP-server**: Aktiverar körningsvalidering och kontroll av en lokal Dispatcher-instans. Mer information finns i [Dispatcher MCP Server](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools#dispatcher-mcp-server).
 
 Information om AEM MCP-servrar som är värdbaserade för Adobe (till exempel innehåll, skrivskyddat innehåll och Cloud Manager) finns i [MCP-servrar i AEM](../mcp/overview.md).
 
@@ -157,7 +157,7 @@ CARDS
 
 ## Ytterligare resurser
 
-- [Lokal utveckling med AI-verktyg](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [Lokal utveckling med AI-verktyg](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [Adobe Skills for AI Coding Agents](https://github.com/adobe/skills)
 
