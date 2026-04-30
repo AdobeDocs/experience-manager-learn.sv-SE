@@ -4,9 +4,9 @@ description: Hämta arkiverade versioner av nyhetsbrevet.
 hidefromtoc: true
 hide: true
 exl-id: 16133400-b4c6-4d86-9c28-d5e230d55839
-source-git-commit: f95907146983d2315d48f793d38ebb1172a7bae4
+source-git-commit: 1a65ac3413a6e55e4fe962b0933fec566730127d
 workflow-type: tm+mt
-source-wordcount: '59'
+source-wordcount: '60'
 ht-degree: 0%
 
 ---
@@ -36,5 +36,6 @@ Våra månatliga Experience League Content Newsletters finns att ladda ned på d
 | [Januari](assets/Jan-2026.pdf) |
 | [Februari](assets/Feb-2026.pdf) |
 | [Mars](assets/March-2026.pdf) |
+| [April](assets/April-2026.pdf) |
 
 
