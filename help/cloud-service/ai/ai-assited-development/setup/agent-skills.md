@@ -10,13 +10,13 @@ duration: 0
 last-substantial-update: 2026-04-24T00:00:00Z
 jira: KT-20900
 thumbnail: KT-20900.png
-source-git-commit: e3ef450cfe9005ba940ff1897c216681654341b3
+exl-id: c92d9124-4b92-4ee1-b04f-b6d1f82d53aa
+source-git-commit: f93359e731b6c3fa549e9499ef693042eba3aad7
 workflow-type: tm+mt
 source-wordcount: '513'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera AEM Agent Skills
 
@@ -28,6 +28,8 @@ Adobe tillhandahåller AEM Agent Skills via databasen [Adobe Skills](https://git
 
 I den här självstudiekursen installerar du kunskaperna på en lokal klon av [WKND Sites Project](https://github.com/adobe/aem-guides-wknd). Du kan använda samma steg för ditt eget AEM as a Cloud Service-projekt.
 
+>[!VIDEO](https://video.tv.adobe.com/v/3484940/?learn=on&enablevpops)
+
 ## Förutsättningar
 
 Om du vill följa den här självstudiekursen behöver du följande:
@@ -37,7 +39,7 @@ Om du vill följa den här självstudiekursen behöver du följande:
 
 ## Installera AEM Agent Skills
 
-Installera AEM Agent Skills med kommandot `npx` (kräver [&#x200B; Node.js](https://nodejs.org/) så att `npx` är tillgängligt). Andra installationsalternativ, till exempel Claude Code-plugin-program eller GitHub CLI-tillägg, finns i avsnittet [Installation](https://github.com/adobe/skills/tree/main#installation) i Adobe Skills-databasen.
+Installera AEM Agent Skills med kommandot `npx` (kräver [ Node.js](https://nodejs.org/) så att `npx` är tillgängligt). Andra installationsalternativ, till exempel Claude Code-plugin-program eller GitHub CLI-tillägg, finns i avsnittet [Installation](https://github.com/adobe/skills/tree/main#installation) i Adobe Skills-databasen.
 
 1. Klona [WKND-webbplatsprojektet](https://github.com/adobe/aem-guides-wknd) lokalt:
 
@@ -119,7 +121,7 @@ CARDS
 
 ## Ytterligare resurser
 
-- [Local Development with AI Tools](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [Local Development with AI Tools](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [Adobe Skills for AI Coding Agents](https://github.com/adobe/skills)
 

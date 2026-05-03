@@ -10,19 +10,21 @@ duration: 0
 last-substantial-update: 2026-04-24T00:00:00Z
 jira: KT-20901
 thumbnail: KT-20901.png
-source-git-commit: e3ef450cfe9005ba940ff1897c216681654341b3
+exl-id: bd9b74e8-81ab-4d42-bd0a-5443248b5770
+source-git-commit: f93359e731b6c3fa549e9499ef693042eba3aad7
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 0%
 
 ---
 
-
 # Komponentutveckling med AEM Agent Skills
 
 Lär dig hur du utvecklar en AEM-komponent med AEM Agent Skills som en del av [AI-assisterad utveckling](../overview.md).
 
 I den här genomgången använder du ett naturligt språk i en AI-driven IDE (till exempel Markör) för att utveckla en **Promo Banner** -komponent i [WKND Sites Project](https://github.com/adobe/aem-guides-wknd). Kodningsagenten använder AEM Agent-kompetensen `create-component` för att generera implementeringen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3484952/?learn=on&enablevpops)
 
 ## Förutsättningar
 
@@ -105,7 +107,7 @@ Den skriver **inte** över en befintlig `AGENTS.md`-fil.
 
 ## Ytterligare resurser
 
-- [Local Development with AI Tools](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [Local Development with AI Tools](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [Adobe Skills for AI Coding Agents](https://github.com/adobe/skills)
 
