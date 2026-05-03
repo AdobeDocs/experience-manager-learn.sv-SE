@@ -107,7 +107,7 @@ Den skriver **inte** över en befintlig `AGENTS.md`-fil.
 
 ## Ytterligare resurser
 
-- [Local Development with AI Tools](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
+- [Local Development with AI Tools](https://experienceleague.adobe.com/sv/docs/experience-manager-cloud-service/content/ai-in-aem/local-development-with-ai-tools)
 
 - [Adobe Skills for AI Coding Agents](https://github.com/adobe/skills)
 
